@@ -6,151 +6,98 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-19 ~ 2026-06-17
-- 运行时间：2026-06-17 15:13:08 UTC
+- 最新运行日期：2026-06-17
+- 运行时间：2026-06-17 21:17:20 UTC
 - 运行状态：成功
-- 本次总论文数：43
-- 精读区：32
+- 本次总论文数：26
+- 精读区：15
 - 速读区：11
 
 ### 今日简报（AI）
-今日精读32篇，两篇满分亮点聚焦“无位姿4D动态高斯”与“解耦自我运动的3D世界模型”。  
-最值得看的方向：无位姿多视角视频的4D高斯方法（No Pose, No Problem in 4D）和稀疏航拍视角的前馈高斯泼溅（Feed-Forward Gaussian Splatting）。  
-建议优先精读两篇满分论文，它们分别突破了在位姿标注缺失下的动态重建，以及将自我运动从场景中解耦的新思路。
-- 详情：[/20260519-20260617/README](/20260519-20260617/README)
+今日26篇论文聚焦3D操作合成与参数化生成，精读两篇满分研究引领前沿。最值得关注ManiSplat（解耦3D高斯泼溅实现单目视频操作）和P3D-Bench（多模态大模型3D结构推理基准）。建议优先精读这两篇，速读补充关注R5DGS动态场景重建与几何感知去噪方法。
+- 详情：[/202606/17/README](/202606/17/README)
 
 ### 精读区论文标签
-1. [No Pose, No Problem in 4D: Feed-Forward Dynamic Gaussians from Unposed Multi-View Videos](/20260519-20260617/2605.22190v1-no-pose-no-problem-in-4d-feed-forward-dynamic-gaussians-from-unposed-multi-view-videos)  
+1. [ManiSplat: Manipulation Trajectory Synthesis from Monocular Video via Decoupled 3D Gaussian Splatting](/202606/17/2606.10645v1-manisplat-manipulation-trajectory-synthesis-from-monocular-video-via-decoupled-3d-gaussian-splatting)  
    标签：评分：10.0/10、query:world-model
-   evidence：从无位姿多视角视频进行前馈4D高斯溅射的动态场景重建
-2. [Future Dynamic 3D Reconstruction: A 3D World Model with Disentangled Ego-Motion](/20260519-20260617/2606.18250v1-future-dynamic-3d-reconstruction-a-3d-world-model-with-disentangled-ego-motion)  
+   evidence：使用解耦3D高斯泼溅重建动态场景
+2. [P3D-Bench: Benchmarking MLLMs for Parametric 3D Generation and Structural Reasoning](/202606/17/2606.11152v2-p3d-bench-benchmarking-mllms-for-parametric-3d-generation-and-structural-reasoning)  
    标签：评分：10.0/10、query:world-model
-   evidence：解耦自运动的未来动态3D重建世界模型
-3. [Structural Energy Guidance for View-Consistent Text-to-3D Generation](/20260519-20260617/2605.19876v1-structural-energy-guidance-for-view-consistent-text-to-3d-generation)  
+   evidence：从文本/视觉规范生成参数化3D的基准
+3. [OmniDrive: An LLM-Choreographed Multi-Agent World Model with Unified Latent Co-Compression for Multi-View Driving Video Generation](/202606/17/2606.17536v1-omnidrive-an-llm-choreographed-multi-agent-world-model-with-unified-latent-co-compression-for-multi-view-driving-video-generation)  
+   标签：评分：10.0/10、query:world-model
+   evidence：基于LLM编排的多智能体世界模型用于驾驶视频生成
+4. [TRON: Tracing Rays to Orchestrate a Neural Renderer for 3D Gaussian Reconstructions](/202606/17/2606.11314v1-tron-tracing-rays-to-orchestrate-a-neural-renderer-for-3d-gaussian-reconstructions)  
    标签：评分：9.0/10、query:world-model
-   evidence：文本到3D生成，解决视角一致性问题
-4. [TWINGS: Thin Plate Splines Warp-aligned Initialization for Sparse-View Gaussian Splatting](/20260519-20260617/2605.22069v1-twings-thin-plate-splines-warp-aligned-initialization-for-sparse-view-gaussian-splatting)  
+   evidence：结合3D高斯光线追踪与神经渲染实现可控渲染
+5. [DarkVGGT: Seeing Through Darkness Using Thermal Geometry without Daylight Tax](/202606/17/2606.11326v1-darkvggt-seeing-through-darkness-using-thermal-geometry-without-daylight-tax)  
    标签：评分：9.0/10、query:world-model
-   evidence：改进稀疏视图下3D高斯溅射的初始化
-5. [TWINGS: Thin Plate Splines Warp-aligned Initialization for Sparse-View Gaussian Splatting](/20260519-20260617/2605.22069v2-twings-thin-plate-splines-warp-aligned-initialization-for-sparse-view-gaussian-splatting)  
+   evidence：从RGB-T图像进行低光环境前馈3D重建
+6. [Seeing What Matters: Perceptual Wrapper with Common Randomness for 3D Gaussian Splatting](/202606/17/2606.11782v1-seeing-what-matters-perceptual-wrapper-with-common-randomness-for-3d-gaussian-splatting)  
    标签：评分：9.0/10、query:world-model
-   evidence：通过薄板样条初始化实现稀疏视图新视图合成
-6. [LangFlash: Feed-forward 3D Language Gaussian Splatting from Sparse Unposed Images](/20260519-20260617/2605.23287v1-langflash-feed-forward-3d-language-gaussian-splatting-from-sparse-unposed-images)  
+   evidence：增强3D高斯泼溅渲染的感知包装器
+7. [VISA: VLM-Guided Instance Semantic Auditing for 3D Occupancy World Models](/202606/17/2606.13460v1-visa-vlm-guided-instance-semantic-auditing-for-3d-occupancy-world-models)  
    标签：评分：9.0/10、query:world-model
-   evidence：从稀疏无位姿图像进行带语义特征的前馈3D高斯溅射
-7. [GenRecon: Bridging Generative Priors for Multi-View 3D Scene Reconstruction](/20260519-20260617/2605.23888v1-genrecon-bridging-generative-priors-for-multi-view-3d-scene-reconstruction)  
+   evidence：使用视觉语言模型审计改进三维占据世界模型的语义理解
+8. [Surflo: Consistent 3D Surface Flow Model with Global State](/202606/17/2606.13644v1-surflo-consistent-3d-surface-flow-model-with-global-state)  
    标签：评分：9.0/10、query:world-model
-   evidence：利用生成先验的多视图3D场景重建
-8. [Unified 3D Scene Understanding Through Physical World Modeling](/20260519-20260617/2605.24321v1-unified-3d-scene-understanding-through-physical-world-modeling)  
+   evidence：使用流匹配从无位姿RGB图像进行三维表面重建
+9. [MUSE: Agentic 3D Scene Authoring via Memory-Grounded Incremental Requirement Satisfaction](/202606/17/2606.14168v1-muse-agentic-3d-scene-authoring-via-memory-grounded-incremental-requirement-satisfaction)  
    标签：评分：9.0/10、query:world-model
-   evidence：物理世界模型用于统一三维场景理解与交互
-9. [Global Structure-from-Motion Meets Feedforward Reconstruction](/20260519-20260617/2605.26103v1-global-structure-from-motion-meets-feedforward-reconstruction)  
+   evidence：文本驱动的三维场景创作，基于记忆的增量需求满足
+10. [Pano3D: Unified 3D Reconstruction and Panoptic Segmentation](/202606/17/2606.14307v1-pano3d-unified-3d-reconstruction-and-panoptic-segmentation)  
    标签：评分：9.0/10、query:world-model
-   evidence：使用SfM和前馈方法从图像进行三维场景重建
-10. [Global Structure-from-Motion Meets Feedforward Reconstruction](/20260519-20260617/2605.26103v2-global-structure-from-motion-meets-feedforward-reconstruction)  
+   evidence：从图像进行统一3D重建与全景分割
+11. [TurboGS: Accelerating 3D Gaussian Splatting via Error-Guided Sparse Pixel Sampling and Optimization](/202606/17/2606.15924v1-turbogs-accelerating-3d-gaussian-splatting-via-error-guided-sparse-pixel-sampling-and-optimization)  
    标签：评分：9.0/10、query:world-model
-   evidence：全局运动恢复结构与前馈重建结合
-11. [TriSplat: Simulation-Ready Feed-Forward 3D Scene Reconstruction](/20260519-20260617/2605.26115v1-trisplat-simulation-ready-feed-forward-3d-scene-reconstruction)  
+   evidence：通过误差引导采样加速三维高斯溅射以实现实时渲染
+12. [PointDiffusion: Diffusion-Based Scene Completion in the Point Cloud Domain](/202606/17/2606.16048v1-pointdiffusion-diffusion-based-scene-completion-in-the-point-cloud-domain)  
    标签：评分：9.0/10、query:world-model
-   evidence：稀疏视图前馈三角原语3D场景重建
-12. [CLEAR-NeRF: Collinearity and Local-region Enhanced Accurate 3D Reconstruction in Unbounded Scenes](/20260519-20260617/2605.28125v1-clear-nerf-collinearity-and-local-region-enhanced-accurate-3d-reconstruction-in-unbounded-scenes)  
+   evidence：基于扩散的从稀疏LiDAR点云进行场景补全
+13. [Local-GS: Accelerating 3D Gaussian Splatting via Tile-Local Warp Coherence](/202606/17/2606.16566v1-local-gs-accelerating-3d-gaussian-splatting-via-tile-local-warp-coherence)  
    标签：评分：9.0/10、query:world-model
-   evidence：基于NeRF的无边界场景精确3D重建
-13. [GAP3D: Generative Alignment of VLM Latents to Patch-Level Embeddings for 3D Generation](/20260519-20260617/2605.28995v2-gap3d-generative-alignment-of-vlm-latents-to-patch-level-embeddings-for-3d-generation)  
+   evidence：通过逐块线程束局部一致性加速3D高斯溅射
+14. [Edit3DGS: Unified Framework for Dynamic Head Editing via 2D Instruction-Guided Diffusion and 3D Gaussian Splatting](/202606/17/2606.17432v1-edit3dgs-unified-framework-for-dynamic-head-editing-via-2d-instruction-guided-diffusion-and-3d-gaussian-splatting)  
    标签：评分：9.0/10、query:world-model
-   evidence：基于扩散的三维生成，对齐VLM潜变量，用于文本条件的三维资产生成
-14. [DVSM: Decoder-only View Synthesis Model Done Right](/20260519-20260617/2605.29891v1-dvsm-decoder-only-view-synthesis-model-done-right)  
+   evidence：直接使用三维高斯溅射进行动态头部编辑
+15. [GASE: Gaussian Splatting-Based Automated System for Reconstructing Embodied-Simulation Environments](/202606/17/2606.17520v1-gase-gaussian-splatting-based-automated-system-for-reconstructing-embodied-simulation-environments)  
    标签：评分：9.0/10、query:world-model
-   evidence：提出纯解码器架构用于新视角合成
-15. [City-Mesh3R: Simulation-Ready City-Scale 3D Mesh Reconstruction from Multi-View Images](/20260519-20260617/2605.30310v1-city-mesh3r-simulation-ready-city-scale-3d-mesh-reconstruction-from-multi-view-images)  
-   标签：评分：9.0/10、query:world-model
-   evidence：从多视图图像进行城市级3D网格重建
-16. [REST3D: Reconstructing Physically Stable 3D Scenes from a Single Image](/20260519-20260617/2605.30338v1-rest3d-reconstructing-physically-stable-3d-scenes-from-a-single-image)  
-   标签：评分：9.0/10、query:world-model
-   evidence：基于物理稳定性约束的单张图像三维场景重建
-17. [VolFill: Single-View Amodal 3D Scene Reconstruction with Volumetric Flow Matching](/20260519-20260617/2605.31466v1-volfill-single-view-amodal-3d-scene-reconstruction-with-volumetric-flow-matching)  
-   标签：评分：9.0/10、query:world-model
-   evidence：单视图amodal 3D场景重建
-18. [Learning Global Motion with Compact Gaussians for Feed-Forward 4D Reconstruction](/20260519-20260617/2605.31595v1-learning-global-motion-with-compact-gaussians-for-feed-forward-4d-reconstruction)  
-   标签：评分：9.0/10、query:world-model
-   evidence：使用紧凑3D高斯的前馈4D重建
-19. [KC-3DGS: Kurtosis-Constrained Gaussian Splatting for High-Fidelity View Synthesis](/20260519-20260617/2606.03120v1-kc-3dgs-kurtosis-constrained-gaussian-splatting-for-high-fidelity-view-synthesis)  
-   标签：评分：9.0/10、query:world-model
-   evidence：利用小波域监督改进3D高斯泼溅的新视角合成
-20. [ZipSplat: Fewer Gaussians, Better Splats](/20260519-20260617/2606.05102v1-zipsplat-fewer-gaussians-better-splats)  
-   标签：评分：9.0/10、query:world-model
-   evidence：基于token的前馈3D高斯泼溅方法
-21. [Unpaired RGB-Thermal Gaussian-Splatting Using Visual Geometric Transformers](/20260519-20260617/2606.05491v1-unpaired-rgb-thermal-gaussian-splatting-using-visual-geometric-transformers)  
-   标签：评分：9.0/10、query:world-model
-   evidence：使用3D高斯喷溅的多模态新视角合成
-22. [Global-Local Monte Carlo Tree Search in Vision-Language Models for Text-to-3D Indoor Scene Generation](/20260519-20260617/2606.06002v1-global-local-monte-carlo-tree-search-in-vision-language-models-for-text-to-3d-indoor-scene-generation)  
-   标签：评分：9.0/10、query:world-model
-   evidence：使用全局-局部MCTS和LVLM从文本生成三维室内场景
-23. [Global-Local Monte Carlo Tree Search in Vision-Language Models for Text-to-3D Indoor Scene Generation](/20260519-20260617/2606.06002v2-global-local-monte-carlo-tree-search-in-vision-language-models-for-text-to-3d-indoor-scene-generation)  
-   标签：评分：9.0/10、query:world-model
-   evidence：文本到室内三维场景生成，使用蒙特卡洛树搜索
-24. [Native3D: End-to-End 3D Scene Generation via Unified Mesh-Texture Modeling and Semantic Alignment](/20260519-20260617/2606.07117v1-native3d-end-to-end-3d-scene-generation-via-unified-mesh-texture-modeling-and-semantic-alignment)  
-   标签：评分：9.0/10、query:world-model
-   evidence：无需2D中间表示的端到端3D场景生成
-25. [Latent Spatial Memory for Video World Models](/20260519-20260617/2606.09828v1-latent-spatial-memory-for-video-world-models)  
-   标签：评分：9.0/10、query:world-model
-   evidence：用于新视角合成的视频世界模型隐空间记忆
-26. [ABot-Earth 0.5: Generative 3D Earth Model](/20260519-20260617/2606.09967v1-abot-earth-05-generative-3d-earth-model)  
-   标签：评分：9.0/10、query:world-model
-   evidence：使用3D高斯泼溅从卫星图像生成3D场景
-27. [Scene-Adaptive Nonlinear Tone Curves for Pseudo Ground-Truth Generation in Low-Light 3D Gaussian Splatting](/20260519-20260617/2606.11841v1-scene-adaptive-nonlinear-tone-curves-for-pseudo-ground-truth-generation-in-low-light-3d-gaussian-splatting)  
-   标签：评分：9.0/10、query:world-model
-   evidence：通过自适应色调曲线改进低光照下的3D高斯溅射
-28. [Wild3R: Feed-Forward 3D Gaussian Splatting from Unconstrained Sparse Photo Collection](/20260519-20260617/2606.11894v1-wild3r-feed-forward-3d-gaussian-splatting-from-unconstrained-sparse-photo-collection)  
-   标签：评分：9.0/10、query:world-model
-   evidence：从稀疏无约束照片进行前馈3D高斯场景重建
-29. [Wild3R: Feed-Forward 3D Gaussian Splatting from Unconstrained Sparse Photo Collection](/20260519-20260617/2606.11894v2-wild3r-feed-forward-3d-gaussian-splatting-from-unconstrained-sparse-photo-collection)  
-   标签：评分：9.0/10、query:world-model
-   evidence：前馈3D高斯泼溅用于实时渲染
-30. [MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold](/20260519-20260617/2606.13376v1-moverse-real-time-video-world-modeling-with-panoramic-gaussian-scaffold)  
-   标签：评分：9.0/10、query:world-model
-   evidence：从单张图像实时构建全景高斯支架的世界模型
-31. [World Tracing: Generative Pixel-Aligned Geometry Beyond the Visible](/20260519-20260617/2606.13652v1-world-tracing-generative-pixel-aligned-geometry-beyond-the-visible)  
-   标签：评分：9.0/10、query:world-model
-   evidence：生成式逐像素对齐几何，补全可见与遮挡表面
-32. [MoonSplat: Monocular Online Gaussian Splatting with Sim(3) Global Optimization](/20260519-20260617/2606.17935v1-moonsplat-monocular-online-gaussian-splatting-with-sim3-global-optimization)  
-   标签：评分：9.0/10、query:world-model
-   evidence：使用3D高斯喷溅的单目在线三维重建
+   evidence：高斯泼溅用于重建仿真环境
 
 ### 速读区论文标签
-1. [Feed-Forward Gaussian Splatting from Sparse Aerial Views](/20260519-20260617/2605.19949v1-feed-forward-gaussian-splatting-from-sparse-aerial-views)  
+1. [R5DGS: Semantic-Aware 4D Gaussian Splatting with Rigid Body Constraints for Efficient Dynamic Scene Reconstruction](/202606/17/2605.25909v1-r5dgs-semantic-aware-4d-gaussian-splatting-with-rigid-body-constraints-for-efficient-dynamic-scene-reconstruction)  
    标签：评分：8.0/10、query:world-model
-   evidence：从稀疏航拍视图进行前馈3DGS城市场景重建
-2. [ROAR-3D: Routing Arbitrary Views for High-Fidelity 3D Generation](/20260519-20260617/2605.21121v1-roar-3d-routing-arbitrary-views-for-high-fidelity-3d-generation)  
+   evidence：语义感知4D高斯泼溅用于动态场景重建与预测
+2. [Geometry-Aware Representation Denoising for Robust Multi-view 3D Reconstruction](/202606/17/2605.26230v1-geometry-aware-representation-denoising-for-robust-multi-view-3d-reconstruction)  
    标签：评分：8.0/10、query:world-model
-   evidence：从图像进行多视图条件3D生成
-3. [Stream3D: Sequential Multi-View 3D Generation via Evidential Memory](/20260519-20260617/2605.21472v1-stream3d-sequential-multi-view-3d-generation-via-evidential-memory)  
+   evidence：基于扩散去噪的多视图三维重建
+3. [Unified Panoramic Geometry Estimation via Multi-View Foundation Models](/202606/17/2605.26368v1-unified-panoramic-geometry-estimation-via-multi-view-foundation-models)  
    标签：评分：8.0/10、query:world-model
-   evidence：从单目流中顺序多视图3D生成
-4. [ArtSplat: Feed-Forward Articulated 3D Gaussian Splatting from Sparse Multi-State Uncalibrated Views](/20260519-20260617/2605.24304v1-artsplat-feed-forward-articulated-3d-gaussian-splatting-from-sparse-multi-state-uncalibrated-views)  
+   evidence：基于基础模型从单张全景图进行三维场景重建
+4. [Unified Panoramic Geometry Estimation via Multi-View Foundation Models](/202606/17/2605.26368v2-unified-panoramic-geometry-estimation-via-multi-view-foundation-models)  
    标签：评分：8.0/10、query:world-model
-   evidence：基于前馈3DGS的关节物体三维重建
-5. [RelWitness: Open-Vocabulary 3D Scene Graph Generation with Visual-Geometric Relation Witnesses](/20260519-20260617/2605.20823v1-relwitness-open-vocabulary-3d-scene-graph-generation-with-visual-geometric-relation-witnesses)  
+   evidence：使用基础模型从单张全景图像进行3D重建
+5. [Efficient RWKV-based Representation Learning for 3D Point Clouds](/202606/17/2606.10395v1-efficient-rwkv-based-representation-learning-for-3d-point-clouds)  
    标签：评分：7.0/10、query:world-model
-   evidence：用于场景理解的开词汇3D场景图生成
-6. [RelWitness: Open-Vocabulary 3D Scene Graph Generation with Visual-Geometric Relation Witnesses](/20260519-20260617/2605.20823v2-relwitness-open-vocabulary-3d-scene-graph-generation-with-visual-geometric-relation-witnesses)  
+   evidence：面向重建的3D点云表示学习
+6. [3D-CBM: A Framework for Concept-Based Interpretability in Generative 3D Modeling](/202606/17/2606.11446v1-3d-cbm-a-framework-for-concept-based-interpretability-in-generative-3d-modeling)  
    标签：评分：7.0/10、query:world-model
-   evidence：用于场景理解的开词汇3D场景图生成
-7. [Transcoding a 3D Gaussian Splatting Model from a Plenoptic Point Cloud or Mesh without the Original Multi-view Images](/20260519-20260617/2605.21051v1-transcoding-a-3d-gaussian-splatting-model-from-a-plenoptic-point-cloud-or-mesh-without-the-original-multi-view-images)  
+   evidence：生成式三维建模的概念瓶颈可解释性框架
+7. [TextHOI-3D: Text-to-3D Hand-Object Interaction via Discrete Multi-View Generation and Joint Mesh Optimization](/202606/17/2606.11805v1-texthoi-3d-text-to-3d-hand-object-interaction-via-discrete-multi-view-generation-and-joint-mesh-optimization)  
    标签：评分：7.0/10、query:world-model
-   evidence：从点云或网格转换3DGS模型而无需多视图图像
-8. [Perceive-then-Plan: Layout-as-Policy for Monocular 3D Scene Layout Estimation](/20260519-20260617/2605.25326v1-perceive-then-plan-layout-as-policy-for-monocular-3d-scene-layout-estimation)  
+   evidence：文本到3D手物交互生成
+8. [DepthMaster: Unified Monocular Depth Estimation for Perspective and Panoramic Images](/202606/17/2606.12368v1-depthmaster-unified-monocular-depth-estimation-for-perspective-and-panoramic-images)  
    标签：评分：7.0/10、query:world-model
-   evidence：单目3D场景布局估计，具有世界模型视角
-9. [Learning Representations from 3D Gaussian Splats](/20260519-20260617/2605.29549v1-learning-representations-from-3d-gaussian-splats)  
+   evidence：统一深度估计为3D重建提供基础
+9. [AnimaSpark: A Feed-Forward Method for Animating Arbitrary 3D Objects](/202606/17/2606.10988v1-animaspark-a-feed-forward-method-for-animating-arbitrary-3d-objects)  
    标签：评分：6.0/10、query:world-model
-   evidence：从3D高斯喷溅学习表示用于场景分类的比较研究
-10. [Benchmarking Single-Step Inpainting Methods for Multi-Object 3D Gaussian Splatting Scenes](/20260519-20260617/2605.30987v1-benchmarking-single-step-inpainting-methods-for-multi-object-3d-gaussian-splatting-scenes)  
+   evidence：从文本前馈生成3D物体动画的生成模型
+10. [SHERPA: Seam-aware Harmonized ERP Adaptation for Open-Domain 360$^\circ$ Panorama Generation](/202606/17/2606.12213v1-sherpa-seam-aware-harmonized-erp-adaptation-for-open-domain-360circ-panorama-generation)  
    标签：评分：6.0/10、query:world-model
-   evidence：对3D高斯泼溅场景的修复方法进行基准测试
-11. [Reasmory: 3D Reconstruction as Explicit Memory for VLMs Spatial Reasoning](/20260519-20260617/2606.00963v1-reasmory-3d-reconstruction-as-explicit-memory-for-vlms-spatial-reasoning)  
+   evidence：文本到360度全景图生成用于世界创建
+11. [JointEdit3D: Feed-Forward 3D Scene Editing in a Unified Latent Space](/202606/17/2606.13345v1-jointedit3d-feed-forward-3d-scene-editing-in-a-unified-latent-space)  
    标签：评分：6.0/10、query:world-model
-   evidence：将三维重建作为VLM空间推理的显式记忆，与世界模型理解相关
+   evidence：利用统一潜在空间进行前馈3D场景编辑，融合重建与生成
 
 
 <div class="dpr-home-promo-card">
