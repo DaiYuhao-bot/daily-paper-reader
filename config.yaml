@@ -25,3 +25,65 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: world-model
+      description: 三维场景重建，三维场景生成，世界模型，三维视觉
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: 3d scene reconstruction
+          keyword_cn: 三维场景重建
+          query: Three-dimensional scene reconstruction from images or point clouds
+        - keyword: 3d scene generation
+          keyword_cn: 三维场景生成
+          query: Generative models for 3D scene synthesis from text or images
+        - keyword: world model
+          keyword_cn: 世界模型
+          query: World model learning for 3D scene understanding and prediction
+        - keyword: 3d gaussian splatting
+          keyword_cn: 三维高斯泼溅
+          query: 3D Gaussian splatting for real-time rendering
+        - keyword: novel view synthesis
+          keyword_cn: 新颖视角合成
+          query: novel view synthesis
+        - keyword: 3d generative models
+          keyword_cn: 三维生成模型
+          query: 3d generative models
+      intent_queries:
+        - query: World model based 3d scene generation and reconstruction techniques
+          query_cn: 基于世界模型的三维场景生成与重建技术
+          enabled: true
+          source: manual
+          note: ''
+        - query: effective methods for 3D scene reconstruction from 2D images
+          query_cn: 从二维图像重建三维场景的有效方法
+          enabled: true
+          source: manual
+          note: ''
+        - query: what are the latest advances in world models for 3D vision
+          query_cn: 三维视觉世界模型的最新进展
+          enabled: true
+          source: manual
+          note: ''
+        - query: techniques for generating 3D scenes from text descriptions
+          query_cn: 从文字描述生成三维场景的技术
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-06-17T14:34:51.722Z'
+source_backends:
+  arxiv:
+    papers_table: arxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_arxiv_papers
+    vector_rpc_exact: match_arxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_arxiv_papers_bm25
+    sync_table: arxiv_sync_status
+    sync_success_value: success
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
