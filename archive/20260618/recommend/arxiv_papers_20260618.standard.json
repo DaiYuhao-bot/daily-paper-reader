@@ -1,0 +1,709 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-18T21:52:13.941379+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 24,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 31,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2606.13376v2",
+      "source": "arxiv",
+      "title": "MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold",
+      "abstract": "We present MoVerse, a real-time video world model that creates an interactively navigable scene from a single narrow-field-of-view image. This setting is challenging because the input observes only a small fraction of the environment, while interactive roaming requires a complete surrounding world, persistent geometry, controllable camera motion, and temporally coherent high-fidelity observations. MoVerse addresses this problem by separating world construction from observation rendering. It first expands the input into a gravity-aligned 360$^\\circ$ panorama with topology-aware diffusion, closing the missing field of view before 3D reasoning. It then lifts the panorama into a persistent 3D Gaussian scaffold using panoramic geometry-aware residual prediction, yielding a dense and directly renderable spatial memory. Finally, a Gaussian-conditioned video renderer translates scaffold renderings along user-specified camera trajectories into photorealistic video. To make this renderer practical for interaction, we train a bidirectional diffusion teacher for high-quality conditional rendering and distill it into a causal autoregressive student for bounded-latency streaming. This design combines the controllability and long-range consistency of explicit 3D representations with the perceptual quality of generative video models. MoVerse supports real-time scene roaming at 8~FPS on a single NVIDIA RTX~4090 GPU, demonstrating a practical path toward single-image world creation with interactive video output.",
+      "authors": [
+        "Yang Zhou",
+        "Ziheng Wang",
+        "Yuqin Lu",
+        "Haofeng Liu",
+        "Jun Liang",
+        "Shengfeng He",
+        "Jing Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-11T14:01:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.13376v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Real-time video world model using 3D Gaussian scaffold from single image",
+      "llm_evidence_cn": "基于单张图像使用3D高斯支架的实时视频世界模型",
+      "llm_evidence": "基于单张图像使用3D高斯支架的实时视频世界模型",
+      "canonical_evidence": "基于单张图像使用3D高斯支架的实时视频世界模型",
+      "llm_tldr_en": "MoVerse creates an interactively navigable 3D scene from a single image by first expanding it to a panorama via diffusion, then lifting to a persistent 3D Gaussian scaffold for real-time rendering.",
+      "llm_tldr_cn": "MoVerse提出一种实时视频世界模型，能从单个窄视场图像生成可交互漫游的3D场景。它首先通过拓扑感知扩散将输入补全为360°全景图，再基于全景几何感知残差预测将其提升为持久化3D高斯支架，实现实时渲染和可控相机运动。该方法弥补了视野缺失，并实现了高保真观察，为单图像场景生成提供了高效方案。",
+      "llm_tldr": "MoVerse提出一种实时视频世界模型，能从单个窄视场图像生成可交互漫游的3D场景。它首先通过拓扑感知扩散将输入补全为360°全景图，再基于全景几何感知残差预测将其提升为持久化3D高斯支架，实现实时渲染和可控相机运动。该方法弥补了视野缺失，并实现了高保真观察，为单图像场景生成提供了高效方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.14811v1",
+      "source": "arxiv",
+      "title": "S23DR 2026: End-to-End 3D Wireframe Prediction via DETR-Style Set Prediction with Contrastive Denoising",
+      "abstract": "We present WireframeDETR, our submission to the Structured Semantic 3D Reconstruction (S23DR) 2026 Challenge, which requires predicting a 3D building wireframe from multi-view COLMAP point clouds. Our method applies DETR-style set prediction directly to 3D point clouds, producing wireframes as sets of edge coordinate pairs without any intermediate vertex detection stage. We introduce three technical contributions: (1) contrastive denoising training that stabilises noisy Hungarian matching in early epochs; (2) a multi-scale encoder that aggregates the last encoder layer outputs via learned scalar weights; and (3) progressive auxiliary loss weighting that concentrates gradient signal on the decoder layers that most benefit from it. Our model achieves a public test HSS of 0.575 (F1~=~0.664, IoU~=~0.516) and a best validation HSS of 0.534 on the cleaned val split.",
+      "authors": [
+        "Nitiz Khanal"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-12T07:29:10+00:00",
+      "link": "https://arxiv.org/pdf/2606.14811v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "3D wireframe prediction from multi-view point clouds",
+      "llm_evidence_cn": "从多视点云预测三维线框",
+      "llm_evidence": "从多视点云预测三维线框",
+      "canonical_evidence": "从多视点云预测三维线框",
+      "llm_tldr_en": "WireframeDETR applies DETR-style set prediction to 3D point clouds for end-to-end building wireframe reconstruction without vertex detection.",
+      "llm_tldr_cn": "本文针对多视点云的三维建筑线框预测任务，提出WireframeDETR，采用DETR式集合预测直接生成边坐标对，无需中间顶点检测。引入对比去噪训练、多尺度编码器和渐进辅助损失加权，在S23DR挑战中取得优异性能。",
+      "llm_tldr": "本文针对多视点云的三维建筑线框预测任务，提出WireframeDETR，采用DETR式集合预测直接生成边坐标对，无需中间顶点检测。引入对比去噪训练、多尺度编码器和渐进辅助损失加权，在S23DR挑战中取得优异性能。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.18588v1",
+      "source": "arxiv",
+      "title": "Splaxel: Efficient Distributed Training of 3D Gaussian Splatting for Large-scale Scene Reconstruction via Pixel-level Communication",
+      "abstract": "3D Gaussian Splatting (3DGS) enables high-fidelity and real-time 3D scene reconstruction, but scaling training to large-scale scenes requires optimizing hundreds of millions of Gaussians across multiple GPUs. Existing distributed approaches either partition scenes into isolated regions, causing global inconsistency, or rely on global Gaussian-level exchanges, which lead to substantial growth in inter-GPU communication and quickly dominate iteration time.   We propose Splaxel, a communication-efficient distributed 3DGS training framework based on pixel-level local rendering and global composition. Instead of synchronizing Gaussians, each GPU renders its local subset and exchanges only partial pixel values, maintaining mathematical consistency while keeping communication cost stable as the scene size increases. Splaxel further reduces pixel-level redundancy through geometric and transmittance visibility prediction and improves GPU utilization via conflict-free camera-view consolidation. Evaluated on large-scale datasets with up to 120M Gaussians, Splaxel achieves up to 7.6$\\times$ speedup over the state-of-the-art distributed 3DGS framework while preserving high reconstruction quality.",
+      "authors": [
+        "Wenqi Jia",
+        "Zhewen Hu",
+        "Ying Huang",
+        "Yu Gong",
+        "Stavros Kalafatis",
+        "Yuke Wang",
+        "Wei Niu",
+        "Chengming Zhang",
+        "Ang Li",
+        "Sheng Di",
+        "Yuede Ji",
+        "Bo Fang",
+        "Miao Yin"
+      ],
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC",
+        "cs.CV"
+      ],
+      "published": "2026-06-17T01:27:41+00:00",
+      "link": "https://arxiv.org/pdf/2606.18588v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "distributed 3DGS for large-scale scene reconstruction",
+      "llm_evidence_cn": "分布式3D高斯泼溅大规模场景重建",
+      "llm_evidence": "分布式3D高斯泼溅大规模场景重建",
+      "canonical_evidence": "分布式3D高斯泼溅大规模场景重建",
+      "llm_tldr_en": "Splaxel enables efficient distributed training of 3DGS by exchanging only partial pixel-level renderings instead of Gaussians, achieving global consistency with reduced communication.",
+      "llm_tldr_cn": "针对大规模场景中3D高斯泼溅（3DGS）分布式训练通信量大、全局一致性差的问题，本文提出Splaxel。该方法基于像素级局部渲染与全局合成，每个GPU仅渲染其局部子集并交换部分像素级结果，而非同步高斯原语。实验表明，Splaxel在多个大规模数据集上实现了与集中式训练相当的重建质量，同时通信量显著低于现有分布式方法。",
+      "llm_tldr": "针对大规模场景中3D高斯泼溅（3DGS）分布式训练通信量大、全局一致性差的问题，本文提出Splaxel。该方法基于像素级局部渲染与全局合成，每个GPU仅渲染其局部子集并交换部分像素级结果，而非同步高斯原语。实验表明，Splaxel在多个大规模数据集上实现了与集中式训练相当的重建质量，同时通信量显著低于现有分布式方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.18787v1",
+      "source": "arxiv",
+      "title": "Learned Radius Estimation for UDF-Based Point Cloud Reconstruction",
+      "abstract": "Surface reconstruction from point clouds is important for consumer-grade 3D capture, including AR/VR and indoor scanning. Local-patch Unsigned Distance Field (UDF) methods are lightweight and generalizable, but their accuracy depends on the support radius, traditionally fixed or selected by a one-dimensional curvature heuristic that cannot capture heterogeneous local geometry. We propose a learned per-query radius selector that predicts a continuous support radius and plugs into a frozen LoSF-UDF backbone. The selector is trained using off-grid target radii obtained by parabolic interpolation of cached UDF error curves. Experiments show improved fine-scale reconstruction accuracy.",
+      "authors": [
+        "Eito Ogawa",
+        "Hiroshi Watanabe"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-17T07:59:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.18787v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Point cloud surface reconstruction using learned radius for UDF",
+      "llm_evidence_cn": "使用学习半径的UDF点云表面重建",
+      "llm_evidence": "使用学习半径的UDF点云表面重建",
+      "canonical_evidence": "使用学习半径的UDF点云表面重建",
+      "llm_tldr_en": "Proposes a learned per-query radius selector for UDF-based point cloud reconstruction, replacing fixed or heuristic radii. Trained via parabolic interpolation of cached error curves, it improves fine-scale accuracy and integrates with a frozen LoSF-UDF backbone.",
+      "llm_tldr_cn": "针对基于UDF的点云表面重建中支持半径选择依赖固定值或启发式方法的问题，提出了一种逐查询的学习半径选择器。通过抛物线插值缓存UDF误差曲线生成目标半径进行训练，该选择器可插入冻结的LoSF-UDF骨干网络。实验结果表明，该方法在细尺度重建精度上取得显著提升，为消费级3D捕获（如AR/VR）提供了更精确的表面重建方案。",
+      "llm_tldr": "针对基于UDF的点云表面重建中支持半径选择依赖固定值或启发式方法的问题，提出了一种逐查询的学习半径选择器。通过抛物线插值缓存UDF误差曲线生成目标半径进行训练，该选择器可插入冻结的LoSF-UDF骨干网络。实验结果表明，该方法在细尺度重建精度上取得显著提升，为消费级3D捕获（如AR/VR）提供了更精确的表面重建方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.19019v1",
+      "source": "arxiv",
+      "title": "FlowObject: Flow Steering for Bridging Generative Priors and Reconstruction Fidelity",
+      "abstract": "Recovering complete 3D representations of objects from few casual image captures remains a significant challenge. Recent 3D generative models, particularly those based on Flow-Matching (FM), can synthesize high-quality textured assets; however, they often suffer from ''synthetic bias'' where learned priors override observational evidence, alongside a lack of alignment with the observed instance. Conversely, optimization-based methods like 3D Gaussian Splatting (3DGS) provide high fidelity on visible surfaces but fail to reason about unobserved geometry. In this paper, we present FlowObject, a framework that reformulates sparse-view 3D reconstruction as a training-free, guided inverse problem. Our approach applies a dual-space guidance strategy to steer the Ordinary Differential Equation (ODE) trajectory of a flow-matching model, enabling the completion of unseen regions through learned generative priors while enforcing strict consistency with real-world observations. By integrating a 3DGS refinement stage, FlowObject further bridges the gap between ''synthetic-looking'' generative outputs and photorealistic reconstructions. Comprehensive benchmarks on synthetic and real-world datasets demonstrate that current state-of-the-art methods often struggle to achieve geometric completeness and observational consistency simultaneously, especially under severe occlusions. In contrast, our method significantly outperforms state-of-the-art generative models and optimization-based frameworks in both geometric completeness and view-dependent appearance fidelity.",
+      "authors": [
+        "Yuchen Rao",
+        "Xuqian Ren",
+        "Yinyu Nie",
+        "Sayan Deb Sarkar",
+        "Biao Zhang",
+        "Vincent Lepetit",
+        "Friedrich Fraundorfer"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-17T12:42:09+00:00",
+      "link": "https://arxiv.org/pdf/2606.19019v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Sparse-view 3D reconstruction with Gaussian splatting and generative priors",
+      "llm_evidence_cn": "结合高斯泼溅和生成先验的稀疏视图三维重建",
+      "llm_evidence": "结合高斯泼溅和生成先验的稀疏视图三维重建",
+      "canonical_evidence": "结合高斯泼溅和生成先验的稀疏视图三维重建",
+      "llm_tldr_en": "FlowObject reformulates sparse-view 3D reconstruction as a guided inverse problem, bridging generative priors from flow-matching and reconstruction fidelity from 3D Gaussian Splatting without training.",
+      "llm_tldr_cn": "从少量图像恢复完整3D表示具有挑战性：生成模型有合成偏差，优化方法无法推理未观测几何。FlowObject将稀疏视图重建表述为无训练引导逆问题，利用双空间引导策略结合流匹配生成先验与3D高斯泼溅的高保真度。该方法无需额外训练即可生成完整且与观测对齐的3D物体，在少样本重建任务上取得了超越现有方法的性能，为3D重建与生成融合提供了新范式。",
+      "llm_tldr": "从少量图像恢复完整3D表示具有挑战性：生成模型有合成偏差，优化方法无法推理未观测几何。FlowObject将稀疏视图重建表述为无训练引导逆问题，利用双空间引导策略结合流匹配生成先验与3D高斯泼溅的高保真度。该方法无需额外训练即可生成完整且与观测对齐的3D物体，在少样本重建任务上取得了超越现有方法的性能，为3D重建与生成融合提供了新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.19316v1",
+      "source": "arxiv",
+      "title": "NeuMesh++: Towards Versatile and Efficient Volumetric Editing with Disentangled Neural Mesh-based Implicit Field",
+      "abstract": "Recently neural implicit rendering techniques have evolved rapidly and demonstrated significant advantages in novel view synthesis and 3D scene reconstruction. However, existing neural rendering methods for editing purposes offer limited functionalities, e.g., rigid transformation and category-specific editing. In this paper, we present a novel mesh-based representation by encoding the neural radiance field with disentangled geometry, texture, and semantic codes on mesh vertices, which empowers a set of efficient and comprehensive editing functionalities, including mesh-guided geometry editing, designated texture editing with texture swapping, filling and painting operations, and semantic-guided editing. To this end, we develop several techniques including a novel local space parameterization to enhance rendering quality and training stability, a learnable modification color on vertex to improve the fidelity of texture editing, a spatial-aware optimization strategy to realize precise texture editing, and a semantic-aided region selection to ease the laborious annotation of implicit field editing. Extensive experiments and editing examples on both real and synthetic datasets demonstrate the superiority of our method on representation quality and editing ability. Project page: https://zju3dv.github.io/neumeshplusplus/",
+      "authors": [
+        "Chong Bao",
+        "Yuan Li",
+        "Bangbang Yang",
+        "Yujun Shen",
+        "Hujun Bao",
+        "Zhaopeng Cui",
+        "Yinda Zhang",
+        "Guofeng Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-17T17:39:21+00:00",
+      "link": "https://arxiv.org/pdf/2606.19316v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "neural implicit rendering for novel view synthesis and 3D scene editing",
+      "llm_evidence_cn": "神经隐式渲染用于新视角合成与三维场景编辑",
+      "llm_evidence": "神经隐式渲染用于新视角合成与三维场景编辑",
+      "canonical_evidence": "神经隐式渲染用于新视角合成与三维场景编辑",
+      "llm_tldr_en": "NeuMesh++ encodes radiance fields with disentangled geometry, texture, and semantic codes on mesh vertices, enabling efficient volumetric editing and novel view synthesis.",
+      "llm_tldr_cn": "本文针对神经渲染编辑功能有限（仅刚体变换等）的问题，提出NeuMesh++，在网格顶点上编码解耦的几何、纹理与语义隐场，支持网格引导几何编辑、纹理交换与语义编辑，同时保持高质量新视角合成能力。",
+      "llm_tldr": "本文针对神经渲染编辑功能有限（仅刚体变换等）的问题，提出NeuMesh++，在网格顶点上编码解耦的几何、纹理与语义隐场，支持网格引导几何编辑、纹理交换与语义编辑，同时保持高质量新视角合成能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.26629v1",
+      "source": "arxiv",
+      "title": "DelowlightSplat: Feed-Forward Gaussian Splatting for Lowlight 3D Scene Reconstruction",
+      "abstract": "Novel-view synthesis and 3D reconstruction from sparse posed images are central to robotics and AR/VR. Yet, feed-forward 3D Gaussian reconstruction fails under lowlight due to noise, color shifts, and unreliable correspondence. We propose DelowlightSplat, a lowlight-aware feed-forward Gaussian splatting framework for clean novel-view rendering. We build a controllable multi-view lowlight benchmark by degrading only context views while keeping target views clean. We introduce a lightweight Lowlight Adapter for residual enhancement to improve matchability, and couple it with cost-volume-based multi-view inference to directly predict clean 3D Gaussians. Experiments show that DelowlightSplat significantly outperforms previous feed-forward method and two-stage pipeline under lowlight conditions.",
+      "authors": [
+        "Fuzhen Jiang",
+        "Zengtian Xie",
+        "Zhuoran Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-26T07:05:10+00:00",
+      "link": "https://arxiv.org/pdf/2605.26629v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "feed-forward Gaussian splatting for lowlight novel-view synthesis and 3D reconstruction",
+      "llm_evidence_cn": "低光照下的前馈高斯泼溅新视角合成与3D重建",
+      "llm_evidence": "低光照下的前馈高斯泼溅新视角合成与3D重建",
+      "canonical_evidence": "低光照下的前馈高斯泼溅新视角合成与3D重建",
+      "llm_tldr_en": "Proposes DelowlightSplat, a lowlight-aware feed-forward 3DGS framework for clean novel-view rendering and reconstruction under lowlight conditions.",
+      "llm_tldr_cn": "前馈3DGS在低光照下因噪声和色彩偏移而失败。本文提出DelowlightSplat，构建可控低光照基准，引入轻量级低光照适配器增强特征可匹配性，结合成本体积多视图推理直接预测干净3D高斯。实验证明在低光照稀疏视图下显著优于现有方法。",
+      "llm_tldr": "前馈3DGS在低光照下因噪声和色彩偏移而失败。本文提出DelowlightSplat，构建可控低光照基准，引入轻量级低光照适配器增强特征可匹配性，结合成本体积多视图推理直接预测干净3D高斯。实验证明在低光照稀疏视图下显著优于现有方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "carryover_cache",
+      "paper_id": "2605.26629v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.12368v2",
+      "source": "arxiv",
+      "title": "DepthMaster: Unified Monocular Depth Estimation for Perspective and Panoramic Images",
+      "abstract": "While monocular depth estimation has achieved significant progress, achieving generalized metric depth estimation for both narrow field-of-view (FoV) perspectives and $360^\\circ$ panoramas remains an unsolved challenge. Existing methods are often tailored to specific camera types and struggle to produce accurate metric depth that generalizes across diverse settings. This limitation stems from two key challenges: the inherent geometric discrepancy between perspective and panoramic cameras, and the scarcity of panoramic training data with metric annotations. In this work, we introduce DepthMaster, a unified metric depth estimation framework. Rather than employing specialized networks to learn spherical distortions, we reformulate the problem by decomposing panoramic images into overlapping perspective patches. Crucially, distinct from prior projection-based methods that rely on ad-hoc architectural modifications to handle boundaries, we introduce a novel Correspondence Consistency Loss (CCL) and inject virtual projection cameras as geometric priors, allowing us to seamlessly stitch the patches while avoiding specialized operators and keeping the backbone largely compatible with standard Transformer designs. This strategy also resolves the geometric differences by unifying all inputs into a canonical perspective representation, and effectively circumvents data scarcity by directly unlocking powerful metric priors from vast perspective datasets. Trained on a mixed dataset that contains only one panorama dataset, DepthMaster achieves state-of-the-art zero-shot performance on 13 diverse datasets, outperforming not only universal methods but also leading specialist models in both perspective and panoramic domains.",
+      "authors": [
+        "Pengfei Wang",
+        "Shihao Wang",
+        "Liyi Chen",
+        "Zhiyuan Ma",
+        "Guowen Zhang",
+        "Lei Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-10T17:35:23+00:00",
+      "link": "https://arxiv.org/pdf/2606.12368v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Monocular depth estimation for perspective and panoramic images",
+      "llm_evidence_cn": "透视与全景图的单目深度估计",
+      "llm_evidence": "透视与全景图的单目深度估计",
+      "canonical_evidence": "透视与全景图的单目深度估计",
+      "llm_tldr_en": "DepthMaster unifies monocular metric depth estimation for both perspective and panoramic images by reformulating geometric discrepancy, achieving generalized depth across camera types.",
+      "llm_tldr_cn": "现有单目深度估计方法通常针对特定相机类型，难以适应多种视场角。DepthMaster通过重新表达几何差异，统一处理透视与全景图像的度量深度估计问题。方法利用数据蒸馏和几何变换，无需专门网络学习球形畸变。实验表明该方法在多个数据集上取得了泛化性强的深度预测结果，为3D场景重建提供了关键支持。",
+      "llm_tldr": "现有单目深度估计方法通常针对特定相机类型，难以适应多种视场角。DepthMaster通过重新表达几何差异，统一处理透视与全景图像的度量深度估计问题。方法利用数据蒸馏和几何变换，无需专门网络学习球形畸变。实验表明该方法在多个数据集上取得了泛化性强的深度预测结果，为3D场景重建提供了关键支持。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "effective methods for 3D scene reconstruction from 2D images",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.11568v1",
+      "source": "arxiv",
+      "title": "4DP-QA: Scalable QA for 4D Perception in Vision Language Models",
+      "abstract": "Despite recent advances, Vision Language Models (VLMs) still struggle to grasp the dynamics of the world. We note that the ability to reason about a 4D scene, challenging in itself, is further complicated by two factors. First, VLMs observe motion indirectly via its projection onto 2D images. Second, existing datasets fail to disentangle object and camera motion. To address these challenges, we present a QA generation pipeline that focuses on motion-related scene understanding. We take particular care of the entanglement of camera and object motion by casting tracking in both the traditional way and in a novel, fixed reference system, dubbed True-Motion Tracking, which provides an intuitive description of motion. From this pipeline, we generate a large-scale training dataset of 400K samples, 4DP-QA (4D Perception QA), and a 2.2K-sample benchmark, 4DP-QA-Bench. Training existing models on our dataset yields performance improvements on an external benchmark, validating the effectiveness of our method.",
+      "authors": [
+        "Seokju Cho",
+        "Abhishek Badki",
+        "Hang Su",
+        "Jindong Jiang",
+        "Ziyao Zeng",
+        "Seungryong Kim",
+        "Sifei Liu",
+        "Orazio Gallo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-10T01:49:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.11568v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "4D scene understanding for world models",
+      "llm_evidence_cn": "4D场景理解用于世界模型",
+      "llm_evidence": "4D场景理解用于世界模型",
+      "canonical_evidence": "4D场景理解用于世界模型",
+      "llm_tldr_en": "4DP-QA introduces a scalable QA generation pipeline for 4D perception, focusing on disentangling object and camera motion to improve VLM reasoning about dynamic scenes.",
+      "llm_tldr_cn": "本文针对视觉语言模型（VLM）在理解动态场景方面的不足，提出4DP-QA，一个可扩展的问答生成流水线。该流水线专注运动相关场景理解，通过真运动追踪在固定参考系中解耦物体与相机运动。基于此生成的大规模数据集可微调VLM，在4D感知基准上显著提升性能，尤其对运动推理任务。该工作为世界模型中的场景动态理解提供了重要数据和方法。",
+      "llm_tldr": "本文针对视觉语言模型（VLM）在理解动态场景方面的不足，提出4DP-QA，一个可扩展的问答生成流水线。该流水线专注运动相关场景理解，通过真运动追踪在固定参考系中解耦物体与相机运动。基于此生成的大规模数据集可微调VLM，在4D感知基准上显著提升性能，尤其对运动推理任务。该工作为世界模型中的场景动态理解提供了重要数据和方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.28995v1",
+      "source": "arxiv",
+      "title": "GAP3D: Generative Alignment of VLM Latents to Patch-Level Embeddings for 3D Generation",
+      "abstract": "Recent approaches integrating vision-language models (VLMs) as prompt encoders for generative model conditioning typically rely on expensive end-to-end training or map features to compressed representations, discarding the dense spatial structure required for geometry-aware tasks like 3D asset generation. To address this, we propose GAP3D, a modular, diffusion-based approach that aligns VLM-generated latents directly to the complete, patch-level feature space of a pre-trained image encoder, enabling a frozen downstream generative model to utilize a VLM as prompt encoder while maintaining a spatially structured conditioning signal. Evaluated on 3D asset generation, our method bypasses the need for large-scale 3D data by training mainly on general-domain image-text pairs. It also exhibits emergent zero-shot capabilities for multimodal prompts, despite being trained exclusively on text input. Finally, while currently prioritizing high-level semantics over fine-grained detail, GAP3D demonstrates that the representation gap between VLM and image-encoder feature spaces can be partially bridged through diffusion-based alignment, taking the first steps towards a modular integration of foundation models through generative alignment to dense embedding spaces.",
+      "authors": [
+        "Polytimi Anna Gkotsi",
+        "Andrii Zadaianchuk",
+        "Mohammad Mahdi Derakhshani"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-27T18:53:09+00:00",
+      "link": "https://arxiv.org/pdf/2605.28995v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "generative alignment of VLM latents for 3D asset generation",
+      "llm_evidence_cn": "将VLM潜在表示对齐到补丁级用于3D资产生成",
+      "llm_evidence": "将VLM潜在表示对齐到补丁级用于3D资产生成",
+      "canonical_evidence": "将VLM潜在表示对齐到补丁级用于3D资产生成",
+      "llm_tldr_en": "GAP3D aligns VLM latents to patch-level embeddings for conditioning diffusion-based 3D generation without large-scale 3D data.",
+      "llm_tldr_cn": "现有方法将VLM作为提示编码器时丢失空间结构。本文提出GAP3D，通过将VLM生成的潜在表示直接对齐到预训练图像编码器的完整补丁级特征空间，使冻结的下游生成模型能利用VLM保留空间结构的条件。在3D资产生成任务上，该方法无需大规模3D数据即可生成高质量模型。但主要针对物体级而非场景级生成。",
+      "llm_tldr": "现有方法将VLM作为提示编码器时丢失空间结构。本文提出GAP3D，通过将VLM生成的潜在表示直接对齐到预训练图像编码器的完整补丁级特征空间，使冻结的下游生成模型能利用VLM保留空间结构的条件。在3D资产生成任务上，该方法无需大规模3D数据即可生成高质量模型。但主要针对物体级而非场景级生成。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d generative models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "carryover_cache",
+      "paper_id": "2605.28995v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.14048v1",
+      "source": "arxiv",
+      "title": "WAM4D: Fast 4D World Action Model via Spatial Register Tokens",
+      "abstract": "World action models (WAMs) have recently shown promise in jointly modeling future observations and executable robot actions. However, most existing WAMs still operate in 2D video or latent spaces, where visually plausible rollouts miss the 3D spatial constraints and occluded contact geometry required for precise manipulation. While geometric foundation models offer strong priors for recovering dense 3D structure and motion from visual observations, forcing WAMs to predict the dense 4D representation introduces costly geometric decoding and slows down causal action generation. To address the trade-off, we present WAM4D, a fast 4D world action model that uses lightweight spatial register tokens as training-time future-depth readouts to transfer pretrained geometric priors into a causal video-action transformer, then removes the register branch for lightweight action inference. To prevent non-causal shortcuts, we further design causal mixture attention for the Mixture-of-Transformers (MoT) WAM backbone, defining modality-specific visibility among video, action, and geometry tokens. Comprehensive experiments on RoboTwin 2.0 and challenging real-world manipulation tasks show that WAM4D improves spatial consistency and achieves competitive action prediction while maintaining efficient inference.",
+      "authors": [
+        "Ying Li",
+        "Xiaobao Wei",
+        "Jiajun Cao",
+        "Hao Wang",
+        "Xiaowei Chi",
+        "Chengyu Bai",
+        "Qianpu Sun",
+        "Jiajun Li",
+        "Xiaojie Zhang",
+        "Jian Tang",
+        "Sirui Han",
+        "Shanghang Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-06-12T02:49:34+00:00",
+      "link": "https://arxiv.org/pdf/2606.14048v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "world action model with 4D spatial tokens",
+      "llm_evidence_cn": "基于空间注册标记的4D世界动作模型",
+      "llm_evidence": "基于空间注册标记的4D世界动作模型",
+      "canonical_evidence": "基于空间注册标记的4D世界动作模型",
+      "llm_tldr_en": "WAM4D introduces lightweight spatial register tokens to efficiently transfer geometric priors from 3D foundation models to world action models, enabling fast 4D prediction of future observations and actions with 3D consistency.",
+      "llm_tldr_cn": "现有世界动作模型多基于2D或潜在空间，缺乏3D空间约束。WAM4D提出使用轻量级空间注册标记作为训练时的深度读出，将预训练几何先验高效转移到4D世界动作模型中。该方法在保持快速因果动作生成的同时，实现了具有3D一致性的未来观测和动作联合建模。实验表明其在机器人操作任务中取得了更好的空间感知性能。",
+      "llm_tldr": "现有世界动作模型多基于2D或潜在空间，缺乏3D空间约束。WAM4D提出使用轻量级空间注册标记作为训练时的深度读出，将预训练几何先验高效转移到4D世界动作模型中。该方法在保持快速因果动作生成的同时，实现了具有3D一致性的未来观测和动作联合建模。实验表明其在机器人操作任务中取得了更好的空间感知性能。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.13676v1",
+      "source": "arxiv",
+      "title": "Modality Forcing for Scalable Spatial Generation",
+      "abstract": "Text-to-image (T2I) models contain rich spatial priors. Synthesizing photorealistic, cluttered scenes requires an understanding of geometry, including perspective and relative scale. Prior works adapt T2I models to leverage this prior for depth prediction, but they require dense depth data and involve complex recipes. We propose Modality Forcing, a simple, scalable post-training recipe for joint image-depth generation using a single DiT trained on sparse depth data. Modality Forcing enables conditional and joint generation of image and depth in any permutation by assigning separate noise levels per modality. Per-modality decoders let us train on sparse, real-world depth and achieve strong, generalizable depth prediction. We further show that Modality Forcing inherits the scalability of T2I pre-training: by training a set of T2I models from scratch (370M to 3.3B parameters), we find that larger models trained on more image data produce more accurate depth. Our strongest model is competitive with state-of-the-art monocular depth estimators and reduces AbsRel by 57% relative to existing joint image-depth generative models. These results provide strong evidence that image generation is a scalable pre-training objective for spatial perception. https://modality-forcing.github.io/",
+      "authors": [
+        "Bardienus Pieter Duisterhof",
+        "Deva Ramanan",
+        "Jeffrey Ichnowski",
+        "Justin Johnson",
+        "Keunhong Park"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-11T17:59:45+00:00",
+      "link": "https://arxiv.org/pdf/2606.13676v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "joint image-depth generation from text using diffusion, relevant to generative models for 3D scene synthesis",
+      "llm_evidence_cn": "文本到图像与深度联合生成，与3D场景生成的生成模型相关",
+      "llm_evidence": "文本到图像与深度联合生成，与3D场景生成的生成模型相关",
+      "canonical_evidence": "文本到图像与深度联合生成，与3D场景生成的生成模型相关",
+      "llm_tldr_en": "Modality Forcing enables joint generation of image and depth from text using a single DiT trained on sparse depth, inheriting T2I priors.",
+      "llm_tldr_cn": "文本到图像模型蕴含丰富空间先验，但将其用于深度预测需要密集深度数据和复杂流程。本文提出Modality Forcing，一种简单的后训练方案，通过为每个模态分配独立噪声水平，在稀疏深度上训练单一DiT即可实现图像与深度的条件/联合生成。该方案继承T2I的可扩展性，在深度预测上取得强泛化性能。",
+      "llm_tldr": "文本到图像模型蕴含丰富空间先验，但将其用于深度预测需要密集深度数据和复杂流程。本文提出Modality Forcing，一种简单的后训练方案，通过为每个模态分配独立噪声水平，在稀疏深度上训练单一DiT即可实现图像与深度的条件/联合生成。该方案继承T2I的可扩展性，在深度预测上取得强泛化性能。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Generative models for 3D scene synthesis from text or images",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.29997v1",
+      "source": "arxiv",
+      "title": "FRUC: Feedforward Dynamic Scene Reconstruction from Uncalibrated Collaborative Driving Views",
+      "abstract": "We present FRUC, a feed-forward 3D Gaussian splatting framework for dynamic scene reconstruction from uncalibrated collaborative driving views. Existing multi-agent reconstruction frameworks are often hindered by rigid prerequisites, demanding precise spatial calibration and slow per-scene optimization. In this paper, we rethink this task by conceptualizing a distributed multi-vehicle network as a spatio-temporally unstructured ego-centric multi-camera system, where the core challenge lies in enhancing ego-centric occluded geometry through collaboration without degrading the ego's accurately observed visible geometry, while preserving reconstruction efficiency. For efficient reconstruction, FRUC is built upon a visual grounded geometric Transformer backbone to enable one-shot, calibration-free inference from a flexible number of multi-vehicle views. To achieve non-destructive geometric supplementation under uncalibrated cross-agent misalignment, FRUC first introduces an ego-centric causal occlusion field that explicitly derives occlusion evolution as latent priors by modeling agent-wise spatio-temporal correlations. Guided by these occlusion priors, it further formulates cross-agent integration as a deterministic residual denoising process via zero-initialized injection, turning challenging cross-agent fusion into bounded residual learning for robust collaborative blind-spot completion. Through extensive evaluations on the real-world V2XReal and UrbanIng-V2X datasets, FRUC is shown to be a new state-of-the-art for the scene reconstruction of dynamic collaborative driving environments, significantly outperforming existing methods in both rendering quality and efficiency.",
+      "authors": [
+        "Yihang Tao",
+        "Yu Guo",
+        "Zhengru Fang",
+        "Haonan An",
+        "Yuguang Fang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-28T14:27:30+00:00",
+      "link": "https://arxiv.org/pdf/2605.29997v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "feedforward dynamic scene reconstruction using 3D Gaussian splatting from driving views",
+      "llm_evidence_cn": "基于前馈3D高斯泼溅的动态场景重建，来自驾驶视角",
+      "llm_evidence": "基于前馈3D高斯泼溅的动态场景重建，来自驾驶视角",
+      "canonical_evidence": "基于前馈3D高斯泼溅的动态场景重建，来自驾驶视角",
+      "llm_tldr_en": "Presents FRUC, a feed-forward 3DGS framework for dynamic scene reconstruction from uncalibrated collaborative driving views, enhancing ego-centric occluded geometry.",
+      "llm_tldr_cn": "现有多智能体重建框架需要精确标定和慢优化。本文提出FRUC，将多车网络视为时空非结构化的多相机系统，基于前馈3DGS进行动态场景重建。核心是增强自车被遮挡几何而不破坏已观测可见几何，同时保持效率。实验证明无需标定即可实现高质量协作重建。",
+      "llm_tldr": "现有多智能体重建框架需要精确标定和慢优化。本文提出FRUC，将多车网络视为时空非结构化的多相机系统，基于前馈3DGS进行动态场景重建。核心是增强自车被遮挡几何而不破坏已观测可见几何，同时保持效率。实验证明无需标定即可实现高质量协作重建。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "carryover_cache",
+      "paper_id": "2605.29997v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.15328v1",
+      "source": "arxiv",
+      "title": "SGFormer++: Semantic Graph Transformer for Incremental 3D Scene Graph Generation",
+      "abstract": "In this paper, we propose SGFormer++, a novel Semantic Graph Transformer for 3D scene graph generation (SGG), which aims to parse point cloud scenes into semantic structural graphs, where nodes denote detected object instances and edges encode their pairwise relationships, with the core challenge lying in modeling complex global scene structure. While existing graph convolutional network (GCN)-based methods suffer from over-smoothing and limited receptive fields, SGFormer++ leverages Transformer layers as its backbone to enable global message passing. Specifically, we introduce two key components tailored for 3D SGG: (1) a Graph Embedding Layer++ that efficiently integrates edge-aware global context with linear computational complexity, and (2) a Semantic Injection Layer++ that enriches visual features with linguistic priors from large language models (LLMs) and vision-language models (VLMs), boosting semantic representation without introducing extra trainable parameters. To further address the practical challenge of incremental SGG (I-SGG), where new relationship categories arrive sequentially, we equip SGFormer++ with a novel Spatial-guided Feature Adapter, which calibrates predicate features using subject-object spatial geometry to counter scale variation, and a Cascaded Binary Prediction Head that mitigates catastrophic forgetting via task-incremental classifier expansion and logit distillation. Extensive experiments on the 3DSSG benchmark demonstrate that SGFormer++ achieves state-of-the-art performance in both standard and incremental settings: it yields a significant 4.49% absolute improvement in Predicate A@1 under the incremental setting. Code and data are available at: https://github.com/Andy20178/SGFormer.",
+      "authors": [
+        "Mengshi Qi",
+        "Changsheng Lv",
+        "Zijian Fu",
+        "Xianlin Zhang",
+        "Huadong Ma"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-13T14:41:56+00:00",
+      "link": "https://arxiv.org/pdf/2606.15328v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D scene graph generation from point clouds for scene understanding",
+      "llm_evidence_cn": "从点云生成3D场景图用于场景理解",
+      "llm_evidence": "从点云生成3D场景图用于场景理解",
+      "canonical_evidence": "从点云生成3D场景图用于场景理解",
+      "llm_tldr_en": "SGFormer++ uses Transformer layers with graph embedding for global message passing to generate 3D scene graphs from point clouds incrementally.",
+      "llm_tldr_cn": "从点云生成3D场景图时，现有GCN方法存在过平滑和有限感受野问题。SGFormer++采用Transformer作为骨干网络实现全局消息传递，并设计了图嵌入层++和动态令牌策略，有效建模复杂全局场景结构，实现了增量式3D场景图生成，性能优于GCN方法。",
+      "llm_tldr": "从点云生成3D场景图时，现有GCN方法存在过平滑和有限感受野问题。SGFormer++采用Transformer作为骨干网络实现全局消息传递，并设计了图嵌入层++和动态令牌策略，有效建模复杂全局场景结构，实现了增量式3D场景图生成，性能优于GCN方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.14162v1",
+      "source": "arxiv",
+      "title": "VideoWeave: Unlocking Geometric Consistency in Video Generation via Joint Geometry-Video Modeling",
+      "abstract": "Large-scale video diffusion models often fail to preserve 3D structure over time, causing geometric drift and implausible motion under viewpoint changes. Existing methods usually enforce geometric consistency by using explicit geometry reconstructions, such as depth maps, point clouds, or reconstructed 3D structures, to define conditions, supervision, or reward signals, making the generator sensitive to errors from upstream geometry pipelines. We propose VideoWeave, a latent-space post-training framework that uses implicit geometry-model features to constrain the generative distribution, providing a more flexible and non-rigid form of guidance that mitigates the impact of reconstruction errors from geometry models. Specifically, VideoWeave adapts these features into geometry latents and jointly models them with video latents in a shared denoising space, allowing geometry to shape the generative distribution during training. To support this process, we build GeoVid-80K, an 80K-video dataset with paired appearance and geometry representations. Experiments on text-to-video and image-to-video generation show that VideoWeave improves geometric coherence while preserving strong visual quality. VideoWeave project page at https://videoweave.github.io/",
+      "authors": [
+        "Xunzhi Xiang",
+        "Zixuan Duan",
+        "Yabo Chen",
+        "Zhengxuan Wei",
+        "Guiyu Zhang",
+        "Zixiao Gu",
+        "Zhe Gao",
+        "Haibin Huang",
+        "Chi Zhang",
+        "Qi Fan",
+        "Xuelong Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-12T06:41:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.14162v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Geometric consistency in video generation",
+      "llm_evidence_cn": "视频生成中的几何一致性",
+      "llm_evidence": "视频生成中的几何一致性",
+      "canonical_evidence": "视频生成中的几何一致性",
+      "llm_tldr_en": "VideoWeave enforces geometric consistency in video diffusion models by using implicit geometry features to constrain the generative distribution without explicit 3D reconstruction.",
+      "llm_tldr_cn": "大规模视频扩散模型常因缺乏3D结构保持而产生几何漂移。VideoWeave提出一种隐式几何特征引导方法，在后训练阶段约束生成分布，避免依赖显式几何重建的误差。该方法在视频生成中显著提升了视角变化下的几何一致性，为动态场景的新视角合成提供了新思路。",
+      "llm_tldr": "大规模视频扩散模型常因缺乏3D结构保持而产生几何漂移。VideoWeave提出一种隐式几何特征引导方法，在后训练阶段约束生成分布，避免依赖显式几何重建的误差。该方法在视频生成中显著提升了视角变化下的几何一致性，为动态场景的新视角合成提供了新思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.00439v1",
+      "source": "arxiv",
+      "title": "Physical Object Understanding with a Physically Controllable World Model",
+      "abstract": "A central challenge in visual intelligence is learning the physical structure of scenes from raw videos: how regions form objects and the laws that govern their interactions. Solving these tasks requires world models capable of inferring distributional states of the world from partial observations - capabilities that current architectures do not provide. We introduce a new class of probabilistic world models that support estimation of the probability of any visual variable, such as appearance and dynamics, conditioned on any other variables. Here, we identify that these models can be trained efficiently with autoregressive sequence modeling, yielding world models from which rich object understanding emerges. First, we demonstrate that our model captures the physical laws governing how objects move by generating multiple plausible future states of the world through sequential inference. Then, by analyzing motion correlations across these futures, we extract objects and articulated object subparts. Having discovered these objects, we show that our world model can manipulate them in 3D. Finally, we demonstrate how physical relationships between objects can be computed from the world model, enabling applications such as Visual Jenga.",
+      "authors": [
+        "Rahul Venkatesh",
+        "Klemen Kotar",
+        "Lilian Naing Chen",
+        "Wanhee Lee",
+        "Gia Ancone",
+        "Seungwoo Kim",
+        "Luca Thomas Wheeler",
+        "Jared Watrous",
+        "Honglin Chen",
+        "Daniel Bear",
+        "Stefan Stojanov",
+        "Daniel LK Yamins"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-05-30T00:10:32+00:00",
+      "link": "https://arxiv.org/pdf/2606.00439v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "probabilistic world model for physical object understanding from videos",
+      "llm_evidence_cn": "从视频中学习物理对象理解的概率世界模型",
+      "llm_evidence": "从视频中学习物理对象理解的概率世界模型",
+      "canonical_evidence": "从视频中学习物理对象理解的概率世界模型",
+      "llm_tldr_en": "A new class of probabilistic world models trained with autoregressive sequence modeling for physical object understanding.",
+      "llm_tldr_cn": "针对视觉智能中从原始视频学习物理结构和交互规律的需求，本文提出一类新的概率世界模型，可通过自回归序列建模高效训练，支持对任意视觉变量进行条件概率估计。实验表明该模型能捕获物体外观和动力学，并实现可控物理模拟，为场景理解提供了强有力工具。",
+      "llm_tldr": "针对视觉智能中从原始视频学习物理结构和交互规律的需求，本文提出一类新的概率世界模型，可通过自回归序列建模高效训练，支持对任意视觉变量进行条件概率估计。实验表明该模型能捕获物体外观和动力学，并实现可控物理模拟，为场景理解提供了强有力工具。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.00439v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.18429v1",
+      "source": "arxiv",
+      "title": "CAOA -- Completion-Assisted Object-CAD Alignment",
+      "abstract": "Accurately aligning CAD models to their corresponding objects in indoor RGB-D scans is a central challenge in 3D semantic reconstruction. The task requires estimating a 9-Degree-of-Freedom (DoF) pose-position, rotation, and scale along three axes-but is hindered by noisy and incomplete scans, as well as segmentation errors that cause geometric distortions. We present Completion-Assisted Object-CAD Alignment (CAOA), a method that integrates a semantically and contextually aware point cloud completion module with a symmetry-aware relative pose estimation algorithm, enabling precise alignment of CAD models to scanned objects. Existing completion methods are typically trained and evaluated on synthetic datasets, which often fail to generalize to real-world scans. To bridge this gap, we introduce a synthetic data generation strategy tailored to indoor scenes, significantly reducing the synthetic-to-real domain gap-validated through quantitative comparisons with widely used completion datasets. In addition, we release S2C-Completion, an expert-annotated dataset of over 8,500 object-CAD pairs from Scan2CAD, created for real-world indoor single-object completion and intended as a new benchmark for this task. For object-CAD alignment, we incorporate symmetry information via a symmetry-aware loss, improving robustness to symmetric ambiguities. On the Scan2CAD benchmark, CAOA achieves a 17% accuracy improvement over state-of-the-art methods.",
+      "authors": [
+        "Hiranya Garbha Kumar",
+        "Minhas Kamal",
+        "Balakrishnan Prabhakaran"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-16T19:23:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.18429v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "point cloud completion for 3D semantic reconstruction",
+      "llm_evidence_cn": "点云补全用于三维语义重建",
+      "llm_evidence": "点云补全用于三维语义重建",
+      "canonical_evidence": "点云补全用于三维语义重建",
+      "llm_tldr_en": "CAOA integrates point cloud completion with symmetry-aware pose estimation for precise CAD alignment in 3D scans, addressing noise and incompleteness.",
+      "llm_tldr_cn": "本文针对RGB-D扫描中CAD模型对齐受噪声和不完整扫描干扰的问题，提出CAOA方法，结合语义感知点云补全与对称感知相对位姿估计。实验证明该方法能有效提升对齐精度，弥补了现有补全方法在真实扫描上的泛化不足。",
+      "llm_tldr": "本文针对RGB-D扫描中CAD模型对齐受噪声和不完整扫描干扰的问题，提出CAOA方法，结合语义感知点云补全与对称感知相对位姿估计。实验证明该方法能有效提升对齐精度，弥补了现有补全方法在真实扫描上的泛化不足。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
