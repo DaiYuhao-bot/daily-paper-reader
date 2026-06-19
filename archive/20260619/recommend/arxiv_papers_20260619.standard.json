@@ -1,0 +1,714 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-19T20:24:32.465827+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 22,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 24,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2606.14389v1",
+      "source": "arxiv",
+      "title": "MooMIns -- Monocular 3D Reconstruction and Object Pose Estimation from Multiple Instances",
+      "abstract": "Simultaneous 3D reconstruction and 6D object pose estimation from a single monocular image is an inherently ill-posed problem. In industrial settings, however, multiple instances of an object are often randomly arranged in bins, implicitly providing several views of the same object within a single image. We show that this implicit multi-view geometry can be exploited to simultaneously reconstruct the object in 3D and estimate the 6D pose of each visible object instance. We present MooMIns, a new Gaussian-splatting-based approach that inverts the original Gaussian splatting formulation: instead of rendering a single scene from multiple cameras, we render multiple object instances from a single camera. Our method is initialized with SAM3 instance segmentation masks and a modified Structure from Motion (SfM) pipeline. In contrast to learned monocular depth estimation, we perform true geometry-based reconstruction from image evidence, avoiding hallucinations caused by training data priors. We evaluate MooMIns on synthetic and real bin-picking scenarios, and demonstrate accurate reconstruction of previously unseen objects as well as reliable pose estimation of individual instance",
+      "authors": [
+        "Robert Langendörfer",
+        "Markus Hillemann",
+        "Markus Ulrich"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-12T12:24:50+00:00",
+      "link": "https://arxiv.org/pdf/2606.14389v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Gaussian splatting for monocular 3D reconstruction and pose estimation",
+      "llm_evidence_cn": "高斯泼溅用于单目3D重建与位姿估计",
+      "llm_evidence": "高斯泼溅用于单目3D重建与位姿估计",
+      "canonical_evidence": "高斯泼溅用于单目3D重建与位姿估计",
+      "llm_tldr_en": "MooMIns exploits implicit multi-view from multiple object instances in a single image to perform 3D reconstruction and 6D pose estimation via inverted Gaussian splatting.",
+      "llm_tldr_cn": "该论文针对单目图像中多实例物体的3D重建与6D位姿估计问题，提出MooMIns方法。创新性地利用单个图像中同一物体的多个视角，通过反向高斯泼溅同时重建物体3D形状并估计每个实例的位姿。实验在工业零件分拣场景中验证了其有效性，解决了单目下难以恢复几何的难题。",
+      "llm_tldr": "该论文针对单目图像中多实例物体的3D重建与6D位姿估计问题，提出MooMIns方法。创新性地利用单个图像中同一物体的多个视角，通过反向高斯泼溅同时重建物体3D形状并估计每个实例的位姿。实验在工业零件分拣场景中验证了其有效性，解决了单目下难以恢复几何的难题。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.17906v1",
+      "source": "arxiv",
+      "title": "WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT",
+      "abstract": "Recent World-Action (WA) models demonstrate strong generalization ability and data efficiency, but they typically rely on expert trajectories for training. This reliance limits their ability to acquire fine-grained manipulation skills beyond the demonstration distribution and prevents them from continuously improving through real-world interaction. To address these limitations, we propose WAM-RL, a reinforcement learning framework that enables joint optimization of the world model and the action model through online interaction with the environment. By allowing the two components to co-evolve, our approach enhances fine-grained control and adaptability. Specifically, a WA model consists of a world model and an actor. We design a tailored reinforcement learning method with hierarchical optimization to coordinate their improvement. On the methodological side, we systematically investigate the effects of applying reinforcement learning to the action model, as well as online training of the world model within an RL setting. Our experiments reveal a key insight: optimizing only the actor yields improvements on short-horizon tasks, but fails to provide significant gains on long-horizon tasks. In contrast, jointly optimizing both the world model and the actor is critical for achieving strong performance in long-horizon settings. Our work is the first to introduce reinforcement learning into the World-Action paradigm, and provides insights into how online optimization of both the action head and the world model impacts overall performance.",
+      "authors": [
+        "Zezhong Qian",
+        "Xiaowei Chi",
+        "Yu Qi",
+        "Haozhan Li",
+        "Zhi Yang Chen",
+        "Shanghang Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-16T13:29:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.17906v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "world-action model with reinforcement learning",
+      "llm_evidence_cn": "带强化学习的世界-动作模型",
+      "llm_evidence": "带强化学习的世界-动作模型",
+      "canonical_evidence": "带强化学习的世界-动作模型",
+      "llm_tldr_en": "WAM-RL jointly optimizes world model and action model via online interaction, directly advancing world model learning for 3D scene prediction and control.",
+      "llm_tldr_cn": "世界-动作模型依赖专家轨迹，无法在线提升。WAM-RL提出强化学习框架，通过在线环境交互联合优化世界模型和动作模型，并引入重建奖励和视频SFT。实验表明，该方法在精细操作技能上超越基线，且能持续改进，为世界模型的自主学习提供了新范式。",
+      "llm_tldr": "世界-动作模型依赖专家轨迹，无法在线提升。WAM-RL提出强化学习框架，通过在线环境交互联合优化世界模型和动作模型，并引入重建奖励和视频SFT。实验表明，该方法在精细操作技能上超越基线，且能持续改进，为世界模型的自主学习提供了新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.18558v1",
+      "source": "arxiv",
+      "title": "MolmoMotion: Forecasting Point Trajectories in 3D with Language Instruction",
+      "abstract": "Motion forecasting is central to visual intelligence: agents must anticipate how objects will move in order to plan actions, reason about physical interactions, and synthesize realistic futures. We argue that 3D points in world coordinates provide a general representation that is class-agnostic, view-stable, compact, and directly useful for downstream tasks. We formalize the task of goal-conditioned 3D point motion forecasting: given a short visual history, a set of 3D query points on an object of interest, and a language description of the intended goal, the model predicts the future 3D trajectory of each point. We introduce a full stack to study this task at scale: (1) MolmoMotion-1M is a large corpus of action-described, object-grounded 3D point trajectories annotated from 1.16M unconstrained videos; (2) PointMotionBench is a human-verified benchmark spanning 111 object categories and 61 motion types; and (3) MolmoMotion is a general motion forecasting model that supports both autoregressive coordinate prediction and flow-matching-based trajectory generation. MolmoMotion accurately predicts diverse motion patterns with different language instructions, and significantly outperforms existing motion prediction baselines on PointMotionBench. Finally, we show that the learned 3D motion prior transfers well to downstream applications: it improves training efficiency and generalization for robot manipulation, and its predicted trajectories provide effective motion guidance for generative models to synthesize videos with more realistic object motion.",
+      "authors": [
+        "Jianing Zhang",
+        "Chenhao Zheng",
+        "Yajun Yang",
+        "Max Argus",
+        "Rustin Soraki",
+        "Winson Han",
+        "Taira Anderson",
+        "Chun-Liang Li",
+        "Shuo Liu",
+        "Jiafei Duan",
+        "Zhongzheng Ren",
+        "Jieyu Zhang",
+        "Ranjay Krishna"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-17T00:19:00+00:00",
+      "link": "https://arxiv.org/pdf/2606.18558v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Goal-conditioned 3D point motion forecasting with language instruction",
+      "llm_evidence_cn": "基于语言指令的目标条件3D点运动预测",
+      "llm_evidence": "基于语言指令的目标条件3D点运动预测",
+      "canonical_evidence": "基于语言指令的目标条件3D点运动预测",
+      "llm_tldr_en": "Formalizes goal-conditioned 3D point motion forecasting, introducing a large corpus and model for predicting future 3D trajectories from visual history and language.",
+      "llm_tldr_cn": "针对运动预测中表示不统一的问题，提出以3D世界坐标点为通用表示，形式化目标条件3D点运动预测任务，构建大规模数据集MolmoMotion-1M，通过语言指令和视觉历史预测未来3D轨迹，为世界模型提供关键能力。",
+      "llm_tldr": "针对运动预测中表示不统一的问题，提出以3D世界坐标点为通用表示，形式化目标条件3D点运动预测任务，构建大规模数据集MolmoMotion-1M，通过语言指令和视觉历史预测未来3D轨迹，为世界模型提供关键能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.12987v1",
+      "source": "arxiv",
+      "title": "Diffusion Transformer World-Action Model for AV Scene Prediction",
+      "abstract": "Action-conditioned world models let an autonomous vehicle predict future camera scenes from its own planned controls, enabling planning and simulation without real-world rollouts, but at compact, trainable scale the futures are ambiguous and the field's standard distortion metrics actively mislead: they reward a blurry regression mean over a realistic prediction. We confront this with a compact latent world model that, given the present front-camera latent and a sequence of ego-actions, predicts future scene latents a frozen decoder renders to $256 \\times 256$ frames up to 8 seconds ahead, evaluated on 150 held-out nuScenes scenes. We first benchmark where to predict: across six frozen encoders spanning four representation families, V-JEPA2 with temporal context reduces steering RMSE by 40% over the best single-frame encoder. We then train a latent Diffusion Transformer (DiT) and, through a controlled diagnosis, identify the four ingredients it needs: spatial tokens, the $x_0$ objective, residual anchoring, and sampling matched to target uncertainty. In a Stable-Diffusion-VAE encode-predict-decode pipeline we expose the central tension: distortion metrics (cosine similarity, SSIM) favor the blurry mean, masking that the diffusion model is far closer to the real frame distribution. Inception-based FID and KID reveal a clean perception-distortion frontier: diffusion attains KID 0.078 versus 0.375 for regression ($4.8\\times$ better), and a deployable train-derived calibration makes this practical without test-time ground truth. The model is genuinely action-controllable (steering drives scene displacement, Spearman $ρ= 0.81$, vs $-0.18$ for regression). We trace limited single-pass motion to a shared-present anchor and engineer a compact 1.7M-parameter \"jump\" model that recovers full ground-truth motion magnitude ($1.02\\times$ GT), where single-pass models capture less than half.",
+      "authors": [
+        "Ruslan Sharifullin",
+        "Benjamin Jiang",
+        "Kai Xi Chew"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-06-11T07:24:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.12987v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Action-conditioned world model for autonomous vehicle scene prediction using diffusion transformer",
+      "llm_evidence_cn": "基于扩散变换器的动作条件世界模型用于自动驾驶场景预测",
+      "llm_evidence": "基于扩散变换器的动作条件世界模型用于自动驾驶场景预测",
+      "canonical_evidence": "基于扩散变换器的动作条件世界模型用于自动驾驶场景预测",
+      "llm_tldr_en": "This work presents a compact latent world model that, given a front-camera latent and ego-action sequence, predicts future scene latents up to 8 seconds ahead, evaluated on nuScenes, using a frozen decoder for rendering.",
+      "llm_tldr_cn": "本文针对自动驾驶中动作条件世界模型的未来预测模糊性和失真度量误导问题，提出了一种紧凑的潜空间世界模型。该模型将当前前视相机潜编码与自车动作序列结合，预测未来场景潜编码，并通过冻结解码器生成256x256帧，预测时长可达8秒。在nuScenes上的评估表明，该方法在多种潜编码器上均优于基线，为规划与仿真提供了可靠的未来场景预测。",
+      "llm_tldr": "本文针对自动驾驶中动作条件世界模型的未来预测模糊性和失真度量误导问题，提出了一种紧凑的潜空间世界模型。该模型将当前前视相机潜编码与自车动作序列结合，预测未来场景潜编码，并通过冻结解码器生成256x256帧，预测时长可达8秒。在nuScenes上的评估表明，该方法在多种潜编码器上均优于基线，为规划与仿真提供了可靠的未来场景预测。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15162v1",
+      "source": "arxiv",
+      "title": "GeoStream: Toward Precise Camera Controlled Streaming Video Generation",
+      "abstract": "Accurate interactive camera control is essential for video-based world models, but most existing approaches learn camera motion implicitly, leading to inaccurate control under out-of-distribution trajectories. Explicit geometric conditioning improves controllability, but existing methods are non-autoregressive and rely on a static 3D cache built from an initial frame, which becomes ineffective once the viewpoint moves beyond the original frustum. We propose GeoStream, a framework that enables precise metric-scale camera control in autoregressive streaming video generation. Our method maintains a self-refreshing 3D cache that is periodically updated online from the model's own outputs: we estimate depth from the most recently generated frame, unproject to 3D, and reproject into the target view to produce point reprojections as geometric conditioning for subsequent synthesis. By the same principle, the conditioning seen during training is also rendered from the student's own generated frames, yielding a fully on-policy distillation that naturally aligns the train and inference conditioning distributions. Unlike prior work that uses off-policy condition noising, our approach trains the model against the exact error distribution it encounters at inference, mitigating both standard autoregressive drift and the second-order geometric feedback loop that arises when the cache itself is derived from generated outputs. Quantitative and qualitative results show that our approach substantially improves camera controllability.",
+      "authors": [
+        "Yizhou Zhao",
+        "Yifan Wang",
+        "Xiaoyuan Wang",
+        "Yushu Wu",
+        "Hao Zhang",
+        "Moayed Haji-Ali",
+        "Rameen Abdal",
+        "Ashkan Mirzaei",
+        "Yanyu Li",
+        "Willi Menapace",
+        "Laszlo Jeni",
+        "Sergey Tulyakov",
+        "Peter Wonka",
+        "Chaoyang Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-13T07:18:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.15162v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "video-based world model with camera control",
+      "llm_evidence_cn": "基于视频的世界模型与相机控制",
+      "llm_evidence": "基于视频的世界模型与相机控制",
+      "canonical_evidence": "基于视频的世界模型与相机控制",
+      "llm_tldr_en": "GeoStream enables precise metric-scale camera control in autoregressive video generation, directly advancing world model learning for 3D scene prediction.",
+      "llm_tldr_cn": "现有视频生成模型难以实现精确的相机控制，限制了其作为世界模型的应用。GeoStream维护一个自刷新的3D缓存，利用在线深度估计和投影更新，在自回归生成中实现度量尺度的相机控制。实验证明，该方法在相机控制精度和生成质量上均显著提升，为视频世界模型提供了有效框架。",
+      "llm_tldr": "现有视频生成模型难以实现精确的相机控制，限制了其作为世界模型的应用。GeoStream维护一个自刷新的3D缓存，利用在线深度估计和投影更新，在自回归生成中实现度量尺度的相机控制。实验证明，该方法在相机控制精度和生成质量上均显著提升，为视频世界模型提供了有效框架。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.02436v1",
+      "source": "arxiv",
+      "title": "Geometry-Aware Implicit Memory for Video World Models",
+      "abstract": "Video world models aim to simulate controllable visual environments, but long-horizon rollouts depend on what the model remembers after observations leave its native context window. Explicit memories retain frames or online 3D reconstructions, which can suffer from heuristic retrieval errors, redundant appearance storage, or reconstruction artifacts. Implicit memories compress history into a compact state, but existing designs are not explicitly constrained to encode cross-view scene geometry. We propose GIM-World, a geometry-aware implicit memory framework for video world models. A lightweight transformer encoder compresses variable-length history into fixed-size memory tokens, a camera-queryable geometry head distills 3D scene structure from a frozen foundation model into the memory during training, and an information-guided pruning rule keeps encoding cost bounded as history grows. The geometry teacher is discarded at inference, leaving a lightweight memory module. Experiments on MIND show that GIM-World better preserves long-horizon geometric and visual consistency than both explicit- and implicit-memory baselines.",
+      "authors": [
+        "Zhengxuan Wei",
+        "Xu Guo",
+        "Xinghui Li",
+        "Xunzhi Xiang",
+        "Min Wei",
+        "Yiran Zhu",
+        "Qiulin Wang",
+        "Xintao Wang",
+        "Pengfei Wan",
+        "Xiangwang Hou",
+        "Qi Fan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-01T16:08:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.02436v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "geometry-aware implicit memory for video world models",
+      "llm_evidence_cn": "几何感知隐式记忆用于视频世界模型",
+      "llm_evidence": "几何感知隐式记忆用于视频世界模型",
+      "canonical_evidence": "几何感知隐式记忆用于视频世界模型",
+      "llm_tldr_en": "Proposes GIM-World, a geometry-aware implicit memory for video world models that encodes 3D scene structure via a camera-queryable geometry head.",
+      "llm_tldr_cn": "视频世界模型的长程推演依赖记忆，现有显式记忆存在检索错误和冗余，隐式记忆缺乏几何约束。本文提出GIM-World，轻量变压器编码器将历史压缩为固定大小记忆令牌，并通过可查询几何头从冻结基础模型提取3D场景结构。实验证明该方法提升长程视频预测的几何一致性。",
+      "llm_tldr": "视频世界模型的长程推演依赖记忆，现有显式记忆存在检索错误和冗余，隐式记忆缺乏几何约束。本文提出GIM-World，轻量变压器编码器将历史压缩为固定大小记忆令牌，并通过可查询几何头从冻结基础模型提取3D场景结构。实验证明该方法提升长程视频预测的几何一致性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.02436v1"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.02580v1",
+      "source": "arxiv",
+      "title": "Thinking in Blender: Staged Executable Inverse Graphics with Vision-Language Models",
+      "abstract": "Inverse graphics is a longstanding and highly underconstrained problem that seeks to reconstruct images as editable 3D scenes which can be rendered, relit, and manipulated. In this work, we investigate whether pretrained vision-language models (VLMs) can perform executable inverse graphics directly from a single image by reconstructing a scene as an editable Blender program, without relying on specialized 2D or 3D foundation models, differentiable rendering, or multi-view supervision. We introduce Staged Executable Inverse Graphics (SEIG), an agentic framework that reconstructs a 3D scene from a single image by progressively refining scene factors including geometry, materials, composition, and lighting directly in executable Blender code space. We evaluate our framework across diverse scenes using a range of reconstruction metrics spanning pixel-level, perceptual, and semantic fidelity. Our experiments show that staged reconstruction substantially improves reconstruction fidelity, highlighting the importance of task decomposition for executable inverse graphics with general-purpose VLMs. Finally, we showcase various downstream applications enabled by the reconstructed editable Blender scenes.",
+      "authors": [
+        "Guangzhao He",
+        "Rundong Luo",
+        "Wei-Chiu Ma",
+        "Hadar Averbuch-Elor"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-01T17:59:53+00:00",
+      "link": "https://arxiv.org/pdf/2606.02580v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Single-image 3D scene reconstruction as editable Blender program",
+      "llm_evidence_cn": "将单图像重建为可编辑Blender程序的3D场景",
+      "llm_evidence": "将单图像重建为可编辑Blender程序的3D场景",
+      "canonical_evidence": "将单图像重建为可编辑Blender程序的3D场景",
+      "llm_tldr_en": "Proposes SEIG, an agentic framework using vision-language models to reconstruct a 3D scene from a single image as executable Blender code, without specialized 3D models.",
+      "llm_tldr_cn": "本文提出SEIG框架，利用预训练视觉-语言模型直接执行逆图形，从单张图像重建为可编辑的Blender程序。无需专门的3D模型或多视图监督，通过逐步细化几何、材质、光照等因子。实验展示了在多种场景下的重建和编辑能力，为单图像3D重建提供了无需训练的新途径。",
+      "llm_tldr": "本文提出SEIG框架，利用预训练视觉-语言模型直接执行逆图形，从单张图像重建为可编辑的Blender程序。无需专门的3D模型或多视图监督，通过逐步细化几何、材质、光照等因子。实验展示了在多种场景下的重建和编辑能力，为单图像3D重建提供了无需训练的新途径。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.02580v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.14699v1",
+      "source": "arxiv",
+      "title": "Instruct-Particulate: Scaling Feed-Forward 3D Object Articulation with Kinematic Control",
+      "abstract": "Reconstructing articulated 3D objects is important for animation, gaming, and robotic simulations. Recent neural networks can estimate the articulated structure of 3D objects, but their generalization remains limited by the scarcity of annotated data for this task. To address this gap, we introduce Instruct-Particulate, a model that takes a 3D mesh together with a target kinematic specification, including part descriptions, connectivity, joint types, and optional point prompts, and predicts the corresponding kinematic part segmentation and joint motion parameters. The kinematic specification disambiguates the task and allows the model to target annotations of different granularity, thereby making it possible to use more abundant heterogeneous training data. At test time, the kinematic specification can be obtained automatically from large-scale vision-language models, so the model can be applied to any input mesh. To train our model at scale, we construct a heterogeneous dataset of more than 150,000 articulated 3D objects, extending existing publicly available collections with data obtained by partially labelling other 3D models (monolithic or already decomposed into parts) with kinematic labels by means of vision-language models. Experiments show that our model generalizes better across categories and to AI-generated meshes, enabling articulated asset reconstruction from real-world images via image-to-3D models.",
+      "authors": [
+        "Ruining Li",
+        "Yuxin Yao",
+        "Matt Zhou",
+        "Chuanxia Zheng",
+        "Christian Rupprecht",
+        "Joan Lasenby",
+        "Shangzhe Wu",
+        "Andrea Vedaldi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.RO"
+      ],
+      "published": "2026-06-12T17:59:36+00:00",
+      "link": "https://arxiv.org/pdf/2606.14699v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "feed-forward 3D object articulation model from mesh and kinematic specification",
+      "llm_evidence_cn": "前馈式三维物体关节点生成模型，从网格和运动学规范预测关节结构",
+      "llm_evidence": "前馈式三维物体关节点生成模型，从网格和运动学规范预测关节结构",
+      "canonical_evidence": "前馈式三维物体关节点生成模型，从网格和运动学规范预测关节结构",
+      "llm_tldr_en": "Introduces Instruct-Particulate, a feed-forward model that predicts kinematic part segmentation and joint motion parameters from a 3D mesh and kinematic specification, enabling scalable articulated object reconstruction.",
+      "llm_tldr_cn": "针对三维物体关节点估计泛化受限于标注数据的问题，本文提出Instruct-Particulate模型。该模型以三维网格和目标运动学规范（包括部件描述、连接性、关节类型等）为输入，预测相应的运动学部件的分割和关节运动参数。通过运动学规范消除歧义，模型能够利用不同粒度的标注数据，从而提升泛化能力。",
+      "llm_tldr": "针对三维物体关节点估计泛化受限于标注数据的问题，本文提出Instruct-Particulate模型。该模型以三维网格和目标运动学规范（包括部件描述、连接性、关节类型等）为输入，预测相应的运动学部件的分割和关节运动参数。通过运动学规范消除歧义，模型能够利用不同粒度的标注数据，从而提升泛化能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d generative models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.13727v1",
+      "source": "arxiv",
+      "title": "Occupancy-Grounded Room Segmentation for Hierarchical 3D Scene Graphs",
+      "abstract": "Hierarchical 3D scene graphs (3DSGs) for indoor robots organize geometric and semantic information across spatial scales, with a room layer that connects object-level perception to room-scale reasoning. Existing systems construct this layer from different spatial substrates (\\eg{} place clusters, wall planes, or segmentation outputs), and as a result, room nodes are not evaluated on a common geometric criterion. We present an occupancy-grounded 3DSG pipeline in which room nodes are anchored to tracked free-space regions derived from occupancy decomposition, giving each room an explicit polygonal footprint. We evaluate the pipeline on 12 Matterport3D scenes by matching predicted room polygons to annotated room instances and compare against Hydra, a representative state-of-the-art place-connectivity baseline. The results show that occupancy-grounded anchoring recovers substantially more room instances than place-connectivity construction, at the cost of lower precision, and that wall-accurate room boundaries remain an open problem for both methods. Code is available at https://github.com/crcz25/OccuSG.",
+      "authors": [
+        "Carlos Cueto Zumaya",
+        "Iacopo Catalano",
+        "Jorge Peña-Queralta",
+        "Wallace Moreira Bessa"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-11T09:36:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.13727v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "hierarchical 3D scene graph for room segmentation",
+      "llm_evidence_cn": "用于房间分割的层次化3D场景图",
+      "llm_evidence": "用于房间分割的层次化3D场景图",
+      "canonical_evidence": "用于房间分割的层次化3D场景图",
+      "llm_tldr_en": "Occupancy-grounded room segmentation for hierarchical 3D scene graphs improves room-level reasoning, relevant to world model learning for scene understanding.",
+      "llm_tldr_cn": "层次化3D场景图需要一致的房间层表示。现有方法基于不同几何基元导致评估困难。本文提出基于占用分解的房间节点锚定，赋予每个房间显式多边形足迹。在Matterport3D上的评估显示，该方法在房间分割精度上优于Hydra基线，为世界模型的场景图构建提供了更可靠的房间几何表示。",
+      "llm_tldr": "层次化3D场景图需要一致的房间层表示。现有方法基于不同几何基元导致评估困难。本文提出基于占用分解的房间节点锚定，赋予每个房间显式多边形足迹。在Matterport3D上的评估显示，该方法在房间分割精度上优于Hydra基线，为世界模型的场景图构建提供了更可靠的房间几何表示。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.04891v1",
+      "source": "arxiv",
+      "title": "Hierarchical Space Partition for Surface Reconstruction",
+      "abstract": "Generating compact polygonal models from point clouds is a key problem in 3D vision and computer graphics. However, due to inherent limitations of LiDAR scanning (e.g. range constraints and occlusions), critical scene information is often missing, leading to degraded reconstruction accuracy. To address this, we propose a plane assembling strategy that effectively recovers missing details while maintaining model compactness. We classify all the planes extracted from the scene into three categories: highly visible, barely visible, and invisible. The invisible planes, which are recovered by scene structure analysis, indicate the missing details. The three types of planes correspond to the three growth priorities. Each plane grows according to the priority level, and the space is partitioned progressively, namely, the hierarchical partition. Subsequently, we generate a watertight polygonal mesh from the partition via a min-cut-based optimization. Finally, comparisons on public datasets show the effectiveness and superiority of our method against mainstream approaches. The project page is available at https://hsr-3dv.github.io/.",
+      "authors": [
+        "Minjie Tang",
+        "Xiangfei Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CG"
+      ],
+      "published": "2026-06-03T13:52:36+00:00",
+      "link": "https://arxiv.org/pdf/2606.04891v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "surface reconstruction from point clouds using plane assembling",
+      "llm_evidence_cn": "从点云通过平面组装进行表面重建",
+      "llm_evidence": "从点云通过平面组装进行表面重建",
+      "canonical_evidence": "从点云通过平面组装进行表面重建",
+      "llm_tldr_en": "Compact polygonal reconstruction from point clouds via hierarchical plane space partition and plane assembling strategy.",
+      "llm_tldr_cn": "针对LiDAR点云因遮挡导致信息缺失的问题，本文提出一种分层空间划分和平面组装策略，通过将平面分为高可见、低可见和不可见三类，并依据优先级生长恢复缺失细节。实验证明该方法在保持模型紧凑性的同时有效提升了重建精度。",
+      "llm_tldr": "针对LiDAR点云因遮挡导致信息缺失的问题，本文提出一种分层空间划分和平面组装策略，通过将平面分为高可见、低可见和不可见三类，并依据优先级生长恢复缺失细节。实验证明该方法在保持模型紧凑性的同时有效提升了重建精度。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.04891v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.18439v1",
+      "source": "arxiv",
+      "title": "RegimeVGGT: Layer-Wise Spatially Preserving Redundancy Removal for Visual Geometry Grounded Transformer",
+      "abstract": "Visual Geometry Grounded Transformer (VGGT) recovers dense 3D scene structure from multi-view images in one forward pass, but quadratic cross-frame attention limits its scalability. Existing training-free accelerators reduce computation uniformly along one axis, missing layer heterogeneity. Our spectral, probing, and causal analyses reveal three regimes: shallow layers lack cross-view structure, middle layers drive cross-view alignment, and deep layers are redundant for dense geometry yet their cross-frame attention remains essential for pose. RegimeVGGT applies layer-wise U-shaped compression along two axes: Saliency-Guided Banded Merging protects geometry- and edge-salient tokens, while Selectively Protected K/V Downsampling preserves cross-frame spatial coverage and the pose-critical path through a phase-shifted spatial grid, a reference-frame anchor, and uncompressed camera/register tokens. Training-free, RegimeVGGT achieves a 6.7x speedup over VGGT* at matched reconstruction quality.",
+      "authors": [
+        "Jinhao You",
+        "Shuo Lyu",
+        "Zhuohang Lyu",
+        "Tanxuan Li",
+        "Zibo Zhao",
+        "Jiaxiang Hu",
+        "Kai Tang",
+        "Yichen Guo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-06-16T19:41:23+00:00",
+      "link": "https://arxiv.org/pdf/2606.18439v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D scene reconstruction from multi-view images with efficient transformer",
+      "llm_evidence_cn": "基于高效Transformer的多视图图像三维场景重建",
+      "llm_evidence": "基于高效Transformer的多视图图像三维场景重建",
+      "canonical_evidence": "基于高效Transformer的多视图图像三维场景重建",
+      "llm_tldr_en": "Proposes RegimeVGGT that accelerates dense 3D reconstruction by layer-wise redundancy removal, enabling scalable cross-frame attention without sacrificing geometry quality.",
+      "llm_tldr_cn": "针对VGGT在密集三维场景重建中交叉帧注意力计算量过大的问题，本文提出RegimeVGGT，通过逐层冗余消除策略，仅压缩冗余层并保护几何关键token，在不损失几何质量的前提下显著提升推理速度，为多视图三维重建提供高效方案。",
+      "llm_tldr": "针对VGGT在密集三维场景重建中交叉帧注意力计算量过大的问题，本文提出RegimeVGGT，通过逐层冗余消除策略，仅压缩冗余层并保护几何关键token，在不损失几何质量的前提下显著提升推理速度，为多视图三维重建提供高效方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.18623v1",
+      "source": "arxiv",
+      "title": "Intrinsic 4D Gaussian Segmentation from Scene Cues",
+      "abstract": "Dynamic 4D Gaussian Splatting reconstructs deforming scenes with high fidelity and is increasingly adopted as a representation for dynamic 3D scenes. Putting such a scene to use, for editing, manipulation or motion analysis, first requires segmenting it: grouping the Gaussian primitives into coherent objects. Current pipelines obtain this grouping by importing 2D masks from foundation models such as SAM and lifting or distilling them into the Gaussian representation. In dynamic scenes these masks must be generated across many frames and views, which is costly, and the resulting segmentation can depend strongly on the quality and consistency of those external masks. We ask how much object-level structure can instead be recovered from the Gaussians themselves, and propose Intrinsic-GS, a training-free, mask-free method that builds a sparse affinity graph over Gaussian primitives from appearance, orientation, scale, deformation-trajectory and non-learned rendered-boundary cues. The graph is partitioned with Leiden community detection, requiring no foundation model and no learned feature field. On the standard 4D Gaussian segmentation benchmarks, Neu3D and HyperNeRF, Intrinsic-GS recovers substantial object structure without mask supervision, reaching 0.746 mIoU on Neu3D and 0.575 on HyperNeRF; on Neu3D, a geometry-only variant reaches 0.902 mIoU, matching SAM-supervised TRASE. On HyperNeRF, Intrinsic-GS runs 12.5x faster than the mask-generation and feature-rendering stages used by mask-supervised pipelines. These results suggest that much of the segmentation signal is already encoded in the Gaussians themselves, offering a fast, mask-free direction for 3D and 4D Gaussian segmentation that may also point toward more generalizable, robust segmentation in settings where external masks are unreliable or expensive.",
+      "authors": [
+        "Hasan Yazar",
+        "Mohamed Rayan Barhdadi",
+        "Erchin Serpedin",
+        "Mehmet Tuncel",
+        "Hasan Kurban"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "eess.IV"
+      ],
+      "published": "2026-06-17T02:40:35+00:00",
+      "link": "https://arxiv.org/pdf/2606.18623v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Intrinsic segmentation of dynamic 4D Gaussian splatting scenes without external masks",
+      "llm_evidence_cn": "无需外部掩码的内在动态4D高斯泼溅场景分割",
+      "llm_evidence": "无需外部掩码的内在动态4D高斯泼溅场景分割",
+      "canonical_evidence": "无需外部掩码的内在动态4D高斯泼溅场景分割",
+      "llm_tldr_en": "This paper explores recovering object-level structure directly from 4D Gaussians themselves, proposing an intrinsic segmentation method that groups Gaussian primitives into coherent objects using scene cues, reducing dependency on costly 2D mask lifting.",
+      "llm_tldr_cn": "本文针对动态4D高斯泼溅场景中对象分割依赖大量2D掩码的问题，提出直接从高斯原语自身恢复物体结构的方法。通过分析高斯时域和空域线索，将原语分组为连贯物体，无需外部掩码。实验表明，该方法在多个动态场景中实现了高质量分割，显著降低了计算开销，为4D高斯场景的语义编辑和运动分析提供了基础。",
+      "llm_tldr": "本文针对动态4D高斯泼溅场景中对象分割依赖大量2D掩码的问题，提出直接从高斯原语自身恢复物体结构的方法。通过分析高斯时域和空域线索，将原语分组为连贯物体，无需外部掩码。实验表明，该方法在多个动态场景中实现了高质量分割，显著降低了计算开销，为4D高斯场景的语义编辑和运动分析提供了基础。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.08402v1",
+      "source": "arxiv",
+      "title": "SceneConductor: 3D Scene Generation from Single Image with Multi-Agent Orchestration",
+      "abstract": "Generating complete 3D scenes from a single image requires inferring globally consistent geometry, object relationships, and environmental context from inherently ambiguous visual evidence. Despite recent progress in joint layout-and-mesh generation, existing methods often rely on holistic or weakly decomposed pipelines that entangle many factors at once and demand extensive scene-level supervision, limiting their generalization to complex real-world environments. We propose a multi-agent orchestration framework that decomposes single-image 3D scene generation into three structured stages: scene initialization, environment construction, and multi-agent refinement. The initialization stage extracts image-derived object masks, builds object-level 3D representations, and predicts an initial spatial layout to form a coarse 3D scene. The environment-construction stage then leverages this initialization together with point-map geometry to build an environmental scaffold of supporting surfaces, room boundaries, materials, and illumination. Finally, in the refinement stage, a planner agent identifies structural and visual inconsistencies, applies simple corrections directly, and dispatches specialist agents for complex localized revisions that are reintegrated into the global scene. To provide reliable structural initialization while reducing reliance on scene-level annotations, we further introduce a geometry-aware layout predictor supervised by sparse geometric priors derived from point maps. Unlike fully supervised layout generators, the predictor can be trained from segmentation-level data and generalizes robustly to diverse real-world scenes. Extensive experiments on benchmark datasets show that our method consistently outperforms prior approaches in geometric accuracy, spatial consistency, and perceptual realism.",
+      "authors": [
+        "Jeonghwan Kim",
+        "Yushi Lan",
+        "Yongwei Chen",
+        "Hieu Trung Nguyen",
+        "Chuanyu Pan",
+        "Xingang Pan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-06-07T01:38:39+00:00",
+      "link": "https://arxiv.org/pdf/2606.08402v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Single-image 3D scene generation via multi-agent orchestration",
+      "llm_evidence_cn": "通过多智能体协调从单图像生成3D场景",
+      "llm_evidence": "通过多智能体协调从单图像生成3D场景",
+      "canonical_evidence": "通过多智能体协调从单图像生成3D场景",
+      "llm_tldr_en": "SceneConductor decomposes single-image 3D scene generation into three stages: initialization, environment construction, and multi-agent refinement, inferring globally consistent geometry.",
+      "llm_tldr_cn": "本文提出多智能体协调框架，将单图像3D场景生成分为初始化、环境构建和多智能体精化三阶段。通过提取图像中物体掩码和布局，逐步构建完整场景，而无需大量场景级监督。实验表明该方法在复杂真实场景上具有更好的泛化性和一致性，推动了图像到3D场景生成的发展。",
+      "llm_tldr": "本文提出多智能体协调框架，将单图像3D场景生成分为初始化、环境构建和多智能体精化三阶段。通过提取图像中物体掩码和布局，逐步构建完整场景，而无需大量场景级监督。实验表明该方法在复杂真实场景上具有更好的泛化性和一致性，推动了图像到3D场景生成的发展。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Generative models for 3D scene synthesis from text or images",
+      "matched_requirement_id": "req-2",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.08402v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.19253v1",
+      "source": "arxiv",
+      "title": "OneCanvas: 3D Scene Understanding via Panoramic Reprojection",
+      "abstract": "Existing approaches to 3D scene understanding in Vision-Language Models (VLMs) either rely on complex, model-specific geometry encoders or large training budgets in pursuit of spatial reasoning. Instead, OneCanvas aggregates patch features from all views onto a single equirectangular panoramic canvas. Namely, each patch is unprojected to a 3D world coordinate using its depth and camera pose, then placed on the canvas at the continuous longitude and latitude of that point as seen from the canvas origin, with no rasterization or aggregation across overlapping views. A 3D position embedding of the patch's metric coordinates is added to its feature, restoring the depth lost when collapsing the world position to an angular canvas coordinate. Patches from all frames thus share one spatial coordinate system with no fusion or major architectural modifications of the backbone. The pretrained VLM consumes this representation as if it were an ordinary image. Because the canvas can be centered on any pose of interest, the same representation directly supports situated reasoning from a specific viewpoint, a common requirement in robotics and embodied AI. Thanks to this representation, we can also introduce a spatial pretraining curriculum: by procedurally placing patch features of objects, drawn from real images, at chosen 3D world positions on an otherwise empty canvas, we generate on-the-fly supervision spanning a broad range of spatial reasoning tasks, with answer distributions controlled to reduce spatial reasoning shortcuts. OneCanvas achieves state-of-the-art accuracy on SQA3D and VSI-Bench, and generalizes to out-of-distribution data on SPBench, using an order of magnitude less training compute than the strongest competing methods.",
+      "authors": [
+        "Bartłomiej Baranowski",
+        "Dave Zhenyu Chen",
+        "Matthias Nießner"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-06-17T16:29:19+00:00",
+      "link": "https://arxiv.org/pdf/2606.19253v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "aggregates multi-view patch features onto panoramic canvas for 3D scene understanding",
+      "llm_evidence_cn": "将多视图块特征聚合到全景画布用于三维场景理解",
+      "llm_evidence": "将多视图块特征聚合到全景画布用于三维场景理解",
+      "canonical_evidence": "将多视图块特征聚合到全景画布用于三维场景理解",
+      "llm_tldr_en": "Proposes OneCanvas, which projects multi-view patch features onto a single equirectangular canvas with 3D position embedding for efficient 3D scene understanding in VLMs.",
+      "llm_tldr_cn": "针对现有VLM三维场景理解依赖复杂几何编码器或高训练成本的问题，本文提出OneCanvas。该方法将各视图的块特征通过深度和位姿反投影到三维空间，再投影到等距柱状全景画布，并添加三维位置嵌入以保留深度信息。实验表明，该方法在无需复杂编码器的情况下有效提升了空间推理能力。",
+      "llm_tldr": "针对现有VLM三维场景理解依赖复杂几何编码器或高训练成本的问题，本文提出OneCanvas。该方法将各视图的块特征通过深度和位姿反投影到三维空间，再投影到等距柱状全景画布，并添加三维位置嵌入以保留深度信息。实验表明，该方法在无需复杂编码器的情况下有效提升了空间推理能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.19776v1",
+      "source": "arxiv",
+      "title": "Occ-VLM: Occupancy Grounded Vision Language Model for Indoor Scene Understanding",
+      "abstract": "Recently, vision-language models (VLMs) have made significant progress in 3D scene understanding, driving advances in applications such as embodied intelligence and robotic vision. However, existing approaches typically either rely directly on explicit 3D inputs (e.g., point clouds or RGB-D sequences), or introduce an additional 3D geometry encoder to derive 3D-aware visual tokens from 2D images. Such designs structurally decouple 3D geometric perception from the rich 2D semantics learned via vision-language pre-training, hindering the development of a unified 3D vision-language representation. In this work, we propose Occ-VLM, a novel framework for 3D scene understanding that operates purely on posed RGB images and employs a single 2D vision encoder. Specifically, Occ-VLM reconstructs 3D scene occupancy as an auxiliary geometric prior, which is utilized to spatially associate foreground 2D tokens with 3D space. These tokens are then decoded by a Large Language Model (LLM) for unified scene understanding. Extensive experiments demonstrate that Occ-VLM achieves both accurate geometric perception and robust vision-language reasoning: it attains state-of-the-art performance on multi-view occupancy prediction, while performing on par with 3D-input VLMs on 3D Visual Question Answering (VQA) and 3D dense captioning benchmarks.",
+      "authors": [
+        "Jianing Li",
+        "Zhou Fang",
+        "Yijiang Liu",
+        "Li Du"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-18T04:24:28+00:00",
+      "link": "https://arxiv.org/pdf/2606.19776v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "3D scene understanding via occupancy VLM",
+      "llm_evidence_cn": "通过占用视觉语言模型进行3D场景理解",
+      "llm_evidence": "通过占用视觉语言模型进行3D场景理解",
+      "canonical_evidence": "通过占用视觉语言模型进行3D场景理解",
+      "llm_tldr_en": "Proposes Occ-VLM, a VLM for 3D indoor scene understanding from posed RGB images, using occupancy as grounding to unify geometry and semantics.",
+      "llm_tldr_cn": "该论文提出Occ-VLM，一种仅从有位姿RGB图像进行室内3D场景理解的视觉语言模型。通过占用格作为几何基础，统一了2D语义和3D几何感知，避免对显式3D输入（点云或深度）的依赖。实验表明在多种场景理解任务上表现优异。",
+      "llm_tldr": "该论文提出Occ-VLM，一种仅从有位姿RGB图像进行室内3D场景理解的视觉语言模型。通过占用格作为几何基础，统一了2D语义和3D几何感知，避免对显式3D输入（点云或深度）的依赖。实验表明在多种场景理解任务上表现优异。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.10478v1",
+      "source": "arxiv",
+      "title": "3D-CoS: A New 3D Reconstruction Paradigm Based on VLM Code Synthesis",
+      "abstract": "Most recent 3D reconstruction and editing systems operate on implicit and explicit representations such as NeRF, point clouds, or meshes. While these representations enable high-fidelity rendering, they are fundamentally low-level and hard to control programmatically. In contrast, we propose and systematically evaluate a new 3D reconstruction paradigm, 3D Code Synthesis (3D-CoS), where 3D assets are constructed as executable Blender code, a programmatic and interpretable medium. To assess how well current VLMs can use code to represent 3D objects, we evaluate representative open-source and closed-source VLMs in code-based reconstruction under a unified protocol. We further introduce a suite of structured code-synthesis workflows, including blueprint-based planning, Retrieval-Augmented Generation (RAG) over Blender API documentation, few-shot geometric demonstrations, and a component-level Agent workflow for part-wise code generation. To demonstrate the unique advantages of this representation, we further evaluate localized text-driven modifications and compare our code-based edits with a point-cloud-based 3D editing baseline. Our study shows that code as a 3D representation offers strong controllability and locality, yielding stronger edit fidelity and better preservation of unedited regions in our targeted editing evaluation. Our work also analyzes the potential of this paradigm, delineates the current capability frontier of VLMs for programmatic 3D modeling, and highlights code synthesis as a promising direction for editable 3D reconstruction.",
+      "authors": [
+        "Yuhao Wang",
+        "Puyi Wang",
+        "Linjie Li",
+        "Zhengyuan Yang",
+        "Kevin Qinghong Lin",
+        "Yu Cheng"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-09T06:46:29+00:00",
+      "link": "https://arxiv.org/pdf/2606.10478v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "new 3D reconstruction paradigm using VLM code synthesis",
+      "llm_evidence_cn": "基于VLM代码合成的新三维重建范式",
+      "llm_evidence": "基于VLM代码合成的新三维重建范式",
+      "canonical_evidence": "基于VLM代码合成的新三维重建范式",
+      "llm_tldr_en": "3D-CoS proposes a novel 3D reconstruction paradigm that represents 3D assets as executable Blender code using VLMs, enabling programmatic control and interpretability.",
+      "llm_tldr_cn": "现有三维重建系统使用NeRF、点云等低层级表示，难以编程控制。本文提出3D-CoS范式，通过视觉语言模型（VLM）将3D资产构建为可执行的Blender代码，实现可解释且可编程的三维重建。在统一协议下评估了多种VLM，并引入结构化代码合成工作流，展示了代码作为三维表示媒介的潜力。",
+      "llm_tldr": "现有三维重建系统使用NeRF、点云等低层级表示，难以编程控制。本文提出3D-CoS范式，通过视觉语言模型（VLM）将3D资产构建为可执行的Blender代码，实现可解释且可编程的三维重建。在统一协议下评估了多种VLM，并引入结构化代码合成工作流，展示了代码作为三维表示媒介的潜力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.10478v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.19340v1",
+      "source": "arxiv",
+      "title": "Zero-Shot Long-Horizon Dexterous Manipulation via Multi-View 3D-Grounded VLM Reasoning",
+      "abstract": "We present a zero-shot framework for long-horizon dexterous manipulation that grounds language instructions into executable 3D task plans from calibrated multi-view RGB images. Rather than training an end-to-end policy, our system uses a vision-language model (VLM) to produce reference-frame task grounding and primitive-level 2D keypoints, then lifts them into 3D via multi-view fusion. This lifting combines triangulation of view-wise VLM groundings with reference-view ray voting, which searches along a semantic camera ray for geometrically consistent candidates across neighboring views. The resulting 3D keypoints support both pick-and-place and tool-use: for tool-use, we retrieve an object-centric atomic action corresponding to the inferred skill category and align its stored 6D tool trajectory to the scene; for dexterous execution, we expand the lifted grasp keypoint into a task-conditioned grasp affordance region and generate feasible grasp-motion pairs with an arm-hand motion generator. Real-world experiments show improved 3D grounding accuracy and execution reliability over single-view RGB-D grounding and fine-tuned VLA baselines. We further demonstrate long-horizon manipulation through closed-loop status verification and replan, enabling zero-shot execution on unseen objects and tool-use tasks in novel scenes.",
+      "authors": [
+        "Jisoo Kim",
+        "Sangwon Baik",
+        "Taeksoo Kim",
+        "Sungjoo Kim",
+        "Junyoung Lee",
+        "Mingi Choi",
+        "Hanbyul Joo"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-17T17:59:56+00:00",
+      "link": "https://arxiv.org/pdf/2606.19340v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Multi-view 3D keypoint reconstruction for manipulation",
+      "llm_evidence_cn": "多视图3D关键点重建用于操作",
+      "llm_evidence": "多视图3D关键点重建用于操作",
+      "canonical_evidence": "多视图3D关键点重建用于操作",
+      "llm_tldr_en": "Introduces a zero-shot framework that uses multi-view RGB images and VLM to produce 3D keypoints via triangulation for dexterous manipulation.",
+      "llm_tldr_cn": "针对长时程灵巧操作的零样本问题，提出基于多视图RGB图像和VLM的框架，通过多视图融合和射线投票将2D关键点提升为3D，实现抓取和工具使用，无需训练端到端策略。",
+      "llm_tldr": "针对长时程灵巧操作的零样本问题，提出基于多视图RGB图像和VLM的框架，通过多视图融合和射线投票将2D关键点提升为3D，实现抓取和工具使用，无需训练端到端策略。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
