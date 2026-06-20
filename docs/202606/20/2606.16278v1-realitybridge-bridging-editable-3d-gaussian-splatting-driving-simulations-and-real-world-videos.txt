@@ -1,0 +1,424 @@
+Title: RealityBridge: Bridging Editable 3D Gaussian Splatting Driving Simulations and Real-World Videos
+
+URL Source: https://arxiv.org/pdf/2606.16278v1
+
+Published Time: Tue, 16 Jun 2026 02:16:44 GMT
+
+Number of Pages: 12
+
+Markdown Content:
+# RealityBridge: Bridging Editable 3D Gaussian Splatting Driving Simulations and Real-World Videos 
+
+Zhenhua Wu 1,2∗ Yun Pang 1∗ Mingkun Chang 1∗
+
+Yuwei Ning 1 Liangzhi Wang 1 Yi Xiao 1 Guanbin Li 1,3§
+
+> 1
+
+Sun Yat-sen University 
+
+> 2
+
+Shanghai Innovation Institute 
+
+> 3
+
+Shenzhen Loop Area Institute 
+
+wuzhh56@mail2.sysu.edu.cn, pangy9@mail2.sysu.edu.cn, mingkun502@gmail.com, ningyw@mail2.sysu.edu.cn, wanglzh26@mail2.sysu.edu.cn, xiaoy2622935705@gmail.com, liguanbin@mail.sysu.edu.cn Poor 3DGS Vehicle Reconstruction Lighting Harmonization Pedestrian Harmonization Small-Object Harmonization      
+
+> F #1 F #61 F #121 F #1 F #38 F #75
+
+Figure 1: Restoration and harmonization results. Our method improves realism, foreground harmonization, and temporal consistency in 3DGS simulation degradation and editing scenarios. Top : four representative cases, including vehicle recon-struction restoration, vehicle, pedestrian, and small-object lighting harmonization. Bottom : three frames sampled at different timestamps from daytime and nighttime scenes, demonstrating stable and consistent results over time. 
+
+Abstract 
+
+Long-tail hazardous scenarios are essential for safety-oriented autonomous driving, yet they are difficult to col-lect and reproduce at scale. Editable 3D Gaussian Splat-ting (3DGS) simulation offers a promising alternative by re-constructing real driving scenes and supporting controllable scene editing. However, edited 3DGS-rendered videos still suffer from a significant Sim-to-Real gap, including render-ing artifacts, degraded foreground assets, inconsistent illu-mination, and temporal flickering. Existing restoration and 
+
+> ∗
+
+Equal contribution. 
+
+§Corresponding author video generation methods are insufficient for this task, as they often fail to jointly repair 3DGS-specific artifacts, improve visual realism, and ensure temporal consistency. To fill this gap, we propose RealityBridge, a structure-preserving and asset-aware Sim-to-Real framework for edited 3DGS driv-ing videos. RealityBridge uses multimodal controls, includ-ing rendered videos, foreground masks, edge maps, and se-mantic masks, together with a lightweight GateNet for adap-tive condition allocation across backbone layers. We further construct targeted training data and introduce autoregressive long-video training with reward-guided post-training to im-prove restoration quality, temporal stability, and hallucination suppression. Extensive experiments on internal and public driving datasets show that RealityBridge outperforms exist-
+
+> arXiv:2606.16278v1 [cs.CV] 15 Jun 2026 ing methods in artifact removal, illumination harmonization, and long-sequence temporal consistency.
+
+Introduction 
+
+Safety-oriented training and evaluation of autonomous driv-ing systems require diverse, controllable, and reproducible long-tail hazardous scenarios, which are rare, costly to col-lect, and difficult to reproduce in the real world. Recent ad-vances in 3D Gaussian Splatting (3DGS) (Kerbl et al. 2023) provide a promising foundation for editable driving simula-tion (Zhao et al. 2024; Kaur et al. 2021; Yang et al. 2023; Wu et al. 2023; Turki et al. 2023; Tonderski et al. 2024; Zhou et al. 2024; Yan et al. 2024; Yang et al. 2024). By recon-structing real-world driving scenes and supporting control-lable edits such as object insertion, removal, and trajectory modification, 3DGS makes it possible to build editable sim-ulators where safety-critical objects, trajectories, and inter-actions can be explicitly controlled for scalable autonomous-vehicle training, evaluation, and safety validation. However, being editable does not necessarily make the simulator realistic. Edited 3DGS-rendered videos still suf-fer from a clear Sim-to-Real gap, including blurry textures, rendering artifacts, foreground illumination mismatch, miss-ing shadows, boundary artifacts, and temporal flickering. These defects introduce domain bias and limit their use in downstream autonomous driving tasks. More importantly, a bridge from editable simulation to realistic simulation must improve visual realism without breaking simulator-defined scene layout, edited assets, motion trajectories, and safety-critical interactions that are essential for scenario generation. Existing methods do not fully bridge editable simula-tion and realistic video simulation. Image-prior-based ap-proaches (Roessle et al. 2023; Wu et al. 2024; Warburg et al. 2023; Wu et al. 2025a; Wei, Leutenegger, and Schae-fer 2025; Zhou et al. 2026; Skorokhodov, Durasov, and Fua 2026; Ljungbergh et al. 2026) can alleviate local 3DGS ren-dering artifacts, but they are often applied frame by frame and lack temporal modeling for continuous driving videos. They are also not designed to jointly handle background restoration, foreground harmonization, and edit preserva-tion. Video-prior-based methods (Gao et al. 2024; Yu et al. 2024; Liu, Zhou, and Huang 2024; Yin et al. 2025; Wu et al. 2025b; Zhu et al. 2026; Zhang et al. 2026; Ali et al. 2025) provide stronger temporal and generative priors, but are mainly developed for generic scene repair, video edit-ing, or cross-domain style transfer rather than editable 3DGS driving simulation. This leaves a critical gap between ed-itability and realism: current methods cannot simultaneously improve visual fidelity, preserve simulator-defined edits, and maintain temporal consistency. Therefore, bridging editable and realistic simulators requires realism enhancement under explicit structure, asset, and motion constraints. Motivated by this gap, we propose RealityBridge , a video-level Sim-to-Real framework that bridges editable 3DGS driving simulations and real-world videos. Real-ityBridge transforms edited 3DGS-rendered videos into realistic camera-style videos while preserving simulator-defined scene layout, edited assets, and object motion. At its core, RealityBridge adopts a multimodal gated Sim-to-Real model that performs restoration and harmonization un-der explicit conditional guidance. Multimodal control sig-nals provide regional, structural, and category-level guid-ance, enabling the model to identify regions that require restoration or harmonization, safety-critical structures that should be preserved, and object-specific realism require-ments. Since these heterogeneous controls have different im-portance across generation stages and backbone layers, we introduce GateNet to adaptively allocate conditional guid-ance, balancing structural fidelity and realistic appearance synthesis. Finally, targeted data curation, progressive long-video training, and reward-guided post-training are incorpo-rated to improve realism, temporal stability, and simulator fidelity. The main contributions are summarized as follows: 
+
+• Controllable Sim-to-Real Model. We propose Reality-Bridge, a controllable Sim-to-Real framework for edited 3DGS driving videos, where multimodal controls and GateNet enable restoration, harmonization, and struc-tural preservation. 
+
+• A Principled Curation Pipeline. We develop a task-oriented pipeline to curate 3DGS-to-real data covering artifacts, relighting, human motion, and small objects, with multimodal signals for controllable supervision. 
+
+• Extensive Experimental Validation. Experimental re-sults show that RealityBridge outperforms existing meth-ods in artifact removal, illumination harmonization, and temporally consistent long-sequence generation. 
+
+Related Work 
+
+Editable Neural Driving Simulators. Recent 3DGS-based neural simulators (Kerbl et al. 2023; Zhou et al. 2024; Yan et al. 2024) support controllable driving-scene edit-ing, such as object insertion, trajectory modification, and extrapolated-view rendering (Zhou et al. 2025; Hess et al. 2025; Cao et al. 2025; Patakin et al. 2026; Huang et al. 2026; Yang et al. 2023; Wu et al. 2023; Turki et al. 2023; Tonderski et al. 2024; Yang et al. 2024). However, such interventions often disrupt the geometric and photometric consistency of the reconstructed scenes (Gu´ edon and Lep-etit 2024; Chen et al. 2024), leading to blurry backgrounds, splatting artifacts, and inconsistent foreground illumination. As a result, post-rendering refinement remains a key barrier before editable 3DGS-based neural simulators can become a production-ready option for large-scale driving simulation. 
+
+Post-rendering Refinement with Image Priors. Recent works leverage image generative priors to mitigate rendering artifacts (Roessle et al. 2023; Wu et al. 2024; Warburg et al. 2023). DiFiX3D+ (Wu et al. 2025a) uses a single-step dif-fusion model to eliminate novel-view defects in 3DGS ren-derings. Extending this, GSFix3D (Wei, Leutenegger, and Schaefer 2025) fine-tunes a latent diffusion model on scene-specific data to repair missing regions, while FreeFix (Zhou et al. 2026) corrects extrapolated views and updates under-lying representations. Based on DiFiX3D+, NVIDIA Fixer 2
+
+> 2https://github.com/nv-tlabs/Fixer Timestamps
+> Noised Latents
+> Control Latents
+> Vis
+> Edge
+> Category Masks
+> Text Prompt
+> Foreground Background
+> RealityBridge Video
+> Flow Transformer
+> Dit Block
+> Dit Block
+> Dit Block
+> Dit Block
+> Dit Block
+> Dit Block
+> Gate Net
+> Sigmoid
+> Temporal Branch
+> Spatial Branch
+> Render / Produce
+> Controlnet
+> Block
+> Control
+> Block
+> Control
+> Block
+> Control
+> MLP
+> Decoder
+> Composition
+> Model Architecture
+> sample
+> Down  Encoder Encoder Encoder
+> Simulator
+
+Figure 2: Overview of Multimodal Gated Sim-to-Real model. The model translates edited 3DGS simulation videos into real camera style. Multimodal conditions, including visual inputs, edge maps, and category masks, are injected into the flow-transformer backbone through the ControlNet. GateNet adaptively modulates different control signals to enable controllable restoration and harmonization. introduces a neural enhancer tailored for simulation ob-servations to improve visual fidelity. For asset harmoniza-tion, D3DR (Skorokhodov, Durasov, and Fua 2026) and R3D2 (Ljungbergh et al. 2026) generate realistic illumina-tion and shadows for inserted 3D assets via diffusion guid-ance. Despite strong localized static enhancement, these frame-by-frame 2D approaches lack spatiotemporal model-ing for continuous driving videos. Consequently, they fall short on edited 3DGS driving videos, requiring joint preser-vation of temporal coherence, object-scene consistency and simulator-defined structures. 
+
+Post-rendering Refinement with Video Priors. For gen-eral 3DGS enhancement, 3DGS-Enhancer (Liu, Zhou, and Huang 2024) and GSFixer (Yin et al. 2025) adopt video gen-eration backbones to restore artifact-prone novel views (Gao et al. 2024; Yu et al. 2024). Incorporating spatial cues, Gen-Fusion (Wu et al. 2025b) and GaussFusion (Zhu et al. 2026) condition on RGB-D inputs or Gaussian buffers to sup-press temporal flickering and floating artifacts. For video relighting and harmonization, Lumen (Zeng et al. 2025) relights human foreground subjects and harmonizes them with new backgrounds. DiffusionHarmonizer (Zhang et al. 2026) improves artifact correction and appearance harmo-nization for neural-rendered driving scenes, and Cosmos-Transfer2.5 (Ali et al. 2025) provides general visual style transfer conditioned on multiple modalities. However, these methods are not designed for the challenges of edited 3DGS driving videos, where realism enhancement requires explicit control over restored regions, edited assets, object trajecto-ries, and safety-critical structures. Filling this gap, our work introduces a structure-preserving video harmonization and restoration frame-work that follows the edited 3DGS rendering while repair-ing artifacts, harmonizing foreground assets, and preserving simulator-provided constraints. 
+
+Methodology 
+
+We propose RealityBridge , a controllable Sim-to-Real framework for edited 3DGS driving videos. Given a low-realism 3DGS-rendered video, RealityBridge translates it into real camera style while preserving scene layout, ob-ject trajectories, and safety-critical structures. RealityBridge consists of a multimodal gated Sim-to-Real model, targeted data curation, progressive long-video training, and reward-guided post-training. 
+
+Multimodal Gated Sim-to-Real Model 
+
+Problem Formulation. We formulate edited 3DGS video realism enhancement as a controllable video-to-video restoration and harmonization task. Given a 3DGS-rendered simulation video V sim and control conditions C, the model generates a real camera-style video ˆV real :
+
+ˆV real = Fθ (V sim , C ). (1) Compared with generic video generation, our task imposes stronger faithfulness constraints on the edited 3DGS in-put. The model must enhance realism while preserving simulator-defined layout, asset trajectories, and local edits. Therefore, the task involves three coupled objectives: re-moving rendering artifacts, harmonizing foreground assets with the background, and maintaining temporal consistency over long driving videos. RealityBridge adopts the multi-modal gated Sim-to-Real model shown in Fig. 2. 
+
+Flow-Matching Video Backbone. RealityBridge is built upon a DiT-style video generation backbone. During train-ing, the target real video V real is encoded into a latent rep-resentation z0 by a video VAE. A Gaussian noise latent z1 ∼ N (0 , I ) is sampled, and an intermediate latent state is constructed along the linear path from noise to data: 
+
+zt = (1 − t)z1 + tz 0, t ∈ [0 , 1] . (2) Under this parameterization, the target velocity field is: 
+
+v∗ = z0 − z1. (3) The model predicts the velocity field conditioned on the noisy latent state, timestep, 3DGS-rendered video, and mul-timodal control conditions: 
+
+ˆvθ = vθ (zt, t, V sim , C ). (4) The basic flow-matching objective is: 
+
+Lf m = vθ (zt, t, V sim , C ) − (z0 − z1) 22 . (5) Through conditional flow matching (Liu, Gong, and Liu 2022; Albergo and Vanden-Eijnden 2023), the backbone learns to transport latent videos from the noise distribution to the real-video distribution under the structural guidance of the 3DGS-rendered input. 
+
+Multimodal Control Signals. The 3DGS-rendered video alone is insufficient for controllable realism enhancement. Edited driving videos contain heterogeneous regions with different requirements: backgrounds require artifact removal and texture recovery, inserted or degraded foreground assets require illumination, shadow harmonization, while safety-critical structures such as lane markings, object boundaries, traffic signs, and small obstacles should be preserved. There-fore, we introduce multimodal control signals to provide ex-plicit regional, structural, and category-level guidance. Specifically, the 3DGS-rendered video latent zsim pro-vides the global layout and appearance reference. The fore-ground mask Mf , generated from category-level segmen-tation (Carion et al. 2025) of vehicles, pedestrians, and small obstacles, localizes inserted or degraded assets that require harmonization. The edge latent zE preserves struc-tural boundaries and safety-critical details (Canny 1986). The category-level mask latent zM provides semantic pri-ors for vehicles, pedestrians, traffic signs, and other traffic objects. These modalities are concatenated in a fixed order: 
+
+zC = Concat (zsim , z E , M f , z M ), (6) where zsim , zE , and zM denote the latent representa-tions of the rendered video, edge map, and category-level semantic mask, respectively. The ControlNet condition branch (Zhang, Rao, and Agrawala 2023) projects the uni-fied condition tensor into control features: 
+
+Fc = Φ ControlNet (zC ). (7) The resulting control features guide the DiT backbone to perform controllable restoration and harmonization in the video latent space. 
+
+GateNet for Adaptive Condition Allocation. Multi-modal conditions provide explicit guidance, but simply con-catenating them and injecting them into all DiT blocks with fixed weights is suboptimal. These heterogeneous controls may impose competing constraints: edge maps emphasize structural preservation, foreground masks localize harmo-nization regions, category masks provide semantic priors, and rendered videos preserve global appearance and mo-tion. Moreover, different network layers rely on different types of information: shallow layers tend to focus on layout and boundaries, while deeper layers are more related to tex-ture, illumination, and realistic detail synthesis. Therefore, the mixed control representation should be adaptively gated across layers rather than used uniformly. For the l-th DiT block, let F (l) 
+
+> c
+
+denote the layer-wise con-trol feature extracted from the ControlNet path. GateNet pre-dicts a content-dependent modulation gate over this mixed feature: 
+
+α(l) = σ
+
+
+
+Gsη
+
+
+
+h(l), F (l)
+
+> c
+
+ 
+
+, (8) where Gsη denotes the spatial branch, h(l) is the hidden state of the DiT backbone, and α(l) modulates the mixed control feature. To further adapt condition injection across spatial regions, diffusion timesteps, and network layers, GateNet combines the spatial and temporal branches to produce a block-wise adaptive injection gate: 
+
+β(l) = σ
+
+
+
+Gsη (h(l), α (l) · F (l) 
+
+> c
+
+) + Gtη (t, l )
+
+
+
+. (9) where Gtη denotes the temporal branch. The gated condition feature is injected into the DiT block as: 
+
+h(l+1) = DiTBlock (l)(h(l), t ) + β(l) · F (l) 
+
+> c
+
+. (10) Through this block-wise adaptive allocation, GateNet en-ables the model to better balance structural preservation, scene harmonization, and realistic appearance synthesis. 
+
+Targeted Data Curation 
+
+The multimodal gated model requires supervision aligned with restoration and harmonization objectives. Since edited 3DGS videos contain diverse failures, including render-ing artifacts, foreground illumination mismatch, pedestrian degradation, and small-object detail loss, we develop a task-oriented data curation pipeline for targeted 3DGS-to-real su-pervision, as shown in Fig. 3. 
+
+3DGS Artifact-to-Real Pairs. To provide supervision for repairing degradation, we construct 3DGS artifact-to-real pairs from internal multi-view driving logs cover-ing diverse traffic environments, including highways, ur-ban roads, garages, commercial streets, residential neighbor-hoods, and rural field roads. Adapting the data strategy of DIFIX3D+ (Wu et al. 2025a), we generate degraded render-ings using four reconstruction protocols: sparse reconstruc-tion , cycle reconstruction , cross-camera reference , and un-derfitting . (i) Sparse reconstruction optimizes a 3DGS scene from temporally subsampled observations and renders held-out frames along the corresponding trajectory as degraded inputs. (ii) Cycle reconstruction renders a laterally perturbed trajectory from an initial 3DGS scene, reconstructs a sec-ond 3DGS scene from these pseudo observations, and ren-ders back the original camera trajectory as degraded inputs. 
+
+(iii) Cross-camera reference reconstructs the scene from one camera view and renders another camera view, introducing Illumination Variation  
+
+> Human-Motion Prior
+> Recon1:
+> train: camera1
+> train: camera2 target: camera1
+> Exp
+> WB
+> B
+> bright
+> random
+> dim
+> HDR Relighting
+> RGB Perturbation
+> Training
+> few iter. early stop
+> Recon2:
+> target: camera2
+> Cycle Recon.
+> Underfitting.
+> target: camera1 train: camera2
+> target: t2, t3, t4, ...
+> train: t1, t5, t9
+> Cross-Camera Ref.
+> Sparse Recon.
+> Original Video
+> Multi-view Driving Logs
+> Processed Video
+> Real Video
+> 3DGS Artifact-to-Real Pairs
+> 360° Rotation
+> Degradation
+> Illumination Variation
+> Asset
+> Fixed-Leng
+> Degradation
+> th Clips
+> Internal 3D
+> Videos
+> Internal Motion
+> Processed Video
+> Real Video
+> Processed Video
+> Real Video
+> Small-ObjectAsset Videos
+> Processed Video
+> Real Video
+
+Figure 3: Overview of the data and condition curation pipeline. We construct paired supervision from 3DGS artifact-to-real pairs, illumination variation, human-motion priors, and small-object asset videos, and further extract captions, masks, and edge maps as multimodal training conditions. view-dependent artifacts and geometry inconsistency. (iv) Region-aware underfitting stops reconstruction early to syn-thesize blur, floaters, and incomplete geometry. We apply different underfitting levels to foreground assets and back-ground scenes, mimicking the stronger degradation often seen on inserted or dynamic objects. The original real videos serve as supervision targets, enabling the model to learn ar-tifact removal while preserving the original scene layout and camera motion. 
+
+Illumination Variation. To supervise foreground harmo-nization, we construct illumination-variation clips from real videos using two strategies: RGB-level perturbation and 
+
+normal-guided relighting . For RGB-level perturbation, we modify foreground regions by randomly adjusting bright-ness, contrast, gamma, and per-channel color gains within moderate ranges to simulate appearance mismatch intro-duced by asset insertion. For normal-guided relighting, we estimate temporally consistent surface normals with Nor-malCrafter (Bin et al. 2025) and sample random light con-ditions inspired by Lumen (Zeng et al. 2025). Specifically, for each foreground pixel x at time t, we use its estimated normal nt(x) to compute a normal-dependent illumination map from a set of time-varying light sources Pt:
+
+Lt(x) = clip 
+
+ X
+
+> p∈P t
+
+I(t) 
+
+> p
+
+max 
+
+
+
+⟨nt(x), d (t) 
+
+> p
+
+⟩, 0
+
+ , (11) where I(t) 
+
+> p
+
+and d(t) 
+
+> p
+
+denote the RGB intensity and di-rection of light source p, respectively. The inner product 
+
+⟨nt(x), d (t) 
+
+> p
+
+⟩ corresponds to the cosine of the angle between the surface normal and the incident light direction, so sur-faces facing the sampled light receive stronger illumination. We use Lt(x) as a spatially varying foreground relighting map. Both strategies apply only inside the foreground re-gion, while the original video is kept as the paired target. This subset encourages illumination correction, shadow re-covery, and foreground-background boundary blending. 
+
+Human-Motion Prior. To improve robustness on pedes-trian regions, we curate human-motion prior clips from an internal pedestrian-dominant dataset. These videos cover di-verse human motions, large pose changes, occlusions, and multi-person interactions, providing pedestrian-centric ob-servations often missing in ordinary driving data. These videos are captured by in-vehicle cameras when the ego ve-hicle is static to reduce ego-motion blur and make human-region degradation more controllable. We synthesize de-graded counterparts using Real-ESRGAN (Wang et al. 2021) degradation and illumination perturbation. Specifi-cally, we apply a two-stage degradation pipeline with ran-dom blur, resizing, Gaussian or Poisson noise, JPEG com-pression, video compression, and optional resampling/filter-ing operations. Degraded clips are resized back to original resolution and paired with originals as clean supervision. 
+
+Small-Object Asset Videos. To improve preservation of small safety-critical objects, we curate object-centric clips from internal 3D asset pipeline. These clips contain 360-degree captures of traffic signs, cones, fallen objects, and other small obstacles that are common but often low-salience in ordinary driving videos and easily lost during 3DGS reconstruction rendering. When degraded supervision is needed, we process these clips with the same degradation pipeline. The clean asset videos are used as supervision tar-gets for small-object restoration and preservation. 
+
+Progressive Long-video Training 
+
+With the curated supervision above, RealityBridge can learn restoration and harmonization on short clips, but long driv-ing videos still require stable autoregressive inference to avoid temporal drift and cross-chunk inconsistency. We therefore adopt a four-stage progressive training strategy Supervised RealityBridge Policy                            
+
+> Stage 4: Joint Fine -tuning
+> 🔥 DiT 🔥 VACE
+> Stage 3: VACE Learning
+> ❄DiT 🔥 VACE
+> Stage 2: Control Frame Dropout
+> 🔥 DiT ❄VACE
+> Stage 1: I2V Warm -up
+> 🔥 DiT ❄VACE
+> Rendered Video 𝑉 !"# Conditions 𝐶
+> Frames F
+> (0/1/2)
+> Frames F
+> (1/2)
+> Aligned RealityBridge Policy
+> Generated Rollouts 𝑉 "
+> Sparse Frame Sampler
+> Object Detector B
+> Aesthetic Scorer
+> 𝑓 !"# (·)
+> Aesthetic Score Box -IoU Reward
+> Composite Reward 𝑅
+> Policy Rollout IoU
+> Policy Update
+> 🔥 Trainable ❄Frozen Sampling / Evaluation Supervised Training Policy Rollout / Update
+> (a) Four -stage Supervised Training (b) Reward -guided Post -training
+
+Figure 4: Training pipeline of RealityBridge . The train-ing procedure consists of four-stage supervised training fol-lowed by reward-guided post-training. that gradually builds temporal continuation, multimodal conditional control, and long-video stability, as illustrated in the left panel of Fig. 4. Here, control frames refer to the first few latent frames of a training chunk. 
+
+Stage 1: DiT warm-up. We train the DiT backbone with 
+
+{1, 2} control frames to learn context temporal prediction. 
+
+Stage 2: Control-frame dropout. We train the DiT back-bone with {0, 1, 2} control frames to support both first-chunk initialization and history-conditioned continuation. 
+
+Stage 3: ControlNet and GateNet learning. We freeze DiT and train ControlNet with GateNet for adaptive multi-modal control. 
+
+Stage 4: Joint refinement. We jointly fine-tune DiT, ControlNet, and GateNet. 
+
+Training Objective. All stages are optimized with the conditional flow-matching loss (Liu, Gong, and Liu 2022; Albergo and Vanden-Eijnden 2023) and a regional reweight-ing term: 
+
+Lreg = Mregion ⊙  vθ (zt, t, V sim , C )
+
+− (z0 − z1)) ∥22 , (12) 
+
+L = Lf m + λreg Lreg . (13) Here, Mregion is resized to the latent resolution and empha-sizes foreground pedestrians, traffic signs, and small objects. This objective strengthens region-sensitive restoration while improving long-video stability. 
+
+Reward-guided Post-training 
+
+Supervised training provides strong restoration and harmo-nization, while distant regions in challenging scenes may oc-casionally exhibit minor hallucinated details during realism enhancement. We therefore introduce reward-guided post-training (Jiao et al. 2024) as a final alignment step to further align photorealism with simulator constraints, as illustrated in the right panel of Fig. 4. Given an input rendered sequence V sim = {Irt }Nt=1 and generated video ˆV = { ˆIt}Nt=1 , rewards are computed on a sparsely sampled frame set S. The reward combines an aes-thetic term for visual realism and a bounding-box IoU term for foreground structure preservation: 
+
+R = 1
+
+|S| 
+
+X
+
+> t∈S
+
+
+
+λaes N  faes ( ˆIt)
+
++ λbox N   IoU( B( ˆIt), B(Irt )) 
+
+,
+
+(14) where faes denotes the aesthetic reward model, B(·) is an off-the-shelf object detector (Khanam and Hussain 2024), and N (·) denotes z-score normalization. By computing re-wards on sparsely sampled frames, this stage covers differ-ent temporal positions in long videos while controlling train-ing cost and reducing reward hacking. 
+
+Experiments 
+
+Experimental Setting 
+
+Evaluation Protocol. We evaluate RealityBridge on two tasks: restoration of degraded 3DGS-rendered driving videos and harmonization after 3D asset insertion. Experi-ments use 1K internal scenes, 60 Waymo scenes (Sun et al. 2020), and 10 nuPlan scenes (Karnchanachari et al. 2024). Restoration videos follow the degradation process in data curation. For insertion, we use real assets on the internal set and Hunyuan3D-reconstructed vehicles (Zhao et al. 2025) on public scenes. All test videos are generated at 720 ×1280 ,30 FPS, and 10 seconds. The restoration setting provides paired 3DGS renderings and aligned real videos, allowing reference-based evaluation. The asset-insertion setting uses edited videos with inserted vehicles, pedestrians, and small obstacles, and evaluates whether the generated results im-prove appearance realism while preserving the edited geom-etry and trajectories. 
+
+Implementation Details. RealityBridge is built on Wan2.2-Fun-VACE-14B (Jiang et al. 2025). We train at 
+
+720 × 1280 resolution on 8 NVIDIA H200 GPUs with a learning rate of 1 × 10 −6. The first two training stages are run for 20K iterations each, and the last two stages for 10K iterations each. We set λreg = 0 .1 for regional reweighting and λaes = λbox = 1 for reward-guided post-training. 
+
+Baselines. We compare RealityBridge with four groups of baselines: the general image edit models SDEdit (Meng et al. 2021) and InstructPix2Pix (Brooks, Holynski, and Efros 2023), the video harmonization method Lumen (Zeng et al. 2025) for asset insertion, general video translation models Cosmos-Transfer2.5 (Ali et al. 2025) and Wan-video V2V (Jiang et al. 2025), and the 3DGS artifact re-moval method Fixer for degraded rendering restoration. All baselines are evaluated on the same input videos and output resolution. We use official implementations and re-leased checkpoints whenever available. SDEdit and Instruct-Pix2Pix are evaluated as general image-edit baselines. Lu-men is evaluated as a specialized harmonization baseline us-ing the Lumen-T2V-1.3B-V1.0 checkpoint, the edited video, input Ours Cosmos Transfer2.5 Fixer Lumen Wan-video V2V input Ours Cosmos Transfer2.5 Fixer Lumen Wan-video V2V 
+
+Harmonization Restoration Figure 5: Visual comparison on harmonization and restoration tasks. We compare different methods on both public and internal datasets. Our method produces more natural illumination and shadow effects in the harmonization task, better removes 3DGS artifacts in the restoration task, and maintains better temporal consistency. foreground mask, and a fixed neutral relighting prompt. Cosmos-Transfer2.5 is evaluated with visual and edge con-ditions. Wan-video V2V uses Wan2.2-VACE-Fun-A14B with the input video as the video-to-video condition. For 3DGS artifact removal, we use Fixer; following its official setup, we treat it as a single-step image diffusion enhancer for rendered novel views and apply it frame by frame to the 3DGS-rendered videos. 
+
+Evaluation Metrics. We evaluate visual realism, struc-ture preservation, and temporal stability. FID (Heusel et al. 2017) and FVD (Unterthiner et al. 2018) measure distribu-Table 1: Quantitative comparison on restoration and harmonization tasks. SC, TF, MC measuring Subject Consistency, Temporal Flickering and Motion Smoothness following VBench. PSNR and SSIM are reported when ground-truth videos are available. First , Second . 
+
+Method Harmonization Restoration FID ↓ FVD ↓ SC ↑ TF ↑ MS ↑ FID ↓ FVD ↓ SC ↑ TF ↑ MS ↑ PSNR ↑ SSIM ↑
+
+SDEdit(SD 3) 84.17 2213.22 0.9088 0.9654 0.9714 44.53 753.65 0.8749 0.9709 0.9769 21.35 0.679 InstructPix2Pix 85.96 2149.62 0.8685 0.9351 0.9442 69.96 1471.39 0.8286 0.9330 0.9434 14.30 0.488 Fixer 87.53 1426.08 0.9458 0.9828 0.9867 51.86 736.85 0.9260 0.9808 0.9861 21.89 0.777 Cosmos-Transfer2.5 73.21 1344.21 0.9424 0.9794 0.9840 53.91 727.41 0.9203 0.9792 0.9864 21.57 0.749 Lumen 88.88 1347.24 0.9466 0.9802 0.9856 54.00 794.23 0.9154 0.9787 0.9866 15.06 0.532 Wan-video V2V 101.86 1607.63 0.9463 0.9758 0.9821 58.65 873.26 0.9360 0.9750 0.9848 15.14 0.547 
+
+Ours 76.04 1290.25 0.9471 0.9833 0.9877 35.82 580.05 0.9405 0.9815 0.9889 24.93 0.829 
+
+Table 2: Ablation study of guidance modules and reward-guided post-training. We ablate GateNet, foreground mask guid-ance ( Mask ), edge-map structural constraint ( Edge ), category-level mask guidance ( CMask ), and reward-guided post-training (R-Train ). First , Second .                                                                                                                                             
+
+> ID Module Harmonization Restoration GateNet Mask Edge CMask R-Train FID ↓FVD ↓SC ↑TF ↑MS ↑FID ↓FVD ↓SC ↑TF ↑MS ↑PSNR ↑SSIM ↑
+> 0101.86 1607.63 0.9463 0.9758 0.9821 58.65 873.26 0.9306 0.9750 0.9848 15.14 0.547 1✓✓✓✓76.05 1309.77 0.9454 0.9808 0.9858 36.23 594.91 0.9336 0.9814 0.9882 24.93 0.829 2✓✓✓✓76.61 1295.23 0.9467 0.9832 0.9835 37.28 626.67 0.9328 0.9818 0.9859 24.12 0.819 3✓✓✓✓81.09 1341.10 0.9469 0.9817 0.9864 39.80 640.23 0.9315 0.9787 0.9870 21.94 0.772 4✓✓✓✓80.43 1324.53 0.9439 0.9798 0.9851 37.24 584.53 0.9351 0.9803 0.9875 22.97 0.794 5✓✓✓✓79.42 1334.83 0.9460 0.9814 0.9873 37.29 598.31 0.9335 0.9798 0.9871 24.23 0.817 6✓✓✓✓✓76.04 1290.25 0.9471 0.9833 0.9877 35.82 580.05 0.9405 0.9815 0.9889 25.47 0.839
+
+Table 3: User study results. We report the percentage of samples where RealityBridge is preferred over each baseline in pairwise comparisons. A rate above 50% indicates that RealityBridge is preferred. 
+
+Study Method Result 
+
+Preference Study Lumen 96.2% Fixer 90.2% Cosmos-Transfer2.5 92.4% Wan-video V2V 95.7% 
+
+tion gap between enhanced videos and real driving videos. To assess temporal stability, we adopt VBench (Huang et al. 2024) metrics including Subject Consistency, Background Consistency, Motion Smoothness, and Temporal Flickering. When aligned references are available, we additionally re-port PSNR (Wang and Bovik 2009) and SSIM (Wang et al. 2004) for reconstruction fidelity and perceptual similarity. For unpaired asset insertion, full-reference metrics are not used as primary metrics because no exact ground-truth video exists for the newly inserted objects. 
+
+Qualitative Evaluation 
+
+We first examine qualitative behavior on restoration and asset-insertion harmonization. For restoration, Cosmos-Transfer2.5 and Fixer fail to sufficiently recover degraded vehicles and local artifacts, while Lumen and Wan-video V2V tend to over-modify the input appearance and geome-try. As shown in Fig. 5, RealityBridge restores vehicles and local details more effectively while preserving the original scene layout and road context. For harmonization, inserted vehicles should be visually compatible with the environment while remaining faithful to the input geometry and trajectory. Cosmos-Transfer2.5 lacks realistic shadows, Fixer produces weak shadows, and Lumen and Wan-video V2V often over-modify the inserted assets. RealityBridge achieves more realistic vehicle-environment harmonization with coherent lighting, shadows, and bound-ary blending while preserving the input structure and mo-tion. The consistent performance on both internal and public datasets further validates the applicability of RealityBridge across different scene distributions. 
+
+Cross-camera Robustness. Driving simulators often ren-der videos from different types of cameras with different viewing directions and lens distortions. To evaluate cross-camera robustness, we compare results on four fisheye cam-era videos from the same scene, covering left, front, rear, and right views. As shown in Fig. 6, RealityBridge maintains sta-ble restoration and harmonization quality across these cam-era settings, while baselines are more sensitive to view di-rection, fisheye distortion, and local 3DGS artifacts. 
+
+Quantitative Evaluation 
+
+Quantitative results are reported in Table 1. In the har-monization task, RealityBridge achieves the best perfor-mance on most video-level and temporal consistency met-rics, demonstrating stronger foreground-background inte-gration and more stable long-video generation. Cosmos-Transfer2.5 obtains the best harmonization FID, suggesting that a general transfer model can move outputs closer to the overall real-video distribution. However, its weaker FVD and temporal metrics indicate that this distribution-level gain Fixer Lumen Wan-video V2V  input Ours Cosmos Transfer2.5  
+
+> FISHEYE BACK FISHEYE RIGHT FISHEYE FRONT FISHEYE LEFT
+
+Figure 6: Cross-camera robustness comparison. Reality-Bridge and baselines are evaluated on fisheye left, front, rear, and right camera videos from the same scene. RealityBridge remains stable across different camera views and lens distor-tions, while baselines often leave residual artifacts or over-edit local structures. comes with less stable video structure and weaker local as-set consistency. This supports our claim that edited 3DGS driving videos require more than global style transfer: real-ism must be improved under simulator-defined structure and motion constraints. In the 3DGS restoration task, RealityBridge shows clear advantages across perceptual, temporal, and reference-based metrics. This indicates its ability to repair scene blur, render-ing artifacts, broken boundaries, and degraded foreground regions while maintaining inter-frame stability. Overall, the results validate the effectiveness of RealityBridge in de-graded 3DGS restoration, edited-asset harmonization, and temporally consistent long-sequence generation. 
+
+Ablation Study 
+
+Ablation on Guidance Modules. We report ablation re-sults in Table 2. Compared with the baseline without addi-tional guidance modules, all variants with the proposed com-ponents achieve clear improvements on both harmoniza-tion and restoration tasks. This indicates that the introduced control and post-training designs are important for control-lable sim-to-real video enhancement. Comparing different variants, removing individual components leads to varying performance drops across different metrics, suggesting that these modules contribute complementary effects. In partic-ular, the full model achieves the best or second-best perfor-mance on all metrics, including video-level realism, tempo-ral consistency, and reference-based restoration quality. 
+
+Qualitative Data Ablation. We further visualize the con-tribution of targeted data curation in Fig. 7. The abla-tion focuses on curated subsets with clear localized effects: W/O Human-Motion Prior Input Full Dataset   
+
+> W/O Small-Object Asset Videos Input Full Dataset
+> W/O Illumination Variation Input Full Dataset
+
+Figure 7: Qualitative ablation of curated training data. 
+
+Removing illumination-variation data leads to weaker cor-rection of shadows and inconsistent vehicle-surface lighting, while removing human-motion prior data reduces restora-tion quality in pedestrian regions. Without small-object asset videos, harmonization of small traffic objects largely fails. The full model better harmonizes localized objects while maintaining scene-level realism. illumination-variation clips, human-motion prior clips, and small-object asset videos. Removing illumination-variation data weakens the model’s ability to correct contact shadows and vehicle-surface lighting, while removing human-motion prior data leads to poorer pedestrian-region restoration, es-pecially under large pose changes or partial occlusions. For small objects, removing the asset videos causes harmoniza-tion to largely fail: the result remains close to the input ren-dering and lacks plausible light-shadow integration with the scene. The full model produces more coherent small-object appearance and local lighting. These qualitative results com-plement the quantitative ablation and show that each curated subset addresses a distinct failure mode. 
+
+User Study. 
+
+We conduct a pairwise user preference study with 50 in-ternal participants from multiple groups and diverse profes-sional backgrounds. For each input scene, participants com-pare RealityBridge with one baseline at a time under the same input condition and select the result with better over-all Sim-to-Real quality. The judgment considers visual re-alism, artifact removal, foreground-background harmoniza-tion, preservation of edited structures, and temporal stability. Method order is randomized to reduce presentation bias. We report the pairwise preference rates in Table 3. 
+
+Conclusion 
+
+We propose RealityBridge, a video-level Sim-to-Real frame-work for 3DGS-based autonomous driving simulation. Real-ityBridge translates edited 3DGS-rendered videos into real camera style while preserving scene structure, object mo-tion, and edited assets. To address background artifacts, foreground illumination mismatch, and long-video instabil-ity, we introduce a multimodal controllable model, a task-oriented data curation pipeline, progressive long-video train-ing, and reward-guided post-training. Experiments show that RealityBridge outperforms existing methods in restoration quality, asset harmonization, and temporal consistency. Fu-ture work will explore its use in more complex traffic inter-actions and closed-loop autonomous driving training. 
+
+References 
+
+Albergo, M. S.; and Vanden-Eijnden, E. 2023. Build-ing Normalizing Flows with Stochastic Interpolants. arXiv:2209.15571. Ali, A.; Bai, J.; Bala, M.; Balaji, Y.; Blakeman, A.; Cai, T.; Cao, J.; Cao, T.; Cha, E.; Chao, Y.-W.; et al. 2025. World simulation with video foundation models for physical ai. 
+
+arXiv preprint arXiv:2511.00062 .Bin, Y.; Hu, W.; Wang, H.; Chen, X.; and Wang, B. 2025. NormalCrafter: Learning Temporally Consistent Normals from Video Diffusion Priors. arXiv:2504.11427. Brooks, T.; Holynski, A.; and Efros, A. A. 2023. Instruct-pix2pix: Learning to follow image editing instructions. In 
+
+Proceedings of the IEEE/CVF conference on computer vi-sion and pattern recognition , 18392–18402. Canny, J. 1986. A Computational Approach to Edge Detec-tion. IEEE Transactions on Pattern Analysis and Machine Intelligence , PAMI-8(6): 679–698. Cao, W.; Hallgarten, M.; Li, T.; Dauner, D.; Gu, X.; Wang, C.; Miron, Y.; Aiello, M.; Li, H.; Gilitschenski, I.; Ivanovic, B.; Pavone, M.; Geiger, A.; and Chitta, K. 2025. Pseudo-Simulation for Autonomous Driving. In Conference on Robot Learning (CoRL) .Carion, N.; Gustafson, L.; Hu, Y.-T.; Debnath, S.; Hu, R.; Suris, D.; Ryali, C.; Alwala, K. V.; Khedr, H.; Huang, A.; Lei, J.; Ma, T.; Guo, B.; Kalla, A.; Marks, M.; Greer, J.; Wang, M.; Sun, P.; R¨ adle, R.; Afouras, T.; Mavroudi, E.; Xu, K.; Wu, T.-H.; Zhou, Y.; Momeni, L.; Hazra, R.; Ding, S.; Vaze, S.; Porcher, F.; Li, F.; Li, S.; Kamath, A.; Cheng, H. K.; Doll´ ar, P.; Ravi, N.; Saenko, K.; Zhang, P.; and Fe-ichtenhofer, C. 2025. SAM 3: Segment Anything with Con-cepts. arXiv:2511.16719. Chen, Y.; Chen, Z.; Zhang, C.; Wang, F.; Yang, X.; Wang, Y.; Cai, Z.; Yang, L.; Liu, H.; and Lin, G. 2024. GaussianEditor: Swift and Controllable 3D Editing with Gaussian Splatting. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition .Gao, R.; Holynski, A.; Henzler, P.; Brussee, A.; Martin-Brualla, R.; Srinivasan, P.; Barron, J. T.; and Poole, B. 2024. Cat3D: Create Anything in 3D with Multi-View Diffusion Models. In Advances in Neural Information Processing Sys-tems .Gu´ edon, A.; and Lepetit, V. 2024. SuGaR: Surface-Aligned Gaussian Splatting for Efficient 3D Mesh Reconstruction and High-Quality Mesh Rendering. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition .Hess, G.; Lindstr¨ om, C.; Fatemi, M.; Petersson, C.; and Svensson, L. 2025. SplatAD: Real-Time Lidar and Cam-era Rendering with 3D Gaussian Splatting for Autonomous Driving. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 11982–11992. Heusel, M.; Ramsauer, H.; Unterthiner, T.; Nessler, B.; and Hochreiter, S. 2017. Gans trained by a two time-scale up-date rule converge to a local nash equilibrium. Advances in neural information processing systems , 30. Huang, Y.; Kang, X.; Zhang, S.; Ren, H.; Zhang, W.; and Lai, J. 2026. LiDAR-EVS: Enhance Extrapolated View Syn-thesis for 3D Gaussian Splatting with Pseudo-LiDAR Super-vision. arXiv:2603.14763. Huang, Z.; He, Y.; Yu, J.; Zhang, F.; Si, C.; Jiang, Y.; Zhang, Y.; Wu, T.; Jin, Q.; Chanpaisit, N.; Wang, Y.; Chen, X.; Wang, L.; Lin, D.; Qiao, Y.; and Liu, Z. 2024. VBench: Comprehensive Benchmark Suite for Video Gener-ative Models. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition .Jiang, Z.; Han, Z.; Mao, C.; Zhang, J.; Pan, Y.; and Liu, Y. 2025. VACE: All-in-One Video Creation and Editing. In 
+
+Proceedings of the IEEE/CVF International Conference on Computer Vision , 17191–17202. Jiao, R.; Kong, X.; Huang, W.; and Liu, Y. 2024. 3D struc-ture prediction of atomic systems with flow-based direct preference optimization. Advances in Neural Information Processing Systems , 37: 110197–110217. Karnchanachari, N.; Geromichalos, D.; Tan, K. S.; Li, N.; Eriksen, C.; Yaghoubi, S.; Mehdipour, N.; Bernasconi, G.; Fong, W. K.; Guo, Y.; et al. 2024. Towards learning-based planning: The nuplan benchmark for real-world autonomous driving. In 2024 IEEE International Conference on Robotics and Automation (ICRA) , 629–636. IEEE. Kaur, P.; Taghavi, S.; Tian, Z.; and Shi, W. 2021. A Survey on Simulators for Testing Self-Driving Cars. arXiv:2101.05337. Kerbl, B.; Kopanas, G.; Leimkuehler, T.; and Drettakis, G. 2023. 3D Gaussian Splatting for Real-Time Radiance Field Rendering. ACM Trans. Graph. , 42(4). Khanam, R.; and Hussain, M. 2024. YOLOv11: An Overview of the Key Architectural Enhancements. arXiv:2410.17725. Liu, X.; Gong, C.; and Liu, Q. 2022. Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow. arXiv:2209.03003. Liu, X.; Zhou, C.; and Huang, S. 2024. 3DGS-Enhancer: Enhancing Unbounded 3D Gaussian Splatting with View-consistent 2D Diffusion Priors. arXiv:2410.16266. Ljungbergh, W.; Taveira, B.; Zheng, W.; Tonderski, A.; Peng, C.; Kahl, F.; Petersson, C.; Felsberg, M.; Keutzer, K.; Tomizuka, M.; and Zhan, W. 2026. R3D2: Realistic 3D As-set Insertion via Diffusion for Autonomous Driving Simula-tion. arXiv:2506.07826. Meng, C.; He, Y.; Song, Y.; Song, J.; Wu, J.; Zhu, J.-Y.; and Ermon, S. 2021. Sdedit: Guided image synthesis and editing with stochastic differential equations. arXiv preprint arXiv:2108.01073 .Patakin, N.; Shirokov, A.; Konushin, A.; and Senushkin, D. 2026. Unified Sensor Simulation for Autonomous Driving. 
+
+arXiv preprint arXiv:2602.05617 .Roessle, B.; M¨ uller, N.; Porzi, L.; Bul` o, S. R.; Kontschieder, P.; and Nießner, M. 2023. GANeRF: Leveraging Discrimi-nators to Optimize Neural Radiance Fields. ACM Transac-tions on Graphics , 42(6): 1–14. Skorokhodov, V.; Durasov, N.; and Fua, P. 2026. Diffu-sion Models are Secretly Zero-Shot 3DGS Harmonizers. arXiv:2503.06740. Sun, P.; Kretzschmar, H.; Dotiwalla, X.; Chouard, A.; Pat-naik, V.; Tsui, P.; Guo, J.; Zhou, Y.; Chai, Y.; Caine, B.; et al. 2020. Scalability in perception for autonomous driving: Waymo open dataset. In Proceedings of the IEEE/CVF con-ference on computer vision and pattern recognition , 2446– 2454. Tonderski, A.; Lindstr¨ om, C.; Hess, G.; Ljungbergh, W.; Svensson, L.; and Petersson, C. 2024. NeuRAD: Neu-ral Rendering for Autonomous Driving. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition .Turki, H.; Zhang, J. Y.; Ferroni, F.; and Ramanan, D. 2023. SUDS: Scalable Urban Dynamic Scenes. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition .Unterthiner, T.; Van Steenkiste, S.; Kurach, K.; Marinier, R.; Michalski, M.; and Gelly, S. 2018. Towards accurate gen-erative models of video: A new metric & challenges. arXiv preprint arXiv:1812.01717 .Wang, X.; Xie, L.; Dong, C.; and Shan, Y. 2021. Real-esrgan: Training real-world blind super-resolution with pure synthetic data. In Proceedings of the IEEE/CVF interna-tional conference on computer vision , 1905–1914. Wang, Z.; and Bovik, A. C. 2009. Mean squared error: Love it or leave it? A new look at signal fidelity measures. IEEE Signal Processing Magazine , 26(1): 98–117. Wang, Z.; Bovik, A. C.; Sheikh, H. R.; and Simoncelli, E. P. 2004. Image quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Process-ing , 13(4): 600–612. Warburg, F.; Weber, E.; Tancik, M.; Holynski, A.; and Kanazawa, A. 2023. Nerfbusters: Removing Ghostly Ar-tifacts from Casually Captured NeRFs. In Proceedings of the IEEE/CVF International Conference on Computer Vi-sion , 18120–18130. Wei, J.; Leutenegger, S.; and Schaefer, S. 2025. GSFix3D: Diffusion-Guided Repair of Novel Views in Gaussian Splat-ting. arXiv:2508.14717. Wu, J. Z.; Zhang, Y.; Turki, H.; Ren, X.; Gao, J.; Shou, M. Z.; Fidler, S.; Gojcic, Z.; and Ling, H. 2025a. DIFIX3D+: Improving 3D Reconstructions with Single-Step Diffusion Models. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition .Wu, R.; Mildenhall, B.; Henzler, P.; Park, K.; Gao, R.; Wat-son, D.; Srinivasan, P. P.; Verbin, D.; Barron, J. T.; Poole, B.; and Holynski, A. 2024. ReconFusion: 3D Reconstruc-tion with Diffusion Priors. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition ,21551–21561. Wu, S.; Xu, C.; Huang, B.; Andreas, G.; and Chen, A. 2025b. GenFusion: Closing the Loop between Reconstruc-tion and Generation via Videos. In Conference on Computer Vision and Pattern Recognition (CVPR) .Wu, Z.; Liu, T.; Luo, L.; Zhong, Z.; Chen, J.; Xiao, H.; Hou, C.; Lou, H.; Chen, Y.; Yang, R.; Huang, Y.; Ye, X.; Yan, Z.; Shi, Y.; Liao, Y.; and Zhao, H. 2023. MARS: An Instance-aware, Modular and Realistic Simulator for Autonomous Driving. In Conference on International AI (CICAI) , 3–15. Yan, Y.; Lin, H.; Zhou, C.; Wang, W.; Sun, H.; Zhan, K.; Lang, X.; Zhou, X.; and Peng, S. 2024. Street Gaussians for Modeling Dynamic Urban Scenes. In European Conference on Computer Vision .Yang, J.; Ivanovic, B.; Litany, O.; Weng, X.; Kim, S. W.; Li, B.; Che, T.; Xu, D.; Fidler, S.; Pavone, M.; and Wang, Y. 2024. EmerNeRF: Emergent Spatial-Temporal Scene De-composition via Self-Supervision. In International Confer-ence on Learning Representations .Yang, Z.; Chen, Y.; Wang, J.; Manivasagam, S.; Ma, W.-C.; Yang, A. J.; and Urtasun, R. 2023. UniSim: A Neu-ral Closed-Loop Sensor Simulator. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition .Yin, X.; Zhang, Q.; Chang, J.; Feng, Y.; Fan, Q.; Yang, X.; man Pun, C.; Zhang, H.; and Cun, X. 2025. GSFixer: Improving 3D Gaussian Splatting with Reference-Guided Video Diffusion Priors. ArXiv , abs/2508.09667. Yu, W.; Xing, J.; Yuan, L.; Hu, W.; Li, X.; Huang, Z.; Gao, X.; Wong, T.-T.; Shan, Y.; and Tian, Y. 2024. ViewCrafter: Taming Video Diffusion Models for High-Fidelity Novel View Synthesis. arXiv preprint arXiv:2409.02048 .Zeng, J.; Liu, Y.; Feng, Y.; Miao, C.; Gao, Z.; Qu, J.; Zhang, J.; Wang, B.; and Yuan, K. 2025. Lumen: Con-sistent Video Relighting and Harmonious Background Re-placement with Video Generative Models. arXiv preprint arXiv:2508.12945 .Zhang, L.; Rao, A.; and Agrawala, M. 2023. Adding Con-ditional Control to Text-to-Image Diffusion Models. In 
+
+Proceedings of the IEEE/CVF International Conference on Computer Vision , 3836–3847. Zhang, Y.; T´ othov´ a, K.; Wang, Z.; Yin, K.; Turki, H.; de Lu-tio, R.; Chang, Y.-Y.; Litany, O.; Fidler, S.; and Gojcic, Z. 2026. DiffusionHarmonizer: Bridging Neural Reconstruc-tion and Photorealistic Simulation with Online Diffusion Enhancer. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 43494–43504. Zhao, H.; Meng, M.; Li, X.; Xu, J.; Li, L.; and Galland, S. 2024. A survey of autonomous driving frameworks and sim-ulators. Advanced Engineering Informatics , 62: 102850. Zhao, Z.; Lai, Z.; Lin, Q.; Zhao, Y.; Liu, H.; Yang, S.; Feng, Y.; Yang, M.; Zhang, S.; Yang, X.; et al. 2025. Hunyuan3d 2.0: Scaling diffusion models for high resolution textured 3d assets generation. arXiv preprint arXiv:2501.12202 .Zhou, H.; Lin, L.; Wang, J.; Lu, Y.; Bai, D.; Liu, B.; Wang, Y.; Geiger, A.; and Liao, Y. 2025. Hugsim: A real-time, photo-realistic and closed-loop simulator for autonomous driving. IEEE Transactions on Pattern Analysis and Ma-chine Intelligence .Zhou, H.; Shao, Z.; Miao, S.; Wang, P.; Bai, D.; Liu, B.; and Liao, Y. 2026. FreeFix: Boosting 3D Gaussian Splatting via Fine-Tuning-Free Diffusion Models. In Thirteenth Interna-tional Conference on 3D Vision .Zhou, X.; Lin, Z.; Shan, X.; Wang, Y.; Sun, D.; and Yang, M.-H. 2024. DrivingGaussian: Composite Gaussian Splat-ting for Surrounding Dynamic Autonomous Driving Scenes. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition .Zhu, L.; Narayana, M.; Stary, M.; Hutchcroft, W.; Wetzstein, G.; and Armeni, I. 2026. GaussFusion: Improving 3D Re-construction in the Wild with A Geometry-Informed Video Generator. arXiv:2603.25053.

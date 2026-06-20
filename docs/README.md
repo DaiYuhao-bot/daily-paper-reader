@@ -6,73 +6,75 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-19
-- 运行时间：2026-06-19 20:34:14 UTC
+- 最新运行日期：2026-06-20
+- 运行时间：2026-06-20 20:20:51 UTC
 - 运行状态：成功
 - 本次总论文数：17
 - 精读区：6
 - 速读区：11
 
 ### 今日简报（AI）
-1) 今日共读17篇论文，精读2篇高分工作，覆盖3D重建与强化学习两大前沿方向。
-2) 值得关注：单目多实例3D重建与姿态估计（MooMIns，9.0分）及世界动作模型结合重建奖励的强化学习（WAM-RL，9.0分），均取得突破性结果。
-3) 对普通读者，可优先从场景理解与生成（如SceneConductor、Thinking in Blender）入手，技术落地更直观。
-- 详情：[/202606/19/README](/202606/19/README)
+1) 今日精读聚焦城市逆渲染与光照鲁棒建图，速读涉及视频重拍、SLAM及3D空间意识。
+
+2) 最值得关注BRDFusion的物理-生成融合逆渲染与LIT-GS的多传感器高斯建图，两者均获9.0分。
+
+3) 普通读者可关注逆渲染对虚拟场景真实化的作用，或光照鲁棒SLAM在弱光环境的应用趋势。
+- 详情：[/202606/20/README](/202606/20/README)
 
 ### 精读区论文标签
-1. [MooMIns -- Monocular 3D Reconstruction and Object Pose Estimation from Multiple Instances](/202606/19/2606.14389v1-moomins----monocular-3d-reconstruction-and-object-pose-estimation-from-multiple-instances)  
+1. [BRDFusion: Physics Meets Generation for Urban Scene Inverse Rendering](/202606/20/2606.17049v1-brdfusion-physics-meets-generation-for-urban-scene-inverse-rendering)  
    标签：评分：9.0/10、query:world-model
-   evidence：高斯泼溅用于单目3D重建与位姿估计
-2. [WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT](/202606/19/2606.17906v1-wam-rl-world-action-model-reinforcement-learning-with-reconstruction-rewards-and-online-video-sft)  
+   evidence：从视频进行城市场景逆渲染，结合物理与生成模型进行3D重建
+2. [LIT-GS: LiDAR-Inertial-Thermal Gaussian Splatting for Illumination-Robust Mapping](/202606/20/2606.20424v1-lit-gs-lidar-inertial-thermal-gaussian-splatting-for-illumination-robust-mapping)  
    标签：评分：9.0/10、query:world-model
-   evidence：带强化学习的世界-动作模型
-3. [MolmoMotion: Forecasting Point Trajectories in 3D with Language Instruction](/202606/19/2606.18558v1-molmomotion-forecasting-point-trajectories-in-3d-with-language-instruction)  
-   标签：评分：9.0/10、query:world-model
-   evidence：基于语言指令的目标条件3D点运动预测
-4. [Geometry-Aware Implicit Memory for Video World Models](/202606/19/2606.02436v1-geometry-aware-implicit-memory-for-video-world-models)  
+   evidence：用于光照鲁棒建图的三维高斯泼溅
+3. [P3D-Bench: Benchmarking MLLMs for Parametric 3D Generation and Structural Reasoning](/202606/20/2606.11152v1-p3d-bench-benchmarking-mllms-for-parametric-3d-generation-and-structural-reasoning)  
    标签：评分：8.0/10、query:world-model
-   evidence：几何感知隐式记忆用于视频世界模型
-5. [Diffusion Transformer World-Action Model for AV Scene Prediction](/202606/19/2606.12987v1-diffusion-transformer-world-action-model-for-av-scene-prediction)  
+   evidence：从文本描述生成参数化三维程序的基准
+4. [Track2View: 4D-Consistent Camera-Controlled Video Generation via Paired 3D Point Tracks](/202606/20/2606.15534v1-track2view-4d-consistent-camera-controlled-video-generation-via-paired-3d-point-tracks)  
    标签：评分：8.0/10、query:world-model
-   evidence：基于扩散变换器的动作条件世界模型用于自动驾驶场景预测
-6. [GeoStream: Toward Precise Camera Controlled Streaming Video Generation](/202606/19/2606.15162v1-geostream-toward-precise-camera-controlled-streaming-video-generation)  
+   evidence：基于3D点轨迹的新视角视频渲染
+5. [3D Consistency Optimization for Self-Supervised Monocular Video Depth Estimation](/202606/20/2606.15681v1-3d-consistency-optimization-for-self-supervised-monocular-video-depth-estimation)  
    标签：评分：8.0/10、query:world-model
-   evidence：基于视频的世界模型与相机控制
+   evidence：将单目视频深度估计重构为多视图三维重建问题
+6. [RealityBridge: Bridging Editable 3D Gaussian Splatting Driving Simulations and Real-World Videos](/202606/20/2606.16278v1-realitybridge-bridging-editable-3d-gaussian-splatting-driving-simulations-and-real-world-videos)  
+   标签：评分：8.0/10、query:world-model
+   evidence：基于可编辑3D高斯飞溅的驾驶场景仿真与生成
 
 ### 速读区论文标签
-1. [Thinking in Blender: Staged Executable Inverse Graphics with Vision-Language Models](/202606/19/2606.02580v1-thinking-in-blender-staged-executable-inverse-graphics-with-vision-language-models)  
+1. [SierpinskiCam: Camera-Controlled Video Retaking with Sierpinski Triangle Pattern Cues](/202606/20/2606.17310v1-sierpinskicam-camera-controlled-video-retaking-with-sierpinski-triangle-pattern-cues)  
    标签：评分：8.0/10、query:world-model
-   evidence：将单图像重建为可编辑Blender程序的3D场景
-2. [Hierarchical Space Partition for Surface Reconstruction](/202606/19/2606.04891v1-hierarchical-space-partition-for-surface-reconstruction)  
+   evidence：从单目视频进行相机可控的新视角合成
+2. [MMD-SLAM: Structure-Enhanced Multi-Meta Gaussian Distribution-Guided Visual SLAM](/202606/20/2606.19874v1-mmd-slam-structure-enhanced-multi-meta-gaussian-distribution-guided-visual-slam)  
    标签：评分：8.0/10、query:world-model
-   evidence：从点云通过平面组装进行表面重建
-3. [SceneConductor: 3D Scene Generation from Single Image with Multi-Agent Orchestration](/202606/19/2606.08402v1-sceneconductor-3d-scene-generation-from-single-image-with-multi-agent-orchestration)  
+   evidence：基于三维高斯泼溅的视觉SLAM和新视角合成
+3. [SpatialSV: Internalizing Interpretable 3D Spatial Awareness in MLLMs via Task-Oriented Visual Supervision](/202606/20/2606.19915v1-spatialsv-internalizing-interpretable-3d-spatial-awareness-in-mllms-via-task-oriented-visual-supervision)  
    标签：评分：8.0/10、query:world-model
-   evidence：通过多智能体协调从单图像生成3D场景
-4. [3D-CoS: A New 3D Reconstruction Paradigm Based on VLM Code Synthesis](/202606/19/2606.10478v1-3d-cos-a-new-3d-reconstruction-paradigm-based-on-vlm-code-synthesis)  
+   evidence：在多模态大语言模型中内化三维空间感知
+4. [Holo-World: Unified Camera, Object and Weather Control for Video World Model](/202606/20/2606.20083v1-holo-world-unified-camera-object-and-weather-control-for-video-world-model)  
    标签：评分：8.0/10、query:world-model
-   evidence：基于VLM代码合成的新三维重建范式
-5. [Instruct-Particulate: Scaling Feed-Forward 3D Object Articulation with Kinematic Control](/202606/19/2606.14699v1-instruct-particulate-scaling-feed-forward-3d-object-articulation-with-kinematic-control)  
+   evidence：从单张图像出发，具有相机、物体和天气控制的视频世界模型
+5. [FrozenDrive: Zero-Shot Text-Guided Driving Scene Generation and Data Augmentation with Parameter-Free Frozen Diffusion Model](/202606/20/2606.20110v1-frozendrive-zero-shot-text-guided-driving-scene-generation-and-data-augmentation-with-parameter-free-frozen-diffusion-model)  
+   标签：评分：8.0/10、query:world-model
+   evidence：文本引导的驾驶场景生成，使用冻结扩散模型
+6. [TriFlow: Generating Artist-Like 3D Mesh Topology via Nearest-Vertex Vector Fields](/202606/20/2606.20131v1-triflow-generating-artist-like-3d-mesh-topology-via-nearest-vertex-vector-fields)  
+   标签：评分：8.0/10、query:world-model
+   evidence：从几何条件生成紧凑3D网格拓扑的生成方法
+7. [VisDom: Sparse Novel View Synthesis with Visible Domain Constraint](/202606/20/2606.20531v1-visdom-sparse-novel-view-synthesis-with-visible-domain-constraint)  
+   标签：评分：8.0/10、query:world-model
+   evidence：利用可见域约束的稀疏新视角合成
+8. [MVM-IOD: An Industrial Object-Centric Benchmark Dataset for the Evaluation of 3D Reconstruction Methods](/202606/20/2606.16638v1-mvm-iod-an-industrial-object-centric-benchmark-dataset-for-the-evaluation-of-3d-reconstruction-methods)  
    标签：评分：7.0/10、query:world-model
-   evidence：前馈式三维物体关节点生成模型，从网格和运动学规范预测关节结构
-6. [RegimeVGGT: Layer-Wise Spatially Preserving Redundancy Removal for Visual Geometry Grounded Transformer](/202606/19/2606.18439v1-regimevggt-layer-wise-spatially-preserving-redundancy-removal-for-visual-geometry-grounded-transformer)  
+   evidence：用于三维重建评估的基准数据集
+9. [3D-DLP: Self-Supervised 3D Object-Centric Scene Representation Learning](/202606/20/2606.19451v1-3d-dlp-self-supervised-3d-object-centric-scene-representation-learning)  
    标签：评分：7.0/10、query:world-model
-   evidence：基于高效Transformer的多视图图像三维场景重建
-7. [OneCanvas: 3D Scene Understanding via Panoramic Reprojection](/202606/19/2606.19253v1-onecanvas-3d-scene-understanding-via-panoramic-reprojection)  
+   evidence：自监督3D物体中心表示学习，从RGB-D分解场景并支持生成控制
+10. [Judging to Improve: A De-biased VLM-as-3D-Judge Protocol for Single-Image 3D Generation](/202606/20/2606.20364v1-judging-to-improve-a-de-biased-vlm-as-3d-judge-protocol-for-single-image-3d-generation)  
    标签：评分：7.0/10、query:world-model
-   evidence：将多视图块特征聚合到全景画布用于三维场景理解
-8. [Zero-Shot Long-Horizon Dexterous Manipulation via Multi-View 3D-Grounded VLM Reasoning](/202606/19/2606.19340v1-zero-shot-long-horizon-dexterous-manipulation-via-multi-view-3d-grounded-vlm-reasoning)  
-   标签：评分：7.0/10、query:world-model
-   evidence：多视图3D关键点重建用于操作
-9. [Occupancy-Grounded Room Segmentation for Hierarchical 3D Scene Graphs](/202606/19/2606.13727v1-occupancy-grounded-room-segmentation-for-hierarchical-3d-scene-graphs)  
+   evidence：去偏视觉语言模型评估器用于单图像3D生成优化
+11. [High-Fidelity 4D Hand-Object Capture via Multi-View Spatiotemporal Tracking and Physics-Aware Gaussians](/202606/20/2606.15908v1-high-fidelity-4d-hand-object-capture-via-multi-view-spatiotemporal-tracking-and-physics-aware-gaussians)  
    标签：评分：6.0/10、query:world-model
-   evidence：用于房间分割的层次化3D场景图
-10. [Intrinsic 4D Gaussian Segmentation from Scene Cues](/202606/19/2606.18623v1-intrinsic-4d-gaussian-segmentation-from-scene-cues)  
-   标签：评分：6.0/10、query:world-model
-   evidence：无需外部掩码的内在动态4D高斯泼溅场景分割
-11. [Occ-VLM: Occupancy Grounded Vision Language Model for Indoor Scene Understanding](/202606/19/2606.19776v1-occ-vlm-occupancy-grounded-vision-language-model-for-indoor-scene-understanding)  
-   标签：评分：6.0/10、query:world-model
-   evidence：通过占用视觉语言模型进行3D场景理解
+   evidence：基于高斯表示的多视图手物交互四维重建
 
 
 <div class="dpr-home-promo-card">
