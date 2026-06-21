@@ -6,75 +6,56 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-20
-- 运行时间：2026-06-20 20:20:51 UTC
+- 最新运行日期：2026-06-21
+- 运行时间：2026-06-21 21:10:11 UTC
 - 运行状态：成功
-- 本次总论文数：17
-- 精读区：6
+- 本次总论文数：12
+- 精读区：1
 - 速读区：11
 
 ### 今日简报（AI）
-1) 今日精读聚焦城市逆渲染与光照鲁棒建图，速读涉及视频重拍、SLAM及3D空间意识。
-
-2) 最值得关注BRDFusion的物理-生成融合逆渲染与LIT-GS的多传感器高斯建图，两者均获9.0分。
-
-3) 普通读者可关注逆渲染对虚拟场景真实化的作用，或光照鲁棒SLAM在弱光环境的应用趋势。
-- 详情：[/202606/20/README](/202606/20/README)
+今日聚焦4D手部重建与物理一致性场景动态的最新突破，精读论文实现前馈式自我中心视频手部重建。最值得关注的方向是Hand-4DGS的高效4D手部重建，以及NEXUS在接触丰富3D物体动力学中的物理一致性应用。建议优先精读Hand-4DGS理解前馈式方法，再结合NEXUS学习跨模态物理模拟技巧。
+- 详情：[/202606/21/README](/202606/21/README)
 
 ### 精读区论文标签
-1. [BRDFusion: Physics Meets Generation for Urban Scene Inverse Rendering](/202606/20/2606.17049v1-brdfusion-physics-meets-generation-for-urban-scene-inverse-rendering)  
-   标签：评分：9.0/10、query:world-model
-   evidence：从视频进行城市场景逆渲染，结合物理与生成模型进行3D重建
-2. [LIT-GS: LiDAR-Inertial-Thermal Gaussian Splatting for Illumination-Robust Mapping](/202606/20/2606.20424v1-lit-gs-lidar-inertial-thermal-gaussian-splatting-for-illumination-robust-mapping)  
-   标签：评分：9.0/10、query:world-model
-   evidence：用于光照鲁棒建图的三维高斯泼溅
-3. [P3D-Bench: Benchmarking MLLMs for Parametric 3D Generation and Structural Reasoning](/202606/20/2606.11152v1-p3d-bench-benchmarking-mllms-for-parametric-3d-generation-and-structural-reasoning)  
+1. [Hand-4DGS: Feed-Forward 3D Gaussian Splatting for 4D Hand Reconstruction from Egocentric Videos](/202606/21/2606.19156v1-hand-4dgs-feed-forward-3d-gaussian-splatting-for-4d-hand-reconstruction-from-egocentric-videos)  
    标签：评分：8.0/10、query:world-model
-   evidence：从文本描述生成参数化三维程序的基准
-4. [Track2View: 4D-Consistent Camera-Controlled Video Generation via Paired 3D Point Tracks](/202606/20/2606.15534v1-track2view-4d-consistent-camera-controlled-video-generation-via-paired-3d-point-tracks)  
-   标签：评分：8.0/10、query:world-model
-   evidence：基于3D点轨迹的新视角视频渲染
-5. [3D Consistency Optimization for Self-Supervised Monocular Video Depth Estimation](/202606/20/2606.15681v1-3d-consistency-optimization-for-self-supervised-monocular-video-depth-estimation)  
-   标签：评分：8.0/10、query:world-model
-   evidence：将单目视频深度估计重构为多视图三维重建问题
-6. [RealityBridge: Bridging Editable 3D Gaussian Splatting Driving Simulations and Real-World Videos](/202606/20/2606.16278v1-realitybridge-bridging-editable-3d-gaussian-splatting-driving-simulations-and-real-world-videos)  
-   标签：评分：8.0/10、query:world-model
-   evidence：基于可编辑3D高斯飞溅的驾驶场景仿真与生成
+   evidence：前馈式3D高斯泼溅用于动态4D手部重建
 
 ### 速读区论文标签
-1. [SierpinskiCam: Camera-Controlled Video Retaking with Sierpinski Triangle Pattern Cues](/202606/20/2606.17310v1-sierpinskicam-camera-controlled-video-retaking-with-sierpinski-triangle-pattern-cues)  
-   标签：评分：8.0/10、query:world-model
-   evidence：从单目视频进行相机可控的新视角合成
-2. [MMD-SLAM: Structure-Enhanced Multi-Meta Gaussian Distribution-Guided Visual SLAM](/202606/20/2606.19874v1-mmd-slam-structure-enhanced-multi-meta-gaussian-distribution-guided-visual-slam)  
-   标签：评分：8.0/10、query:world-model
-   evidence：基于三维高斯泼溅的视觉SLAM和新视角合成
-3. [SpatialSV: Internalizing Interpretable 3D Spatial Awareness in MLLMs via Task-Oriented Visual Supervision](/202606/20/2606.19915v1-spatialsv-internalizing-interpretable-3d-spatial-awareness-in-mllms-via-task-oriented-visual-supervision)  
-   标签：评分：8.0/10、query:world-model
-   evidence：在多模态大语言模型中内化三维空间感知
-4. [Holo-World: Unified Camera, Object and Weather Control for Video World Model](/202606/20/2606.20083v1-holo-world-unified-camera-object-and-weather-control-for-video-world-model)  
-   标签：评分：8.0/10、query:world-model
-   evidence：从单张图像出发，具有相机、物体和天气控制的视频世界模型
-5. [FrozenDrive: Zero-Shot Text-Guided Driving Scene Generation and Data Augmentation with Parameter-Free Frozen Diffusion Model](/202606/20/2606.20110v1-frozendrive-zero-shot-text-guided-driving-scene-generation-and-data-augmentation-with-parameter-free-frozen-diffusion-model)  
-   标签：评分：8.0/10、query:world-model
-   evidence：文本引导的驾驶场景生成，使用冻结扩散模型
-6. [TriFlow: Generating Artist-Like 3D Mesh Topology via Nearest-Vertex Vector Fields](/202606/20/2606.20131v1-triflow-generating-artist-like-3d-mesh-topology-via-nearest-vertex-vector-fields)  
-   标签：评分：8.0/10、query:world-model
-   evidence：从几何条件生成紧凑3D网格拓扑的生成方法
-7. [VisDom: Sparse Novel View Synthesis with Visible Domain Constraint](/202606/20/2606.20531v1-visdom-sparse-novel-view-synthesis-with-visible-domain-constraint)  
-   标签：评分：8.0/10、query:world-model
-   evidence：利用可见域约束的稀疏新视角合成
-8. [MVM-IOD: An Industrial Object-Centric Benchmark Dataset for the Evaluation of 3D Reconstruction Methods](/202606/20/2606.16638v1-mvm-iod-an-industrial-object-centric-benchmark-dataset-for-the-evaluation-of-3d-reconstruction-methods)  
+1. [NEXUS: Neural Energy Fields for Physically Consistent Contact-Rich 3D Object Dynamics](/202606/21/2606.15015v1-nexus-neural-energy-fields-for-physically-consistent-contact-rich-3d-object-dynamics)  
    标签：评分：7.0/10、query:world-model
-   evidence：用于三维重建评估的基准数据集
-9. [3D-DLP: Self-Supervised 3D Object-Centric Scene Representation Learning](/202606/20/2606.19451v1-3d-dlp-self-supervised-3d-object-centric-scene-representation-learning)  
+   evidence：神经能量场用于接触丰富3D动力学，作为世界模型
+2. [VEPHand: View-Efficient Photometric Hand Performance Capture at Scale](/202606/21/2606.15966v2-vephand-view-efficient-photometric-hand-performance-capture-at-scale)  
    标签：评分：7.0/10、query:world-model
-   evidence：自监督3D物体中心表示学习，从RGB-D分解场景并支持生成控制
-10. [Judging to Improve: A De-biased VLM-as-3D-Judge Protocol for Single-Image 3D Generation](/202606/20/2606.20364v1-judging-to-improve-a-de-biased-vlm-as-3d-judge-protocol-for-single-image-3d-generation)  
+   evidence：从多视角图像进行3D手部性能捕捉
+3. [3D Scene Graphs: Open Challenges and Future Directions](/202606/21/2606.19383v1-3d-scene-graphs-open-challenges-and-future-directions)  
    标签：评分：7.0/10、query:world-model
-   evidence：去偏视觉语言模型评估器用于单图像3D生成优化
-11. [High-Fidelity 4D Hand-Object Capture via Multi-View Spatiotemporal Tracking and Physics-Aware Gaussians](/202606/20/2606.15908v1-high-fidelity-4d-hand-object-capture-via-multi-view-spatiotemporal-tracking-and-physics-aware-gaussians)  
+   evidence：3D场景图综述，与空间AI和世界模型表示相关
+4. [LooseControlVideo: Directorial Video Control using Spatial Blocking](/202606/21/2606.19495v1-loosecontrolvideo-directorial-video-control-using-spatial-blocking)  
+   标签：评分：7.0/10、query:world-model
+   evidence：使用稀疏3D框进行文本到视频生成中的3D布局控制
+5. [Vision-Reasoning-Guided Occlusion Removal from Light Fields](/202606/21/2606.19985v1-vision-reasoning-guided-occlusion-removal-from-light-fields)  
+   标签：评分：7.0/10、query:world-model
+   evidence：光场集成用于去遮挡和场景恢复
+6. [Geometry-Preserving in 3D Gaussian Splatting for LiDAR-Camera Extrinsic Calibration](/202606/21/2606.20103v1-geometry-preserving-in-3d-gaussian-splatting-for-lidar-camera-extrinsic-calibration)  
+   标签：评分：7.0/10、query:world-model
+   evidence：使用3DGS作为几何代理用于LiDAR-相机标定，保留真实几何
+7. [GeneralVLA-2: Geometry-Aware Reconstruction and Governed Memory for Robot Planning](/202606/21/2606.17480v1-generalvla-2-geometry-aware-reconstruction-and-governed-memory-for-robot-planning)  
    标签：评分：6.0/10、query:world-model
-   evidence：基于高斯表示的多视图手物交互四维重建
+   evidence：面向机器人规划的几何感知3D重建
+8. [PearlVLA: Progressive Embodied Action-Plan Refinement in Latent Space](/202606/21/2606.17924v1-pearlvla-progressive-embodied-action-plan-refinement-in-latent-space)  
+   标签：评分：6.0/10、query:world-model
+   evidence：潜在世界模型用于具身AI的动作规划精炼
+9. [A Cross-Model VLM-Judge Protocol for Single-Image 3D Mesh Quality (and Why Cheap Proxies Fall Short)](/202606/21/2606.18451v1-a-cross-model-vlm-judge-protocol-for-single-image-3d-mesh-quality-and-why-cheap-proxies-fall-short)  
+   标签：评分：6.0/10、query:world-model
+   evidence：单图像3D生成质量评估协议
+10. [QueryGaussian: Scalable and Training-Free Open-Vocabulary 3D Instance Retrieval](/202606/21/2606.19733v1-querygaussian-scalable-and-training-free-open-vocabulary-3d-instance-retrieval)  
+   标签：评分：6.0/10、query:world-model
+   evidence：大规模场景中的开放词汇3D实例检索，与场景理解相关
+11. [Thinking in Boxes: 3D Editing in Real Images Made Easy](/202606/21/2606.20556v1-thinking-in-boxes-3d-editing-in-real-images-made-easy)  
+   标签：评分：6.0/10、query:world-model
+   evidence：3D盒子规范实现了图像编辑中的视角变换
 
 
 <div class="dpr-home-promo-card">

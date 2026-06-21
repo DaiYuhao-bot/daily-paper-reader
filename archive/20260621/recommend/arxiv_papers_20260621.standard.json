@@ -1,0 +1,509 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-21T21:03:33.988052+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 12,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2606.19156v1",
+      "source": "arxiv",
+      "title": "Hand-4DGS: Feed-Forward 3D Gaussian Splatting for 4D Hand Reconstruction from Egocentric Videos",
+      "abstract": "Dynamic 3D hand reconstruction from egocentric videos is essential for next-generation computing platforms such as AR/VR and AI glasses. Despite its importance, most prior works focus either on multi-view 3D hand reconstruction or on 4D human body reconstruction. Egocentric 4D hand reconstruction remains challenging due to fast head motion, rapid hand dynamics, severe occlusions, and inherent ambiguity from single-view observations. To address these challenges, we introduce Hand-4DGS, the first feed-forward framework for reconstructing dynamic 4D hands directly from egocentric videos, enabling both fast (~60 FPS) inference and strong generalization. Our approach incorporates a mesh-guided representation for structural priors and temporal convolutions to model dynamic motion. We evaluate our framework on two challenging egocentric datasets, H2O and ARCTIC, and demonstrate significant improvements over baselines. Our method benefits from the generalization capability of feed-forward networks and effective 2D image supervision through Gaussian splatting, without requiring expensive 3D hand pose ground-truth annotations.",
+      "authors": [
+        "Jeongmin Bae",
+        "Seoha Kim",
+        "Marc Pollefeys",
+        "Mahdi Rad",
+        "Youngjung Uh",
+        "Taein Kwon"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-17T14:58:37+00:00",
+      "link": "https://arxiv.org/pdf/2606.19156v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Feed-forward 3D Gaussian splatting for dynamic 4D hand reconstruction",
+      "llm_evidence_cn": "前馈式3D高斯泼溅用于动态4D手部重建",
+      "llm_evidence": "前馈式3D高斯泼溅用于动态4D手部重建",
+      "canonical_evidence": "前馈式3D高斯泼溅用于动态4D手部重建",
+      "llm_tldr_en": "Hand-4DGS is the first feed-forward framework for dynamic 4D hand reconstruction from egocentric videos using 3D Gaussian splatting, achieving ~60 FPS inference and strong generalization.",
+      "llm_tldr_cn": "针对单视角自我中心视频中动态手部4D重建的难题，本文提出Hand-4DGS，首个基于前馈3D高斯泼溅的框架。它利用网格引导表示提供结构先验，实现快速（~60 FPS）且泛化强的动态手部重建，克服了快速运动、严重遮挡等挑战，为AR/VR应用提供支持。",
+      "llm_tldr": "针对单视角自我中心视频中动态手部4D重建的难题，本文提出Hand-4DGS，首个基于前馈3D高斯泼溅的框架。它利用网格引导表示提供结构先验，实现快速（~60 FPS）且泛化强的动态手部重建，克服了快速运动、严重遮挡等挑战，为AR/VR应用提供支持。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.15015v1",
+      "source": "arxiv",
+      "title": "NEXUS: Neural Energy Fields for Physically Consistent Contact-Rich 3D Object Dynamics",
+      "abstract": "Physics-grounded video generation requires controllable 3D object dynamics that remain physically consistent under contact, deformation, and external forcing. Existing trajectory-based methods often model isolated physical effects, making it difficult to compose conservative and non-conservative dynamics in contact-rich 3D scenes. We present NEXUS, a neural energy-field framework for contact-rich 3D object dynamics. NEXUS represents each object as a structural graph and constructs dynamic object-object and object-environment contact graphs. Inspired by Hamiltonian Neural Networks, NEXUS formulates motion through scalar energy and dissipation terms rather than directly predicting states or accelerations. Conservative effects, including gravity and elastic deformation, are composed as additive energy terms, while non-conservative effects such as damping and impact-induced energy loss are modeled with learned Rayleigh-style dissipation. Forces are derived by differentiating the energy and dissipation functions and rolled out with a multi-substep semi-implicit integrator. Across controlled trajectory benchmarks, NEXUS improves long-horizon accuracy over representative learned and physics-structured dynamics baselines under varying mechanical properties and physical-effect compositions. We further show that NEXUS trajectories provide effective guidance for contact-rich video generation, improving physical plausibility while maintaining competitive visual quality.",
+      "authors": [
+        "Qizhen Ying",
+        "Guangming Wang",
+        "Yangchen Pan",
+        "Victor Adrian Prisacariu",
+        "Yixiong Jing"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-12T23:24:41+00:00",
+      "link": "https://arxiv.org/pdf/2606.15015v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "neural energy fields for contact-rich 3D dynamics as world model",
+      "llm_evidence_cn": "神经能量场用于接触丰富3D动力学，作为世界模型",
+      "llm_evidence": "神经能量场用于接触丰富3D动力学，作为世界模型",
+      "canonical_evidence": "神经能量场用于接触丰富3D动力学，作为世界模型",
+      "llm_tldr_en": "NEXUS uses neural energy fields to model physically consistent 3D object dynamics by formulating motion through scalar energy and dissipation, enabling composition of conservative and non-conservative forces in contact-rich scenes.",
+      "llm_tldr_cn": "该文针对物理一致性视频生成中3D对象动力学建模的挑战，提出NEXUS框架，利用神经能量场表示对象动力学，通过结构图和接触图建模接触丰富的3D场景。该方法受哈密顿神经网络启发，将运动表示为标量能量和耗散项，而非直接预测状态或加速度，从而有效组合保守与非保守力，实现物理一致的可控3D对象动态生成。",
+      "llm_tldr": "该文针对物理一致性视频生成中3D对象动力学建模的挑战，提出NEXUS框架，利用神经能量场表示对象动力学，通过结构图和接触图建模接触丰富的3D场景。该方法受哈密顿神经网络启发，将运动表示为标量能量和耗散项，而非直接预测状态或加速度，从而有效组合保守与非保守力，实现物理一致的可控3D对象动态生成。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.17480v1",
+      "source": "arxiv",
+      "title": "GeneralVLA-2: Geometry-Aware Reconstruction and Governed Memory for Robot Planning",
+      "abstract": "Generalist vision-language-action systems need object-centric 3D evidence and reusable manipulation experience to plan reliable robot trajectories. GeneralVLA provides a hierarchical interface for converting language and RGB-D observations into 3D end-effector paths, but two bottlenecks remain. First, monocular SAM3D-style object reconstruction can hallucinate pose and unseen geometry, while manipulation benefits from stable object shape when calibrated multi-view observations are available. Second, the original KnowledgeBank mainly retrieves semantically similar snippets and appends new knowledge, which makes it difficult to control memory quality, conflicts, confidence, and geometric relevance. To address the first challenge, we introduce GeoFuse-MV3D, a geometry-prior-guided MV-SAM3D reconstruction branch that verifies external geometry cues with input-view masks, applies soft visual-hull support, performs axis-wise refinement, and fuses only geometry while preserving appearance. To address the second challenge, we upgrade KnowledgeBank into a governed long-term memory system with explicit quality, confidence, lifecycle, verifier, and conflict metadata, together with precision-oriented retrieval. Finally, we evaluate the reconstruction branch on GSO-30 and the memory module on Terminal-Bench 2.0 and SWE-Bench Verified; GeoFuse-MV3D improves over the MV-SAM3D baseline by reducing CD and LPIPS by 2.20% and 2.02% while increasing PSNR and SSIM by 2.36% and 1.03%, and KnowledgeBank improves over ReasoningBank by 4.53% on Terminal-Bench SR and 3.73% on SWE-Bench resolve rate, while reducing AS by 4.95% and 5.65%, respectively. Code: https://github.com/AIGeeksGroup/GeneralVLA-2. Website: https://aigeeksgroup.github.io/GeneralVLA-2.",
+      "authors": [
+        "Haoyu Wang",
+        "Guoqing Ma",
+        "Zeyu Zhang",
+        "Yandong Guo",
+        "Boxin Shi",
+        "Hao Tang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-06-16T03:45:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.17480v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "geometry-aware 3D reconstruction for robot planning",
+      "llm_evidence_cn": "面向机器人规划的几何感知3D重建",
+      "llm_evidence": "面向机器人规划的几何感知3D重建",
+      "canonical_evidence": "面向机器人规划的几何感知3D重建",
+      "llm_tldr_en": "Proposes GeneralVLA-2 addressing geometry-aware reconstruction and governed memory for robot planning, improving 3D evidence from multi-view RGB-D.",
+      "llm_tldr_cn": "针对机器人规划中单目3D重建存在位姿和几何幻觉问题，提出GeneralVLA-2框架。引入几何感知重建方法校准多视角观测获得稳定物体形状，并通过受控记忆机制管理知识质量。在机器人规划任务上提升了轨迹可靠性。",
+      "llm_tldr": "针对机器人规划中单目3D重建存在位姿和几何幻觉问题，提出GeneralVLA-2框架。引入几何感知重建方法校准多视角观测获得稳定物体形状，并通过受控记忆机制管理知识质量。在机器人规划任务上提升了轨迹可靠性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.15966v2",
+      "source": "arxiv",
+      "title": "VEPHand: View-Efficient Photometric Hand Performance Capture at Scale",
+      "abstract": "Robust, high-fidelity 3D hand capture, while fundamental to digital human creation, remains challenging with practical multi-view systems that balance rich photometry with the geometric ambiguities of reconstruction arising from limited viewpoint density. This paper presents an end-to-end pipeline for dynamic hand performance capture and registration, specifically designed for view-efficient setups ($\\sim$20 views). We address key challenges with two primary innovations. First, to overcome reconstruction difficulties like limited view overlap and background clutter, our mask-free neural method robustly extracts detailed hand geometry and appearance from unmasked images using scene parameterization and scenario-specific density regularization. Second, addressing registration challenges such as accurately capturing non-linear skin deformations and ensuring plausible results during severe self-contact, we propose a physics-inspired framework. It aligns reconstructions to a personalized hand model by optimizing intrinsic volumetric offsets within its canonical tetrahedral mesh, alongside pose parameters. This approach, supported by robust losses and optimization, captures fine surface deformations, ensures plausible results under severe articulation and self-contact, and demonstrates strong tolerance to input noise. We demonstrate the scalability and robustness of our automated pipeline on an extensive dataset of over 12,000 sequences, from which we also derive a large-scale, high-quality synthetic 2D/3D hand dataset for training downstream tasks. This showcases its effectiveness for single hands, intricate two-hand interactions, and natural hand-object manipulations. Our method achieves state-of-the-art reconstruction fidelity in view-efficient, unmasked scenarios and highly accurate registration. Our project page are available at https://vephand.github.io/.",
+      "authors": [
+        "Zhengyang Shen",
+        "Kai-Hung Chang",
+        "Erroll Wood",
+        "Deying Kong",
+        "Bo Peng",
+        "Timo Bolkart",
+        "Jinlong Yang",
+        "Bowen Zhao",
+        "Danhang Tang",
+        "Sasa Petrovic",
+        "Emre Aksan",
+        "Jérémy Riviere",
+        "Vassilis Choutas",
+        "Delio Vicini",
+        "Jay Busch",
+        "Shichen Liu",
+        "Zhe Cao",
+        "Hugh Liu",
+        "JingJing Shen",
+        "Jonathan Taylor",
+        "Mingsong Dou"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-06-14T18:47:44+00:00",
+      "link": "https://arxiv.org/pdf/2606.15966v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D hand performance capture from multi-view images",
+      "llm_evidence_cn": "从多视角图像进行3D手部性能捕捉",
+      "llm_evidence": "从多视角图像进行3D手部性能捕捉",
+      "canonical_evidence": "从多视角图像进行3D手部性能捕捉",
+      "llm_tldr_en": "VEPHand proposes a mask-free neural method for dynamic 3D hand capture from ~20 views, using scene parameterization and density regularization for robust geometry and appearance reconstruction.",
+      "llm_tldr_cn": "针对多视角系统下3D手部捕捉的几何歧义问题，本文提出一种无掩膜神经方法，通过场景参数化和密度正则化，从约20个视角的未掩膜图像中鲁棒提取手部几何和外观。该方法在有限视角下实现高保真动态重建，为数字人创建提供了可扩展的解决方案。",
+      "llm_tldr": "针对多视角系统下3D手部捕捉的几何歧义问题，本文提出一种无掩膜神经方法，通过场景参数化和密度正则化，从约20个视角的未掩膜图像中鲁棒提取手部几何和外观。该方法在有限视角下实现高保真动态重建，为数字人创建提供了可扩展的解决方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.17924v1",
+      "source": "arxiv",
+      "title": "PearlVLA: Progressive Embodied Action-Plan Refinement in Latent Space",
+      "abstract": "Current Vision-Language-Action (VLA) models face a trade-off between efficient action generation and explicit deliberation. Directly decoding actions from vision-language backbone representations enables low-latency control, whereas explicit reasoning through textual chains, pixel-level subgoals, or action search can improve planning but incurs substantial latency and computational cost. We propose PearlVLA, a VLA framework that moves deliberation into the latent space of a vision-language model (VLM). PearlVLA separates VLM meta-query representations into a fixed visual grounding branch and an iterative latent plan branch. At each refinement round, a plan-conditioned world query probes a lightweight frozen latent world model for an action-free future observation latent, which is fed back to guide plan refinement. A future-guided RefineNet then applies scheduled residual updates to progressively refine a coarse semantic draft into a fine-grained latent action plan. The refined plan after K rounds is then decoded in parallel into an action chunk for low-latency execution. We further introduce Causal Refinement-Grouped Process-Reward RL to optimize the latent refinement process with rewards from longer-horizon imagined futures induced by latent plan edits. Empirical evaluations on the LIBERO benchmark demonstrate that PearlVLA achieves state-of-the-art performance among existing methods.",
+      "authors": [
+        "Bochen Yang",
+        "Lianlei Shan"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-06-16T13:38:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.17924v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "latent world model used for action-plan refinement in embodied AI",
+      "llm_evidence_cn": "潜在世界模型用于具身AI的动作规划精炼",
+      "llm_evidence": "潜在世界模型用于具身AI的动作规划精炼",
+      "canonical_evidence": "潜在世界模型用于具身AI的动作规划精炼",
+      "llm_tldr_en": "PearlVLA performs progressive action-plan refinement in latent space using a frozen latent world model, enabling efficient deliberation without explicit reasoning overhead.",
+      "llm_tldr_cn": "该文针对视觉-语言-动作模型中高效动作生成与显式推理之间的权衡，提出PearlVLA框架，在视觉语言模型的潜在空间中进行迭代动作规划精炼。通过一个轻量冻结的潜在世界模型预测未来观测，在不增加显式推理延迟的情况下提升规划质量，实现低延迟与强规划的兼顾。",
+      "llm_tldr": "该文针对视觉-语言-动作模型中高效动作生成与显式推理之间的权衡，提出PearlVLA框架，在视觉语言模型的潜在空间中进行迭代动作规划精炼。通过一个轻量冻结的潜在世界模型预测未来观测，在不增加显式推理延迟的情况下提升规划质量，实现低延迟与强规划的兼顾。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.19383v1",
+      "source": "arxiv",
+      "title": "3D Scene Graphs: Open Challenges and Future Directions",
+      "abstract": "3D Scene Graphs (3DSGs) have emerged as a powerful representation for spatial AI by combining geometric grounding with semantic and relational abstractions of the environment. Their expressiveness has made them relevant to a broad range of problems in robotics and computer vision, including manipulation, navigation, task planning, scene understanding, and many others. However, the field remains fragmented: different communities adopt distinct formulations, construction pipelines, and evaluation protocols, making it difficult to compare methods, identify common assumptions, and assess remaining challenges for robust real-world deployment. This survey provides a unified and critical review of 3DSGs, with particular emphasis on open challenges and future directions. We first formalize 3DSGs under a common definition and analyze the principal modeling choices that characterize existing formulations, including node and edge attributes, hierarchical structure, dynamic scene representations, and affordance-aware extensions. We then review how 3DSGs are built from raw sensory observations, discussing the most common terminologies, conventions, and techniques. Finally, we examine downstream applications and evaluation strategies, from intrinsic graph quality to task-level performance. To support the community, we also provide a dedicated website that organizes and extends the surveyed content, accessible at https://3dscenegraphs.com/.",
+      "authors": [
+        "Dennis Rotondi",
+        "Francesco Argenziano",
+        "Sebastian Koch",
+        "Nathan Hughes",
+        "Martin Buechner",
+        "Johanna Wald",
+        "Lukas Rosenberger Schmid",
+        "Daniele Nardi",
+        "Abhinav Valada",
+        "Liam Paull",
+        "Federico Tombari",
+        "Luca Carlone",
+        "Kai O. Arras"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-06-15T08:14:08+00:00",
+      "link": "https://arxiv.org/pdf/2606.19383v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Survey on 3D scene graphs for spatial AI, relevant to world model representation",
+      "llm_evidence_cn": "3D场景图综述，与空间AI和世界模型表示相关",
+      "llm_evidence": "3D场景图综述，与空间AI和世界模型表示相关",
+      "canonical_evidence": "3D场景图综述，与空间AI和世界模型表示相关",
+      "llm_tldr_en": "This survey provides a unified review of 3D Scene Graphs, highlighting open challenges and future directions for scene understanding and spatial AI.",
+      "llm_tldr_cn": "3D场景图作为结合几何与语义抽象的空间表示，在机器人视觉中广泛应用。本文系统综述了3DSG的构建方法、评估协议，并剖析了当前碎片化现状，重点讨论了鲁棒部署的开放挑战与未来方向，为世界模型研究提供参考。",
+      "llm_tldr": "3D场景图作为结合几何与语义抽象的空间表示，在机器人视觉中广泛应用。本文系统综述了3DSG的构建方法、评估协议，并剖析了当前碎片化现状，重点讨论了鲁棒部署的开放挑战与未来方向，为世界模型研究提供参考。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.18451v1",
+      "source": "arxiv",
+      "title": "A Cross-Model VLM-Judge Protocol for Single-Image 3D Mesh Quality (and Why Cheap Proxies Fall Short)",
+      "abstract": "Single-image-to-3D generators are improving quickly, but there is no agreed, human-free way to tell whether one generated mesh is better than another. Practitioners commonly rely on cheap automatic proxies (render-space CLIP similarity and mesh geometry-validity statistics), yet how well these track perceived quality is unestablished. We make two contributions. First, we propose and validate a reproducible VLM-judge evaluation protocol: a fixed 24-view headless render rig, two independent vision-language judge families, and a mandatory position-bias correction that queries both presentation orders and keeps only order-consistent verdicts. The two judge families agree substantially with each other (Cohen's kappa = 0.66), well above the chance-agreement floor. Second, using this protocol as the reference, we show the cheap proxies do not substitute for it. Geometry validity is only a weak signal on average (because, as we show, it is bimodal) and stays below our pre-registered target, while render-CLIP is at chance. A learned Bradley-Terry head collapses onto a single manifoldness statistic (giving render-CLIP a negative weight) and matches geometry-only exactly, so learning the feature weights buys nothing. The proxy is also bimodal: it is significantly above chance on contrasts with visible geometric defects but at chance on ambiguous contrasts, consistent with geometry validity tracking the judge only when the defect is visually salient. We therefore recommend the VLM-judge protocol as a reliable, reproducible evaluator under the conditions tested (two feed-forward generators on Google Scanned Objects, with a face-drop degradation regime) and advise against geometry/CLIP proxies as optimization targets.",
+      "authors": [
+        "Ali Asaria",
+        "Tony Salomone",
+        "Deep Gandhi"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-16T20:00:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.18451v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "evaluation protocol for single-image 3D generation quality",
+      "llm_evidence_cn": "单图像3D生成质量评估协议",
+      "llm_evidence": "单图像3D生成质量评估协议",
+      "canonical_evidence": "单图像3D生成质量评估协议",
+      "llm_tldr_en": "Proposes a reproducible VLM-judge evaluation protocol for single-image 3D mesh quality, using two judge families and position-bias correction, achieving substantial agreement.",
+      "llm_tldr_cn": "针对单图像到3D生成器缺乏统一评估标准的问题，本文提出一种可复现的VLM裁判评估协议，使用24视角渲染和两个独立的视觉语言裁判家族，并进行位置偏差纠正，两个裁判家族间Cohen's kappa达0.66，为3D生成质量提供了更可靠的自动评估方法。",
+      "llm_tldr": "针对单图像到3D生成器缺乏统一评估标准的问题，本文提出一种可复现的VLM裁判评估协议，使用24视角渲染和两个独立的视觉语言裁判家族，并进行位置偏差纠正，两个裁判家族间Cohen's kappa达0.66，为3D生成质量提供了更可靠的自动评估方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d generative models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.19495v1",
+      "source": "arxiv",
+      "title": "LooseControlVideo: Directorial Video Control using Spatial Blocking",
+      "abstract": "Precise 3D spatial orchestration in text-to-video generation remains a significant challenge, particularly for multi-object scenes where semantic layout and temporal dynamics are often entangled. While existing depth-conditioned models achieve good structural fidelity, they necessitate dense, frame-accurate guidance that is labor-intensive to author for dynamic events involving deformable objects. We present LooseControlVideo, a framework that enables intuitive and expressive control by using sparse, oriented 3D boxes as a \"blocking\" proxy. This allows users to author high-level layout and trajectory while leveraging a video generative model to generate realistic occlusions, dynamics and interactions. We achieve this by fine-tuning a Wan 2.2 backbone on a video dataset annotated with DNOCS, a novel encoding for 3D size, orientation and depth-ordered occlusions. Furthermore, our method allows for localized refinement, such as adjusting a jump trajectory or adding an interaction, with minimal disruption to the global scene context. Extensive evaluations on the nuScenes, HO-3D, and BEHAVE benchmarks demonstrate that LooseControlVideo significantly outperforms existing 2D-box and flow-based baselines. Our findings indicate a 1.2x to 3x improvement in Trajectory Error; 2x improvement in Rigid Motion Consistency; and a 1.5x to 2x increase in Occlusion Accuracy over current state-of-the-art layout-conditioned models, demonstrating that oriented 3D primitives provide good geometric prior for complex, multi-agent video authoring.",
+      "authors": [
+        "Shariq Farooq Bhat",
+        "Niloy J. Mitra",
+        "Kalyan Sunkavalli"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-17T18:32:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.19495v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "text-to-video generation with 3D layout control using sparse boxes",
+      "llm_evidence_cn": "使用稀疏3D框进行文本到视频生成中的3D布局控制",
+      "llm_evidence": "使用稀疏3D框进行文本到视频生成中的3D布局控制",
+      "canonical_evidence": "使用稀疏3D框进行文本到视频生成中的3D布局控制",
+      "llm_tldr_en": "LooseControlVideo enables intuitive 3D layout control for text-to-video generation by using sparse oriented 3D boxes as a blocking proxy, fine-tuned on a Wan 2.2 backbone.",
+      "llm_tldr_cn": "针对文本到视频生成中3D空间编排困难且需要密集深度引导的问题，本文提出LooseControlVideo，使用稀疏定向3D框作为遮挡代理，允许用户创作高层布局和轨迹，并在Wan 2.2骨干网络上微调，生成了具有逼真遮挡和动态的交互视频。",
+      "llm_tldr": "针对文本到视频生成中3D空间编排困难且需要密集深度引导的问题，本文提出LooseControlVideo，使用稀疏定向3D框作为遮挡代理，允许用户创作高层布局和轨迹，并在Wan 2.2骨干网络上微调，生成了具有逼真遮挡和动态的交互视频。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Generative models for 3D scene synthesis from text or images",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.19733v1",
+      "source": "arxiv",
+      "title": "QueryGaussian: Scalable and Training-Free Open-Vocabulary 3D Instance Retrieval",
+      "abstract": "Efficiently retrieving specific 3D instances from large-scale scenes via natural language prompts remains a formidable challenge in multimedia analysis. Existing approaches predominantly follow a \"scene-level embedding\" paradigm, which requires distilling high-dimensional semantic features into every 3D primitive. This strategy suffers from a fundamental architectural bottleneck: memory and computational costs scale linearly with scene complexity, inevitably triggering out-of-memory (OOM) failures in city-scale environments. To address this barrier, we propose QueryGaussian, a training-free framework for expeditious and scalable open-vocabulary 3D instance retrieval. Unlike holistic semantic distillation, QueryGaussian employs an instance-level query mechanism that decouples semantic understanding from geometric representation. Specifically, we leverage pre-trained 2D vision models to interpret user prompts and lift segmentation masks into 3D via a concurrent maximum-weight association strategy, ensuring semantic-visual consistency. To mitigate projection ambiguity, we introduce a temporal fusion module with multi-stage adaptive density clustering. Experimental results demonstrate that QueryGaussian not only matches the accuracy of state-of-the-art methods but also delivers a decisive efficiency leap, reducing GPU memory usage by over 70% and accelerating inference by 180x. Crucially, QueryGaussian enables expeditious instance retrieval on city-scale scenes containing tens of millions of Gaussians using consumer-grade hardware.",
+      "authors": [
+        "Xiuyuan Zhu",
+        "Ke Lu",
+        "Zijie Yang",
+        "Chao Yue",
+        "Jian Xue",
+        "Dongming Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-18T02:57:35+00:00",
+      "link": "https://arxiv.org/pdf/2606.19733v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Open-vocabulary 3D instance retrieval in large-scale scenes, related to scene understanding",
+      "llm_evidence_cn": "大规模场景中的开放词汇3D实例检索，与场景理解相关",
+      "llm_evidence": "大规模场景中的开放词汇3D实例检索，与场景理解相关",
+      "canonical_evidence": "大规模场景中的开放词汇3D实例检索，与场景理解相关",
+      "llm_tldr_en": "QueryGaussian proposes a training-free framework for scalable open-vocabulary 3D instance retrieval using an instance-level approach, avoiding memory explosion in city-scale scenes.",
+      "llm_tldr_cn": "现有场景级嵌入方法在大规模3D场景中面临内存爆炸问题。本文提出QueryGaussian，一种训练自由的框架，采用实例级检索策略，无需逐点语义蒸馏即可实现开放词汇的3D实例检索，有效应对城市级场景的规模挑战。",
+      "llm_tldr": "现有场景级嵌入方法在大规模3D场景中面临内存爆炸问题。本文提出QueryGaussian，一种训练自由的框架，采用实例级检索策略，无需逐点语义蒸馏即可实现开放词汇的3D实例检索，有效应对城市级场景的规模挑战。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.19985v1",
+      "source": "arxiv",
+      "title": "Vision-Reasoning-Guided Occlusion Removal from Light Fields",
+      "abstract": "Occlusion-robust scene recovery remains a major challenge in computational imaging, particularly in natural environments where dense foreground vegetation severely limits visibility. We propose a vision-reasoning-guided light field occlusion removal framework that combines the visibility recovery capability of light field integration (LFI) with the semantic reasoning capacity of vision-language models (VLMs). Multi-view observations are first integrated via LFI to suppress foreground occlusions and produce an initial visibility-enhanced representation. A VLM is then incorporated as a conditional semantic prior to restore degraded structures and recover fine details, guided by the observed measurements. To improve recovery consistency and reduce hallucination artifacts, we introduce a multi-sample fusion strategy that aggregates multiple generated hypotheses into a unified estimate. Experimental results on synthetic and real-world datasets demonstrate state-of-the-art performance, achieving the highest average SSIM across four synthetic light field benchmark scenes (4-Syn) and strong generalization across structured and unstructured acquisition settings. These results highlight the effectiveness of combining physical imaging constraints with vision-language reasoning for robust perception under severe occlusion, with applicability to search-and-rescue and exploratory robotic navigation.",
+      "authors": [
+        "Mohamed Youssef",
+        "Oliver Bimber"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-18T09:24:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.19985v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "light field integration for occlusion removal and scene recovery",
+      "llm_evidence_cn": "光场集成用于去遮挡和场景恢复",
+      "llm_evidence": "光场集成用于去遮挡和场景恢复",
+      "canonical_evidence": "光场集成用于去遮挡和场景恢复",
+      "llm_tldr_en": "A vision-reasoning-guided framework combines light field integration with VLMs to remove foreground occlusions and recover fine details for robust scene recovery.",
+      "llm_tldr_cn": "针对自然环境中前景遮挡严重限制场景恢复的问题，本文结合光场集成（LFI）的可见性恢复能力和视觉语言模型（VLM）的语义推理能力。先通过LFI抑制遮挡，再用VLM作为条件语义先验恢复退化结构和细节，实现了鲁棒的遮挡移除和场景重建。",
+      "llm_tldr": "针对自然环境中前景遮挡严重限制场景恢复的问题，本文结合光场集成（LFI）的可见性恢复能力和视觉语言模型（VLM）的语义推理能力。先通过LFI抑制遮挡，再用VLM作为条件语义先验恢复退化结构和细节，实现了鲁棒的遮挡移除和场景重建。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.20556v1",
+      "source": "arxiv",
+      "title": "Thinking in Boxes: 3D Editing in Real Images Made Easy",
+      "abstract": "Text and 2D-conditioning interfaces provide weak, ambiguous control over spatial transformations in image editing -- particularly under large object motions and camera changes. Prior work has used 3D primitives such as boxes, but only as loose conditioning signals indicating approximate object location rather than specifying the transformation. We instead use 3D boxes as structured specifications: the user provides the input and output boxes of the edit, casting editing as a well-posed geometry problem. This ``thinking in boxes'' interface, where each box face is color-coded to convey 3D orientation, gives precise control over translation, rotation, scaling, and viewpoint changes in real images while preserving scene and object identity, and recovering previously unseen object regions. To ground transformations in scene appearance, we introduce a depth-aligned planar floor as a global reference frame, shaded with depth-aware cues. Conditioned on this structure, an image generator produces consistent results under large transformations. Trained in two stages -- on synthetic multi-object scenes and a small set of real-world videos from Objectron -- the system generalizes to complex, in-the-wild real images. Our method operates directly on real photographs and substantially outperforms recent state-of-the-art methods on large 3D edits.",
+      "authors": [
+        "Pradhaan S Bhat",
+        "Naveen Chandra R",
+        "Rishubh Parihar",
+        "Vaibhav Vavilala",
+        "R. Venkatesh Babu",
+        "D. A. Forsyth",
+        "Anand Bhattad"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-18T17:59:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.20556v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "3D box specification enables viewpoint changes in image editing",
+      "llm_evidence_cn": "3D盒子规范实现了图像编辑中的视角变换",
+      "llm_evidence": "3D盒子规范实现了图像编辑中的视角变换",
+      "canonical_evidence": "3D盒子规范实现了图像编辑中的视角变换",
+      "llm_tldr_en": "Thinking in Boxes uses 3D boxes as structured specifications for precise control over translation, rotation, scaling, and viewpoint changes in real image editing.",
+      "llm_tldr_cn": "现有图像编辑对空间变换的控制模糊，本文提出以3D盒子作为结构化规范，用户指定输入和输出盒子，将编辑转化为良态几何问题。通过颜色编码盒子面传达3D朝向，实现对真实图像中平移、旋转、缩放和视角变化的精确控制，同时保持场景和物体身份。",
+      "llm_tldr": "现有图像编辑对空间变换的控制模糊，本文提出以3D盒子作为结构化规范，用户指定输入和输出盒子，将编辑转化为良态几何问题。通过颜色编码盒子面传达3D朝向，实现对真实图像中平移、旋转、缩放和视角变化的精确控制，同时保持场景和物体身份。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.20103v1",
+      "source": "arxiv",
+      "title": "Geometry-Preserving in 3D Gaussian Splatting for LiDAR-Camera Extrinsic Calibration",
+      "abstract": "Accurate LiDAR-camera calibration is essential for robust multi-modal perception. Targetless approaches avoid manual setup but remain limited by the scarcity of discriminative cross-modal features. Recent methods address this by reconstructing the scene within a differentiable model, enabling extrinsic optimization through dense photometric supervision. Among these, 3D Gaussian Splatting (3DGS) has been widely adopted as a geometric proxy that bridges LiDAR and camera within a single differentiable framework. However, since 3DGS was originally designed for novel view synthesis, existing methods tend to prioritize rendering quality, causing the proxy geometry to drift from the true LiDAR structure. We propose a framework that preserves the metric geometry of the Gaussian proxy by aggregating multi-view LiDAR observations for dense depth supervision and blocking photometric gradients from updating the Gaussian spatial parameters. We validate our method on public driving datasets, where it consistently outperforms existing targetless methods in calibration accuracy.",
+      "authors": [
+        "Kyoleen Kwak",
+        "Daeho Kim",
+        "Jeong Woon Lee",
+        "Hyoseok Hwang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-18T11:23:33+00:00",
+      "link": "https://arxiv.org/pdf/2606.20103v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses 3DGS as geometric proxy for LiDAR-camera calibration, preserving true geometry",
+      "llm_evidence_cn": "使用3DGS作为几何代理用于LiDAR-相机标定，保留真实几何",
+      "llm_evidence": "使用3DGS作为几何代理用于LiDAR-相机标定，保留真实几何",
+      "canonical_evidence": "使用3DGS作为几何代理用于LiDAR-相机标定，保留真实几何",
+      "llm_tldr_en": "Proposes a geometry-preserving framework using 3D Gaussian Splatting for LiDAR-camera extrinsic calibration, preventing geometry drift by maintaining alignment with LiDAR structure.",
+      "llm_tldr_cn": "针对现有基于3DGS的标定方法因优先渲染质量导致代理几何偏离真实LiDAR结构的问题，本文提出几何保持框架，通过约束高斯泼溅几何与LiDAR点云一致，在可微渲染中同时优化外参，提高了标定精度。",
+      "llm_tldr": "针对现有基于3DGS的标定方法因优先渲染质量导致代理几何偏离真实LiDAR结构的问题，本文提出几何保持框架，通过约束高斯泼溅几何与LiDAR点云一致，在可微渲染中同时优化外参，提高了标定精度。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
