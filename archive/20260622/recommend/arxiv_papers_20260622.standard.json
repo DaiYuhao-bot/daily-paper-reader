@@ -1,0 +1,361 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-22T21:52:35.965904+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2606.15594v1",
+      "source": "arxiv",
+      "title": "Pixels to Proofs: Probabilistically-Safe Latent World Model Control via Parallel Conformal Robust MPC",
+      "abstract": "We present SLS^2, a framework for safe feedback motion planning from pixels using robust model predictive control (MPC) in learned latent world models. Our approach trains an action-conditioned joint-embedding world model with compact Markovian latent states, enabling efficient gradient-based trajectory optimization through learned latent dynamics. To enforce safety for the true system despite imperfect latent predictions, we inform a GPU-accelerated system level synthesis (SLS) robust MPC scheme with conformal prediction to obtain calibrated latent error bounds and robust latent-space constraint sets. We further learn and conformalize a latent constraint checker, allowing the SLS planner to impose probabilistic safety constraints during closed-loop execution. We evaluate our method on vision-based control tasks, where it improves both goal-reaching performance and safety over latent world-model and safe-planning baselines.",
+      "authors": [
+        "Devesh Nath",
+        "Anutam Srinivasan",
+        "Haoran Yin",
+        "Ruitong Jiang",
+        "Jeffrey Fang",
+        "Glen Chou"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "published": "2026-06-14T04:34:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.15594v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Safe control using learned latent world model with conformal prediction",
+      "llm_evidence_cn": "使用学习到的潜在世界模型进行安全控制，结合共形预测",
+      "llm_evidence": "使用学习到的潜在世界模型进行安全控制，结合共形预测",
+      "canonical_evidence": "使用学习到的潜在世界模型进行安全控制，结合共形预测",
+      "llm_tldr_en": "SLS^2 learns a latent world model for safe motion planning from pixels, using conformal prediction to calibrate error bounds and robust MPC.",
+      "llm_tldr_cn": "该论文提出SLS^2框架，从像素输入学习潜在世界模型，并结合共形预测校准预测误差边界，然后利用鲁棒模型预测控制（MPC）在潜在空间进行安全轨迹优化。在模拟和真实机器人任务中证明了该方法在保证安全性的同时实现高效规划。",
+      "llm_tldr": "该论文提出SLS^2框架，从像素输入学习潜在世界模型，并结合共形预测校准预测误差边界，然后利用鲁棒模型预测控制（MPC）在潜在空间进行安全轨迹优化。在模拟和真实机器人任务中证明了该方法在保证安全性的同时实现高效规划。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15768v1",
+      "source": "arxiv",
+      "title": "LaWAM: Latent World Action Models for Efficient Dynamics-Aware Robot Policies",
+      "abstract": "Vision-Language-Action models (VLAs) leverage large-scale vision-language pretraining for semantic robot control, but often lack explicit foresight into how robot actions change the scene. World-Action Models (WAMs) address this limitation by conditioning policies on predicted futures, yet existing approaches typically rely on computationally expensive video generation with substantial pixel-level redundancy. We present LaWAM, a Latent World Action Model that exposes predictive dynamics to robot policies through compact latent visual subgoals instead of reconstructed future video. At the core of LaWAM is a latent-action-conditioned Latent World Model (LaWM). We obtain LaWM by training a latent action model in the latent space of a pretrained vision foundation model and repurposing its forward decoder to predict future observation features for scene evolution. LaWAM then conditions action generation on these predicted latent visual subgoals to enable dynamics-aware robot control. LaWAM achieves state-of-the-art or competitive success rates (SRs) across LIBERO (98.6% SR), RoboTwin (91.22% SR), and real-world manipulation tasks while retaining low-latency inference. LaWAM runs in 187 ms per action-chunk prediction and achieves up to 24x lower wall-clock latency than pixel-space WAMs.",
+      "authors": [
+        "Jialei Chen",
+        "Kai Wang",
+        "Kang Chen",
+        "Shuaihang Chen",
+        "Feng Gao",
+        "Wenhao Tang",
+        "Zhiyuan Li",
+        "Weilin Liu",
+        "Zhuyu Yao",
+        "Boxun Li",
+        "Yuanbo Xu",
+        "Chao Yu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-06-14T12:06:58+00:00",
+      "link": "https://arxiv.org/pdf/2606.15768v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Latent world action model for dynamics-aware robot policies",
+      "llm_evidence_cn": "用于动力学感知机器人策略的潜在世界动作模型",
+      "llm_evidence": "用于动力学感知机器人策略的潜在世界动作模型",
+      "canonical_evidence": "用于动力学感知机器人策略的潜在世界动作模型",
+      "llm_tldr_en": "LaWAM trains a latent world model to predict future latent visual subgoals, enabling efficient dynamics-aware robot policies without full video generation.",
+      "llm_tldr_cn": "该论文针对现有世界动作模型依赖昂贵视频生成的问题，提出LaWAM。核心是潜在世界模型（LaWM），在预训练视觉编码器的潜在空间中学习动作条件动力学。通过预测紧凑的潜在视觉子目标，指导机器人策略，避免了像素级冗余，在多个操控任务上实现了更高效率。",
+      "llm_tldr": "该论文针对现有世界动作模型依赖昂贵视频生成的问题，提出LaWAM。核心是潜在世界模型（LaWM），在预训练视觉编码器的潜在空间中学习动作条件动力学。通过预测紧凑的潜在视觉子目标，指导机器人策略，避免了像素级冗余，在多个操控任务上实现了更高效率。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.20322v1",
+      "source": "arxiv",
+      "title": "Towards 3D karst underwater scene reconstruction from rotating sonar data",
+      "abstract": "Karst aquifers provide critical freshwater resources but pose significant hazards due to their complex and poorly understood subsurface geometry. Mapping these environments is challenging because sonar data from underwater exploration is sparse and noisy, while navigation estimates suffer from drift limiting standard 3D reconstruction methods. We present a pipeline for reconstructing underwater karst conduits from a sonar profiler. We combine a continuous-time SLAM approach to correct trajectory drift with a novel two-stage deep learning method for surface reconstruction, producing an immersive and navigable 3D mesh for hydrogeological analysis.",
+      "authors": [
+        "Georgios Evangelos Margaritis",
+        "Lionel Lapierre",
+        "Simon Rohou",
+        "Zhi Yan",
+        "Andreas Nüchter",
+        "François Goulette"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-18T15:02:00+00:00",
+      "link": "https://arxiv.org/pdf/2606.20322v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "3D underwater scene reconstruction from sonar data",
+      "llm_evidence_cn": "从声纳数据进行三维水下场景重建",
+      "llm_evidence": "从声纳数据进行三维水下场景重建",
+      "canonical_evidence": "从声纳数据进行三维水下场景重建",
+      "llm_tldr_en": "A pipeline for 3D reconstruction of karst underwater conduits from rotating sonar data, combining continuous-time SLAM and a two-stage deep learning surface reconstruction method.",
+      "llm_tldr_cn": "该论文提出了一套从旋转声纳数据重建喀斯特水下管道的流程。由于水下声纳数据稀疏且噪声大，导航漂移限制了传统方法。作者结合连续时间SLAM纠正轨迹漂移，并设计了两阶段深度学习表面重建方法，最终生成可用于水文地质分析的沉浸式三维网格。",
+      "llm_tldr": "该论文提出了一套从旋转声纳数据重建喀斯特水下管道的流程。由于水下声纳数据稀疏且噪声大，导航漂移限制了传统方法。作者结合连续时间SLAM纠正轨迹漂移，并设计了两阶段深度学习表面重建方法，最终生成可用于水文地质分析的沉浸式三维网格。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.20563v1",
+      "source": "arxiv",
+      "title": "JanusMesh: Fast and Zero-Shot 3D Visual Illusion Generation via Cross-Space Denoising",
+      "abstract": "Creating 3D visual illusions, a single 3D mesh that reveals entirely different semantics from various viewing angles, is a fascinating but tough challenge. Existing optimization-based methods are slow and can produce oversaturated colors. In contrast, naive stitching approaches fail to produce geometrically coherent objects. This results in visible unnatural seams and semantic leaks. In this paper, we present a fast and training-free framework for generating text-driven 3D visual illusions. Our approach decouples the generation into two stages. First, we propose a cross-space dual-branch denoising process. This process dynamically decodes 3D latents into voxel space for CLIP-guided orientation alignment and Signed Distance Field (SDF) blending, which ensures seamless geometric fusion. Second, we introduce a view-conditioned texture synthesis module that projects and aggregates view-specific 2D diffusion priors onto the fused geometry. Extensive experiments demonstrate that our method generates highly realistic, dual-semantic 3D illusions in just 3-5 minutes. It significantly outperforms existing methods in geometric integrity, semantic recognizability, and efficiency. Project page: https://siang1105.github.io/JanusMesh.github.io/",
+      "authors": [
+        "Siang-Ling Zhang",
+        "Huai-Hsun Cheng",
+        "Tsung-Ju Yang",
+        "Yu-Lun Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-18T17:59:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.20563v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "text-driven 3D mesh generation with visual illusions",
+      "llm_evidence_cn": "文本驱动的3D网格视觉幻觉生成",
+      "llm_evidence": "文本驱动的3D网格视觉幻觉生成",
+      "canonical_evidence": "文本驱动的3D网格视觉幻觉生成",
+      "llm_tldr_en": "JanusMesh proposes a fast, training-free framework for text-driven 3D visual illusion generation using cross-space dual-branch denoising, producing coherent 3D meshes with different semantics from different views.",
+      "llm_tldr_cn": "针对现有3D视觉幻觉生成方法速度慢、颜色过饱和或几何不连贯的问题，提出JanusMesh全自动框架。通过跨空间双分支去噪过程，将3D潜在编码解码为体素空间进行CLIP导向对齐和SDF建模。该方法无需训练，快速生成文本驱动的3D视觉幻觉网格，在不同视角产生不同语义。",
+      "llm_tldr": "针对现有3D视觉幻觉生成方法速度慢、颜色过饱和或几何不连贯的问题，提出JanusMesh全自动框架。通过跨空间双分支去噪过程，将3D潜在编码解码为体素空间进行CLIP导向对齐和SDF建模。该方法无需训练，快速生成文本驱动的3D视觉幻觉网格，在不同视角产生不同语义。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "techniques for generating 3D scenes from text descriptions",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.15966v1",
+      "source": "arxiv",
+      "title": "VEPHand: View-Efficient Photometric Hand Performance Capture at Scale",
+      "abstract": "Robust, high-fidelity 3D hand capture, while fundamental to digital human creation, remains challenging with practical multi-view systems that balance rich photometry with the geometric ambiguities of reconstruction arising from limited viewpoint density. This paper presents an end-to-end pipeline for dynamic hand performance capture and registration, specifically designed for view-efficient setups ($\\sim$20 views). We address key challenges with two primary innovations. First, to overcome reconstruction difficulties like limited view overlap and background clutter, our mask-free neural method robustly extracts detailed hand geometry and appearance from unmasked images using scene parameterization and scenario-specific density regularization. Second, addressing registration challenges such as accurately capturing non-linear skin deformations and ensuring plausible results during severe self-contact, we propose a physics-inspired framework. It aligns reconstructions to a personalized hand model by optimizing intrinsic volumetric offsets within its canonical tetrahedral mesh, alongside pose parameters. This approach, supported by robust losses and optimization, captures fine surface deformations, ensures plausible results under severe articulation and self-contact, and demonstrates strong tolerance to input noise. We demonstrate the scalability and robustness of our automated pipeline on an extensive dataset of over 12,000 sequences, from which we also derive a large-scale, high-quality synthetic 2D/3D hand dataset for training downstream tasks. This showcases its effectiveness for single hands, intricate two-hand interactions, and natural hand-object manipulations. Our method achieves state-of-the-art reconstruction fidelity in view-efficient, unmasked scenarios and highly accurate registration. Our project page are available at https://zyshen021.github.io/VEPHand/.",
+      "authors": [
+        "Zhengyang Shen",
+        "Kai-Hung Chang",
+        "Erroll Wood",
+        "Deying Kong",
+        "Bo Peng",
+        "Timo Bolkart",
+        "Jinlong Yang",
+        "Bowen Zhao",
+        "Danhang Tang",
+        "Sasa Petrovic",
+        "Emre Aksan",
+        "Jérémy Riviere",
+        "Vassilis Choutas",
+        "Delio Vicini",
+        "Jay Busch",
+        "Shichen Liu",
+        "Zhe Cao",
+        "Hugh Liu",
+        "JingJing Shen",
+        "Jonathan Taylor",
+        "Mingsong Dou"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-06-14T18:47:44+00:00",
+      "link": "https://arxiv.org/pdf/2606.15966v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes an end-to-end pipeline for 3D hand reconstruction from multi-view images",
+      "llm_evidence_cn": "提出从多视角图像进行3D手部重建的端到端管线",
+      "llm_evidence": "提出从多视角图像进行3D手部重建的端到端管线",
+      "canonical_evidence": "提出从多视角图像进行3D手部重建的端到端管线",
+      "llm_tldr_en": "Presents a mask-free neural method for dynamic hand performance capture from ~20 views, overcoming limited overlap and background clutter.",
+      "llm_tldr_cn": "针对有限视角下的手部3D重建难题，本文提出无需掩膜的神经方法，通过场景参数化和密度正则化从多视图图像中鲁棒提取手部几何和外观，并实现动态注册。实验表明在低视角设置下相比基线方法有显著提升。",
+      "llm_tldr": "针对有限视角下的手部3D重建难题，本文提出无需掩膜的神经方法，通过场景参数化和密度正则化从多视图图像中鲁棒提取手部几何和外观，并实现动态注册。实验表明在低视角设置下相比基线方法有显著提升。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.20112v1",
+      "source": "arxiv",
+      "title": "Pixel-Level Residual Diffusion Transformer: Scalable 3D CT Volume Generation",
+      "abstract": "Generating high-resolution 3D CT volumes with fine details remains challenging due to substantial computational demands and optimization difficulties inherent to existing generative models. In this paper, we propose the Pixel-Level Residual Diffusion Transformer (PRDiT), a scalable generative framework that synthesizes high-quality 3D medical volumes directly at voxel-level. PRDiT introduces a two-stage training architecture comprising 1) a local denoiser in the form of an MLP-based blind estimator operating on overlapping 3D patches to separate low-frequency structures efficiently, and 2) a global residual diffusion transformer employing memory-efficient attention to model and refine high-frequency residuals across entire volumes. This coarse-to-fine modeling strategy simplifies optimization, enhances training stability, and effectively preserves subtle structures without the limitations of an autoencoder bottleneck. Extensive experiments conducted on the LIDC-IDRI and RAD-ChestCT datasets demonstrate that PRDiT consistently outperforms state-of-the-art models, such as HA-GAN, 3D LDM and WDM-3D, achieving significantly lower 3D FID, MMD and Wasserstein distance scores.",
+      "authors": [
+        "Zhenkai Zhang",
+        "Markus Hiller",
+        "Krista A. Ehinger",
+        "Tom Drummond"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "eess.IV"
+      ],
+      "published": "2026-06-18T11:35:11+00:00",
+      "link": "https://arxiv.org/pdf/2606.20112v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "3D volume generation using diffusion transformer",
+      "llm_evidence_cn": "使用扩散变压器生成3D体积",
+      "llm_evidence": "使用扩散变压器生成3D体积",
+      "canonical_evidence": "使用扩散变压器生成3D体积",
+      "llm_tldr_en": "PRDiT is a scalable diffusion transformer for generating high-resolution 3D CT volumes at voxel level, using a coarse-to-fine two-stage architecture with local denoiser and global residual refinement.",
+      "llm_tldr_cn": "生成高分辨率3D CT体积面临计算和优化挑战。本文提出PRDiT，一种像素级残差扩散变压器，采用两阶段架构：局部MLP盲估计器快速分离低频结构，全局残差扩散变压器通过内存高效注意力建模高频细节。在医学图像生成任务上实现了高质量的体素级体积合成，为3D生成模型提供了可扩展方案。",
+      "llm_tldr": "生成高分辨率3D CT体积面临计算和优化挑战。本文提出PRDiT，一种像素级残差扩散变压器，采用两阶段架构：局部MLP盲估计器快速分离低频结构，全局残差扩散变压器通过内存高效注意力建模高频细节。在医学图像生成任务上实现了高质量的体素级体积合成，为3D生成模型提供了可扩展方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d generative models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.16569v1",
+      "source": "arxiv",
+      "title": "PROSE: Training-Free Egocentric Scene Registration with Vision-Language Models",
+      "abstract": "Registering two captures of the same indoor space taken at different times underpins persistent spatial memory for robots and AR systems, yet the realistic version of this task is egocentric and its most scalable form is RGB-only. Head-mounted cameras yield blurry, fast-moving, partially overlapping views from which dense geometry is hard to recover. Classical registration leans on exactly the clean point clouds this setting lacks, while learned scene-graph methods require a pre-built or annotated graph and a trained matcher that we find brittle under egocentric data. We take a different route, using a pretrained vision-language model as the source of both scene understanding and cross-scan matching. Our method, PROSE (Prompted Scene rEgistration), lifts each RGB sequence into an object-level 3D scene graph using off-the-shelf foundation models for geometry, segmentation, and language, then prompts the same VLM to match object instances across the two RGB sequences. To make this matching tractable and reliable, we leverage object heights as a prior and verify each proposed match with a paired same/different query, then solve for the rigid transform by hypothesizing a candidate per matched object and selecting the one with the strongest geometric consensus. PROSE adds no learned parameters and requires no depth sensor, training, or annotated graph. On the egocentric Aria Digital Twin and Aria Everyday Activities benchmarks, it outperforms both geometric and learned scene-graph baselines in registration accuracy, on ground-truth and RGB-reconstructed point clouds alike, and the scene graph it produces transfers directly to downstream tasks.",
+      "authors": [
+        "Zhiang Chen",
+        "Nahyuk Lee",
+        "Boyang Sun",
+        "Taein Kwon",
+        "Marc Pollefeys",
+        "Zuria Bauer",
+        "Sunghwan Hong"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-06-15T11:11:14+00:00",
+      "link": "https://arxiv.org/pdf/2606.16569v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Scene registration using vision-language models for 3D understanding",
+      "llm_evidence_cn": "使用视觉语言模型进行三维场景配准与理解",
+      "llm_evidence": "使用视觉语言模型进行三维场景配准与理解",
+      "canonical_evidence": "使用视觉语言模型进行三维场景配准与理解",
+      "llm_tldr_en": "PROSE uses a pretrained vision-language model to register egocentric indoor scenes without training, addressing blurry RGB-only captures.",
+      "llm_tldr_cn": "该论文针对以自我为中心的室内场景配准中图像模糊、缺乏点云的问题，提出利用预训练视觉语言模型（VLM）进行场景理解和跨扫描匹配。无需额外训练或标注，直接通过提示驱动实现配准，在真实数据上优于传统方法。",
+      "llm_tldr": "该论文针对以自我为中心的室内场景配准中图像模糊、缺乏点云的问题，提出利用预训练视觉语言模型（VLM）进行场景理解和跨扫描匹配。无需额外训练或标注，直接通过提示驱动实现配准，在真实数据上优于传统方法。",
+      "llm_tags": [
+        "query:world-model:composite"
+      ],
+      "matched_query_tag": "query:world-model:composite",
+      "matched_query_text": "Papers central to 三维场景重建，三维场景生成，世界模型，三维视觉, especially work that connects or combines: Three-dimensional scene reconstruction from images or point clouds; Generative models for 3D scene synthesis from text or images; World model learning for 3D scene understanding and prediction; 3D Gaussian splatting for real-time rendering; novel view synthesis; 3d generative models; World model based 3d scene generation and reconstruction techniques; effective methods for 3D scene reconstruction from 2D images; what are the latest advances in world models for 3D vision; techniques for generating 3D scenes from text descriptions.",
+      "matched_requirement_id": "req-composite-world-model",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.18156v1",
+      "source": "arxiv",
+      "title": "ReAge3D: Re-Aging 3D Faces with View Consistency",
+      "abstract": "We present a novel framework for realistic and controllable 3D face re-aging which produces highly detailed, identity-preserving results. Existing 3D editing methods, while effective for coarse semantic changes, are not well suited for re-aging, as even small inconsistencies across re-aged 2D views can lead to over-smoothing of subtle but perceptually important age-related details. To address this challenge, we first introduce a 2D diffusion-based re-aging model, DiffReaging, trained on synthetically generated image pairs. We further propose a center-out editing propagation strategy that leverages this re-aging model to reconstruct multi-view-consistent re-aged images. Specifically, starting from a re-aged frontal pivot view, we reconstruct the remaining views through warping and our proposed Masked-DiffReaging process. By injecting existing content at every step of the diffusion process, Masked-DiffReaging ensures that the reconstructed regions remain coherent with existing pixels. The resulting consistent set of re-aged views supervises the optimization of the re-aged 3D representation. Our method outperforms existing 3D editing techniques both visually and quantitatively, enabling smooth, fine-grained control over age transformations in 3D face models.",
+      "authors": [
+        "Libing Zeng",
+        "Li Ma",
+        "Mingming He",
+        "Ning Yu",
+        "Paul Debevec",
+        "Nima Khademi Kalantari"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-16T16:56:00+00:00",
+      "link": "https://arxiv.org/pdf/2606.18156v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D face re-aging with view consistency, a 3D generative model",
+      "llm_evidence_cn": "带视角一致性的三维人脸再老化，属于三维生成模型",
+      "llm_evidence": "带视角一致性的三维人脸再老化，属于三维生成模型",
+      "canonical_evidence": "带视角一致性的三维人脸再老化，属于三维生成模型",
+      "llm_tldr_en": "ReAge3D achieves realistic and consistent 3D face re-aging by combining a 2D diffusion re-aging model with a center-out editing propagation strategy.",
+      "llm_tldr_cn": "该论文针对现有三维编辑方法在面部再老化中难以保持细节一致性的问题，提出ReAge3D框架。首先训练2D扩散模型DiffReaging用于单视图再老化，然后通过中心向外传播策略生成多视角一致的再老化图像，最终合成高保真三维人脸。",
+      "llm_tldr": "该论文针对现有三维编辑方法在面部再老化中难以保持细节一致性的问题，提出ReAge3D框架。首先训练2D扩散模型DiffReaging用于单视图再老化，然后通过中心向外传播策略生成多视角一致的再老化图像，最终合成高保真三维人脸。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d generative models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
