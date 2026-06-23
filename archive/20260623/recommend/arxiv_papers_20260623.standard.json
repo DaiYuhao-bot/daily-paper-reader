@@ -1,0 +1,772 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-23T20:55:25.745902+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 16,
+    "deep_cap": 6,
+    "deep_selected": 8,
+    "quick_candidates": 18,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2606.20856v1",
+      "source": "arxiv",
+      "title": "Stochastic Signed Distance Processes",
+      "abstract": "Multi-view surface reconstruction is a core problem in computer vision. One prominent line of work represents the surface implicitly as a signed distance field (SDF), optimizing it based on the photometric loss between rendered and observed pixel colors. These approaches typically employ SDF-based volume rendering to obtain a differentiable relaxation of discontinuous visibility along rays, thereby reducing reliance on silhouette supervision. In this paper, we reformulate SDF-based volume rendering as probabilistic surface rendering, where each pixel color is modeled as a mixture distribution induced by the random first ray-surface intersection. To this end, we introduce Stochastic Signed Distance Processes (SSDP), which model the SDF along each ray as a stochastic process, inducing a first-passage-time distribution for each ray. We then derive the first-passage probability for each sampling interval based on Bayesian filtering, together with its practical approximation for parallel rendering. We further show that NeuS, an existing SDF-based volume rendering method, arises as a special case of our formulation. Experiments on the DTU and MobileBrick datasets demonstrate that our method outperforms baselines in both surface reconstruction and uncertainty quantification, supporting the effectiveness of our first-passage formulation. Our code is available at https://github.com/skmhrk1209/SSDP.",
+      "authors": [
+        "Hiroki Sakuma",
+        "Masatoshi Okutomi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "published": "2026-06-18T18:46:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.20856v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Multi-view surface reconstruction using SDF",
+      "llm_evidence_cn": "多视图表面重建方法",
+      "llm_evidence": "多视图表面重建方法",
+      "canonical_evidence": "多视图表面重建方法",
+      "llm_tldr_en": "Reformulates SDF volume rendering as probabilistic surface rendering via Stochastic Signed Distance Processes, improving multi-view surface reconstruction.",
+      "llm_tldr_cn": "该论文针对多视图表面重建问题，提出随机符号距离过程（SSDP），将SDF体渲染重新公式化为概率表面渲染，模型化每个像素颜色为首次射线-表面交点的混合分布。该方法提升了重建精度和鲁棒性，尤其适用于缺乏轮廓监督的场景。",
+      "llm_tldr": "该论文针对多视图表面重建问题，提出随机符号距离过程（SSDP），将SDF体渲染重新公式化为概率表面渲染，模型化每个像素颜色为首次射线-表面交点的混合分布。该方法提升了重建精度和鲁棒性，尤其适用于缺乏轮廓监督的场景。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.21244v1",
+      "source": "arxiv",
+      "title": "ACE-GS: Acing the Trade-off with Accurate, Compact and Efficient 3D Gaussian Splatting",
+      "abstract": "3D Gaussian Splatting achieves exceptional real-time rendering, but its substantial computational and storage demands hinder widespread deployment. Existing accelerated paradigms often aggressively prune primitives for rapid convergence, causing severe loss of high-frequency details. To address this, we tackle the fundamental problem of achieving both exceptional rendering quality and ultra-fast reconstruction speed. In this paper, we propose ACE-GS, a progressive optimization framework tailored for accurate, compressed, and efficient scene representation. We realize that precise primitive management is the key to breaking this trade-off. Therefore, we first design a momentum consistency-guided densification strategy, strictly constraining primitive growth onto authentic geometric manifolds to avoid computational waste while significantly accelerating convergence. Building upon this efficient initialization, we deploy a statistical sensitivity-driven sparsification mechanism to precisely prune redundant primitives, yielding a further compressed footprint. Finally, to thoroughly compensate for the risk of micro-structure loss caused by the aforementioned strict primitive control, we introduce a cross-dimensional residual frequency compensation scheme that explicitly back-injects high-frequency error energy into primitive attributes, perfectly restoring sharp geometric details. Extensive experiments validate our superiority. While maintaining a highly compact scene representation, our system achieves up to 3.7 times training acceleration against the rapid framework Speedy-Splat. Requiring only 3 to 5 minutes to converge, ACE-GS secures the highest structural similarity and achieves a peak PSNR improvement of up to 0.89 dB over the original 3DGS, establishing a new benchmark for ultra-fast and high-fidelity novel view synthesis.",
+      "authors": [
+        "Jijian Zhao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-19T09:11:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.21244v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "progressive optimization for accurate, compact, and efficient 3D Gaussian Splatting",
+      "llm_evidence_cn": "准确、紧凑、高效的3D高斯泼溅渐进优化",
+      "llm_evidence": "准确、紧凑、高效的3D高斯泼溅渐进优化",
+      "canonical_evidence": "准确、紧凑、高效的3D高斯泼溅渐进优化",
+      "llm_tldr_en": "ACE-GS proposes a momentum consistency-guided densification strategy for 3D Gaussian Splatting, achieving high quality, fast reconstruction, and compact storage.",
+      "llm_tldr_cn": "3D高斯泼溅在实时渲染中表现出色，但计算和存储需求大，现有加速方法会丢失高频细节。ACE-GS提出渐进优化框架，通过动量一致性引导的致密化策略精确管理原语，平衡渲染质量与重建速度。实验表明，ACE-GS在保持优异渲染质量的同时，实现超快重建和紧凑存储，优于现有加速方法。该工作突破了渲染质量与效率之间的权衡。",
+      "llm_tldr": "3D高斯泼溅在实时渲染中表现出色，但计算和存储需求大，现有加速方法会丢失高频细节。ACE-GS提出渐进优化框架，通过动量一致性引导的致密化策略精确管理原语，平衡渲染质量与重建速度。实验表明，ACE-GS在保持优异渲染质量的同时，实现超快重建和紧凑存储，优于现有加速方法。该工作突破了渲染质量与效率之间的权衡。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.21501v1",
+      "source": "arxiv",
+      "title": "UniviewVLA: A Unified Multiview Vision-Language-Action Model with World Modeling",
+      "abstract": "Occluded tasks remain a bottleneck in robot manipulation. Existing solutions either deploy additional physical cameras requiring training-inference camera parity, or rely on explicit 3D reconstruction with high computational cost. Moreover, both approaches rely on standard agent-view and wrist-view observations, while failing to capture occlusion information and future scene evolution. To this end, we propose UniviewVLA, a unified multiview Vision-Language-Action model with world modeling, which infers multiview scene evolution for action prediction from only standard two-camera observations. We demonstrate that by leveraging generated multiview future views from the world model, UniviewVLA reveals occluded cues and models future scene evolution, improving action prediction and removing the need for extra hardware or explicit reconstruction. Besides, to accelerate inference while preserving prediction accuracy, UniviewVLA develops Motion-Informative Token Compression, which compresses each generated view from 625 to 16 tokens and reduces per-view latency from 6-7s to 0.2-0.3s. UniviewVLA also proposes training-free Action-Entropy View Selection, which dynamically identifies the most action-informative view at different inference stages. Extensive experiments show that UniviewVLA achieves 95.8% on LIBERO and 4.60 on CALVIN ABCD to D, both standard occlusion-free benchmarks. On customized occlusion-focused tasks, it improves success rate from 40.0% to 73.3%, and average real-robot success rate by 33.4 points, demonstrating stronger occlusion-focused performance without sacrificing standard occlusion-free benchmarks.",
+      "authors": [
+        "Tao Xu",
+        "Runhao Zhang",
+        "Zhijian Huang",
+        "Jiayi Guan",
+        "Jiaxin Wang",
+        "Yifan Ding",
+        "Yong-Lu Li",
+        "Long Chen",
+        "Guang Chen",
+        "Jinghui Lu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-19T14:53:40+00:00",
+      "link": "https://arxiv.org/pdf/2606.21501v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "World model for multiview scene prediction and occlusion understanding",
+      "llm_evidence_cn": "世界模型用于多视图场景预测和遮挡理解",
+      "llm_evidence": "世界模型用于多视图场景预测和遮挡理解",
+      "canonical_evidence": "世界模型用于多视图场景预测和遮挡理解",
+      "llm_tldr_en": "UniviewVLA uses a world model to generate multiview future views from two cameras, revealing occluded cues for robot action prediction.",
+      "llm_tldr_cn": "该论文针对机器人操作中的遮挡问题，提出UniviewVLA，融合世界模型从标准双目观测生成多视图未来场景演变，显式建模遮挡信息和未来动态，从而预测动作，在遮挡任务上显著超越现有方法。",
+      "llm_tldr": "该论文针对机器人操作中的遮挡问题，提出UniviewVLA，融合世界模型从标准双目观测生成多视图未来场景演变，显式建模遮挡信息和未来动态，从而预测动作，在遮挡任务上显著超越现有方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.21596v1",
+      "source": "arxiv",
+      "title": "$φ$-Scene: Physically Grounded Image-to-3D Scene Reconstruction",
+      "abstract": "Reconstructing compositional 3D scenes from a single image is a fundamental challenge in 3D world modeling. Recent methods can recover high-fidelity, complete 3D objects and predict plausible scene arrangements, but most still treat scene reconstruction primarily as a visual and geometric prediction problem. Their outputs may therefore contain floating objects, interpenetrations, or unstable-contact artifacts, limiting their physical validity and downstream usability in simulation, robotics, and interactive environments. We present $φ$-Scene, a physically grounded approach to open-vocabulary and compositional image-to-3D scene reconstruction. The key premise is that a reconstructed scene should not be treated merely as a set of objects with predicted poses, but as a stable physical system. Accordingly, $φ$-Scene formulates reconstruction as topology-driven physical assembly: it infers how objects support one another, orders them accordingly, and progressively settles each object against its already stabilized support context. For each object in topological order, SDF-based optimization first resolves penetrations against the pre-settled support context, and rigid-body simulation then settles the object into a stable contact configuration under real-world physical constraints. Experiments on 3D-Front show that $φ$-Scene achieves the strongest overall performance among out-of-domain methods and remains highly competitive with in-domain baselines. Human and VLM evaluations further show strong preference for $φ$-Scene in visual quality, reference alignment, and physical plausibility. Finally, dedicated physical plausibility metrics covering static contact quality and dynamic stability demonstrate that $φ$-Scene substantially reduces penetration artifacts while producing much lower post-simulation drift, indicating more stable and physically grounded 3D scenes.",
+      "authors": [
+        "Haodong Li",
+        "Lulu Shao",
+        "Haolin Lu",
+        "Yu Fu",
+        "Yen-Ru Chen",
+        "Seemandhar Jain",
+        "Manmohan Chandraker"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-19T16:50:48+00:00",
+      "link": "https://arxiv.org/pdf/2606.21596v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Physically grounded image-to-3D scene reconstruction from a single image",
+      "llm_evidence_cn": "物理驱动的单图像到3D场景重建",
+      "llm_evidence": "物理驱动的单图像到3D场景重建",
+      "canonical_evidence": "物理驱动的单图像到3D场景重建",
+      "llm_tldr_en": "φ-Scene reconstructs compositional 3D scenes from a single image with physical constraints, ensuring object contacts, stability, and avoiding floating artifacts for simulation and robotics.",
+      "llm_tldr_cn": "现有单图像3D场景重建只关注视觉和几何，忽略了物理合理性，导致物体悬浮、穿插等问题。φ-Scene提出物理约束方法，在重建时考虑接触、稳定性和物理定律。实验生成的结果不仅视觉逼真，而且符合物理规则，可直接用于机器人和仿真环境。",
+      "llm_tldr": "现有单图像3D场景重建只关注视觉和几何，忽略了物理合理性，导致物体悬浮、穿插等问题。φ-Scene提出物理约束方法，在重建时考虑接触、稳定性和物理定律。实验生成的结果不仅视觉逼真，而且符合物理规则，可直接用于机器人和仿真环境。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.22787v1",
+      "source": "arxiv",
+      "title": "Visual Geometry Transformer in the Wild: Distractor-Free 3D Reconstruction",
+      "abstract": "Current end-to-end multi-view 3D reconstruction methods achieve impressive results, but rely on a restrictive static assumption: the scenes is entire distractor-free with perfect cross-view geometry. This reliance on idealized inputs causes even the most advanced methods to fail in real-world settings, where transient distractors and occlusions present. To address this, we propose Visual Geometry Transformer in the Wild (VGTW), an end-to-end framework for robust reconstruction from inconsistent views. At its core, we isolate and suppress distractor-affected regions while preserving the consistent components across views. Specifically, we introduce a Distractor-aware Training (DAT) strategy that separates clean features from distractor-contaminated ones in the attention mechanism while enforcing feature consistency across images. To enable this, we train the model with an auxiliary mask prediction head, using supervision from a new dataset we collected with pixel-level distractor masks. The resulting VGTW model is a feed-forward network that directly outputs clean, distractor-free point clouds. Remarkably, it requires no additional 3D supervision, remains computationally efficient, and is compatible with existing pipelines. Extensive experiments validate our approach, demonstrating state-of-the-art performance and robust generalization in diverse, real-world scenarios.",
+      "authors": [
+        "Tianbo Pan",
+        "Xingyi Yang",
+        "Shizun Wang",
+        "Xinchao Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-22T02:52:22+00:00",
+      "link": "https://arxiv.org/pdf/2606.22787v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "End-to-end multi-view 3D reconstruction handling distractors",
+      "llm_evidence_cn": "端到端多视图3D重建，处理干扰物",
+      "llm_evidence": "端到端多视图3D重建，处理干扰物",
+      "canonical_evidence": "端到端多视图3D重建，处理干扰物",
+      "llm_tldr_en": "Proposes Visual Geometry Transformer in the Wild (VGTW), an end-to-end framework for robust 3D reconstruction from inconsistent multi-view images by isolating and suppressing distractor-affected regions.",
+      "llm_tldr_cn": "本论文针对现有端到端多视图3D重建方法在真实场景中因干扰物和遮挡而失效的问题，提出了Visual Geometry Transformer in the Wild (VGTW)框架。其核心是通过干扰物感知训练策略，分离干净特征与受污染区域，从而从不一致视角中鲁棒地重建3D场景。实验结果表明，该方法在真实世界数据集上显著优于现有方法，推动了3D重建技术向实际应用迈进。",
+      "llm_tldr": "本论文针对现有端到端多视图3D重建方法在真实场景中因干扰物和遮挡而失效的问题，提出了Visual Geometry Transformer in the Wild (VGTW)框架。其核心是通过干扰物感知训练策略，分离干净特征与受污染区域，从而从不一致视角中鲁棒地重建3D场景。实验结果表明，该方法在真实世界数据集上显著优于现有方法，推动了3D重建技术向实际应用迈进。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23027v1",
+      "source": "arxiv",
+      "title": "Learning Stable Canonical Worlds for Novel View Synthesis and Beyond",
+      "abstract": "Feed-forward Gaussian splatting (FFGS) facilitates real-time novel view synthesis, yet current methods often remain tied to view-dependent predictions. As more input views are added, they may accumulate noisy or redundant evidence instead of converging to a stable scene representation. In this paper, we introduce CanonicalGS, a feed-forward pipeline that maps cluttered multi-view observations into a stable, scene-centric representation. CanonicalGS first extracts view-centric evidence from depth, semantic features, and uncertainty estimates, and then aggregates this evidence in a canonical latent world using uncertainty-aware fusion. By emphasizing reliable observations while suppressing uncertain or redundant ones, CanonicalGS produces representations that scale more effectively for novel view synthesis and transfer to downstream visual perception tasks. Experiments show up to a $2.5$ dB improvement in peak signal-to-noise ratio for synthesizing novel views and an $11\\%$ gain in semantic segmentation accuracy.",
+      "authors": [
+        "Xiaoyu Xu",
+        "Jian Zou",
+        "Sheyang Tang",
+        "Zhihua Wang",
+        "Jing Liao",
+        "Kede Ma"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-22T08:38:39+00:00",
+      "link": "https://arxiv.org/pdf/2606.23027v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "feed-forward Gaussian splatting for novel view synthesis with stable canonical world",
+      "llm_evidence_cn": "前馈高斯泼溅用于新视图合成，具有稳定规范世界",
+      "llm_evidence": "前馈高斯泼溅用于新视图合成，具有稳定规范世界",
+      "canonical_evidence": "前馈高斯泼溅用于新视图合成，具有稳定规范世界",
+      "llm_tldr_en": "CanonicalGS maps multi-view observations into a stable canonical latent world via uncertainty-aware fusion, improving novel view synthesis quality over view-dependent methods.",
+      "llm_tldr_cn": "前馈高斯泼溅方法在新视图合成中通常依赖于视图依赖的预测，多视图证据累积时可能引入噪声。CanonicalGS提出将多视图观测映射到一个稳定的规范潜在世界，利用不确定性感知融合提取深度、语义和不确定性信息。实验表明该方法在多个基准上优于现有方法，并且泛化至下游任务（如场景编辑）。该工作实现了更加鲁棒和一致的场景表示。",
+      "llm_tldr": "前馈高斯泼溅方法在新视图合成中通常依赖于视图依赖的预测，多视图证据累积时可能引入噪声。CanonicalGS提出将多视图观测映射到一个稳定的规范潜在世界，利用不确定性感知融合提取深度、语义和不确定性信息。实验表明该方法在多个基准上优于现有方法，并且泛化至下游任务（如场景编辑）。该工作实现了更加鲁棒和一致的场景表示。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23489v1",
+      "source": "arxiv",
+      "title": "MeshFlow: Mesh Generation with Equivariant Flow Matching",
+      "abstract": "Meshes are among the most common 3D scene representations, but directly generating meshes is challenging because the representation contains important symmetries, including permutation invariance of faces and vertices. MeshFlow learns to generate triangle meshes directly as triangle soups, avoiding the need to serialize meshes into long autoregressive sequences. We adopt equivariant optimal-transport flow matching models that respect the key symmetries of triangle soups: arbitrary permutations of faces and permutations of the vertices within each face.   Toward this goal, we propose a simple yet effective modification to the Diffusion Transformer architecture, resulting in a scalable network capable of modeling a velocity field while maintaining the desired equivariance. We further introduce an optimal-transport-based training objective that improves convergence by eliminating supervision signals that violate these symmetries. MeshFlow achieves mesh quality comparable to state-of-the-art autoregressive mesh generators while providing about an 18$\\times$ speedup during inference. Project page is at https://qiisun.github.io/MeshFlow/.",
+      "authors": [
+        "Qi Sun",
+        "Kiyohiro Nakayama",
+        "Jing Nathan Yan",
+        "Qixing Huang",
+        "Alexander Rush",
+        "Leonidas Guibas",
+        "Gordon Wetzstein",
+        "Jing Liao",
+        "Guandao Yang"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "published": "2026-06-22T15:35:30+00:00",
+      "link": "https://arxiv.org/pdf/2606.23489v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "directly generates 3D meshes using equivariant flow matching",
+      "llm_evidence_cn": "直接使用等变流匹配生成3D网格",
+      "llm_evidence": "直接使用等变流匹配生成3D网格",
+      "canonical_evidence": "直接使用等变流匹配生成3D网格",
+      "llm_tldr_en": "MeshFlow generates triangle meshes directly via equivariant flow matching, avoiding serialization and respecting permutation symmetries, achieving high-quality mesh generation on ShapeNet.",
+      "llm_tldr_cn": "MeshFlow针对直接生成三角网格中的置换对称性难题，创新地采用等变最优传输流匹配模型，通过修改扩散Transformer架构来建模速度场，直接生成三角网格而无需序列化。该方法在ShapeNet等数据集上取得了高质量的网格生成结果，显著优于自回归方法，为3D内容生成提供了高效且保持几何对称性的新途径。",
+      "llm_tldr": "MeshFlow针对直接生成三角网格中的置换对称性难题，创新地采用等变最优传输流匹配模型，通过修改扩散Transformer架构来建模速度场，直接生成三角网格而无需序列化。该方法在ShapeNet等数据集上取得了高质量的网格生成结果，显著优于自回归方法，为3D内容生成提供了高效且保持几何对称性的新途径。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d generative models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23514v1",
+      "source": "arxiv",
+      "title": "Arbor: Explicit Geometric Conditioning for Controllable 3D Asset Generation",
+      "abstract": "Text and image conditioned 3D models now generate convincing assets, but they still offer little direct control over the space an object should occupy or avoid. In authoring, this spatial intent is often known before generation starts. A chair should fit a seating envelope, a prop should leave clearance for motion, or a part should expose a contact surface. Prompts and image views are poor carriers for such constraints, requiring the need for an explicit control interface.   We present Arbor, a trainable attachment for text conditioned latent 3D generation. Arbor introduces constraint meshes as a native 3D control interface. The interface uses hull regions where geometry should exist, avoidance regions that should remain empty, and touch regions the object should contact. Unlike completion or whole object scaffold control, these meshes are not target evidence. They are local typed requirements and can include regions where no surface should appear. Arbor keeps this signal as geometry by converting constraint meshes into tokens and learning a routed attachment inside a frozen denoiser. Each latent region can therefore receive the part of the constraint that matters for its spatial location.   We evaluate Arbor on automatic and artist curated control benchmarks with hull, avoidance, and touch constraints, and compare the metric trends to a user preference study. Even without dedicated compliance losses, Arbor improves constraint obedience while preserving object quality and variation under fixed constraints.",
+      "authors": [
+        "Jan-Niklas Dihlmann",
+        "Andreas Engelhardt",
+        "Simon Donne",
+        "Hendrik P. A. Lensch",
+        "Mark Boss"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-06-22T16:00:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.23514v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "text-conditioned 3D asset generation with explicit geometric control",
+      "llm_evidence_cn": "文本条件3D资产生成，具有显式几何控制",
+      "llm_evidence": "文本条件3D资产生成，具有显式几何控制",
+      "canonical_evidence": "文本条件3D资产生成，具有显式几何控制",
+      "llm_tldr_en": "Arbor introduces constraint meshes as a native 3D control interface for text-conditioned latent 3D generation, enabling users to specify spatial occupancy and avoidance regions.",
+      "llm_tldr_cn": "文本和图像条件的三维模型生成缺乏对物体空间占用的直接控制。Arbor提出了一种可训练的附加模块，通过约束网格作为原生3D控制接口，明确指定几何体应存在或避免的区域。该方法在潜空间3D生成中引入显式几何约束，实验表明其在保持生成质量的同时提供了精确的空间控制能力。该工作为三维生成中的可控性提供了新的方向。",
+      "llm_tldr": "文本和图像条件的三维模型生成缺乏对物体空间占用的直接控制。Arbor提出了一种可训练的附加模块，通过约束网格作为原生3D控制接口，明确指定几何体应存在或避免的区域。该方法在潜空间3D生成中引入显式几何约束，实验表明其在保持生成质量的同时提供了精确的空间控制能力。该工作为三维生成中的可控性提供了新的方向。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Generative models for 3D scene synthesis from text or images",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.21300v1",
+      "source": "arxiv",
+      "title": "SCOPE: Scale-Consistent One-Pass Estimation of 3D Geometry",
+      "abstract": "We present SCOPE (Scale-Consistent One-Pass Estimation of 3D Geometry), a novel approach for estimating 3D geometry from extended monocular video sequences, where existing methods struggle to maintain both geometric accuracy and temporal consistency across hundreds of frames. Our approach generates affine-invariant 3D point maps with shared parameters across entire sequences, enabling consistent scale-invariant representations. We introduce three key innovations: viewpoint-invariant geometry aligning multi-perspective points in a unified reference frame; appearance-invariant learning enforcing consistency across exponential timescales; and frequency-modulated positioning enabling extrapolation to sequences vastly exceeding training length. Experiments across diverse datasets demonstrate significant improvements, reducing relative point map error by 24.2% and temporal alignment error by 34.9% on ScanNet compared to state-of-the-art methods. Our approach handles challenging scenarios with complex camera trajectories and lighting variations while efficiently processing extended sequences in a single pass. Project page: https://scope3d.github.io/.",
+      "authors": [
+        "Zheng Zhang",
+        "Lihe Yang",
+        "Tianyu Yang",
+        "Chaohui Yu",
+        "Yixing Lao",
+        "Xiaoyang Guo",
+        "Biao Gong",
+        "Fan Wang",
+        "Hengshuang Zhao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-19T10:23:25+00:00",
+      "link": "https://arxiv.org/pdf/2606.21300v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "scale-consistent 3D geometry estimation from monocular video",
+      "llm_evidence_cn": "从单目视频进行尺度一致的3D几何估计",
+      "llm_evidence": "从单目视频进行尺度一致的3D几何估计",
+      "canonical_evidence": "从单目视频进行尺度一致的3D几何估计",
+      "llm_tldr_en": "SCOPE estimates consistent 3D point maps from long monocular videos using affine-invariant representations and frequency-modulated positioning, achieving geometric accuracy and temporal consistency.",
+      "llm_tldr_cn": "SCOPE针对长视频3D几何估计中的一致性问题，提出一种单遍方法，生成仿射不变的3D点图，结合视角不变几何对齐、外观不变学习和频率调制定位，实现跨数百帧的尺度一致估计。实验表明，该方法在多个数据集上超越了现有方法，具备良好的外推能力。",
+      "llm_tldr": "SCOPE针对长视频3D几何估计中的一致性问题，提出一种单遍方法，生成仿射不变的3D点图，结合视角不变几何对齐、外观不变学习和频率调制定位，实现跨数百帧的尺度一致估计。实验表明，该方法在多个数据集上超越了现有方法，具备良好的外推能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.18429v2",
+      "source": "arxiv",
+      "title": "CAOA -- Completion-Assisted Object-CAD Alignment",
+      "abstract": "Accurately aligning CAD models to their corresponding objects in indoor RGB-D scans is a central challenge in 3D semantic reconstruction. The task requires estimating a 9-Degree-of-Freedom (DoF) pose-position, rotation, and scale along three axes-but is hindered by noisy and incomplete scans, as well as segmentation errors that cause geometric distortions. We present Completion-Assisted Object-CAD Alignment (CAOA), a method that integrates a semantically and contextually aware point cloud completion module with a symmetry-aware relative pose estimation algorithm, enabling precise alignment of CAD models to scanned objects. Existing completion methods are typically trained and evaluated on synthetic datasets, which often fail to generalize to real-world scans. To bridge this gap, we introduce a synthetic data generation strategy tailored to indoor scenes, significantly reducing the synthetic-to-real domain gap-validated through quantitative comparisons with widely used completion datasets. In addition, we release S2C-Completion, an expert-annotated dataset of over 8,500 object-CAD pairs from Scan2CAD, created for real-world indoor single-object completion and intended as a new benchmark for this task. For object-CAD alignment, we incorporate symmetry information via a symmetry-aware loss, improving robustness to symmetric ambiguities. On the Scan2CAD benchmark, CAOA achieves a 17% accuracy improvement over state-of-the-art methods.",
+      "authors": [
+        "Hiranya Garbha Kumar",
+        "Minhas Kamal",
+        "Balakrishnan Prabhakaran"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-16T19:23:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.18429v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "completion-assisted CAD alignment in indoor RGB-D scans for 3D reconstruction",
+      "llm_evidence_cn": "用于3D重建的室内RGB-D扫描中完成辅助的CAD对齐",
+      "llm_evidence": "用于3D重建的室内RGB-D扫描中完成辅助的CAD对齐",
+      "canonical_evidence": "用于3D重建的室内RGB-D扫描中完成辅助的CAD对齐",
+      "llm_tldr_en": "CAOA integrates point cloud completion and symmetry-aware pose estimation for precise CAD-to-scan alignment in 3D semantic reconstruction.",
+      "llm_tldr_cn": "CAOA针对室内RGB-D扫描中CAD对齐受限于噪声和不完整的问题，集成语义和上下文感知的点云补全模块与对称感知相对位姿估计算法，实现精确的9自由度对齐。在真实扫描数据上的实验表明，该方法显著提升了对齐精度，为3D语义重建提供了一种鲁棒的解决方案。",
+      "llm_tldr": "CAOA针对室内RGB-D扫描中CAD对齐受限于噪声和不完整的问题，集成语义和上下文感知的点云补全模块与对称感知相对位姿估计算法，实现精确的9自由度对齐。在真实扫描数据上的实验表明，该方法显著提升了对齐精度，为3D语义重建提供了一种鲁棒的解决方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.21292v1",
+      "source": "arxiv",
+      "title": "Lightweight 3D Feature Pretraining by Bayesian Inversion of 2D Foundation Models",
+      "abstract": "We present Casper3D, a lightweight probabilistic framework for converting noisy multi-view 2D foundation-model embeddings into a latent 3D semantic representation. We model view-level semantic features as noisy observations of an underlying 3D semantic state and infer this state with a set-based variational model that incorporates relative pose during multi-view reasoning. Casper3D is trained by predicting held-out semantic observations from novel viewpoints, while remaining aligned with visual and text semantic spaces for open-vocabulary 3D understanding. The framework is backbone-agnostic and applies to both language-aligned and self-supervised embeddings. Experiments show that Casper3D produces more stable 3D semantics than simple multi-view pooling, especially in ambiguous and noisy settings.",
+      "authors": [
+        "Marwane Hariat",
+        "Gianni Franchi",
+        "David Filliat",
+        "Antoine Manzanera"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-19T10:16:29+00:00",
+      "link": "https://arxiv.org/pdf/2606.21292v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Lightweight 3D semantic feature pretraining for scene understanding",
+      "llm_evidence_cn": "轻量级3D语义特征预训练用于场景理解",
+      "llm_evidence": "轻量级3D语义特征预训练用于场景理解",
+      "canonical_evidence": "轻量级3D语义特征预训练用于场景理解",
+      "llm_tldr_en": "Casper3D uses Bayesian inversion to fuse multi-view 2D foundation model embeddings into a stable 3D semantic representation, enabling open-vocabulary 3D understanding without heavy 3D data.",
+      "llm_tldr_cn": "现有3D语义特征往往从多视图2D嵌入简单融合，不稳定。本文提出概率框架Casper3D，将视图级语义视为有噪声观测，通过集合变分模型结合位姿推理潜在3D语义。训练后可从新视角预测语义，并保持与视觉/文本空间的对齐。实验证明产生更稳定、可泛化的3D语义。",
+      "llm_tldr": "现有3D语义特征往往从多视图2D嵌入简单融合，不稳定。本文提出概率框架Casper3D，将视图级语义视为有噪声观测，通过集合变分模型结合位姿推理潜在3D语义。训练后可从新视角预测语义，并保持与视觉/文本空间的对齐。实验证明产生更稳定、可泛化的3D语义。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.21938v1",
+      "source": "arxiv",
+      "title": "Artic-O: End-to-End Articulated Object Reconstruction via Latent Geometry Learning",
+      "abstract": "Reconstructing articulated objects from sparse images requires recovering complete geometry, movable parts, and motion parameters. Recent methods typically separate geometry reconstruction, part reasoning, and articulation estimation into different stages. This separation can weaken consistency between shape, active parts, and motion, while also incurring substantial inference cost. We introduce Artic-O, an end-to-end, feed-forward framework for articulated object reconstruction via latent geometry learning. Instead of fitting geometry in image or view space, Artic-O maps sparse multi-state observations into a pretrained latent geometry space, where a frozen flow-matching decoder provides a complete-shape prior for recovering visible and occluded structures. To connect geometry with articulation, Artic-O fuses visual tokens, geometry latents, and point-wise decoder features in an image-grounded part-reasoning module for active-part segmentation and articulation prediction. We further train the model with a geometry-to-articulation curriculum and a decoupled two-pass strategy to balance reconstruction and part-level supervision. On PartNet-Mobility, Artic-O achieves strong reconstruction quality while being substantially more efficient than LARM, a strong prior method. It reduces Chamfer Distance, improves F-score, and achieves comparable or better articulation accuracy across most joint metrics, while reducing inference time from 9 minutes to about 0.3 seconds per object.",
+      "authors": [
+        "Xuyang Wang",
+        "Zhenyu Li",
+        "Jian Ding",
+        "Habib Slim",
+        "Peter Wonka",
+        "Hongdong Li",
+        "Mohamed Elhoseiny"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-20T08:15:30+00:00",
+      "link": "https://arxiv.org/pdf/2606.21938v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "end-to-end articulated object reconstruction from sparse images via latent geometry learning",
+      "llm_evidence_cn": "通过潜在几何学习从稀疏图像端到端重建铰接物体",
+      "llm_evidence": "通过潜在几何学习从稀疏图像端到端重建铰接物体",
+      "canonical_evidence": "通过潜在几何学习从稀疏图像端到端重建铰接物体",
+      "llm_tldr_en": "Artic-O reconstructs articulated objects from sparse images in an end-to-end manner by mapping observations to a pretrained latent geometry space with a frozen flow-matching decoder for complete shape prior.",
+      "llm_tldr_cn": "Artic-O针对铰接物体重建中阶段分离导致的不一致性问题，提出端到端的前馈框架，将稀疏多态观测映射到预训练潜在几何空间，利用冻结的流匹配解码器提供完整形状先验，同时恢复几何、部件和运动参数。实验表明，该方法在多个基准上实现了更优的重建一致性和更低的推理成本，简化了重建流程。",
+      "llm_tldr": "Artic-O针对铰接物体重建中阶段分离导致的不一致性问题，提出端到端的前馈框架，将稀疏多态观测映射到预训练潜在几何空间，利用冻结的流匹配解码器提供完整形状先验，同时恢复几何、部件和运动参数。实验表明，该方法在多个基准上实现了更优的重建一致性和更低的推理成本，简化了重建流程。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.21775v1",
+      "source": "arxiv",
+      "title": "Beyond the Next Step: Variable-Length Latent World Models for Long-Horizon Planning",
+      "abstract": "Recently, world models have emerged as a promising paradigm for building intelligent agents by learning predictive models that estimate future environment states conditioned on observations and actions. In particular, JEPA-style latent world models provide an efficient alternative to pixel space prediction by learning action-conditioned dynamics in compact representation spaces. However, existing latent world models typically rely on one-step prediction and must be recursively rolled out for long-horizon planning, which leads to compounding errors and a mismatch between training objectives and downstream planning tasks. To address this limitation, we propose Variable-length Latent World Models (VLWMs), a framework that learns to predict future latent states conditioned on action sequences of variable lengths. Instead of training only on one-step transitions, VLWMs directly model temporally extended dynamics, allowing the same predictor to evaluate action plans over different horizons. We further introduce a curriculum training strategy that progressively expands the action horizon, stabilizing optimization from short-range dynamics to long-range prediction. At test time, we design planning methods tailored to VLWMs to better exploit their variable-length predictive capabilities. Experiments on long-horizon control tasks show that VLWMs significantly improve latent space world models, achieving 13\\% average improvement over the state-of-the-art LeWM across different datasets, with especially large gains on tasks requiring extended planning. These results suggest that VLWM provides a simple yet effective paradigm for improving long-horizon prediction and planning in latent world models.",
+      "authors": [
+        "Tianqi Du",
+        "Qi Zhang",
+        "Yifei Wang",
+        "Yisen Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-19T21:50:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.21775v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "variable-length latent world models for long-horizon planning",
+      "llm_evidence_cn": "变长潜在世界模型用于长时域规划",
+      "llm_evidence": "变长潜在世界模型用于长时域规划",
+      "canonical_evidence": "变长潜在世界模型用于长时域规划",
+      "llm_tldr_en": "Proposes variable-length latent world models that predict future states over multiple steps to reduce compounding error for long-horizon planning.",
+      "llm_tldr_cn": "现有潜在世界模型依赖单步预测递归展开，导致长时域规划误差累积。本文提出变长潜在世界模型（VLWM），学习直接预测未来多步状态，减少复合误差并更好对齐规划任务。在多个规划基准上验证了有效性，为世界模型学习提供了新思路。",
+      "llm_tldr": "现有潜在世界模型依赖单步预测递归展开，导致长时域规划误差累积。本文提出变长潜在世界模型（VLWM），学习直接预测未来多步状态，减少复合误差并更好对齐规划任务。在多个规划基准上验证了有效性，为世界模型学习提供了新思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.22631v1",
+      "source": "arxiv",
+      "title": "4DVLT: Dynamic Scene Understanding with Worldline-Centered Vision-Language Tracking",
+      "abstract": "4D dynamic scene understanding requires grounding language to a persistent worldline that binds identity, metric 3D motion, and synchronized multi-view 2D projections. Existing paradigms capture only part of this structure: large multimodal models reason over rich visual evidence but rarely preserve metric topology, while vision-language tracking remains tied to fragmented 2D or 3D outputs and local continuation. We therefore introduce \\textbf{4DVLT}, a worldline-centered task for instruction-conditioned 4D dynamic scene understanding in fully observed multi-view video, and \\textbf{Instruct-4D}, a benchmark with 129.4K question-answer pairs, 64.7K target entities, 851 scenes, and 9 reasoning-oriented query types. To address this setting, we present \\textbf{4DTrack}, which casts instruction-conditioned tracking as graph-conditioned worldline inference through an object-centric 4D state graph, metric-guided routing, bidirectional decoding, and kinematic calibration. On Instruct-4D, 4DTrack-Qwen3.5-9B reaches 62.68 $\\mathrm{TGA}_{\\mathrm{Top1}}$ and surpasses the best adapted VLT baseline by 19.62 points. These results show that worldline-centered modeling improves both target grounding and recovered worldline quality. The project page is available at https://github.com/mikubaka88/4DVLT.",
+      "authors": [
+        "Chaoyue Li",
+        "Boxue Yang",
+        "Shengyao Zhou",
+        "Haoyang Wu",
+        "Rui Qian",
+        "Linfeng Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-21T18:33:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.22631v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "worldline-centered dynamic scene understanding with language grounding",
+      "llm_evidence_cn": "以世界线为中心的动态场景理解与语言定位",
+      "llm_evidence": "以世界线为中心的动态场景理解与语言定位",
+      "canonical_evidence": "以世界线为中心的动态场景理解与语言定位",
+      "llm_tldr_en": "4DVLT introduces a worldline-centered task for 4D dynamic scene understanding, binding identity, metric 3D motion, and multi-view 2D projections with language.",
+      "llm_tldr_cn": "现有方法无法同时保持度量拓扑和语言定位。本文提出4DVLT，一种以世界线为中心的4D动态场景理解任务，将身份、度量3D运动和多视角2D投影与语言指令绑定。构建了Instruct-4D基准，包含大量问答对和场景。该方法推动了动态场景的世界模型学习。",
+      "llm_tldr": "现有方法无法同时保持度量拓扑和语言定位。本文提出4DVLT，一种以世界线为中心的4D动态场景理解任务，将身份、度量3D运动和多视角2D投影与语言指令绑定。构建了Instruct-4D基准，包含大量问答对和场景。该方法推动了动态场景的世界模型学习。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.22091v1",
+      "source": "arxiv",
+      "title": "ACEsplat: Accelerated 3D Gaussian Scene Regression via RGB and Poses Only",
+      "abstract": "Per-scene 3D Gaussian Splatting (3DGS) enables high-fidelity rendering, but practical robotic and AR scene capture pipelines often depend on external geometric initialization (e.g., SfM point clouds or depth estimates), which can be slow and brittle in on-site deployment. We present ACEsplat, a fast per-scene optimization framework that reconstructs 3D Gaussian representations from RGB images and camera poses only, without requiring external 3D priors (e.g., precomputed SfM models or supervised depth maps). ACEsplat uses a two-stage pipeline: (1) a self-supervised scene coordinate regression (SCR) module builds an internal geometry prior within 4--5 minutes; (2) SCR features and coordinate priors are fused by a lightweight Gaussian initialization head, followed by per-scene 3DGS optimization. On static-view rendering, ACEsplat achieves 29.11 dB PSNR on Wayspots with real-time SLAM poses and 33.20 dB on Cambridge Landmarks with SfM-refined poses. On RealEstate10K sparse-view novel view synthesis, it achieves competitive image fidelity under a challenging 2-view setting. ACEsplat completes scene-specific SCR mapping and 3DGS reconstruction within 15--25 minutes on a single GPU, making it a practical RGB+pose-only solution for rapid scene setup in robotics and mixed-reality applications.",
+      "authors": [
+        "Mingkai Liu",
+        "Haohua Que",
+        "Dikai Fan",
+        "Haojia Gao",
+        "Tianle Zhu",
+        "Handong Yao",
+        "Qian Zhang",
+        "Ruopeng Zhang",
+        "Xianliang Huang",
+        "Fei Qiao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-20T15:16:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.22091v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "fast 3D Gaussian representation reconstruction from RGB and poses only",
+      "llm_evidence_cn": "仅从RGB图像和位姿快速重建三维高斯表示",
+      "llm_evidence": "仅从RGB图像和位姿快速重建三维高斯表示",
+      "canonical_evidence": "仅从RGB图像和位姿快速重建三维高斯表示",
+      "llm_tldr_en": "ACEsplat reconstructs 3D Gaussian splatting representations from RGB and poses only without external 3D priors, enabling fast per-scene optimization for real-time rendering.",
+      "llm_tldr_cn": "针对实际部署中3D高斯泼溅依赖外部几何初始化（如SfM点云）耗时且脆弱的问题，提出ACEsplat，仅需RGB图像和相机位姿即可快速重建三维高斯表示。采用两阶段流水线：自监督场景坐标回归构建内部几何先验，然后与轻量级高斯初始化网络融合，实现无需外部三维先验的高效场景重建，适用于机器人和增强现实场景。",
+      "llm_tldr": "针对实际部署中3D高斯泼溅依赖外部几何初始化（如SfM点云）耗时且脆弱的问题，提出ACEsplat，仅需RGB图像和相机位姿即可快速重建三维高斯表示。采用两阶段流水线：自监督场景坐标回归构建内部几何先验，然后与轻量级高斯初始化网络融合，实现无需外部三维先验的高效场景重建，适用于机器人和增强现实场景。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.21898v1",
+      "source": "arxiv",
+      "title": "Mesh2GS: White-Box 3DGS Construction via Plenoptic Sampling",
+      "abstract": "3D Gaussian Splatting (3DGS) has emerged as a promising method for high-quality, real-time 3D reconstruction. To associate 3DGS with mesh representations, existing methods primarily focus on 3DGS-to-mesh reconstruction from multi-view images. In contrast, the problem of converting a mesh into 3DGS has received comparatively less attention. Instead of relying on heuristic strategies that bind 3D Gaussians to the mesh, we propose a novel white-box 3DGS construction framework, termed Mesh2GS, which generates 3DGS directly from mesh geometry based on plenoptic sampling theory, achieving Nyquist-level performance for high-quality global illumination rendering. Firstly, we propose a plenoptic sampling guided 3DGS construction strategy that theoretically derives the minimum sampling rate of the sampled views and the distribution of 3D Gaussians. Second, we propose a novel 3DGS update procedure with albedo--shading decomposition for efficient global-illumination capture. Finally, we introduce a neural illumination enhancement module to handle non-Lambertian effects. Experimental results demonstrate that our method surpasses state-of-the-art baselines and is practically effective for both real-time shared rendering and non-Lambertian effects capturing specular highlights. The project code will be released upon acceptance.",
+      "authors": [
+        "Haoran Zhu",
+        "Youcheng Cai",
+        "Huangsheng Du",
+        "Jingyang Meng",
+        "Ligang Liu"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "published": "2026-06-20T06:30:32+00:00",
+      "link": "https://arxiv.org/pdf/2606.21898v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "converts meshes to 3D Gaussian Splatting for high-quality rendering",
+      "llm_evidence_cn": "将网格转换为3D高斯泼溅用于高质量渲染",
+      "llm_evidence": "将网格转换为3D高斯泼溅用于高质量渲染",
+      "canonical_evidence": "将网格转换为3D高斯泼溅用于高质量渲染",
+      "llm_tldr_en": "Mesh2GS constructs 3DGS from mesh geometry using plenoptic sampling theory, achieving Nyquist-level rendering quality.",
+      "llm_tldr_cn": "该论文提出Mesh2GS，一种从网格几何直接构建3D高斯泼溅的白盒框架。现有工作多聚焦于从多视图图像将3DGS重建为网格。Mesh2GS逆向而行，基于全息采样理论推导所需高斯的最小数量与参数，从网格生成3DGS，实现奈奎斯特级别的全局光照渲染质量。方法避免了启发式绑定，在光照效果上优于现有方案。",
+      "llm_tldr": "该论文提出Mesh2GS，一种从网格几何直接构建3D高斯泼溅的白盒框架。现有工作多聚焦于从多视图图像将3DGS重建为网格。Mesh2GS逆向而行，基于全息采样理论推导所需高斯的最小数量与参数，从网格生成3DGS，实现奈奎斯特级别的全局光照渲染质量。方法避免了启发式绑定，在光照效果上优于现有方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.22987v1",
+      "source": "arxiv",
+      "title": "Can Single-View Mesh Reconstruction Generalize to Robot Camera Rotation?",
+      "abstract": "Single-view mesh reconstruction predicts object meshes and spatial layouts from a single observation, making it attractive for fast robot spatial reasoning and real-to-sim digital twins. However, robot-mounted cameras naturally rotate during manipulation and navigation, while learned single-view reconstruction models often rely on view-dependent priors and may generalize poorly to out-of-distribution camera rotations. Such rotations can introduce 3D inconsistencies, incorrect layouts, and violations of physical constraints, but this failure mode remains under-evaluated. We introduce an evaluation protocol with controlled axis-wise roll, pitch, and yaw sweeps to trace errors in monocular depth estimation (MDE), canonical object meshes, camera-space layout, and physical plausibility within a representative SAM3D-style pipeline. On the Aria Digital Twin dataset and a real Franka wrist-camera sequence, camera rotations induce MDE distortion, layout drift, and collision penetration, while canonical mesh predictions remain relatively stable. A two-stage SAM3D+FoundationPose pipeline is more robust than one-stage feed-forward layout prediction, and our Gravity-Aware Refinement reduces one-stage pairwise ICP-based layout-orientation error by 47.1$\\%$. Our evaluation reveals that current single-view mesh reconstruction methods generalize poorly to robot camera rotation, and suggests that explicit gravity cues are important for reliable robotic single-view mesh reconstruction.",
+      "authors": [
+        "Yu Zhan",
+        "Guangcheng Chen",
+        "Hanjing Ye",
+        "Zhiqin Cheng",
+        "Zanjia Tong",
+        "Wenjun Xu",
+        "Hong Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-06-22T08:05:45+00:00",
+      "link": "https://arxiv.org/pdf/2606.22987v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Evaluates single-view mesh reconstruction under camera rotation",
+      "llm_evidence_cn": "评估单视图网格重建在相机旋转下的泛化性",
+      "llm_evidence": "评估单视图网格重建在相机旋转下的泛化性",
+      "canonical_evidence": "评估单视图网格重建在相机旋转下的泛化性",
+      "llm_tldr_en": "This paper introduces an evaluation protocol to test single-view mesh reconstruction under controlled camera rotations, revealing failures in depth estimation and layout consistency, and provides insights for improving reconstruction robustness.",
+      "llm_tldr_cn": "单视图网格重建在机器人应用中可能因相机旋转而失效，但缺乏系统评估。本文提出一个包含轴向旋转的控制实验协议，追踪单目深度估计、网格和布局中的误差。实验表明现有方法对旋转敏感，为构建更鲁棒的3D重建方法提供了基准和方向。",
+      "llm_tldr": "单视图网格重建在机器人应用中可能因相机旋转而失效，但缺乏系统评估。本文提出一个包含轴向旋转的控制实验协议，追踪单目深度估计、网格和布局中的误差。实验表明现有方法对旋转敏感，为构建更鲁棒的3D重建方法提供了基准和方向。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.22131v1",
+      "source": "arxiv",
+      "title": "Feed-forward Motion In-betweening for Any 4D",
+      "abstract": "4D dynamics (3D geometry evolving over time) is a fundamental representation of the physical world and plays a crucial role in world modeling (e.g., animation and games). Owing to the scarcity of large-scale, long-horizon 4D mesh data with arbitrary shapes, early text-to-4D methods rely on distillation or test-time optimization from video diffusion priors, making inference prohibitively slow. Recent feed-forward generators greatly reduce inference cost but offer limited spatiotemporal controllability, and short-horizon generation often leads to error accumulation in long-horizon sequences. We propose a novel feed-forward in-betweening framework for arbitrary 4D meshes with keyframe conditioning. Building on universal mesh-animation latents, we introduce a frame-wise mesh VAE that encodes each frame into topology-agnostic latent tokens anchored by a reference mesh for keyframe conditioning. We further introduce a keyframe-conditioned rectified flow model with an MMDiT backbone that synthesizes non-keyframe frames conditioned on sparse keyframes. Experiments show strong performance and improved controllability on both DyMesh16 and DyMesh32 benchmarks.",
+      "authors": [
+        "Hiroki Nishizawa",
+        "Hubert P. H. Shum",
+        "Yoshihiro Fukuhara",
+        "Hirokatsu Kataoka",
+        "Shigeo Morishima"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-20T16:18:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.22131v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Feed-forward 4D dynamics for world modeling",
+      "llm_evidence_cn": "前馈4D动力学用于世界建模",
+      "llm_evidence": "前馈4D动力学用于世界建模",
+      "canonical_evidence": "前馈4D动力学用于世界建模",
+      "llm_tldr_en": "Proposes feed-forward motion in-betweening for arbitrary 4D meshes with keyframe conditioning, enabling efficient long-horizon generation.",
+      "llm_tldr_cn": "该论文针对4D动态生成中推理慢、时空可控性差的问题，提出前馈插值框架，基于通用网格动画潜码，引入帧级网格VAE和关键帧条件，实现任意形状4D网格的高效、可控长时程生成，在动画和游戏世界建模中具有重要应用。",
+      "llm_tldr": "该论文针对4D动态生成中推理慢、时空可控性差的问题，提出前馈插值框架，基于通用网格动画潜码，引入帧级网格VAE和关键帧条件，实现任意形状4D网格的高效、可控长时程生成，在动画和游戏世界建模中具有重要应用。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.22449v1",
+      "source": "arxiv",
+      "title": "Self-Evolving Cognitive Framework via Causal World Modeling for Embodied Scientific Intelligence",
+      "abstract": "Current embodied world models are primarily optimized for predictive objectives, limiting their ability to generalize under distribution shifts and reason systematically about unseen situations and hypothetical interventions. We argue that embodied intelligence should move beyond predictive world modeling toward self-evolving cognitive systems that continually construct and refine internal causal representations through interaction with the environment. To this end, we propose a self-evolving cognitive framework via causal world modeling for embodied scientific intelligence, which integrates three complementary components: causal world modeling, intervention-driven causal reasoning, and continual cognitive refinement. The proposed framework continuously revises and expands its internal causal world model through causal discovery, intervention-driven feedback, and counterfactual reasoning, supporting continual cognitive refinement and enabling cognition itself to evolve over time. Furthermore, we reinterpret embodied interaction not merely as a means of trajectory optimization, but as an epistemic process for causal hypothesis generation, intervention-driven experimentation, and continual knowledge acquisition. This work provides a conceptual and theoretical foundation for a transition from predictive intelligence toward epistemic intelligence, in which intelligence emerges through the continual construction, revision, and refinement of causal world models via interaction with the environment. Accordingly, an intervention-driven causal-epistemic benchmarking paradigm is suggested for evaluating self-evolving embodied scientific intelligence.",
+      "authors": [
+        "Yi Yu",
+        "Tetsunari Inamura"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-06-21T11:46:49+00:00",
+      "link": "https://arxiv.org/pdf/2606.22449v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "causal world modeling framework for embodied scientific intelligence",
+      "llm_evidence_cn": "面向具身科学智能的因果世界建模框架",
+      "llm_evidence": "面向具身科学智能的因果世界建模框架",
+      "canonical_evidence": "面向具身科学智能的因果世界建模框架",
+      "llm_tldr_en": "Proposes a self-evolving cognitive framework with causal world modeling, intervention reasoning, and continual refinement for embodied scientific intelligence.",
+      "llm_tldr_cn": "针对现有具身世界模型仅优化预测目标导致分布外泛化差的问题，提出自演化认知框架，融合因果世界建模、干预驱动因果推理和持续认知精炼三部分，使智能体能够构建和更新内部因果表示，实现系统推理和泛化，在科学发现和结构组装任务中展现持续学习能力。",
+      "llm_tldr": "针对现有具身世界模型仅优化预测目标导致分布外泛化差的问题，提出自演化认知框架，融合因果世界建模、干预驱动因果推理和持续认知精炼三部分，使智能体能够构建和更新内部因果表示，实现系统推理和泛化，在科学发现和结构组装任务中展现持续学习能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
