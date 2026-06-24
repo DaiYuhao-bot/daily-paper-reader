@@ -6,79 +6,71 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-23
-- 运行时间：2026-06-23 21:04:36 UTC
+- 最新运行日期：2026-06-24
+- 运行时间：2026-06-24 21:27:48 UTC
 - 运行状态：成功
-- 本次总论文数：19
+- 本次总论文数：17
 - 精读区：8
-- 速读区：11
+- 速读区：9
 
 ### 今日简报（AI）
-今日处理19篇论文，精读2篇高分工作，速读3篇优秀成果。  
-最值得关注：随机符号距离过程（SDPs）理论突破，以及ACE-GS在3D高斯泼溅中兼顾精度与效率的权衡方案。  
-建议读者重点精读这两篇9.0分论文，并跟进速读中3D重建相关的新方法（SCOPE、Artic-O、ACEsplat）。
-- 详情：[/202606/23/README](/202606/23/README)
+今日推荐精选两篇高分论文，分别探讨随机有符号距离过程和基于图的视图剪枝多阶段优化SfM。精读部分值得重点关注SDF的随机建模与鲁棒SfM的图剪枝策略。建议普通读者优先尝试将随机符号距离模型集成到3D重建流程中，或优化多视图匹配步骤。
+- 详情：[/202606/24/README](/202606/24/README)
 
 ### 精读区论文标签
-1. [Stochastic Signed Distance Processes](/202606/23/2606.20856v1-stochastic-signed-distance-processes)  
+1. [Stochastic Signed Distance Processes](/202606/24/2606.20856v2-stochastic-signed-distance-processes)  
    标签：评分：9.0/10、query:world-model
-   evidence：多视图表面重建方法
-2. [ACE-GS: Acing the Trade-off with Accurate, Compact and Efficient 3D Gaussian Splatting](/202606/23/2606.21244v1-ace-gs-acing-the-trade-off-with-accurate-compact-and-efficient-3d-gaussian-splatting)  
+   evidence：基于SDF的概率体渲染的多视图表面重建
+2. [G-MASt3R-SfM: Graph-based View Pruning and Multi-stage Optimization for Robust SfM](/202606/24/2606.22856v1-g-mast3r-sfm-graph-based-view-pruning-and-multi-stage-optimization-for-robust-sfm)  
    标签：评分：9.0/10、query:world-model
-   evidence：准确、紧凑、高效的3D高斯泼溅渐进优化
-3. [UniviewVLA: A Unified Multiview Vision-Language-Action Model with World Modeling](/202606/23/2606.21501v1-univiewvla-a-unified-multiview-vision-language-action-model-with-world-modeling)  
+   evidence：运动恢复结构用于三维重建
+3. [DrivingVoxels: Compositional Sparse Voxel Rasterization for Dynamic Driving Scene Reconstruction](/202606/24/2606.23031v1-drivingvoxels-compositional-sparse-voxel-rasterization-for-dynamic-driving-scene-reconstruction)  
    标签：评分：9.0/10、query:world-model
-   evidence：世界模型用于多视图场景预测和遮挡理解
-4. [$φ$-Scene: Physically Grounded Image-to-3D Scene Reconstruction](/202606/23/2606.21596v1--scene-physically-grounded-image-to-3d-scene-reconstruction)  
+   evidence：组合稀疏体素光栅化用于动态驾驶场景重建
+4. [From Pixels to Concepts: Growing Rich 3D Semantic Scene Graph Forests utilizing Foundation Models](/202606/24/2606.23312v1-from-pixels-to-concepts-growing-rich-3d-semantic-scene-graph-forests-utilizing-foundation-models)  
    标签：评分：9.0/10、query:world-model
-   evidence：物理驱动的单图像到3D场景重建
-5. [Visual Geometry Transformer in the Wild: Distractor-Free 3D Reconstruction](/202606/23/2606.22787v1-visual-geometry-transformer-in-the-wild-distractor-free-3d-reconstruction)  
+   evidence：构建3D语义场景图用于世界模型理解
+5. [3DCarGen: Scalable 3D Car Generation via 3D-consistent Multi-view Synthesis](/202606/24/2606.24257v1-3dcargen-scalable-3d-car-generation-via-3d-consistent-multi-view-synthesis)  
    标签：评分：9.0/10、query:world-model
-   evidence：端到端多视图3D重建，处理干扰物
-6. [Learning Stable Canonical Worlds for Novel View Synthesis and Beyond](/202606/23/2606.23027v1-learning-stable-canonical-worlds-for-novel-view-synthesis-and-beyond)  
+   evidence：单视图3D汽车生成通过多视图合成
+6. [MM-TRELLIS: Point-Cloud Guided Multi-Modal 3D Vehicle Generation in Autonomous Driving](/202606/24/2606.24301v1-mm-trellis-point-cloud-guided-multi-modal-3d-vehicle-generation-in-autonomous-driving)  
    标签：评分：9.0/10、query:world-model
-   evidence：前馈高斯泼溅用于新视图合成，具有稳定规范世界
-7. [MeshFlow: Mesh Generation with Equivariant Flow Matching](/202606/23/2606.23489v1-meshflow-mesh-generation-with-equivariant-flow-matching)  
+   evidence：从激光雷达和图像生成三维车辆
+7. [OrbitForge: Text-to-3D Scene Generation via Reconstruction-Anchored Video Synthesis](/202606/24/2606.24799v1-orbitforge-text-to-3d-scene-generation-via-reconstruction-anchored-video-synthesis)  
    标签：评分：9.0/10、query:world-model
-   evidence：直接使用等变流匹配生成3D网格
-8. [Arbor: Explicit Geometric Conditioning for Controllable 3D Asset Generation](/202606/23/2606.23514v1-arbor-explicit-geometric-conditioning-for-controllable-3d-asset-generation)  
+   evidence：基于文本生成3D场景，结合视频合成与高斯泼溅
+8. [FLUX3D: High-Fidelity 3D Gaussian Generation with Diffusion-Aligned Sparse Representation](/202606/24/2606.24874v1-flux3d-high-fidelity-3d-gaussian-generation-with-diffusion-aligned-sparse-representation)  
    标签：评分：9.0/10、query:world-model
-   evidence：文本条件3D资产生成，具有显式几何控制
+   evidence：从图像生成3D高斯的扩散对齐方法
 
 ### 速读区论文标签
-1. [SCOPE: Scale-Consistent One-Pass Estimation of 3D Geometry](/202606/23/2606.21300v1-scope-scale-consistent-one-pass-estimation-of-3d-geometry)  
+1. [Lift4D: Harmonizing Single-View 3D Estimation for 4D Reconstruction In-the-Wild](/202606/24/2606.23688v1-lift4d-harmonizing-single-view-3d-estimation-for-4d-reconstruction-in-the-wild)  
    标签：评分：8.0/10、query:world-model
-   evidence：从单目视频进行尺度一致的3D几何估计
-2. [Artic-O: End-to-End Articulated Object Reconstruction via Latent Geometry Learning](/202606/23/2606.21938v1-artic-o-end-to-end-articulated-object-reconstruction-via-latent-geometry-learning)  
+   evidence：从单目视频进行4D动态物体重建
+2. [Inclusive Interactive Collisions for Multi-View Consistent Compositional 3D Generation](/202606/24/2606.24206v1-inclusive-interactive-collisions-for-multi-view-consistent-compositional-3d-generation)  
    标签：评分：8.0/10、query:world-model
-   evidence：通过潜在几何学习从稀疏图像端到端重建铰接物体
-3. [ACEsplat: Accelerated 3D Gaussian Scene Regression via RGB and Poses Only](/202606/23/2606.22091v1-acesplat-accelerated-3d-gaussian-scene-regression-via-rgb-and-poses-only)  
+   evidence：多视图一致组合3D生成，使用高斯图元
+3. [ArtiTwinSplat: Interactable Digital Twin Reconstruction via Gaussian Splatting from RGB-D videos](/202606/24/2606.24628v1-artitwinsplat-interactable-digital-twin-reconstruction-via-gaussian-splatting-from-rgb-d-videos)  
    标签：评分：8.0/10、query:world-model
-   evidence：仅从RGB图像和位姿快速重建三维高斯表示
-4. [Feed-forward Motion In-betweening for Any 4D](/202606/23/2606.22131v1-feed-forward-motion-in-betweening-for-any-4d)  
+   evidence：利用3D高斯泼溅从RGB-D视频重建数字孪生
+4. [FLAT: Feedforward Latent Triangle Splatting for Geometrically Accurate Scene Generation](/202606/24/2606.24876v1-flat-feedforward-latent-triangle-splatting-for-geometrically-accurate-scene-generation)  
    标签：评分：8.0/10、query:world-model
-   evidence：前馈4D动力学用于世界建模
-5. [CAOA -- Completion-Assisted Object-CAD Alignment](/202606/23/2606.18429v2-caoa----completion-assisted-object-cad-alignment)  
+   evidence：使用三角形样条从单图生成三维场景
+5. [One Image is All You Need: Agentic One-Shot Image Generation via Text-Based World Models for Long-Tail Spatial Perception](/202606/24/2606.20764v1-one-image-is-all-you-need-agentic-one-shot-image-generation-via-text-based-world-models-for-long-tail-spatial-perception)  
    标签：评分：7.0/10、query:world-model
-   evidence：用于3D重建的室内RGB-D扫描中完成辅助的CAD对齐
-6. [Beyond the Next Step: Variable-Length Latent World Models for Long-Horizon Planning](/202606/23/2606.21775v1-beyond-the-next-step-variable-length-latent-world-models-for-long-horizon-planning)  
+   evidence：基于文本的世界模型用于空间感知
+6. [Lighting-Consistent Object Transfer Across Radiance Fields](/202606/24/2606.22481v1-lighting-consistent-object-transfer-across-radiance-fields)  
    标签：评分：7.0/10、query:world-model
-   evidence：变长潜在世界模型用于长时域规划
-7. [Mesh2GS: White-Box 3DGS Construction via Plenoptic Sampling](/202606/23/2606.21898v1-mesh2gs-white-box-3dgs-construction-via-plenoptic-sampling)  
+   evidence：利用3D高斯泼溅进行场景捕捉和对象合成，并实现光照一致性调和
+7. [Lightweight Neural Framework for Robust 3D Volume and Surface Estimation from Multi-View Images](/202606/24/2606.23653v1-lightweight-neural-framework-for-robust-3d-volume-and-surface-estimation-from-multi-view-images)  
    标签：评分：7.0/10、query:world-model
-   evidence：将网格转换为3D高斯泼溅用于高质量渲染
-8. [Self-Evolving Cognitive Framework via Causal World Modeling for Embodied Scientific Intelligence](/202606/23/2606.22449v1-self-evolving-cognitive-framework-via-causal-world-modeling-for-embodied-scientific-intelligence)  
-   标签：评分：7.0/10、query:world-model
-   evidence：面向具身科学智能的因果世界建模框架
-9. [Lightweight 3D Feature Pretraining by Bayesian Inversion of 2D Foundation Models](/202606/23/2606.21292v1-lightweight-3d-feature-pretraining-by-bayesian-inversion-of-2d-foundation-models)  
+   evidence：从多视图图像估计3D体积和表面积，融合点云重建
+8. [Dense Reward for Multi-View 3D Reasoning with Global Maps and Local Views](/202606/24/2606.23557v1-dense-reward-for-multi-view-3d-reasoning-with-global-maps-and-local-views)  
    标签：评分：6.0/10、query:world-model
-   evidence：轻量级3D语义特征预训练用于场景理解
-10. [4DVLT: Dynamic Scene Understanding with Worldline-Centered Vision-Language Tracking](/202606/23/2606.22631v1-4dvlt-dynamic-scene-understanding-with-worldline-centered-vision-language-tracking)  
+   evidence：通过密集奖励学习3D场景推理的世界模型
+9. [GeoT2V-Bench: Benchmarking 3D Consistency in Text-to-Video Models via 3D Reconstruction](/202606/24/2606.24829v1-geot2v-bench-benchmarking-3d-consistency-in-text-to-video-models-via-3d-reconstruction)  
    标签：评分：6.0/10、query:world-model
-   evidence：以世界线为中心的动态场景理解与语言定位
-11. [Can Single-View Mesh Reconstruction Generalize to Robot Camera Rotation?](/202606/23/2606.22987v1-can-single-view-mesh-reconstruction-generalize-to-robot-camera-rotation)  
-   标签：评分：6.0/10、query:world-model
-   evidence：评估单视图网格重建在相机旋转下的泛化性
+   evidence：用于评估文本到视频模型3D重建的基准
 
 
 <div class="dpr-home-promo-card">
