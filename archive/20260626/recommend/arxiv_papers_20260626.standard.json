@@ -1,0 +1,412 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-26T20:54:06.783225+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2606.23027v2",
+      "source": "arxiv",
+      "title": "Learning Stable Canonical Worlds for Novel View Synthesis and Beyond",
+      "abstract": "Feed-forward Gaussian splatting (FFGS) facilitates real-time novel view synthesis, yet current methods often remain tied to view-dependent predictions. As more input views are added, they may accumulate noisy or redundant evidence instead of converging to a stable scene representation. In this paper, we introduce CanonicalGS, a feed-forward pipeline that maps cluttered multi-view observations into a stable, scene-centric representation. CanonicalGS first extracts view-centric evidence from depth, semantic features, and uncertainty estimates, and then aggregates this evidence in a canonical latent world using uncertainty-aware fusion. By emphasizing reliable observations while suppressing uncertain or redundant ones, CanonicalGS produces representations that scale more effectively for novel view synthesis and transfer to downstream visual perception tasks. Experiments show up to a $2.5$ dB improvement in peak signal-to-noise ratio for synthesizing novel views and an $11\\%$ gain in semantic segmentation accuracy.",
+      "authors": [
+        "Xiaoyu Xu",
+        "Jian Zou",
+        "Sheyang Tang",
+        "Zhihua Wang",
+        "Jing Liao",
+        "Kede Ma"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-22T08:38:39+00:00",
+      "link": "https://arxiv.org/pdf/2606.23027v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "novel view synthesis with stable scene representation",
+      "llm_evidence_cn": "基于稳定场景表示的新视角合成",
+      "llm_evidence": "基于稳定场景表示的新视角合成",
+      "canonical_evidence": "基于稳定场景表示的新视角合成",
+      "llm_tldr_en": "CanonicalGS learns stable canonical worlds for novel view synthesis, aggregating multi-view evidence with uncertainty-aware fusion to produce robust scene representations.",
+      "llm_tldr_cn": "前馈高斯泼溅方法在增加输入视图时易累积噪声和冗余。该文提出CanonicalGS，从多视图提取深度、语义和不确定性证据，并在规范潜在世界中进行不确定性感知融合，得到稳定的场景中心表示。实验证明该方法在新视角合成上更鲁棒，并支持下游任务如语义分割。",
+      "llm_tldr": "前馈高斯泼溅方法在增加输入视图时易累积噪声和冗余。该文提出CanonicalGS，从多视图提取深度、语义和不确定性证据，并在规范潜在世界中进行不确定性感知融合，得到稳定的场景中心表示。实验证明该方法在新视角合成上更鲁棒，并支持下游任务如语义分割。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.24144v1",
+      "source": "arxiv",
+      "title": "Geometry-Aware Style Transfer in 3D Gaussian Splatting",
+      "abstract": "In this paper, we present a novel geometry-aware style transfer framework for 3D Gaussian splatting (3DGS) that simultaneously transfers appearance attributes and geometric structures. Unlike prior works that primarily focus on color-based stylization and often overlook structural adaptation, our method explicitly incorporates geometry adaptation through a decoupled optimization scheme that alternately updates color and geometry parameters. This strategy alleviates potential interference between color and geometry updates, leading to stable and consistent scene-level geometry transformation. The decoupled optimization is enabled by the proposed geometry-aware contrastive feature matching (GCFM). GCFM integrates RGB, depth, and edge cues into a contrastive objective and is employed in both optimization phases to effectively transfer structural characteristics from style images to Gaussian primitives. Extensive experiments show that our approach achieves superior performance in both qualitative fidelity and quantitative metrics, significantly outperforming existing 3DGS-based stylization methods. Our code is available at \\href{https://github.com/oweixx/gast}{https://github.com/oweixx/gast}.",
+      "authors": [
+        "Min Hyeok Bang",
+        "Jun Hyeong Kim",
+        "Seung-Wook Kim",
+        "Se-Ho Lee"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-23T04:53:56+00:00",
+      "link": "https://arxiv.org/pdf/2606.24144v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "3D Gaussian splatting style transfer with geometry adaptation",
+      "llm_evidence_cn": "基于3D高斯泼溅的几何感知风格迁移",
+      "llm_evidence": "基于3D高斯泼溅的几何感知风格迁移",
+      "canonical_evidence": "基于3D高斯泼溅的几何感知风格迁移",
+      "llm_tldr_en": "Presents a geometry-aware style transfer framework for 3D Gaussian splatting that decouples color and geometry optimization using contrastive feature matching, enabling simultaneous appearance and structure transfer.",
+      "llm_tldr_cn": "现有3D高斯泼溅风格迁移仅关注颜色，忽略了几何结构改变。本文提出一种几何感知的风格迁移框架，通过解耦颜色和几何参数的交替优化，并引入几何感知对比特征匹配（GCFM），整合RGB、深度和边缘信息，实现场景外观和结构的联合迁移。实验表明该方法在保持场景几何一致性的同时生成高质量风格化结果。",
+      "llm_tldr": "现有3D高斯泼溅风格迁移仅关注颜色，忽略了几何结构改变。本文提出一种几何感知的风格迁移框架，通过解耦颜色和几何参数的交替优化，并引入几何感知对比特征匹配（GCFM），整合RGB、深度和边缘信息，实现场景外观和结构的联合迁移。实验表明该方法在保持场景几何一致性的同时生成高质量风格化结果。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.26754v1",
+      "source": "arxiv",
+      "title": "Capacity-Controlled Multi-View Stylization of 3D Gaussian Splatting",
+      "abstract": "While 3D Gaussian Splatting (3DGS) provides an efficient and explicit representation for novel view synthesis, enforcing stylistic coherence across viewpoints remains challenging. Existing 3D stylization methods typically apply 2D feature-matching losses independently per rendered view, which leads to unstable style allocation, many-to-one feature reuse, and limited cross-view consistency. We propose a capacity-controlled framework for multi-view stylization of 3DGS, grounded in optimal transport. Specifically, we reformulate local style matching as a semi-balanced optimal transport problem. By introducing explicit column-capacity constraints with tunable strength, our formulation mitigates many-to-one matching and enables controllable allocation of style features. This transport-based objective provides a principled mechanism for balancing feature coverage and stylistic diversity while maintaining stable correspondences across viewpoints. To further enhance cross-view coherence, we incorporate a novel cross-view matching guidance to constrain correspondences between scene content and style patterns. In addition, we introduce several geometric regularizations to enhance the vanilla 3DGS, thereby enabling optimized Gaussian primitives to represent finer-grained textures during stylization. Extensive experiments demonstrate that our approach significantly improves multi-view stylistic consistency and produces stable, expressive 3D stylizations while preserving the core semantic structure of the scene.",
+      "authors": [
+        "Zhihao Wen",
+        "Yixin Yang",
+        "Bojian Wu",
+        "Yang Zhou",
+        "Dani Lischinski",
+        "Daniel Cohen-Or",
+        "Hui Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-25T08:36:50+00:00",
+      "link": "https://arxiv.org/pdf/2606.26754v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "3D Gaussian splatting for multi-view stylization with capacity control",
+      "llm_evidence_cn": "面向多视角风格化的容量控制3D高斯泼溅",
+      "llm_evidence": "面向多视角风格化的容量控制3D高斯泼溅",
+      "canonical_evidence": "面向多视角风格化的容量控制3D高斯泼溅",
+      "llm_tldr_en": "Proposes a capacity-controlled framework for multi-view stylization of 3DGS using optimal transport to ensure style consistency across views.",
+      "llm_tldr_cn": "针对3D高斯泼溅在多视角风格化中风格分配不稳定、跨视角一致性差的问题，本文提出容量控制框架，将局部风格匹配建模为半平衡最优传输问题，通过列容量约束实现可调控风格分配，缓解多对一匹配，提升渲染一致性。实验表明该方法在多种场景下均能保持风格连贯性。",
+      "llm_tldr": "针对3D高斯泼溅在多视角风格化中风格分配不稳定、跨视角一致性差的问题，本文提出容量控制框架，将局部风格匹配建模为半平衡最优传输问题，通过列容量约束实现可调控风格分配，缓解多对一匹配，提升渲染一致性。实验表明该方法在多种场景下均能保持风格连贯性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.27071v1",
+      "source": "arxiv",
+      "title": "PanoImager: Geometry-Guided Novel View Synthesis and Reconstruction from Sparse Panoramic Views",
+      "abstract": "Panoramic sensing offers wide field-of-view coverage, yet 3D reconstruction from sparse panoramas remains challenging under rotation-dominant, weak-parallax motion. In such regimes, SfM/SLAM initialization is often ill-conditioned and unreliable. We present PanoImager, an SfM-free framework that combines feed-forward pose/depth priors, geometry-conditioned diffusion view completion, and depth-guided 3DGS optimization. Given only a few panoramic images, PanoImager decomposes them into local perspective views, synthesizes auxiliary observations to enrich sparse evidence, and stabilizes Gaussian optimization for improved cross-view consistency. Experiments on multiple benchmarks show improved stability under extreme sparsity, suggesting PanoImager as an offline/background component for map refinement when SfM/SLAM fails to initialize.",
+      "authors": [
+        "Zhisong Xu",
+        "Takeshi Oishi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-25T14:15:09+00:00",
+      "link": "https://arxiv.org/pdf/2606.27071v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "novel view synthesis from sparse panoramic views with 3DGS optimization",
+      "llm_evidence_cn": "基于3DGS优化的稀疏全景新视角合成",
+      "llm_evidence": "基于3DGS优化的稀疏全景新视角合成",
+      "canonical_evidence": "基于3DGS优化的稀疏全景新视角合成",
+      "llm_tldr_en": "PanoImager combines feed-forward priors, diffusion view completion, and depth-guided 3DGS for novel view synthesis and reconstruction from sparse panoramic images.",
+      "llm_tldr_cn": "针对稀疏全景下新视角合成和3D重建的挑战，PanoImager提出无SfM框架，融合前馈深度/姿态先验、几何条件扩散视图补全和深度引导的3D高斯泼溅优化。实验证明在极端稀疏场景下稳定性显著提升，有效实现新视角合成与重建。",
+      "llm_tldr": "针对稀疏全景下新视角合成和3D重建的挑战，PanoImager提出无SfM框架，融合前馈深度/姿态先验、几何条件扩散视图补全和深度引导的3D高斯泼溅优化。实验证明在极端稀疏场景下稳定性显著提升，有效实现新视角合成与重建。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.25300v1",
+      "source": "arxiv",
+      "title": "HiFiVe: High-Fidelity Vehicle Generation Leveraging Auto-Regressive 2D Generative Priors",
+      "abstract": "Existing 3D vehicle generation methods often suffer from low geometric fidelity and blurry textures, hindering their downstream applications. While recent works adopt multi-view diffusion models for high-fidelity texture, they are often constrained by fixed viewpoints, limited resolution, and a reliance on costly fine-tuning to achieve cross-view consistency. In this paper, we propose HiFiVe, a training-free framework for high-fidelity vehicle modeling through joint texture and geometry enhancement by imposing 3D geometric constraints to anchor 2D generative priors. Specifically, we propose an auto-regressive texture refinement pipeline that progressively synthesizes high-resolution textures from arbitrary viewpoints. To ensure cross-view consistency, the coarse geometry serves as a synchronization prior, conditioning each generation step on previously synthesized frames via depth-based warping and multi-view texture fusion. Moreover, the inherent symmetry of vehicles is exploited to mitigate error accumulation. Finally, high-frequency surface details are recovered by refining the mesh geometry using normal maps estimated from the enhanced textures. Extensive experiments on synthetic and real-world vehicle datasets demonstrate that our method significantly improves both geometric detail and texture quality compared to state-of-the-art baselines.",
+      "authors": [
+        "Hongli Xiao",
+        "Youjian Zhang",
+        "Qi Zheng",
+        "Zhaohui Hu",
+        "Yaohui Jin",
+        "Xiaoguang Ren",
+        "Wenjing Yang",
+        "Long Lan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-24T02:00:08+00:00",
+      "link": "https://arxiv.org/pdf/2606.25300v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "high-fidelity 3D vehicle generation from images",
+      "llm_evidence_cn": "从图像生成高保真3D车辆",
+      "llm_evidence": "从图像生成高保真3D车辆",
+      "canonical_evidence": "从图像生成高保真3D车辆",
+      "llm_tldr_en": "HiFiVe uses auto-regressive texture refinement with 3D geometric constraints to generate high-fidelity 3D vehicles from images without training.",
+      "llm_tldr_cn": "现有3D车辆生成方法纹理模糊、几何精度低。该文提出HiFiVe，无需训练，通过施加3D几何约束锚定2D生成先验，并采用自回归纹理细化流水线从任意视角合成高分辨率纹理。实验显示HiFiVe在纹理和几何保真度上超越现有方法，且支持交互式编辑。",
+      "llm_tldr": "现有3D车辆生成方法纹理模糊、几何精度低。该文提出HiFiVe，无需训练，通过施加3D几何约束锚定2D生成先验，并采用自回归纹理细化流水线从任意视角合成高分辨率纹理。实验显示HiFiVe在纹理和几何保真度上超越现有方法，且支持交互式编辑。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Generative models for 3D scene synthesis from text or images",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.26964v1",
+      "source": "arxiv",
+      "title": "Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds",
+      "abstract": "As embodied AI and world models increasingly operate in dynamic 3D environments, visual perception must move beyond passively interpreting given observations toward actively deciding what to observe. We study this problem through camera planning in dynamic 3D story worlds, where the camera must not only generate smooth motion, but also decide what visual evidence should be acquired before it moves. We formulate this capability as Narrative-Grounded World Visual Attention, where the camera acts as an embodied observer that determines what to observe, how to compose the observation, and how to shift attention over time under narrative intent and physical 3D constraints. To realize this capability, we propose Look-Before-Move, a camera planning framework that separates observation specification from motion execution. It first builds a Semantic Observation Contract to convert directorial intent into executable visual constraints, then performs Monte Carlo Viewpoint Search to find narrative-compliant and geometrically feasible viewpoints, and finally applies Semantic Trajectory Grounding to connect selected viewpoints into continuous, collision-aware, and temporally coherent camera motion. We further construct a dynamic 3D Story World Benchmark based on StoryBlender, covering 50 stories, 457 scenes, and 1585 shots with animated characters, semantic scene configurations, and executable 3D environments. Experiments show that our framework improves subject perception, intent consistency, and trajectory quality over representative baselines, demonstrating the importance of organizing visual attention before generating camera motion.",
+      "authors": [
+        "Jiaming Bian",
+        "Bingliang Li",
+        "Yuehao Wu",
+        "Pichao Wang",
+        "Zhi Wang",
+        "Hailan Ma",
+        "Huadong Mo",
+        "Zhenhong Sun"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-06-25T12:38:39+00:00",
+      "link": "https://arxiv.org/pdf/2606.26964v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "world visual attention in dynamic 3D story worlds with camera planning",
+      "llm_evidence_cn": "动态3D故事世界中的世界视觉注意力与相机规划",
+      "llm_evidence": "动态3D故事世界中的世界视觉注意力与相机规划",
+      "canonical_evidence": "动态3D故事世界中的世界视觉注意力与相机规划",
+      "llm_tldr_en": "Look-Before-Move proposes narrative-grounded world visual attention for camera planning in dynamic 3D story worlds, deciding what to observe before moving.",
+      "llm_tldr_cn": "在动态3D环境中，视觉感知需要从被动观察转向主动决定观察内容。本文通过动态3D故事世界中的相机规划研究这一问题，提出叙事引导的世界视觉注意力框架。Look-Before-Move方法让相机作为具身观察者，在叙事意图和3D物理约束下决定观察内容、构图和注意力转移。实验证明该方法能生成符合叙事的连贯相机运动，为具身AI和世界模型提供了新的视觉注意机制。",
+      "llm_tldr": "在动态3D环境中，视觉感知需要从被动观察转向主动决定观察内容。本文通过动态3D故事世界中的相机规划研究这一问题，提出叙事引导的世界视觉注意力框架。Look-Before-Move方法让相机作为具身观察者，在叙事意图和3D物理约束下决定观察内容、构图和注意力转移。实验证明该方法能生成符合叙事的连贯相机运动，为具身AI和世界模型提供了新的视觉注意机制。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.22617v1",
+      "source": "arxiv",
+      "title": "OmniSpace: Efficient Geometry Awareness for Autonomous Vehicles MLLMs",
+      "abstract": "Multimodal Large Language Models (MLLMs) have achieved remarkable performance on 2D visual tasks, yet enhancing their spatial intelligence for real-world applications such as Autonomous Vehicles (AV) remains an open challenge. Existing geometry-aware MLLMs typically rely on auxiliary 3D models at inference time, introducing pipeline complexity and the risk of cascading failures. In this paper, we present OmniSpace, a simple yet effective plug-and-play paradigm for geometry-aware spatial reasoning from purely 2D observations. Motivated by our finding that current MLLMs are bottlenecked by weak cross-view correspondence and depth estimation, OmniSpace introduces a Camera Pose Injector, a Multi-view Epipolar Attention module, and a 3D Geometric Distillation objective that jointly address these two limitations by transferring geometric knowledge into the model. Extensive experiments show that OmniSpace surpasses existing methods on planning benchmarks (nuScenes, Bench2Drive), risk detection (nuInstruct), language (Omnidrive), and generalization (DriveBench).",
+      "authors": [
+        "Hao Vo",
+        "Phu Loc Nguyen",
+        "Khoa Vo",
+        "Sieu Tran",
+        "Duc Minh Nguyen",
+        "Ngo Xuan Cuong",
+        "Nghi D. Q. Bui",
+        "Anh Nguyen",
+        "Duy Minh Ho Nguyen",
+        "Ngan Le"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-21T17:47:31+00:00",
+      "link": "https://arxiv.org/pdf/2606.22617v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Enhances spatial understanding for autonomous driving world models",
+      "llm_evidence_cn": "提升自动驾驶世界模型的空间理解",
+      "llm_evidence": "提升自动驾驶世界模型的空间理解",
+      "canonical_evidence": "提升自动驾驶世界模型的空间理解",
+      "llm_tldr_en": "OmniSpace improves geometry awareness in MLLMs for autonomous vehicles by injecting camera pose and multi-view epipolar attention, enabling 3D reasoning from 2D images.",
+      "llm_tldr_cn": "针对自动驾驶多模态大模型（MLLM）空间智能不足的问题，OmniSpace提出了一种即插即用的几何感知范式：通过相机位姿注入器、多视角极线注意力模块和3D几何蒸馏，让MLLM从纯2D观测中进行3D空间推理。实验表明在不需要额外3D模型的情况下显著提升了深度估计和空间理解能力，为构建自动驾驶世界模型提供了高效解决方案。",
+      "llm_tldr": "针对自动驾驶多模态大模型（MLLM）空间智能不足的问题，OmniSpace提出了一种即插即用的几何感知范式：通过相机位姿注入器、多视角极线注意力模块和3D几何蒸馏，让MLLM从纯2D观测中进行3D空间推理。实验表明在不需要额外3D模型的情况下显著提升了深度估计和空间理解能力，为构建自动驾驶世界模型提供了高效解决方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.27305v1",
+      "source": "arxiv",
+      "title": "Sculpting NeRF Geometry: Human-Preference Fine-Tuning of a 3D-Aware Face GAN",
+      "abstract": "Reinforcement learning from human feedback (RLHF) for 3D generation is now established across a number of works, but most existing pipelines optimise explicit surface representations, often by converting radiance fields into meshes and training heavily on surface-supervised data. We instead fine-tune a pretrained 3D-aware generative model directly from a learned reward over radiance-field density ($σ$) values, with no externally supplied mesh or shape prior. The reward model requires no pretraining, trains easily on a small set of preference samples, and yields robust improvement in 3D geometry. Working on an unconditional 3D-aware face GAN (EG3D), our reward reads the continuous 3D density field of the neural radiance field (NeRF) directly and supplies a geometry-only learning signal, requiring neither text conditioning, mesh extraction, nor multi-view rendering. A density-consistency constraint keeps the 2D appearance qualitatively similar while the geometry is reshaped, at a measurable but bounded distributional cost (FID-50k rises from 4.09 to 6.66): the fine-tuned generator, trained from the preferences of a single annotator as a proof of concept, produces face geometries preferred by users in 74.4% of pairwise comparisons.",
+      "authors": [
+        "Archer Moore",
+        "Mingming Gong",
+        "Liam Hodgkinson"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-25T17:26:06+00:00",
+      "link": "https://arxiv.org/pdf/2606.27305v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "fine-tuning a 3D-aware face GAN via human preference on radiance field density",
+      "llm_evidence_cn": "通过人类偏好微调三维感知人脸GAN，基于辐射场密度",
+      "llm_evidence": "通过人类偏好微调三维感知人脸GAN，基于辐射场密度",
+      "canonical_evidence": "通过人类偏好微调三维感知人脸GAN，基于辐射场密度",
+      "llm_tldr_en": "Sculpting NeRF Geometry fine-tunes a 3D-aware face GAN using RLHF directly on NeRF density fields, improving geometry without surface supervision.",
+      "llm_tldr_cn": "现有基于人类反馈的3D生成优化通常依赖于显式表面表示或大量表面监督数据。本文直接在预训练的三维感知生成模型（EG3D）上，基于辐射场密度值学习奖励模型进行微调。无需网格或形状先验，仅需少量偏好样本即可训练奖励模型。实验表明该方法显著改善了生成的三维几何质量，同时保持了高保真度。这为3D生成模型的对齐提供了更简洁高效的解决方案。",
+      "llm_tldr": "现有基于人类反馈的3D生成优化通常依赖于显式表面表示或大量表面监督数据。本文直接在预训练的三维感知生成模型（EG3D）上，基于辐射场密度值学习奖励模型进行微调。无需网格或形状先验，仅需少量偏好样本即可训练奖励模型。实验表明该方法显著改善了生成的三维几何质量，同时保持了高保真度。这为3D生成模型的对齐提供了更简洁高效的解决方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d generative models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.26985v1",
+      "source": "arxiv",
+      "title": "Vis4GS: A Visual Analytic Tool for 3D Gaussian Splatting Reconstruction",
+      "abstract": "3D Gaussian Splatting (3DGS) supports fast training and real-time rendering, but its optimization process remains difficult to interpret. Existing viewers mainly expose the final reconstructed scene and offer limited support for explaining how Gaussian properties contribute to visible artifacts or evolve during training. We present Vis4GS, a multi-view visual analytics tool for primitive-level diagnosis of 3DGS reconstruction artifacts. Built on the original 3DGS viewer and training framework, Vis4GS links rendered artifacts to Gaussian properties, View Coverage, training progress, and Gaussian genealogy through four linked views: an interactive Gaussian analysis view, a property timeline view, a Gaussian densification tree view, and a log and control panel. The system supports Gaussian selection, blur and needle-like artifact scoring, View Coverage analysis, and multiscale genealogy exploration of clone, split, prune, and clone-split events. By connecting scene-level artifacts with primitive-level evidence and optimization history, Vis4GS enables a structured workflow for diagnosing reconstruction failures beyond final-image inspection and global metrics. A user study also shows that Vis4GS provides stronger support for usability and artifact understanding than the original 3DGS viewer.",
+      "authors": [
+        "Kai-Yuan Lin",
+        "Aryabima Mandala Putra",
+        "Jui-Chi Lee",
+        "Shih-Hsuan Hung"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR"
+      ],
+      "published": "2026-06-25T12:59:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.26985v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "visual analytic tool for 3D Gaussian splatting reconstruction",
+      "llm_evidence_cn": "3D高斯泼溅重建的可视分析工具",
+      "llm_evidence": "3D高斯泼溅重建的可视分析工具",
+      "canonical_evidence": "3D高斯泼溅重建的可视分析工具",
+      "llm_tldr_en": "Presents Vis4GS, a multi-view visual analytics tool for primitive-level diagnosis of 3DGS reconstruction artifacts, linking artifacts to Gaussian properties, view coverage, and training progress.",
+      "llm_tldr_cn": "3D高斯泼溅（3DGS）重建过程难以解释，现有工具仅展示最终场景。本文提出Vis4GS，一个多视图可视化分析工具，通过交互式高斯分析视图、属性时间线视图、高斯密集化树视图等，将渲染伪影与高斯属性、视图覆盖率和训练进度关联，实现原语级诊断。",
+      "llm_tldr": "3D高斯泼溅（3DGS）重建过程难以解释，现有工具仅展示最终场景。本文提出Vis4GS，一个多视图可视化分析工具，通过交互式高斯分析视图、属性时间线视图、高斯密集化树视图等，将渲染伪影与高斯属性、视图覆盖率和训练进度关联，实现原语级诊断。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.27345v1",
+      "source": "arxiv",
+      "title": "RayPE: Ray-Space Positional Encoding for 3D-Aware Video Generation",
+      "abstract": "Modern video diffusion transformers position their tokens through RoPE on the (u,v,t) axes -- a description of the camera's sampling grid that says nothing about the 3D structure of the scene. We observe that the geometric relation between two camera rays is captured by the Plucker reciprocal product, which is bilinear in the two rays -- the same algebraic form as the dot product in Transformer attention. Building on this analogy, we propose RayPE, a positional-encoding extension that injects per-token 6D Plucker coordinates additively into the queries and keys of self-attention, with a query/key flip arrangement under which the symmetric identity configuration coincides exactly with the reciprocal product. The injection is additive, the resulting attention score decomposes into a content term, a geometry term, and two content and geometry cross-terms -- all of which our experiments find individually necessary. To make the encoding stable across video data with heterogeneous camera-translation scales (SfM, deep SLAM, metric), we further decouple ray direction from moment magnitude, gate the encoding by a learned function of the log-magnitude, and apply RMSNorm to align it with the QKNorm-normalized content branch. The full module adds less than 0.1% parameters to a pretrained video DiT, is zero-initialized to start from the pretrained weights, and improves camera controllability, cross-frame 3D consistency, and overall video quality on a four-dataset training mixture.",
+      "authors": [
+        "Minghao Yin",
+        "Jiahao Lu",
+        "Wenbo Hu",
+        "Wang Zhao",
+        "Shan Ying",
+        "Kai Han"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-25T17:51:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.27345v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Enables 3D-aware video generation via ray-space encoding",
+      "llm_evidence_cn": "通过射线空间位置编码实现3D感知视频生成",
+      "llm_evidence": "通过射线空间位置编码实现3D感知视频生成",
+      "canonical_evidence": "通过射线空间位置编码实现3D感知视频生成",
+      "llm_tldr_en": "RayPE injects Plucker coordinates into attention to make video diffusion transformers 3D-aware, enabling better geometric consistency in generated video.",
+      "llm_tldr_cn": "针对视频扩散Transformer缺乏3D结构感知的问题，RayPE提出了一种射线空间位置编码：将每个token的6D Plucker坐标加性注入注意力机制的查询和键，使自注意力能够建模射线间的几何关系。实验表明该方法在不增加额外模型的情况下显著提升了生成视频的3D一致性，有效支持新视角合成等任务。",
+      "llm_tldr": "针对视频扩散Transformer缺乏3D结构感知的问题，RayPE提出了一种射线空间位置编码：将每个token的6D Plucker坐标加性注入注意力机制的查询和键，使自注意力能够建模射线间的几何关系。实验表明该方法在不增加额外模型的情况下显著提升了生成视频的3D一致性，有效支持新视角合成等任务。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
