@@ -1,0 +1,176 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-27T20:59:41.872340+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2606.26410v1",
+      "source": "arxiv",
+      "title": "Neural Voxel Dynamics: Learning Implicit 3D Physics via Volumetric Feature Advection",
+      "abstract": "We present a self-supervised framework for learning implicit 3D physical dynamics directly from video-derived supervisory signals. While current generative video models achieve high visual fidelity, they lack a 3D geometric foundation, often resulting in physical inconsistencies and a failure to maintain object permanence. We address this by shifting the predictive bottleneck from 2D image space to a `lifted' 3D Volumetric Latent Space. Our method unprojects semantic features from a Video Joint-Embedding Predictive Architecture (V-JEPA) into a voxelized grid, grounded by monocular depth priors. This lifting enables a Volumetric Feature Advection to learn an action-conditioned transition operator that treats physics as a spatio-temporal state advection problem, i.e., learn implicit 3D physics. Unlike state-of-the-art hybrid models that rely on explicit classical simulators for training and/or inference, our architecture tracks material states implicitly within high-dimensional V-JEPA features. This allows for the emergent simulation of heterogeneous phenomena (e.g., rigid body motion in fluid flow) within a single, unified pipeline. Supervised solely via end-to-end video-derived signal plus action conditions, without access to physics engine internal states, labels, or surrogate models, our model demonstrates good long-term structural stability and physical plausibility on multiple benchmarks (CLEVERER, PhysInOne, PhysGaia). We believe that this work opens a scalable pathway toward general-purpose dynamic world models that internalize the 3D invariants of the physical world solely through passive observation of monocular videos.",
+      "authors": [
+        "Zican Wang",
+        "Niloy Mitra"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-24T22:06:35+00:00",
+      "link": "https://arxiv.org/pdf/2606.26410v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "implicit 3D physics learning for world model",
+      "llm_evidence_cn": "用于世界模型的隐式3D物理学习",
+      "llm_evidence": "用于世界模型的隐式3D物理学习",
+      "canonical_evidence": "用于世界模型的隐式3D物理学习",
+      "llm_tldr_en": "Learns implicit 3D physical dynamics from video by lifting 2D features into a volumetric latent space and learning a transition operator via volumetric feature advection.",
+      "llm_tldr_cn": "本文针对生成视频模型缺乏3D几何基础导致物理不一致的问题，提出自监督框架，将视频特征提升到3D体素潜在空间，并通过体素特征平流学习作用条件转移算子。该方法在物理预测和物体永存性上表现优异。",
+      "llm_tldr": "本文针对生成视频模型缺乏3D几何基础导致物理不一致的问题，提出自监督框架，将视频特征提升到3D体素潜在空间，并通过体素特征平流学习作用条件转移算子。该方法在物理预测和物体永存性上表现优异。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.24353v1",
+      "source": "arxiv",
+      "title": "Open-Vocabulary BEV Segmentation with 3D-Aware Geometric Constraints",
+      "abstract": "Bird's-eye view (BEV) perception fuses multi-camera images into a unified top-down representation for autonomous driving. Despite recent progress, state-of-the-art methods remain confined to closed-set scenarios, making them vulnerable to unpredictable real-world environments. In this work, we introduce open-vocabulary BEV segmentation (OVBS), which leverages vision-language models (VLMs) to recognize categories beyond the training set while maintaining precise BEV perception and real-time efficiency. A key challenge in OVBS lies in the 3D geometric inconsistency inherent in the ill-posed lifting of 2D VLM semantics into BEV. To address this, we propose OVBEVSeg, a geometry-aware OVBS framework that enhances efficient Gaussian splatting (GS)-based unprojection by leveraging robust 3D geometric constraints across three progressive stages: (1) 2D-to-BEV pseudo-labeling via reliable 3D projection for OV generalization; (2) joint 2D-BEV per-scene optimization with BEV structural constraints for 3D geometric consistency; and (3) 3D geometric distillation for online efficiency. On the nuScenes dataset, OVBEVSeg achieves state-of-the-art performance, outperforming closed-set methods by 15.3 mIoU on unseen categories. Remarkably, even with no novel-class ground-truth labels, it remains competitive with self- and semi-supervised baselines trained with up to 40% of ground-truth annotations. Furthermore, it achieves 2.5x faster inference with only 0.22x the memory consumption of projection-based methods. Project page: https://hchoi256.github.io/projects/ovbevseg/.",
+      "authors": [
+        "Hojun Choi",
+        "Seulbin Hwang",
+        "Dae Jung Kim",
+        "Kisung Kim",
+        "Hyunjung Shim",
+        "Jinhan Lee"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-06-23T09:43:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.24353v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses Gaussian splatting for 3D-aware segmentation",
+      "llm_evidence_cn": "使用高斯泼溅实现3D感知分割",
+      "llm_evidence": "使用高斯泼溅实现3D感知分割",
+      "canonical_evidence": "使用高斯泼溅实现3D感知分割",
+      "llm_tldr_en": "Introduces open-vocabulary BEV segmentation with geometry-aware Gaussian splatting-based unprojection to address 3D inconsistency.",
+      "llm_tldr_cn": "本文针对BEV分割中2D语义提升到3D时的几何不一致问题，提出OVBEVSeg框架，利用高效高斯泼溅反投影实现3D感知特征融合。方法在保持实时性的同时支持开放词汇识别。",
+      "llm_tldr": "本文针对BEV分割中2D语义提升到3D时的几何不一致问题，提出OVBEVSeg框架，利用高效高斯泼溅反投影实现3D感知特征融合。方法在保持实时性的同时支持开放词汇识别。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.22076v2",
+      "source": "arxiv",
+      "title": "Learning Cross-View Semantic Priors for Single-Reference Unseen Object Pose Estimation",
+      "abstract": "Single-reference unseen object 6D pose estimation reduces object onboarding by estimating poses of arbitrary novel objects from only one reference view. Recent correspondence-based pipelines have achieved robust performance with vision foundation model (VFM) features. However, they typically treat these features as intra-view descriptors, leaving dense visual-semantic cues, including appearance, structure, and context, insufficiently exchanged across views before geometric decoding. Consequently, the decoded point features may lack joint semantic and geometric discriminability, making correspondence estimation still difficult in challenging cases. Instead of processing features independently, we build the correspondence pipeline around an early cross-view semantic prior. Specifically, cross-view semantic interaction (CVSI) enables dense query and reference VFM tokens to exchange semantic context and form a cross-view prior. Nevertheless, direct CVSI may disturb the VFM token structure, while the resulting semantic prior still needs 3D representation consistency for rigid correspondence. To make this CVSI prior reliable for 3D correspondence learning, we introduce two complementary training-time constraints: the intra-view structure preservation (IVSP) loss preserves the original intra-view token affinity structure during interaction, while the reference-anchored geometric consistency (RAGC) loss enforces spatial representation consistency of decoded point features. The final pose is recovered from learned correspondences through weighted SVD. We further construct a challenging view-pair protocol from the BOP Challenge datasets YCB-V and TUD-L to evaluate robustness in difficult matching scenarios. Extensive experiments on six benchmarks under different view-pair settings show that our method achieves state-of-the-art performance while maintaining comparable inference speed.",
+      "authors": [
+        "Jiahong Chen",
+        "Jinghao Wang",
+        "Ziwen Wang",
+        "Zi Wang",
+        "Banglei Guan",
+        "Qifeng Yu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-20T14:50:51+00:00",
+      "link": "https://arxiv.org/pdf/2606.22076v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Cross-view semantic priors for single-reference object pose estimation",
+      "llm_evidence_cn": "用于单参考物体位姿估计的跨视图语义先验",
+      "llm_evidence": "用于单参考物体位姿估计的跨视图语义先验",
+      "canonical_evidence": "用于单参考物体位姿估计的跨视图语义先验",
+      "llm_tldr_en": "This work improves single-reference unseen object pose estimation by building a correspondence pipeline around cross-view semantic priors, exchanging dense visual-semantic cues before geometric decoding.",
+      "llm_tldr_cn": "本文针对单参考视图未见物体6D位姿估计，提出在几何解码前交换跨视图视觉语义线索的对应管道。利用视觉基础模型特征，增强点特征的联合语义和几何判别性，在挑战场景下提升对应估计的鲁棒性。",
+      "llm_tldr": "本文针对单参考视图未见物体6D位姿估计，提出在几何解码前交换跨视图视觉语义线索的对应管道。利用视觉基础模型特征，增强点特征的联合语义和几何判别性，在挑战场景下提升对应估计的鲁棒性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.23634v1",
+      "source": "arxiv",
+      "title": "Pose Anything Anywhere:Model-free Object Poses from Arbitrary References",
+      "abstract": "Estimating the 6D pose of unseen objects is a fundamental yet challenging problem for open-world robotics and embodied perception. Model-based methods are accurate but depend on CAD assets or heavy onboarding, while most model-free approaches are still limited to pairwise single-anchor matching and thus fail under occlusion and large viewpoint changes with low query-reference overlap. Therefore, we present PANY, a unified model-free framework that seamlessly supports both RGB and RGB-D inputs, operates on one or sparse pose-free reference views, and generalizes effectively to novel objects. Built on a multi-view transformer geometry backbone, PANY moves beyond pairwise matching by learning view-consistent geometry and cross-view alignment cues that remain stable under wide baselines and limited overlap. When additional unposed assist views are available, PANY aggregates them via pose-graph canonical registration to increase geometric coverage and reinforce the final pose. Extensive experiments show that PANY achieves state-of-the-art performance across multiple benchmarks, substantially outperforming existing model-free methods, improving pose accuracy by +12% on YCB-V and over +20% on LM-O. Furthermore, PANY consistently performs well under both single-reference and sparse-reference settings, demonstrating strong robustness in real-world environments.",
+      "authors": [
+        "Hongli Xu",
+        "Jiaqi Hu",
+        "Junwen Huang",
+        "Boyang Zhong",
+        "Peter KT Yu",
+        "Nassir Navab",
+        "Benjamin Busam",
+        "Slobodan Ilic"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-22T17:23:57+00:00",
+      "link": "https://arxiv.org/pdf/2606.23634v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Model-free 6D pose estimation for unseen objects using multi-view transformer",
+      "llm_evidence_cn": "基于多视图transformer的无模型6D位姿估计",
+      "llm_evidence": "基于多视图transformer的无模型6D位姿估计",
+      "canonical_evidence": "基于多视图transformer的无模型6D位姿估计",
+      "llm_tldr_en": "PANY presents a unified model-free framework for 6D pose estimation of unseen objects from sparse reference views, using a multi-view transformer for view-consistent geometry.",
+      "llm_tldr_cn": "本文提出PANY，一个统一的无模型框架，用于从稀疏参考视图估计未见物体的6D位姿。它基于多视图transformer几何骨干，学习视图一致的几何和跨视图对齐线索，超越了传统的成对匹配。在RGB和RGB-D输入上均有效，并泛化到新物体。",
+      "llm_tldr": "本文提出PANY，一个统一的无模型框架，用于从稀疏参考视图估计未见物体的6D位姿。它基于多视图transformer几何骨干，学习视图一致的几何和跨视图对齐线索，超越了传统的成对匹配。在RGB和RGB-D输入上均有效，并泛化到新物体。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
