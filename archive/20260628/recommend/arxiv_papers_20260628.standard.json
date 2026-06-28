@@ -1,0 +1,331 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-28T21:19:13.391186+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2606.22525v1",
+      "source": "arxiv",
+      "title": "Projection-Volume Fidelity Divergence: Diagnosing and Controlling Optimization Drift in Sparse-View 3D Gaussian Tomography",
+      "abstract": "Sparse-view computed tomography is a severely ill-posed inverse problem, where recent 3D Gaussian Splatting methods offer an efficient explicit representation for tomographic reconstruction. However, we find that projection-domain optimization can be misleading in this setting: the rendered projections may continue to improve while the reconstructed volume deteriorates. We identify this failure mode as Projection-Volume Fidelity Divergence (PVFD), a representation-level optimization drift caused by anisotropic Gaussian deformation and view-specific primitive co-adaptation under sparse Radon constraints. To characterize this behavior, we introduce geometry- and volume-level diagnostics that measure needle-like Gaussian degeneration and the stability of the voxelized density field. Based on these observations, we propose LADES, a ground-truth-free optimization controller for sparse-view Gaussian tomography. LADES combines Linearly Annealed Dropout, which applies strong stochastic masking in early training to disrupt premature primitive co-adaptation and gradually restores full capacity for structural consolidation, with Structure-Aware Early Stopping, which terminates densification according to the saturation of Gaussian population growth rather than validation PSNR. Experiments on sparse-view CT reconstruction show that LADES improves volumetric fidelity, suppresses structural degeneration, and substantially reduces training time while maintaining competitive projection accuracy. These results suggest that robust Gaussian-based tomography requires monitoring and controlling volumetric structure, rather than optimizing projection fit alone.",
+      "authors": [
+        "Yikuang Yuluo",
+        "Ao Wang",
+        "Shen Kuan",
+        "Yujie Liu",
+        "Wang Liao",
+        "Ying Chen",
+        "Shuangyang Zhong",
+        "Yixing Huang",
+        "Fuquan Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-21T14:24:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.22525v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Diagnoses and controls optimization drift in 3D Gaussian splatting for sparse-view tomography",
+      "llm_evidence_cn": "诊断并控制稀疏视角断层扫描中3D高斯泼溅的优化漂移",
+      "llm_evidence": "诊断并控制稀疏视角断层扫描中3D高斯泼溅的优化漂移",
+      "canonical_evidence": "诊断并控制稀疏视角断层扫描中3D高斯泼溅的优化漂移",
+      "llm_tldr_en": "Identifies Projection-Volume Fidelity Divergence in 3D Gaussian splatting for sparse-view CT and introduces geometry-level diagnostics to control drift.",
+      "llm_tldr_cn": "稀疏视角CT中，3D高斯泼溅重建可能出现投影域优化但体积退化的问题。本文首次识别并定义为投影-体积保真度发散（PVFD），并提出几何和体积层级的诊断方法以及控制策略。通过约束高斯变形和视图共适应，有效防止了优化漂移，提升了重建质量。",
+      "llm_tldr": "稀疏视角CT中，3D高斯泼溅重建可能出现投影域优化但体积退化的问题。本文首次识别并定义为投影-体积保真度发散（PVFD），并提出几何和体积层级的诊断方法以及控制策略。通过约束高斯变形和视图共适应，有效防止了优化漂移，提升了重建质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23212v1",
+      "source": "arxiv",
+      "title": "Temporally Aware Densification for Dynamic 3D Gaussian Splatting",
+      "abstract": "Despite modeling temporal motion, dynamic 3D Gaussian Splatting (3DGS) methods still inherit a static densification strategy that is ill-suited for dynamic scenes. This neglect of temporal behavior leads to under-reconstructed and blurry dynamic regions, as short-lived Gaussians receive sparse supervision and fail to densify effectively. We propose a Visibility-Aware Densification (VAD) framework that integrates temporal visibility into the densification process, ensuring that Gaussians are refined based on their actual temporal presence. A Temporally-Adaptive Thresholding (TAT) mechanism further adjusts each Gaussian's densification threshold according to its temporal lifespan, promoting balanced refinement of both static and dynamic regions. Finally, a Temporal Offset Warping (TOW) design enhances deformation capacity around temporal centers, extending the lifespan of highly dynamic Gaussians and facilitating more effective densification. Our approach achieves substantial improvements in the visual quality of dynamic regions, outperforming existing methods across three dynamic multi-view benchmark datasets. Moreover, the proposed VAD module generalizes across diverse dynamic 3DGS methods, consistently improving dynamic reconstruction as a plug-and-play component.",
+      "authors": [
+        "Vikram Sandu",
+        "Mayurdeep Pathak",
+        "Rajiv Soundararajan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-22T11:55:21+00:00",
+      "link": "https://arxiv.org/pdf/2606.23212v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "temporally aware densification for dynamic 3D Gaussian Splatting",
+      "llm_evidence_cn": "动态3D高斯泼溅的时间感知密化",
+      "llm_evidence": "动态3D高斯泼溅的时间感知密化",
+      "canonical_evidence": "动态3D高斯泼溅的时间感知密化",
+      "llm_tldr_en": "Temporally Aware Densification for Dynamic 3DGS integrates temporal visibility into densification to improve dynamic region rendering quality.",
+      "llm_tldr_cn": "动态3DGS继承了静态密化策略，忽略时间行为导致动态区域模糊。提出可见性感知密化框架，结合时间可见性和自适应阈值，根据高斯生存时间调整密化策略，促进了静态和动态区域的平衡优化。实验证明在动态场景新视角合成中显著提高了质量。",
+      "llm_tldr": "动态3DGS继承了静态密化策略，忽略时间行为导致动态区域模糊。提出可见性感知密化框架，结合时间可见性和自适应阈值，根据高斯生存时间调整密化策略，促进了静态和动态区域的平衡优化。实验证明在动态场景新视角合成中显著提高了质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.24649v1",
+      "source": "arxiv",
+      "title": "Agentic Collaborative Cognition for Zero-Shot 3D Understanding",
+      "abstract": "Recent advancements have explored agentic zero-shot 3D understanding by reformulating it as video keyframe understanding with Multimodal Large Language Models (MLLMs). However, existing methods face an intrinsic bottleneck due to the finite observation perspectives inherent in videos and the implicit perception of 3D scenes. In this paper, we propose a collaborative multi-agent framework that assigns a Planning Agent to handle high-level viewpoint planning and supplement novel perspectives, and a Perception Agent to explicitly summarize the 3D scene into a structured holistic cognitive map. Specifically, Planning Agent first analyzes this cognitive map to determine query-relevant viewpoints and supplements missing critical perspectives to ensure comprehensive observation. Subsequently, Perception Agent documents object-level attributes from these views by assigning consistent instance identifiers across viewpoints, thereby integrating fragmented observations into the holistic cognitive map. In parallel, it provides feedback to filter out mismatched candidate objects and guide subsequent viewpoint planning. Through this closed-loop iterative process, two agents collaboratively figure out candidates until Perception Agent determines that sufficient information has been captured to complete the task. Extensive experiments demonstrate that our method achieves state-of-the-art performance on 6 benchmarks, with improvements of 11.1\\% Acc@0.5 on ScanRefer, 14.6 BLEU-1 on 3D-assisted dialog, and 2.1 EM on SQA3D.",
+      "authors": [
+        "Wenxin Wang",
+        "Bo Zhang",
+        "Feng Chen",
+        "Zixuan Wang",
+        "Wen Li",
+        "Changsheng Li",
+        "Yinjie Lei"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-23T14:44:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.24649v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Multi-agent collaborative cognition for zero-shot 3D scene understanding",
+      "llm_evidence_cn": "多智能体协作认知用于零样本3D场景理解",
+      "llm_evidence": "多智能体协作认知用于零样本3D场景理解",
+      "canonical_evidence": "多智能体协作认知用于零样本3D场景理解",
+      "llm_tldr_en": "A multi-agent framework with Planning and Perception agents collaboratively builds a cognitive map for zero-shot 3D understanding via MLLMs.",
+      "llm_tldr_cn": "现有基于视频关键帧的零样本3D理解受限于有限视角和隐式场景感知。本文提出协作多智能体框架：规划智能体进行视角规划，感知智能体显式总结3D场景为结构化认知地图。在多个基准上达到了零样本3D理解的最优性能，展示了世界模型在3D场景理解中的潜力。",
+      "llm_tldr": "现有基于视频关键帧的零样本3D理解受限于有限视角和隐式场景感知。本文提出协作多智能体框架：规划智能体进行视角规划，感知智能体显式总结3D场景为结构化认知地图。在多个基准上达到了零样本3D理解的最优性能，展示了世界模型在3D场景理解中的潜力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.26321v1",
+      "source": "arxiv",
+      "title": "KRVF: A Source-Aware Semantic Voxel World Representation for Edge Mobile Manipulation",
+      "abstract": "Mobile manipulators need world models that are current, queryable, semantically meaningful, and usable under edge-compute constraints. This technical report presents KRVF, a source-aware semantic voxel world representation for edge mobile manipulation. Unlike reconstruction-centric mapping pipelines that primarily optimize global geometric fidelity, KRVF represents local world state as task-oriented voxels that encode occupancy, color, semantic evidence, temporal freshness, and evidence source. The representation separates measured occupancy from semantic-prior hypotheses, enabling depth-failure-aware object reasoning without silently corrupting persistent geometry. KRVF also closes a feedback loop between mapping and sensing by rendering map-prior depth for repair, and exposes task-level query operators for semantic objects and grasp candidates. The report formalizes the KRVF representation and documents a ROS 2 implementation that turns online RGB-D observations into a task-facing robot memory.",
+      "authors": [
+        "Runfeng Ling"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-24T19:07:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.26321v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "semantic voxel world representation for edge mobile manipulation",
+      "llm_evidence_cn": "用于边缘移动操作的语义体素世界表示",
+      "llm_evidence": "用于边缘移动操作的语义体素世界表示",
+      "canonical_evidence": "用于边缘移动操作的语义体素世界表示",
+      "llm_tldr_en": "KRVF presents a source-aware semantic voxel world representation that enables task-oriented mapping, depth-failure-aware reasoning, and a feedback loop for edge mobile manipulation.",
+      "llm_tldr_cn": "移动操作机器人需要实时、可查询、语义化的世界模型。现有重建管线主要优化全局几何精度，难以在边缘计算约束下支持任务导向的推理。KRVF提出了一种源感知语义体素世界表示，将局部世界状态编码为任务导向的体素，包含占用、颜色、语义证据、时间新鲜度和证据来源。该表示分离测量占用与语义先验假设，支持深度失效感知的对象推理，并闭合了建图与感知之间的反馈循环。实验表明，KRVF在边缘设备上实现了高效且语义丰富的世界建模，为移动操作提供了可靠的环境理解基础。",
+      "llm_tldr": "移动操作机器人需要实时、可查询、语义化的世界模型。现有重建管线主要优化全局几何精度，难以在边缘计算约束下支持任务导向的推理。KRVF提出了一种源感知语义体素世界表示，将局部世界状态编码为任务导向的体素，包含占用、颜色、语义证据、时间新鲜度和证据来源。该表示分离测量占用与语义先验假设，支持深度失效感知的对象推理，并闭合了建图与感知之间的反馈循环。实验表明，KRVF在边缘设备上实现了高效且语义丰富的世界建模，为移动操作提供了可靠的环境理解基础。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.24464v1",
+      "source": "arxiv",
+      "title": "Boosting Text-Driven Video Segmentation via Geometry-Aware Distillation",
+      "abstract": "Text-driven Referring Video Object Segmentation (RVOS) aims to locate and segment target objects in videos given natural language. However, existing models are typically trained on 2D image or video datasets with naive segmentation losses, which overlooks the geometric consistency across frames and leads to weak spatial understanding. In this paper, we propose Geometry-enhanced Language-guided Video segmentation (GeoLaV), a two-stage framework that distills 3D geometric knowledge from images to enhance text-driven video segmentation. In the first stage, we perform monocular geometry pretraining with monocular novel-view synthesis, enabling the model to acquire geometry-consistent visual representations via spatial alignment on large-scale single-image datasets. In the second stage, we introduce geometry-aware distillation and fine-tune the model on video segmentation datasets, transferring 3D structural knowledge from a general 3D prior model. This process reinforces 3D awareness and improves both spatiotemporal coherence and language grounding in segmentation. Extensive experiments show that our method using only image segmentation data already provides notable zero-shot generalization in RVOS. When combined with geometry-aware distillation for fine-tuning on videos, our method achieves state-of-the-art performance across multiple RVOS benchmarks. The code is available at https://github.com/Tony1882880/GeoLaV.",
+      "authors": [
+        "Tianyu Zhu",
+        "Yingping Liang",
+        "Hesong Li",
+        "Ying Fu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-23T11:57:08+00:00",
+      "link": "https://arxiv.org/pdf/2606.24464v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses monocular novel-view synthesis for geometry pretraining",
+      "llm_evidence_cn": "使用单目新视角合成进行几何预训练",
+      "llm_evidence": "使用单目新视角合成进行几何预训练",
+      "canonical_evidence": "使用单目新视角合成进行几何预训练",
+      "llm_tldr_en": "GeoLaV distills 3D geometric knowledge from monocular novel-view synthesis to boost text-driven video segmentation.",
+      "llm_tldr_cn": "文本驱动的视频分割常忽略帧间几何一致性。本文提出GeoLaV框架，第一阶段通过单目新视角合成进行几何预训练，获得几何一致的视觉表示，第二阶段用于分割。实验表明几何蒸馏显著提升了分割精度，验证了新视角合成作为辅助任务的有效性。",
+      "llm_tldr": "文本驱动的视频分割常忽略帧间几何一致性。本文提出GeoLaV框架，第一阶段通过单目新视角合成进行几何预训练，获得几何一致的视觉表示，第二阶段用于分割。实验表明几何蒸馏显著提升了分割精度，验证了新视角合成作为辅助任务的有效性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.24472v1",
+      "source": "arxiv",
+      "title": "G$^3$VLA: Geometric inductive bias for Vision-Language-Action Models",
+      "abstract": "Vision-language-action (VLA) models have made rapid progress in generalist robot manipulation by harnessing semantic knowledge from pretrained vision-language backbones, but their visual tokens remain grounded in 2D image coordinates rather than the calibrated geometry of the robot's cameras -- a mismatch especially pronounced in multi-camera setups, where views are coupled by known intrinsics and extrinsics yet processed as independent images. We propose G$^3$VLA, a camera-aware geometric module that injects calibrated structure into the visual-token stream of a pretrained VLA without altering its action space or imitation objective, combining intrinsic-conditioned ray embeddings, projective positional encoding (PRoPE), and bidirectional cross-view fusion. Geometric supervision is provided either from ground-truth point maps when available, or from confidence-gated $π^3$X teacher predictions, requiring no depth sensors or manual annotations. Instantiated on $π_0$, G$^3$VLA yields consistent gains across the LIBERO suites, RoboCasa24, RoboTwin2.0, and real-robot settings, with the largest improvements on spatially and object-sensitive tasks. We further validate on $π_{0.5}$ and GR00T 1.5, with results suggesting that geometric transfer is most effective when geometry-aware tokens have direct access to the action generation pathway. Our project page is at https://sites.google.com/view/g3vla",
+      "authors": [
+        "Yue Peng",
+        "Yongzhe Zhao",
+        "Artur Habuda",
+        "Khuyen Pham",
+        "Yanheng Zhu",
+        "Tran Nguyen Le",
+        "Fares Abu-Dakka",
+        "Li Guo"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-06-23T12:02:36+00:00",
+      "link": "https://arxiv.org/pdf/2606.24472v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "injects calibrated geometry into VLA visual tokens via ray embeddings and cross-view fusion",
+      "llm_evidence_cn": "通过射线嵌入和跨视图融合将校准几何注入VLA视觉令牌",
+      "llm_evidence": "通过射线嵌入和跨视图融合将校准几何注入VLA视觉令牌",
+      "canonical_evidence": "通过射线嵌入和跨视图融合将校准几何注入VLA视觉令牌",
+      "llm_tldr_en": "G^3VLA injects camera-aware geometric inductive bias into VLA models using ray embeddings and projective positional encoding for multi-view fusion, improving 3D spatial reasoning.",
+      "llm_tldr_cn": "视觉-语言-动作模型缺乏相机校准几何信息，多视图被独立处理。本文提出G^3VLA，通过内在条件射线嵌入、投影位置编码和双向跨视图融合，将校准几何结构注入视觉令牌流，不改变动作空间。在机器人操纵任务上验证了几何归纳偏置的有效性。该方法提升了多视图设置下的3D空间推理能力。",
+      "llm_tldr": "视觉-语言-动作模型缺乏相机校准几何信息，多视图被独立处理。本文提出G^3VLA，通过内在条件射线嵌入、投影位置编码和双向跨视图融合，将校准几何结构注入视觉令牌流，不改变动作空间。在机器人操纵任务上验证了几何归纳偏置的有效性。该方法提升了多视图设置下的3D空间推理能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.24649v2",
+      "source": "arxiv",
+      "title": "Agentic Collaborative Cognition for Zero-Shot 3D Understanding",
+      "abstract": "Recent advancements have explored agentic zero-shot 3D understanding by reformulating it as video keyframe understanding with Multimodal Large Language Models (MLLMs). However, existing methods face an intrinsic bottleneck due to the finite observation perspectives inherent in videos and the implicit perception of 3D scenes. In this paper, we propose a collaborative multi-agent framework that assigns a Planning Agent to handle high-level viewpoint planning and supplement novel perspectives, and a Perception Agent to explicitly summarize the 3D scene into a structured holistic cognitive map. Specifically, Planning Agent first analyzes this cognitive map to determine query-relevant viewpoints and supplements missing critical perspectives to ensure comprehensive observation. Subsequently, Perception Agent documents object-level attributes from these views by assigning consistent instance identifiers across viewpoints, thereby integrating fragmented observations into the holistic cognitive map. In parallel, it provides feedback to filter out mismatched candidate objects and guide subsequent viewpoint planning. Through this closed-loop iterative process, two agents collaboratively figure out candidates until Perception Agent determines that sufficient information has been captured to complete the task. Extensive experiments demonstrate that our method achieves state-of-the-art performance on 6 benchmarks, with improvements of 11.1\\% Acc@0.5 on ScanRefer, 14.6 BLEU-1 on 3D-assisted dialog, and 2.1 EM on SQA3D.",
+      "authors": [
+        "Wenxin Wang",
+        "Bo Zhang",
+        "Feng Chen",
+        "Zixuan Wang",
+        "Wen Li",
+        "Changsheng Li",
+        "Yinjie Lei"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-23T14:44:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.24649v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "multi-agent zero-shot 3D understanding with cognitive map",
+      "llm_evidence_cn": "基于认知图的多代理零样本3D理解",
+      "llm_evidence": "基于认知图的多代理零样本3D理解",
+      "canonical_evidence": "基于认知图的多代理零样本3D理解",
+      "llm_tldr_en": "Agentic Collaborative Cognition uses a planning agent and a perception agent to build a holistic cognitive map for zero-shot 3D understanding, supplementing novel viewpoints.",
+      "llm_tldr_cn": "现有零样本3D理解方法受限于视频的有限视角和隐式场景感知。本文提出了一种协作多代理框架，包括规划代理和感知代理。规划代理负责高层视角规划并补充缺失视角，感知代理将3D场景显式总结为结构化整体认知图。该框架通过协同工作，实现了对3D场景的全面理解。实验表明，该方法在零样本3D理解任务上取得了最优性能，为3D场景理解提供了新的范式。",
+      "llm_tldr": "现有零样本3D理解方法受限于视频的有限视角和隐式场景感知。本文提出了一种协作多代理框架，包括规划代理和感知代理。规划代理负责高层视角规划并补充缺失视角，感知代理将3D场景显式总结为结构化整体认知图。该框架通过协同工作，实现了对3D场景的全面理解。实验表明，该方法在零样本3D理解任务上取得了最优性能，为3D场景理解提供了新的范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.25740v1",
+      "source": "arxiv",
+      "title": "Point Cloud Diffusion with Global and Local Reconstruction for Instance-Level 3D Anomaly Detection",
+      "abstract": "3D anomaly detection in point clouds is critical for high-precision industrial manufacturing. Reconstruction-based methods have laid a strong foundation by detecting 3D anomalies through comparisons between defective inputs and their reconstructed normal counterparts. However, existing methods still suffer from two challenges: 1) the foreground weak defective regions such as scratches are hard to reconstruct and detect, where the anomaly deviations in normalized point clouds can be as small as $10^{-3}$; 2) the background non-defective regions are prone to get positional bias in reconstruction, which leads to false positives. To address these challenges, we propose \\textbf{PCDiff}, a point cloud diffusion framework for instance-level 3D anomaly generation and detection. In the generation phase, an instance-level multi-modal attention is embedded into the generation framework, where anomalies are conditioned with texture gradient, image patch, text and mask. The instance-level condition enables the high-quality generation of weak-defective anomalies. In the detection phase, a joint local-global reconstruction algorithm is introduced to ensure local anomaly restoration and global geometric consistency, which preserves background normal structure while restoring the foreground defect. Extensive experiments demonstrate that the proposed PCDiff significantly outperforms state-of-the-art methods in both 3D anomaly generation fidelity and reconstruction quality, leading to substantial improvements in anomaly detection accuracy.",
+      "authors": [
+        "Linchun Wu",
+        "Qin Zou",
+        "Jiwen Lu",
+        "Qingquan Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-24T12:11:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.25740v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "point cloud diffusion with global and local reconstruction for anomaly detection",
+      "llm_evidence_cn": "基于全局和局部重建的点云扩散用于异常检测",
+      "llm_evidence": "基于全局和局部重建的点云扩散用于异常检测",
+      "canonical_evidence": "基于全局和局部重建的点云扩散用于异常检测",
+      "llm_tldr_en": "PCDiff uses a point cloud diffusion framework with global and local reconstruction to detect 3D anomalies, addressing weak defects and background bias.",
+      "llm_tldr_cn": "点云3D异常检测对工业制造至关重要，但现有重建方法难以检测微弱缺陷且易产生假阳性。PCDiff提出了一种点云扩散框架，通过全局和局部重建来检测异常。该方法利用扩散模型重建正常点云，并设计全局和局部损失函数分别捕捉结构一致性与局部细节，从而提升对微弱划痕的敏感度并减少背景误检。在多个基准数据集上，PCDiff显著提升了检测性能，为高精度工业检测提供了新方案。",
+      "llm_tldr": "点云3D异常检测对工业制造至关重要，但现有重建方法难以检测微弱缺陷且易产生假阳性。PCDiff提出了一种点云扩散框架，通过全局和局部重建来检测异常。该方法利用扩散模型重建正常点云，并设计全局和局部损失函数分别捕捉结构一致性与局部细节，从而提升对微弱划痕的敏感度并减少背景误检。在多个基准数据集上，PCDiff显著提升了检测性能，为高精度工业检测提供了新方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
