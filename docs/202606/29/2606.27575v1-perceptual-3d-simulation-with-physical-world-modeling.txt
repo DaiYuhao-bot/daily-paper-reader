@@ -1,0 +1,632 @@
+Title: Perceptual 3D Simulation With Physical World Modeling
+
+URL Source: https://arxiv.org/pdf/2606.27575v1
+
+Published Time: Mon, 29 Jun 2026 00:16:16 GMT
+
+Number of Pages: 15
+
+Markdown Content:
+# Perceptual 3D Simulation With Physical World Modeling 
+
+# Wanhee Lee 1* Klemen Kotar 1* Rahul Mysore Venkatesh 1*
+
+# Jared Watrous 1* Daniel L. K. Yamins 1
+
+> 1
+
+Stanford University 
+
+# Abstract 
+
+Predicting how a scene will evolve after a desired 3D transformation from images is a central goal in vision, graphics, and robotics. Yet unlike ideal simulators with full access to 3D geometry and dynamics, real world sys-tems must rely on perceptual inputs and local actions that are inherently partial and incomplete. In this work, we present P3Sim , a physical world modeling system that sim-ulates future scene states under both partial observations and incomplete 3D transformation signals. P3Sim is com-posed of three interacting components: a learned physical world model, a geometric conditioning module, and a per-sistent scene memory. The world model interprets percep-tion as probabilistic inference over multimodal scene vari-ables, providing predictions of the distributions of any scene variable conditioned on any combination of others. The ge-ometric conditioning module provides a partial 3D trans-form signal for conditioning the world model at inference time. The persistent scene memory integrates predictions over time, enabling online updates and consistency under uncertainty. By combining learned inference with explicit geometric structure, P3Sim balances data-driven flexibil-ity with built-in inductive bias. This design yields a flexi-ble perceptual simulator that generalizes across diverse 3D transformation tasks, such as novel view synthesis, object manipulation, and dynamic scene prediction, advancing to-ward general purpose 3D scene understanding and trans-formation. 
+
+# 1. Introduction 
+
+Understanding and predicting how a 3D scene evolves un-der physical or camera transformations is a central goal in vision, graphics, and robotics. In simulated environments such as game engines, this process is straightforward be-cause the system has full access to scene geometry, materi-als, and physical dynamics. A comparable capability in the real world would enable powerful applications such as con-trollable video generation, interactive scene manipulation, and embodied reasoning, but achieving this from raw visual 
+
+> *Equal contribution.
+
+Figure 1. P3Sim System Overview. The P3Sim perceptual 3D simulation system consists of three components: a physical world model (Ψ), a geometrizer (Γ), and a persistent scene memory (μ). 
+
+Ψ performs probabilistic inference over multimodal scene vari-ables, RGB, depth, and optical flow, to predict unobserved ele-ments from partial inputs. Γ derives transformation cues such as partial target depth and motion-consistent flow that describe 3D transforms. μ integrates these predictions over time to maintain a coherent and temporally consistent 3D representation. 
+
+inputs remains a major open challenge. Real-world perception is inherently partial and incom-plete, making 3D simulation from images fundamentally difficult. Large parts of the environment are occluded or unobserved, so the full 3D structure cannot be directly com-puted after an object or camera moves. Moreover, local actions provide only limited information about their global consequences. Lifting one corner of a cloth does not reveal how the rest of it deforms, and pushing an object does not specify whether it will collide or interact with others nearby. These difficulties highlight three core challenges. First, rea-soning under uncertainty is unavoidable because both the geometry and the transformations are only partially known. Second, a model must balance built-in geometric structure with learned knowledge from data: some priors, such as projective geometry or motion constraints, are best hard-coded, while others must emerge from experience. Third, perception and prediction must operate online, continually updating as new observations arrive, which requires an ef-fective mechanism for persistent memory and belief refine-ment over time. Our framework explicitly addresses all three challenges through the integration of probabilistic in-ference, geometric conditioning, and temporal memory. To address this challenge, we build the Perceptual Phys-ical Simulation system ( P3Sim ), a unified framework com-posed of three key components: a data-driven physical 1
+
+> arXiv:2606.27575v1 [cs.CV] 25 Jun 2026
+
+world model, a geometric conditioning module, and a per-sistent scene memory. The physical world model forms the core of P3Sim, interpreting perception and simulation as probabilistic inference over a graphical model of multi-modal scene variables. Each scene is represented through local scene elements such as RGB patches, depth patches, and optical flow patches, which together describe the visi-ble structure and 3D transforms of the world. The model can reason about any subset of these variables as condi-tioning and predict the remaining ones, enabling flexible inference under partial or uncertain observations. The ge-ometric conditioning module, named geometrizer, provides physically grounded transformation cues by deriving par-tial depth information in the target frame that represents both scene motion and camera-induced geometry changes. Finally, the persistent scene memory integrates these pre-dictions over time, maintaining a consistent 3D represen-tation across frames. Together, these three components, probabilistic inference, geometric conditioning, and tempo-ral memory, enable P3Sim to simulate physically coherent scene evolution from incomplete visual data. With this framework, we demonstrate a series of 3D scene transformation tasks that illustrate how P3Sim uni-fies reasoning under both partial geometry and incomplete transformation information. The system encompasses a broad spectrum of scenarios: it performs 3D scene trans-formation from incomplete geometry, including novel view synthesis, object manipulation, and joint tasks that combine both viewpoint and object motion. It also extends to trans-formations where motion information is incomplete, such as deformable object manipulation, where only part of the object is moved, and multi-object interactions, where mov-ing one object may lead to unknown collisions or secondary motions of nearby objects, as well as multi-agent settings involving humans or vehicles whose actions should be pre-dicted. Finally, P3Sim leverages its generative capability to complete 3D geometry by integrating predicted states over time, enabling the reconstruction of consistent 3D struc-ture. Together, these results show that P3Sim effectively addresses the key challenges of uncertainty, inductive bias, and memory, demonstrating a unified approach to physi-cal reasoning and 3D scene transformation from incomplete perceptual data. 
+
+# 2. Related Works 
+
+Camera driven conditioning. Novel View Synthesis (NVS) models aim to predict new views from observed images and a target pose. Diffusion-based models such as Zero-1-to-3, ZeroNVS, MotionCtrl, ViewCrafter, and SEVA [20, 28, 32, 38, 42] improve over regression-based NVS [3, 37] by sampling diverse and plausible completions in unobserved regions. These methods rely on diffusion pipelines and often lack robust camera control and flexible 3D transforms. Our model uses an autoregressive formula-tion that supports more robust and broader 3D conditioning. 
+
+Local motion driven conditioning. Object manipula-tion focuses on transforming selected regions of a scene while the camera remains fixed. Drag based methods such as [29, 32, 33, 36] guide stable diffusion [27] by convert-ing user inputs into two dimensional motion cues. These approaches can be extended to simple three dimensional modifications by incorporating depth information into the drag signal [31]. Other models [14, 24] edit the input depth map according to the desired transformation and use a depth conditioned diffusion model to synthesize the updated im-age. These methods rely on inverting the input image into the latent space of stable diffusion which often fails on real images [22], whereas our model avoids latent inversion and performs local edits through the same autoregressive prob-abilistic inference used for NVS. 
+
+Tracking based joint motion. Recent work explores motion control by conditioning diffusion models on tracked trajectories. Methods such as [7, 12, 15] train spatio-temporal control networks on top of large video diffusion backbones [1] and demonstrate abilities that include object movement, camera motion, drag based editing, and motion transfer. Other approaches [5, 9, 40] use 3D point trajec-tories to provide stronger spatial control during generation, though consistent control in complex real scenes remains limited. Our model, in contrast, operates reliably in real world settings and supports arbitrarily dense 3D control sig-nals, while prior methods typically provide only sparse and limited control. 
+
+World Modeling. World models seek to build a uni-fied generative system that can interpret sensory input, pre-dict future states, and support interaction. Early approaches such as Dreamer [10] learned latent dynamics in simplified settings, while recent large scale models including Genie [2] and GAIA-1 [11] expand this idea to multimodal, physically grounded domains. However, their action conditioning is often limited and relies on semantic cues that do not en-force geometric consistency. Following recent probabilistic 3D world modeling approaches [16, 17], our work predicts 3D scene changes from partial visual evidence, using depth and optical flow to support physically coherent, controllable 3D simulation in real world settings. 
+
+# 3. Method 
+
+We describe the three main components of our perceptual 3D simulation system: the physical world model Ψ, the ge-ometric conditioning module Γ, and the persistent scene memory μ. The physical world model (Figure 2) inter-prets perception and simulation as probabilistic inference over multimodal scene variables, predicting any unobserved subset given the observed ones. The geometrizer Γ (Fig-ure 3) provides the world model with transformation cues 2Figure 2. Physical World Modeling with Multimodal Probabilistic Prediction. Our model simulates 3D scene evolution from partial observations across RGB, depth, flow, and camera pose. (a) Multimodal spatio–temporal inputs define partial structure and motion. (b) The model flexibly conditions on available cues (e.g., known flow, partial depth) and predicts the rest. (c) A probabilistic graphical model represents multimodal scene variables as local nodes. (d) Random-access sequence modeling serializes these nodes as pointer–value pairs, enabling controllable inference across space, time, and modality. 
+
+derived from partial depth and optical flow that represent physically consistent 3D motion and camera-induced ge-ometry changes. These cues serve as explicit conditioning inputs that guide Ψ in simulating the next scene state un-der desired transformations. The persistent scene memory 
+
+μ (Figure 3) integrates predictions from successive frames, storing both observed and inferred variables to maintain a coherent 3D representation over time. Together, these com-ponents enable the system to simulate physically grounded scene evolution from incomplete visual data. 
+
+3.1. Physical World Modeling with Multimodal Probabilistic Prediction 
+
+The physical world model ( Ψ) learns to infer and simulate future 3D scene states from incomplete observations by pre-dicting missing geometric and motion information across modalities within a unified probabilistic framework. 
+
+Probabilistic World Model formulation. We represent a scene as a set of random variables {xp}p∈P . The set P
+
+enumerates the variable identities, with each pointer p ∈ P 
+
+indexing a persistent local scene element, e.g. a spatial lo-cation, time index, and modality. The set of possible values the variables xp can take on is denoted by V, represent-ing, e.g. RGB intensities, optical flow displacements, or depth levels. At a given time, the currently observed state is denoted by X, which is described by a partial function 
+
+X : dom( X) ⊆ P → V mapping each observed pointer 
+
+p ∈ dom (X) to its measured value X(p), the observed in-stance of the variable xp.The goal of the physical world model Ψ is to infer the conditional distribution of any unobserved variable xp given the observed state X:
+
+Ψ : ( X, p / ∈ dom( X)) 7 → { Pr[( p, v ) | X] | v ∈ V} .
+
+This formulation, in effect, defines a probabilistic graphical model (PGM) over the scene variables [13], where infer-ence corresponds to predicting the conditional distributions of missing nodes. Sampling from Ψ then produces plausible completions for all unobserved variables that are consistent with the available observations. 
+
+Sequence formulation with pointers. Directly training the PGM over all scene variables has generally been consid-ered intractable due to the combinatorial number of possible conditioning subsets [6]. To make training and inference tractable, we reformulate the model as an autoregressive se-quence prediction problem by serializing the data X into an interleaved sequence of pointers  pi and content tokens  vi,and train a causal transformer to model the distribution over the content token at an arbitrary query pointer p.
+
+Ψ( X ◦ p) ≡ Pr v | p0, v 0, . . . , p k, v k, p .
+
+Unlike fixed-order sequential modeling (e.g., raster-order image generation), pointer tokens make the traversal order itself a controllable variable, enabling random-access de-coding. This formulation converts high-dimensional PGM inference into standard GPT-style training over randomized traversal paths, bridging structured probabilistic reasoning with large-scale generative modeling. 
+
+Token types and sequence design for 3D control. Each scene is represented by multimodal variables  {xp}p∈P  ,3Figure 3. Constructing Geometric Conditioning Signals and Persistent Scene Memory. (a) Partial geometry is constructed from reference depth by identifying valid and visible surfaces. (b) After applying known 3D transformations, the geometrizer Γ reprojects valid regions to the target view to generate partial depth and flow conditioning. (c) The persistent scene memory μ integrates predicted and observed geometry over time, pruning inconsistent or occluded regions to maintain a coherent 3D representation. Together, these modules provide consistent geometric evidence for perceptual 3D simulation. 
+
+where each pointer  p specifies spatial location, time index, and modality and each variable  xp takes a discrete value 
+
+v ∈ V  encoding RGB, depth, or flow content. A learned en-coder maps continuous inputs to compact latent codes (see supplementary materials for details on encoding and quan-tization). Together,  P and  V define the token types of our world model, capturing appearance, geometry, and motion. Each training sample consists of interleaved pointer–value pairs, (p0, v 0), (p1, v 1), . . . , (pk, v k).Randomized pointer order across space lets the model infer missing variables from arbitrary subsets of known ones. By choosing modality subsets (RGB, depth, and optical flow) as conditioning tokens, the same formulation unifies geometric reconstruction, novel view synthesis, and motion prediction within a random-access decoding process. 
+
+Training details. We train a 7B-parameter autoregressive transformer with next-token prediction cross entropy loss, supervising only the content token (and not the pointer to-ken) sequence elements. The training dataset consisted of 3 million RGB video clips, yielding a total of approximately 1.4 trillion tokens. Training used a batch size of 512 for 1.5M steps using a Warmup-Stable-Decay schedule. The learning rate peaks at 3e-4 and decays to zero over the fi-nal 100K steps. The sequence length is 4096, increased to 8192 for the last 20K steps. We provide full sequence construction procedures and implementation details in the supplementary materials. 
+
+Flexible inference pathways. By prompting the model with combinations of optical flow (scene dynamics) and tar-get depth (post-transform geometry), we define several in-ference pathways. We organize prompts along two axes: (i) flow density ,indicating how fully dynamics are known, and (ii) depth sparsity , indicating how much geometry is available after the desired 3D transform. This yields two representative categories: • Known dynamics (dense flow) with richer target geom-etry (less sparse  Dtgt ). The motion field is fully specified, and the model renders the outcome consistent with post-transform structure: 
+
+D1 ∼ Ψ( I0, D 0, F 0→1, D sparse  
+
+> 1
+
+)
+
+I1 ∼ Ψ( I0, D 0, F 0→1, D 1)
+
+Representative tasks include: 
+
+– Novel view synthesis: dense flow plus sparse or low-resolution target depth to guide parallax and disocclu-sion. 
+
+– Rigid object manipulation: dense flow describing rigid motion plus moderately dense target depth constraining shape and contact. • Unknown or partial dynamics (sparse flow) with very sparse geometry (more sparse  Dtgt ). Only limited mo-tion and geometry are known, requiring inference of miss-ing dynamics and structure: 
+
+D1 ∼ Ψ( I0, F sparse  
+
+> 0→1
+
+, D sparse  
+
+> 1
+
+).
+
+Representative tasks include: 
+
+– Deformable object manipulation: sparse flow at con-tact regions and very sparse depth for global deforma-tion inference. 
+
+– Object interactions: sparse flow and depth for a subset of objects, requiring collision and response reasoning. 
+
+– Multi-agent actions: sparse motion cues under uncer-tainty, requiring probabilistic prediction. Varying flow density and depth sparsity allows a single model to span confident geometry-driven prediction under known dynamics and open-ended inference under partial observations and transform signals. 
+
+3.2. Constructing Geometric Conditioning Signals 
+
+Local scene elements, such as RGB, depth, and optical flow, form nodes in a probabilistic model over scene structure 4and motion. Constructing appropriate geometric condition-ing signals provides the concrete 3D evidence required for this model to infer the remaining unobserved variables. We therefore introduce a module, Γ, for producing determin-istic geometric constraints given a scene observation and a user- or agent-specified camera and object transformations: 
+
+(Ft−1→t, D sparse  
+
+> t
+
+) = Γ( {D0: t−1}, K, P t, {T (o) 
+
+> t
+
+}),
+
+where {D0: t−1} are the previous depth maps, K is the cam-era intrinsics, Pt is the target camera pose, and T (o) 
+
+> t
+
+denotes the desired 3D transform for each object o. Here, Ft−1→t is a 2D image-space optical flow computed by applying these transforms to the 3D points of Dt−1 and reprojecting them into the target frame, while Dsparse  
+
+> t
+
+retains only regions with reliable geometric evidence propagated from prior observa-tions. At inference time, the specified transformations are assumed known by task definition. At training time, depth and flow are estimated and therefore noisy. The outputs of Γ
+
+serve as conditioning inputs to the Ψ, which predicts the re-maining uncontrolled aspects of the scene probabilistically. The scene is first divided into observed and unobserved 
+
+regions. The observed region corresponds to areas visible from the reference camera, while the unobserved region in-cludes occluded or out-of-view parts. The surface geometry derived from depth 0 is further classified as valid or invalid 
+
+based on local surface orientation. A surface is considered valid if the angle between its surface normal n and viewing direction v satisfies θ = cos −1(n · (−v)) < θ th . Surfaces exceeding this threshold are treated as invalid, as they are likely to be unreliable. 
+
+Static scenes. For static settings such as novel view syn-thesis, the camera moves while the scene remains fixed. Partial depth 1 is obtained by projecting valid surfaces from the reference view to the target and retaining only rays that hit visible regions before entering occlusions. Flow condi-tioning is computed by transforming 3D points from depth 0
+
+to the target camera and measuring their 2D displacement. 
+
+Dynamic scenes with known motion. When both camera and object motions are known, surfaces from (rgb 0, depth 0)
+
+are segmented and displaced by their 3D transformations. Paired undersurface meshes move with each object to pre-serve occlusion consistency. Rendering this composite ge-ometry defines valid partial depth 1. Flow is obtained by re-projecting the transformed 3D points into the target frame. 
+
+Dynamic scenes with partial motion. If only part of the motion is known, flow conditioning is computed only from known motions and other parts are masked. Also, regions with unknown dynamics are invalid and excluded from par-tial depth 1. We provide further details in the supplementary materials. 
+
+3.3. Persistent Scene Memory Module 
+
+The persistent scene memory μt is the integrated 3D scene estimate at time t. It stores surface elements, unobserved volumes, camera information, and 3D motion fields for each frame in a global coordinate system and preserves only structures that remain consistent with all observed frames. Queries of the form μt(t′), where t′ ∈ [0 , t ], return the scene geometry at frame t′ using the accumulated memory from all frames in [0 , t ].At each step, we reconstruct the per-frame geometry 
+
+Gt = BackProject (Dt, T t),
+
+where Dt is the depth map of the frame, Tt is the camera pose and intrinsics, and Gt contains both the visible surface geometry and the unobserved volume implied by occlusions and limited camera coverage. To handle non-rigid scene transformations such as ob-ject manipulation, we denote a 3D motion field input Mt
+
+which transforms the geometry data Gt into the memory co-ordinate system. In the case of sparse ( e.g. single-object) motion conditioning, we mask Mt as described in 3.2. The memory is updated by 
+
+μt = Update μ
+
+
+
+μt−1, Gt, Mt, D t, T t
+
+
+
+.
+
+The update applies two consistency checks. First, the previous memory is transformed into the current camera view and any unobserved volume that projects closer than the observed depth is removed. Second, the new geome-try is projected back into earlier viewpoints and any unob-served volume described by past observations is removed. The surviving elements from both sets are merged to form 
+
+μt. Further details including projection rules and handling of partial visibility appear in the supplementary materials. 
+
+# 4. Demonstrating the Perceptual 3D Simulator 
+
+We demonstrate how our model serves as a perceptual 3D simulator that interprets static geometry and dynamic scene evolution directly from visual inputs. First, we show how it infers and manipulates physical state by recovering ge-ometry, synthesizing novel views, and simulating rigid mo-tion (Figure 4, Figure 5, Figure 6). We then extend this to dynamic phenomena, where the model predicts transfor-mations caused by deformation, collision, and multi-agent interactions (Figure 7, Figure 8, Figure 9). Finally, we show that it integrates predictions over time to build a scene-level representation that supports both global and object-centered understanding, including amodal completion of occluded structures (Figure 10). These results together illustrate how a unified autoregressive world model can link perception with simulation and support flexible reasoning about physi-cal scenes. 5Figure 4. Novel View Synthesis. The model renders unseen view-points of static scenes. This capability supports tasks such as in-door navigation, robot data augmentation, and object-centric re-construction. 
+
+4.1. Modeling Physical State: Predicting Geometry 
+
+We illustrate how the model predicts the scene geometry when the 3D motion of the visible geometry is fully known. 
+
+Novel View Synthesis with Simulated Camera Motion 
+
+Novel view synthesis enables navigation and exploration by revealing occluded geometry from new viewpoints (Fig-ure 4). In this setting, the scene is static and the camera motion is known, providing dense optical flow and partial target depth as geometric conditioning. 
+
+Rigid Object Manipulation Rigid object manipulation tests the model’s ability to handle desired object motion (Figure 5). Known 3D transformations provide dense flow and partial depth signals that define the object’s motion and shape constraints. 
+
+Joint Camera and Object Motion In scenes where both the camera and multiple objects move, the model integrates global and local displacements (Figure 6). 
+
+4.2. Modeling Physical Dynamics: Predicting Transforms 
+
+We next explore settings where scene dynamics are only partially known and the model must infer how other ob-   
+
+> Figure 5. Rigid Object Manipulation. The model simulates scene appearance after a rigid object moves in 3D following a de-sired transformation. This capability can support object manipula-tion and planning tasks.
+> Figure 6. Joint Camera and Object Motion. The model predicts scene appearance when both the camera and a rigid object move simultaneously, combining global and local 3D transformations.
+
+6Figure 7. Deformable Object Manipulation. The model sim-ulates appearance changes when local parts of an object move in 3D, causing other connected regions to deform accordingly. Red arrows indicate the input motion, and yellow arrows show the in-duced motion predicted by the model. 
+
+jects and materials move. Here, optical flow conditioning is sparse, and target geometry is highly incomplete, requiring the model to predict missing physical transformations. 
+
+Deformable Object Manipulation When only local mo-tion cues at contact regions are known, the model infers global deformation and recovers plausible object shapes af-ter manipulation (Figure 7). 
+
+Reasoning About Collisions In scenes with interacting rigid bodies, the model receives partial flow for a subset of objects and must infer collision outcomes for the rest. These examples suggest that the model can predict plausible physical interactions between objects (Figure 8). 
+
+Acting with Other Agents When multiple agents move with uncertain intent, motion cues become ambiguous. The model can still predict a distribution over possible futures, showing its capacity to represent multi-agent uncertainty under incomplete control (Figure 9). 
+
+4.3. Extracting a Complete Scene Description 
+
+Finally, we show how the model integrates predictions over time to build a consistent and complete 3D understanding of the scene. This process uses the persistent scene mem-    
+
+> Figure 8. Reasoning about Collision The model predicts how objects interact when local 3D motion leads to contact or impact in 3D. Red arrows indicate the input motion, and yellow arrows show the induced motion predicted by the model.
+> Figure 9. Acting with Other Agents. The model predicts how an agent’s motion influences and is influenced by another agent in the scene. Red arrows indicate the input motion, and yellow arrows show the induced motion predicted by the model.
+
+7Figure 10. Extracting a Complete Scene Description. (a) Scene-level description: the model aggregates per-frame geometry into a globally consistent 3D map aligned across views. (b) Object-level description: object-centric novel view synthesis enables geometrically consistent object shape completion. (c) Amodal completion: the model reconstructs occluded or unseen structures, yielding a more com-plete 3D scene representation. 
+
+ory mechanism to merge partial observations into a unified geometric description (Figure 10). 
+
+Scene-level Description Each frame contributes local ge-ometry reconstructed from its depth and camera pose. By transforming all frames into a shared coordinate system and pruning geometry inconsistent with current depth observa-tions, the model recovers a coherent scene-level map that maintains visibility consistency across time. 
+
+Object-level Description We obtain the object shape through object-centric novel view synthesis. Controlled viewpoint changes around the object reveal surfaces that are not visible in the input frame. Moving the object further helps detach it from the surrounding scene, as demonstrated in the amodal completion result. 
+
+Amodal Completion The model infers structure that is never fully visible in any single frame and completes un-observed or occluded regions by removing objects to reveal the hidden geometry. 
+
+# 5. Quantitative Results 
+
+Model RE10K LLFF DTU 
+
+ViewCrafter 20.88 10.53 12.66 SEVA 18.11 14.03 14.47 
+
+P3Sim (Ours) 21.54 15.18 15.50  
+
+> Table 1. SEVA benchmark PSNR results for NVS. Evaluation under the small-viewpoint NVS setting on the Reconfusion split across RE10K, LLFF, and DTU datasets [42].
+
+We quantitatively evaluate our model on two core tasks, novel view synthesis (NVS) and 3D object motion, since these represent the fundamental components of 3D scene transformation. Other results in this paper are the natural extensions of these capabilities and do not have a standard-ized benchmark for evaluation. 
+
+Model PSNR ↑ LPIPS ↓ EA ↑
+
+DragAnything 15.13 0.443 0.517 Diffusion Handles 17.82 0.344 0.619 LightningDrag 19.52 0.184 0.722 
+
+P3Sim (Ours) 23.12 0.121 0.827 
+
+> Table 2. 3D object manipulation results on 3DEditBench.
+
+Novel View Synthesis. For NVS, we use the SEVA [42] benchmark, which provides a standardized protocol for single-image view synthesis. We compare our model against ViewCrafter [38] and SEVA [42]. Our model achieves high performance across datasets (Table 1), which shows that it preserves global scene coherence and provides precise and stable camera control. 
+
+3D Object Manipulation. For 3D object manipulation, we evaluate using the 3DEditBench benchmark [17]. This dataset provides paired images with known 3D object trans-formations across diverse categories and scenes. We mea-sure reconstruction quality using PSNR and LPIPS and evaluate edit accuracy with the Edit Adherence (EA) met-ric [24]. We compare against DiffusionHandles [24], Light-ningDrag [29], and DragAnything [33]. Quantitative results (Table 2) show that our model achieves consistently higher PSNR and EA scores, indicating both better image quality and more faithful 3D transformations. 
+
+# 6. Conclusion 
+
+We introduced a framework for perceptual 3D simulation that predicts future scene states under partial observations and incomplete 3D transformations. By extending autore-gressive sequence modeling with perceptual 3D signals such as depth and optical flow, the model can simulate cam-era motion, object interactions, and scene dynamics from a single image. This work advances toward general-purpose physical world models that reason about how visual scenes change over time. 8Acknowledgements 
+
+This work was supported by the following awards: To D.L.K.Y.: Simons Foundation grant 543061, National Sci-ence Foundation CAREER grant 1844724, National Sci-ence Foundation Grant NCS-FR 2123963, Office of Naval Research grant S5122, ONR MURI00010802, ONR MURI S5847, and ONR MURI 1141386- 493027. We also thank the Stanford HAI, Stanford Data Sciences and the Marlowe team, and the Google TPU Research Cloud team for com-puting support. We thank Yining Hong for helpful discus-sions that improved the paper. 
+
+# References 
+
+[1] Omer Bar-Tal, Hila Chefer, Omer Tov, Charles Her-rmann, Roni Paiss, Shiran Zada, Ariel Ephrat, Junhwa Hur, Guanghui Liu, Amit Raj, et al. Lumiere: A space-time diffu-sion model for video generation. In SIGGRAPH Asia 2024 Conference Papers , pages 1–11, 2024. 2 [2] Jake Bruce, Michael D Dennis, Ashley Edwards, Jack Parker-Holder, Yuge Shi, Edward Hughes, Matthew Lai, Aditi Mavalankar, Richie Steigerwald, Chris Apps, et al. Ge-nie: Generative interactive environments. In Forty-first Inter-national Conference on Machine Learning , 2024. 2 [3] David Charatan, Sizhe Lester Li, Andrea Tagliasacchi, and Vincent Sitzmann. pixelsplat: 3d gaussian splats from image pairs for scalable generalizable 3d reconstruction. In Pro-ceedings of the IEEE/CVF conference on computer vision and pattern recognition , pages 19457–19467, 2024. 2 [4] Sili Chen, Hengkai Guo, Shengnan Zhu, Feihu Zhang, Zi-long Huang, Jiashi Feng, and Bingyi Kang. Video depth any-thing: Consistent depth estimation for super-long videos. In 
+
+Proceedings of the Computer Vision and Pattern Recognition Conference , pages 22831–22840, 2025. A1 [5] Wanquan Feng, Tianhao Qi, Jiawei Liu, Mingzhen Sun, Pengqi Tu, Tianxiang Ma, Fei Dai, Songtao Zhao, Siyu Zhou, and Qian He. I2vcontrol: Disentangled and uni-fied video motion synthesis control. In Proceedings of the IEEE/CVF International Conference on Computer Vision ,pages 14051–14060, 2025. 2 [6] Brendan J Frey and Nebojsa Jojic. Learning graphical mod-els of images, videos and their spatial transformations. arXiv preprint arXiv:1301.3854 , 2013. 3 [7] Daniel Geng, Charles Herrmann, Junhwa Hur, Forrester Cole, Serena Zhang, Tobias Pfaff, Tatiana Lopez-Guevara, Yusuf Aytar, Michael Rubinstein, Chen Sun, et al. Motion prompting: Controlling video generation with motion trajec-tories. In Proceedings of the Computer Vision and Pattern Recognition Conference , pages 1–12, 2025. 2 [8] Kristen Grauman, Andrew Westbury, Lorenzo Torresani, Kris Kitani, Jitendra Malik, Triantafyllos Afouras, Kumar Ashutosh, Vijay Baiyya, Siddhant Bansal, Bikram Boote, et al. Ego-exo4d: Understanding skilled human activity from first-and third-person perspectives. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 19383–19400, 2024. A2 [9] Zekai Gu, Rui Yan, Jiahao Lu, Peng Li, Zhiyang Dou, Chenyang Si, Zhen Dong, Qifeng Liu, Cheng Lin, Ziwei Liu, et al. Diffusion as shader: 3d-aware video diffusion for ver-satile video generation control. In Proceedings of the Special Interest Group on Computer Graphics and Interactive Tech-niques Conference Conference Papers , pages 1–12, 2025. 2 [10] Danijar Hafner, Timothy Lillicrap, Jimmy Ba, and Moham-mad Norouzi. Dream to control: Learning behaviors by la-tent imagination. arXiv preprint arXiv:1912.01603 , 2019. 2 [11] Anthony Hu, Lloyd Russell, Hudson Yeo, Zak Murez, George Fedoseev, Alex Kendall, Jamie Shotton, and Gian-luca Corrado. Gaia-1: A generative world model for au-tonomous driving. arXiv preprint arXiv:2309.17080 , 2023. 2[12] Wonjoon Jin, Qi Dai, Chong Luo, Seung-Hwan Baek, and Sunghyun Cho. Flovd: Optical flow meets video diffusion model for enhanced camera-controlled video synthesis. In 
+
+Proceedings of the Computer Vision and Pattern Recognition Conference , pages 2040–2049, 2025. 2 [13] Daphne Koller and Nir Friedman. Probabilistic graphical models: principles and techniques . MIT press, 2009. 3 [14] Juil Koo, Paul Guerrero, Chun-Hao P Huang, Duygu Ceylan, and Minhyuk Sung. Videohandles: Editing 3d object compo-sitions in videos using video generative priors. In Proceed-ings of the Computer Vision and Pattern Recognition Con-ference , pages 17692–17701, 2025. 2 [15] Mathis Koroglu, Hugo Caselles-Dupr´ e, Guillaume Jean-neret, and Matthieu Cord. Onlyflow: Optical flow based mo-tion conditioning for video diffusion models. In Proceedings of the Computer Vision and Pattern Recognition Conference ,pages 6226–6236, 2025. 2 [16] Klemen Kotar, Wanhee Lee, Rahul Venkatesh, Honglin Chen, Daniel Bear, Jared Watrous, Simon Kim, Khai Loong Aw, Lilian Naing Chen, Stefan Stojanov, et al. World mod-eling with probabilistic structure integration. arXiv preprint arXiv:2509.09737 , 2025. 2 [17] Wanhee Lee, Klemen Kotar, Rahul Mysore Venkatesh, Jared Watrous, Honglin Chen, Khai Loong Aw, and Daniel LK Yamins. Unified 3d scene understanding through physical world modeling. arXiv preprint arXiv:2605.24321 , 2026. 2, 8[18] Haotong Lin, Sili Chen, Junhao Liew, Donny Y Chen, Zhenyu Li, Guang Shi, Jiashi Feng, and Bingyi Kang. Depth anything 3: Recovering the visual space from any views. 
+
+arXiv preprint arXiv:2511.10647 , 2025. A2 [19] Lu Ling, Yichen Sheng, Zhi Tu, Wentian Zhao, Cheng Xin, Kun Wan, Lantao Yu, Qianyu Guo, Zixun Yu, Yawen Lu, et al. Dl3dv-10k: A large-scale scene dataset for deep learning-based 3d vision. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition ,pages 22160–22169, 2024. A2 [20] Ruoshi Liu, Rundi Wu, Basile Van Hoorick, Pavel Tok-makov, Sergey Zakharov, and Carl Vondrick. Zero-1-to-3: Zero-shot one image to 3d object. In Proceedings of the IEEE/CVF international conference on computer vision ,pages 9298–9309, 2023. 2 [21] Fabian Mentzer, David Minnen, Eirikur Agustsson, and Michael Tschannen. Finite scalar quantization: Vq-vae made 
+
+9simple. In International Conference on Learning Represen-tations , pages 51772–51783, 2024. A1 [22] Ron Mokady, Amir Hertz, Kfir Aberman, Yael Pritch, and Daniel Cohen-Or. Null-text inversion for editing real im-ages using guided diffusion models. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , pages 6038–6047, 2023. 2 [23] Henrique Morimitsu, Xiaobin Zhu, Roberto M Cesar, Xi-angyang Ji, and Xu-Cheng Yin. Dpflow: Adaptive optical flow estimation with a dual-pyramid framework. In Proceed-ings of the Computer Vision and Pattern Recognition Confer-ence , pages 17810–17820, 2025. A1 [24] Karran Pandey, Paul Guerrero, Matheus Gadelha, Yannick Hold-Geoffroy, Karan Singh, and Niloy J Mitra. Diffusion handles enabling 3d edits for diffusion models by lifting ac-tivations to 3d. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 7695– 7704, 2024. 2, 8 [25] Nikhila Ravi, Valentin Gabeur, Yuan-Ting Hu, Ronghang Hu, Chaitanya Ryali, Tengyu Ma, Haitham Khedr, Roman R¨ adle, Chloe Rolland, Laura Gustafson, et al. Sam 2: Seg-ment anything in images and videos. In International Con-ference on Learning Representations , pages 28085–28128, 2025. A4 [26] Jeremy Reizenstein, Roman Shapovalov, Philipp Henzler, Luca Sbordone, Patrick Labatut, and David Novotny. Com-mon objects in 3d: Large-scale learning and evaluation of real-life 3d category reconstruction. In Proceedings of the IEEE/CVF international conference on computer vision ,pages 10901–10911, 2021. A2 [27] Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Bj¨ orn Ommer. High-resolution image synthesis with latent diffusion models. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , pages 10684–10695, 2022. 2 [28] Kyle Sargent, Zizhang Li, Tanmay Shah, Charles Herrmann, Hong-Xing Yu, Yunzhi Zhang, Eric Ryan Chan, Dmitry La-gun, Li Fei-Fei, Deqing Sun, et al. Zeronvs: Zero-shot 360-degree view synthesis from a single image. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9420–9429, 2024. 2 [29] Yujun Shi, Jun Hao Liew, Hanshu Yan, Vincent YF Tan, and Jiashi Feng. Lightningdrag: Lightning fast and accu-rate drag-based image editing emerging from videos. arXiv preprint arXiv:2405.13722 , 2024. 2, 8 [30] Jianlin Su, Murtadha Ahmed, Yu Lu, Shengfeng Pan, Wen Bo, and Yunfeng Liu. Roformer: Enhanced transformer with rotary position embedding. Neurocomputing , 568:127063, 2024. A2 [31] Zhouxia Wang, Yushi Lan, Shangchen Zhou, and Chen Change Loy. ObjCtrl-2.5D: Training-free object con-trol with camera poses. In arXiv preprint arXiv:2412.07721 ,2024. 2 [32] Zhouxia Wang, Ziyang Yuan, Xintao Wang, Yaowei Li, Tianshui Chen, Menghan Xia, Ping Luo, and Ying Shan. Motionctrl: A unified and flexible motion controller for video generation. In ACM SIGGRAPH 2024 Conference Pa-pers , pages 1–11, 2024. 2 [33] Weijia Wu, Zhuang Li, Yuchao Gu, Rui Zhao, Yefei He, David Junhao Zhang, Mike Zheng Shou, Yan Li, Tingting Gao, and Di Zhang. Draganything: Motion control for any-thing using entity representation. In European Conference on Computer Vision , pages 331–348. Springer, 2024. 2, 8 [34] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiao-gang Xu, Jiashi Feng, and Hengshuang Zhao. Depth any-thing v2. Advances in Neural Information Processing Sys-tems , 37:21875–21911, 2024. A2 [35] Chandan Yeshwanth, Yueh-Cheng Liu, Matthias Nießner, and Angela Dai. Scannet++: A high-fidelity dataset of 3d in-door scenes. In Proceedings of the IEEE/CVF International Conference on Computer Vision , pages 12–22, 2023. A2 [36] Shengming Yin, Chenfei Wu, Jian Liang, Jie Shi, Houqiang Li, Gong Ming, and Nan Duan. Dragnuwa: Fine-grained control in video generation by integrating text, image, and trajectory. arXiv preprint arXiv:2308.08089 , 2023. 2 [37] Alex Yu, Vickie Ye, Matthew Tancik, and Angjoo Kanazawa. pixelnerf: Neural radiance fields from one or few images. In 
+
+Proceedings of the IEEE/CVF conference on computer vi-sion and pattern recognition , pages 4578–4587, 2021. 2 [38] Wangbo Yu, Jinbo Xing, Li Yuan, Wenbo Hu, Xiaoyu Li, Zhipeng Huang, Xiangjun Gao, Tien-Tsin Wong, Ying Shan, and Yonghong Tian. Viewcrafter: Taming video diffusion models for high-fidelity novel view synthesis. arXiv preprint arXiv:2409.02048 , 2024. 2, 8 [39] Xianggang Yu, Mutian Xu, Yidan Zhang, Haolin Liu, Chongjie Ye, Yushuang Wu, Zizheng Yan, Chenming Zhu, Zhangyang Xiong, Tianyou Liang, et al. Mvimgnet: Alarge-scale dataset of multi-view images. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , pages 9150–9161, 2023. A2 [40] Qihang Zhang, Shuangfei Zhai, Miguel Angel Bautista Mar-tin, Kevin Miao, Alexander Toshev, Joshua Susskind, and Jiatao Gu. World-consistent video diffusion with explicit 3d modeling. In Proceedings of the Computer Vision and Pat-tern Recognition Conference , pages 21685–21695, 2025. 2 [41] Yuchen Zhang, Nikhil Keetha, Chenwei Lyu, Bhuvan Jhamb, Yutian Chen, Yuheng Qiu, Jay Karhade, Shreyas Jha, Yaoyu Hu, Deva Ramanan, et al. Ufm: A simple path towards unified dense correspondence with flow. arXiv preprint arXiv:2506.09278 , 2025. A1 [42] Jensen Zhou, Hang Gao, Vikram Voleti, Aaryaman Vasishta, Chun-Han Yao, Mark Boss, Philip Torr, Christian Rupprecht, and Varun Jampani. Stable virtual camera: Generative view synthesis with diffusion models. In Proceedings of the IEEE/CVF International Conference on Computer Vision ,pages 12405–12414, 2025. 2, 8 [43] Tinghui Zhou, Richard Tucker, John Flynn, Graham Fyffe, and Noah Snavely. Stereo magnification: Learning view synthesis using multiplane images. arXiv preprint arXiv:1805.09817 , 2018. A2 
+
+10 Perceptual 3D Simulation With Physical World Modeling 
+
+# Supplementary Material 
+
+# Overview of the Supplementary Material 
+
+This supplementary material provides additional technical details and qualitative results that complement the main pa-per. • Details of the Physical World Model Ψ A.1 describes the model architecture, quantizer, and training setup. • Details of the Geometrizer Γ A.2 explains how geomet-ric conditioning signals such as flow and partial depth are constructed. • Details of the Persistent Memory Module μ A.3 presents the mechanisms for incremental scene reasoning and occupancy update. • Additional Examples of Extracting a Complete Scene Description A.4 illustrates the model’s behavior in ex-tracting, completing, and stabilizing 3D structure across time. 
+
+# A.1. Details of the Physical World Model Ψ
+
+This section provides implementation details of the physi-cal world model Ψ. We first describe how local discrete to-kens are constructed using Hierarchical Local Quantization (HLQ), followed by how multimodal tokens (RGB, depth, and optical flow) are serialized via Local Random Access Sequences (LRAS). We then explain how a transformer is trained to model their joint distribution. Next, we summa-rize the sequence-construction rules that mix modalities and temporal contexts, and present a probabilistic interpretation that clarifies how LRAS enables tractable conditional infer-ence. We conclude with the inference settings used during quantitative evaluations. 
+
+Hierarchical Local Quantization. The world model op-erates on locally quantized tokens produced by a Hier-archical Local Quantizer (HLQ), a convolutional autoen-coder whose receptive field is strictly contained within each patch. This design guarantees that no information propa-gates across patch boundaries during encoding. Each frame is divided into non-overlapping 16 × 16 patches, and each patch is represented by a short sequence of discrete codes. Each patch contains a coarse token that reconstructs a low-resolution preview, followed by refinement tokens that add high-frequency detail. Because information is confined within a patch, the resulting codes behave predictably un-der interventions such as masking or overwriting. This strict patch-level locality plays a central functional role in controllable inference. Because no information leaks across patch boundaries during quantization, local interven-tions, masking a patch, overwriting it with a counterfactual value, or re-ordering its decoding, produce localized and predictable effects. This is essential for the model’s ability to perform sparse conditioning, patch regeneration, coun-terfactual edits, and user-guided generation using arbitrary pointer sequences. 
+
+Quantizer training. We train separate HLQ quantizers for RGB, depth, and optical flow using a patch-local en-coder with a multi-codebook FSQ quantization [21] layer and a wavelet input transformation. The decoder is convo-lutional and nonlocal. All models are optimized on GPUs with a batch size of 512 and a learning rate of 10 −4 until convergence. RGB quantization uses ImageNet and Open-Images with an ℓ1 reconstruction loss and a DINOv2 per-ceptual loss, producing four codes per patch. A coarse head is supervised with an ℓ1 loss of weight 10 −2 on a 
+
+32 ×32 target. Depth maps used for training are generated by VideoDepthAnything [4]. The depth quantizer follows the same architecture and losses as RGB but produces two codes per patch. Optical flow fields are computed using DPFlow [23], with UFM [41] added for large-displacement and static-NVS cases. The flow quantizer is supervised with 
+
+ℓ2 reconstruction losses and an ℓ2 coarse loss of weight 
+
+10 −2, and likewise produces two codes per patch. The re-sulting discrete RGB, depth, and flow tokens form the uni-fied vocabulary consumed by Ψ for multimodal autoregres-sive modeling. 
+
+Autoregressive Transformer. The physical world model 
+
+Ψ is a 7B-parameter decoder-only transformer trained to model the joint distribution over RGB, depth, and optical-flow tokens. Each discrete token is mapped to a learned embedding, augmented with a modality embedding and a spatiotemporal coordinate (x, y, t, c ) indicating its patch lo-cation, frame index, and channel type. These coordinates are projected into a continuous embedding and added to the token representation before entering the transformer. The backbone uses standard residual-attention blocks with RMS normalization. Rather than using raster-order flattening, Ψ employs a Local Random Access Sequence (LRAS) that randomly permutes patch locations during training and inference. LRAS exposes tokens to diverse spatial contexts, improves robustness under partial observations, and enables spatially local conditioning, which is an essential capability because geometric signals such as flow or partial depth are sparse and may occur at arbitrary locations. A1 Sequence Model Training. We train Ψ with next-token prediction cross-entropy loss, supervising only the content tokens and not the associated pointer tokens. The training corpus contains approximately 3 million video clips, cor-responding to roughly 1.4 trillion multimodal tokens. The dataset spans indoor, outdoor, egocentric, and object-centric settings, combining large-scale sources (e.g., ScanNet++ [35], CO3D [26], RealEstate10K [43], MVImgNet [39], DL3DV [19], and EgoExo4D [8]) with curated internet videos selected for scene diversity and long-range dynam-ics. Training is conducted entirely on a TPU v5e–256 pod through the Google TPU Research Cloud (TRC). We use a global batch size of 512 for a total of 1.5M optimization steps. Each training step requires approximately 3.8 sec-onds. The learning rate follows a Warmup–Stable–Decay schedule, increasing to a peak value of 3 × 10 −4, remaining constant during the stable phase, and decaying to zero over the final 100K steps. The default sequence length is 4096 tokens, and we increase it to 8192 for the final 20K train-ing steps to improve the model’s ability to generate longer rollouts. All training uses mixed precision, FSDP sharding, and gradient checkpointing. 
+
+Sequence Design. To support a unified autoregressive model capable of reasoning under heterogeneous percep-tual inputs, we design a sequence construction pipeline that mixes RGB, depth, and optical flow tokens across a wide range of temporal configurations. Each training sample is produced by selecting a mode that specifies (i) the set of modalities to include, (ii) the number of frames (two to four), and (iii) the temporal spacing. Given the chosen mode, the dataset dynamically loads the quantized patch-level token blocks of RGB, depth, and optical flow. A constrained resource allocator then assigns token bud-gets to each modality–frame pair, using hard capacity limits to ensure that the combined sequence fits within the global token limit (4096 or 8192 tokens). This allocation deter-mines how many patches to keep for each signal before shuffling. Frame indices are sampled according to the spec-ified gap regime, and each patch is annotated with a rotary-position index that encodes spatial location, temporal po-sition, and channel group [30]. Depth tokens may appear before or after RGB tokens, and flow tokens are placed be-tween the RGB frames they connect. During target construction, the first frame and the pointer tokens are never supervised. The resulting sequence is a heterogeneous but structurally consistent stream of pointer–value tokens that exposes the model to diverse in-ference conditions, ranging from fully observed RGB se-quences to diverse modality scenarios. This diversity is es-sential for teaching the model to perform general-purpose probabilistic inference over multimodal 3D scene variables. 
+
+Probabilistic graphical model interpretation. In our formulation, each pointer token p ∈ P identifies a scene variable xp whose value lies in V. A pointer–value pair 
+
+(pi, v i) therefore corresponds to observing or generating the event xpi = vi. The full collection {xp}p∈P defines an im-plicit probabilistic graphical model over multimodal scene elements, including RGB, depth, and optical flow. A Lo-cal Random-Access Sequence (LRAS) specifies an order-ing over these variables. As the sequence progresses, pre-viously observed or generated pairs (pi, v i) become condi-tioning evidence for predicting the value at a query pointer 
+
+p. The model computes 
+
+Ψ( X ◦ p) = Pr  xp = v | p0, v 0, . . . , p k, v k, p ,
+
+or equivalently the distribution over the content token 
+
+v associated with the query pointer p. This provides a tractable approximation to conditional inference over 
+
+{xp}p∈P , avoiding explicit global inference over exponen-tially many conditioning subsets. More generally, for any observed subset S ⊂ P and query pointer p ∈ P \ S, the model can approximate conditionals of the form 
+
+Pr( xp | xS )
+
+by providing the observed pointer–value pairs (s, X (s)) 
+
+for s ∈ S as evidence and decoding the remaining vari-ables. This capability enables a broad family of conditional inference pathways, including the flow–depth prompting regimes described in the main paper for novel-view synthe-sis, rigid and deformable object manipulation, object inter-actions, and motion prediction. In general, different subsets of multimodal observations can be supplied as evidence, al-lowing a single sequence model to adapt its inference be-havior within a unified probabilistic architecture. 
+
+Inference settings. All evaluations use sequential decod-ing with a temperature of 1.0, top-p = 0.9, and top-
+
+k = 1000 . Unless otherwise specified, single-image depth is predicted using the metric-depth model Depth Anything V2 [34]. The metric depth is then converted to disparity and normalized so that the conditioning disparity has a maxi-mum scale of 0.6. For novel view synthesis (NVS) evaluation, we use Depth Anything 3 because we empirically found that Depth Anything V2 tended to produce more distorted object shapes on DTU in our setup. We additionally estimate a camera pose translation scale factor per scene using UFM and single-view depth from Depth Anything 3 [18]. Specif-ically, we compute optical flow by warping the predicted depth using the ground-truth camera pose under candidate scales, compare it against UFM flow on covisible regions of the ground-truth video, and optimize the scalar scene scale that minimizes this flow discrepancy. This estimated scale A2 places the ground-truth camera motion in the same metric space as the single-view predicted depth. 
+
+# A.2. Details of Geometrizer Γ
+
+In this section, we describe the details of the geometrizer Γ.Given a depth history {D0: t−1}, camera intrinsics K, a tar-get camera pose Pt, and object-level SE(3) transformations 
+
+{T (o) 
+
+> t
+
+}, the geometrizer constructs geometric conditioning signals 
+
+(Ft−1→t, D sparse  
+
+> t
+
+).
+
+Here, Ft−1→t is the induced optical flow and Dsparse  
+
+> t
+
+is the rendered sparse depth. These signals convert the specified camera motion and per-object transformations into sparse depth and optical-flow fields that constrain the world model during autoregressive decoding. The object transformations {T (o) 
+
+> t
+
+} are defined with re-spect to user-provided segmentations. Each object’s seg-mentation mask identifies the pixels belonging to that ob-ject, allowing its motion to be applied independently during geometry rendering. 
+
+Surface and undersurface meshes per object. We begin by reconstructing the reference-frame geometry 
+
+G0 = BackProject( D0, T 0),
+
+where T0 contains the reference camera pose and intrinsics. For each pixel  u = ( ux, u y ), let  X0(u) ∈ G 0 denote the corresponding 3D point. We partition this geometry according to the segmentation mask: 
+
+G(o)0 = { X0(u) | seg 0(u) = o },
+
+for each object label o, including background. 
+
+Surface meshes. For each object o, we construct a sur-face mesh S(o)0 by triangulating adjacent pixels whose seg-mentation label equals o. We compute triangle normals 
+
+n(u) and apply the surface-orientation criterion 
+
+θ(u) = cos −1(n(u) · (−v(u))) < θ th , θth = 80 ◦,
+
+where v(u) is the viewing direction. Only triangles satisfy-ing this condition are retained. 
+
+Undersurface meshes. We also associate each object o
+
+with an undersurface mesh U(o)0 that parameterizes the lo-cally unobserved volume behind the visible scene. To ini-tialize these meshes, we first build a single occupancy vol-ume from the full-frame depth map D0, assigning observed space the value +1 and unobserved space the value −1. We carve this volume using an offset depth map D0(u)+ ε (with 
+
+ε = 3 × 10 −2), ensuring that the resulting undersurface re-mains strictly behind the observed surface. Extracting the 
+
+0-level isosurface via marching cubes then yields a global undersurface mesh ˜U0 that lies just behind the visible sur-faces S(o)0 along each viewing ray. Because the structure of the unobserved volume is not yet known, every object (including the background) is initialized with a copy of this geometry, 
+
+U(o)0 = ˜U0 ∀o. 
+
+As the scene evolves and objects move, each U(o) 
+
+> t
+
+is updated independently based on the object motion and new depth observations, so the undersurface meshes gradually diverge. Each object (including background) thus starts with paired geometry   S(o)0 , U(o)0
+
+,
+
+where the undersurface meshes share the same initial shape but are subsequently deformed and carved in an object-specific manner. 
+
+Composite geometry and object motion. At time t, we apply the specified object motions: 
+
+S(o) 
+
+> t
+
+= T (o) 
+
+> t
+
+S(o)0 , U(o) 
+
+> t
+
+= T (o) 
+
+> t
+
+U(o)0 .
+
+The composite scene geometry is the union 
+
+Ct = [
+
+> o
+
+
+
+S(o) 
+
+> t
+
+∪ U (o)
+
+> t
+
+
+
+,
+
+ensuring that each object’s surface and undersurface geom-etry move consistently with its SE(3) transformation. 
+
+Rendering sparse target depth. Rendering Ct from the target pose Pt produces a depth value z(u) for rays that hit a surface mesh. We define 
+
+Dsparse  
+
+> t
+
+(u) = 
+
+(
+
+z(u), if the first hit is a surface mesh ,
+
+invalid , otherwise .
+
+In practice, surface meshes are rendered in white and un-dersurface meshes in black. Any pixel that renders black is marked invalid. A patch is invalid if any of its pixels is in-valid. We use pyrender , though any renderer is suitable. 
+
+Computing optical flow. We reconstruct the previous-frame geometry 
+
+Gt−1 = BackProject( Dt−1, T t−1),
+
+and let Xt−1(u) ∈ G t−1 be the 3D point associated with pixel u.Its object label is seg t−1(u), so the corresponding SE(3) motion is T (seg t−1(u))  
+
+> t
+
+. We apply this motion and reproject: 
+
+Xt(u) = T (seg t−1(u))  
+
+> t
+
+Xt−1(u),
+
+A3 ut = Project( Pt Xt(u), K ) .
+
+The optical flow is 
+
+Ft−1→t(u) = ut − u. 
+
+Pixels with unknown motion (e.g., unlabeled segments or masked regions) are excluded from the conditioning. 
+
+Motion scenarios. We summarize how Γ constructs con-ditioning signals for different motion cases. 
+
+Static scenes (novel view synthesis). Only the camera pose changes while all objects remain fixed. The surface and undersurface meshes remain at their reference-frame positions, and the composite geometry is rendered directly from Pt. Valid partial depth 1 corresponds to rays whose first intersection is a surface in the reference geometry, ex-cluding occluded or undersurface hits. Flow is obtained by transforming reference-frame 3D points X0(u) into the tar-get camera and measuring their 2D displacement. 
+
+Dynamic scenes with fully known motion. When both camera and object-level SE(3) motions {T (o) 
+
+> t
+
+} are pro-vided, each mesh pair (S(o)0 , U(o)0 ) is displaced indepen-dently: 
+
+S(o) 
+
+> t
+
+= T (o) 
+
+> t
+
+S(o)0 , U(o) 
+
+> t
+
+= T (o) 
+
+> t
+
+U(o)0 .
+
+Rendering the resulting composite geometry Ct from Pt de-fines partial depth 1, and flow is computed by applying the corresponding object motion to each previous-frame point 
+
+Xt−1(u) before reprojecting into the target view. 
+
+Dynamic scenes with partially known motion. If only a subset of object motions is specified, partial depth 1 is con-structed only from the objects with known SE(3) transfor-mations. These objects have their surface meshes trans-formed and rendered, and all other surfaces are treated as unknown. Rays whose first hit belongs to an object with un-known motion are marked invalid and do not contribute to partial depth. Flow is defined in the same way. Pixels whose object labels correspond to unknown motion are masked, and the remaining regions follow the procedure used in the fully known-motion setting. 
+
+# A.3. Details of Persistent Memory Module μ
+
+This section provides an implementation of the abstract memory-update rules described in the main paper, speci-fying how the memory is represented using surface meshes and occupancy-based undersurface meshes. The persistent memory μt maintains, for each object o, a surface mesh 
+
+S(o) 
+
+> t
+
+and an undersurface mesh U(o) 
+
+> t
+
+derived from an occu-pancy volume that tracks unobserved space. All geometry is stored in a globally aligned reference frame and updated using object-level SE(3) transformations. 
+
+Surface–mesh updating per object. Let Tt = ( Pt, K )
+
+denote the camera parameters at time t, consisting of the camera pose Pt and intrinsics K. From the depth map Dt
+
+and camera parameters Tt, we obtain a point cloud 
+
+St = BackProject( Dt, T t).
+
+Each point is assigned to an object via the segmentation of frame t, obtained using SAM2 [25] with user-provided point prompts. All previously stored surface meshes are transformed into the current frame: 
+
+ˆS(o) 
+
+> t−1
+
+= T (o)
+
+> t
+
+
+
+S(o)
+
+> t−1
+
+
+
+,
+
+and fused with the newly observed surface points S(o) 
+
+> t
+
+to produce the updated surface mesh S(o) 
+
+> t
+
+. This ensures that surfaces move coherently according to the object’s segmen-tation and SE(3) motion. Because the system knows which regions are newly observed versus previously visible under the target viewpoint, it can optionally choose to overwrite, refine, or preserve the pre-existing surface regions during fusion. 
+
+Undersurface–mesh updating per object. Each object maintains an occupancy volume Φ(o)
+
+> t−1
+
+(x) ∈ {− 1, +1 },where +1 denotes observed (free) space and −1 denotes unobserved space. Its zero-level isosurface defines the un-dersurface mesh U(o)
+
+> t−1
+
+.Before carving, the occupancy is transported into the current frame: 
+
+ˆΦ(o)
+
+> t−1
+
+(x) = Φ (o)
+
+> t−1
+
+
+
+(T (o) 
+
+> t
+
+)−1(x)
+
+
+
+.
+
+Given Dt, we carve the occupancy volume ray-by-ray using an offset depth Dt(u) + ε (with ε = 3 × 10 −2), which guarantees that the undersurface mesh stays just behind the visible surface. For any voxel x lying in front of this offset depth along ray u,
+
+Φ(o) 
+
+> t
+
+(x) = +1 , (carved: now observed space) ,
+
+and otherwise 
+
+Φ(o) 
+
+> t
+
+(x) = ˆΦ(o)
+
+> t−1
+
+(x).
+
+The updated undersurface mesh is then extracted as the 0-level isosurface from Φ(o) 
+
+> t
+
+using marching cubes. This yields a geometry-coherent boundary of the still-unobserved volume behind the object at time t. This occupancy-based update enforces consistency with both past and current observations. Carving with the current depth removes regions inconsistent with the present view, and the monotonicity of Φt prevents reintroducing regions that were already ruled out by earlier viewpoints. A4 Figure A1. Additional Examples of Extracting a Complete Scene Description. (a) Scene-level description: additional examples of coherent 3D scene layout inferred from single images. (b) Object-level description: further examples of consistent object-surface reconstruction. 
+
+# A.4. Additional Examples of Extracting aComplete Scene Description 
+
+We present additional qualitative results demonstrating ge-ometry extraction from single images in Figure A1. For the first frame, depth D0 is estimated using Depth Any-thing V2. The next frame depth is sampled as D1 ∼
+
+Ψ( I0, D 0, F 0→1, D sparse 1 ), followed by image synthesis 
+
+I1 ∼ Ψ( I0, D 0, F 0→1, D 1). Subsequent steps follow the analogous pattern D2 ∼ Ψ( I0, I 1, D 1, F 1→2, D sparse 2 ) and 
+
+I2 ∼ Ψ( I0, I 1, D 1, F 1→2, D 2). The first frame I0 remains fixed, while I1 is continually replaced by the frame closest to the current target. Throughout inference, the memory module μ is updated at every step so that geometric information accumulates across frames. This procedure recovers both scene-level geometry, useful for navigation, and object-level geometry, useful for object-centric tasks. For object-level visualiza-tion, we show only the surface meshes associated with each object according to the update rules of the memory module 
+
+μ.A5
