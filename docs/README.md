@@ -6,65 +6,83 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-29
-- 运行时间：2026-06-29 21:48:03 UTC
+- 最新运行日期：2026-06-30
+- 运行时间：2026-06-30 21:46:53 UTC
 - 运行状态：成功
-- 本次总论文数：15
-- 精读区：6
-- 速读区：9
+- 本次总论文数：21
+- 精读区：10
+- 速读区：11
 
 ### 今日简报（AI）
-今日动态聚焦于世界建模与3D仿真，精读两篇高分论文分别关注动态环境基准与物理感知仿真。最值得关注的方向是《MemoBench》提出的动态世界模型评测基准和《Perceptual 3D Simulation》的物理世界建模方法。建议优先精读这两篇，并跟进速读中《CascadeOcc》与《Scene and Human in One World》对3D场景理解的进一步拓展。
-- 详情：[/202606/29/README](/202606/29/README)
+今日精读两篇9分论文《Meshtryoshka》与《Ground4D》，速读三篇8分成果，聚焦可微渲染与4D重建。最值得关注的是可微网格光栅化的真实场景渲染，以及单目视频的4D一致性重建技术。建议普通读者重点了解这两项技术如何提升3D内容生成质量，并关注其在虚拟现实和影视制作中的落地。
+- 详情：[/202606/30/README](/202606/30/README)
 
 ### 精读区论文标签
-1. [MemoBench: Benchmarking World Modeling in Dynamically Changing Environments](/202606/29/2606.27537v1-memobench-benchmarking-world-modeling-in-dynamically-changing-environments)  
+1. [Meshtryoshka: Differentiable Rendering of Real-World Scenes via Mesh Rasterization](/202606/30/2606.28622v1-meshtryoshka-differentiable-rendering-of-real-world-scenes-via-mesh-rasterization)  
    标签：评分：9.0/10、query:world-model
-   evidence：针对动态变化环境中世界建模的基准，采用消失-重现范式
-2. [Perceptual 3D Simulation With Physical World Modeling](/202606/29/2606.27575v1-perceptual-3d-simulation-with-physical-world-modeling)  
+   evidence：新视图合成可微分渲染网格
+2. [Ground4D: Consistency-Aware 4D Reconstruction from Monocular Video](/202606/30/2606.28828v1-ground4d-consistency-aware-4d-reconstruction-from-monocular-video)  
    标签：评分：9.0/10、query:world-model
-   evidence：物理世界建模预测场景演化
-3. [CoIn: Comprehensive 2D-3D Inpainting with Gaussian Splatting Guidance](/202606/29/2606.27584v1-coin-comprehensive-2d-3d-inpainting-with-gaussian-splatting-guidance)  
+   evidence：从单目视频进行四维重建以支持动态新视角合成
+3. [Flow Matching in Feature Space for Stochastic World Modeling](/202606/30/2606.29059v1-flow-matching-in-feature-space-for-stochastic-world-modeling)  
    标签：评分：9.0/10、query:world-model
-   evidence：利用高斯溅射引导进行3D场景修复，桥接2D修复和3DGS
-4. [HandMade: Spatial Prompting for Generative 3D Creation with Part-Labeled VR Sketches](/202606/29/2606.27738v1-handmade-spatial-prompting-for-generative-3d-creation-with-part-labeled-vr-sketches)  
+   evidence：基于特征空间流匹配的随机世界模型
+4. [L2D2-GS: Learning to Densify for Feedforward Dynamic Gaussian Scene Reconstruction](/202606/30/2606.29374v1-l2d2-gs-learning-to-densify-for-feedforward-dynamic-gaussian-scene-reconstruction)  
    标签：评分：9.0/10、query:world-model
-   evidence：使用VR草图作为空间提示，结合文本进行文本到3D生成
-5. [ReScene: Structured Indoor Scene Reconstruction from Multi-View Captures](/202606/29/2606.28060v1-rescene-structured-indoor-scene-reconstruction-from-multi-view-captures)  
+   evidence：前馈动态3D高斯场景重建，学习致密化
+5. [Scenes as Objects, Not Primitives: Instance-Structured 3D Tokenization from Unposed Views](/202606/30/2606.29513v1-scenes-as-objects-not-primitives-instance-structured-3d-tokenization-from-unposed-views)  
    标签：评分：9.0/10、query:world-model
-   evidence：从多视图图像进行结构化室内场景重建
-6. [StructSplat: Generalizable 3D Gaussian Splatting from Uncalibrated Sparse Views](/202606/29/2606.28321v1-structsplat-generalizable-3d-gaussian-splatting-from-uncalibrated-sparse-views)  
+   evidence：从无位姿多视图进行实例级三维场景重建的标记化方法
+6. [Argus: Metric Panoramic 3D Reconstruction for Indoor Scenes](/202606/30/2606.30047v1-argus-metric-panoramic-3d-reconstruction-for-indoor-scenes)  
    标签：评分：9.0/10、query:world-model
-   evidence：从无标定稀疏视图进行可泛化3D高斯泼溅
+   evidence：从全景图像进行度量前馈3D重建
+7. [T2LDM++: A Self-Conditioned Representation Guided Diffusion Model for Realistic Text-to-LiDAR Scene Generation](/202606/30/2606.30147v1-t2ldm-a-self-conditioned-representation-guided-diffusion-model-for-realistic-text-to-lidar-scene-generation)  
+   标签：评分：9.0/10、query:world-model
+   evidence：基于扩散模型和自条件引导的文本到LiDAR场景生成
+8. [FastPano3D: Feed-Forward Indoor Panoramic 3D Reconstruction from a Single Image](/202606/30/2606.30352v1-fastpano3d-feed-forward-indoor-panoramic-3d-reconstruction-from-a-single-image)  
+   标签：评分：9.0/10、query:world-model
+   evidence：单张全景图室内三维重建，基于高斯泼溅
+9. [Robust and Efficient Monocular 3D Gaussian SLAM for Kilometer-Scale Outdoor Scenes](/202606/30/2606.30436v1-robust-and-efficient-monocular-3d-gaussian-slam-for-kilometer-scale-outdoor-scenes)  
+   标签：评分：9.0/10、query:world-model
+   evidence：单目3D高斯SLAM用于公里级室外场景重建
+10. [Open-Vocabulary and Referring Segmentation for 3D Gaussians Using 2D Detectors](/202606/30/2606.30638v1-open-vocabulary-and-referring-segmentation-for-3d-gaussians-using-2d-detectors)  
+   标签：评分：9.0/10、query:world-model
+   evidence：3D高斯泼溅结合开放词汇分割
 
 ### 速读区论文标签
-1. [Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds](/202606/29/2606.26964v2-look-before-move-narrative-grounded-world-visual-attention-in-dynamic-3d-story-worlds)  
+1. [3DCarGen: Scalable 3D Car Generation via 3D-consistent Multi-view Synthesis](/202606/30/2606.24257v2-3dcargen-scalable-3d-car-generation-via-3d-consistent-multi-view-synthesis)  
    标签：评分：8.0/10、query:world-model
-   evidence：在动态3D环境中提出基于叙事线索的全局视觉注意力
-2. [CascadeOcc: Rethinking 3D Occupancy World Models with Cascaded VQ Representations](/202606/29/2606.27644v1-cascadeocc-rethinking-3d-occupancy-world-models-with-cascaded-vq-representations)  
+   evidence：基于多视图合成和3D高斯的单视图3D汽车生成
+2. [Home3D 1.0: A High-Fidelity Image-to-3D Asset Generation System for Interior Design](/202606/30/2606.27923v2-home3d-10-a-high-fidelity-image-to-3d-asset-generation-system-for-interior-design)  
    标签：评分：8.0/10、query:world-model
-   evidence：提出级联VQ占据世界模型，用于驾驶场景中的三维场景预测
-3. [Scene and Human in One World: Reconstruction in a Feedforward Pass](/202606/29/2606.27720v1-scene-and-human-in-one-world-reconstruction-in-a-feedforward-pass)  
+   evidence：从图像生成3D资产用于室内设计
+3. [SemDynReg: Semantics-Guided Deformation Regularization for Dynamic 3D Gaussian Splatting](/202606/30/2606.28656v1-semdynreg-semantics-guided-deformation-regularization-for-dynamic-3d-gaussian-splatting)  
    标签：评分：8.0/10、query:world-model
-   evidence：前馈3D场景重建与人体网格恢复结合
-4. [Home3D 1.0: A High-Fidelity Image-to-3D Asset Generation System for Interior Design](/202606/29/2606.27923v1-home3d-10-a-high-fidelity-image-to-3d-asset-generation-system-for-interior-design)  
+   evidence：语义引导的动态3D高斯泼溅，实现对象级变形正则化
+4. [Occlusion-Robust Multi-Object Decoupling for Physics-Based Interaction](/202606/30/2606.29303v1-occlusion-robust-multi-object-decoupling-for-physics-based-interaction)  
    标签：评分：8.0/10、query:world-model
-   evidence：图像到3D资产生成用于室内设计
-5. [Monocular Avatar Reconstruction via Cascaded Diffusion Priors and UV-Space Differentiable Shading](/202606/29/2606.28144v1-monocular-avatar-reconstruction-via-cascaded-diffusion-priors-and-uv-space-differentiable-shading)  
+   evidence：通过SDS和2D/3D先验进行新视角合成实现多物体重建
+5. [NaLA: A 3D Native LLM Layout Agent for High-quality 3D Scene Generation](/202606/30/2606.29395v1-nala-a-3d-native-llm-layout-agent-for-high-quality-3d-scene-generation)  
    标签：评分：8.0/10、query:world-model
-   evidence：从单张图像使用扩散先验进行单目3D头像重建
-6. [GeoFace: Consistent Multi-View Face Generation with Geometry-Constrained Diffusion](/202606/29/2606.27659v1-geoface-consistent-multi-view-face-generation-with-geometry-constrained-diffusion)  
+   evidence：利用LLM作为布局代理从文本生成3D场景
+6. [Learning Transferable Dynamics Priors from Action to World Modeling](/202606/30/2606.29501v1-learning-transferable-dynamics-priors-from-action-to-world-modeling)  
+   标签：评分：8.0/10、query:world-model
+   evidence：面向机器人操作的动作条件世界模型学习，捕获可复用的动态先验
+7. [Variance Reduction on the Camera Axis: Multi-View Score Distillation for 3D](/202606/30/2606.29964v1-variance-reduction-on-the-camera-axis-multi-view-score-distillation-for-3d)  
+   标签：评分：8.0/10、query:world-model
+   evidence：基于多视角分数蒸馏的三维生成，从二维扩散模型提取三维信息
+8. [HiFiVe: High-Fidelity Vehicle Generation Leveraging Auto-Regressive 2D Generative Priors](/202606/30/2606.25300v2-hifive-high-fidelity-vehicle-generation-leveraging-auto-regressive-2d-generative-priors)  
    标签：评分：7.0/10、query:world-model
-   evidence：基于几何约束扩散的多视角人脸生成
-7. [Spherical-to-ERP Epipolar Rectification for Single-Axis Disparity in 360 Stereo](/202606/29/2606.24847v1-spherical-to-erp-epipolar-rectification-for-single-axis-disparity-in-360-stereo)  
+   evidence：3D车辆生成，结合几何与纹理增强
+9. [HiReFF: High-Resolution Feedforward Human Reconstruction from Uncalibrated Sparse-View Video](/202606/30/2606.29333v1-hireff-high-resolution-feedforward-human-reconstruction-from-uncalibrated-sparse-view-video)  
+   标签：评分：7.0/10、query:world-model
+   evidence：从稀疏视角进行前馈3D高斯人体重建，2K分辨率新视图合成
+10. [FFAvatar: Feed-Forward 4D Head Avatar Reconstruction from Sparse Portrait Images](/202606/30/2606.30347v1-ffavatar-feed-forward-4d-head-avatar-reconstruction-from-sparse-portrait-images)  
+   标签：评分：7.0/10、query:world-model
+   evidence：基于3D高斯框架的前馈4D头部化身重建
+11. [OP3DSG: Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments](/202606/30/2606.29786v1-op3dsg-open-vocabulary-part-aware-3d-scene-graph-generation-for-real-world-environments)  
    标签：评分：6.0/10、query:world-model
-   evidence：360立体图像的极线校正以实现单轴视差估计，与新颖视图合成相关
-8. [RayPE: Ray-Space Positional Encoding for 3D-Aware Video Generation](/202606/29/2606.27345v2-raype-ray-space-positional-encoding-for-3d-aware-video-generation)  
-   标签：评分：6.0/10、query:world-model
-   evidence：带光线空间位置编码的3D感知视频生成
-9. [Not All Relations Rotate Alike: Transformation-Aware Decoupling for Viewpoint-Robust 3D Scene Graph Generation](/202606/29/2606.27412v1-not-all-relations-rotate-alike-transformation-aware-decoupling-for-viewpoint-robust-3d-scene-graph-generation)  
-   标签：评分：6.0/10、query:world-model
-   evidence：生成视角鲁棒的3D场景图用于空间理解
+   evidence：开放词汇的3D场景图生成，包含部件级理解
 
 
 <div class="dpr-home-promo-card">
