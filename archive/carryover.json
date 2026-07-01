@@ -1,130 +1,49 @@
 {
-  "generated_at": "2026-06-30T21:38:33.617050+00:00",
-  "updated_date": "20260630",
+  "generated_at": "2026-07-01T21:51:41.390034+00:00",
+  "updated_date": "20260701",
   "carryover_days": 9,
   "tag_states": {
     "world-model": {
-      "updated_date": "20260630",
+      "updated_date": "20260701",
       "carryover_days": 9,
       "items": [
         {
-          "id": "2606.30014v1",
+          "id": "2606.31979v1",
           "source": "arxiv",
-          "title": "Shell-Supervised Gaussian Splatting for Urban Real-to-Sim Reconstruction",
-          "abstract": "Real-to-sim reconstruction for embodied AI requires geometry that is useful for collision reasoning, navigation, and agent-environment interaction, not only photorealistic novel-view synthesis. However, close-range urban facades are difficult for video-to-3D reconstruction: glass, reflections, repeated windows, and weak texture can produce visually plausible renderings with unstable surface geometry. We introduce shell-supervised Gaussian Splatting, a reconstruction-stage framework that uses an external facade structural shell as lightweight geometric supervision for video-driven Gaussian reconstruction. The method aligns an exterior shell to the video reconstruction frame, renders per-view depth, camera-space normal, and valid-mask maps, and applies these cues through mask-gated losses during Gaussian optimization. This design preserves RGB-driven appearance while regularizing only visible shell-supported facade regions. Experiments on anonymized close-range urban facade scenes show improved facade orientation and visible-surface point-cloud consistency over photo-only, monocular-cue, and surface-oriented Gaussian baselines, while maintaining comparable held-out rendering quality.",
+          "title": "Planar-SfM: Camera Pose Estimation via Homography Graph Embeddings",
+          "abstract": "Structure from Motion (SfM) systems traditionally struggle with planar scenes, where standard epipolar geometry-based methods become degenerate. Rather than viewing planar surfaces as a limitation, we propose a unified framework that leverages them as a source of geometric constraints. Our key insight is that each planar surface visible across multiple views provides an independent estimate of relative camera poses through homography decomposition. By aggregating estimates from multiple planes or even from a single dominant plane we achieve robust pose recovery in scenarios where traditional methods fail. We introduce a novel graph-based approach that constructs a pose-graph from homography estimates and employs spectral embedding to identify and filter unreliable edges. Our method maps homography-based pose estimates onto the real line based on their geometric and visual consistency, enabling efficient extraction of a maximally consistent spanning tree for pose recovery. This approach naturally handles both highly planar scenes, such as indoor sports arenas, and general $3$D environments. We demonstrate superior performance on basketball court imagery where existing methods struggle, while matching or exceeding state-of-the-art results on unconstrained outdoor scenes from the IMC Phototourism benchmark.",
           "authors": [
-            "Yuan Yang",
-            "Peijun Lu",
-            "Fangzhou Lu",
-            "Sai Fan",
-            "Siqi Yan",
-            "Chenyuan Zhang",
-            "Haobo Liang",
-            "Yichen Wang"
+            "Gabi Pragier",
+            "Matan Karklinsky",
+            "David Ungarish",
+            "Avi Ben-Cohen"
           ],
           "primary_category": "cs.CV",
           "categories": [
             "cs.CV"
           ],
-          "published": "2026-06-29T09:19:24+00:00",
-          "link": "https://arxiv.org/pdf/2606.30014v1",
+          "published": "2026-06-30T17:18:27+00:00",
+          "link": "https://arxiv.org/pdf/2606.31979v1",
           "tags": [
             "keyword:world-model",
             "query:world-model"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "shell-supervised Gaussian splatting for urban real-to-sim reconstruction",
-          "llm_evidence_cn": "外壳监督的高斯泼溅用于城市场景的实到仿重建",
-          "llm_evidence": "外壳监督的高斯泼溅用于城市场景的实到仿重建",
-          "canonical_evidence": "外壳监督的高斯泼溅用于城市场景的实到仿重建",
-          "llm_tldr_en": "Shell-supervised Gaussian Splatting uses an external facade structural shell as geometric supervision to guide video-driven Gaussian reconstruction for urban environments, improving surface geometry while maintaining real-time rendering.",
-          "llm_tldr_cn": "针对城市场景视频三维重建中玻璃、反射等导致几何不稳定问题，提出外壳监督的高斯泼溅。该方法利用外部建筑结构壳提供轻量级几何监督，通过渲染深度、法线和有效掩码图，在视频驱动的3DGS优化中约束表面几何，实现了适用于具身AI的可靠几何重建，同时保持实时渲染能力。",
-          "llm_tldr": "针对城市场景视频三维重建中玻璃、反射等导致几何不稳定问题，提出外壳监督的高斯泼溅。该方法利用外部建筑结构壳提供轻量级几何监督，通过渲染深度、法线和有效掩码图，在视频驱动的3DGS优化中约束表面几何，实现了适用于具身AI的可靠几何重建，同时保持实时渲染能力。",
+          "llm_evidence_en": "Camera pose estimation for SfM in planar scenes",
+          "llm_evidence_cn": "面向平面场景的SfM相机姿态估计",
+          "llm_evidence": "面向平面场景的SfM相机姿态估计",
+          "canonical_evidence": "面向平面场景的SfM相机姿态估计",
+          "llm_tldr_en": "Proposes Planar-SfM that uses homography graph embeddings to robustly estimate camera poses from planar scenes, overcoming degeneracy of traditional epipolar methods.",
+          "llm_tldr_cn": "传统SfM在平面场景中因对极几何退化而失效。本文提出将平面视为几何约束源，通过单应性分解独立估计相对位姿，并构建位姿图进行谱嵌入过滤。实验证明在传统方法失败的情景下仍能鲁棒恢复位姿，有效改进了场景重建。",
+          "llm_tldr": "传统SfM在平面场景中因对极几何退化而失效。本文提出将平面视为几何约束源，通过单应性分解独立估计相对位姿，并构建位姿图进行谱嵌入过滤。实验证明在传统方法失败的情景下仍能鲁棒恢复位姿，有效改进了场景重建。",
           "llm_tags": [
             "query:world-model"
           ],
           "matched_query_tag": "query:world-model",
-          "matched_query_text": "3D Gaussian splatting for real-time rendering",
-          "matched_requirement_id": "req-4",
+          "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+          "matched_requirement_id": "req-1",
           "selection_source": "carryover_cache",
-          "paper_id": "2606.30014v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.29976v1",
-          "source": "arxiv",
-          "title": "Learning Efficient 4D Gaussian Representations from Monocular Videos with Flow Splatting",
-          "abstract": "Reconstructing dynamic 3D scenes from monocular videos is challenging due to scene complexity and temporal dynamics. With the advancement of 3D Gaussian Splatting in novel view synthesis, existing methods extend 3D Gaussians to 4D domain with deformation fields, trajectories or spatiotemporal 4D volumes to model scene element deformation. However, these methods suffer from long training time, low rendering speed or high memory consumption for per-frame reconstruction of 4D volumes, without fully exploiting dense dynamic information. To address this issue, we propose Flow Splatting, which constructs the velocity field and enables the conventional splatting technique to render optical flow from the velocity field to supervise dynamics learning process from monocular videos. Specifically, we extend 4D volumes with time varying means and covariance to represent complex dynamics. Then, we construct and approximate the velocity field naturally based on this representations. While conventional volume rendering techniques support to render color fields, we extend the volume rendering strategy to splat the velocity field by considering the influence of camera motions. We conduct experiments on various benchmarks to demonstrate the efficiency and effectiveness of our method. Compared to the state-of-the-art methods, our model achieves better image quality with less time consumption and higher rendering speed.",
-          "authors": [
-            "Shengjun Zhang",
-            "Jinzhao Li",
-            "Xin Fei",
-            "Yueqi Duan"
-          ],
-          "primary_category": "cs.CV",
-          "categories": [
-            "cs.CV"
-          ],
-          "published": "2026-06-29T08:50:27+00:00",
-          "link": "https://arxiv.org/pdf/2606.29976v1",
-          "tags": [
-            "keyword:world-model",
-            "query:world-model"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "efficient 4D Gaussian representation from monocular videos with flow splatting",
-          "llm_evidence_cn": "通过光流泼溅从单目视频学习高效的四维高斯表示",
-          "llm_evidence": "通过光流泼溅从单目视频学习高效的四维高斯表示",
-          "canonical_evidence": "通过光流泼溅从单目视频学习高效的四维高斯表示",
-          "llm_tldr_en": "Flow Splatting extends 3D Gaussian splatting to 4D by constructing a velocity field and using splatting to render optical flow, enabling efficient dynamic scene reconstruction.",
-          "llm_tldr_cn": "针对从单目视频重建动态场景时训练时间长、内存消耗大的问题，本文提出Flow Splatting方法。通过构建速度场并利用传统泼溅技术渲染光流，有效监督动态学习。该方法在保持高质量渲染的同时，显著降低了训练和渲染开销，拓展了三维高斯泼溅在动态场景中的应用。",
-          "llm_tldr": "针对从单目视频重建动态场景时训练时间长、内存消耗大的问题，本文提出Flow Splatting方法。通过构建速度场并利用传统泼溅技术渲染光流，有效监督动态学习。该方法在保持高质量渲染的同时，显著降低了训练和渲染开销，拓展了三维高斯泼溅在动态场景中的应用。",
-          "llm_tags": [
-            "query:world-model"
-          ],
-          "matched_query_tag": "query:world-model",
-          "matched_query_text": "3D Gaussian splatting for real-time rendering",
-          "matched_requirement_id": "req-4",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.29976v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.30608v1",
-          "source": "arxiv",
-          "title": "UnfoldArt: Zero-Shot Recovery of Full Articulated 3D Objects from Text or Image",
-          "abstract": "Articulated 3D objects are essential for interactive environments in embodied AI, robotics, and virtual reality, but reconstructing their structure and motion from sparse observations remains challenging. Existing approaches remain largely constrained by lack of supervised data or lack the priors needed to reliably recover articulation, hidden geometry, and internal object structure. We present the first debate-driven agentic approach to articulated 3D object reconstruction from text or image inputs that both grounds articulation reasoning in concrete motion and exposes the occluded geometry revealed under articulation. High-level agents reason about object semantics and motion using knowledge from vision-language and video models, while low-level agents estimate articulation parameters and interaction points; together, they engage in a two-round structured debate that first exploits global--local disagreement and then grounds the agents in freely generated video. The same video prior, conditioned on the agreed articulation, then drives each part through its motion to expose occluded interiors and geometry that cannot be inferred from a single static view. By combining agentic reasoning with a video generative prior, our approach jointly infers articulation and reconstructs complete 3D articulated objects, producing high-fidelity geometry, internal structure, and motion-consistent states beyond directly observed surfaces.",
-          "authors": [
-            "Mohamed el amine boudjoghra",
-            "Ivan Laptev",
-            "Angela Dai"
-          ],
-          "primary_category": "cs.CV",
-          "categories": [
-            "cs.CV"
-          ],
-          "published": "2026-06-29T17:44:53+00:00",
-          "link": "https://arxiv.org/pdf/2606.30608v1",
-          "tags": [
-            "keyword:world-model",
-            "query:world-model"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "text to 3D articulated object zero-shot",
-          "llm_evidence_cn": "从文本到三维铰接物体零样本",
-          "llm_evidence": "从文本到三维铰接物体零样本",
-          "canonical_evidence": "从文本到三维铰接物体零样本",
-          "llm_tldr_en": "UnfoldArt uses a debate-driven agentic approach to recover articulated 3D objects from text or image inputs, reasoning about articulation and revealing hidden geometry.",
-          "llm_tldr_cn": "UnfoldArt提出辩论驱动的多智能体方法，从文本或图像零样本恢复铰接式3D物体。高层智能体利用视觉-语言和视频模型推理语义和运动，低层执行器生成3D表示。在多种铰接物体上无需3D监督即可获得高质量重建。",
-          "llm_tldr": "UnfoldArt提出辩论驱动的多智能体方法，从文本或图像零样本恢复铰接式3D物体。高层智能体利用视觉-语言和视频模型推理语义和运动，低层执行器生成3D表示。在多种铰接物体上无需3D监督即可获得高质量重建。",
-          "llm_tags": [
-            "query:world-model"
-          ],
-          "matched_query_tag": "query:world-model",
-          "matched_query_text": "techniques for generating 3D scenes from text descriptions",
-          "matched_requirement_id": "req-10",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.30608v1",
+          "paper_id": "2606.31979v1",
           "carry_days": 1
         }
       ]

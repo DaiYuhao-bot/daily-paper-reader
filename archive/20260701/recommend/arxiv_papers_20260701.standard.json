@@ -1,0 +1,693 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-01T21:51:41.388676+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 13,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 12,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2606.30045v1",
+      "source": "arxiv",
+      "title": "Walking in the Implicit: Interactive World Exploration via Neural Scene Representation",
+      "abstract": "Interactive video generation systems for camera-controlled world exploration roll out growing sequences of latent video frames, entangling state transition with high-frequency observation synthesis. We propose Walking in the Implicit, a scene-centric paradigm that changes the rollout variable from frame latents to a fixed-length, renderable implicit state, termed Neural Implicit Scene (NIS). This factorizes interactive generation into stochastic transition of a compact scene state and deterministic pose-conditioned rendering given the sampled state. We instantiate this paradigm as NeuWorld: a transformer VAE learns locally anchored NIS from sparse posed frames, and a diffusion transformer evolves NIS conditioned on future camera trajectories and geometry-aware retrieved history. By reusing the VAE encoder as a unified conditioner, NeuWorld maps camera, reference-image, and history cues into the same NIS modality, avoiding external heterogeneous encoders. Trained from scratch on public posed-view data without pretrained video backbones or auxiliary 3D reconstructors, NeuWorld achieves strong long-horizon consistency with favorable inference efficiency.",
+      "authors": [
+        "Zhiqi Li",
+        "Chengrui Dong",
+        "Zhenhua Du",
+        "Hangning Zhou",
+        "Cong Qiu",
+        "Hailong Qin",
+        "Mu Yang",
+        "Dongxu Wei",
+        "Peidong Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T09:37:33+00:00",
+      "link": "https://arxiv.org/pdf/2606.30045v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "neural implicit scene for world exploration, world model learning",
+      "llm_evidence_cn": "神经隐式场景用于世界探索，世界模型学习",
+      "llm_evidence": "神经隐式场景用于世界探索，世界模型学习",
+      "canonical_evidence": "神经隐式场景用于世界探索，世界模型学习",
+      "llm_tldr_en": "NeuWorld proposes Neural Implicit Scene (NIS) for interactive world exploration, factorizing generation into scene state transition and pose-conditioned rendering, enabling world model learning for 3D scene understanding.",
+      "llm_tldr_cn": "针对交互式视频生成中状态转换与观测合成耦合的问题，Walking in the Implicit提出神经隐式场景（NIS）范式，将生成分解为紧凑场景状态的随机转移和给定状态下的确定性姿态条件渲染。NeuWorld实例化该范式，用Transformer VAE从稀疏姿态图像学习局部锚定NIS，扩散Transformer根据未来相机轨迹演化NIS，实现可交互的世界探索，为世界模型学习提供新框架。",
+      "llm_tldr": "针对交互式视频生成中状态转换与观测合成耦合的问题，Walking in the Implicit提出神经隐式场景（NIS）范式，将生成分解为紧凑场景状态的随机转移和给定状态下的确定性姿态条件渲染。NeuWorld实例化该范式，用Transformer VAE从稀疏姿态图像学习局部锚定NIS，扩散Transformer根据未来相机轨迹演化NIS，实现可交互的世界探索，为世界模型学习提供新框架。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.30608v1",
+      "source": "arxiv",
+      "title": "UnfoldArt: Zero-Shot Recovery of Full Articulated 3D Objects from Text or Image",
+      "abstract": "Articulated 3D objects are essential for interactive environments in embodied AI, robotics, and virtual reality, but reconstructing their structure and motion from sparse observations remains challenging. Existing approaches remain largely constrained by lack of supervised data or lack the priors needed to reliably recover articulation, hidden geometry, and internal object structure. We present the first debate-driven agentic approach to articulated 3D object reconstruction from text or image inputs that both grounds articulation reasoning in concrete motion and exposes the occluded geometry revealed under articulation. High-level agents reason about object semantics and motion using knowledge from vision-language and video models, while low-level agents estimate articulation parameters and interaction points; together, they engage in a two-round structured debate that first exploits global--local disagreement and then grounds the agents in freely generated video. The same video prior, conditioned on the agreed articulation, then drives each part through its motion to expose occluded interiors and geometry that cannot be inferred from a single static view. By combining agentic reasoning with a video generative prior, our approach jointly infers articulation and reconstructs complete 3D articulated objects, producing high-fidelity geometry, internal structure, and motion-consistent states beyond directly observed surfaces.",
+      "authors": [
+        "Mohamed el amine boudjoghra",
+        "Ivan Laptev",
+        "Angela Dai"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T17:44:53+00:00",
+      "link": "https://arxiv.org/pdf/2606.30608v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "articulated 3D object reconstruction from text or image",
+      "llm_evidence_cn": "从文本或图像恢复铰接三维物体",
+      "llm_evidence": "从文本或图像恢复铰接三维物体",
+      "canonical_evidence": "从文本或图像恢复铰接三维物体",
+      "llm_tldr_en": "UnfoldArt uses a debate-driven agentic approach to reconstruct articulated 3D objects from text or image, grounding articulation reasoning in motion and exposing occluded geometry.",
+      "llm_tldr_cn": "针对铰接三维物体重建缺乏监督数据与先验的问题，UnfoldArt提出首个辩论驱动代理方法，从文本或图像输入恢复完整铰接三维物体。高层代理利用视觉-语言模型推理语义和运动，低层代理执行具体重建，展现多模态输入下可交互的铰接物体结构。",
+      "llm_tldr": "针对铰接三维物体重建缺乏监督数据与先验的问题，UnfoldArt提出首个辩论驱动代理方法，从文本或图像输入恢复完整铰接三维物体。高层代理利用视觉-语言模型推理语义和运动，低层代理执行具体重建，展现多模态输入下可交互的铰接物体结构。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Generative models for 3D scene synthesis from text or images",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.31086v1",
+      "source": "arxiv",
+      "title": "CasaMaestro: Multi-View Panoramas for House-Scale 3D Reconstruction",
+      "abstract": "The rise of home-deployed embodied AI systems is driving a growing need for fast, metric 3D reconstruction of residential spaces to support navigation, interaction, and long-horizon task execution. However, the commonly used pinhole-camera 3D reconstruction pipelines struggle to model large indoor residences efficiently due to their limited field of view, to which achieving full coverage across multiple rooms often requires thousands of images and incurs drift from long chains of incremental alignment. In this work, we present CasaMaestro (Spanish words meaning ``house'' and ``master''), a feedforward model that can take only twenty to fifty sparse multi-view indoor panoramas as input and directly predicts metric depth along with camera poses, allowing fast point-cloud reconstruction of the entire house with full coverage. CasaMaestro is the first model that supports house-scale reconstruction with multi-view panoramas. Experiments show that CasaMaestro can robustly provide high quality results in both real-world and synthetic scenes, which can serve as a strong foundation for acquiring house-scale 3D indoor assets to be applied in close-loop simulation.",
+      "authors": [
+        "Yuzhou Ji",
+        "Xiaotian Yang",
+        "Zhipeng Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-30T03:21:57+00:00",
+      "link": "https://arxiv.org/pdf/2606.31086v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "fast metric 3D reconstruction of residential spaces from multi-view panoramas",
+      "llm_evidence_cn": "从多视图全景快速进行住宅空间度量3D重建",
+      "llm_evidence": "从多视图全景快速进行住宅空间度量3D重建",
+      "canonical_evidence": "从多视图全景快速进行住宅空间度量3D重建",
+      "llm_tldr_en": "CasaMaestro is a feedforward model that reconstructs metric 3D of house-scale interiors from only 20-50 sparse multi-view panoramas, predicting depth and camera poses directly.",
+      "llm_tldr_cn": "该论文提出CasaMaestro，一个前馈模型，仅需20-50张稀疏多视图室内全景即可快速重建住宅空间的度量3D模型。传统针孔相机管线因视野有限需要数千张图像且易漂移。CasaMaestro直接预测度量深度和相机位姿，通过全景的广阔视野避免漂移。实验展示了在真实住宅数据集上的高效重建质量。",
+      "llm_tldr": "该论文提出CasaMaestro，一个前馈模型，仅需20-50张稀疏多视图室内全景即可快速重建住宅空间的度量3D模型。传统针孔相机管线因视野有限需要数千张图像且易漂移。CasaMaestro直接预测度量深度和相机位姿，通过全景的广阔视野避免漂移。实验展示了在真实住宅数据集上的高效重建质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.31556v1",
+      "source": "arxiv",
+      "title": "AugSplat: Radiance Field-Informed Gaussian Splatting for Sparse-View Settings",
+      "abstract": "Generating high-quality novel views at real-time frame rates remains a central challenge in 3D vision, particularly in sparse-view scenarios. Neural radiance fields have demonstrated robust reconstruction from limited observations, but their reliance on volumetric rendering leads to high computational cost and slow inference. In contrast, Gaussian Splatting methods achieve real-time rendering through rasterization, but their optimization is highly sensitive to the quality of the initial geometry. This sensitivity becomes especially problematic in sparse-view settings, where limited observations often lead to incomplete or noisy point-cloud reconstructions. In this work, we present AugSplat, a simple framework for improving Gaussian Splatting in sparse-view regimes using radiance-field-based view augmentation. We first train a radiance field on the sparse input views and use it to synthesize additional images from nearby novel viewpoints, increasing the effective view-space coverage available for supervision. These synthetic views are then used as auxiliary supervision during Gaussian Splatting optimization. We study two variants: Staged AugSplat, which uses synthetic views for an initial optimization phase before switching to real images, and Dual AugSplat, which jointly trains on real and synthetic views with a decaying synthetic loss weight. Experiments on sparse-view mip-NeRF 360 scenes show that AugSplat improves reconstruction quality over standard Gaussian Splatting. Staged AugSplat achieves the strongest average performance, while Dual AugSplat provides a closely performing formulation that keeps real-image supervision active throughout training, and both variants preserve real-time rendering at inference.",
+      "authors": [
+        "Lorenzo Lazzaroni",
+        "Riccardo Bollati",
+        "Daniel Barath",
+        "Michael Niemeyer",
+        "Keisuke Tateno"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-30T12:12:21+00:00",
+      "link": "https://arxiv.org/pdf/2606.31556v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Gaussian splatting for real-time rendering with sparse views",
+      "llm_evidence_cn": "稀疏视角下的高斯泼溅实时渲染",
+      "llm_evidence": "稀疏视角下的高斯泼溅实时渲染",
+      "canonical_evidence": "稀疏视角下的高斯泼溅实时渲染",
+      "llm_tldr_en": "AugSplat improves Gaussian Splatting in sparse-view settings by using radiance field priors to initialize geometry, enabling high-quality novel view synthesis at real-time rates.",
+      "llm_tldr_cn": "该论文提出AugSplat框架，改善稀疏视角下高斯泼溅的性能。现有高斯泼溅对初始几何敏感，稀疏视角导致不完整点云。AugSplat利用神经辐射场先验初始化几何，再通过高斯泼溅优化，在保持实时渲染速度的同时大幅提升新视角合成质量。实验表明在多种稀疏设置下均优于现有方法。",
+      "llm_tldr": "该论文提出AugSplat框架，改善稀疏视角下高斯泼溅的性能。现有高斯泼溅对初始几何敏感，稀疏视角导致不完整点云。AugSplat利用神经辐射场先验初始化几何，再通过高斯泼溅优化，在保持实时渲染速度的同时大幅提升新视角合成质量。实验表明在多种稀疏设置下均优于现有方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.29303v2",
+      "source": "arxiv",
+      "title": "Occlusion-Robust Multi-Object Decoupling for Physics-Based Robotic Interaction",
+      "abstract": "We propose a mask-free method for lossless multi-object 3D reconstruction from sparse and occluded real-world views, enabling physically plausible robotic interaction via Material Point Method (MPM) simulation. Our key insight is that object coupling stems from occlusion and limited viewpoints, which we address by formulating multi-object decoupling as a sparse-view reconstruction problem. Using 3D Gaussian Splatting as base representation, we first obtain coarse instance partitions with a SAM2-trained segmentation field. Rather than relying on masks, we reconstruct fragmented geometries by leveraging a joint Score Distillation Sampling (SDS) process, which integrates reference-view supervision with novel-view synthesis guided by 2D and 3D diffusion priors to enforce both texture fidelity and 3D consistency. Furthermore, we incorporate geometry-aware priors such as intra-object and inter-object similarity to regularize geometric reasoning. Experimental results demonstrate that our method produces complete, simulation-ready 3D objects without requiring manual masks, enabling realistic dynamic interactions on both synthetic, robotic and real-world datasets.",
+      "authors": [
+        "Xin Dong",
+        "Lihan Zhang",
+        "Tianru Dai",
+        "Wenfeng Deng",
+        "Yansong Tang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-28T09:50:46+00:00",
+      "link": "https://arxiv.org/pdf/2606.29303v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Occlusion-robust multi-object 3D reconstruction from sparse views",
+      "llm_evidence_cn": "从稀疏遮挡视图进行鲁棒多物体3D重建",
+      "llm_evidence": "从稀疏遮挡视图进行鲁棒多物体3D重建",
+      "canonical_evidence": "从稀疏遮挡视图进行鲁棒多物体3D重建",
+      "llm_tldr_en": "Proposes a mask-free method for multi-object 3D reconstruction from sparse occluded views using 3DGS and SDS, enabling physics-based robotic interaction.",
+      "llm_tldr_cn": "稀疏遮挡视图中多物体重建受限于耦合与遮挡。本文以3D高斯泼溅为基础，通过SAM2分割场获得粗略实例划分，再利用联合SDS过程融合参考视图监督与新视角合成，重建完整几何。实验在物理模拟中验证了交互可行性。",
+      "llm_tldr": "稀疏遮挡视图中多物体重建受限于耦合与遮挡。本文以3D高斯泼溅为基础，通过SAM2分割场获得粗略实例划分，再利用联合SDS过程融合参考视图监督与新视角合成，重建完整几何。实验在物理模拟中验证了交互可行性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.30014v1",
+      "source": "arxiv",
+      "title": "Shell-Supervised Gaussian Splatting for Urban Real-to-Sim Reconstruction",
+      "abstract": "Real-to-sim reconstruction for embodied AI requires geometry that is useful for collision reasoning, navigation, and agent-environment interaction, not only photorealistic novel-view synthesis. However, close-range urban facades are difficult for video-to-3D reconstruction: glass, reflections, repeated windows, and weak texture can produce visually plausible renderings with unstable surface geometry. We introduce shell-supervised Gaussian Splatting, a reconstruction-stage framework that uses an external facade structural shell as lightweight geometric supervision for video-driven Gaussian reconstruction. The method aligns an exterior shell to the video reconstruction frame, renders per-view depth, camera-space normal, and valid-mask maps, and applies these cues through mask-gated losses during Gaussian optimization. This design preserves RGB-driven appearance while regularizing only visible shell-supported facade regions. Experiments on anonymized close-range urban facade scenes show improved facade orientation and visible-surface point-cloud consistency over photo-only, monocular-cue, and surface-oriented Gaussian baselines, while maintaining comparable held-out rendering quality.",
+      "authors": [
+        "Yuan Yang",
+        "Peijun Lu",
+        "Fangzhou Lu",
+        "Sai Fan",
+        "Siqi Yan",
+        "Chenyuan Zhang",
+        "Haobo Liang",
+        "Yichen Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T09:19:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.30014v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "shell-supervised Gaussian splatting for urban real-to-sim reconstruction",
+      "llm_evidence_cn": "外壳监督的高斯泼溅用于城市场景的实到仿重建",
+      "llm_evidence": "外壳监督的高斯泼溅用于城市场景的实到仿重建",
+      "canonical_evidence": "外壳监督的高斯泼溅用于城市场景的实到仿重建",
+      "llm_tldr_en": "Shell-supervised Gaussian Splatting uses an external facade structural shell as geometric supervision to guide video-driven Gaussian reconstruction for urban environments, improving surface geometry while maintaining real-time rendering.",
+      "llm_tldr_cn": "针对城市场景视频三维重建中玻璃、反射等导致几何不稳定问题，提出外壳监督的高斯泼溅。该方法利用外部建筑结构壳提供轻量级几何监督，通过渲染深度、法线和有效掩码图，在视频驱动的3DGS优化中约束表面几何，实现了适用于具身AI的可靠几何重建，同时保持实时渲染能力。",
+      "llm_tldr": "针对城市场景视频三维重建中玻璃、反射等导致几何不稳定问题，提出外壳监督的高斯泼溅。该方法利用外部建筑结构壳提供轻量级几何监督，通过渲染深度、法线和有效掩码图，在视频驱动的3DGS优化中约束表面几何，实现了适用于具身AI的可靠几何重建，同时保持实时渲染能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.30014v1"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.29976v1",
+      "source": "arxiv",
+      "title": "Learning Efficient 4D Gaussian Representations from Monocular Videos with Flow Splatting",
+      "abstract": "Reconstructing dynamic 3D scenes from monocular videos is challenging due to scene complexity and temporal dynamics. With the advancement of 3D Gaussian Splatting in novel view synthesis, existing methods extend 3D Gaussians to 4D domain with deformation fields, trajectories or spatiotemporal 4D volumes to model scene element deformation. However, these methods suffer from long training time, low rendering speed or high memory consumption for per-frame reconstruction of 4D volumes, without fully exploiting dense dynamic information. To address this issue, we propose Flow Splatting, which constructs the velocity field and enables the conventional splatting technique to render optical flow from the velocity field to supervise dynamics learning process from monocular videos. Specifically, we extend 4D volumes with time varying means and covariance to represent complex dynamics. Then, we construct and approximate the velocity field naturally based on this representations. While conventional volume rendering techniques support to render color fields, we extend the volume rendering strategy to splat the velocity field by considering the influence of camera motions. We conduct experiments on various benchmarks to demonstrate the efficiency and effectiveness of our method. Compared to the state-of-the-art methods, our model achieves better image quality with less time consumption and higher rendering speed.",
+      "authors": [
+        "Shengjun Zhang",
+        "Jinzhao Li",
+        "Xin Fei",
+        "Yueqi Duan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T08:50:27+00:00",
+      "link": "https://arxiv.org/pdf/2606.29976v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Efficient 4D Gaussian representations from monocular videos with flow splatting",
+      "llm_evidence_cn": "基于光流泼溅的单目视频高效4D高斯表示",
+      "llm_evidence": "基于光流泼溅的单目视频高效4D高斯表示",
+      "canonical_evidence": "基于光流泼溅的单目视频高效4D高斯表示",
+      "llm_tldr_en": "Flow Splatting constructs velocity fields to supervise dynamics in 4D Gaussian representations from monocular videos.",
+      "llm_tldr_cn": "本文针对从单目视频重建动态3D场景效率低的问题，提出Flow Splatting方法，构建速度场并通过泼溅技术渲染光流来监督动态学习。实验表明该方法在训练速度、渲染质量和内存占用上均优于现有4D高斯方法，为动态场景实时渲染提供高效方案。",
+      "llm_tldr": "本文针对从单目视频重建动态3D场景效率低的问题，提出Flow Splatting方法，构建速度场并通过泼溅技术渲染光流来监督动态学习。实验表明该方法在训练速度、渲染质量和内存占用上均优于现有4D高斯方法，为动态场景实时渲染提供高效方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.27537v2",
+      "source": "arxiv",
+      "title": "MemoBench: Benchmarking World Modeling in Dynamically Changing Environments",
+      "abstract": "Video generation models aspire to simulate dynamic environments, and several benchmarks now evaluate memory consistency across frames. However, most assess consistency only while the target remains in view, and the few that force objects out of view evaluate static scenes where nothing changes during occlusion. To bridge this gap, we introduce MemoBench, a diagnostic benchmark built around the disappear-and-reappear paradigm in dynamically changing environments: a target object undergoes a physical process, disappears from view, and must be correctly recovered in its updated state upon reappearance. We curate 360 ground-truth clips spanning synthetic and real-world scenes, and design an evaluation suite combining automated metrics with VQA-based assessment across four diagnostic pillars. Evaluation of eight state-of-the-art models reveals key insights and open challenges regarding memory consistency under the disappear-and-reappear paradigm.",
+      "authors": [
+        "Haoyu Chen",
+        "Kaichen Zhou",
+        "Hang Hua",
+        "Kaile Zhang",
+        "Jingwen Qian",
+        "Wufei Ma",
+        "Haonan Chen",
+        "Chunjiang Liu",
+        "Yizhou Zhao",
+        "Xiaoyuan Wang",
+        "Weiyue Li",
+        "Alan Yuille",
+        "Paul Pu Liang",
+        "Yilun Du"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-25T20:37:39+00:00",
+      "link": "https://arxiv.org/pdf/2606.27537v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "benchmark for world model memory consistency",
+      "llm_evidence_cn": "世界模型记忆一致性基准",
+      "llm_evidence": "世界模型记忆一致性基准",
+      "canonical_evidence": "世界模型记忆一致性基准",
+      "llm_tldr_en": "Introduces MemoBench, a benchmark evaluating world model memory in dynamically changing environments using a disappear-and-reappear paradigm.",
+      "llm_tldr_cn": "现有世界模型基准仅评估静态遮挡场景的记忆，缺乏动态变化评估。MemoBench设计了消失-重现范式，包含360个合成和真实视频，评估动态环境中世界模型对物体状态变化的记忆。该基准揭示了现有模型在动态场景下的严重不足，为世界模型研究提供了重要测试平台。",
+      "llm_tldr": "现有世界模型基准仅评估静态遮挡场景的记忆，缺乏动态变化评估。MemoBench设计了消失-重现范式，包含360个合成和真实视频，评估动态环境中世界模型对物体状态变化的记忆。该基准揭示了现有模型在动态场景下的严重不足，为世界模型研究提供了重要测试平台。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.31050v1",
+      "source": "arxiv",
+      "title": "Learning Video Dynamics with Predictive Differentiable Rendering",
+      "abstract": "How to accurately predict a high-fidelity future world? While the visual world is inherently continuous, existing deterministic video prediction models operate in discrete pixel space and are mainly optimized with pixel-wise mean squared error (MSE), which often leads to over-smoothed predictions and a lack of fine-grained visual details. To address these limitations, we propose Predictive Differentiable Rendering (PDR), a novel end-to-end video prediction paradigm that bridges the gap between discrete and continuous representations. Inspired by recent progress in 3D reconstruction with 3D Gaussian Splatting, we introduce PredGS, a lightweight and plug-and-play adapter based on 2D Gaussian representation, which could be seamlessly integrated with existing pixel space predictors, significantly improving spatial detail preservation with negligible computational overhead. Furthermore, we develop predgsplat, a CUDA-accelerated differentiable 2D Gaussian renderer supporting arbitrary channels. Each Gaussian is defined by 5 + C learnable parameters (position, scale, rotation, and C channel amplitudes) and achieves up to 10x faster rendering than the baseline. Optimized by a combined L1 and SSIM loss, PDR overcomes the inherent blurring tendencies of MSE Loss, significantly enhancing the prediction performance. Extensive experiments on diverse real-world benchmarks, including TaxiBJ, WeatherBench, KTH, and Human3.6M, demonstrate that PDR consistently surpasses existing methods, delivering superior detail preservation, visual fidelity, and predictive accuracy.",
+      "authors": [
+        "Yujin Tang",
+        "Tian Zhou",
+        "Xin Lin",
+        "Cheng Tan",
+        "Yifan Hu",
+        "Rong Jin",
+        "SouYoung Jin",
+        "Liang Sun"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-30T02:36:34+00:00",
+      "link": "https://arxiv.org/pdf/2606.31050v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Video prediction with differentiable rendering using 2D Gaussian representation",
+      "llm_evidence_cn": "利用2D高斯表示的可微渲染进行视频预测",
+      "llm_evidence": "利用2D高斯表示的可微渲染进行视频预测",
+      "canonical_evidence": "利用2D高斯表示的可微渲染进行视频预测",
+      "llm_tldr_en": "Proposes Predictive Differentiable Rendering (PDR) using a 2D Gaussian adapter (PredGS) for high-fidelity video prediction inspired by 3DGS.",
+      "llm_tldr_cn": "现有视频预测模型在离散像素空间优化导致过平滑。本文受3D高斯泼溅启发，提出可微预测渲染范式，引入轻量级2D高斯适配器PredGS，将连续场景表示嵌入预测流。实验证明该方法能生成高细节未来帧，弥合离散与连续鸿沟。",
+      "llm_tldr": "现有视频预测模型在离散像素空间优化导致过平滑。本文受3D高斯泼溅启发，提出可微预测渲染范式，引入轻量级2D高斯适配器PredGS，将连续场景表示嵌入预测流。实验证明该方法能生成高细节未来帧，弥合离散与连续鸿沟。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.30677v1",
+      "source": "arxiv",
+      "title": "DANTE-W: Diffuse Albedo Neural Texturing in the Wild",
+      "abstract": "Classical mesh texturing techniques blend captured multi-view images directly, which inevitably suffer from baked-in shading and casted shadows that compromise visual fidelity during relighting. To circumvent this issue, we present a neural texturing framework, namely DANTE-W, to enable high-fidelity diffuse albedo texture recovery from unstructured image collections for large-scale, in-the-wild scenes, which integrates seamlessly with traditional 3D reconstruction pipelines. Given a reconstructed mesh and its surface parameterization, our method fuses view-space generative albedo priors into a coherent texture space via an expressive neural representation, while substantially enhancing fine-grained textural details through physically principled neural rendering. To comprehensively evaluate our method, we curate a benchmark dataset featuring diverse, fine-grained textures, comprising both real-world in-the-wild scenes and synthetic objects. Extensive experiments verify the effectiveness of our approach in reconstructing accurate albedo textures and boosting relighting fidelity. Project page: dante-wild.github.io.",
+      "authors": [
+        "Guangyu Wang",
+        "Tianheng Lu",
+        "Ruqi Huang",
+        "Lu Fang"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "published": "2026-06-26T09:45:56+00:00",
+      "link": "https://arxiv.org/pdf/2606.30677v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "high-fidelity diffuse albedo texture recovery for 3D reconstruction",
+      "llm_evidence_cn": "高保真漫反射纹理恢复用于三维重建",
+      "llm_evidence": "高保真漫反射纹理恢复用于三维重建",
+      "canonical_evidence": "高保真漫反射纹理恢复用于三维重建",
+      "llm_tldr_en": "DANTE-W recovers high-fidelity diffuse albedo textures from unstructured image collections for large-scale scenes, integrating with traditional 3D reconstruction pipelines using generative priors and neural rendering.",
+      "llm_tldr_cn": "针对传统网格纹理化中阴影和遮蔽导致重照明保真度低的问题，DANTE-W提出神经纹理框架，从非结构化图像集合恢复大尺度野外场景的高保真漫反射纹理。该方法利用视图空间生成先验和物理原理神经渲染，增强细节，与现有三维重建流程无缝集成。",
+      "llm_tldr": "针对传统网格纹理化中阴影和遮蔽导致重照明保真度低的问题，DANTE-W提出神经纹理框架，从非结构化图像集合恢复大尺度野外场景的高保真漫反射纹理。该方法利用视图空间生成先验和物理原理神经渲染，增强细节，与现有三维重建流程无缝集成。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.29782v1",
+      "source": "arxiv",
+      "title": "Graph-GSReg: Leveraging 3D Scene Graphs for Gaussian Splatting Registration",
+      "abstract": "Merging multiple 3D Gaussian Splatting (3DGS) scenes into a single unified Gaussian representation is essential for large-scale 3D mapping and long-term map management. Despite its importance, this area remains underexplored, and existing solutions exhibit several limitations. Learning-based methods attempt direct correspondence between Gaussian primitives and require training on large 3DGS datasets. Image-based optimization methods depend heavily on coarse initialization from generic foundation models and often incur expensive refinement. We present \\ourmodel. Our method constructs a 3D scene graph from a 3DGS and its rendered images, \\textit{reformulating 3DGS registration as a graph registration problem}. The proposed 3D scene graph represents each 3DGS at a higher-level representation, enabling a globally consistent understanding of semantic information and structural context for accurate registration. To further construct a seamless unified scene, we introduce a Self-Supervised Test-Time Optimization. Naively merging two 3D Gaussian scenes often suffers from occlusion artifacts such as hollows and floaters. To alleviate this issue, we refine the merged Gaussians to preserve visual consistency between the original scenes and the merged scene. We evaluate our method on real and synthetic benchmarks, demonstrating competitive registration accuracy and merged scene rendering quality.",
+      "authors": [
+        "Jaewon Lee",
+        "Mangyu Kong",
+        "Euntai Kim"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T04:58:44+00:00",
+      "link": "https://arxiv.org/pdf/2606.29782v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Registering multiple 3D Gaussian Splatting scenes using 3D scene graphs",
+      "llm_evidence_cn": "使用3D场景图注册多个3D高斯泼溅场景",
+      "llm_evidence": "使用3D场景图注册多个3D高斯泼溅场景",
+      "canonical_evidence": "使用3D场景图注册多个3D高斯泼溅场景",
+      "llm_tldr_en": "Graph-GSReg reformulates 3DGS registration as a graph registration problem using 3D scene graphs, enabling robust merging of multiple 3DGS scenes.",
+      "llm_tldr_cn": "针对多个3D高斯泼溅（3DGS）场景合并成统一表示的问题，提出Graph-GSReg。该方法从3DGS及其渲染图像构建3D场景图，将3DGS配准重新表述为图配准问题，避免了直接基元配准的困难和对图像优化初值的依赖。实验表明该方法在无需大训练集情况下有效合并3DGS场景，支持大规模3D建图。",
+      "llm_tldr": "针对多个3D高斯泼溅（3DGS）场景合并成统一表示的问题，提出Graph-GSReg。该方法从3DGS及其渲染图像构建3D场景图，将3DGS配准重新表述为图配准问题，避免了直接基元配准的困难和对图像优化初值的依赖。实验表明该方法在无需大训练集情况下有效合并3DGS场景，支持大规模3D建图。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3D Gaussian splatting for real-time rendering",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.31258v1",
+      "source": "arxiv",
+      "title": "WarpHammer: Densifying Scene Warps with 3D Object Priors for Extreme View Synthesis",
+      "abstract": "Projection-conditioned novel view synthesis (NVS) warps an explicit 3D reconstruction of the input view into the target camera and conditions a generator on the warped rendering. This works well for small viewpoint changes but degrades sharply under large orbital motion: the warp becomes sparse around the orbited object, where hidden surfaces dominate the new view and mirror-like artifacts emerge, causing the generator to lose both pixel content and the implicit camera cue carried by the warp. We introduce WarpHammer, a training-free framework that resolves this failure mode by augmenting the warped scene with an explicit 3D reconstruction of the object obtained from a native 3D generative prior (e.g., SAM3D). The reconstructed object adds missing foreground surfaces and occludes background points that should no longer be visible, restoring both appearance and camera cues without fine-tuning the base model. The same explicit object representation further unlocks a capability current NVS pipelines do not support: incorporating auxiliary views of the object from sources outside the target scene, for example, a casual snapshot of a car paired with a manufacturer studio shot of the same model. We process the reference and auxiliary images jointly with a pretrained multi-view geometry foundation model, which predicts a unified point cloud that we fuse into the 3D object reconstruction. This yields substantially more faithful geometry than single-image reconstruction, without requiring user-provided camera poses for the auxiliary views. On five benchmarks, WarpHammer produces stable novel views at viewpoint deviations where strong baselines collapse, and is the first scene-level NVS method that can naturally fuse auxiliary, pose-unknown object views from an external source.",
+      "authors": [
+        "Michael Green",
+        "Gavriel Habib",
+        "Dvir Samuel",
+        "Tal Berkovitz Shalev",
+        "Issar Tzachor",
+        "Rami Ben-Ari",
+        "Or Litany"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-30T07:33:46+00:00",
+      "link": "https://arxiv.org/pdf/2606.31258v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Extreme view synthesis using 3D object priors",
+      "llm_evidence_cn": "利用3D物体先验进行极端视角合成",
+      "llm_evidence": "利用3D物体先验进行极端视角合成",
+      "canonical_evidence": "利用3D物体先验进行极端视角合成",
+      "llm_tldr_en": "WarpHammer augments scene warps with 3D object priors from generative models to improve extreme novel view synthesis.",
+      "llm_tldr_cn": "本文针对投影条件新视角合成在大旋转角度下性能退化的问题，提出WarpHammer无训练框架，利用3D生成先验（如SAM3D）重建物体并补充到扭曲场景中。实验表明该方法有效消除了稀疏和镜面伪影，在极端视角下显著提升合成质量，为无训练新视角合成提供新思路。",
+      "llm_tldr": "本文针对投影条件新视角合成在大旋转角度下性能退化的问题，提出WarpHammer无训练框架，利用3D生成先验（如SAM3D）重建物体并补充到扭曲场景中。实验表明该方法有效消除了稀疏和镜面伪影，在极端视角下显著提升合成质量，为无训练新视角合成提供新思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.30608v2",
+      "source": "arxiv",
+      "title": "UnfoldArt: Zero-Shot Recovery of Full Articulated 3D Objects from Text or Image",
+      "abstract": "Articulated 3D objects are essential for interactive environments in embodied AI, robotics, and virtual reality, but reconstructing their structure and motion from sparse observations remains challenging. Existing approaches remain largely constrained by lack of supervised data or lack the priors needed to reliably recover articulation, hidden geometry, and internal object structure. We present the first debate-driven agentic approach to articulated 3D object reconstruction from text or image inputs that both grounds articulation reasoning in concrete motion and exposes the occluded geometry revealed under articulation. High-level agents reason about object semantics and motion using knowledge from vision-language and video models, while low-level agents estimate articulation parameters and interaction points; together, they engage in a two-round structured debate that first exploits global--local disagreement and then grounds the agents in freely generated video. The same video prior, conditioned on the agreed articulation, then drives each part through its motion to expose occluded interiors and geometry that cannot be inferred from a single static view. By combining agentic reasoning with a video generative prior, our approach jointly infers articulation and reconstructs complete 3D articulated objects, producing high-fidelity geometry, internal structure, and motion-consistent states beyond directly observed surfaces.",
+      "authors": [
+        "Mohamed el Amine Boudjoghra",
+        "Ivan Laptev",
+        "Angela Dai"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T17:44:53+00:00",
+      "link": "https://arxiv.org/pdf/2606.30608v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Zero-shot recovery of articulated 3D objects from text or image",
+      "llm_evidence_cn": "从文本或图像零样本恢复铰接3D物体",
+      "llm_evidence": "从文本或图像零样本恢复铰接3D物体",
+      "canonical_evidence": "从文本或图像零样本恢复铰接3D物体",
+      "llm_tldr_en": "Proposes a debate-driven agentic approach for articulated 3D object reconstruction from text/image, using vision-language and video models to reason about motion and occluded geometry.",
+      "llm_tldr_cn": "现有方法在从稀疏观测恢复铰接3D物体时受限于监督数据缺失。本文提出首个辩论驱动的智能体方法，通过高级智能体利用视觉语言和视频模型推理物体语义与运动，从而暴露遮挡几何结构。实验表明该方法能零样本恢复完整铰接物体，为具身AI提供关键支撑。",
+      "llm_tldr": "现有方法在从稀疏观测恢复铰接3D物体时受限于监督数据缺失。本文提出首个辩论驱动的智能体方法，通过高级智能体利用视觉语言和视频模型推理物体语义与运动，从而暴露遮挡几何结构。实验表明该方法能零样本恢复完整铰接物体，为具身AI提供关键支撑。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Generative models for 3D scene synthesis from text or images",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.31471v1",
+      "source": "arxiv",
+      "title": "Think While You Map: Asynchronous Vision-Language Agents for Incremental 3D Scene Graphs",
+      "abstract": "Open-vocabulary 3D scene graph methods typically operate in two stages: first reconstruct, then enrich with vision-language models, leaving the graph unqueryable during exploration. We argue that this sequential coupling is unnecessary and propose an asynchronous architecture in which lightweight online mapping runs concurrently with heavyweight semantic refinement. A probabilistic voxel-based backbone maintains stable object identities incrementally, while background VLM agents progressively enrich the graph. This framework resolves duplicate object tracks through semantic loop closure, attaches fine-grained visual attributes and derives spatial relations between objects. A multi-target frame scheduler amortizes VLM cost by selecting a small set of informative frames that jointly cover multiple targets. The resulting scene graph is queryable during exploration and grows in semantic richness over time. Our method matches or outperforms existing open-vocabulary 3D scene graph methods on semantic segmentation (ScanNet, Replica) and surpasses the prior state-of-the-art across three visual grounding benchmarks (Sr3D+, Nr3D, ScanRefer) by 15.3 to 18.8 A@0.25. Project page: https://denizbickici.github.io/thinkgraphs/",
+      "authors": [
+        "Deniz Bickici",
+        "Michael Pabst",
+        "Shohei Mori",
+        "Dieter Schmalstieg"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-30T10:49:21+00:00",
+      "link": "https://arxiv.org/pdf/2606.31471v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Incremental 3D scene graph reconstruction with VLMs",
+      "llm_evidence_cn": "增量式3D场景图重建与视觉语言模型",
+      "llm_evidence": "增量式3D场景图重建与视觉语言模型",
+      "canonical_evidence": "增量式3D场景图重建与视觉语言模型",
+      "llm_tldr_en": "Presents an asynchronous architecture for incremental 3D scene graph construction where lightweight online mapping runs concurrently with VLM-based semantic enrichment.",
+      "llm_tldr_cn": "现有方法先重建后语义化，导致探索期间图不可查询。本文提出异步架构，概率体素主干在线增量构建物体身份，背景VLM智能体渐进丰富语义属性与空间关系。实验实现语义闭环与细粒度属性附加，使场景图在探索中即可查询。",
+      "llm_tldr": "现有方法先重建后语义化，导致探索期间图不可查询。本文提出异步架构，概率体素主干在线增量构建物体身份，背景VLM智能体渐进丰富语义属性与空间关系。实验实现语义闭环与细粒度属性附加，使场景图在探索中即可查询。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.31204v1",
+      "source": "arxiv",
+      "title": "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation",
+      "abstract": "Synthetic data generation has emerged as a powerful tool for improving data scalability in computer vision. Recent diffusion-based pipelines have demonstrated strong photorealism. However, how to enforce precise 3D structure and pose consistency in generated images remains challenging. Existing methods leverage visual prompts such as edge maps to guide diffusion models, but often suffer from over-conditioning artifacts that degrade image realism and limit dataset quality. In this paper, we present a diffusion-based image generation framework that enforces 3D structural alignment while preserving photorealism through adaptive conditioning. Our framework, Adaptive Conditioning for 3D-Aware Synthetic Data Generation (AC3S), introduces a self-supervised visual prompt modulator that dynamically adjusts the strength of ControlNet conditioning, preventing over-conditioning and enabling the diffusion model to retain its generative expressiveness. To further enhance diversity and semantic consistency, we develop a multi-agent vision language model framework that composes detailed and 3D-aware prompts aligned with the underlying geometric structure. Together, these components enable the scalable generation of high-quality synthetic datasets with accurate 2D and 3D annotations. Extensive experiments demonstrate that our method significantly improves image quality and downstream utility.",
+      "authors": [
+        "Eric Ji",
+        "Qiran Hu",
+        "Wufei Ma",
+        "Sarthak Jain",
+        "Yingying Li",
+        "Minh N. Do",
+        "Yaoyao Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-30T06:33:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.31204v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D-aware synthetic data generation with adaptive conditioning",
+      "llm_evidence_cn": "3D感知合成数据生成与自适应条件化",
+      "llm_evidence": "3D感知合成数据生成与自适应条件化",
+      "canonical_evidence": "3D感知合成数据生成与自适应条件化",
+      "llm_tldr_en": "AC3S uses self-supervised adaptive conditioning to enforce 3D structural alignment in diffusion-based image generation, reducing over-conditioning artifacts while maintaining photorealism.",
+      "llm_tldr_cn": "本文提出AC3S，一种扩散图像生成框架，通过自适应条件化确保生成的图像具有精确3D结构与姿态一致性，同时避免过度条件导致的光照假象。该框架引入自监督视觉条件，在不牺牲照片真实感的前提下提升合成数据的3D可用性。实验表明，AC3S生成的合成数据在训练下游3D视觉任务时显著提升性能。",
+      "llm_tldr": "本文提出AC3S，一种扩散图像生成框架，通过自适应条件化确保生成的图像具有精确3D结构与姿态一致性，同时避免过度条件导致的光照假象。该框架引入自监督视觉条件，在不牺牲照片真实感的前提下提升合成数据的3D可用性。实验表明，AC3S生成的合成数据在训练下游3D视觉任务时显著提升性能。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d generative models",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.31585v1",
+      "source": "arxiv",
+      "title": "DPPE: Rethinking Camera-Based Positional Encoding for Scaling Multi-View Transformers",
+      "abstract": "The remarkable scalability of Transformers has expanded their application to 3D computer vision, where camera-aware positional encoding is crucial for providing spatial cues in multi-view geometry. Recent advancements have established the practice of using camera parameters -- such as extrinsics or projection matrices -- as relative positional encoding into the query, key, and value vectors of the attention mechanism. However, when scaling up the training recipe of novel view synthesis (NVS) models with the camera-based positional encoding, we observe a significant issue: model performance stagnates in the late stages of training.   In this paper, we investigate the cause of the performance bottleneck when scaling up and demonstrate that storing rotation and translation given by the positional encoding in the same dimensions of the value vector causes indeterminacy in their independent identification, hindering training scalability. To address this, we propose Decoupled Pose Positional Encoding (DPPE), a novel camera-based positional encoding that explicitly decouples rotation and translation. Extensive evaluations on NVS tasks demonstrate that DPPE enables stable long-term training even in scaled-up training setup. Furthermore, it exhibits superior generalization performance in extrapolation settings, such as handling an increased number of viewpoints and zoom-in scenarios.",
+      "authors": [
+        "Shun Kenney",
+        "Teppei Suzuki"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-30T12:38:58+00:00",
+      "link": "https://arxiv.org/pdf/2606.31585v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "novel view synthesis, camera-based positional encoding",
+      "llm_evidence_cn": "新视图合成，基于相机的位置编码",
+      "llm_evidence": "新视图合成，基于相机的位置编码",
+      "canonical_evidence": "新视图合成，基于相机的位置编码",
+      "llm_tldr_en": "Identifies scaling bottleneck in camera-based positional encoding for multi-view transformers and proposes DPPE to improve novel view synthesis performance.",
+      "llm_tldr_cn": "在新视图合成中，基于相机的位置编码随着模型规模扩大出现训练后期性能停滞。本文分析了瓶颈原因并提出了DPPE方法，通过改进位置编码设计缓解此问题。实验表明，DPPE在多种NVS基准上显著提升模型扩展后的收敛速度和最终质量，推动了多视图Transformer的可扩展性。",
+      "llm_tldr": "在新视图合成中，基于相机的位置编码随着模型规模扩大出现训练后期性能停滞。本文分析了瓶颈原因并提出了DPPE方法，通过改进位置编码设计缓解此问题。实验表明，DPPE在多种NVS基准上显著提升模型扩展后的收敛速度和最终质量，推动了多视图Transformer的可扩展性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "novel view synthesis",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.31734v1",
+      "source": "arxiv",
+      "title": "MemLearner: Learning to Query Context memory for Video World Models",
+      "abstract": "Video World Models are interactive video generation models that predict future world states based on user actions and history video frames. A critical challenge in video world models is the lack of memory, causing inconsistent generated scenes over extended durations. Previous methods explored rule-based context frame retrieval as memory, but they fail to generalize in scenarios with scene occlusions and dynamic objects. We propose MemLearner, a learning-based adaptive context query method using query tokens to bridge context and predicted tokens. By leveraging the video generation model itself for context querying, MemLearner exploits pre-trained visual priors without training additional modules from scratch, and incorporates efficient strategies for training and inference. We collect a dataset of long videos with scene occlusions and dynamic objects, paired with camera pose annotations, and propose a multi-dataset training strategy leveraging both annotated rendered and unannotated real-world videos. Extensive experiments demonstrate that MemLearner significantly outperforms prior video world models in terms of scene consistency and memory, particularly under challenging occlusion and dynamic scenarios.",
+      "authors": [
+        "Jiwen Yu",
+        "Jianxiong Gao",
+        "Jianhong Bai",
+        "Yiran Qin",
+        "Kaiyi Huang",
+        "Quande Liu",
+        "Xintao Wang",
+        "Pengfei Wan",
+        "Kun Gai",
+        "Xihui Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-30T14:31:32+00:00",
+      "link": "https://arxiv.org/pdf/2606.31734v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Video World Models, adaptive context memory query",
+      "llm_evidence_cn": "视频世界模型，自适应上下文记忆查询",
+      "llm_evidence": "视频世界模型，自适应上下文记忆查询",
+      "canonical_evidence": "视频世界模型，自适应上下文记忆查询",
+      "llm_tldr_en": "Introduces MemLearner, a learning-based context query method for video world models to maintain long-term consistency by leveraging the generation model itself.",
+      "llm_tldr_cn": "视频世界模型在长时间生成中因缺乏记忆导致场景不一致。MemLearner提出基于学习的自适应上下文查询方法，利用生成模型自身先验来桥接历史帧，无需额外训练模块。实验证明该方法在复杂遮挡和动态场景下显著优于规则检索基线，为视频世界模型提供了可靠的记忆机制。",
+      "llm_tldr": "视频世界模型在长时间生成中因缺乏记忆导致场景不一致。MemLearner提出基于学习的自适应上下文查询方法，利用生成模型自身先验来桥接历史帧，无需额外训练模块。实验证明该方法在复杂遮挡和动态场景下显著优于规则检索基线，为视频世界模型提供了可靠的记忆机制。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model learning for 3D scene understanding and prediction",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}
