@@ -1,52 +1,12 @@
 {
-  "generated_at": "2026-07-01T21:51:41.390034+00:00",
-  "updated_date": "20260701",
+  "generated_at": "2026-07-02T21:34:33.676356+00:00",
+  "updated_date": "20260702",
   "carryover_days": 9,
   "tag_states": {
     "world-model": {
-      "updated_date": "20260701",
+      "updated_date": "20260702",
       "carryover_days": 9,
-      "items": [
-        {
-          "id": "2606.31979v1",
-          "source": "arxiv",
-          "title": "Planar-SfM: Camera Pose Estimation via Homography Graph Embeddings",
-          "abstract": "Structure from Motion (SfM) systems traditionally struggle with planar scenes, where standard epipolar geometry-based methods become degenerate. Rather than viewing planar surfaces as a limitation, we propose a unified framework that leverages them as a source of geometric constraints. Our key insight is that each planar surface visible across multiple views provides an independent estimate of relative camera poses through homography decomposition. By aggregating estimates from multiple planes or even from a single dominant plane we achieve robust pose recovery in scenarios where traditional methods fail. We introduce a novel graph-based approach that constructs a pose-graph from homography estimates and employs spectral embedding to identify and filter unreliable edges. Our method maps homography-based pose estimates onto the real line based on their geometric and visual consistency, enabling efficient extraction of a maximally consistent spanning tree for pose recovery. This approach naturally handles both highly planar scenes, such as indoor sports arenas, and general $3$D environments. We demonstrate superior performance on basketball court imagery where existing methods struggle, while matching or exceeding state-of-the-art results on unconstrained outdoor scenes from the IMC Phototourism benchmark.",
-          "authors": [
-            "Gabi Pragier",
-            "Matan Karklinsky",
-            "David Ungarish",
-            "Avi Ben-Cohen"
-          ],
-          "primary_category": "cs.CV",
-          "categories": [
-            "cs.CV"
-          ],
-          "published": "2026-06-30T17:18:27+00:00",
-          "link": "https://arxiv.org/pdf/2606.31979v1",
-          "tags": [
-            "keyword:world-model",
-            "query:world-model"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Camera pose estimation for SfM in planar scenes",
-          "llm_evidence_cn": "面向平面场景的SfM相机姿态估计",
-          "llm_evidence": "面向平面场景的SfM相机姿态估计",
-          "canonical_evidence": "面向平面场景的SfM相机姿态估计",
-          "llm_tldr_en": "Proposes Planar-SfM that uses homography graph embeddings to robustly estimate camera poses from planar scenes, overcoming degeneracy of traditional epipolar methods.",
-          "llm_tldr_cn": "传统SfM在平面场景中因对极几何退化而失效。本文提出将平面视为几何约束源，通过单应性分解独立估计相对位姿，并构建位姿图进行谱嵌入过滤。实验证明在传统方法失败的情景下仍能鲁棒恢复位姿，有效改进了场景重建。",
-          "llm_tldr": "传统SfM在平面场景中因对极几何退化而失效。本文提出将平面视为几何约束源，通过单应性分解独立估计相对位姿，并构建位姿图进行谱嵌入过滤。实验证明在传统方法失败的情景下仍能鲁棒恢复位姿，有效改进了场景重建。",
-          "llm_tags": [
-            "query:world-model"
-          ],
-          "matched_query_tag": "query:world-model",
-          "matched_query_text": "Three-dimensional scene reconstruction from images or point clouds",
-          "matched_requirement_id": "req-1",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.31979v1",
-          "carry_days": 1
-        }
-      ]
+      "items": []
     }
   }
 }
