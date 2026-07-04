@@ -6,64 +6,50 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-05 ~ 2026-07-04
-- 运行时间：2026-07-04 06:48:20 UTC
+- 最新运行日期：2026-07-04
+- 运行时间：2026-07-04 21:13:55 UTC
 - 运行状态：成功
-- 本次总论文数：14
-- 精读区：5
-- 速读区：9
+- 本次总论文数：10
+- 精读区：6
+- 速读区：4
 
 ### 今日简报（AI）
-1. 本期日报精读5篇、速读9篇，聚焦可编辑语义场景与结构化3D室内生成。  
-2. 最值得关注的方向：基于扩散模型的可编辑语义占据场景（EditSSC）与基于LLM智能体的结构化室内场景生成与局部编辑（HDSL），均获9.0高分。  
-3. 普通读者可优先阅读这两篇精读论文，把握当前3D场景生成与编辑的前沿范式。
-- 详情：[/20260605-20260704/README](/20260605-20260704/README)
+今日推荐10篇论文，精读6篇，两篇9.0分佳作聚焦联合定位与可行动世界建模、单目视频生成物理4D场景。最值得关注精读论文《J-LAW》和《One Video, One World》，前者通过耦合因子图实现定位与可行动世界建模，后者将单目视频转化为物理4D场景。建议优先精读这两篇，深入理解空间智能与动态世界建模的前沿突破。
+- 详情：[/202607/04/README](/202607/04/README)
 
 ### 精读区论文标签
-1. [EditSSC: Toward Editable Semantic Occupancy Scenes with Unconditional Diffusion Models](/20260605-20260704/2606.09273v1-editssc-toward-editable-semantic-occupancy-scenes-with-unconditional-diffusion-models)  
+1. [J-LAW: Joint Localization and Actionable World Modeling via Coupled Latent Factor Graphs](/202607/04/2606.28712v1-j-law-joint-localization-and-actionable-world-modeling-via-coupled-latent-factor-graphs)  
    标签：评分：9.0/10、query:world-model
-   evidence：使用扩散模型进行3D语义场景生成
-2. [HDSL: A Hierarchical Domain-Specific Language for Structured 3D Indoor Scene Generation and Localized Editing with LLM Agents](/20260605-20260704/2606.09738v1-hdsl-a-hierarchical-domain-specific-language-for-structured-3d-indoor-scene-generation-and-localized-editing-with-llm-agents)  
+   evidence：通过耦合隐式因子图实现联合定位与可操作世界建模
+2. [One Video, One World: Turning Monocular Video into Physical 4D Scenes](/202607/04/2606.31388v1-one-video-one-world-turning-monocular-video-into-physical-4d-scenes)  
    标签：评分：9.0/10、query:world-model
-   evidence：使用大语言模型代理进行文本驱动的3D室内场景生成
-3. [WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models](/20260605-20260704/2606.31672v1-worldroambench-an-open-world-benchmark-for-long-horizon-stability-of-interactive-world-models)  
+   evidence：从单目视频重建实例级4D网格场景，面向物理模拟
+3. [3D Point World Models: Point Completion Enables More Accurate Dynamics Learning](/202607/04/2607.00148v1-3d-point-world-models-point-completion-enables-more-accurate-dynamics-learning)  
    标签：评分：9.0/10、query:world-model
-   evidence：交互世界模型的基准测试
-4. [Qwen-AgentWorld: Language World Models for General Agents](/20260605-20260704/2606.24597v1-qwen-agentworld-language-world-models-for-general-agents)  
+   evidence：提出3D点世界模型，用于3D空间中的动力学学习
+4. [SimWorlds: A Multi-Agent System for Dynamic 3D Scene Creation](/202607/04/2607.01766v1-simworlds-a-multi-agent-system-for-dynamic-3d-scene-creation)  
+   标签：评分：9.0/10、query:world-model
+   evidence：使用多智能体系统从文本创建动态3D场景
+5. [Alignment Is All You Need For X-to-4D Generation](/202607/04/2607.02516v1-alignment-is-all-you-need-for-x-to-4d-generation)  
+   标签：评分：9.0/10、query:world-model
+   evidence：使用扩散模型进行X到4D生成，直接生成3D场景内容
+6. [SAD-GS: Learning Reliable 3D Semantic Gaussian Fields via Dynamic Geo-Semantic Anchoring](/202607/04/2606.29376v1-sad-gs-learning-reliable-3d-semantic-gaussian-fields-via-dynamic-geo-semantic-anchoring)  
    标签：评分：8.0/10、query:world-model
-   evidence：基于语言的世界模型用于模拟跨领域智能体环境
-5. [SpaceEra++: A Unified Framework Towards 3D Spatial Reasoning in Video](/20260605-20260704/2607.01784v1-spaceera-a-unified-framework-towards-3d-spatial-reasoning-in-video)  
-   标签：评分：8.0/10、query:world-model
-   evidence：视频中的3D空间推理
+   evidence：开放词汇3D语义场学习用于场景理解
 
 ### 速读区论文标签
-1. [Stream3D-VLM: Online 3D Spatial Understanding with Incremental Geometry Priors](/20260605-20260704/2606.06891v1-stream3d-vlm-online-3d-spatial-understanding-with-incremental-geometry-priors)  
+1. [ScAle: Attention Head Scaling as a Minimal Adapter for Spatial Reasoning in Vision Language Models](/202607/04/2606.29579v1-scale-attention-head-scaling-as-a-minimal-adapter-for-spatial-reasoning-in-vision-language-models)  
+   标签：评分：8.0/10、query:world-model
+   evidence：VLM中的空间推理
+2. [MV-GEL: Language-Driven Multi-View Geometric Entity Localization on Meshes](/202607/04/2606.31533v1-mv-gel-language-driven-multi-view-geometric-entity-localization-on-meshes)  
    标签：评分：7.0/10、query:world-model
-   evidence：从流式视频进行在线3D空间理解
-2. [EPS3D: End-to-End Feed-Forward 3D Panoptic Segmentation](/20260605-20260704/2606.08980v1-eps3d-end-to-end-feed-forward-3d-panoptic-segmentation)  
+   evidence：三维网格上的语言驱动几何实体定位
+3. [Vitality-Aware Compression for Efficient Image-to-Shape Diffusion Transformers](/202607/04/2607.00382v1-vitality-aware-compression-for-efficient-image-to-shape-diffusion-transformers)  
    标签：评分：7.0/10、query:world-model
-   evidence：3D全景分割用于场景理解
-3. [Segment and Select: Vision-Language Segmentation in 3D Scenarios](/20260605-20260704/2606.10594v1-segment-and-select-vision-language-segmentation-in-3d-scenarios)  
-   标签：评分：7.0/10、query:world-model
-   evidence：3D场景中的视觉语言分割用于场景理解
-4. [Scaling Diverse Language Generation for 3D Visual Grounding](/20260605-20260704/2606.20946v1-scaling-diverse-language-generation-for-3d-visual-grounding)  
-   标签：评分：7.0/10、query:world-model
-   evidence：利用场景图和LLM生成多样化视觉定位查询，提升空间语言对应
-5. [WorldOdysseyBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models](/20260605-20260704/2606.31672v2-worldodysseybench-an-open-world-benchmark-for-long-horizon-stability-of-interactive-world-models)  
-   标签：评分：7.0/10、query:world-model
-   evidence：交互式世界模型的基准
-6. [Empowering Feed-Forward Reconstruction Models with Metric Scale via Satellite Images](/20260605-20260704/2606.08205v1-empowering-feed-forward-reconstruction-models-with-metric-scale-via-satellite-images)  
+   evidence：面向图像到形状扩散变换器的压缩方法
+4. [Structure-Aware Gaussian Splatting for Large-Scale Scene Reconstruction](/202607/04/2607.01698v1-structure-aware-gaussian-splatting-for-large-scale-scene-reconstruction)  
    标签：评分：6.0/10、query:world-model
-   evidence：卫星图像引导的3D重建度量尺度
-7. [Pose-ICL: 3D-Aware In-Context Learning for Pose-Controllable Subject Customization](/20260605-20260704/2606.10902v1-pose-icl-3d-aware-in-context-learning-for-pose-controllable-subject-customization)  
-   标签：评分：6.0/10、query:world-model
-   evidence：利用3D感知的上下文学习实现图像生成中的主题定制与姿态控制
-8. [One Scene, Two Depths: Probing Geometric Ambiguity in Monocular Foundation Models](/20260605-20260704/2606.29600v1-one-scene-two-depths-probing-geometric-ambiguity-in-monocular-foundation-models)  
-   标签：评分：6.0/10、query:world-model
-   evidence：探索3D中多层空间关系
-9. [PruneGround: Plug-and-play Spatial Pruning for 3D Visual Grounding](/20260605-20260704/2606.31148v1-pruneground-plug-and-play-spatial-pruning-for-3d-visual-grounding)  
-   标签：评分：6.0/10、query:world-model
-   evidence：通过视觉定位进行3D场景理解
+   evidence：结构感知的高斯泼溅用于大规模场景重建
 
 
 <div class="dpr-home-promo-card">

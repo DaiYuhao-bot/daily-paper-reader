@@ -1,0 +1,408 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-04T21:06:54.396440+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 7,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2606.28712v1",
+      "source": "arxiv",
+      "title": "J-LAW: Joint Localization and Actionable World Modeling via Coupled Latent Factor Graphs",
+      "abstract": "Classical SLAM estimates metric poses and a geometric map but produces no actionable predictive model for planning. Action-conditioned world models learn compact latent dynamics for planning but ignore global metric consistency and accumulate drift under open-loop rollout. We argue these are two views of the same estimation problem and propose J-LAW (Joint Localization and Actionable World Modeling) in this letter: a coupled factor graph that jointly optimizes metric object poses, latent world states, and latent landmark embeddings. The bridge is a pose-conditioned latent encoder and a learned pose--latent coupling factor, so that better localization improves the world model and vice versa. We cast observation, action-conditioned prediction, metric odometry, pose--latent coupling, latent loop closure, and latent landmark observation as probabilistic factors in a single MAP objective. Real-data experiments on PushT and WildGS show that coupled graph correction substantially reduces latent prediction RMSE and endpoint drift relative to open-loop rollout, while latent loop closure improves global trajectory consistency. J-LAW yields a map that is simultaneously metric (poses) and actionable (latent landmarks for planning).",
+      "authors": [
+        "Guanqun Cao",
+        "Liang Chen"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-06-27T03:39:44+00:00",
+      "link": "https://arxiv.org/pdf/2606.28712v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "joint localization and actionable world modeling via coupled latent factor graphs",
+      "llm_evidence_cn": "通过耦合隐式因子图实现联合定位与可操作世界建模",
+      "llm_evidence": "通过耦合隐式因子图实现联合定位与可操作世界建模",
+      "canonical_evidence": "通过耦合隐式因子图实现联合定位与可操作世界建模",
+      "llm_tldr_en": "Proposes J-LAW, a coupled factor graph that jointly optimizes metric poses and latent world states for actionable world modeling with global consistency.",
+      "llm_tldr_cn": "经典SLAM产生几何地图但不能用于规划，而世界模型忽略全局度量一致性。本文提出J-LAW，通过耦合因子图联合优化度量物体位姿、隐世界状态和隐地标嵌入。引入姿态条件隐编码器和学习到的位姿-隐耦合因子，使定位改善世界模型，反之亦然。该方法在保持全局一致性的同时实现了可操作的世界模型。",
+      "llm_tldr": "经典SLAM产生几何地图但不能用于规划，而世界模型忽略全局度量一致性。本文提出J-LAW，通过耦合因子图联合优化度量物体位姿、隐世界状态和隐地标嵌入。引入姿态条件隐编码器和学习到的位姿-隐耦合因子，使定位改善世界模型，反之亦然。该方法在保持全局一致性的同时实现了可操作的世界模型。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.31388v1",
+      "source": "arxiv",
+      "title": "One Video, One World: Turning Monocular Video into Physical 4D Scenes",
+      "abstract": "We introduce \\textbf{OVOW}, the first training-free system that reconstructs \\emph{instance-level, simulation-ready} 4D mesh scenes from a single monocular video. Recent 4D reconstruction achieves impressive rendering quality, but its outputs (\\eg, implicit fields, Gaussian primitives, or point clouds) lack the watertight topology, instance separation, and standardized physical interfaces required by physics simulators and embodied AI. OVOW closes this gap with a four-stage pipeline: a vision-language model discovers, labels, and motion-classifies all instances; category-aware reconstruction yields per-instance meshes for rigid objects and topology-consistent mesh sequences for deformable ones; an iterative render-match-optimize procedure recovers metric scale and 6-DoF pose trajectories; and physics-grounded assembly enforces ground contact and inter-object support. Crucially, we model all motion, rigid and non-rigid, through direct vertex deformation without category-specific priors or skeleton rigging, producing watertight mesh scenes ready for downstream physics simulation and editing. We further establish the first benchmark for \\emph{structured Video-to-4D} evaluation, with metrics for geometric correctness, instance separation, and physical plausibility beyond visual fidelity; the same pipeline doubles as a scalable engine for \\emph{synthesizing} paired video-to-4D simulation data for future 4D world models and embodied AI. Across two synthetic benchmarks (static and 4D), OVOW attains the best overall layout and geometry accuracy and the lowest photometric and semantic error among all baselines, and on monocular video runs one to two orders of magnitude faster than the baselines, while downstream physics simulation confirms its physical stability.",
+      "authors": [
+        "Junhao Chen",
+        "Boran Zhang",
+        "Mingjin Chen",
+        "Henghaofan Zhang",
+        "Saining Zhang",
+        "Congcong Zhu",
+        "Hao Zhao",
+        "Ruqi Huang",
+        "Zhihao Li",
+        "Yufei Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-30T09:16:21+00:00",
+      "link": "https://arxiv.org/pdf/2606.31388v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "reconstructs 4D mesh scenes from monocular video, instance-level physical simulation",
+      "llm_evidence_cn": "从单目视频重建实例级4D网格场景，面向物理模拟",
+      "llm_evidence": "从单目视频重建实例级4D网格场景，面向物理模拟",
+      "canonical_evidence": "从单目视频重建实例级4D网格场景，面向物理模拟",
+      "llm_tldr_en": "OVOW is a training-free system that reconstructs instance-level simulation-ready 4D mesh scenes from a single monocular video, using vision-language model for instance discovery and iterative refinement for metric recovery.",
+      "llm_tldr_cn": "现有4D重建方法输出隐式场或点云，缺乏实例分离和物理接口。OVOW提出无需训练的四阶段流水线，利用视觉语言模型发现实例并进行类别感知重建，再通过迭代渲染-匹配-优化恢复度量，生成可模拟的4D网格场景。实验表明该方法在多个数据集上实现了高质量的拓扑和物理一致性。",
+      "llm_tldr": "现有4D重建方法输出隐式场或点云，缺乏实例分离和物理接口。OVOW提出无需训练的四阶段流水线，利用视觉语言模型发现实例并进行类别感知重建，再通过迭代渲染-匹配-优化恢复度量，生成可模拟的4D网格场景。实验表明该方法在多个数据集上实现了高质量的拓扑和物理一致性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.00148v1",
+      "source": "arxiv",
+      "title": "3D Point World Models: Point Completion Enables More Accurate Dynamics Learning",
+      "abstract": "Learning predictive models of the world enables robotic control through planning, potentially allowing robots to improvise solutions on new tasks. However, large video-based dynamics models lack explicit 3D spatial structure and suffer from geometrically inconsistent long-term rollouts with compounding errors. Emerging 3D dynamics models based on partial point clouds improve geometric consistency but remain sensitive to occlusions and accumulated prediction drift. To address these challenges, we present 3D Point World Models (3DPWM) - a task-agnostic world model that operates entirely in 3D space by first completing partial point clouds and then learning action-conditioned dynamics in this completed 3D scene. By operating on completed geometry, 3DPWM enables reliable long-horizon rollouts and more accurate cost evaluation for model-based planning while supporting adaptation to new tasks. Experiments across different robotic embodiments and tabletop manipulation benchmarks demonstrate that 3DPWM achieves significantly more reliable long-horizon rollouts (100-300+ steps), supports both open-loop and closed-loop planning, and enables successful sim-to-real transfer.",
+      "authors": [
+        "Skand Peri",
+        "Hung Nguyen",
+        "Chanho Kim",
+        "Li Fuxin",
+        "Stefan Lee"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-06-30T20:27:22+00:00",
+      "link": "https://arxiv.org/pdf/2607.00148v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Proposes 3D Point World Models for dynamics learning in 3D space",
+      "llm_evidence_cn": "提出3D点世界模型，用于3D空间中的动力学学习",
+      "llm_evidence": "提出3D点世界模型，用于3D空间中的动力学学习",
+      "canonical_evidence": "提出3D点世界模型，用于3D空间中的动力学学习",
+      "llm_tldr_en": "3D Point World Models (3DPWM) is a task-agnostic world model that operates in 3D space by completing point clouds and learning action-conditioned dynamics, improving geometric consistency.",
+      "llm_tldr_cn": "针对视频动力学模型缺乏3D结构导致长期预测漂移的问题，提出3D点世界模型（3DPWM），先完成部分点云，再在完整3D场景中学习动作条件动力学。实验证明该方法在多项机器人控制任务中显著提升预测准确性和几何一致性，为世界模型在3D视觉中的应用奠定基础。",
+      "llm_tldr": "针对视频动力学模型缺乏3D结构导致长期预测漂移的问题，提出3D点世界模型（3DPWM），先完成部分点云，再在完整3D场景中学习动作条件动力学。实验证明该方法在多项机器人控制任务中显著提升预测准确性和几何一致性，为世界模型在3D视觉中的应用奠定基础。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.01766v1",
+      "source": "arxiv",
+      "title": "SimWorlds: A Multi-Agent System for Dynamic 3D Scene Creation",
+      "abstract": "LLM agents are increasingly used to translate natural language into 3D scenes in a procedural way, but existing systems focus on static output. Dynamic 4D scenes from text alone, in which liquids flow, particles emit, rigid bodies cascade, and articulated mechanisms move, remain largely unexplored despite their value as editable content and as physics-grounded training data for video generation and embodied AI. Two challenges set the dynamic case apart from static text-to-scene work: an agent must jointly coordinate spatial layout, multiple physics solvers, temporal sequencing, camera, and lighting in a single coherent scene, and verifying motion correctness from rendered video is fundamentally harder than judging a single image. We present SimWorlds: a multi-agent framework that produces dynamic, editable 4D scenes from text, with Blender-specific procedural knowledge, a planner-coder-reviewer workflow driving a fixed ordered sequence of construction stages, a layered scene protocol enforced by a deterministic verifier, and a runtime-state inspection tool suite that catches mechanism failures the rendered image cannot reveal. We also introduce 4DBuildBench, a benchmark for assessing both visual fidelity and physical consistency of the procedural dynamic 3D scenes generated from text prompts. Experiments show that SimWorlds outperforms prior dynamic Blender generation baselines.",
+      "authors": [
+        "Chunjiang Liu",
+        "Xiaoyuan Wang",
+        "Haoyu Chen",
+        "Yizhou Zhao",
+        "Ming-Hsuan Yang",
+        "László A. Jeni"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-02T06:29:18+00:00",
+      "link": "https://arxiv.org/pdf/2607.01766v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "dynamic 3D scene creation from text using multi-agent system",
+      "llm_evidence_cn": "使用多智能体系统从文本创建动态3D场景",
+      "llm_evidence": "使用多智能体系统从文本创建动态3D场景",
+      "canonical_evidence": "使用多智能体系统从文本创建动态3D场景",
+      "llm_tldr_en": "Presents SimWorlds, a multi-agent system that generates dynamic 4D scenes from natural language by coordinating spatial layout, physics solvers, and temporal sequencing.",
+      "llm_tldr_cn": "针对现有文本转3D系统仅输出静态场景的局限，提出SimWorlds多智能体系统，联合协调空间布局、多个物理求解器、时间序列、相机和光照，从文本生成包含流体、粒子、刚体等动态效果的4D场景。实验证明该方法能生成物理上合理且可编辑的动态场景，为视频生成和具身AI提供训练数据。",
+      "llm_tldr": "针对现有文本转3D系统仅输出静态场景的局限，提出SimWorlds多智能体系统，联合协调空间布局、多个物理求解器、时间序列、相机和光照，从文本生成包含流体、粒子、刚体等动态效果的4D场景。实验证明该方法能生成物理上合理且可编辑的动态场景，为视频生成和具身AI提供训练数据。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.02516v1",
+      "source": "arxiv",
+      "title": "Alignment Is All You Need For X-to-4D Generation",
+      "abstract": "Generative diffusion models excel at synthesizing high-quality images, videos, and 3D content under multimodal control. However, arbitrary user-defined modality-to-4D (X-to-4D) generation remains challenging due to the high cost of constructing diverse datasets and the limited scalability of existing methods. This paper presents Align4D, a flexible framework that translates any-modal input into coherent video-3D pairs, using video to guide 4D motion and 3D data to shape 4D geometry. Align4D introduces three key techniques: (1) Object Distance Alignment, which searches Video-Aligned and Multiview-Aligned Object Distances (VAOD/MAOD), respectively, to reconcile 4D renderings with video and the priors of multiview diffusion models; (2) Motion-Geometry Joint Alignment, which constrains known and unknown views through synchronized video and 3D inputs, ensuring consistent 4D generation; and (3) Asynchronous Optimization, which decouples Gaussian attribute and deformation network training to enhance motion and geometry fidelity. We further propose the X4D dataset, which integrates prompt, image, video, and 3D data for benchmarking. Experiments on X4D and Consistent4D demonstrate that Align4D achieves state-of-the-art quality and consistency in X-to-4D generation. Project page: https://miaoqiaowei.github.io/Align4D/.",
+      "authors": [
+        "Qiaowei Miao",
+        "Kehan Li",
+        "Yawei Luo",
+        "Yi Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-02T17:59:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.02516v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "X-to-4D generation using diffusion models, directly generating 3D scene content",
+      "llm_evidence_cn": "使用扩散模型进行X到4D生成，直接生成3D场景内容",
+      "llm_evidence": "使用扩散模型进行X到4D生成，直接生成3D场景内容",
+      "canonical_evidence": "使用扩散模型进行X到4D生成，直接生成3D场景内容",
+      "llm_tldr_en": "Align4D is a flexible framework for translating any-modal input into coherent video-3D pairs, enabling 3D scene generation from diverse inputs.",
+      "llm_tldr_cn": "针对任意模态输入到4D（视频+3D）生成的高成本和扩展性有限问题，提出Align4D框架，通过目标距离对齐和运动-几何联合对齐技术，从多模态输入生成一致的视频-3D对。实验表明该方法在多种输入条件下均能生成高质量4D内容，为3D场景生成提供了统一解决方案。",
+      "llm_tldr": "针对任意模态输入到4D（视频+3D）生成的高成本和扩展性有限问题，提出Align4D框架，通过目标距离对齐和运动-几何联合对齐技术，从多模态输入生成一致的视频-3D对。实验表明该方法在多种输入条件下均能生成高质量4D内容，为3D场景生成提供了统一解决方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.29376v1",
+      "source": "arxiv",
+      "title": "SAD-GS: Learning Reliable 3D Semantic Gaussian Fields via Dynamic Geo-Semantic Anchoring",
+      "abstract": "Open-vocabulary 3D semantic Gaussian field learning relies on multi-view 2D supervision, whose semantic targets and spatial assignments are often unreliable. Across varying viewpoints, view-dependent features cause semantic identity drift, while propagated tracker masks introduce boundary leakage and identity switches. Directly optimizing against these unreliable 2D targets forces the 3D representation to absorb multi-view contradictions, leading to severe error accumulation. To resolve this limitation, we propose SAD-GS, a framework for learning reliable 3D semantic Gaussian fields via dynamic geo-semantic anchoring. Specifically, Semantic Anchor Distillation (SAD) distills per-view visual embeddings into consensus text anchors to establish a viewpoint-invariant semantic identity. Concurrently, the Geo-Semantic Feedback Loop (GSFL) leverages the evolving 3D field to actively filter tracker anomalies and refine spatial mask assignments via a conservative three-gate update rule. Extensive evaluations on LERF-OVS, 3D-OVS, and Mip-NeRF360 show that SAD-GS consistently achieves the best overall performance in both open-vocabulary localization and semantic segmentation. These comprehensive improvements validate the effectiveness and robustness of dynamic geo-semantic anchoring for reliable 3D semantic Gaussian field learning.",
+      "authors": [
+        "Yufei Zhang",
+        "Chenlu Zhan",
+        "Gaoang Wang",
+        "Hongwei Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-28T12:52:46+00:00",
+      "link": "https://arxiv.org/pdf/2606.29376v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "open-vocabulary 3D semantic field learning for scene understanding",
+      "llm_evidence_cn": "开放词汇3D语义场学习用于场景理解",
+      "llm_evidence": "开放词汇3D语义场学习用于场景理解",
+      "canonical_evidence": "开放词汇3D语义场学习用于场景理解",
+      "llm_tldr_en": "SAD-GS learns reliable 3D semantic Gaussian fields via dynamic geo-semantic anchoring, distilling per-view embeddings into consensus text anchors to resolve multi-view contradictions.",
+      "llm_tldr_cn": "多视图2D监督下的3D语义高斯场存在语义漂移和边界泄漏。SAD-GS提出动态地理-语义锚定，通过语义锚蒸馏将每视图嵌入聚合成共识文本锚，消除多视图矛盾。该方法在开放词汇3D语义分割任务上显著优于现有方法，实现了更可靠的语义场学习。",
+      "llm_tldr": "多视图2D监督下的3D语义高斯场存在语义漂移和边界泄漏。SAD-GS提出动态地理-语义锚定，通过语义锚蒸馏将每视图嵌入聚合成共识文本锚，消除多视图矛盾。该方法在开放词汇3D语义分割任务上显著优于现有方法，实现了更可靠的语义场学习。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.29579v1",
+      "source": "arxiv",
+      "title": "ScAle: Attention Head Scaling as a Minimal Adapter for Spatial Reasoning in Vision Language Models",
+      "abstract": "Spatial reasoning remains a persistent challenge for many vision language models (VLMs), and improving it typically requires fine-tuning with substantial additional parameters. Our preliminary analysis reveals that rescaling activations in selected transformer layers-without modifying pretrained weights-can significantly influence downstream performance. Motivated by this observation, we propose ScAle, an ultra-lightweight adaptation method that learns a small set of scalar coefficients to modulate last-token attention and MLP activations in a fully frozen backbone. We evaluate our method on the synthetic spatial reasoning benchmark SpatialEval and on real-world VQA datasets (COCOQA and VGQA) across multiple model families. Our method, ScAle, achieves up to 134.1% relative accuracy gains using only 1K trainable parameters without requiring millions of trainable parameters as in standard PEFT methods such as LoRA. Despite its extreme compactness, our approach recovers a substantial fraction of standard PEFT performance while preserving strong non-spatial VQA accuracy. These results demonstrate that bounded activation reweighting provides a simple, architecture-agnostic, and highly parameter-efficient alternative for adapting pretrained VLMs.",
+      "authors": [
+        "Rahul Chowdhury",
+        "Timothy A Rupprecht",
+        "Xuan Shen",
+        "Pu Zhao",
+        "Yanzhi Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "published": "2026-06-28T19:48:39+00:00",
+      "link": "https://arxiv.org/pdf/2606.29579v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "spatial reasoning in VLMs",
+      "llm_evidence_cn": "VLM中的空间推理",
+      "llm_evidence": "VLM中的空间推理",
+      "canonical_evidence": "VLM中的空间推理",
+      "llm_tldr_en": "ScAle proposes ultra-lightweight attention head scaling to improve spatial reasoning in VLMs without fine-tuning, achieving strong results on SpatialEval and real-world VQA.",
+      "llm_tldr_cn": "当前视觉语言模型在空间推理任务上表现不佳，微调成本高。本文提出ScAle，一种超轻量级适配方法，通过学习少量标量系数调制注意力头和MLP激活，在不修改预训练权重的情况下显著提升空间推理能力。在合成空间推理基准SpatialEval和真实VQA数据集上验证了有效性，为高效增强VLM空间推理提供了新思路。",
+      "llm_tldr": "当前视觉语言模型在空间推理任务上表现不佳，微调成本高。本文提出ScAle，一种超轻量级适配方法，通过学习少量标量系数调制注意力头和MLP激活，在不修改预训练权重的情况下显著提升空间推理能力。在合成空间推理基准SpatialEval和真实VQA数据集上验证了有效性，为高效增强VLM空间推理提供了新思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.31533v1",
+      "source": "arxiv",
+      "title": "MV-GEL: Language-Driven Multi-View Geometric Entity Localization on Meshes",
+      "abstract": "Identifying and grounding precise geometric entities, such as edges, planar regions, and curved surfaces within 3D objects, is foundational to computer-aided design (CAD), robotic manipulation, and scientific simulation. Although modern Vision Language Models (VLMs) have advanced referring segmentation (RIS) in the image domain, extending such language-driven localization to structured 3D geometry is substantially harder. The 3D object appearance is highly sensitive to viewpoints; a single perspective may render a target entity clearly observable, while another may suffer from severe occlusion or foreshortening. In this work, we attempt to solve these challenges with MV-GEL (Multi-View Geometric Entity Localization), a framework for localizing fine-grained geometric entities on polygon meshes from natural language queries. Our key insight is that reliable CAD entity (i.e., faces, edges or solids) localization depends on selecting views that make the queried entity maximally interpretable. We introduce GELviews, a prompt-conditioned ranking module that prioritizes viewpoints based on language prompted observability of geometric CAD entities. Selected views are processed by a VLM-based reasoning segmentation backbone, and predicted masks are lifted to the corresponding meshes via geometry-aware ray casting. Our framework is completely CAD agnostic and relies only on 3D meshes. Experiments show up to a 1.7X improvement in face-level IoU and over 4.5X gains in edge-level F1 compared to vanilla baselines, substantially outperforming CLIP-based and random view sampling, particularly for thin and view-sensitive structures.The dataset, code and trained checkpoints are available at https://github.com/kbali1297/MV-GEL.",
+      "authors": [
+        "Kartik Bali",
+        "Roland Aydin"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-30T11:46:25+00:00",
+      "link": "https://arxiv.org/pdf/2606.31533v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "language-driven geometric entity localization on 3D meshes",
+      "llm_evidence_cn": "三维网格上的语言驱动几何实体定位",
+      "llm_evidence": "三维网格上的语言驱动几何实体定位",
+      "canonical_evidence": "三维网格上的语言驱动几何实体定位",
+      "llm_tldr_en": "MV-GEL localizes fine-grained geometric entities on 3D meshes using multi-view vision-language models, advancing scene understanding.",
+      "llm_tldr_cn": "精细几何实体（如边缘、面）的定位对场景理解至关重要，但现有方法在三维上受视角影响严重。MV-GEL通过多视图框架融合不同视角的信息，利用视觉语言模型实现了语言驱动的几何实体定位。该方法在 CAD 模型和机器人操作场景中验证了有效性，增强了三维场景的结构理解能力。",
+      "llm_tldr": "精细几何实体（如边缘、面）的定位对场景理解至关重要，但现有方法在三维上受视角影响严重。MV-GEL通过多视图框架融合不同视角的信息，利用视觉语言模型实现了语言驱动的几何实体定位。该方法在 CAD 模型和机器人操作场景中验证了有效性，增强了三维场景的结构理解能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.01698v1",
+      "source": "arxiv",
+      "title": "Structure-Aware Gaussian Splatting for Large-Scale Scene Reconstruction",
+      "abstract": "3D Gaussian Splatting has demonstrated remarkable potential in novel view synthesis. In contrast to small-scale scenes, large-scale scenes inevitably contain sparsely observed regions with excessively sparse initial points. In this case, supervising Gaussians initialized from low-frequency sparse points with high-frequency images often induces uncontrolled densification and redundant primitives, degrading both efficiency and quality. Intuitively, this issue can be mitigated with scheduling strategies, which can be categorized into two paradigms: modulating target signal frequency via densification and modulating sampling frequency via image resolution. However, previous scheduling strategies are primarily hardcoded, failing to perceive the convergence behavior of scene frequency. To address this, we reframe the scene reconstruction problem from the perspective of signal structure recovery and propose SIG, a novel scheduler that synchronizes image supervision with Gaussian frequencies. Specifically, we derive the average sampling frequency and bandwidth of 3D representations, and then regulate the training image resolution and the Gaussian densification process based on scene frequency convergence. Furthermore, we introduce Sphere-Constrained Gaussians, which leverage the spatial prior of initialized point clouds to control Gaussian optimization. Our framework enables frequency-consistent, geometry-aware, and floater-free training, achieving state-of-the-art performance by a substantial margin in both efficiency and rendering quality in large-scale scenes. The code is available at: https://github.com/weiyixue999/Signal_Structure_Aware_Gaussian",
+      "authors": [
+        "Weiyi Xue",
+        "Fan Lu",
+        "Chi Zhang",
+        "Tianhang Wang",
+        "Sanqing Qu",
+        "Zehan Zheng",
+        "Boyuan Zheng",
+        "Junqiao Zhao",
+        "Guang Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-02T04:41:51+00:00",
+      "link": "https://arxiv.org/pdf/2607.01698v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "structure-aware Gaussian splatting for large-scale scene reconstruction",
+      "llm_evidence_cn": "结构感知的高斯泼溅用于大规模场景重建",
+      "llm_evidence": "结构感知的高斯泼溅用于大规模场景重建",
+      "canonical_evidence": "结构感知的高斯泼溅用于大规模场景重建",
+      "llm_tldr_en": "Proposes structure-aware scheduling for 3D Gaussian splatting to improve large-scale scene reconstruction quality and efficiency.",
+      "llm_tldr_cn": "针对大规模场景重建中稀疏观测区域导致的不可控稠密化问题，提出结构感知的调度策略，通过调节目标信号频率和采样频率来平衡重建质量与效率。实验表明该方法在多个大尺度数据集上优于现有方法，实现了更紧凑的表示和更好的视觉效果。",
+      "llm_tldr": "针对大规模场景重建中稀疏观测区域导致的不可控稠密化问题，提出结构感知的调度策略，通过调节目标信号频率和采样频率来平衡重建质量与效率。实验表明该方法在多个大尺度数据集上优于现有方法，实现了更紧凑的表示和更好的视觉效果。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.00382v1",
+      "source": "arxiv",
+      "title": "Vitality-Aware Compression for Efficient Image-to-Shape Diffusion Transformers",
+      "abstract": "We propose the first compression approach for image-to-shape Diffusion Transformers (DiTs) that substantially reduces model size while preserving geometric fidelity. Despite remarkable progress in 3D shape generation, large DiT-based models remain computationally prohibitive in resource-constrained settings. Furthermore, it is difficult to directly transfer existing diffusion model compression strategies developed for different domains to 3D generation, and prior 3D efficiency approaches focus primarily on inference speed rather than backbone compression. To address this limitation, we build a geometry-aware compression framework tailored to image-to-shape DiTs. Guided by the observation that 3D DiT layers exhibit non-uniform importance for geometry synthesis, we introduce a vitality-guided framework integrating structured pruning, adaptive quantization, and targeted fine-tuning. Our method achieves up to 66% model-size reduction across state-of-the-art image-to-3D models while maintaining synthesis fidelity comparable to full-sized counterparts. This highlights the potential of our framework as a plug-and-play solution for efficient 3D shape generation across diverse models.",
+      "authors": [
+        "Jaeah Lee",
+        "Hyunjin Kim",
+        "Jaewoong Cho",
+        "Gihyun Kwon"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-01T03:26:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.00382v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "compression for image-to-shape diffusion transformers",
+      "llm_evidence_cn": "面向图像到形状扩散变换器的压缩方法",
+      "llm_evidence": "面向图像到形状扩散变换器的压缩方法",
+      "canonical_evidence": "面向图像到形状扩散变换器的压缩方法",
+      "llm_tldr_en": "Vitality-Aware Compression reduces model size of image-to-shape DiTs while preserving geometric fidelity.",
+      "llm_tldr_cn": "大规模扩散变换器在三维形状生成中计算开销巨大。本文提出首个面向图像到形状DiTs的几何感知压缩框架，根据各层对几何保真度的非均匀重要性进行裁剪。在保留生成细节的前提下，显著减小模型尺寸，为资源受限场景下的3D生成提供了高效方案。",
+      "llm_tldr": "大规模扩散变换器在三维形状生成中计算开销巨大。本文提出首个面向图像到形状DiTs的几何感知压缩框架，根据各层对几何保真度的非均匀重要性进行裁剪。在保留生成细节的前提下，显著减小模型尺寸，为资源受限场景下的3D生成提供了高效方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
