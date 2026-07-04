@@ -6,55 +6,64 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-03
-- 运行时间：2026-07-03 21:43:09 UTC
+- 最新运行日期：2026-06-05 ~ 2026-07-04
+- 运行时间：2026-07-04 06:48:20 UTC
 - 运行状态：成功
-- 本次总论文数：11
-- 精读区：7
-- 速读区：4
+- 本次总论文数：14
+- 精读区：5
+- 速读区：9
 
 ### 今日简报（AI）
-今日精读两篇9分高分论文：室内场景全景3D重建与从无序图片实现开放词汇场景理解，速读涵盖关节物体生成及多模态新视图合成。  
-重点关注全景3D重建和基于3D高斯与语义占位的开放场景理解两大方向，技术突破显著。  
-建议读者深入关注3D高斯溅射在场景感知中的应用，以及无拼接全景重建方法，这些是当前研究热点。
-- 详情：[/202607/03/README](/202607/03/README)
+1. 本期日报精读5篇、速读9篇，聚焦可编辑语义场景与结构化3D室内生成。  
+2. 最值得关注的方向：基于扩散模型的可编辑语义占据场景（EditSSC）与基于LLM智能体的结构化室内场景生成与局部编辑（HDSL），均获9.0高分。  
+3. 普通读者可优先阅读这两篇精读论文，把握当前3D场景生成与编辑的前沿范式。
+- 详情：[/20260605-20260704/README](/20260605-20260704/README)
 
 ### 精读区论文标签
-1. [Argus: Metric Panoramic 3D Reconstruction for Indoor Scenes](/202607/03/2606.30047v2-argus-metric-panoramic-3d-reconstruction-for-indoor-scenes)  
+1. [EditSSC: Toward Editable Semantic Occupancy Scenes with Unconditional Diffusion Models](/20260605-20260704/2606.09273v1-editssc-toward-editable-semantic-occupancy-scenes-with-unconditional-diffusion-models)  
    标签：评分：9.0/10、query:world-model
-   evidence：室内场景的度量全景3D重建
-2. [Bridging 3D Gaussians and Semantic Occupancy for Comprehensive Open-Vocabulary Scene Understanding from Unposed Images](/202607/03/2607.01633v1-bridging-3d-gaussians-and-semantic-occupancy-for-comprehensive-open-vocabulary-scene-understanding-from-unposed-images)  
+   evidence：使用扩散模型进行3D语义场景生成
+2. [HDSL: A Hierarchical Domain-Specific Language for Structured 3D Indoor Scene Generation and Localized Editing with LLM Agents](/20260605-20260704/2606.09738v1-hdsl-a-hierarchical-domain-specific-language-for-structured-3d-indoor-scene-generation-and-localized-editing-with-llm-agents)  
    标签：评分：9.0/10、query:world-model
-   evidence：将3D高斯与语义占据结合，用于无位姿图像的场景理解
-3. [Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement](/202607/03/2607.01708v1-consistent-scene-understanding-in-3d-gaussian-splatting-via-multi-cue-mask-refinement)  
+   evidence：使用大语言模型代理进行文本驱动的3D室内场景生成
+3. [WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models](/20260605-20260704/2606.31672v1-worldroambench-an-open-world-benchmark-for-long-horizon-stability-of-interactive-world-models)  
    标签：评分：9.0/10、query:world-model
-   evidence：通过一致掩码精化在3D高斯泼溅中实现场景理解
-4. [InvSplat: Inverse Feed-Forward Scene Splatting](/202607/03/2607.02301v1-invsplat-inverse-feed-forward-scene-splatting)  
-   标签：评分：9.0/10、query:world-model
-   evidence：前馈逆渲染实现新视角合成，结合3D高斯散点
-5. [Text-Driven 3D Indoor Scene Synthesis in Non-Manhattan Environments](/202607/03/2607.02407v1-text-driven-3d-indoor-scene-synthesis-in-non-manhattan-environments)  
-   标签：评分：9.0/10、query:world-model
-   evidence：文本驱动的非曼哈顿室内场景合成
-6. [PointDiT: Pixel-Space Diffusion for Monocular Geometry Estimation](/202607/03/2607.02515v1-pointdit-pixel-space-diffusion-for-monocular-geometry-estimation)  
-   标签：评分：9.0/10、query:world-model
-   evidence：单目几何估计用于3D重建
-7. [WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory](/202607/03/2607.02517v1-worlddirector-building-controllable-world-simulators-with-persistent-dynamic-memory)  
-   标签：评分：9.0/10、query:world-model
-   evidence：具有动态物体记忆和视点探索的可控视频世界模型
+   evidence：交互世界模型的基准测试
+4. [Qwen-AgentWorld: Language World Models for General Agents](/20260605-20260704/2606.24597v1-qwen-agentworld-language-world-models-for-general-agents)  
+   标签：评分：8.0/10、query:world-model
+   evidence：基于语言的世界模型用于模拟跨领域智能体环境
+5. [SpaceEra++: A Unified Framework Towards 3D Spatial Reasoning in Video](/20260605-20260704/2607.01784v1-spaceera-a-unified-framework-towards-3d-spatial-reasoning-in-video)  
+   标签：评分：8.0/10、query:world-model
+   evidence：视频中的3D空间推理
 
 ### 速读区论文标签
-1. [PWM-ArtGen: Part World Model for Articulated Object Generation](/202607/03/2607.02045v1-pwm-artgen-part-world-model-for-articulated-object-generation)  
-   标签：评分：8.0/10、query:world-model
-   evidence：基于部分世界模型的铰接3D物体从单图生成
-2. [Learning Spectral and Polarimetric Clues for One-to-Multimodal Novel View Synthesis](/202607/03/2607.02372v1-learning-spectral-and-polarimetric-clues-for-one-to-multimodal-novel-view-synthesis)  
-   标签：评分：8.0/10、query:world-model
-   evidence：新颖视图合成，从RGB到多模态
-3. [MindEdit-Bench: Benchmarking Object-Level Counterfactual Spatial Reasoning in VLMs from In-the-Wild Photos](/202607/03/2607.00491v1-mindedit-bench-benchmarking-object-level-counterfactual-spatial-reasoning-in-vlms-from-in-the-wild-photos)  
+1. [Stream3D-VLM: Online 3D Spatial Understanding with Incremental Geometry Priors](/20260605-20260704/2606.06891v1-stream3d-vlm-online-3d-spatial-understanding-with-incremental-geometry-priors)  
+   标签：评分：7.0/10、query:world-model
+   evidence：从流式视频进行在线3D空间理解
+2. [EPS3D: End-to-End Feed-Forward 3D Panoptic Segmentation](/20260605-20260704/2606.08980v1-eps3d-end-to-end-feed-forward-3d-panoptic-segmentation)  
+   标签：评分：7.0/10、query:world-model
+   evidence：3D全景分割用于场景理解
+3. [Segment and Select: Vision-Language Segmentation in 3D Scenarios](/20260605-20260704/2606.10594v1-segment-and-select-vision-language-segmentation-in-3d-scenarios)  
+   标签：评分：7.0/10、query:world-model
+   evidence：3D场景中的视觉语言分割用于场景理解
+4. [Scaling Diverse Language Generation for 3D Visual Grounding](/20260605-20260704/2606.20946v1-scaling-diverse-language-generation-for-3d-visual-grounding)  
+   标签：评分：7.0/10、query:world-model
+   evidence：利用场景图和LLM生成多样化视觉定位查询，提升空间语言对应
+5. [WorldOdysseyBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models](/20260605-20260704/2606.31672v2-worldodysseybench-an-open-world-benchmark-for-long-horizon-stability-of-interactive-world-models)  
+   标签：评分：7.0/10、query:world-model
+   evidence：交互式世界模型的基准
+6. [Empowering Feed-Forward Reconstruction Models with Metric Scale via Satellite Images](/20260605-20260704/2606.08205v1-empowering-feed-forward-reconstruction-models-with-metric-scale-via-satellite-images)  
    标签：评分：6.0/10、query:world-model
-   evidence：利用3D场景图构建反事实空间推理基准
-4. [Online Segment 3D Gaussians via Launching Virtual Drones](/202607/03/2607.01628v1-online-segment-3d-gaussians-via-launching-virtual-drones)  
+   evidence：卫星图像引导的3D重建度量尺度
+7. [Pose-ICL: 3D-Aware In-Context Learning for Pose-Controllable Subject Customization](/20260605-20260704/2606.10902v1-pose-icl-3d-aware-in-context-learning-for-pose-controllable-subject-customization)  
    标签：评分：6.0/10、query:world-model
-   evidence：基于3D高斯泼溅的交互式分割
+   evidence：利用3D感知的上下文学习实现图像生成中的主题定制与姿态控制
+8. [One Scene, Two Depths: Probing Geometric Ambiguity in Monocular Foundation Models](/20260605-20260704/2606.29600v1-one-scene-two-depths-probing-geometric-ambiguity-in-monocular-foundation-models)  
+   标签：评分：6.0/10、query:world-model
+   evidence：探索3D中多层空间关系
+9. [PruneGround: Plug-and-play Spatial Pruning for 3D Visual Grounding](/20260605-20260704/2606.31148v1-pruneground-plug-and-play-spatial-pruning-for-3d-visual-grounding)  
+   标签：评分：6.0/10、query:world-model
+   evidence：通过视觉定位进行3D场景理解
 
 
 <div class="dpr-home-promo-card">

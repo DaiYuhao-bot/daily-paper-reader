@@ -1,0 +1,624 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-04T06:36:01.518502+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 9,
+    "quick_skim_target": 11,
+    "quick_selected": 9
+  },
+  "deep_dive": [
+    {
+      "id": "2606.09273v1",
+      "source": "arxiv",
+      "title": "EditSSC: Toward Editable Semantic Occupancy Scenes with Unconditional Diffusion Models",
+      "abstract": "3D semantic scene generation is crucial for autonomous driving applications, yet most methods rely on complex 3D-specific architectures such as triplane encoders and adapted diffusion networks, limiting both their simplicity and their editing capabilities. We propose EditSSC, an editing-ready method for 3D semantic scene generation using 2D Bird's Eye View (BEV) representations and off-the-shelf latent diffusion network. Our approach reshapes 3D semantic occupancy grids into multi-channel BEV images and leverages the quantized autoencoder and UNet from Stable Diffusion with minimal modifications. We perform diffusion on the latents after quantization, which enables training-free editing capabilities. By exploiting class-to-code correspondences in the codebook, our method supports sketch-guided generation, inpainting, and outpainting without any retraining. On SemanticKITTI, EditSSC outperforms existing 3D-specific baselines on unconditional generation, demonstrating that well-established 2D architectures can be effectively repurposed for 3D scene generation and editing.",
+      "authors": [
+        "Fatima Balde",
+        "Raoul de Charette",
+        "Alexandre Boulch"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-08T09:41:37+00:00",
+      "link": "https://arxiv.org/pdf/2606.09273v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "3D semantic scene generation with diffusion models",
+      "llm_evidence_cn": "使用扩散模型进行3D语义场景生成",
+      "llm_evidence": "使用扩散模型进行3D语义场景生成",
+      "canonical_evidence": "使用扩散模型进行3D语义场景生成",
+      "llm_tldr_en": "EditSSC proposes an editing-ready method for 3D semantic scene generation using BEV representations and off-the-shelf latent diffusion, enabling training-free editing.",
+      "llm_tldr_cn": "针对现有3D语义场景生成方法依赖复杂3D架构且难以编辑的问题，EditSSC提出一种基于BEV表示和现成潜在扩散网络的编辑就绪方法，通过将3D语义占据网格重塑为BEV图像，利用量化自编码器进行扩散，实现无需额外训练即可编辑场景。该方法在自动驾驶场景生成中展现了简洁性和编辑灵活性。",
+      "llm_tldr": "针对现有3D语义场景生成方法依赖复杂3D架构且难以编辑的问题，EditSSC提出一种基于BEV表示和现成潜在扩散网络的编辑就绪方法，通过将3D语义占据网格重塑为BEV图像，利用量化自编码器进行扩散，实现无需额外训练即可编辑场景。该方法在自动驾驶场景生成中展现了简洁性和编辑灵活性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.09738v1",
+      "source": "arxiv",
+      "title": "HDSL: A Hierarchical Domain-Specific Language for Structured 3D Indoor Scene Generation and Localized Editing with LLM Agents",
+      "abstract": "Text-driven indoor scene generation and editing require an intermediate representation that language models can both produce and revise. Existing LLM-based systems often rely on scene graphs or global constraint lists, which are compact but underspecify local geometry and make instruction-based edits difficult to localize. We frame this problem as structured program generation and local program repair, and propose Hierarchical Descriptive Scene Language (HDSL), an XML/CSS-style domain-specific language for structured 3D indoor scenes. HDSL represents rooms, regions, objects, and support surfaces as a tree with local coordinates, making complex scenes easier to plan recursively and easier to retrieve for editing. Our pipeline uses LLM agents to generate HDSL subtrees with bounded verification, grounds non-virtual nodes through multimodal asset retrieval, and applies force-directed layout optimization to repair boundary and collision errors. For editing, Hierarchical Retrieval-Augmented Generation retrieves the relevant subtree, asks the LLM to rewrite only that local context, and merges the result back through a deterministic three-way merge. In our reproduced benchmark, HDSL improves average object coverage, text-scene alignment, and generation time over full text-to-scene baselines while remaining competitive with recent layout-only reproductions on geometry metrics; for editing, HRAG reduces token use by $5.22\\times$ and runtime by $6.19\\times$, produces valid DSL for all eight paired edits, and better preserves unrelated scene objects.",
+      "authors": [
+        "Letian Li",
+        "Chao Shen",
+        "Shuzhao Xie",
+        "Chenghao Gu",
+        "ZhengXiao He",
+        "Yu Meng",
+        "Xin Yang",
+        "Wenyuan Jiang",
+        "Zhi Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-08T17:02:36+00:00",
+      "link": "https://arxiv.org/pdf/2606.09738v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "text-driven 3D indoor scene generation using LLM agents",
+      "llm_evidence_cn": "使用大语言模型代理进行文本驱动的3D室内场景生成",
+      "llm_evidence": "使用大语言模型代理进行文本驱动的3D室内场景生成",
+      "canonical_evidence": "使用大语言模型代理进行文本驱动的3D室内场景生成",
+      "llm_tldr_en": "Introduces HDSL, an XML/CSS-style DSL for structured 3D indoor scene generation and localized editing, enabling LLM agents to produce and revise scenes via tree-structured representation with local coordinates.",
+      "llm_tldr_cn": "现有基于大语言模型的室内场景生成方法依赖场景图或全局约束列表，难以指定局部几何且编辑定位困难。本文提出HDSL——一种XML/CSS风格的分层描述场景语言，以树结构表示房间、区域、物体和支撑面，并带有局部坐标。LLM代理可通过结构化程序生成和局部程序修复来创建和编辑场景。实验证明HDSL能够有效提高场景生成的准确性和编辑的局部化能力，为文本驱动3D场景生成提供了新的表示方案。",
+      "llm_tldr": "现有基于大语言模型的室内场景生成方法依赖场景图或全局约束列表，难以指定局部几何且编辑定位困难。本文提出HDSL——一种XML/CSS风格的分层描述场景语言，以树结构表示房间、区域、物体和支撑面，并带有局部坐标。LLM代理可通过结构化程序生成和局部程序修复来创建和编辑场景。实验证明HDSL能够有效提高场景生成的准确性和编辑的局部化能力，为文本驱动3D场景生成提供了新的表示方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.31672v1",
+      "source": "arxiv",
+      "title": "WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models",
+      "abstract": "Despite rapid progress in interactive world models (IWMs), existing benchmarks evaluate action following only at trajectory level and ignore memory and interaction physics. We introduce WorldRoamBench, an open-world benchmark for long-horizon stability across four dimensions, each with tailored innovations: (i) Action: per-frame action metric bypassing cross-model semantic scale disparity and exposing failures hidden by trajectory; (ii) Vision: segment-based drift metric capturing non-monotonic mid-sequence collapse missed by start-vs-end comparisons; (iii) Physics: controllability-gated evaluation over mechanics, optics, and 3D consistency, scoring plausibility under faithful action execution; (iv) Memory: action-decoupled protocol evaluating scene memory via transition-localized 3D point-cloud reconstruction and subject memory via tracking-plus-VLM reasoning. The benchmark comprises 600+ test cases across Nature, Urban, and Indoor scenes in first/third-person views with WASD 10-60s continuous interaction. Evaluating 10+ open/closed-source models reveals none reliably satisfies all dimensions; even the best achieves only moderate scores. Advances on WorldRoamBench are steps toward IWMs that are stable, physically grounded, memory-faithful, and deployable in real-world applications.",
+      "authors": [
+        "Ting-Bing Xu",
+        "Jiacheng Sui",
+        "Zhe Gao",
+        "Kewei Shi",
+        "Wenjin Yang",
+        "Zhicheng Liu",
+        "Zhaoxu Sun",
+        "Mingchao Sun",
+        "Hongyu Pan",
+        "Fan Jiang",
+        "Mu Xu",
+        "Qi Fan",
+        "Yong Li",
+        "Baoquan Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-30T13:51:44+00:00",
+      "link": "https://arxiv.org/pdf/2606.31672v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "benchmark for interactive world models",
+      "llm_evidence_cn": "交互世界模型的基准测试",
+      "llm_evidence": "交互世界模型的基准测试",
+      "canonical_evidence": "交互世界模型的基准测试",
+      "llm_tldr_en": "WorldRoamBench evaluates interactive world models on long-horizon stability across action, vision, physics, and memory dimensions.",
+      "llm_tldr_cn": "现有交互世界模型基准仅评估轨迹级动作执行，忽略记忆和物理交互。本文提出WorldRoamBench，从动作、视觉、物理和记忆四个维度全面评估长期稳定性。引入每帧动作度量、基于段的漂移度量、可控性门控物理评估和动作解耦记忆测试。实验揭示了现有模型的隐藏失败模式，为世界模型发展提供新评价标准。",
+      "llm_tldr": "现有交互世界模型基准仅评估轨迹级动作执行，忽略记忆和物理交互。本文提出WorldRoamBench，从动作、视觉、物理和记忆四个维度全面评估长期稳定性。引入每帧动作度量、基于段的漂移度量、可控性门控物理评估和动作解耦记忆测试。实验揭示了现有模型的隐藏失败模式，为世界模型发展提供新评价标准。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.24597v1",
+      "source": "arxiv",
+      "title": "Qwen-AgentWorld: Language World Models for General Agents",
+      "abstract": "A world model predicts environment dynamics based on current observations and actions, serving as a core cognitive mechanism for reasoning and planning. In this work, we investigate how world modeling based on language models can further push the boundaries of general agents. (i) We first focus on building foundation models for agentic environment simulation. We introduce Qwen-AgentWorld-35B-A3B and Qwen-AgentWorld-397B-A17B, the first language world models capable of simulating agentic environments covering 7 domains via long chain-of-thought reasoning. Leveraging more than 10M environment interaction trajectories of 7 domains in real-world environments, we develop Qwen-AgentWorld through a three-stage training pipeline: CPT injects general-purpose world modeling capabilities from the state transition dynamics and augmented professional corpora, SFT activates next-state-prediction reasoning, and RL sharpens simulation fidelity through a tailored framework with hybrid rubric-and-rule rewards. To evaluate language world models, we present AgentWorldBench, a comprehensive benchmark constructed from real-world interactions of 5 frontier models on 9 established benchmarks. Empirical results demonstrate that Qwen-AgentWorld significantly outperforms existing frontier models. (ii) Beyond foundation models, we further investigate two complementary paradigms through which world modeling enhances general agents. First, as a decoupled environment simulator, Qwen-AgentWorld supports scalable and controllable simulation of thousands of real-world environments for agentic RL, yielding gains that surpass real-environment training alone. Second, as a unified agent foundation model, world-model training acts as a highly effective warm-up that improves downstream performance across 7 agentic benchmarks. Code: https://github.com/QwenLM/Qwen-AgentWorld",
+      "authors": [
+        "Yuxin Zuo",
+        "Zikai Xiao",
+        "Li Sheng",
+        "Fei Huang",
+        "Jianhong Tu",
+        "Yuxuan Liu",
+        "Tianyi Tang",
+        "Xiaomeng Hu",
+        "Yang Su",
+        "Qingfeng Lan",
+        "Yantao Liu",
+        "Qin Zhu",
+        "Yinger Zhang",
+        "Bowen Yu",
+        "Haiquan Zhao",
+        "Haiyang Xu",
+        "Jianxin Yang",
+        "Jiayang Cheng",
+        "Junyang Wang",
+        "Lianghao Deng",
+        "Mingfeng Xue",
+        "Tianyi Bai",
+        "Yang Fan",
+        "Yubo Ma",
+        "Yucheng Li",
+        "Zeyu Cui",
+        "Zhihai Wang",
+        "Zhihui Xie",
+        "Zhuorui Ye",
+        "An Yang",
+        "Dayiheng Liu",
+        "Jingren Zhou",
+        "Ning Ding"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-23T13:53:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.24597v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Language world models for simulating agentic environments across domains",
+      "llm_evidence_cn": "基于语言的世界模型用于模拟跨领域智能体环境",
+      "llm_evidence": "基于语言的世界模型用于模拟跨领域智能体环境",
+      "canonical_evidence": "基于语言的世界模型用于模拟跨领域智能体环境",
+      "llm_tldr_en": "Introduces Qwen-AgentWorld, large language world models that simulate agentic environments across 7 domains using long chain-of-thought reasoning, trained on 10M trajectories.",
+      "llm_tldr_cn": "为实现通用智能体推理规划，提出Qwen-AgentWorld系列语言世界模型，通过三阶段训练（CPT/SFT/RL）利用超1000万条真实环境轨迹，能够在7个领域通过长链思维推理模拟环境动态，为agent提供可扩展的世界建模能力。",
+      "llm_tldr": "为实现通用智能体推理规划，提出Qwen-AgentWorld系列语言世界模型，通过三阶段训练（CPT/SFT/RL）利用超1000万条真实环境轨迹，能够在7个领域通过长链思维推理模拟环境动态，为agent提供可扩展的世界建模能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.01784v1",
+      "source": "arxiv",
+      "title": "SpaceEra++: A Unified Framework Towards 3D Spatial Reasoning in Video",
+      "abstract": "Visual-spatial understanding, defined as the ability to infer object relationships and scene layouts from visual inputs, is fundamental to downstream tasks such as robotic navigation and embodied interaction. However, pre-trained vision-language models (VLMs) remain constrained by spatial uncertainty stemming from inherently 2D observations and by the scarcity of data for 3D spatial understanding. To address these limitations, we proposed a novel framework, SpaceEra, in the NeurIPS 2025 Spotlight paper. Although it achieved significant performance gains, we further observed that its effectiveness is hindered by insufficient input from scanning videos and weak reasoning constraints. To tackle these newly emerged challenges, we extend the original framework into a comprehensive system, termed SpaceEra++, which spans data construction, model design, training optimization, and prompting inference. Specifically, to alleviate input insufficiency, we introduce ScenePick, a frame sampling strategy that balances spatial coverage with object semantics to produce compact yet comprehensive scene representations. In addition, to enhance spatial reasoning, we develop SpaceAlign, which enforces pairwise object constraints by jointly exploiting absolute coordinates and relative spatial relations, thereby aligning optimization with spatial accuracy. Extensive experiments across multiple benchmarks demonstrate consistent improvements over strong baselines, while ablation studies validate both the individual and joint contributions of each component, and further analyses provide guidance for future research.",
+      "authors": [
+        "Weili Guan",
+        "Haoyu Zhang",
+        "Meng Liu",
+        "Qianlong Xiang",
+        "Yaowei Wang",
+        "Liqiang Nie"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-02T06:56:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.01784v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "3D spatial reasoning in video",
+      "llm_evidence_cn": "视频中的3D空间推理",
+      "llm_evidence": "视频中的3D空间推理",
+      "canonical_evidence": "视频中的3D空间推理",
+      "llm_tldr_en": "SpaceEra++ extends the NeurIPS 2025 Spotlight framework to improve 3D spatial reasoning from video, addressing spatial uncertainty and weak reasoning constraints.",
+      "llm_tldr_cn": "预训练视觉语言模型受限于2D观测和缺乏3D数据，在空间推理中表现不佳。SpaceEra++提出统一框架，通过引入扫描视频输入和更强的推理约束，显著提升3D空间理解能力。实验证明在多个空间推理任务上提升幅度大，为机器人导航和具身交互奠定基础。",
+      "llm_tldr": "预训练视觉语言模型受限于2D观测和缺乏3D数据，在空间推理中表现不佳。SpaceEra++提出统一框架，通过引入扫描视频输入和更强的推理约束，显著提升3D空间理解能力。实验证明在多个空间推理任务上提升幅度大，为机器人导航和具身交互奠定基础。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.06891v1",
+      "source": "arxiv",
+      "title": "Stream3D-VLM: Online 3D Spatial Understanding with Incremental Geometry Priors",
+      "abstract": "Despite advances in 3D scene understanding, existing 3D Large Multimodal Models operate in offline settings, requiring complete scene observations or predefined video clips. In this paper, we present an online 3D vision-language model that enables real-time spatial understanding from streaming video. Our approach adopts an autoregressive streaming control modeling based on the LLM's next-token prediction objective to learn when to respond, and employs a lightweight Visual-Spatial Feature Integration (VSFI) module to incrementally inject temporally aligned geometry priors into the visual stream. To alleviate long-context decoding overhead, we propose a plug-and-play Geometry-Adaptive Voxel Compression (GAVC) module for efficient visual token compression. To address the scarcity of streaming 3D-language data, we further develop a scalable data generation pipeline that curates over 1M online spatio-temporal 3D QA pairs and establishes a comprehensive benchmark spanning 29 tasks. Extensive experiments show that our approach significantly outperforms both proprietary and open-source models across online and offline 3D spatial understanding, reasoning, and grounding tasks. The project page is available at https://stream3d-vlm.github.io/",
+      "authors": [
+        "Hanxun Yu",
+        "Xuan Qu",
+        "Lei Ke",
+        "Boqiang Zhang",
+        "Yuxin Wang",
+        "Jianke Zhu",
+        "Dong Yu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-05T04:16:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.06891v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "online 3D spatial understanding from streaming video",
+      "llm_evidence_cn": "从流式视频进行在线3D空间理解",
+      "llm_evidence": "从流式视频进行在线3D空间理解",
+      "canonical_evidence": "从流式视频进行在线3D空间理解",
+      "llm_tldr_en": "Stream3D-VLM enables real-time 3D spatial understanding from streaming video by incrementally injecting geometry priors and using adaptive voxel compression.",
+      "llm_tldr_cn": "传统3D多模态大模型需完整场景或预定义视频，无法实时理解。Stream3D-VLM提出在线框架，利用自回归流控制决定响应时机，通过轻量级视觉-空间特征融合模块逐步注入几何先验，并设计几何自适应体素压缩减少计算量。实验表明在实时3D理解任务中，该模型达到与离线方法相当的精度，同时保持低延迟，适用于机器人等实时场景。",
+      "llm_tldr": "传统3D多模态大模型需完整场景或预定义视频，无法实时理解。Stream3D-VLM提出在线框架，利用自回归流控制决定响应时机，通过轻量级视觉-空间特征融合模块逐步注入几何先验，并设计几何自适应体素压缩减少计算量。实验表明在实时3D理解任务中，该模型达到与离线方法相当的精度，同时保持低延迟，适用于机器人等实时场景。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.08205v1",
+      "source": "arxiv",
+      "title": "Empowering Feed-Forward Reconstruction Models with Metric Scale via Satellite Images",
+      "abstract": "Feed-forward 3D reconstruction models have recently shown strong generalization across diverse scenes, yet most of them recover geometry only up to an unknown global scale. This scale ambiguity limits their use in applications that require metric understanding of the environment. Existing metric reconstruction methods commonly rely on large-scale metric annotations or accurate camera calibration, both of which are costly or unreliable in many real-world settings. We propose a satellite-guided framework for resolving scale ambiguity in feed-forward 3D reconstruction. The key idea is to use readily available satellite imagery as a global metric reference. Given a coarse camera pose, our method retrieves a local satellite patch and integrates it with a feed-forward reconstruction backbone through bidirectional cross-view interaction. By enforcing consistency between the reconstructed scene and the satellite reference, the model infers absolute scale, refines scene geometry, and estimates camera pose in a metric coordinate frame. Experiments on KITTI, nuScenes, and Oxford RobotCar show consistent improvements in metric depth estimation, multi-view point-cloud reconstruction, and cross-view camera localization, while preserving strong generalization across datasets and geographic regions.",
+      "authors": [
+        "Xianghui Ze",
+        "Yongjian Luo",
+        "Mengjun Chao",
+        "Zhenbo Song",
+        "Jianfeng Lu",
+        "Yujiao Shi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-06T14:44:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.08205v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "satellite-guided metric scale for 3D reconstruction",
+      "llm_evidence_cn": "卫星图像引导的3D重建度量尺度",
+      "llm_evidence": "卫星图像引导的3D重建度量尺度",
+      "canonical_evidence": "卫星图像引导的3D重建度量尺度",
+      "llm_tldr_en": "This paper proposes a satellite-guided framework to resolve scale ambiguity in feed-forward 3D reconstruction using satellite imagery as a metric reference.",
+      "llm_tldr_cn": "针对前馈式3D重建模型存在尺度模糊的问题，该工作提出一种卫星引导框架，利用卫星图像作为全局度量参考，在无需度量标注或精确相机标定的情况下恢复场景的度量尺度。该方法集成到现有重建模型中即可获得尺度感知能力，在多个数据集上验证了有效性，为实际应用提供了低成本度量重建方案。",
+      "llm_tldr": "针对前馈式3D重建模型存在尺度模糊的问题，该工作提出一种卫星引导框架，利用卫星图像作为全局度量参考，在无需度量标注或精确相机标定的情况下恢复场景的度量尺度。该方法集成到现有重建模型中即可获得尺度感知能力，在多个数据集上验证了有效性，为实际应用提供了低成本度量重建方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.08980v1",
+      "source": "arxiv",
+      "title": "EPS3D: End-to-End Feed-Forward 3D Panoptic Segmentation",
+      "abstract": "This paper introduces EPS3D, a new end-to-end feed-forward framework for open-vocabulary 3D panoptic segmentation. Unlike existing methods relying on additional preprocessing, we design an end-to-end architecture, with a distillation-based training strategy on diverse 3D scenes to predict 3D-aware semantic and instance features from multi-view images, improving 3D consistency and avoiding error accumulation. We further propose a mutual enhancement module to enforce inherent semantic-instance consistency. By aligning semantics within instances (Ins2Sem) and refining instance features with semantic guidance (Sem2Ins), we achieve more coherent 3D scene understanding. Ultimately, EPS3D outperforms SOTA baselines on two benchmarks (e.g., +13% mIoU for semantics on Replica) with high efficiency (e.g., 1s per scene), supporting tasks like robotic manipulation and 3D scene editing.",
+      "authors": [
+        "Runsong Zhu",
+        "Jiaxin Guo",
+        "Xiaoyang Guo",
+        "Zhengzhe Liu",
+        "Ka-Hei Hui",
+        "Wei Yin",
+        "Kai Chen",
+        "Wei Chen",
+        "Weiqiang Ren",
+        "Yunhui Liu",
+        "Pheng-Ann Heng",
+        "Chi-Wing Fu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-08T03:26:54+00:00",
+      "link": "https://arxiv.org/pdf/2606.08980v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D panoptic segmentation for scene understanding",
+      "llm_evidence_cn": "3D全景分割用于场景理解",
+      "llm_evidence": "3D全景分割用于场景理解",
+      "canonical_evidence": "3D全景分割用于场景理解",
+      "llm_tldr_en": "EPS3D is an end-to-end feed-forward framework for open-vocabulary 3D panoptic segmentation, using distillation to predict 3D-aware features from multi-view images, achieving state-of-the-art performance.",
+      "llm_tldr_cn": "现有3D全景分割方法依赖额外预处理，导致误差累积。EPS3D设计了端到端架构，通过蒸馏训练从多视图图像预测3D感知语义和实例特征，并提出互相增强模块保持语义-实例一致性。在Replica等基准上，语义mIoU提升13%，展示了端到端框架在3D场景理解中的优势。",
+      "llm_tldr": "现有3D全景分割方法依赖额外预处理，导致误差累积。EPS3D设计了端到端架构，通过蒸馏训练从多视图图像预测3D感知语义和实例特征，并提出互相增强模块保持语义-实例一致性。在Replica等基准上，语义mIoU提升13%，展示了端到端框架在3D场景理解中的优势。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.10902v1",
+      "source": "arxiv",
+      "title": "Pose-ICL: 3D-Aware In-Context Learning for Pose-Controllable Subject Customization",
+      "abstract": "Subject Customization is a foundational task in modern image generation. By providing a few reference images and a text prompt, users can generate images of a specific object in any desired scene. However, existing methods still struggle to achieve effective pose control for customized subjects. In practice, they often exhibit inaccurate poses or inconsistent cross-pose appearances. These limitations suggest that understanding objects in a volumetric manner remains a significant challenge for 2D-native backbones. To address this challenge, we propose Pose-ICL, a tuning-free framework that leverages 3D-aware In-Context Learning (ICL) to directly adapt to new subjects through multiple paired image-pose references. Its core mechanism,Surface-Anchored Position Embedding (SAPE), equips the model with explicit 3D awareness by anchoring image tokens to the surface coordinates of a volumetric bounding box. Dedicated refinements ensure its seamless compatibility with existing DiT models. Extensive evaluations on both 3D assets and real-world subjects demonstrate that Pose-ICL significantly outperforms current methods in both pose accuracy and identity consistency.",
+      "authors": [
+        "Xuan Han",
+        "Yihao Zhao",
+        "Mingyu You"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-09T14:13:40+00:00",
+      "link": "https://arxiv.org/pdf/2606.10902v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "3D-aware in-context learning for subject customization in image generation",
+      "llm_evidence_cn": "利用3D感知的上下文学习实现图像生成中的主题定制与姿态控制",
+      "llm_evidence": "利用3D感知的上下文学习实现图像生成中的主题定制与姿态控制",
+      "canonical_evidence": "利用3D感知的上下文学习实现图像生成中的主题定制与姿态控制",
+      "llm_tldr_en": "Proposes Pose-ICL, a tuning-free framework that uses 3D-aware in-context learning for pose-controllable subject customization, addressing inaccurate pose and cross-pose inconsistency.",
+      "llm_tldr_cn": "针对现有图像生成方法在主题定制中姿态控制不准和跨姿态外观不一致的问题，提出Pose-ICL，通过3D感知的上下文学习直接适配新主题，核心机制是利用多对图像-姿态参考进行表面感知推理，无需微调即可实现准确姿态控制和一致外观。",
+      "llm_tldr": "针对现有图像生成方法在主题定制中姿态控制不准和跨姿态外观不一致的问题，提出Pose-ICL，通过3D感知的上下文学习直接适配新主题，核心机制是利用多对图像-姿态参考进行表面感知推理，无需微调即可实现准确姿态控制和一致外观。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.10594v1",
+      "source": "arxiv",
+      "title": "Segment and Select: Vision-Language Segmentation in 3D Scenarios",
+      "abstract": "3D vision-language segmentation aims to segment target objects in 3D scenarios according to the linguistic instructions and visual observations. Prior art heavily relies on the coarse superpoint representation to reduce the computation complexity, which suffers from poor segmentation quality and messy object boundaries. In this paper, we propose the SEGment-And-select (SEGA3D) paradigm for 3D visionlanguage segmentation that directly operates on the fine-grained visual information and is free from the superpoint dependency. Specifically, we first leverage a mask candidate generator to provide fine-grained categorical mask candidates, substantially improving the quality of candidate masks over the superpoint counterparts. Then, a Large Language Model (LLM) is utilized to generate the semantic and spatial information based on the linguistic description and visual features. The LLM output and visual features are fed to the Semantic-Spatial Selector (SSS) to produce the top-ranking mask candidates. Eventually, the Loopback Verification Module (LVM) is designed to yield the segmentation mask from the selected candidate masks. Our SEGA3D attains competitive performance on ScanRefer, ScanNet and Matterport3D benchmarks. Notably, our SEGA3D surpasses the top-performing counterpart by 8.3 mIoU and 5.3 mIoU on ScanNet and Matterport3D, respectively. Codes will be available upon publication.",
+      "authors": [
+        "Yulin Chen",
+        "Zhihang Zhong",
+        "Yuenan Hou"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-09T08:58:59+00:00",
+      "link": "https://arxiv.org/pdf/2606.10594v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "vision-language segmentation in 3D scenarios for scene understanding",
+      "llm_evidence_cn": "3D场景中的视觉语言分割用于场景理解",
+      "llm_evidence": "3D场景中的视觉语言分割用于场景理解",
+      "canonical_evidence": "3D场景中的视觉语言分割用于场景理解",
+      "llm_tldr_en": "SEGA3D performs fine-grained 3D vision-language segmentation without superpoint dependency, using mask candidates and LLM selection.",
+      "llm_tldr_cn": "现有3D视觉语言分割依赖粗粒度超点表示，分割质量低且物体边界模糊。本文提出SEGA3D范式，直接在细粒度视觉信息上操作：先通过遮罩候选生成器产生高质量候选，再由大语言模型选择目标。实验表明SEGA3D在标准基准上显著优于超点方法，实现了精确的3D场景语义分割。",
+      "llm_tldr": "现有3D视觉语言分割依赖粗粒度超点表示，分割质量低且物体边界模糊。本文提出SEGA3D范式，直接在细粒度视觉信息上操作：先通过遮罩候选生成器产生高质量候选，再由大语言模型选择目标。实验表明SEGA3D在标准基准上显著优于超点方法，实现了精确的3D场景语义分割。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.29600v1",
+      "source": "arxiv",
+      "title": "One Scene, Two Depths: Probing Geometric Ambiguity in Monocular Foundation Models",
+      "abstract": "A faithful 3D world representation should account for layered geometry, where a single camera ray may contain multiple visible and geometrically valid surfaces. Monocular depth estimation, however, reduces this structure to one scalar depth per pixel. Transparent scenes make this ambiguity measurable: the same ray can pass through foreground glass and observe the background, turning the supervised target into a convention of annotation, data, and training rather than a scene-intrinsic truth. A learned predictor exposes this convention as its depth-layer preference. We introduce MultiDepth-3k (MD-3k), a sparse two-layer ordinal benchmark for measuring depth-layer preference and multi-layer spatial relationship accuracy (ML-SRA). On MD-3k, leading depth foundation models exhibit diverse layer preferences under standard RGB input, showing that the same layered geometry can be resolved differently across models. We further find that Laplacian Visual Prompting (LVP), a training-free spectral input transformation, can substantially change the reported layer for certain frozen models. The strongest RGB/LVP pair, DAv2-L, reaches 75.5% ML-SRA. These results suggest that depth foundation models may express complementary geometric hypotheses that standard RGB inference leaves unexpressed. We invite the community to rethink depth supervision and evaluation through an ambiguity-aware lens, where multiple valid 3D interpretations are treated as geometric structure to be measured, preserved, and expressed.",
+      "authors": [
+        "Xiaohao Xu",
+        "Feng Xue",
+        "Xiang Li",
+        "Haowei Li",
+        "Shusheng Yang",
+        "Tianyi Zhang",
+        "Matthew Johnson-Roberson",
+        "Xiaonan Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-28T20:54:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.29600v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "probes multi-layer spatial relationships in 3D",
+      "llm_evidence_cn": "探索3D中多层空间关系",
+      "llm_evidence": "探索3D中多层空间关系",
+      "canonical_evidence": "探索3D中多层空间关系",
+      "llm_tldr_en": "This paper introduces a benchmark (MD-3k) to measure depth-layer preference and multi-layer spatial relationship accuracy in monocular depth models, highlighting geometric ambiguity in 3D world representations.",
+      "llm_tldr_cn": "本文针对单目深度估计中的几何歧义问题，提出MultiDepth-3k（MD-3k）基准，用于度量深度模型对多层空间关系的偏好。通过透明场景，揭示监督信号并非场景固有真理，而是一种标注约定。该工作为理解和评估空间推理能力提供了新视角。",
+      "llm_tldr": "本文针对单目深度估计中的几何歧义问题，提出MultiDepth-3k（MD-3k）基准，用于度量深度模型对多层空间关系的偏好。通过透明场景，揭示监督信号并非场景固有真理，而是一种标注约定。该工作为理解和评估空间推理能力提供了新视角。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.20946v1",
+      "source": "arxiv",
+      "title": "Scaling Diverse Language Generation for 3D Visual Grounding",
+      "abstract": "Developing robust models for 3D visual grounding (3DVG), the localization of entities in a 3D scene described in natural language, is important for enabling agents to correspond spatial language with objects in the physical world. However, the lack of diverse descriptions at scale prevents models from generalizing beyond simple linguistic patterns. Recent such attempts lack diversity in the constraint types and language used to ground objects. Captioning methods cannot precisely contrast objects, which is important for visual grounding. We therefore propose ViGiL3D++, a scalable, scene-agnostic method that generates diverse visual grounding queries by combining constraint sampling in scene graphs with the language generation of LLMs. We show that it has greater diversity over existing scaled datasets and improves model performance over several 3DVG benchmarks but also illuminates outstanding limitations of VLMs.",
+      "authors": [
+        "Austin T. Wang",
+        "Dongchen Yang",
+        "Angel X. Chang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "published": "2026-06-18T21:20:20+00:00",
+      "link": "https://arxiv.org/pdf/2606.20946v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Diverse language generation for 3D visual grounding with scene graphs and LLMs",
+      "llm_evidence_cn": "利用场景图和LLM生成多样化视觉定位查询，提升空间语言对应",
+      "llm_evidence": "利用场景图和LLM生成多样化视觉定位查询，提升空间语言对应",
+      "canonical_evidence": "利用场景图和LLM生成多样化视觉定位查询，提升空间语言对应",
+      "llm_tldr_en": "Proposes ViGiL3D++, a scalable method that generates diverse 3D visual grounding queries using constraint sampling in scene graphs and LLMs, improving generalization.",
+      "llm_tldr_cn": "针对3D视觉定位中缺乏多样化描述导致泛化性差的问题，提出ViGiL3D++，通过场景图中约束采样和LLM语言生成，可扩展地产生多种视觉定位查询，覆盖更多约束类型，显著提升模型对复杂语言模式的鲁棒性。",
+      "llm_tldr": "针对3D视觉定位中缺乏多样化描述导致泛化性差的问题，提出ViGiL3D++，通过场景图中约束采样和LLM语言生成，可扩展地产生多种视觉定位查询，覆盖更多约束类型，显著提升模型对复杂语言模式的鲁棒性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.31148v1",
+      "source": "arxiv",
+      "title": "PruneGround: Plug-and-play Spatial Pruning for 3D Visual Grounding",
+      "abstract": "3D Visual Grounding (3DVG) aims to localize target objects in 3D scenes given natural language descriptions. Existing approaches typically perform reasoning over the entire scene, leading to ambiguous predictions and high computational cost, especially in cluttered environments. We observe that many referential expressions rely on local spatial context and often correspond to restricted spatial regions rather than the full scene. Motivated by this insight, we propose PruneGround, an effective plug-and-play framework for 3DVG built upon three key components. First, we introduce Language-Guided Spatial Pruning (LGSP), which leverages a frozen Vision Language Model (VLM) to identify language-relevant regions, thereby reducing spatial computation and grounding candidates in the narrower search space. Second, we propose MultiView-Conditioned Description Reformulation (MCDR), which decomposes complex expressions into simplified target-anchor relations and augments missing spatial cues through multi-view reasoning. Finally, we propose LLM-Grounder, which repurposes a detection-pretrained spatial LLM into a language-conditioned grounding model by aligning point cloud and linguistic representations within the pruned region. Extensive experiments on the three most popular point cloud benchmarks demonstrate that our method achieves state-of-the-art results on all three ScanRefer settings and on 9 out of 10 Nr3D/Sr3D settings. Code and models are publicly available: https://github.com/leduckhai/PruneGround",
+      "authors": [
+        "Duc Cao Dinh",
+        "Khai Le-Duc",
+        "Florent Draye",
+        "Chris Ngo",
+        "Terry Jingchen Zhang",
+        "Bernhard Schölkopf",
+        "Zhijing Jin"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-30T05:21:11+00:00",
+      "link": "https://arxiv.org/pdf/2606.31148v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "3D scene understanding via visual grounding",
+      "llm_evidence_cn": "通过视觉定位进行3D场景理解",
+      "llm_evidence": "通过视觉定位进行3D场景理解",
+      "canonical_evidence": "通过视觉定位进行3D场景理解",
+      "llm_tldr_en": "PruneGround introduces a plug-and-play spatial pruning framework for 3D visual grounding, using a frozen VLM to identify relevant regions, reducing computation and improving accuracy.",
+      "llm_tldr_cn": "现有3D视觉定位方法通常在整个场景中推理，计算量大且预测模糊。PruneGround提出即插即用的空间剪枝框架，利用冻结视觉语言模型识别语言相关区域，从而减少空间计算并提升定位效果。在多个基准上实验表明，该方法在保持高精度的同时显著降低了推理成本，为3D场景理解提供高效方案。",
+      "llm_tldr": "现有3D视觉定位方法通常在整个场景中推理，计算量大且预测模糊。PruneGround提出即插即用的空间剪枝框架，利用冻结视觉语言模型识别语言相关区域，从而减少空间计算并提升定位效果。在多个基准上实验表明，该方法在保持高精度的同时显著降低了推理成本，为3D场景理解提供高效方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.31672v2",
+      "source": "arxiv",
+      "title": "WorldOdysseyBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models",
+      "abstract": "Despite rapid progress in interactive world models (IWMs), existing benchmarks evaluate action following only at trajectory level and ignore memory and interaction physics. We introduce WorldOdysseyBench, an open-world benchmark for long-horizon stability across four dimensions, each with tailored innovations: (i) Action: per-frame action metric bypassing cross-model semantic scale disparity and exposing failures hidden by trajectory; (ii) Vision: segment-based drift metric capturing non-monotonic mid-sequence collapse missed by start-vs-end comparisons; (iii) Physics: controllability-gated evaluation over mechanics, optics, and 3D consistency, scoring plausibility under faithful action execution; (iv) Memory: action-decoupled protocol evaluating scene memory via transition-localized 3D point-cloud reconstruction and subject memory via tracking-plus-VLM reasoning. The benchmark comprises 600+ test cases across Nature, Urban, and Indoor scenes in first/third-person views with WASD 10-60s continuous interaction. Evaluating 10+ open/closed-source models reveals none reliably satisfies all dimensions; even the best achieves only moderate scores. Advances on WorldOdysseyBench are steps toward IWMs that are stable, physically grounded, memory-faithful, and deployable in real-world applications.",
+      "authors": [
+        "Ting-Bing Xu",
+        "Jiacheng Sui",
+        "Zhe Gao",
+        "Kewei Shi",
+        "Wenjin Yang",
+        "Zhicheng Liu",
+        "Zhaoxu Sun",
+        "Mingchao Sun",
+        "Hongyu Pan",
+        "Fan Jiang",
+        "Mu Xu",
+        "Qi Fan",
+        "Yang Gao",
+        "Yong Li",
+        "Baoquan Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-30T13:51:44+00:00",
+      "link": "https://arxiv.org/pdf/2606.31672v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "benchmark for interactive world models",
+      "llm_evidence_cn": "交互式世界模型的基准",
+      "llm_evidence": "交互式世界模型的基准",
+      "canonical_evidence": "交互式世界模型的基准",
+      "llm_tldr_en": "WorldOdysseyBench introduces an open-world benchmark for evaluating long-horizon stability of interactive world models across action, vision, physics, and memory dimensions.",
+      "llm_tldr_cn": "交互式世界模型虽取得进展，但现有基准仅评估轨迹级动作跟随，忽略长期稳定性和物理记忆。WorldOdysseyBench提出四维度评价：动作粒度、视觉漂移、物理合理性、记忆持久性。通过设计新的度量（如逐帧动作评分、分段漂移检测），暴露了现有模型在长时交互中的缺陷，为世界模型评估建立新标准。",
+      "llm_tldr": "交互式世界模型虽取得进展，但现有基准仅评估轨迹级动作跟随，忽略长期稳定性和物理记忆。WorldOdysseyBench提出四维度评价：动作粒度、视觉漂移、物理合理性、记忆持久性。通过设计新的度量（如逐帧动作评分、分段漂移检测），暴露了现有模型在长时交互中的缺陷，为世界模型评估建立新标准。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
