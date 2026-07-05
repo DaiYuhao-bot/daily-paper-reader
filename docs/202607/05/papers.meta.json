@@ -1,0 +1,54 @@
+{
+  "label": "2026-07-05",
+  "date": "2026-07-05",
+  "generated_at": "2026-07-05T20:21:14",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202607/05/2607.01663v1-unified-panoramic-gaussian-representation-for-monocular-4d-scene-synthesis",
+      "section": "deep",
+      "title_en": "Unified Panoramic-Gaussian Representation for Monocular 4D Scene Synthesis",
+      "authors": "Yuankun Yang, Yi Wei, Wenyang Zhou, Li Zhang",
+      "date": "2026-07-02",
+      "pdf": "https://arxiv.org/pdf/2607.01663v1",
+      "score": "8.0",
+      "evidence": "统一全景-高斯表示实现含未观察区域的单目4D场景合成",
+      "tldr": "现有单目4D场景合成受限于视图插值，无法推断未见区域。本文提出PanoGaussian，通过全景轨迹引导训练和动态高斯表示蒸馏，将全景表示转化为显式动态高斯以捕获物理先验。实验证明在较大视角变化下实现一致4D场景合成，显著提升跨视角一致性。",
+      "tags": "query:world-model",
+      "abstract_en": "4D scene synthesis from monocular videos has made significant progress in recent years. However, existing methods are typically constrained by view interpolation. As a result, they struggle to infer unseen regions beyond the observed views. In this paper, we reformulate the task as 4D scene synthesis with unseen regions, which extends beyond traditional interpolation settings. Camera-conditioned video generation enables unseen region synthesis by guiding generation along specified cameras. However, these methods lack explicit 3D priors and are optimized with random camera trajectories. This design leads to severe inconsistencies under large trajectory deviations. To address this limitation, we build a unified training and inference framework with panoramic trajectory guidance. While this design improves cross-view consistency, the panoramic representation alone fails to model dynamic content effectively. Object motion in panoramic space introduces scale and shape distortions. To address this, we propose PanoGaussian, a unified Panoramic-Gaussian representation that distills the panoramic representation into an explicit dynamic Gaussian representation to capture dynamic physical priors of the 4D scene. Experiments demonstrate that PanoGaussian achieves consistent 4D scene synthesis even under large viewpoint variations.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/05/2606.30896v1-knowledge-driven-dimension-estimation-from-a-single-image--3d-asset-generation-technology-for-digital-twin-construction",
+      "section": "quick",
+      "title_en": "Knowledge-Driven Dimension Estimation from a Single Image -3D Asset Generation Technology for Digital Twin Construction",
+      "authors": "Hidenori Sakaniwa, Akihito Akai, Akihiko Hyodo",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.30896v1",
+      "score": "7.0",
+      "evidence": "知识驱动的尺寸估计用于3D资产生成",
+      "tldr": "针对数字孪生中车载摄像头验证时虚拟与真实物体尺度不一致导致识别性能下降的问题，提出基于知识驱动的单图维度估计方法。将物体分解为结构元素，整合设计规则与尺寸知识，从单目图像检测组件并估计尺寸，进而生成3D资产。在交通标志等高架物体上无需LiDAR即可实现尺度估计。该方法能生成近似真实尺度的3D资产，提升虚拟环境中摄像头验证精度。",
+      "tags": "query:world-model",
+      "abstract_en": "In the verification of in-vehicle cameras, simulation technology using virtual spaces has advanced, enabling pre-evaluation of false detections and missed detections in various scenarios. However, discrepancies in the scale of the object being verified between the virtual and real environments can lead to a decrease in camera recognition performance. For traffic signs installed at high altitudes, distance measurement using LiDAR or stereo cameras is difficult, requiring size estimation from monocular images. This paper proposes a method for estimating the scale of an object by decomposing it into multiple structural elements and integrating external knowledge regarding design rules, geometric relationships, and conventional dimensions. Specifically, this method detects each component from a monocular image and estimates the size of each component by considering its structural relationships and dimensional consistency with surrounding elements. Furthermore, it generates a 3D asset of the object by reconstructing the estimated components. This method makes it possible to place 3D assets with a scale approximating the real environment within a digital twin space and is expected to contribute to improving the verification accuracy of in-vehicle cameras for autonomous driving in virtual environments.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/05/2607.01578v1-mvfusion-gs-motion-variance-guided-temporal-attention-for-high-quality-dynamic-gaussian-splatting",
+      "section": "quick",
+      "title_en": "MVFusion-GS: Motion-Variance Guided Temporal Attention for High-Quality Dynamic Gaussian Splatting",
+      "authors": "Jianwei Hu, Tingxuan Huang, Hengyu Zhou, Ningna Wang, Xiaohu Guo Jinshan Lai, Bin Wang",
+      "date": "2026-07-02",
+      "pdf": "https://arxiv.org/pdf/2607.01578v1",
+      "score": "7.0",
+      "evidence": "动态场景重建有助于3D场景理解",
+      "tldr": "3D高斯泼溅扩展至动态场景时，现有变形网络缺乏显式运动感知，导致前景运动不准确和背景伪静态残差。MVFusion-GS提出运动方差引导细化模块，利用每高斯变形统计估计运动方差，指导动态-静态分离；同时引入MotionFormer时间注意力模块，通过自注意力建模局部时间依赖，提升时序一致性。在动态场景重建和干扰物去除基准上，该方法取得最先进性能，显式运动感知同时改善前景运动建模和静态背景重建。",
+      "tags": "query:world-model",
+      "abstract_en": "3D Gaussian Splatting (3DGS) enables real-time novel view synthesis for static scenes. Extending it to dynamic scenes via deformation fields has recently attracted significant attention, particularly for dynamic scene reconstructionband distractor-free. However, existing deformation networks lack explicit motion awareness: they neither capture long-term motion intensity nor exploit short-term temporal coherence, leading to inaccurate foreground deformation and pseudo-static residuals in the background. We present MVFusion-GS, a method that enhances deformation networks with two complementary motion-aware mechanisms. The Motion-Variance Guided Refinement aggregates per-Gaussian deformation statistics across time to estimate motion variance and uses it to guide dynamic-static separation during deformation prediction. The MotionFormer Temporal Attention module applies Transformer self-attention over neighboring timesteps to model local motion dependencies and improve temporal consistency. Extensive experiments on both dynamic scene reconstruction and distractor-free reconstruction benchmarks demonstrate state-of-the-art performance, showing that explicit motion awareness improves both foreground motion modeling and static background reconstruction.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

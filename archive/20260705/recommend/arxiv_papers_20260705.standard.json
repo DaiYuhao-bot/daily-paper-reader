@@ -1,0 +1,132 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-05T20:18:38.102310+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.01663v1",
+      "source": "arxiv",
+      "title": "Unified Panoramic-Gaussian Representation for Monocular 4D Scene Synthesis",
+      "abstract": "4D scene synthesis from monocular videos has made significant progress in recent years. However, existing methods are typically constrained by view interpolation. As a result, they struggle to infer unseen regions beyond the observed views. In this paper, we reformulate the task as 4D scene synthesis with unseen regions, which extends beyond traditional interpolation settings. Camera-conditioned video generation enables unseen region synthesis by guiding generation along specified cameras. However, these methods lack explicit 3D priors and are optimized with random camera trajectories. This design leads to severe inconsistencies under large trajectory deviations. To address this limitation, we build a unified training and inference framework with panoramic trajectory guidance. While this design improves cross-view consistency, the panoramic representation alone fails to model dynamic content effectively. Object motion in panoramic space introduces scale and shape distortions. To address this, we propose PanoGaussian, a unified Panoramic-Gaussian representation that distills the panoramic representation into an explicit dynamic Gaussian representation to capture dynamic physical priors of the 4D scene. Experiments demonstrate that PanoGaussian achieves consistent 4D scene synthesis even under large viewpoint variations.",
+      "authors": [
+        "Yuankun Yang",
+        "Yi Wei",
+        "Wenyang Zhou",
+        "Li Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-02T03:43:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.01663v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "unified panoramic-Gaussian representation for monocular 4D scene synthesis with unseen regions",
+      "llm_evidence_cn": "统一全景-高斯表示实现含未观察区域的单目4D场景合成",
+      "llm_evidence": "统一全景-高斯表示实现含未观察区域的单目4D场景合成",
+      "canonical_evidence": "统一全景-高斯表示实现含未观察区域的单目4D场景合成",
+      "llm_tldr_en": "Proposes a unified training and inference framework with panoramic-Gaussian representation for 4D scene synthesis from monocular video, enabling consistent synthesis of unseen regions beyond observed views.",
+      "llm_tldr_cn": "单目4D场景合成现有方法受限于视图插值，无法合成未观察区域。本文提出统一训练推理框架，解耦相机轨迹与生成过程，利用全景高斯表示为显式3D先验，引导生成一致性。在多个室内外数据集上，该方法能合成大范围未观察区域且保持3D一致性，显著优于视图插值方法，为4D场景生成提供了新范式。",
+      "llm_tldr": "单目4D场景合成现有方法受限于视图插值，无法合成未观察区域。本文提出统一训练推理框架，解耦相机轨迹与生成过程，利用全景高斯表示为显式3D先验，引导生成一致性。在多个室内外数据集上，该方法能合成大范围未观察区域且保持3D一致性，显著优于视图插值方法，为4D场景生成提供了新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.30896v1",
+      "source": "arxiv",
+      "title": "Knowledge-Driven Dimension Estimation from a Single Image -3D Asset Generation Technology for Digital Twin Construction",
+      "abstract": "In the verification of in-vehicle cameras, simulation technology using virtual spaces has advanced, enabling pre-evaluation of false detections and missed detections in various scenarios. However, discrepancies in the scale of the object being verified between the virtual and real environments can lead to a decrease in camera recognition performance. For traffic signs installed at high altitudes, distance measurement using LiDAR or stereo cameras is difficult, requiring size estimation from monocular images. This paper proposes a method for estimating the scale of an object by decomposing it into multiple structural elements and integrating external knowledge regarding design rules, geometric relationships, and conventional dimensions. Specifically, this method detects each component from a monocular image and estimates the size of each component by considering its structural relationships and dimensional consistency with surrounding elements. Furthermore, it generates a 3D asset of the object by reconstructing the estimated components. This method makes it possible to place 3D assets with a scale approximating the real environment within a digital twin space and is expected to contribute to improving the verification accuracy of in-vehicle cameras for autonomous driving in virtual environments.",
+      "authors": [
+        "Hidenori Sakaniwa",
+        "Akihito Akai",
+        "Akihiko Hyodo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T20:35:54+00:00",
+      "link": "https://arxiv.org/pdf/2606.30896v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Knowledge-driven dimension estimation for 3D asset generation",
+      "llm_evidence_cn": "知识驱动的尺寸估计用于3D资产生成",
+      "llm_evidence": "知识驱动的尺寸估计用于3D资产生成",
+      "canonical_evidence": "知识驱动的尺寸估计用于3D资产生成",
+      "llm_tldr_en": "Proposes knowledge-driven method to estimate object scale from single images by decomposing into structural elements and leveraging design rules.",
+      "llm_tldr_cn": "数字孪生中虚拟对象尺寸不匹配影响相机识别。本文针对交通标志等高空物体，提出基于知识的尺寸估计方法：将物体分解为结构元素，融合设计规则和几何关系，从单张图像恢复实际尺寸。实验验证该方法有效，并用于3D资产生成。",
+      "llm_tldr": "数字孪生中虚拟对象尺寸不匹配影响相机识别。本文针对交通标志等高空物体，提出基于知识的尺寸估计方法：将物体分解为结构元素，融合设计规则和几何关系，从单张图像恢复实际尺寸。实验验证该方法有效，并用于3D资产生成。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.01578v1",
+      "source": "arxiv",
+      "title": "MVFusion-GS: Motion-Variance Guided Temporal Attention for High-Quality Dynamic Gaussian Splatting",
+      "abstract": "3D Gaussian Splatting (3DGS) enables real-time novel view synthesis for static scenes. Extending it to dynamic scenes via deformation fields has recently attracted significant attention, particularly for dynamic scene reconstructionband distractor-free. However, existing deformation networks lack explicit motion awareness: they neither capture long-term motion intensity nor exploit short-term temporal coherence, leading to inaccurate foreground deformation and pseudo-static residuals in the background. We present MVFusion-GS, a method that enhances deformation networks with two complementary motion-aware mechanisms. The Motion-Variance Guided Refinement aggregates per-Gaussian deformation statistics across time to estimate motion variance and uses it to guide dynamic-static separation during deformation prediction. The MotionFormer Temporal Attention module applies Transformer self-attention over neighboring timesteps to model local motion dependencies and improve temporal consistency. Extensive experiments on both dynamic scene reconstruction and distractor-free reconstruction benchmarks demonstrate state-of-the-art performance, showing that explicit motion awareness improves both foreground motion modeling and static background reconstruction.",
+      "authors": [
+        "Jianwei Hu",
+        "Tingxuan Huang",
+        "Hengyu Zhou",
+        "Ningna Wang",
+        "Xiaohu Guo Jinshan Lai",
+        "Bin Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-02T01:21:11+00:00",
+      "link": "https://arxiv.org/pdf/2607.01578v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "dynamic scene reconstruction for 3D understanding",
+      "llm_evidence_cn": "动态场景重建有助于3D场景理解",
+      "llm_evidence": "动态场景重建有助于3D场景理解",
+      "canonical_evidence": "动态场景重建有助于3D场景理解",
+      "llm_tldr_en": "Introduces MVFusion-GS, enhancing deformation networks with motion-variance guided temporal attention for high-quality dynamic 3D Gaussian splatting reconstruction.",
+      "llm_tldr_cn": "动态场景重建中现有变形网络缺乏运动感知，导致前景变形不准、背景虚勈残留。MVFusion-GS提出两种运动感知机制：运动方差引导精化和短时序注意力，显著提升了动态场景重建质量。实验验证其在动态场景新视角合成上的最优性能。",
+      "llm_tldr": "动态场景重建中现有变形网络缺乏运动感知，导致前景变形不准、背景虚勈残留。MVFusion-GS提出两种运动感知机制：运动方差引导精化和短时序注意力，显著提升了动态场景重建质量。实验验证其在动态场景新视角合成上的最优性能。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
