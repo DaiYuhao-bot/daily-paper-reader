@@ -6,31 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-05
-- 运行时间：2026-07-05 20:21:06 UTC
+- 最新运行日期：2026-07-06
+- 运行时间：2026-07-06 21:40:40 UTC
 - 运行状态：成功
 - 本次总论文数：3
-- 精读区：1
-- 速读区：2
+- 精读区：2
+- 速读区：1
 
 ### 今日简报（AI）
-1) 今日精读1篇单目4D场景合成顶级论文，速读2篇聚焦数字孪生与动态高斯泼溅的7分工作。  
-2) 最值得看的是《Unified Panoramic-Gaussian Representation》的8分全景高斯方法，以及《MVFusion-GS》提出的运动方差引导动态重建。  
-3) 建议优先精读4D场景合成论文，再结合动态高斯泼溅思路尝试实际应用。
-- 详情：[/202607/05/README](/202607/05/README)
+今日精读两篇高分论文，聚焦具身导航领域的空间感知世界行动模型与统一世界行动建模。最值得关注的方向是《Pondering the Way》提出的空间感知世界行动模型和《FutureNav》的统一世界行动建模，均获9.0高分。建议重点理解这两篇如何将空间推理与行动生成协同优化，对前沿导航研究有重要参考价值。
+- 详情：[/202607/06/README](/202607/06/README)
 
 ### 精读区论文标签
-1. [Unified Panoramic-Gaussian Representation for Monocular 4D Scene Synthesis](/202607/05/2607.01663v1-unified-panoramic-gaussian-representation-for-monocular-4d-scene-synthesis)  
-   标签：评分：8.0/10、query:world-model
-   evidence：统一全景-高斯表示实现含未观察区域的单目4D场景合成
+1. [Pondering the Way: Spatial-perceiving World Action Model for Embodied Navigation](/202607/06/2606.29908v1-pondering-the-way-spatial-perceiving-world-action-model-for-embodied-navigation)  
+   标签：评分：9.0/10、query:world-model
+   evidence：用于具身导航的空间感知世界动作模型
+2. [FutureNav: Unified World-Action Modeling for Vision-and-Language Navigation](/202607/06/2606.30367v1-futurenav-unified-world-action-modeling-for-vision-and-language-navigation)  
+   标签：评分：9.0/10、query:world-model
+   evidence：面向视觉语言导航的统一世界动作建模
 
 ### 速读区论文标签
-1. [Knowledge-Driven Dimension Estimation from a Single Image -3D Asset Generation Technology for Digital Twin Construction](/202607/05/2606.30896v1-knowledge-driven-dimension-estimation-from-a-single-image--3d-asset-generation-technology-for-digital-twin-construction)  
-   标签：评分：7.0/10、query:world-model
-   evidence：知识驱动的尺寸估计用于3D资产生成
-2. [MVFusion-GS: Motion-Variance Guided Temporal Attention for High-Quality Dynamic Gaussian Splatting](/202607/05/2607.01578v1-mvfusion-gs-motion-variance-guided-temporal-attention-for-high-quality-dynamic-gaussian-splatting)  
-   标签：评分：7.0/10、query:world-model
-   evidence：动态场景重建有助于3D场景理解
+1. [Privacy-Preserving Depth-Only Open-Vocabulary 3D Semantic Segmentation Via Uncertainty-Guided Test-Time Optimization](/202607/06/2607.00978v1-privacy-preserving-depth-only-open-vocabulary-3d-semantic-segmentation-via-uncertainty-guided-test-time-optimization)  
+   标签：评分：6.0/10、query:world-model
+   evidence：仅深度开放词汇3D语义分割用于场景理解
 
 
 <div class="dpr-home-promo-card">

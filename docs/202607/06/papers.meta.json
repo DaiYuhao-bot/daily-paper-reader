@@ -1,0 +1,54 @@
+{
+  "label": "2026-07-06",
+  "date": "2026-07-06",
+  "generated_at": "2026-07-06T21:40:48",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202607/06/2606.29908v1-pondering-the-way-spatial-perceiving-world-action-model-for-embodied-navigation",
+      "section": "deep",
+      "title_en": "Pondering the Way: Spatial-perceiving World Action Model for Embodied Navigation",
+      "authors": "Hong Chen, Daqi Liu, Zehan Zhang, Haiguang Wang, Tianhao Lu, Longfei Yan, Haiyang Sun, Fangzhen Li, Hongwei Xie, Bing Wang, Guang Chen, Hangjun Ye, Yihua Tan",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.29908v1",
+      "score": "9.0",
+      "evidence": "用于具身导航的空间感知世界动作模型",
+      "tldr": "现有基于世界模型的视觉导航规划器采用验证中心范式，存在候选依赖、高计算开销和动作-视觉不一致问题。本文提出SWAM，一个空间感知世界动作模型，以任务为中心的联合观测-动作生成框架，通过单次推理同时生成中间RGB-D序列和动作轨迹，利用深度伪标签训练但推理仅需单目RGB。实验表明，SWAM在成功率、轨迹精度和推理效率上显著优于两阶段规划器，并展现出对未知环境的零样本泛化能力。该工作实现了目标一致的轨迹生成和空间可行性提升。",
+      "tags": "query:world-model",
+      "abstract_en": "Existing world model-based planners for visual navigation typically follow a verification-centric paradigm, decoupling goal intent from trajectory synthesis. This approach suffers from candidate dependence, heavy computational overhead, and inconsistencies between sampled actions and predicted visuals. To address these issues, we propose SWAM (Spatial-perceiving World Action Model), a task-centric joint observation-action generation framework. Given start and goal RGB observations, SWAM performs single-pass inference to simultaneously generate intermediate RGB-D sequences and corresponding action trajectories, promoting goal-consistent trajectory generation and improved spatial feasibility. While SWAM leverages depth pseudo-labels during training to internalize spatial priors, it requires only monocular RGB input at inference time. We further introduce a visual-guided action refinement module and a trajectory-scale regularization loss to enforce fine-grained alignment between motion and visual cues while stabilizing predictions across varying distances. Extensive experiments show that SWAM significantly outperforms state-of-the-art two-stage planners in success rate, trajectory accuracy, and inference efficiency, while demonstrating robust zero-shot generalization to unseen environments.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/06/2606.30367v1-futurenav-unified-world-action-modeling-for-vision-and-language-navigation",
+      "section": "deep",
+      "title_en": "FutureNav: Unified World-Action Modeling for Vision-and-Language Navigation",
+      "authors": "Lingfeng Zhang, Zeying Gong, Xiaoshuai Hao, Haoxiang Fu, Qiang Zhang, Mingliang Zhou, Hangjun Ye, Xiaojun Liang, Junwei Liang, Wenbo Ding",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.30367v1",
+      "score": "9.0",
+      "evidence": "面向视觉语言导航的统一世界动作建模",
+      "tldr": "视觉语言导航需要智能体理解指令与自我观察，并保持空间认知。现有导航基础模型主要学习直接动作生成，缺乏对世界状态的显式建模。FutureNav提出基于VLM的统一世界-动作建模框架，联合编码文本、视觉和空间特征，同时优化动作策略、逆动态、前向动态和未来生成四个目标。仅用4B参数骨干网络即实现多基准SOTA，显著超越以往方法。该工作为未来VLN的世界-动作模型探索了道路。",
+      "tags": "query:world-model",
+      "abstract_en": "Vision-and-language navigation (VLN) in continuous environments requires an agent to ground instructions in egocentric observations while maintaining spatial understanding across long action sequences. Recent navigation foundation models have shown strong progress by scaling vision-language models, but they often learn navigation primarily as direct action generation, without explicitly modeling world states or predicting their future evolution. We introduce FutureNav, a VLM-based unified world-action modeling framework for vision-and-language navigation. Specifically, FutureNav jointly encodes text, visual, and spatial features and feeds them into the LLM, and optimizes four objectives for simultaneous world and action modeling: an action policy objective for navigation action prediction, inverse and forward dynamics objectives for modeling state transitions, and a future generation objective for predicting future spatial states. This unified architecture strengthens action prediction while explicitly modeling the world, without sacrificing inference speed. Extensive experiments show that, with only a 4B-scale backbone, FutureNav achieves state-of-the-art performance on multiple VLN benchmarks and substantially outperforms prior VLN methods, paving the way toward future world-action models for VLN. We will release the code and models to support future research.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/06/2607.00978v1-privacy-preserving-depth-only-open-vocabulary-3d-semantic-segmentation-via-uncertainty-guided-test-time-optimization",
+      "section": "quick",
+      "title_en": "Privacy-Preserving Depth-Only Open-Vocabulary 3D Semantic Segmentation Via Uncertainty-Guided Test-Time Optimization",
+      "authors": "Xuying Huang, Sicong Pan, Maren Bennewitz",
+      "date": "2026-07-01",
+      "pdf": "https://arxiv.org/pdf/2607.00978v1",
+      "score": "6.0",
+      "evidence": "仅深度开放词汇3D语义分割用于场景理解",
+      "tldr": "现有开放词汇3D语义分割依赖RGB图像中的语义线索，但会暴露隐私敏感信息。本文提出UTTO框架，采用深度几何作为隐私保护替代，将预测不确定性转化为引导信号，识别不可靠语义响应，并利用基础模型的语义先验进行测试时优化。在ScanNet20/40/200上，UTTO一致提升深度仅开放词汇分割性能，优于隐私保护条件下的基线方法。该工作实现了无需额外训练的隐私保护高质量分割。",
+      "tags": "query:world-model",
+      "abstract_en": "Privacy-preserving perception is a critical requirement for deploying 3D scene understanding systems in real-world indoor environments, yet it remains underexplored in open-vocabulary 3D semantic segmentation. Existing methods typically rely on obtaining rich semantic cues from RGB images, which may expose privacy-sensitive visual information. Depth-only 3D geometry provides a privacy-preserving alternative, but the absence of appearance-based semantic cues makes open-vocabulary predictions highly uncertain and less reliable. Under this setting, we propose to convert uncertainty into a guidance signal to identify unreliable semantic responses and use semantic priors from foundation models to regularize their refinement. We present UTTO, an uncertainty-guided test-time optimization framework for depth-only open-vocabulary 3D semantic segmentation. Without additional training, experiments on ScanNet20, ScanNet40, and ScanNet200 demonstrate that UTTO consistently improves depth-only open-vocabulary 3D segmentation and outperforms representative baselines under privacy-preserving conditions.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,146 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-06T21:38:13.999631+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.29908v1",
+      "source": "arxiv",
+      "title": "Pondering the Way: Spatial-perceiving World Action Model for Embodied Navigation",
+      "abstract": "Existing world model-based planners for visual navigation typically follow a verification-centric paradigm, decoupling goal intent from trajectory synthesis. This approach suffers from candidate dependence, heavy computational overhead, and inconsistencies between sampled actions and predicted visuals. To address these issues, we propose SWAM (Spatial-perceiving World Action Model), a task-centric joint observation-action generation framework. Given start and goal RGB observations, SWAM performs single-pass inference to simultaneously generate intermediate RGB-D sequences and corresponding action trajectories, promoting goal-consistent trajectory generation and improved spatial feasibility. While SWAM leverages depth pseudo-labels during training to internalize spatial priors, it requires only monocular RGB input at inference time. We further introduce a visual-guided action refinement module and a trajectory-scale regularization loss to enforce fine-grained alignment between motion and visual cues while stabilizing predictions across varying distances. Extensive experiments show that SWAM significantly outperforms state-of-the-art two-stage planners in success rate, trajectory accuracy, and inference efficiency, while demonstrating robust zero-shot generalization to unseen environments.",
+      "authors": [
+        "Hong Chen",
+        "Daqi Liu",
+        "Zehan Zhang",
+        "Haiguang Wang",
+        "Tianhao Lu",
+        "Longfei Yan",
+        "Haiyang Sun",
+        "Fangzhen Li",
+        "Hongwei Xie",
+        "Bing Wang",
+        "Guang Chen",
+        "Hangjun Ye",
+        "Yihua Tan"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-06-29T07:43:47+00:00",
+      "link": "https://arxiv.org/pdf/2606.29908v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "spatial-perceiving world action model for embodied navigation",
+      "llm_evidence_cn": "用于具身导航的空间感知世界动作模型",
+      "llm_evidence": "用于具身导航的空间感知世界动作模型",
+      "canonical_evidence": "用于具身导航的空间感知世界动作模型",
+      "llm_tldr_en": "SWAM proposes a task-centric joint observation-action generation framework that simultaneously generates RGB-D sequences and action trajectories from start and goal images, improving spatial feasibility and consistency.",
+      "llm_tldr_cn": "该论文针对现有世界模型规划器中动作与视觉预测不一致的问题，提出SWAM——一个空间感知世界动作模型。它从起始和目标RGB观测出发，单次推理同时生成中间RGB-D序列和对应动作轨迹，实现了任务中心的联合生成。方法通过深度伪标签训练，在具身导航任务中相比传统规划范式显著提高了轨迹生成的空间可行性和目标一致性，推动了世界模型在3D视觉中的进展。",
+      "llm_tldr": "该论文针对现有世界模型规划器中动作与视觉预测不一致的问题，提出SWAM——一个空间感知世界动作模型。它从起始和目标RGB观测出发，单次推理同时生成中间RGB-D序列和对应动作轨迹，实现了任务中心的联合生成。方法通过深度伪标签训练，在具身导航任务中相比传统规划范式显著提高了轨迹生成的空间可行性和目标一致性，推动了世界模型在3D视觉中的进展。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.30367v1",
+      "source": "arxiv",
+      "title": "FutureNav: Unified World-Action Modeling for Vision-and-Language Navigation",
+      "abstract": "Vision-and-language navigation (VLN) in continuous environments requires an agent to ground instructions in egocentric observations while maintaining spatial understanding across long action sequences. Recent navigation foundation models have shown strong progress by scaling vision-language models, but they often learn navigation primarily as direct action generation, without explicitly modeling world states or predicting their future evolution. We introduce FutureNav, a VLM-based unified world-action modeling framework for vision-and-language navigation. Specifically, FutureNav jointly encodes text, visual, and spatial features and feeds them into the LLM, and optimizes four objectives for simultaneous world and action modeling: an action policy objective for navigation action prediction, inverse and forward dynamics objectives for modeling state transitions, and a future generation objective for predicting future spatial states. This unified architecture strengthens action prediction while explicitly modeling the world, without sacrificing inference speed. Extensive experiments show that, with only a 4B-scale backbone, FutureNav achieves state-of-the-art performance on multiple VLN benchmarks and substantially outperforms prior VLN methods, paving the way toward future world-action models for VLN. We will release the code and models to support future research.",
+      "authors": [
+        "Lingfeng Zhang",
+        "Zeying Gong",
+        "Xiaoshuai Hao",
+        "Haoxiang Fu",
+        "Qiang Zhang",
+        "Mingliang Zhou",
+        "Hangjun Ye",
+        "Xiaojun Liang",
+        "Junwei Liang",
+        "Wenbo Ding"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-29T14:33:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.30367v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Unified world-action modeling for vision-language navigation",
+      "llm_evidence_cn": "面向视觉语言导航的统一世界动作建模",
+      "llm_evidence": "面向视觉语言导航的统一世界动作建模",
+      "canonical_evidence": "面向视觉语言导航的统一世界动作建模",
+      "llm_tldr_en": "FutureNav jointly encodes text, visual, and spatial features into an LLM, performing world state prediction and action policy optimization for VLN.",
+      "llm_tldr_cn": "现有导航基础模型仅将导航视为直接动作生成，缺乏对世界状态的显式建模。本文提出FutureNav，一个基于VLM的统一世界动作建模框架，联合编码文本、视觉和空间特征，同时优化世界预测和动作策略四个目标。在连续环境中的实验表明，显式世界建模显著提升了导航的成功率和效率。",
+      "llm_tldr": "现有导航基础模型仅将导航视为直接动作生成，缺乏对世界状态的显式建模。本文提出FutureNav，一个基于VLM的统一世界动作建模框架，联合编码文本、视觉和空间特征，同时优化世界预测和动作策略四个目标。在连续环境中的实验表明，显式世界建模显著提升了导航的成功率和效率。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.00978v1",
+      "source": "arxiv",
+      "title": "Privacy-Preserving Depth-Only Open-Vocabulary 3D Semantic Segmentation Via Uncertainty-Guided Test-Time Optimization",
+      "abstract": "Privacy-preserving perception is a critical requirement for deploying 3D scene understanding systems in real-world indoor environments, yet it remains underexplored in open-vocabulary 3D semantic segmentation. Existing methods typically rely on obtaining rich semantic cues from RGB images, which may expose privacy-sensitive visual information. Depth-only 3D geometry provides a privacy-preserving alternative, but the absence of appearance-based semantic cues makes open-vocabulary predictions highly uncertain and less reliable. Under this setting, we propose to convert uncertainty into a guidance signal to identify unreliable semantic responses and use semantic priors from foundation models to regularize their refinement. We present UTTO, an uncertainty-guided test-time optimization framework for depth-only open-vocabulary 3D semantic segmentation. Without additional training, experiments on ScanNet20, ScanNet40, and ScanNet200 demonstrate that UTTO consistently improves depth-only open-vocabulary 3D segmentation and outperforms representative baselines under privacy-preserving conditions.",
+      "authors": [
+        "Xuying Huang",
+        "Sicong Pan",
+        "Maren Bennewitz"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-01T14:12:21+00:00",
+      "link": "https://arxiv.org/pdf/2607.00978v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "depth-only open-vocabulary 3D semantic segmentation for scene understanding",
+      "llm_evidence_cn": "仅深度开放词汇3D语义分割用于场景理解",
+      "llm_evidence": "仅深度开放词汇3D语义分割用于场景理解",
+      "canonical_evidence": "仅深度开放词汇3D语义分割用于场景理解",
+      "llm_tldr_en": "This paper proposes uncertainty-guided test-time optimization for privacy-preserving depth-only open-vocabulary 3D semantic segmentation, using uncertainty to guide regularization from foundation model priors.",
+      "llm_tldr_cn": "该论文针对隐私保护的3D场景理解需求，提出仅深度模态下的开放词汇语义分割方法。利用不确定性引导测试时优化，将不确定区域引导至基础模型先验进行正则化，从而在无RGB信息下实现语义分割。实验表明，该方法在隐私敏感场景中有效平衡了准确性与隐私性，拓展了3D场景理解的实际应用范围。",
+      "llm_tldr": "该论文针对隐私保护的3D场景理解需求，提出仅深度模态下的开放词汇语义分割方法。利用不确定性引导测试时优化，将不确定区域引导至基础模型先验进行正则化，从而在无RGB信息下实现语义分割。实验表明，该方法在隐私敏感场景中有效平衡了准确性与隐私性，拓展了3D场景理解的实际应用范围。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
