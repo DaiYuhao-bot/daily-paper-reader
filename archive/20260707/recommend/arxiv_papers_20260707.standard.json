@@ -1,0 +1,707 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-07T21:11:41.215759+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 16,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 21,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2607.00832v2",
+      "source": "arxiv",
+      "title": "Pano2World: End-to-End 3D Generation via Unified Multi-View Sequences",
+      "abstract": "A single panorama captures the full visual sphere from one camera center, yet confines users to looking around in place without enabling true scene exploration. Converting a single panorama into a persistent, renderable 3D representation for free-viewpoint navigation has attracted growing interest; existing methods either adopt iterative per-view completion that propagates inpainting results to update the underlying geometry, leading to progressive error accumulation and cumbersome multi-step pipelines, or leverage the temporal consistency priors of video generation models, yet the continuous-trajectory constraint intrinsic to such models limits their flexibility in covering scenes from multiple directions simultaneously. We present Pano2World, which takes a single indoor panorama as input and directly outputs a persistent, explorable 3D Gaussian scene. Given the source panorama, Pano2World first reconstructs a coarse 3D Gaussian proxy and renders it at adaptively sampled nearby poses to obtain geometrically aligned guidance panoramas; a panoramic diffusion model then jointly denoises all target views via View-Aware Attention Routing, where each target view simultaneously receives geometric constraints from its corresponding guidance panorama and global semantic guidance from the source panorama, naturally enforcing cross-view consistency. To avoid the information loss incurred by decoding the multi-view hidden features formed during joint denoising back to the pixel domain via VAE, we introduce Latent Feature Adapter, a geometry-aware bridge module that directly distills these hidden features into a scene latent, subsequently decoded into the final 3D Gaussian scene. Experiments demonstrate that Pano2World significantly outperforms existing methods on the multi-position panoramic novel-view synthesis benchmark.",
+      "authors": [
+        "Zhenjia Li",
+        "Jinrang Jia",
+        "Yifeng Shi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-01T11:54:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.00832v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "end-to-end 3D scene generation from a single panorama",
+      "llm_evidence_cn": "从单张全景图端到端生成3D场景",
+      "llm_evidence": "从单张全景图端到端生成3D场景",
+      "canonical_evidence": "从单张全景图端到端生成3D场景",
+      "llm_tldr_en": "Presents Pano2World, an end-to-end framework that converts a single panorama into a persistent renderable 3D scene for free-viewpoint navigation, using unified multi-view sequences to avoid error accumulation.",
+      "llm_tldr_cn": "将单张全景图转换为可自由探索的3D场景具有挑战性。现有方法存在误差累积或多步流程。本文提出Pano2World，通过统一多视图序列端到端生成3D场景，支持自由视角导航。实验表明该方法在场景生成质量和一致性上优于现有方法。",
+      "llm_tldr": "将单张全景图转换为可自由探索的3D场景具有挑战性。现有方法存在误差累积或多步流程。本文提出Pano2World，通过统一多视图序列端到端生成3D场景，支持自由视角导航。实验表明该方法在场景生成质量和一致性上优于现有方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.03819v1",
+      "source": "arxiv",
+      "title": "CGGS: Consistency-Augmented Geometric Gaussian Splatting for Ego-centric 3D Scene Generation",
+      "abstract": "Challenges remain in ego-centric 3D scene generation due to limited view overlap and the dominant influence of individual perspectives on scene interpretation. These factors hinder the creation of viewpoint-consistent and semantically aligned visual content, as well as the construction of accurate geometric structures. In this paper, we propose CGGS, a text-to-3D framework aiming to enhance 3D-content-awareness and address geometric distortions in ego-centric scene generation. Firstly, the Ego-centric Generator is proposed by fine-tuning a Multi-View Latent Diffusion Model with consistency-augmented loss to generate consistent, high-fidelity 2D content aligned with textual descriptions. Then, Layout Decorator leverages optical flow and point-track correspondence to estimate depth, therefore producing dense point clouds as coarse layouts from the ego-centric 2D priors. Building on this initialization, Geometric Refiner is proposed to enhance 3D Gaussian reconstruction via an entropy-based Mutual Information Depth Loss (MID) combined with a hierarchical optimization scheme for improving visual quality and geometric structure. Comprehensive experiments demonstrate that \\textcolor{softred}{CGGS} outperforms previous methods in generating coherent and accurate text-driven 3D scenes. Project page: https://cggs-26.github.io/cggs26/.",
+      "authors": [
+        "Zhenyu Sun",
+        "Xiaohan Zhang",
+        "Qi Liu",
+        "Huan Wang"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.AI"
+      ],
+      "published": "2026-07-04T11:06:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.03819v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "text-to-3D ego-centric scene generation with consistency-augmented Gaussian splatting",
+      "llm_evidence_cn": "一致性增强的高斯泼溅用于以自我为中心的文本到3D场景生成",
+      "llm_evidence": "一致性增强的高斯泼溅用于以自我为中心的文本到3D场景生成",
+      "canonical_evidence": "一致性增强的高斯泼溅用于以自我为中心的文本到3D场景生成",
+      "llm_tldr_en": "CGGS is a text-to-3D framework for ego-centric scene generation, using a fine-tuned multi-view latent diffusion model with consistency loss and layout decorator to address limited view overlap and geometric distortions.",
+      "llm_tldr_cn": "针对以自我中心3D场景生成中视图重叠有限和几何失真问题，提出CGGS框架，通过一致性增强损失微调多视图潜在扩散模型以生成一致2D内容，并利用布局装饰器校正几何结构，实现了高质量文本到3D场景生成。",
+      "llm_tldr": "针对以自我中心3D场景生成中视图重叠有限和几何失真问题，提出CGGS框架，通过一致性增强损失微调多视图潜在扩散模型以生成一致2D内容，并利用布局装饰器校正几何结构，实现了高质量文本到3D场景生成。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.03941v1",
+      "source": "arxiv",
+      "title": "WSA$_1$: a 3D-Centric World-Spatial-Action Model for Generalizable Robot Control",
+      "abstract": "Recent advances in embodied AI have established robot foundation models (RFMs) as the dominant approach for generalist robotic systems to date. By leveraging imitation learning on extensive robot demonstrations, RFMs have achieved impressive capabilities in mapping visual observations and language instructions to continuous robotic actions. However, current RFMs lack an inherent ability to reason about physical dynamics and the causal effects of robot behaviors on the 3D physical world. This creates a fundamental mismatch between 2D-centric visual perception and 3D-centric embodied interaction, severely limiting the generalization ability of RFMs in real-world tasks.To address this gap, we present WSA$_1$, a novel RFM built upon proposed 3D-Centric World-Spatial-Action modeling paradigm. It not only learns 3D world-aware visual thought for future robot behaviors, but also models mutual constraints between 3D world state transitions and robotic actions to enhance behavior generalization. Notably, WSA$_1$ achieves highly data-efficient pre-training with 6k hours of expert demonstration data (only 1k hours from real robot), while delivering competitive manipulation performance (93% success rate) on RoboTwin2.0 simulation benchmark and achieving +20% average boosted performance over state-of-the-art RFMs on real-world robot control tasks. These results reveal that generalizable RFM can be attained without large-scale real robot data when paired with 3D-centric world-action joint modeling, which offers a practical and affordable pathway to generalist robotic systems.",
+      "authors": [
+        "Jiahao Jiang",
+        "Jianing Zhang",
+        "Zhenhan Yin",
+        "Ruidong Chen",
+        "Sen Wang",
+        "Zhaoshu Yu",
+        "Pengpeng Zeng",
+        "Xiaofeng Cao",
+        "Xuanhan Wang",
+        "Jingkuan Song",
+        "Heng Tao Shen"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-04T16:26:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.03941v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "3D-centric world-spatial-action model for robot control",
+      "llm_evidence_cn": "以3D为中心的世界-空间-动作模型用于机器人控制",
+      "llm_evidence": "以3D为中心的世界-空间-动作模型用于机器人控制",
+      "canonical_evidence": "以3D为中心的世界-空间-动作模型用于机器人控制",
+      "llm_tldr_en": "WSA1 builds a 3D-centric world model that enables robots to reason about physical dynamics and action consequences, improving generalization in real-world tasks.",
+      "llm_tldr_cn": "针对现有机器人基础模型缺乏对物理世界3D因果推理能力的问题，本文提出WSA1，一种以3D为中心的世界-空间-动作模型，显式建模3D物理动态，使机器人能够推理行为对3D世界的影响，显著提升了真实世界任务中的泛化能力。",
+      "llm_tldr": "针对现有机器人基础模型缺乏对物理世界3D因果推理能力的问题，本文提出WSA1，一种以3D为中心的世界-空间-动作模型，显式建模3D物理动态，使机器人能够推理行为对3D世界的影响，显著提升了真实世界任务中的泛化能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.04540v1",
+      "source": "arxiv",
+      "title": "SceneFrom3D: Geometry-Conditioned Outdoor 3D Scene Generation via View Scheduling with Object-Level Control",
+      "abstract": "Geometry-conditioned 3D scene generation enables the creation of 3D environments from user-provided geometry, offering direct control over scene structure and object layout. To generate such 3D scenes, current methods commonly adopt a three-stage design that first defines a view schedule, then synthesizes multi-view observations along the scheduled views, and finally reconstructs a 3D representation from the generated images. However, defining the view schedule becomes a major bottleneck for outdoor scenes, where large, unstructured, and unbounded geometry makes it difficult to obtain views that provide sufficient coverage while supporting stable generation. To address this bottleneck, we present SceneFrom3D, a framework that automatically schedules views from outdoor input geometries. SceneFrom3D constructs a directed generation graph whose nodes represent anchor views and whose edges represent interpolation trajectories, defining which views to synthesize, which view pairs to interpolate, and in which order generation should proceed. Beyond automatic view scheduling, SceneFrom3D further improves controllability through object-level conditioning, assigning each object an identity image for appearance guidance and a geometry-adherence parameter for region-wise control over the input geometry. Experiments demonstrate that SceneFrom3D achieves state-of-the-art geometry-conditioned outdoor 3D scene generation, producing high-quality scenes with controllable object appearance and geometry adherence.",
+      "authors": [
+        "Geonung Kim",
+        "Jeongeun Park",
+        "Nuri Ryu",
+        "Di Liu",
+        "Sunghyun Cho"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "published": "2026-07-05T23:07:03+00:00",
+      "link": "https://arxiv.org/pdf/2607.04540v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "outdoor 3D scene generation from user-provided geometry",
+      "llm_evidence_cn": "从用户提供几何进行室外三维场景生成",
+      "llm_evidence": "从用户提供几何进行室外三维场景生成",
+      "canonical_evidence": "从用户提供几何进行室外三维场景生成",
+      "llm_tldr_en": "SceneFrom3D tackles outdoor 3D scene generation from geometry by proposing a view scheduling method that ensures stable multi-view synthesis and object-level control.",
+      "llm_tldr_cn": "几何条件三维场景生成中，室外大尺度无界几何的视角调度是关键瓶颈。SceneFrom3D提出新型视角调度策略，为室外场景生成提供充分覆盖且支持稳定合成的视图序列。该方法支持物体级控制，在三维环境中直接操控物体布局。实验证明，相比现有流程，该框架在室外场景的生成质量和可控性上显著提升。",
+      "llm_tldr": "几何条件三维场景生成中，室外大尺度无界几何的视角调度是关键瓶颈。SceneFrom3D提出新型视角调度策略，为室外场景生成提供充分覆盖且支持稳定合成的视图序列。该方法支持物体级控制，在三维环境中直接操控物体布局。实验证明，相比现有流程，该框架在室外场景的生成质量和可控性上显著提升。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.05373v1",
+      "source": "arxiv",
+      "title": "PixWorld: Unifying 3D Scene Generation and Reconstruction in Pixel Space",
+      "abstract": "3D reconstruction and generation are commonly tackled by separate paradigms: pixel-based regression for reconstruction, and latent diffusion for generation. Recent works attempt to unify them in latent space, but with notable drawbacks: the diffusion objective is defined on latent features rather than the underlying 3D representation, and both branches suffer from information loss introduced by latent encoding, while requiring a pretrained Variational Autoencoder (VAE) or Representation Autoencoder (RAE). In this paper, we reformulate these two tasks under a unified pixel-space diffusion paradigm and introduce PixWorld, a single model that jointly addresses 3D reconstruction and generation. By supervising diffusion directly on rendered images, PixWorld removes the above limitations and aligns optimization with 3D scene fidelity. Beyond photometric and perceptual supervision that operates at the 2D image level and lacks 3D geometric awareness, we further introduce a geometry perception loss that aligns rendered views with their ground truth in the geometry-aware feature space of a pretrained 3D foundation model, providing 3D structural supervision. PixWorld consistently outperforms prior latent-space generation methods and matches state-of-the-art reconstruction methods, demonstrating the superiority of a unified pixel-space approach.",
+      "authors": [
+        "Sensen Gao",
+        "Zhaoqing Wang",
+        "Qihang Cao",
+        "Dongdong Yu",
+        "Changhu Wang",
+        "Jia-Wang Bian"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-06T17:51:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.05373v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "unifies 3D scene generation and reconstruction in pixel space, core world model theme",
+      "llm_evidence_cn": "在像素空间统一3D场景生成与重建，体现世界模型思想",
+      "llm_evidence": "在像素空间统一3D场景生成与重建，体现世界模型思想",
+      "canonical_evidence": "在像素空间统一3D场景生成与重建，体现世界模型思想",
+      "llm_tldr_en": "PixWorld unifies 3D scene generation and reconstruction in pixel space with diffusion, avoiding latent encoding loss.",
+      "llm_tldr_cn": "3D生成和重建通常分离，统一方法受限于潜在空间信息损失。PixWorld在像素空间上使用扩散模型直接监督渲染图像，联合处理这两类任务。无需预训练VAE，避免了信息瓶颈。实验表明，该模型在生成质量和重建精度上均达到先进水平，展示了像素级世界模型的潜力。",
+      "llm_tldr": "3D生成和重建通常分离，统一方法受限于潜在空间信息损失。PixWorld在像素空间上使用扩散模型直接监督渲染图像，联合处理这两类任务。无需预训练VAE，避免了信息瓶颈。实验表明，该模型在生成质量和重建精度上均达到先进水平，展示了像素级世界模型的潜力。",
+      "llm_tags": [
+        "query:world-model:composite"
+      ],
+      "matched_query_tag": "query:world-model:composite",
+      "matched_query_text": "Papers central to 三维场景生成，世界模型, especially work that connects or combines: 3d scene generation; world model; scene understanding; spatial reasoning; World model based 3d scene generation and reconstruction techniques; what are the latest advances in world models for 3D vision; deep learning methods for 3d scene generation.",
+      "matched_requirement_id": "req-composite-world-model",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.05392v1",
+      "source": "arxiv",
+      "title": "SynCity 3000: Bootstrapping Scene-Scale 3D Diffusion",
+      "abstract": "We present SynCity 3000, a framework for generating 3D scenes that are globally coherent while enabling fine-grained layout control. Building on the ability of current image-to-3D generators to produce complex 3D assets from a single image, we extend this capability to the scale of entire scenes by adapting the generator to be applicable as a convolutional operator. We achieve this by fine-tuning the model on scene-like data generated by a new synthetic data engine, which we propose to address the scarcity of 3D scene data for training. The convolutional generator is then applied to a dimetric image of the entire scene, generated from the user prompt, resulting in 3D scenes of arbitrary size and complexity. Across diverse prompts and layouts, SynCity 3000 produces large, coherent, and detailed scenes, addressing the shortcomings of prior approaches to 3D scene generation.",
+      "authors": [
+        "Paul Engstler",
+        "Iro Laina",
+        "Christian Rupprecht",
+        "Andrea Vedaldi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-06T17:59:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.05392v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "3D scene generation at scale with layout control",
+      "llm_evidence_cn": "大规模3D场景生成与布局控制",
+      "llm_evidence": "大规模3D场景生成与布局控制",
+      "canonical_evidence": "大规模3D场景生成与布局控制",
+      "llm_tldr_en": "SynCity 3000 extends image-to-3D generation to entire scenes by using a convolutional operator on a dimetric view, enabling coherent large-scale 3D scene generation with fine-grained control.",
+      "llm_tldr_cn": "现有图像到3D生成方法难以生成大规模连贯3D场景。SynCity 3000通过将生成器适配为卷积算子，并在用户提示生成的斜二测图像上应用，实现了任意规模和复杂度的3D场景生成。该方法利用合成数据引擎解决训练数据稀缺问题，支持精细布局控制。实验展示了多样化的场景生成效果，为大规模3D内容创建提供了新途径。",
+      "llm_tldr": "现有图像到3D生成方法难以生成大规模连贯3D场景。SynCity 3000通过将生成器适配为卷积算子，并在用户提示生成的斜二测图像上应用，实现了任意规模和复杂度的3D场景生成。该方法利用合成数据引擎解决训练数据稀缺问题，支持精细布局控制。实验展示了多样化的场景生成效果，为大规模3D内容创建提供了新途径。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.30047v3",
+      "source": "arxiv",
+      "title": "Argus: Metric Panoramic 3D Reconstruction for Indoor Scenes",
+      "abstract": "Metric feed-forward 3D reconstruction for panoramic data remains under-explored due to the lack of large-scale panoramic RGB-D training data. We present Realsee3D, a hybrid dataset of 10K indoor scenes (1K real, 9K synthetic) with 299K panoramic viewpoints and precise metric annotations, and Argus, a feed-forward network trained on it for metric panoramic 3D reconstruction. In the sparse unordered capture setting of Realsee3D, a poorly chosen coordinate anchor can cause global pose drift. Argus addresses this with a learned covisibility module that selects the geometrically optimal reference view to anchor the metric world frame. To further improve multi-task learning, we decompose the bidirectional pixel-to-world mapping into interpretable sub-steps with per-step supervision and cross-coordinate joint constraints, reinforcing geometric consistency across prediction branches. On the Realsee3D benchmark, Argus achieves state-of-the-art metric performance in camera pose estimation, depth estimation, and point cloud reconstruction. Project page: https://argus-paper.realsee.ai.",
+      "authors": [
+        "Xi Li",
+        "Linyuan Li",
+        "Yan Wu",
+        "Tong Rao",
+        "Kai Zhang",
+        "Xinchen Hui",
+        "Cihui Pan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T09:39:17+00:00",
+      "link": "https://arxiv.org/pdf/2606.30047v3",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "feed-forward metric panoramic 3D reconstruction for indoor scenes",
+      "llm_evidence_cn": "前馈度量全景室内3D重建",
+      "llm_evidence": "前馈度量全景室内3D重建",
+      "canonical_evidence": "前馈度量全景室内3D重建",
+      "llm_tldr_en": "Argus achieves metric panoramic 3D reconstruction from sparse unordered panoramas using a learned covisibility module, trained on a hybrid dataset of 10K indoor scenes.",
+      "llm_tldr_cn": "针对全景数据3D重建缺乏大规模训练数据的问题，本文提出Realsee3D混合数据集和Argus前馈网络。通过可学习的共视模块选择最优参考视图，解决了稀疏无序拍摄下的位姿漂移问题。在多种室内场景上验证了其高效且准确的度量重建能力。",
+      "llm_tldr": "针对全景数据3D重建缺乏大规模训练数据的问题，本文提出Realsee3D混合数据集和Argus前馈网络。通过可学习的共视模块选择最优参考视图，解决了稀疏无序拍摄下的位姿漂移问题。在多种室内场景上验证了其高效且准确的度量重建能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.01698v2",
+      "source": "arxiv",
+      "title": "Signal Structure-Aware Gaussian Splatting for Large-Scale Scene Reconstruction",
+      "abstract": "3D Gaussian Splatting has demonstrated remarkable potential in novel view synthesis. In contrast to small-scale scenes, large-scale scenes inevitably contain sparsely observed regions with excessively sparse initial points. In this case, supervising Gaussians initialized from low-frequency sparse points with high-frequency images often induces uncontrolled densification and redundant primitives, degrading both efficiency and quality. Intuitively, this issue can be mitigated with scheduling strategies, which can be categorized into two paradigms: modulating target signal frequency via densification and modulating sampling frequency via image resolution. However, previous scheduling strategies are primarily hardcoded, failing to perceive the convergence behavior of scene frequency. To address this, we reframe the scene reconstruction problem from the perspective of signal structure recovery and propose SIG, a novel scheduler that synchronizes image supervision with Gaussian frequencies. Specifically, we derive the average sampling frequency and bandwidth of 3D representations, and then regulate the training image resolution and the Gaussian densification process based on scene frequency convergence. Furthermore, we introduce Sphere-Constrained Gaussians, which leverage the spatial prior of initialized point clouds to control Gaussian optimization. Our framework enables frequency-consistent, geometry-aware, and floater-free training, achieving state-of-the-art performance by a substantial margin in both efficiency and rendering quality in large-scale scenes. The code is available at: https://github.com/weiyixue999/Signal_Structure_Aware_Gaussian",
+      "authors": [
+        "Weiyi Xue",
+        "Fan Lu",
+        "Chi Zhang",
+        "Tianhang Wang",
+        "Sanqing Qu",
+        "Zehan Zheng",
+        "Boyuan Zheng",
+        "Junqiao Zhao",
+        "Guang Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-02T04:41:51+00:00",
+      "link": "https://arxiv.org/pdf/2607.01698v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "signal-aware scheduling for large-scale 3D scene reconstruction",
+      "llm_evidence_cn": "针对大规模场景的3DGS信号结构感知调度重建",
+      "llm_evidence": "针对大规模场景的3DGS信号结构感知调度重建",
+      "canonical_evidence": "针对大规模场景的3DGS信号结构感知调度重建",
+      "llm_tldr_en": "Proposes signal structure-aware scheduling for 3DGS to handle sparse observations in large-scale scenes, improving efficiency and quality.",
+      "llm_tldr_cn": "大规模场景中稀疏观测点导致3DGS的密集化失控。本文提出信号结构感知的调度策略，通过感知卷积信号实时调整密化和分辨率，避免了硬编码调度的不足。实验证明该方法在减少冗余原语的同时保持了重建质量，适合大规模场景应用。",
+      "llm_tldr": "大规模场景中稀疏观测点导致3DGS的密集化失控。本文提出信号结构感知的调度策略，通过感知卷积信号实时调整密化和分辨率，避免了硬编码调度的不足。实验证明该方法在减少冗余原语的同时保持了重建质量，适合大规模场景应用。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.02908v1",
+      "source": "arxiv",
+      "title": "Holo-Captioning: Toward the Text Equivalent of 3D Scenes",
+      "abstract": "This work introduces holo-captioning, a novel task that strives to seek the text equivalent of 3D scenes. As the initial step, we formulate holo-captioning as generating a structured textual description that comprehensively depicts all entities within a 3D scene -- including their semantic tags, spatial locations, attributes, and inter-entity relations. To tackle this challenging task, we first develop an effective captioning engine to produce detailed descriptions of individual entity instances and instance pairs, and contribute a large-scale benchmark comprising over 15K scenes for training and evaluation. Building upon this foundation, we propose HoloScribe, a novel model that features an instance-aware decoupled pipeline for generating structured holo-captions, and further incorporates anchor-aware instance linking to identify relational instance pairs. Additionally, we propose a comprehensive evaluation metric named HoloScore, and provide a human-curated test set to ensure reliable model assessment. Experimental results demonstrate that HoloScribe significantly outperforms state-of-the-art 3D dense captioners and 3D LLM generalists, underscoring the effectiveness of our approach. Project page: https://visual-ai.github.io/holocap/",
+      "authors": [
+        "Kun-Yu Lin",
+        "Chengke Bu",
+        "Zhenguo Li",
+        "Kai Han"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-03T03:14:17+00:00",
+      "link": "https://arxiv.org/pdf/2607.02908v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "scene understanding via structured text description",
+      "llm_evidence_cn": "通过结构化文本描述进行场景理解",
+      "llm_evidence": "通过结构化文本描述进行场景理解",
+      "canonical_evidence": "通过结构化文本描述进行场景理解",
+      "llm_tldr_en": "Holo-captioning generates structured text descriptions of all entities in 3D scenes, including semantics, locations, attributes, and relations, with a large-scale benchmark and HoloScribe model.",
+      "llm_tldr_cn": "三维场景理解通常缺乏精细的文本描述。该文提出全息字幕任务，生成包含语义标签、空间位置、属性及关系的结构化文本。构建了超过15000场景的大规模基准，并设计HoloScribe模型，采用实例感知解耦流水线生成结构化全息字幕。该工作为三维场景的细致文本表达奠定了基础。",
+      "llm_tldr": "三维场景理解通常缺乏精细的文本描述。该文提出全息字幕任务，生成包含语义标签、空间位置、属性及关系的结构化文本。构建了超过15000场景的大规模基准，并设计HoloScribe模型，采用实例感知解耦流水线生成结构化全息字幕。该工作为三维场景的细致文本表达奠定了基础。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.31672v3",
+      "source": "arxiv",
+      "title": "WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models",
+      "abstract": "Despite rapid progress in interactive world models (IWMs), existing benchmarks evaluate action following only at trajectory level and ignore memory and interaction physics. We introduce WorldRoamBench, an open-world benchmark for long-horizon stability across four dimensions, each with tailored innovations: (i) Action: per-frame action metric bypassing cross-model semantic scale disparity and exposing failures hidden by trajectory; (ii) Vision: segment-based drift metric capturing non-monotonic mid-sequence collapse missed by start-vs-end comparisons; (iii) Physics: controllability-gated evaluation over mechanics, optics, and 3D consistency, scoring plausibility under faithful action execution; (iv) Memory: action-decoupled protocol evaluating scene memory via transition-localized 3D point-cloud reconstruction and subject memory via tracking-plus-VLM reasoning. The benchmark comprises 600+ test cases across Nature, Urban, and Indoor scenes in first/third-person views with WASD 10-60s continuous interaction. Evaluating 10+ open/closed-source models reveals none reliably satisfies all dimensions; even the best achieves only moderate scores. Advances on WorldRoamBench are steps toward IWMs that are stable, physically grounded, memory-faithful, and deployable in real-world applications.",
+      "authors": [
+        "Ting-Bing Xu",
+        "Jiacheng Sui",
+        "Zhe Gao",
+        "Kewei Shi",
+        "Wenjin Yang",
+        "Zhicheng Liu",
+        "Zhaoxu Sun",
+        "Mingchao Sun",
+        "Hongyu Pan",
+        "Fan Jiang",
+        "Mu Xu",
+        "Qi Fan",
+        "Yang Gao",
+        "Yong Li",
+        "Baoquan Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-30T13:51:44+00:00",
+      "link": "https://arxiv.org/pdf/2606.31672v3",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "benchmark for interactive world models",
+      "llm_evidence_cn": "交互式世界模型的基准",
+      "llm_evidence": "交互式世界模型的基准",
+      "canonical_evidence": "交互式世界模型的基准",
+      "llm_tldr_en": "WorldRoamBench systematically evaluates interactive world models on action, vision, physics, and memory stability, revealing failures hidden by trajectory-level metrics.",
+      "llm_tldr_cn": "现有交互世界模型基准仅评估轨迹级动作，忽略记忆和物理交互。WorldRoamBench从动作、视觉、物理和记忆四个维度提出创新指标：每帧动作指标、分段漂移指标、可控性门控物理评估和动作解耦记忆协议。该基准能暴露传统指标隐藏的中序列崩溃和物理不一致问题，为长时程稳定性评估提供了全面工具。",
+      "llm_tldr": "现有交互世界模型基准仅评估轨迹级动作，忽略记忆和物理交互。WorldRoamBench从动作、视觉、物理和记忆四个维度提出创新指标：每帧动作指标、分段漂移指标、可控性门控物理评估和动作解耦记忆协议。该基准能暴露传统指标隐藏的中序列崩溃和物理不一致问题，为长时程稳定性评估提供了全面工具。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.03470v1",
+      "source": "arxiv",
+      "title": "PhysMirror: Physics-Aware Mirror Object Generation",
+      "abstract": "Synthesizing physically accurate mirror reflections remains a fundamental challenge for modern text-to-image diffusion models, which are increasingly critical for generating synthetic training data for embodied AI and robotic perception. These models typically struggle with strict geometric constraints, leading to hallucinations that degrade the utility of the synthetic data. To address this, we introduce a novel, end-to-end physics-aware generation framework namely PhysMirror that natively enforces projective geometry through explicit 3D spatial priors. Our method automatically lifts prompted objects into 3D meshes and constructs a lightweight, mathematically exact mirror scene within a simulated environment. By rendering this explicit 3D scene, we extract precise 2D conditioning elements, such as depth maps and segmentation maps, that serve as robust guiding signals for downstream diffusion models, guiding them to generate images with physically correct mirror reflections. Moreover, we introduce Mirror Consistency Score (MCS), reference-free, fully automated metric that quantifies physical correctness using dense feature matching and vanishing point convergence. Experimental results on our newly constructed MirrOB dataset demonstrate that our approach outperforms state-of-the-art baselines in reflection accuracy and physical realism, while maintaining strong text-to-image semantic alignment, providing a reliable pipeline for embodied AI data generation. The source code is released at https://duyphuc0701.github.io/PhysMirror.",
+      "authors": [
+        "Xuan-Bach Mai",
+        "Duy-Phuc Nguyen",
+        "Quoc-Van Le",
+        "Tam V. Nguyen",
+        "Thanh-Toan Do",
+        "Huu Le",
+        "Duong-Van Nguyen",
+        "Minh-Triet Tran",
+        "Trung-Nghia Le"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-03T16:32:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.03470v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "physics-aware mirror object generation using explicit 3D spatial priors",
+      "llm_evidence_cn": "利用显式3D空间先验的物理感知镜子物体生成",
+      "llm_evidence": "利用显式3D空间先验的物理感知镜子物体生成",
+      "canonical_evidence": "利用显式3D空间先验的物理感知镜子物体生成",
+      "llm_tldr_en": "PhysMirror enforces projective geometry via 3D spatial priors for generating physically accurate mirror reflections, addressing hallucinations in text-to-image models.",
+      "llm_tldr_cn": "PhysMirror通过显式3D空间先验和模拟环境中的精确镜像场景，自动将提示物体提升为3D网格并渲染出符合几何约束的2D反射，解决了文本到图像扩散模型在生成镜子反射时常见的几何幻觉问题，为合成训练数据提供了更可靠的方案。",
+      "llm_tldr": "PhysMirror通过显式3D空间先验和模拟环境中的精确镜像场景，自动将提示物体提升为3D网格并渲染出符合几何约束的2D反射，解决了文本到图像扩散模型在生成镜子反射时常见的几何幻觉问题，为合成训练数据提供了更可靠的方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.03198v1",
+      "source": "arxiv",
+      "title": "Reduced-Order Models: The Mother of World Models",
+      "abstract": "World models -- compressed latent representations of an environment that support action-conditioned prediction and planning -- are typically presented as a product of modern self-supervised learning. This paper argues that the functional anatomy of a world model was independently developed, deployed, and formally analyzed decades earlier in the model-order-reduction (MOR) and control literature, under different names and for a different purpose: the real-time operation of physical systems. We trace the anatomy across three communities. Low-dimensional models of turbulence built on proper orthogonal decomposition (POD) supplied latent dynamics learned from data of a chaotic environment; eigenface methods in early computer vision supplied the encoder-decoder half, including a primitive runtime validity check; and measurement-based POD frameworks for facility thermal control assembled the complete loop -- POD coefficients as latent state, parametric dependence on actuator setpoints as action conditioning, modal reconstruction as decoding, and, critically, a priori analytical error bounds as a verification layer that certified when the model's predictions could be trusted in closed loop. We then examine what each tradition possesses that the other lacks: MOR contributes verification, physical grounding, and extreme data efficiency; learned world models contribute nonlinear representation, transferability, and horizon. We argue that the outstanding obstacle to deploying world models in systems that cannot fail -- power, thermal, process control -- is not predictive fidelity but verifiability, and we outline a research agenda for physics-grounded, verifiable world models that unifies the two lineages.",
+      "authors": [
+        "Rajat Ghosh"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math-ph"
+      ],
+      "published": "2026-07-03T11:05:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.03198v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "historical perspective on world models from model-order reduction",
+      "llm_evidence_cn": "从模型降阶视角追溯世界模型的历史",
+      "llm_evidence": "从模型降阶视角追溯世界模型的历史",
+      "canonical_evidence": "从模型降阶视角追溯世界模型的历史",
+      "llm_tldr_en": "This paper argues that world models were anticipated by model-order reduction and control literature decades earlier, tracing the functional anatomy across POD, eigenfaces, and latent dynamics.",
+      "llm_tldr_cn": "世界模型常被视为现代自监督学习的产物，但本文论证其功能解剖早在数十年前的模型降阶和控制文献中就已出现。通过追溯湍流低维模型、特征脸方法等，揭示了世界模型的编码器-解码器-潜在动力学结构的历史渊源。该工作为理解世界模型提供了深层历史视角。",
+      "llm_tldr": "世界模型常被视为现代自监督学习的产物，但本文论证其功能解剖早在数十年前的模型降阶和控制文献中就已出现。通过追溯湍流低维模型、特征脸方法等，揭示了世界模型的编码器-解码器-潜在动力学结构的历史渊源。该工作为理解世界模型提供了深层历史视角。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.02707v1",
+      "source": "arxiv",
+      "title": "VLRC: Vision-Language Reprojection Consistency as a scalable signal for better feed-forward 3D pretraining",
+      "abstract": "Feed-forward 3D models are commonly trained using either expensive geometric supervision or self-supervised photometric objectives, both of which provide incomplete learning signals. We introduce Vision-Language Reprojection Consistency (VLRC), a scalable auxiliary objective that exploits frozen vision-language representations as semantic multi-view supervision. Given a predicted 3D reconstruction, VLRC reprojects dense vision-language features across views and enforces feature consistency between corresponding image locations, requiring no additional 3D annotations. The objective integrates seamlessly with both self-supervised monocular reconstruction and supervised-pretrained feed-forward 3D models during unlabeled adaptation. By aligning geometry with language-grounded features, VLRC not only improves depth and camera estimation but also enables more coherent multi-view semantic fusion for open-vocabulary 3D scene understanding. Experiments on indoor and outdoor benchmarks demonstrate consistent gains in 3D reconstruction accuracy and zero-shot open-vocabulary 3D semantic segmentation.",
+      "authors": [
+        "Marwane Hariat",
+        "David Filliat",
+        "Antoine Manzanera"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-02T18:49:34+00:00",
+      "link": "https://arxiv.org/pdf/2607.02707v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "3D pretraining with vision-language consistency for reconstruction",
+      "llm_evidence_cn": "利用视觉-语言一致性进行3D预训练以改进重建",
+      "llm_evidence": "利用视觉-语言一致性进行3D预训练以改进重建",
+      "canonical_evidence": "利用视觉-语言一致性进行3D预训练以改进重建",
+      "llm_tldr_en": "VLRC exploits frozen vision-language representations as semantic multi-view supervision for feed-forward 3D models, improving reconstruction quality without 3D annotations.",
+      "llm_tldr_cn": "前馈3D模型通常依赖昂贵的几何监督或自监督光度目标，两者信号不完整。VLRC引入视觉-语言重投影一致性目标，利用冻结的视觉-语言表示作为语义多视图监督，无需3D标注。该目标可与自监督和预训练模型无缝集成，在多个数据集上提升了重建质量。",
+      "llm_tldr": "前馈3D模型通常依赖昂贵的几何监督或自监督光度目标，两者信号不完整。VLRC引入视觉-语言重投影一致性目标，利用冻结的视觉-语言表示作为语义多视图监督，无需3D标注。该目标可与自监督和预训练模型无缝集成，在多个数据集上提升了重建质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.03614v1",
+      "source": "arxiv",
+      "title": "IDEAL-Bench: Indoor Dataset and Evaluation suite for Analyzing 3D Layout reasoning",
+      "abstract": "Spatial question answering is the dominant paradigm for evaluating spatial intelligence in Vision-Language Models (VLMs), but it leaves a complementary axis of spatial competence under-evaluated: holistic 3D layout inference, which predicts every visible object's pose and extent from a single image in a structured form. To this end, we introduce IDEAL-Bench, an evaluation suite that requires VLMs to predict structured 3D layouts on photorealistic indoor scenes across 10 room types, scored along five numerical dimensions and a perceptual render-and-compare protocol. By operating on semantically realistic scenes with full asset substitution under controlled lighting and viewpoint, IDEAL-Bench moves beyond CLEVR-style simple geometric primitives so that any image-space discrepancy reflects spatial reasoning alone. The benchmark is built on IDEAL-Scenes, a procedurally generated dataset of 1,000 re-renderable Blender environments with ground-truth layouts. Evaluating 15 prominent VLMs reveals three findings: the task remains substantially unsolved, with the strongest model reaching only 62.1/100 overall; all models exhibit a sharp asymmetry between object recognition and geometric regression, indicating that current VLMs are trained to describe scenes rather than to measure them; model rankings partially diverge from those on QA-based and primitive-reconstruction benchmarks: top-tier consensus holds, but mid-tier rankings shift substantially. Collectively, these findings establish IDEAL-Bench as a diagnostic suite, targeting the geometric and structural competencies that QA-based evaluation cannot surface, and paving the way towards more rigorous evaluation of spatial intelligence in next-generation VLMs. Together, these findings position IDEAL-Bench as a principled diagnostic for whether future VLMs achieve genuine spatial understanding rather than linguistic approximations of it.",
+      "authors": [
+        "Yuening Cai",
+        "Junwei Zhou",
+        "Youran Qu",
+        "Yu-Wing Tai"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-03T22:04:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.03614v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "benchmark for 3D layout reasoning to evaluate scene understanding",
+      "llm_evidence_cn": "用于评估3D布局推理的基准，推动场景理解评测",
+      "llm_evidence": "用于评估3D布局推理的基准，推动场景理解评测",
+      "canonical_evidence": "用于评估3D布局推理的基准，推动场景理解评测",
+      "llm_tldr_en": "IDEAL-Bench evaluates VLMs on holistic 3D layout inference from single images across indoor scenes.",
+      "llm_tldr_cn": "当前空间智能评估集中于问答，缺乏对完整3D布局推理的评测。IDEAL-Bench提供包含10类房间的室内场景数据集，要求模型从单张图像预测每个可见物体的位姿和范围，从五个数值维度和渲染对比进行评分。该基准推动了3D场景理解评估的发展，尤其突出了结构化布局推理的重要性。",
+      "llm_tldr": "当前空间智能评估集中于问答，缺乏对完整3D布局推理的评测。IDEAL-Bench提供包含10类房间的室内场景数据集，要求模型从单张图像预测每个可见物体的位姿和范围，从五个数值维度和渲染对比进行评分。该基准推动了3D场景理解评估的发展，尤其突出了结构化布局推理的重要性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.03624v1",
+      "source": "arxiv",
+      "title": "RADIO1D: Elastic Representations for Condensed Vision Modeling",
+      "abstract": "This paper challenges the assumption that vision-language models (VLMs) require fixed patch-based 2D vision features. Analyzing fine-tuned vision encoders, we find that representations become increasingly abstract and less spatially coherent during VLM training. Notably, models trained with image-text alignment (such as SigLIP2) develop a small number of specialized tokens that effectively summarize global image content. Building on this, we introduce RADIO1D, which compresses images into a compact, variable-length 1D token sequence using multi-teacher knowledge distillation and an autoencoder design. The resulting representations exhibit strong hierarchical summarization, enabling accurate scene understanding - even with a single token - and support improved composition-aware image retrieval. In VLMs, RADIO1D provides flexible accuracy-efficiency tradeoffs through adjustable token counts, delivering competitive performance on diverse multimodal benchmarks with lower computational overhead and better accuracy.",
+      "authors": [
+        "Greg Heinrich",
+        "Mike Ranzinger",
+        "Collin McCarthy",
+        "Natan Bagrov",
+        "Eugene Khvedchenya",
+        "Bryan Catanzaro",
+        "Jan Kautz",
+        "Andrew Tao",
+        "Pavlo Molchanov"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-03T22:58:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.03624v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "compressed visual representation enabling accurate scene understanding",
+      "llm_evidence_cn": "压缩视觉表示实现精确场景理解",
+      "llm_evidence": "压缩视觉表示实现精确场景理解",
+      "canonical_evidence": "压缩视觉表示实现精确场景理解",
+      "llm_tldr_en": "RADIO1D compresses images into a variable-length 1D token sequence via knowledge distillation, achieving strong scene understanding even with a single token.",
+      "llm_tldr_cn": "挑战视觉语言模型必须使用固定块状2D特征的假设，提出RADIO1D将图像压缩为紧凑1D序列，利用多教师蒸馏和自编码器设计，产生层次化摘要表示，单个token即可实现精确场景理解，提升效率。",
+      "llm_tldr": "挑战视觉语言模型必须使用固定块状2D特征的假设，提出RADIO1D将图像压缩为紧凑1D序列，利用多教师蒸馏和自编码器设计，产生层次化摘要表示，单个token即可实现精确场景理解，提升效率。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.03461v1",
+      "source": "arxiv",
+      "title": "WorldBagel: Uncovering the Power of Unified Multimodal Models for Vision-Language-Action-World Modeling",
+      "abstract": "World models aim to capture environment dynamics in ways that support perception, reasoning, and action, and have recently become a central direction in Vision-Language-Action-World (VLAW) modeling. Meanwhile, unified vision-language models have demonstrated strong multimodal generation capabilities, yet their potential as world models remains underexplored. In this work, we introduce \\texttt{WorldBagel}, a unified VLAW framework built on BAGEL, a modern multimodal unified model, and use it to systematically investigate the role of unification in world modeling. Across multi-task robotic manipulation and cross-domain experiments, \\texttt{WorldBagel} consistently outperforms task-specific alternatives and learns action representations that are more structured and semantically aligned with visual and linguistic context. Experiments on LIBERO, Language Table, and Franka show that unification is not only an architectural convenience, but also a key factor in learning effective VLAW models, leading to consistent empirical gains and deeper insights into multimodal world modeling. Code and model checkpoints will be released upon acceptance.",
+      "authors": [
+        "Zelin Zhao",
+        "Min Shi",
+        "Bo Yuan",
+        "Haotian Xue",
+        "Jialuo Li",
+        "Lama Moukheiber",
+        "Humphrey Shi",
+        "Yongxin Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-03T16:18:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.03461v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "world model framework for VLAW",
+      "llm_evidence_cn": "世界模型框架，统一多模态建模",
+      "llm_evidence": "世界模型框架，统一多模态建模",
+      "canonical_evidence": "世界模型框架，统一多模态建模",
+      "llm_tldr_en": "WorldBagel is a unified VLAW framework built on BAGEL, showing that unified multimodal models excel as world models for perception, reasoning, and action in robotics.",
+      "llm_tldr_cn": "现有世界模型多基于任务特定架构，忽略了统一多模态模型的潜力。WorldBagel基于BAGEL模型构建统一的视觉-语言-动作-世界（VLAW）框架，在机器人操作和跨域实验中，其统一模型性能一致优于任务特化方案。该工作揭示了统一化对世界模型的关键作用，为未来具身智能研究提供了新范式。",
+      "llm_tldr": "现有世界模型多基于任务特定架构，忽略了统一多模态模型的潜力。WorldBagel基于BAGEL模型构建统一的视觉-语言-动作-世界（VLAW）框架，在机器人操作和跨域实验中，其统一模型性能一致优于任务特化方案。该工作揭示了统一化对世界模型的关键作用，为未来具身智能研究提供了新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.03789v1",
+      "source": "arxiv",
+      "title": "G$^2$TAM: Geometry Grounded Track Anything Model",
+      "abstract": "Human spatial understanding arises from jointly perceiving geometry and semantics, enabling consistent object identification and localization across viewpoints and time. Current video segmentation models depend on explicit object appearance memory banks for instance tracking, yet they remain vulnerable to large viewpoint changes and long-term occlusions. Leveraging the spatial consistency afforded by modern feed-forward 3D reconstruction models, we propose the Geometry Grounded Tracking Anything Model (G$^2$TAM), a unified framework for promptable instance tracking in 3D using only unordered RGB images or videos. G$^2$TAM employs spatially aligned geometric representations as implicit memory, ensuring stable instance identity and localization across frames and views. At its core is a cross-modal spatial encoder that integrates visual and textual prompts into a shared geometric space, enabling end-to-end spatial reconstruction and instance-consistent mask prediction. To support training and evaluation, we construct InsTrack, a large-scale dataset with a dedicated validation split for benchmarking. Extensive experiments show that G$^2$TAM delivers strong cross-view consistency, promptable instance spatial tracking, video object segmentation and spatial reconstruction, establishing a foundation for interactive, geometry-grounded spatial reasoning.",
+      "authors": [
+        "Chenming Zhu",
+        "Peizhou Cao",
+        "Jingli Lin",
+        "Wenbo Hu",
+        "Yunlong Ran",
+        "Jiangmiao Pang",
+        "Tai Wang",
+        "Xihui Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-04T09:32:13+00:00",
+      "link": "https://arxiv.org/pdf/2607.03789v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "geometry grounded tracking leveraging spatial consistency for spatial reasoning",
+      "llm_evidence_cn": "基于几何的跟踪利用空间一致性进行空间推理",
+      "llm_evidence": "基于几何的跟踪利用空间一致性进行空间推理",
+      "canonical_evidence": "基于几何的跟踪利用空间一致性进行空间推理",
+      "llm_tldr_en": "G^2TAM uses feed-forward 3D reconstruction models to provide spatial memory, enabling robust instance tracking across large viewpoint changes and occlusions.",
+      "llm_tldr_cn": "针对视频分割模型在大视角变化和长期遮挡下跟踪不稳定的问题，本文提出G^2TAM，利用现代前馈3D重建模型的空间一致性作为隐式记忆，实现鲁棒的3D实例跟踪，显著提升了空间推理能力。",
+      "llm_tldr": "针对视频分割模型在大视角变化和长期遮挡下跟踪不稳定的问题，本文提出G^2TAM，利用现代前馈3D重建模型的空间一致性作为隐式记忆，实现鲁棒的3D实例跟踪，显著提升了空间推理能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
