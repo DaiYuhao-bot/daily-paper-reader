@@ -6,71 +6,75 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-07
-- 运行时间：2026-07-07 21:21:53 UTC
+- 最新运行日期：2026-07-08
+- 运行时间：2026-07-08 21:46:10 UTC
 - 运行状态：成功
 - 本次总论文数：17
 - 精读区：6
 - 速读区：11
 
 ### 今日简报（AI）
-今日推荐17篇论文，聚焦3D生成与全景重建，其中Pano2World和CGGS两项工作以9.0高分领跑，实现了端到端多视图序列到3D场景的高质量生成。最值得关注的方向是全景3D场景重建（Argus）与长时域世界模型稳定性评估（WorldRoamBench），两者分别提出度量级室内重建新方法和开放世界基准。建议读者优先精读Pano2World和CGGS，再速读Argus和WorldRoamBench以获取全景重建与互动模型的最新进展。
-- 详情：[/202607/07/README](/202607/07/README)
+今日精读聚焦4D具身世界模型与一致性增强高斯泼溅三维场景生成，速读覆盖高斯泼溅稀疏视图重建与野外图像处理。
+
+最值得关注的是《RynnWorld-4D》在机器人操控中的4D世界建模能力和《CGGS》用于自我中心场景的一致性高斯泼溅生成。
+
+建议读者进一步探索高斯泼溅在稀疏视图重建与野外非受控场景方向的最新进展。
+- 详情：[/202607/08/README](/202607/08/README)
 
 ### 精读区论文标签
-1. [Pano2World: End-to-End 3D Generation via Unified Multi-View Sequences](/202607/07/2607.00832v2-pano2world-end-to-end-3d-generation-via-unified-multi-view-sequences)  
+1. [RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](/202607/08/2607.06559v1-rynnworld-4d-4d-embodied-world-models-for-robotic-manipulation)  
+   标签：评分：10.0/10、query:world-model
+   evidence：4D具身世界模型，用于机器人操作，联合生成未来RGB深度光流
+2. [CGGS: Consistency-Augmented Geometric Gaussian Splatting for Ego-centric 3D Scene Generation](/202607/08/2607.03819v2-cggs-consistency-augmented-geometric-gaussian-splatting-for-ego-centric-3d-scene-generation)  
    标签：评分：9.0/10、query:world-model
-   evidence：从单张全景图端到端生成3D场景
-2. [CGGS: Consistency-Augmented Geometric Gaussian Splatting for Ego-centric 3D Scene Generation](/202607/07/2607.03819v1-cggs-consistency-augmented-geometric-gaussian-splatting-for-ego-centric-3d-scene-generation)  
+   evidence：基于文本到三维的自我中心三维场景生成
+3. [InSpace: Structure-Aware 3D Indoor Scene Generation from a Single 360° Image](/202607/08/2607.03990v1-inspace-structure-aware-3d-indoor-scene-generation-from-a-single-360-image)  
    标签：评分：9.0/10、query:world-model
-   evidence：一致性增强的高斯泼溅用于以自我为中心的文本到3D场景生成
-3. [WSA$_1$: a 3D-Centric World-Spatial-Action Model for Generalizable Robot Control](/202607/07/2607.03941v1-wsa1-a-3d-centric-world-spatial-action-model-for-generalizable-robot-control)  
+   evidence：从360度图像生成3D室内场景
+4. [DynaVieW: Schema-Guided World Modeling for Understanding Hierarchical Visual Dynamics](/202607/08/2607.04112v1-dynaview-schema-guided-world-modeling-for-understanding-hierarchical-visual-dynamics)  
    标签：评分：9.0/10、query:world-model
-   evidence：以3D为中心的世界-空间-动作模型用于机器人控制
-4. [SceneFrom3D: Geometry-Conditioned Outdoor 3D Scene Generation via View Scheduling with Object-Level Control](/202607/07/2607.04540v1-scenefrom3d-geometry-conditioned-outdoor-3d-scene-generation-via-view-scheduling-with-object-level-control)  
+   evidence：模式引导的世界模型用于视觉动态理解
+5. [PixWorld: Unifying 3D Scene Generation and Reconstruction in Pixel Space](/202607/08/2607.05373v1-pixworld-unifying-3d-scene-generation-and-reconstruction-in-pixel-space)  
    标签：评分：9.0/10、query:world-model
-   evidence：从用户提供几何进行室外三维场景生成
-5. [PixWorld: Unifying 3D Scene Generation and Reconstruction in Pixel Space](/202607/07/2607.05373v1-pixworld-unifying-3d-scene-generation-and-reconstruction-in-pixel-space)  
+   evidence：统一3D场景生成与重建的像素空间方法
+6. [CAIRN: Cross-Room 3D Scene Understanding with Topology-Aware Large Multimodal Models](/202607/08/2607.06534v1-cairn-cross-room-3d-scene-understanding-with-topology-aware-large-multimodal-models)  
    标签：评分：9.0/10、query:world-model
-   evidence：在像素空间统一3D场景生成与重建，体现世界模型思想
-6. [SynCity 3000: Bootstrapping Scene-Scale 3D Diffusion](/202607/07/2607.05392v1-syncity-3000-bootstrapping-scene-scale-3d-diffusion)  
-   标签：评分：9.0/10、query:world-model
-   evidence：大规模3D场景生成与布局控制
+   evidence：拓扑感知的大语言模型用于多房间3D场景理解
 
 ### 速读区论文标签
-1. [Argus: Metric Panoramic 3D Reconstruction for Indoor Scenes](/202607/07/2606.30047v3-argus-metric-panoramic-3d-reconstruction-for-indoor-scenes)  
+1. [Sparse-View Surface Reconstruction using Gaussian Splatting through High-Confidence Depth Propagation with Normal Priors](/202607/08/2607.03765v1-sparse-view-surface-reconstruction-using-gaussian-splatting-through-high-confidence-depth-propagation-with-normal-priors)  
    标签：评分：8.0/10、query:world-model
-   evidence：前馈度量全景室内3D重建
-2. [WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models](/202607/07/2606.31672v3-worldroambench-an-open-world-benchmark-for-long-horizon-stability-of-interactive-world-models)  
+   evidence：基于高斯泼溅的稀疏视角表面重建，利用深度传播
+2. [GUSH3R: Everyone Everywhere All at Once as Gaussians](/202607/08/2607.05243v1-gush3r-everyone-everywhere-all-at-once-as-gaussians)  
    标签：评分：8.0/10、query:world-model
-   evidence：交互式世界模型的基准
-3. [VLRC: Vision-Language Reprojection Consistency as a scalable signal for better feed-forward 3D pretraining](/202607/07/2607.02707v1-vlrc-vision-language-reprojection-consistency-as-a-scalable-signal-for-better-feed-forward-3d-pretraining)  
+   evidence：前馈动态人体-场景重建为3D高斯
+3. [WildSplat: Feedforward Gaussian Splatting from Unposed In-the-Wild Images](/202607/08/2607.05347v1-wildsplat-feedforward-gaussian-splatting-from-unposed-in-the-wild-images)  
    标签：评分：8.0/10、query:world-model
-   evidence：利用视觉-语言一致性进行3D预训练以改进重建
-4. [WorldBagel: Uncovering the Power of Unified Multimodal Models for Vision-Language-Action-World Modeling](/202607/07/2607.03461v1-worldbagel-uncovering-the-power-of-unified-multimodal-models-for-vision-language-action-world-modeling)  
+   evidence：无位姿野外图像的馈送式高斯泼溅新视角合成
+4. [Beyond Isolated Objects: Relationship-aware Open Vocabulary Scene Understanding via 3D Scene Graph Analysis](/202607/08/2607.05348v1-beyond-isolated-objects-relationship-aware-open-vocabulary-scene-understanding-via-3d-scene-graph-analysis)  
    标签：评分：8.0/10、query:world-model
-   evidence：世界模型框架，统一多模态建模
-5. [Signal Structure-Aware Gaussian Splatting for Large-Scale Scene Reconstruction](/202607/07/2607.01698v2-signal-structure-aware-gaussian-splatting-for-large-scale-scene-reconstruction)  
+   evidence：利用3D场景图增强开放词汇场景理解
+5. [ELSA3D: Elastic Semantic Anchoring for Unified 3D Understanding and Generation](/202607/08/2607.06565v1-elsa3d-elastic-semantic-anchoring-for-unified-3d-understanding-and-generation)  
+   标签：评分：8.0/10、query:world-model
+   evidence：统一三维理解与生成
+6. [FDR-Occ: Factorized Dense Routing for Full-Spectrum 3D Occupancy Prediction](/202607/08/2607.03822v1-fdr-occ-factorized-dense-routing-for-full-spectrum-3d-occupancy-prediction)  
    标签：评分：7.0/10、query:world-model
-   evidence：针对大规模场景的3DGS信号结构感知调度重建
-6. [PhysMirror: Physics-Aware Mirror Object Generation](/202607/07/2607.03470v1-physmirror-physics-aware-mirror-object-generation)  
+   evidence：三维占据预测通过全局感受野提升场景理解
+7. [PRISM3D: Probabilistic Refinement and Robust Initialization for Physically Consistent Scene Modeling under Extreme Motion Blur](/202607/08/2607.03855v1-prism3d-probabilistic-refinement-and-robust-initialization-for-physically-consistent-scene-modeling-under-extreme-motion-blur)  
    标签：评分：7.0/10、query:world-model
-   evidence：利用显式3D空间先验的物理感知镜子物体生成
-7. [IDEAL-Bench: Indoor Dataset and Evaluation suite for Analyzing 3D Layout reasoning](/202607/07/2607.03614v1-ideal-bench-indoor-dataset-and-evaluation-suite-for-analyzing-3d-layout-reasoning)  
+   evidence：从运动模糊图像进行鲁棒3D场景重建
+8. [Targeted Structure Completion for Sparse-View 3D Reconstruction in Autonomous Driving](/202607/08/2607.04661v1-targeted-structure-completion-for-sparse-view-3d-reconstruction-in-autonomous-driving)  
    标签：评分：7.0/10、query:world-model
-   evidence：用于评估3D布局推理的基准，推动场景理解评测
-8. [G$^2$TAM: Geometry Grounded Track Anything Model](/202607/07/2607.03789v1-g2tam-geometry-grounded-track-anything-model)  
+   evidence：稀疏视角自动驾驶三维场景重建
+9. [3DMPE: 3D Multi-Perspective Embedding](/202607/08/2607.04898v1-3dmpe-3d-multi-perspective-embedding)  
    标签：评分：7.0/10、query:world-model
-   evidence：基于几何的跟踪利用空间一致性进行空间推理
-9. [Holo-Captioning: Toward the Text Equivalent of 3D Scenes](/202607/07/2607.02908v1-holo-captioning-toward-the-text-equivalent-of-3d-scenes)  
+   evidence：从多投影重建3D
+10. [RayTun3R: Online Camera Adaptation in 3D Foundation Models](/202607/08/2607.02711v1-raytun3r-online-camera-adaptation-in-3d-foundation-models)  
    标签：评分：6.0/10、query:world-model
-   evidence：通过结构化文本描述进行场景理解
-10. [Reduced-Order Models: The Mother of World Models](/202607/07/2607.03198v1-reduced-order-models-the-mother-of-world-models)  
+   evidence：改进3D基础模型在非针孔相机下的场景理解
+11. [BAT3R: Bootstrapping Articulated 3D Reconstruction from 2D Image Collections](/202607/08/2607.03891v1-bat3r-bootstrapping-articulated-3d-reconstruction-from-2d-image-collections)  
    标签：评分：6.0/10、query:world-model
-   evidence：从模型降阶视角追溯世界模型的历史
-11. [RADIO1D: Elastic Representations for Condensed Vision Modeling](/202607/07/2607.03624v1-radio1d-elastic-representations-for-condensed-vision-modeling)  
-   标签：评分：6.0/10、query:world-model
-   evidence：压缩视觉表示实现精确场景理解
+   evidence：从二维图像引导关节三维重建
 
 
 <div class="dpr-home-promo-card">
