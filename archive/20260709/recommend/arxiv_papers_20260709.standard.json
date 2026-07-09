@@ -1,0 +1,528 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-09T21:06:26.270307+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2607.06216v1",
+      "source": "arxiv",
+      "title": "MoWorld: A Flash World Model",
+      "abstract": "The future of World Models depends not only on scaling model capability, but also on scaling practicality and inference efficiency. High-frame-rate inference enables responsive perception, planning, and control in real-world autonomous systems. To this end, we present MoWorld, a cost-effective yet high-performance Flash World Model with an end-to-end framework spanning data generation, pre-training, distillation, and efficient inference, enabling up to 50 FPS real-time interaction with cinematic visual quality without the need of high-end GPUs. To enable large-scale real-world deployment, MoWorld jointly optimizes model capability and cost throughout the entire development pipeline. Specifically, unlike existing approaches that primarily rely on large-scale video corpora, MoWorld is built upon a scalable 3D-native data engine accumulated from our large-scale 3D vision and generative modeling pipeline, enabling the efficient construction of geometrically consistent training data across diverse real-world and synthetic environments. Based on this foundation, a curriculum cross-frame pre-training strategy for stable and scalable World Model learning, an efficient denoising-step distillation algorithm to reduce diffusion training cost, and a mixed-precision parallel inference framework for low-cost real-time deployment. MoWorld is the first real-time interactive World Model built on the Neural Processing Unit (NPU) and can achieves up to 50 FPS in such the devices, enabling practical and efficient deployment at scale. Comprehensive evaluations demonstrate that MoWorld achieves leading performance; notably, its average inference cost is only 30\\%-50\\% of that of existing World Models, providing a practical foundation for large-scale real-world applications of World Models. We also demonstrate diverse applications of MoWorld.",
+      "authors": [
+        "Team Moxin",
+        "Deyi Ji",
+        "Tianrun Chen",
+        "Xin Zhang",
+        "Jiale Yang",
+        "Qi Zhu",
+        "An Zhao",
+        "Zihao Xie",
+        "Han Wang",
+        "Xuanyi Liu",
+        "Yixiang Zhou",
+        "Pei Liu",
+        "Yi Tan",
+        "Cheng Chen",
+        "Dayi Zhu",
+        "Mingyu Wei",
+        "Hanjie Xu",
+        "Jun Liao",
+        "Siqi Li",
+        "Lingyu Lu",
+        "Hongye Fang",
+        "Hongming Tan",
+        "Youjiang Zhu",
+        "Taiyu Zhang",
+        "Zejian Li",
+        "Chaotao Ding",
+        "Lanyun Zhu",
+        "Yunhe Pan",
+        "Lingyun Sun"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-07T12:41:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.06216v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "a flash world model for real-time 3D interaction",
+      "llm_evidence_cn": "用于实时3D交互的快速世界模型",
+      "llm_evidence": "用于实时3D交互的快速世界模型",
+      "canonical_evidence": "用于实时3D交互的快速世界模型",
+      "llm_tldr_en": "Presents MoWorld, a flash world model enabling up to 50 FPS real-time interaction with cinematic quality, through end-to-end framework including data generation, pre-training, distillation, and efficient inference.",
+      "llm_tldr_cn": "世界模型的高帧率推理对实际应用至关重要。本文提出MoWorld，一种经济高效的世界模型，通过端到端框架涵盖数据生成、预训练、蒸馏和高效推理，实现50 FPS实时交互和影院级画质，无需高端GPU，推动了世界模型的大规模部署。",
+      "llm_tldr": "世界模型的高帧率推理对实际应用至关重要。本文提出MoWorld，一种经济高效的世界模型，通过端到端框架涵盖数据生成、预训练、蒸馏和高效推理，实现50 FPS实时交互和影院级画质，无需高端GPU，推动了世界模型的大规模部署。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.06620v1",
+      "source": "arxiv",
+      "title": "SpaR3D-MoE: Adaptive 3D Spatial Reasoning from Sparse Views Meets Geometry-Inductive Mixture-of-Experts",
+      "abstract": "Recent Multimodal Large Language Models (MLLMs) struggle to bridge the representational gap between 2D semantic understanding and 3D spatial geometry. Existing 3D-aware models either rely on costly 3D-specific data or utilize RGB-only inputs with heuristic sampling and monolithic, shallow fusion, which respectively disrupt essential spatiotemporal connectivity and induce modality contention across diverse spatial tasks. To overcome these bottlenecks, we introduce SpaR3D-MoE, an end-to-end framework that enables adaptive spatial reasoning by equipping MLLMs with geometry-aware capabilities from only sparse RGB inputs. First, we propose an adaptive spatiotemporal manifold sampling mechanism that constructs a geometry-aware spatiotemporal graph to extract informative keyframes, effectively mitigating sequence redundancy while preserving the scene's topological connectivity. Second, we introduce the heterogeneous geometry-inductive Mixture-of-Experts driven by an instruction-pose aware router, which adaptively routes multimodal tokens to specialized experts, resolving the cross-modal contention inherent in monolithic fusion. Extensive experiments on VSI-Bench, ScanQA, and SQA3D demonstrate that our method achieves state-of-the-art performance. Notably, SpaR3D-MoE achieves the highest average score of 63.5 on VSI-Bench, outperforming the strongest baseline by 7.8 absolute points, alongside relative improvements of 35.4% and 51.4% in Route Plan and Relative Direction tasks, respectively.",
+      "authors": [
+        "Haida Feng",
+        "Hao Wei",
+        "Haolin Wang",
+        "Shiwei Li",
+        "Chade Li",
+        "Yihong Wu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-07T09:27:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.06620v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "adaptive 3D spatial reasoning from sparse views",
+      "llm_evidence_cn": "自适应3D空间推理",
+      "llm_evidence": "自适应3D空间推理",
+      "canonical_evidence": "自适应3D空间推理",
+      "llm_tldr_en": "SpaR3D-MoE equips MLLMs with geometry-aware spatial reasoning from sparse RGB inputs using adaptive manifold sampling and mixture-of-experts.",
+      "llm_tldr_cn": "针对多模态大模型在2D语义与3D几何间的表示鸿沟，提出SpaR3D-MoE，通过自适应时空流形采样和几何归纳混合专家，仅从稀疏RGB输入实现高效的空间推理。在多个空间任务上超越现有方法，无需昂贵3D数据。",
+      "llm_tldr": "针对多模态大模型在2D语义与3D几何间的表示鸿沟，提出SpaR3D-MoE，通过自适应时空流形采样和几何归纳混合专家，仅从稀疏RGB输入实现高效的空间推理。在多个空间任务上超越现有方法，无需昂贵3D数据。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.05390v1",
+      "source": "arxiv",
+      "title": "Deform360: A Massive Multi-view Visuotactile Dataset for Deformable World Models",
+      "abstract": "Predicting object dynamics (i.e., world modeling) is a fundamental challenge for robotic manipulation, and modeling deformable objects presents a particularly difficult case due to their high-dimensional state spaces and complex material properties. While current world models approach this through two distinct paradigms: learning the dynamics over the 2D pixel space or more explicit 3D geometric space. A systematic understanding of their relative strengths and limitations remains elusive due to the lack of diverse, large-scale real-world data. To address this, we present Deform360, a large-scale visuotactile dataset featuring 198 daily-life objects, 1,980 interaction sequences, and over 215 hours of observations from 41 surround-view cameras and bimanual tactile grippers to capture both global motion and contact-induced local deformations. Leveraging a novel markerless visuotactile 3D tracking pipeline to extract dense geometry and motion, we systematically evaluate current state-of-the-art world models, comparing 2D video models against 3D particle models. Finally, we provide a preliminary demonstration indicating the real-world applicability of our dataset by performing robot planning tasks on deformable objects. Our analysis reveals key insights into the trade-offs between structural priors and scalability, providing a solid benchmark for future research in generalizable deformable object-centric world modeling. Project website: https://deform360.lhy.xyz",
+      "authors": [
+        "Hongyu Li",
+        "Wanjia Fu",
+        "Xiaoyan Cong",
+        "Zekun Li",
+        "Binghao Huang",
+        "Hanxiao Jiang",
+        "Xintong He",
+        "Yiqing Liang",
+        "Rao Fu",
+        "Tao Lu",
+        "Srinath Sridhar",
+        "Kevin A. Smith",
+        "George Konidaris",
+        "Yunzhu Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-06T17:59:18+00:00",
+      "link": "https://arxiv.org/pdf/2607.05390v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "large-scale multi-view visuotactile dataset for deformable world models",
+      "llm_evidence_cn": "大规模多视角视觉触觉数据集用于可变形世界模型",
+      "llm_evidence": "大规模多视角视觉触觉数据集用于可变形世界模型",
+      "canonical_evidence": "大规模多视角视觉触觉数据集用于可变形世界模型",
+      "llm_tldr_en": "Deform360 provides a massive multi-view visuotactile dataset of 198 daily objects and 1,980 interaction sequences to systematically evaluate world models for deformable object dynamics.",
+      "llm_tldr_cn": "可变形物体动力学建模是世界模型面临的重大挑战。本文贡献了Deform360数据集，包含198个日常物品、1980次交互序列，由41个环绕相机拍摄超过215小时，系统覆盖2D像素空间和3D几何空间两种世界模型范式，为评估和推动可变形世界模型研究提供关键资源。",
+      "llm_tldr": "可变形物体动力学建模是世界模型面临的重大挑战。本文贡献了Deform360数据集，包含198个日常物品、1980次交互序列，由41个环绕相机拍摄超过215小时，系统覆盖2D像素空间和3D几何空间两种世界模型范式，为评估和推动可变形世界模型研究提供关键资源。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.07168v1",
+      "source": "arxiv",
+      "title": "NoDrift3R: Raymap-Guided Coupling for Drift-Robust Unposed Feed-Forward 3D Reconstruction",
+      "abstract": "Pose-Free Feed-forward 3D Gaussian Splatting (3DGS) has recently emerged as a powerful paradigm for fast scene reconstruction. However, its performance degrades significantly in long image sequences due to cumulative camera pose estimation drift, which propagates errors into geometric modeling and severely limits rendering fidelity. In this work, we revisit the long-sequence bottleneck and identify pose drift as the primary factor restricting reconstruction quality. Furthermore, while SfM-based pseudo ground-truth poses introduce sensor noise, purely rendering-based supervision often leads to optimization instability and local minima due to the entangled optimization of geometry and pose. To address the challenges, we propose a synergistic pose-free framework that explicitly couples geometry and appearance via a Raymap-Guided Coupling Module (RGC). Concretely, we anchor Gaussian centers to raymap-induced geometry and jointly optimize RGB reconstruction, raymap consistency, and camera regularization under a unified objective, yielding a bidirectional feedback loop: stronger geometry improves rendering, and appearance supervision in turn refines geometry and pose. To further stabilize learning across wide temporal ranges, we introduce a Dual-Frequency Viewpoint Scheduling strategy that combines easy-to-hard interval expansion with replay of short-interval pairs. Extensive experiments across in-domain and cross-domain datasets show consistent gains in both rendering and pose estimation, with notably improved robustness on long sequences. Ablation studies validate our central insight: explicitly designed geometry-appearance synergy is the key to scalable and drift-robust pose-free feed-forward 3D reconstruction.",
+      "authors": [
+        "Xiangyu Sun",
+        "Liu Liu",
+        "Seungkwon Yang",
+        "Jingbing Han",
+        "Seungtae Nam",
+        "Zhizhong Su",
+        "Eunbyung Park"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-08T09:02:18+00:00",
+      "link": "https://arxiv.org/pdf/2607.07168v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "improves 3D reconstruction from long sequences by handling pose drift",
+      "llm_evidence_cn": "通过处理位姿漂移改进长序列3D重建",
+      "llm_evidence": "通过处理位姿漂移改进长序列3D重建",
+      "canonical_evidence": "通过处理位姿漂移改进长序列3D重建",
+      "llm_tldr_en": "Proposes NoDrift3R, a synergy of feed-forward 3DGS with ray-map guided coupling, mitigating pose drift in unposed long-sequence reconstruction, achieving robust geometry and rendering.",
+      "llm_tldr_cn": "该论文提出NoDrift3R方法，针对无位姿前馈3D高斯泼溅在长序列中的位姿漂移问题，引入光线图引导的耦合策略。通过协同优化几何和位姿，有效减少累积误差，在多个数据集上显著提升渲染保真度和重建质量，为长序列无位姿3D重建提供实用解决方案。",
+      "llm_tldr": "该论文提出NoDrift3R方法，针对无位姿前馈3D高斯泼溅在长序列中的位姿漂移问题，引入光线图引导的耦合策略。通过协同优化几何和位姿，有效减少累积误差，在多个数据集上显著提升渲染保真度和重建质量，为长序列无位姿3D重建提供实用解决方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.07170v1",
+      "source": "arxiv",
+      "title": "PUF: Plug-and-Play Uncertainty-Aware Fusion for Online 3D Scene Graph Generation",
+      "abstract": "Online 3D scene graph generation builds a persistent, structured representation of a scene by incrementally fusing 2D observations into a global 3D graph. Existing online methods treat this fusion as a fully deterministic pipeline, where we identify three sources of uncertainty that are overlooked: observation, 2D model, and 3D representation. We propose PUF: a Plug-and-play, Uncertainty-aware, and training-free Fusion framework. Scene graph node association is reformulated as a probabilistic likelihood over semantic and spatial factors, replacing binary accept/reject gates. Dirichlet evidence accumulation distributes class and relationship evidence across plausible candidates proportional to association likelihood. An optional class-conditional prior completes edges for sparsely or never co-observed object pairs. We instantiate PUF with both a 3D Gaussian and a 3D voxel backend and observe consistent improvements, demonstrating its ability to generalize across different representations. Experiments on the 3DSSG and ReplicaSSG benchmarks show that our method substantially outperforms existing approaches while maintaining real-time latency. These results establish uncertainty-aware fusion as a principled and effective paradigm for online 3D scene understanding. The source code is publicly available at https://github.com/yyyyangyi/PUF.",
+      "authors": [
+        "Yi Yang",
+        "Myrna Castillo",
+        "Bodo Rosenhahn",
+        "Michael Ying Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-08T09:05:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.07170v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "online 3D scene graph generation with uncertainty-aware fusion",
+      "llm_evidence_cn": "在线3D场景图生成，考虑不确定性融合",
+      "llm_evidence": "在线3D场景图生成，考虑不确定性融合",
+      "canonical_evidence": "在线3D场景图生成，考虑不确定性融合",
+      "llm_tldr_en": "Proposes PUF, a plug-and-play uncertainty-aware fusion framework for online 3D scene graph generation, reformulating node association as probabilistic likelihood and using Dirichlet evidence accumulation.",
+      "llm_tldr_cn": "该论文提出PUF框架，用于在线3D场景图生成，将节点关联重新表述为语义和空间因子的概率似然，取代确定性二元门控。通过狄利克雷证据积累在候选者间分配证据，有效处理观测、2D模型和3D表示的不确定性。实验表明PUF提升了场景图生成的一致性和鲁棒性，为在线场景理解提供了新方案。",
+      "llm_tldr": "该论文提出PUF框架，用于在线3D场景图生成，将节点关联重新表述为语义和空间因子的概率似然，取代确定性二元门控。通过狄利克雷证据积累在候选者间分配证据，有效处理观测、2D模型和3D表示的不确定性。实验表明PUF提升了场景图生成的一致性和鲁棒性，为在线场景理解提供了新方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.02707v2",
+      "source": "arxiv",
+      "title": "VLRC: Vision-Language Reprojection Consistency as a scalable signal for better feed-forward 3D pretraining",
+      "abstract": "Feed-forward 3D models are commonly trained using either expensive geometric supervision or self-supervised photometric objectives, both of which provide incomplete learning signals. We introduce Vision-Language Reprojection Consistency (VLRC), a scalable auxiliary objective that exploits frozen vision-language representations as semantic multi-view supervision. Given a predicted 3D reconstruction, VLRC reprojects dense vision-language features across views and enforces feature consistency between corresponding image locations, requiring no additional 3D annotations. The objective integrates seamlessly with both self-supervised monocular reconstruction and supervised-pretrained feed-forward 3D models during unlabeled adaptation. By aligning geometry with language-grounded features, VLRC not only improves depth and camera estimation but also enables more coherent multi-view semantic fusion for open-vocabulary 3D scene understanding. Experiments on indoor and outdoor benchmarks demonstrate consistent gains in 3D reconstruction accuracy and zero-shot open-vocabulary 3D semantic segmentation.",
+      "authors": [
+        "Marwane Hariat",
+        "David Filliat",
+        "Antoine Manzanera"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-02T18:49:34+00:00",
+      "link": "https://arxiv.org/pdf/2607.02707v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "scalable auxiliary objective for feed-forward 3D pretraining",
+      "llm_evidence_cn": "用于前馈3D预训练的可扩展辅助目标",
+      "llm_evidence": "用于前馈3D预训练的可扩展辅助目标",
+      "canonical_evidence": "用于前馈3D预训练的可扩展辅助目标",
+      "llm_tldr_en": "VLRC uses vision-language feature reprojection consistency as a scalable objective to improve feed-forward 3D reconstruction pretraining without additional 3D annotations.",
+      "llm_tldr_cn": "针对前馈3D模型训练信号不完整的问题，提出视觉语言重投影一致性（VLRC），利用冻结的视觉语言特征作为多视图语义监督，无需额外3D标注。该方法可无缝集成到现有框架，在多个重建任务上提升性能，是一种高效的深度学习3D预训练技术。",
+      "llm_tldr": "针对前馈3D模型训练信号不完整的问题，提出视觉语言重投影一致性（VLRC），利用冻结的视觉语言特征作为多视图语义监督，无需额外3D标注。该方法可无缝集成到现有框架，在多个重建任务上提升性能，是一种高效的深度学习3D预训练技术。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.03771v1",
+      "source": "arxiv",
+      "title": "City-Level 3D Surface Reconstruction with Viewpoint Orientation Partitioning and Scene Completion",
+      "abstract": "Multi-view 3D surface reconstruction is a longstanding challenge in computer vision. Although recent large-scale reconstruction methods based on 3D Gaussian Splatting (3DGS) achieve impressive novel-view synthesis, producing high-quality surfaces over large scenes remains difficult, due to complex geometry, long optimization, and limited memory. In this paper, we propose a novel yet simple partitioning method to efficiently and faithfully reconstruct large-scale scene surfaces. Our key insight lies in a scene partitioning method based on viewpoint orientation. This partitioning approach ensures that views with similar orientations are jointly involved for more accurate depth estimations, leading to precise surface reconstructions and balanced computation on multiple GPUs in parallel. In addition, we propose a strategy to detect and repair missing regions in the initial point cloud caused by sparse viewpoints or insufficient textures, thereby further improving the geometric quality. Extensive experiments on the GauU-Scene, MatrixCity, and UrbanScene3D datasets demonstrate that our method outperforms the state-of-the-art approaches in surface reconstruction for large-scale scenes. Project page: https://hanl2010.github.io/VOP-GS.",
+      "authors": [
+        "Liang Han",
+        "Wenyuan Zhang",
+        "Junsheng Zhou",
+        "Yu-Shen Liu",
+        "Zhizhong Han"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-04T08:44:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.03771v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "City-level 3D surface reconstruction with scene partitioning",
+      "llm_evidence_cn": "城市级3D表面重建与场景分割",
+      "llm_evidence": "城市级3D表面重建与场景分割",
+      "canonical_evidence": "城市级3D表面重建与场景分割",
+      "llm_tldr_en": "A viewpoint orientation partitioning method for large-scale 3D surface reconstruction using Gaussian Splatting, improving accuracy and efficiency.",
+      "llm_tldr_cn": "该论文针对大规模场景表面重建中复杂几何、长优化和内存限制的问题，提出基于视点方向划分的场景分割方法。它将具有相似视角的视图组合，进行更准确的深度估计，从而精准重建表面。实验表明，该方法在城市级场景上高效且高保真，是大规模3D场景重建的实用方案。",
+      "llm_tldr": "该论文针对大规模场景表面重建中复杂几何、长优化和内存限制的问题，提出基于视点方向划分的场景分割方法。它将具有相似视角的视图组合，进行更准确的深度估计，从而精准重建表面。实验表明，该方法在城市级场景上高效且高保真，是大规模3D场景重建的实用方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.05356v1",
+      "source": "arxiv",
+      "title": "ReCal3R: Reliability-Calibrated Learning Rates for Streaming 3D Reconstruction",
+      "abstract": "Streaming 3D reconstruction relies on a compact recurrent scene state to process long image streams in linear time and bounded memory. However, repeated updates can gradually corrupt this state, causing reliable historical information to be overwritten by noisy or ambiguous observations. We introduce ReCal3R, a reliability-calibrated learning rate method for recurrent 3D reconstruction. Instead of directly applying a candidate learning rate, our method estimates state token reliability from the maintained scene state and uses it to calibrate a candidate learning rate derived from token alignment, state reconstruction residual, and recent update pressure. The resulting token-wise learning rate interpolates between a conservative base rate and the candidate rate, suppressing aggressive updates on unreliable tokens while preserving adaptation to informative frames. Applied to CUT3R as a training-free calibration rule, ReCal3R reaches strong performance on long sequences in pose, depth, and reconstruction quality, including a 3.7$\\times$ reduction in ATE, with comparable runtime and memory. Code is available at: https://github.com/Powertony102/ReCal3R.",
+      "authors": [
+        "Xinze Li",
+        "Yiyuan Wang",
+        "Pengxu Chen",
+        "Wentao Fan",
+        "Weifeng Su",
+        "Weisi Lin",
+        "Wentao Cheng"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-06T17:35:18+00:00",
+      "link": "https://arxiv.org/pdf/2607.05356v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "reliability-calibrated learning rates for recurrent 3D reconstruction",
+      "llm_evidence_cn": "可靠性校准的学习率用于循环3D重建",
+      "llm_evidence": "可靠性校准的学习率用于循环3D重建",
+      "canonical_evidence": "可靠性校准的学习率用于循环3D重建",
+      "llm_tldr_en": "ReCal3R introduces a reliability-calibrated learning rate method for streaming 3D reconstruction, preventing state corruption from noisy observations.",
+      "llm_tldr_cn": "针对流式3D重建中循环场景状态被噪声观测逐渐破坏的问题，ReCal3R提出可靠性校准的学习率方法，通过估计状态令牌可靠性动态调整学习率，有效保留可靠历史信息，实现稳健的持续重建。",
+      "llm_tldr": "针对流式3D重建中循环场景状态被噪声观测逐渐破坏的问题，ReCal3R提出可靠性校准的学习率方法，通过估计状态令牌可靠性动态调整学习率，有效保留可靠历史信息，实现稳健的持续重建。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.05247v1",
+      "source": "arxiv",
+      "title": "Vision Pretraining for Dense Spatial Perception",
+      "abstract": "Dense spatial perception is essential for physical intelligence, where visual systems are expected to recover structured, metric, and actionable representations from pixel observations. Modern visual foundation models tend to prioritize semantic invariance, often at the expense of detailed spatial understanding. In this work, we study vision pretraining through a boundary-centric lens, motivated by the premise that boundaries and shape discontinuities offer essential cues for perceiving geometric properties. Concretely, we propose masked boundary modeling, a self-supervised paradigm that dynamically learns sub-pixel boundary representations and subsequently leverages the discovered boundary-bearing tokens as masked targets to facilitate dense visual token learning. By scaling this framework, we develop LingBot-Vision and demonstrate its efficacy across a diverse set of downstream vision tasks with DINOv3 as a strong baseline. Remarkably, LingBot-Vision drives the progression from LingBot-Depth 1.0 to LingBot-Depth 2.0 for depth completion, and thereby yields enhanced depth estimation, a key pillar for embodied artificial intelligence. Our findings reveal that boundary modeling goes beyond simple line segments and instead serves as a scalable pretraining principle for learning spatially structured visual representations.",
+      "authors": [
+        "Zelin Fu",
+        "Bin Tan",
+        "Changjiang Sun",
+        "Shaohui Liu",
+        "Kecheng Zheng",
+        "Yinghao Xu",
+        "Xing Zhu",
+        "Yujun Shen",
+        "Nan Xue"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-06T15:56:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.05247v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "dense spatial perception for scene understanding",
+      "llm_evidence_cn": "密集空间感知用于场景理解",
+      "llm_evidence": "密集空间感知用于场景理解",
+      "canonical_evidence": "密集空间感知用于场景理解",
+      "llm_tldr_en": "Proposes masked boundary modeling to learn sub-pixel boundary representations for improved dense spatial perception, enhancing scene understanding.",
+      "llm_tldr_cn": "针对视觉基础模型缺乏详细空间理解的问题，提出一种基于边界的自监督预训练范式，通过掩码边界建模学习亚像素边界表示，提升稠密空间感知能力，为场景理解和空间推理提供更鲁棒的视觉特征。",
+      "llm_tldr": "针对视觉基础模型缺乏详细空间理解的问题，提出一种基于边界的自监督预训练范式，通过掩码边界建模学习亚像素边界表示，提升稠密空间感知能力，为场景理解和空间推理提供更鲁棒的视觉特征。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.05568v1",
+      "source": "arxiv",
+      "title": "Harnessing Generative Image Models for Training-Free Primitive Shape Abstraction",
+      "abstract": "Representing 3D shapes as compact sets of geometric primitives is fundamental to robotics, simulation, and scene understanding. Generative image models trained at scale have recently emerged as generalist visual learners that can identify and segment object parts directly in the image domain, across arbitrary categories and without task-specific training. Adapting such models to downstream tasks typically requires fine-tuning; we ask whether their pretrained capability can instead be harnessed directly, without any training, and answer affirmatively with a training-free harness. Our pipeline renders multi-view images of a 3D object, uses a vision-language model to analyze its semantic parts, prompts a generative image model to paint a color-coded part segmentation mask, reprojects it onto the geometry, and fits a superquadric primitive to each part via parameter optimization. The approach contains no learned parameters: it is category-agnostic and orientation-invariant, properties that previous learning-based models struggled with. Its accuracy ceiling rises with future generative-model improvements, which we confirm with a ground-truth segmentation study showing that part segmentation, not primitive fitting, is the current accuracy bottleneck. On HumanPrim and Toys4K, our method achieves the lowest Chamfer distance among all evaluated methods, using 5--9 primitives per object on average.",
+      "authors": [
+        "Gregor Kobsik",
+        "Tim Elsner",
+        "Leif Kobbelt"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-06T19:10:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.05568v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "harnessing generative image models for primitive shape abstraction aids scene understanding",
+      "llm_evidence_cn": "利用生成式图像模型进行原始形状抽象有助于场景理解",
+      "llm_evidence": "利用生成式图像模型进行原始形状抽象有助于场景理解",
+      "canonical_evidence": "利用生成式图像模型进行原始形状抽象有助于场景理解",
+      "llm_tldr_en": "A training-free pipeline uses generative image models and vision-language models to abstract 3D shapes into geometric primitives, enhancing scene understanding without fine-tuning.",
+      "llm_tldr_cn": "3D形状的几何基元表示对机器人、仿真和场景理解至关重要。本文提出无需训练的流程，利用预训练生成图像模型和视觉语言模型，通过多视图渲染和语义分析，将3D物体分解为颜色编码的基元。该方法在多种物体类别上实现了有效的形状抽象，无需微调即可服务于下游任务。",
+      "llm_tldr": "3D形状的几何基元表示对机器人、仿真和场景理解至关重要。本文提出无需训练的流程，利用预训练生成图像模型和视觉语言模型，通过多视图渲染和语义分析，将3D物体分解为颜色编码的基元。该方法在多种物体类别上实现了有效的形状抽象，无需微调即可服务于下游任务。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.05765v1",
+      "source": "arxiv",
+      "title": "Image2Sim: Scaling Embodied Navigation via Generative Neural Simulator",
+      "abstract": "Embodied navigation aims to build agents that interpret multimodal goals, reason in 3D space, and reach target destinations reliably in the real world. However, progress remains constrained by the lack of scalable, high-fidelity, and physically grounded interactive environments. Although real-world scanned datasets offer visual realism, they are limited by scale. In contrast, synthetic simulators scale more easily but often exhibit large sim-to-real gaps. We introduce Image2Sim, a real-time neural simulation framework that constructs high-quality interactive environments from posed RGB-D image sequences. The central idea is to decouple 3D spatial anchoring from photorealistic observation synthesis. For scene construction, Image2Sim uses a feed-forward feature Gaussian model that lifts posed RGB-D observations into a 3D feature-Gaussian representation in a single pass. For rendering, we propose a Geometry-Aware One-Step Pixel Flow model that transforms sparse and noisy Gaussian projections into high-quality panoramic RGB-D observations. Image2Sim also serves as a fully automated embodied data engine that generates high-fidelity observations, executable actions, and diverse navigation instructions at scale. It converts large collections of videos and images into nearly 20K interactive scenes and synthesizes more than 10 million navigation training samples. Navigation models trained entirely in these neural environments achieve strong improvements on major benchmarks and transfer effectively to real-world zero-shot settings. These results suggest that scalable neural simulation can serve as a practical training substrate for embodied navigation at scale.",
+      "authors": [
+        "Zihan Wang",
+        "Seungjun Lee",
+        "Yinghao Xu",
+        "Gim Hee Lee"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-07T02:42:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.05765v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "generative neural simulator constructing interactive environments from posed RGB-D images",
+      "llm_evidence_cn": "从带位姿的RGB-D图像构建交互环境的生成式神经模拟器",
+      "llm_evidence": "从带位姿的RGB-D图像构建交互环境的生成式神经模拟器",
+      "canonical_evidence": "从带位姿的RGB-D图像构建交互环境的生成式神经模拟器",
+      "llm_tldr_en": "Image2Sim builds real-time neural simulators from RGB-D image sequences by decoupling 3D spatial anchoring from photorealistic observation synthesis, enabling embodied navigation training.",
+      "llm_tldr_cn": "针对具身导航中缺乏可扩展高保真交互环境的问题，提出Image2Sim，用前馈网络从RGB-D序列构建实时神经模拟器，将3D空间锚定与外观合成解耦。相比现有扫描数据集和合成模拟器，在视觉真实感和物理交互上取得平衡，可有效缩放导航训练。",
+      "llm_tldr": "针对具身导航中缺乏可扩展高保真交互环境的问题，提出Image2Sim，用前馈网络从RGB-D序列构建实时神经模拟器，将3D空间锚定与外观合成解耦。相比现有扫描数据集和合成模拟器，在视觉真实感和物理交互上取得平衡，可有效缩放导航训练。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.06564v1",
+      "source": "arxiv",
+      "title": "Lift3D-VLA: Lifting VLA Models to 3D Geometry and Dynamics-Aware Manipulation",
+      "abstract": "Recently, Vision-Language-Action (VLA) models have demonstrated strong generalization across diverse tasks. However, effective robotic manipulation in physical environments fundamentally requires geometric understanding and spatial reasoning. While some VLA approaches attempt to incorporate 3D information, they are constrained by limited data availability and geometric information loss in current 3D encoding pipelines, and fail to jointly capture 3D geometry and temporally structured actions in dynamic environments. To address these limitations, we introduce Lift3D-VLA, a unified VLA framework that equips models with explicit 3D point cloud reasoning and enables temporally coherent action generation. First, building upon our previous work Lift3D, an enhanced 2D model-lifting strategy is proposed to geometrically align 3D points with pretrained 2D positional embeddings. This design enables direct point-cloud encoding within the VLA vision encoder while minimizing spatial information loss. Based on explicit 3D inputs, we propose Geometry-Centric Masked Autoencoding (GC-MAE), a dual-objective self-supervised framework that reconstructs the current point cloud while predicting its future geometric evolution. This formulation allows the 2D vision encoder to internalize both 3D structure and physical dynamics. To fully exploit 3D representations, we further design layer-wise temporal action modeling, which leverages multiple layers of the LLM to collaboratively predict action chunks, enabling temporally consistent predictions. Across 22 simulated tasks and 8 real-world manipulation tasks, Lift3D-VLA achieves 10.8% and 11.1% higher mean success rates on MetaWorld and RLBench than the best-performing prior VLA methods, and outperforms the strongest real-world baseline by 4 percentage points, while exhibiting stronger generalization to out-of-distribution perturbations.",
+      "authors": [
+        "Jiaming Liu",
+        "Qingpo Wuwu",
+        "Nuowei Han",
+        "Hao Chen",
+        "Zhuoyang Liu",
+        "Fan Fei",
+        "Yueru Jia",
+        "Chenyang Gu",
+        "Yandong Guo",
+        "Boxin Shi",
+        "Shanghang Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-07T17:59:47+00:00",
+      "link": "https://arxiv.org/pdf/2607.06564v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "explicit 3D point cloud reasoning for spatial understanding",
+      "llm_evidence_cn": "显式3D点云推理用于空间理解",
+      "llm_evidence": "显式3D点云推理用于空间理解",
+      "canonical_evidence": "显式3D点云推理用于空间理解",
+      "llm_tldr_en": "Lift3D-VLA integrates explicit 3D point cloud reasoning into VLA models for geometry and dynamics-aware manipulation, enhancing spatial reasoning in robotic tasks.",
+      "llm_tldr_cn": "Lift3D-VLA通过将显式3D点云推理引入视觉-语言-动作模型，实现了几何和动力学感知的机器人操作，显著提升了空间推理能力，解决了现有方法在动态环境中3D几何信息丢失的局限。",
+      "llm_tldr": "Lift3D-VLA通过将显式3D点云推理引入视觉-语言-动作模型，实现了几何和动力学感知的机器人操作，显著提升了空间推理能力，解决了现有方法在动态环境中3D几何信息丢失的局限。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
