@@ -1,0 +1,301 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-10T21:27:10.240649+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2607.05493v1",
+      "source": "arxiv",
+      "title": "Ground3D-LMM: Fine-Grained 3D Point Grounding and Spatial Reasoning with LMM",
+      "abstract": "Natural-language queries about 3D environments become actionable when responses are verifiable and metric. Verifiability requires explicit grounding to the referred 3D region, while metric answers report physical measurements in real-world units (e.g., size, thickness, clearance, and distance). Existing 3D large multimodal models (LMMs) approaches remain limited: conversational systems typically respond without explicit 3D grounding, while 3D grounding models are not designed for interactive, metric-aware dialogue. In this paper, we present Ground3D-LMM, a unified model that takes a point cloud and an optional RGB image as input and supports 3D spatial conversation with (i) point-grounded responses and (ii) metric numeric outputs at both object and part granularity, including multi-object queries. To evaluate this intersection of grounding and measurement, we define the 3D Grounded Measurement task, which requires predicting the referred 3D region and the corresponding metric quantities in real-world units. We introduce a large-scale dataset built on ScanNet and ScanNet++ datasets with dense object and part annotations and roughly 2.5M question-answer pairs spanning eight tasks, along with a manually verified test set. Extensive experiments on multiple datasets and tasks show that our proposed Ground3D-LMM model provides a strong baseline for grounded, metric-aware 3D conversational understanding. Our dataset and model are publicly available.",
+      "authors": [
+        "Amol Harsh",
+        "Zongyan Han",
+        "Jean Lahoud",
+        "Ye Liu",
+        "Rao Muhammad Anwer",
+        "Hisham Cholakkal",
+        "Salman Khan",
+        "Fahad Khan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-06T18:00:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.05493v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "fine-grained 3D point grounding and spatial reasoning",
+      "llm_evidence_cn": "细粒度三维点定位和空间推理",
+      "llm_evidence": "细粒度三维点定位和空间推理",
+      "canonical_evidence": "细粒度三维点定位和空间推理",
+      "llm_tldr_en": "Ground3D-LMM unifies point-grounded responses and metric measurements in 3D spatial dialogues using point clouds and images.",
+      "llm_tldr_cn": "现有三维多模态模型无法同时提供可验证的定位和度量回答。Ground3D-LMM将点云和可选RGB图像作为输入，支持具有点定位和度量数字输出的三维空间对话，实现细粒度交互。",
+      "llm_tldr": "现有三维多模态模型无法同时提供可验证的定位和度量回答。Ground3D-LMM将点云和可选RGB图像作为输入，支持具有点定位和度量数字输出的三维空间对话，实现细粒度交互。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.02322v1",
+      "source": "arxiv",
+      "title": "The Moving Eye: Enhancing VLA Spatial Generalization via Hybrid Dynamic Data Collection",
+      "abstract": "Vision-Language-Action (VLA) models have shown remarkable promise in generalized robotic manipulation. However, their spatial generalization remains fragile. We argue that simply increasing the number of viewpoints is insufficient. Models often fall into the trap of Shortcut Learning, latching onto spurious correlations (e.g., fixed relative poses between objects or between the camera and robot base) rather than learning true spatial relationships. In this work, we propose a data-centric solution to enhance VLA spatial generalization. We utilize a dual-arm setup where one arm performs manipulation while the other serves as a mobile environmental camera. We systematically evaluate three data distribution patterns: Fixed, Multi-Fixed, and Moving Views. Our findings reveal that a hybrid strategy, combining continuous camera motion with diverse static viewpoints, yields the best performance by substantially reducing spurious correlations while maintaining training stability. Our experiments demonstrate that this strategy mitigates spurious correlations, enabling VLAs to generalize to unseen camera poses and object configurations where simply adding more static viewpoints fails. Crucially, we reveal that the susceptibility to shortcut learning and the struggle with spatial generalization are universal characteristics shared across diverse architectures. Consequently, all evaluated models (ACT, Diffusion, and VLA models including Pi0 and Gr00t) benefit significantly from our mixed data strategy.",
+      "authors": [
+        "Jincheng Tang",
+        "Yilong Zhu",
+        "Zhengyuan Xie",
+        "Jiang-Jiang Liu",
+        "Jiaxing Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-02T15:30:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.02322v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "enhancing spatial generalization in VLA models for manipulation",
+      "llm_evidence_cn": "提升VLA模型的空间泛化能力用于机器人操作",
+      "llm_evidence": "提升VLA模型的空间泛化能力用于机器人操作",
+      "canonical_evidence": "提升VLA模型的空间泛化能力用于机器人操作",
+      "llm_tldr_en": "The Moving Eye enhances VLA spatial generalization by collecting dynamic multi-view data, breaking spurious correlations and improving true spatial understanding.",
+      "llm_tldr_cn": "VLA模型的空间泛化能力脆弱，常陷入捷径学习。该论文提出数据驱动方案，利用双机械臂动态采集多视角数据，打破虚假相关性。实验表明该方法显著提升模型对真实空间关系的理解，增强零样本泛化能力。",
+      "llm_tldr": "VLA模型的空间泛化能力脆弱，常陷入捷径学习。该论文提出数据驱动方案，利用双机械臂动态采集多视角数据，打破虚假相关性。实验表明该方法显著提升模型对真实空间关系的理解，增强零样本泛化能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.02707v3",
+      "source": "arxiv",
+      "title": "VLRC: Vision-Language Reprojection Consistency as a scalable signal for better feed-forward 3D pretraining",
+      "abstract": "Feed-forward 3D models are commonly trained using either expensive geometric supervision or self-supervised photometric objectives, both of which provide incomplete learning signals. We introduce Vision-Language Reprojection Consistency (VLRC), a scalable auxiliary objective that exploits frozen vision-language representations as semantic multi-view supervision. Given a predicted 3D reconstruction, VLRC reprojects dense vision-language features across views and enforces feature consistency between corresponding image locations, requiring no additional 3D annotations. The objective integrates seamlessly with both self-supervised monocular reconstruction and supervised-pretrained feed-forward 3D models during unlabeled adaptation. By aligning geometry with language-grounded features, VLRC not only improves depth and camera estimation but also enables more coherent multi-view semantic fusion for open-vocabulary 3D scene understanding. Experiments on indoor and outdoor benchmarks demonstrate consistent gains in 3D reconstruction accuracy and zero-shot open-vocabulary 3D semantic segmentation.",
+      "authors": [
+        "Marwane Hariat",
+        "David Filliat",
+        "Antoine Manzanera"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-02T18:49:34+00:00",
+      "link": "https://arxiv.org/pdf/2607.02707v3",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "feed-forward 3D pretraining with vision-language consistency",
+      "llm_evidence_cn": "前馈三维预训练，视觉语言一致性",
+      "llm_evidence": "前馈三维预训练，视觉语言一致性",
+      "canonical_evidence": "前馈三维预训练，视觉语言一致性",
+      "llm_tldr_en": "Introduces VLRC, a scalable auxiliary objective using frozen vision-language features to provide semantic multi-view supervision for 3D pretraining.",
+      "llm_tldr_cn": "针对前馈3D模型训练监督信号不完整的问题，提出视觉语言重投影一致性（VLRC）目标。利用冻结的视觉语言模型，通过跨视图特征一致性提供语义多视图监督，无需额外3D标注。与自监督和预训练模型兼容，提升了3D重建质量。",
+      "llm_tldr": "针对前馈3D模型训练监督信号不完整的问题，提出视觉语言重投影一致性（VLRC）目标。利用冻结的视觉语言模型，通过跨视图特征一致性提供语义多视图监督，无需额外3D标注。与自监督和预训练模型兼容，提升了3D重建质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.07452v1",
+      "source": "arxiv",
+      "title": "GeoGS-SLAM: Geometry-Only Gaussian Splatting for Dense Monocular SLAM",
+      "abstract": "Dense visual SLAM is a fundamental problem in robotics. Recent advances in 3DGS have demonstrated its potential for dense SLAM. Existing 3DGS frameworks focus on both appearance and geometry modeling. However, scene geometry is typically more critical for SLAM than novel view synthesis because downstream robotic tasks, such as navigation and obstacle avoidance, rely primarily on accurate spatial geometry rather than photorealistic rendering. This observation raises a natural question: Is it feasible for 3DGS to perform 3D reconstruction without scene appearance modeling? Motivated by this, we propose Geometry-only Gaussian Splatting (GeoGS), which directly reconstructs scene geometry, and further present GeoGS-SLAM, a dense visual SLAM system built upon this representation. Specifically, GeoGS retains only spatial parameters to reduce the number of per-primitive parameters by over 80%. In contrast to existing 3DGS methods, GeoGS focuses solely on geometric reconstruction, which significantly reduces the number of Gaussian primitives, accelerates geometric convergence, and enhances robustness to illumination variations. In addition, we present an effective training framework that optimizes the Gaussian primitives via single-view and multi-view geometric and photometric supervision, and speeds up geometry convergence with a local-plane driven initialization that better aligns primitives with local structures. Furthermore, we introduce a map update strategy for loop closure that globally transforms the Gaussian map to align it with the corrected pose estimates, thereby preventing map tearing caused by inconsistent per-viewpoint pose corrections in existing methods. Extensive experiments on synthetic and real-world benchmarks demonstrate that our method outperforms SOTA methods in terms of online mapping efficiency and geometric reconstruction quality.",
+      "authors": [
+        "Lipu Zhou",
+        "Yaoyun Kang",
+        "Junxiang Pang",
+        "Shengkai Sun",
+        "Tingting Bao",
+        "Kehan Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-08T14:22:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.07452v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Focuses on scene geometry reconstruction for dense visual SLAM",
+      "llm_evidence_cn": "专注于密集视觉SLAM中的场景几何重建",
+      "llm_evidence": "专注于密集视觉SLAM中的场景几何重建",
+      "canonical_evidence": "专注于密集视觉SLAM中的场景几何重建",
+      "llm_tldr_en": "GeoGS-SLAM proposes a geometry-only Gaussian Splatting method that reconstructs scene geometry without appearance modeling, enabling efficient dense SLAM for spatial reasoning tasks.",
+      "llm_tldr_cn": "该论文针对密集SLAM中外观建模冗余的问题，提出仅利用几何的高斯溅射方法GeoGS，直接重建场景几何结构。GeoGS-SLAM系统基于此方法实现高效的密集单目SLAM，准确估计空间几何信息，为机器人导航等空间推理任务提供支持。实验验证了其在重建精度和速度上的优势。",
+      "llm_tldr": "该论文针对密集SLAM中外观建模冗余的问题，提出仅利用几何的高斯溅射方法GeoGS，直接重建场景几何结构。GeoGS-SLAM系统基于此方法实现高效的密集单目SLAM，准确估计空间几何信息，为机器人导航等空间推理任务提供支持。实验验证了其在重建精度和速度上的优势。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.02798v1",
+      "source": "arxiv",
+      "title": "Track the Noise, Move the World:3D-Grounded Motion-Consistent Noise for Controllable Video Generation",
+      "abstract": "Modern image-and-text-to-video diffusion models can synthesize highly realistic videos by iteratively denoising an initial Gaussian noise tensor conditioned on reference image and text inputs. However, existing approaches still lack precise and unified controllability over both object motion and camera motion within a single generation process. We present UniCaMo, a unified framework that enables simultaneous control of object trajectories and camera viewpoints by directly constructing the input noise of the diffusion model. Specifically, UniCaMo builds a shared 3D-grounded motion-consistent noise space across latent video frames. Sparse 3D point tracks are used to warp the Gaussian noise of the reference frame along desired object trajectories, while a virtual spherical noise representation provides globally consistent noise values for newly revealed scene regions under camera motion. By combining local track-guided noise warping with global sphere-based noise sampling, UniCaMo maintains geometric and temporal consistency under both object movement and viewpoint changes. Because UniCaMo modifies only the input noise, it requires no auxiliary adapters, control branches, or architectural changes to the underlying video diffusion model. With lightweight LoRA fine-tuning on large pretrained video diffusion models, including Wan 2.1 (14B), UniCaMo achieves state-of-the-art results in both video quality and motion controllability on standard controllable video generation benchmarks.",
+      "authors": [
+        "Long Vu",
+        "Tan Ngo",
+        "Animesh Karnewar",
+        "Amir Habibian",
+        "Binh-Son Hua",
+        "Hung Bui",
+        "Minh Hoai Nguyen",
+        "Phong Nguyen-Ha"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-02T22:17:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.02798v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "3D-grounded control for video generation, indirectly relevant to world models",
+      "llm_evidence_cn": "3D引导的视频控制，间接相关世界模型",
+      "llm_evidence": "3D引导的视频控制，间接相关世界模型",
+      "canonical_evidence": "3D引导的视频控制，间接相关世界模型",
+      "llm_tldr_en": "UniCaMo achieves simultaneous control over object motion and camera viewpoint in video generation by constructing 3D-grounded motion-consistent noise.",
+      "llm_tldr_cn": "现有视频生成模型缺乏对物体运动和相机运动的统一控制。本文提出UniCaMo，通过构建共享3D运动一致噪声空间，利用稀疏3D点轨迹控制噪声变形，从而在单一框架内同时控制物体轨迹和相机视角。实验表明该方法能生成符合指定运动和视角的视频。",
+      "llm_tldr": "现有视频生成模型缺乏对物体运动和相机运动的统一控制。本文提出UniCaMo，通过构建共享3D运动一致噪声空间，利用稀疏3D点轨迹控制噪声变形，从而在单一框架内同时控制物体轨迹和相机视角。实验表明该方法能生成符合指定运动和视角的视频。",
+      "llm_tags": [
+        "query:world-model:composite"
+      ],
+      "matched_query_tag": "query:world-model:composite",
+      "matched_query_text": "Papers central to 三维场景生成，世界模型, especially work that connects or combines: 3d scene generation; world model; scene understanding; spatial reasoning; World model based 3d scene generation and reconstruction techniques; what are the latest advances in world models for 3D vision; deep learning methods for 3d scene generation.",
+      "matched_requirement_id": "req-composite-world-model",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.08375v1",
+      "source": "arxiv",
+      "title": "WCog-VLA: A Dual-Level World-Cognitive Vision-Language-Action Model for End-to-End Autonomous Driving",
+      "abstract": "Vision-Language-Action (VLA) models have advanced end-to-end autonomous driving. However, existing methods either lack comprehensive world cognition or suffer from fragmented world foresight, inherently confining these models to reactive driving. To address this limitation, we propose WCog-VLA, a novel dual-level World-Cognitive VLA framework that successfully bridges semantic world forecasting with generative world evolution to achieve proactive autonomous driving. At the semantic level, WCog-VLA unifies world cognition and reasoning by incorporating 3D spatial perception and injecting agent tokens to capture the world dynamics, while concurrently enabling Game-theoretic Chain-of-Thought (Game-CoT) reasoning. At the generative level, we introduce the Aligned Decoupled Diffusion Transformer (ADDT) as a powerful generative world model that synthesizes physically-plausible joint multi-agent trajectories. Through scene representation alignment, ADDT reduces the number of denoising steps required and thus significantly accelerates inference. To facilitate strategic reasoning, we further construct a large-scale dataset featuring 85k Game-CoT annotations. Extensive experiments on the NAVSIM benchmark demonstrate that WCog-VLA achieves a State-Of-The-Art (SOTA) PDMS score of 92.9.",
+      "authors": [
+        "Xuerun Yan",
+        "Zhexi Lian",
+        "Nuoheng Zhang",
+        "Shiyu Fang",
+        "Haoran Wang",
+        "Chen Lv",
+        "Jia Hu",
+        "Binyang Song"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-09T11:49:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.08375v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "world-cognitive model with 3D spatial perception for autonomous driving",
+      "llm_evidence_cn": "具有三维空间感知的世界认知自动驾驶模型",
+      "llm_evidence": "具有三维空间感知的世界认知自动驾驶模型",
+      "canonical_evidence": "具有三维空间感知的世界认知自动驾驶模型",
+      "llm_tldr_en": "WCog-VLA bridges semantic world forecasting with generative world evolution using 3D spatial perception and game-theoretic reasoning for proactive driving.",
+      "llm_tldr_cn": "现有驾驶模型缺乏全面世界认知或碎片化世界预见。WCog-VLA通过三维空间感知和博弈论链式推理，统一语义世界预测与生成世界演化，实现主动自动驾驶，克服被动驾驶局限。",
+      "llm_tldr": "现有驾驶模型缺乏全面世界认知或碎片化世界预见。WCog-VLA通过三维空间感知和博弈论链式推理，统一语义世界预测与生成世界演化，实现主动自动驾驶，克服被动驾驶局限。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.08765v1",
+      "source": "arxiv",
+      "title": "Enhancing In-context Panoramic Generation via Geometric-aware Pretraining",
+      "abstract": "In this work, we present Canvas360, a two-stage framework for in-context panoramic generation that combines geometry-aware pretraining with downstream task-specific fine-tuning. To address the lack of large-scale, high-quality training data tailored to in-context panoramic tasks, we propose Canvas360Dataset, a collection of 1M high-quality paired panoramic samples for style transfer, inpainting, outpainting, and editing, enabling effective supervision across diverse in-context generation scenarios. On the modeling side, Canvas360 enhances text-to-panorama generation through parallel depth generation, velocity circular padding, and similarity loss regularization, enabling the model to learn geometry-aware representations, capture object distortion details, and improve geometric consistency and global coherence. Furthermore, empowered by strong panoramic priors, Canvas360 enables a unified in-context panoramic generation framework that supports diverse downstream tasks via token-level concatenation, surpassing prior methods in both task coverage and modeling flexibility. Extensive experiments show that Canvas360 improves panoramic image fidelity, achieving particularly strong performance on the panorama-specific FAED metric and competitive or leading results across the reported quantitative evaluations. More information can be found on our project page: https://zry000.github.io/Canvas360/",
+      "authors": [
+        "Haoran Feng",
+        "Ruiyang Zhang",
+        "Longyi Zhang",
+        "Dizhe Zhang",
+        "Lu Qi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-09T17:59:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.08765v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "geometry-aware panoramic generation",
+      "llm_evidence_cn": "几何感知全景生成",
+      "llm_evidence": "几何感知全景生成",
+      "canonical_evidence": "几何感知全景生成",
+      "llm_tldr_en": "Canvas360 proposes a geometry-aware pretraining framework for in-context panoramic generation, enabling the model to learn geometric representations through parallel depth generation and similarity loss regularization, addressing the lack of large-scale training data.",
+      "llm_tldr_cn": "本文针对全景生成任务中缺乏几何先验和大规模训练数据的问题，提出了Canvas360框架。该框架通过几何感知预训练阶段，利用并行深度生成、速度循环填充和相似性损失正则化等技术，使模型学习几何感知的表征。实验表明，Canvas360在风格迁移、修补和外推等多个全景生成任务上取得优异效果，为三维场景生成提供了可迁移的方法基础。",
+      "llm_tldr": "本文针对全景生成任务中缺乏几何先验和大规模训练数据的问题，提出了Canvas360框架。该框架通过几何感知预训练阶段，利用并行深度生成、速度循环填充和相似性损失正则化等技术，使模型学习几何感知的表征。实验表明，Canvas360在风格迁移、修补和外推等多个全景生成任务上取得优异效果，为三维场景生成提供了可迁移的方法基础。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
