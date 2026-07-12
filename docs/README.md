@@ -6,64 +6,52 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-11
-- 运行时间：2026-07-11 20:15:52 UTC
+- 最新运行日期：2026-07-12
+- 运行时间：2026-07-12 20:47:33 UTC
 - 运行状态：成功
-- 本次总论文数：14
-- 精读区：4
-- 速读区：10
+- 本次总论文数：10
+- 精读区：3
+- 速读区：7
 
 ### 今日简报（AI）
-今日聚焦3D高斯泼溅与立体视频生成的自监督学习，精读两项高分工作。  
-最值得关注的是利用3D基础模型初始化高斯泼溅（8.0分）及几何互惠自监督立体视频生成（8.0分），前者提升重建质量，后者降低标注成本。  
-若想快速跟进，速读中《SharpSplat》的边缘正则化方法对城市场景重建有实用价值，不妨一阅。
-- 详情：[/202607/11/README](/202607/11/README)
+今日聚焦高精度机器人场景生成与视觉-语言-动作模型，以及3D资产生成与混合专家设计。
+最值得精读的是《RoboSnap》的一步式实到仿场景生成（9.0分）和《LEEVLA》的潜在环境演化（8.0分）。
+建议优先精读RoboSnap，掌握其通用机器人学习与评估的实时仿真方法。
+- 详情：[/202607/12/README](/202607/12/README)
 
 ### 精读区论文标签
-1. [Fast 3D Foundation Model Initialized Gaussian Splatting](/202607/11/2607.03209v1-fast-3d-foundation-model-initialized-gaussian-splatting)  
+1. [RoboSnap: One-Shot Real-to-Sim Scene Generation for Generalizable Robot Learning and Evaluation](/202607/12/2607.06699v1-robosnap-one-shot-real-to-sim-scene-generation-for-generalizable-robot-learning-and-evaluation)  
+   标签：评分：9.0/10、query:world-model
+   evidence：单张RGB图像生成可交互的仿真3D场景
+2. [LEEVLA: Seeing What Matters in Latent Environment Evolution for Vision-Language-Action](/202607/12/2607.08182v1-leevla-seeing-what-matters-in-latent-environment-evolution-for-vision-language-action)  
    标签：评分：8.0/10、query:world-model
-   evidence：利用3D基础模型快速初始化高斯基元进行3D重建，实现3D场景生成
-2. [Geometric Reciprocity: Unlocking Self-Supervision for Stereoscopic Video Generation](/202607/11/2607.05354v1-geometric-reciprocity-unlocking-self-supervision-for-stereoscopic-video-generation)  
+   evidence：VLA模型中的潜在世界表示，与世界模型直接相关
+3. [HSA: Hierarchical Slot Attention for Multi-granularity Scene-Decomposition](/202607/12/2607.08249v1-hsa-hierarchical-slot-attention-for-multi-granularity-scene-decomposition)  
    标签：评分：8.0/10、query:world-model
-   evidence：自监督立体视频生成用于3D体验
-3. [MV-Forcing: Long Multi-View Video Generation via 4D-Grounded Spatio-Temporal Self-Forcing](/202607/11/2607.05376v1-mv-forcing-long-multi-view-video-generation-via-4d-grounded-spatio-temporal-self-forcing)  
-   标签：评分：8.0/10、query:world-model
-   evidence：基于4D的多视角视频生成
-4. [DreamCharacter-1: From 3D Generative Foundation Models to Product-Ready Character Generation](/202607/11/2607.07817v1-dreamcharacter-1-from-3d-generative-foundation-models-to-product-ready-character-generation)  
-   标签：评分：8.0/10、query:world-model
-   evidence：从基础模型生成3D角色
+   evidence：多粒度语义场景分解
 
 ### 速读区论文标签
-1. [SharpSplat: Edge-Regularized 3D Gaussian Splatting for High Fidelity Urban Building Reconstruction from UAV images](/202607/11/2607.03872v1-sharpsplat-edge-regularized-3d-gaussian-splatting-for-high-fidelity-urban-building-reconstruction-from-uav-images)  
+1. [CoGen3D: An Agentic Human-AI Co-Design Pipeline for 3D Asset Generation for Virtual Reality](/202607/12/2607.03731v1-cogen3d-an-agentic-human-ai-co-design-pipeline-for-3d-asset-generation-for-virtual-reality)  
    标签：评分：7.0/10、query:world-model
-   evidence：边缘正则化的3DGS用于建筑重建
-2. [AdaptiveSplat:Texture Aware Controllable 3D Gaussian Allocation for Feed-Forward Reconstruction](/202607/11/2607.04256v1-adaptivesplattexture-aware-controllable-3d-gaussian-allocation-for-feed-forward-reconstruction)  
+   evidence：VR场景3D资产生成
+2. [PRISM: Personalized Robotic Dataset Generation via Image-based Scene and Motion Synthesis](/202607/12/2607.04880v1-prism-personalized-robotic-dataset-generation-via-image-based-scene-and-motion-synthesis)  
    标签：评分：7.0/10、query:world-model
-   evidence：可控制的3D高斯分配用于前馈式重建
-3. [Learning Task-Sufficient World Models by Synergizing Agentic Exploration and Structured Modeling](/202607/11/2607.04409v1-learning-task-sufficient-world-models-by-synergizing-agentic-exploration-and-structured-modeling)  
+   evidence：通过场景合成生成个性化机器人数据集
+3. [On the Design of Mixture-of-Experts for Dynamic Gaussian Splatting](/202607/12/2607.08250v1-on-the-design-of-mixture-of-experts-for-dynamic-gaussian-splatting)  
    标签：评分：7.0/10、query:world-model
-   evidence：通过智能体探索学习任务充分的世界模型
-4. [SparseOcc++: Geometry-Aware Sparse Latent Representation for Semantic Occupancy Prediction](/202607/11/2607.04732v1-sparseocc-geometry-aware-sparse-latent-representation-for-semantic-occupancy-prediction)  
-   标签：评分：7.0/10、query:world-model
-   evidence：基于视觉的3D语义占用预测有助于场景理解
-5. [Rendering-Aware Bayesian 3D Gaussian Splatting with Native Uncertainty and Adaptive Complexity Control](/202607/11/2607.05522v1-rendering-aware-bayesian-3d-gaussian-splatting-with-native-uncertainty-and-adaptive-complexity-control)  
+   evidence：使用混合专家处理动态3D高斯泼溅，可用于3D场景生成
+4. [SAF3R: Dynamic Sparse Attention for Feed-Forward 3D Reconstruction Transformers](/202607/12/2607.03612v1-saf3r-dynamic-sparse-attention-for-feed-forward-3d-reconstruction-transformers)  
    标签：评分：6.0/10、query:world-model
-   evidence：贝叶斯3D高斯溅射用于重建
-6. [PVCap: Towards Accurate 3D Dense Captioning via PseudoCap and VoxelCapNet](/202607/11/2607.06097v1-pvcap-towards-accurate-3d-dense-captioning-via-pseudocap-and-voxelcapnet)  
+   evidence：前馈3D重建Transformer的动态稀疏注意力，提升场景生成效率
+5. [DeSeG: Decoupling Semantic Intent and Geometric Constraints for Physically Plausible Human-Scene Interaction](/202607/12/2607.05787v1-deseg-decoupling-semantic-intent-and-geometric-constraints-for-physically-plausible-human-scene-interaction)  
    标签：评分：6.0/10、query:world-model
-   evidence：通过密集字幕实现3D场景理解
-7. [Revisiting Scene Graph Generation from the Perspective of Detector-Conditioned Reachability](/202607/11/2607.06176v1-revisiting-scene-graph-generation-from-the-perspective-of-detector-conditioned-reachability)  
+   evidence：面向物理合理的人-场景交互的空间推理
+6. [GaussFusion: Towards Multimodal 3D Gaussian Pretraining](/202607/12/2607.05906v1-gaussfusion-towards-multimodal-3d-gaussian-pretraining)  
    标签：评分：6.0/10、query:world-model
-   evidence：场景图生成是场景理解的核心任务之一
-8. [Ego-Human Motion Prediction with 3D-Aware LLM](/202607/11/2607.07001v1-ego-human-motion-prediction-with-3d-aware-llm)  
+   evidence：多模态3D高斯预训练用于场景理解
+7. [Wat3R: Underwater 3D Geometry Learning without Annotations](/202607/12/2607.08772v1-wat3r-underwater-3d-geometry-learning-without-annotations)  
    标签：评分：6.0/10、query:world-model
-   evidence：使用3D场景上下文的ego视角人体运动预测
-9. [Geometry and Gradient-based Partitioning for Panoramic Outdoor Reconstruction](/202607/11/2607.08769v1-geometry-and-gradient-based-partitioning-for-panoramic-outdoor-reconstruction)  
-   标签：评分：6.0/10、query:world-model
-   evidence：全景室外3D重建的分区方法
-10. [ZipDepth: Bringing Lightweight Zero-Shot Monocular Depth Anywhere, on Any Device](/202607/11/2607.08771v1-zipdepth-bringing-lightweight-zero-shot-monocular-depth-anywhere-on-any-device)  
-   标签：评分：6.0/10、query:world-model
-   evidence：轻量级单目深度估计用于场景理解
+   evidence：水下场景的跨域半监督3D重建
 
 
 <div class="dpr-home-promo-card">
