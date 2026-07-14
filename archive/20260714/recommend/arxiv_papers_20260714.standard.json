@@ -1,0 +1,633 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-14T20:16:30.560403+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 9,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 9,
+    "quick_skim_target": 11,
+    "quick_selected": 9
+  },
+  "deep_dive": [
+    {
+      "id": "2607.11673v1",
+      "source": "arxiv",
+      "title": "ABot-3DWorld 0: A Universal World Model to Explore Any 3D Space",
+      "abstract": "We present ABot-3DWorld 0, a universal multimodal 3D world model that turns text, image, and video inputs into high-fidelity, explorable 3D worlds. At the heart of our framework is a unified Spatial Generative Primitive (SGP), a compact tuple of a high-quality panorama and a spatial point cloud that delivers an efficient description of any 3D space. Multimodal inputs are first lifted into this primitive; a 3D-consistent panoramic video generator then explores the primitive along a planned trajectory; finally, our panoramic video reconstruction engine converts the generated video into a clean, photorealistic 3D Gaussian Splatting (3DGS) world. This pipeline covers two regimes: rich inputs (multi-view sets, casual video) are lifted into the SGP through a geometry-rigorous recovery that mirrors the observed scene, while a single image or sentence is completed generatively into a creative world. The result is one low-barrier engine for general 3D content creation that further anchors generated worlds to geographic points of interest, enabling map-native spatial exploration at consumer scale. Experiments show that ABot-3DWorld 0 sets the state of the art among open-source methods and demonstrates stronger scene fidelity than Marble under rich multimodal inputs.",
+      "authors": [
+        "Mingchao Sun",
+        "Luyang Tang",
+        "Yu Liu",
+        "Xu Yan",
+        "Zhan Li",
+        "Yunwei Zhang",
+        "Fei Yu",
+        "Zengye Ge",
+        "Yumin Liu",
+        "Jiacheng Zhang",
+        "Yongchang Zhang",
+        "Jiawei Zhang",
+        "Zhicheng Liu",
+        "Zhongxu Sun",
+        "Tianjian Ouyang",
+        "Wenzheng Chen",
+        "Shixing Yang",
+        "Nianfei Fan",
+        "Guodong Sun",
+        "Huan Li",
+        "Zheng Zhou",
+        "Yongze Li",
+        "Yingliang Peng",
+        "Mengmeng Du",
+        "Yuan Liu",
+        "Haozhe Shi",
+        "Chunnuo Gong",
+        "Chengzhen Yu",
+        "Chunxue Jia",
+        "Yang Liu",
+        "Shiying Zeng",
+        "Junnan Lai",
+        "Hang Zhang",
+        "Ning Guo",
+        "Baoquan Chen",
+        "Mu Xu",
+        "Hongyu Pan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T15:14:48+00:00",
+      "link": "https://arxiv.org/pdf/2607.11673v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "world model; 3D world generation and exploration",
+      "llm_evidence_cn": "世界模型；3D世界生成与探索",
+      "llm_evidence": "世界模型；3D世界生成与探索",
+      "canonical_evidence": "世界模型；3D世界生成与探索",
+      "llm_tldr_en": "ABot-3DWorld 0 is a universal multimodal 3D world model that creates explorable 3D worlds from text/image/video inputs using a unified Spatial Generative Primitive.",
+      "llm_tldr_cn": "针对现有3D世界模型输入模态有限且重构质量不高的问题，本文提出ABot-3DWorld 0。核心是统一空间生成基元（SGP），将多模态输入提升为全景+点云表示，再通过3D一致全景视频生成器和重建引擎获得高质量的3D高斯泼溅世界。实验证明该方法能从文本、图像或视频生成高保真可探索3D场景，是真正意义上的通用世界模型。",
+      "llm_tldr": "针对现有3D世界模型输入模态有限且重构质量不高的问题，本文提出ABot-3DWorld 0。核心是统一空间生成基元（SGP），将多模态输入提升为全景+点云表示，再通过3D一致全景视频生成器和重建引擎获得高质量的3D高斯泼溅世界。实验证明该方法能从文本、图像或视频生成高保真可探索3D场景，是真正意义上的通用世界模型。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.10050v1",
+      "source": "arxiv",
+      "title": "SyncSpace: Layout-Conditioned 3D Gaussian Splatting for Space Reskinning in Mixed Reality",
+      "abstract": "We present SyncSpace, a system that achieves both spatial alignment and visual consistency between a generated 3DGS world and physical space. We first scan the space via depth sensing to extract 3D bounding boxes, which we render into a layout-only panorama and feed as a geometric prior to a generative world model, producing a Gaussian splat scene in which objects are re-semantized to fit a target style without per-object control. We then align the generated scene to physical space with a coarse-to-fine registration algorithm, refined manually via pinch gestures when automatic registration does not converge. We demonstrate a hand-tracked engulfment interaction in which the virtual world rises to replace the physical space, and show a single space reskinned into multiple stylistically distinct worlds with its layout preserved.",
+      "authors": [
+        "Qinchuan Zhang",
+        "Weibo Xu",
+        "Yunge Wen"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-11T00:16:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.10050v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "generative world model for 3D scene reskinning with layout conditioning",
+      "llm_evidence_cn": "基于生成世界模型的布局条件3D场景重纹理",
+      "llm_evidence": "基于生成世界模型的布局条件3D场景重纹理",
+      "canonical_evidence": "基于生成世界模型的布局条件3D场景重纹理",
+      "llm_tldr_en": "SyncSpace uses a generative world model to re-semantize 3D Gaussian splat scenes conditioned on layout, achieving spatial alignment for mixed reality.",
+      "llm_tldr_cn": "针对混合现实中虚拟内容与物理空间对齐困难的问题，本文提出SyncSpace系统。通过深度扫描提取3D布局，将其渲染成布局全景图作为几何先验输入生成世界模型，产生符合目标风格的高斯泼溅场景。再通过粗到精配准与手势微调实现准确对齐，支持虚拟世界吞没物理空间的交互体验。",
+      "llm_tldr": "针对混合现实中虚拟内容与物理空间对齐困难的问题，本文提出SyncSpace系统。通过深度扫描提取3D布局，将其渲染成布局全景图作为几何先验输入生成世界模型，产生符合目标风格的高斯泼溅场景。再通过粗到精配准与手势微调实现准确对齐，支持虚拟世界吞没物理空间的交互体验。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.10461v1",
+      "source": "arxiv",
+      "title": "Annotation-Free Furniture Codes: What They Encode, and How Far They Transfer",
+      "abstract": "Layout-based 3D scene synthesizers place each object using two human-annotated channels: a categorical class label and a canonical-pose convention. We ask whether a single self-supervised token derived from object geometry can replace both, and study such tokens directly as a representation, decoupled from any synthesizer. A Finite Scalar Quantization (FSQ) point-cloud autoencoder is chamfer-trained on placed 3D-FUTURE furniture with no labels or pose annotations. Diagnostic probes recover fine-category (62.6 +/- 0.5%), super-category (85.6 +/- 1.3%), and yaw (52.7 +/- 0.5 deg) from the codes alone. Swapping the chamfer target from the rotated to the un-rotated point cloud collapses the yaw signal while raising class recovery, showing the codes' rotation content can be set by the training objective. Scaling across asset libraries needs codes that transfer; on an unseen dataset (ShapeNet), alignment is category-dependent: box-like furniture transfers, organically-shaped furniture does not, and a target-blind augmentation partly closes the gap.",
+      "authors": [
+        "Benjamin Friedman"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-11T19:54:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.10461v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Self-supervised representation for 3D scene generation",
+      "llm_evidence_cn": "面向3D场景生成的自监督表示",
+      "llm_evidence": "面向3D场景生成的自监督表示",
+      "canonical_evidence": "面向3D场景生成的自监督表示",
+      "llm_tldr_en": "Studies self-supervised geometry tokens from FSQ autoencoder that can replace class and pose annotations in layout-based 3D scene synthesizers, achieving fine-category and pose recovery.",
+      "llm_tldr_cn": "布局式3D场景合成器通常依赖人工标注的类别和姿态，这限制了泛化性。本文探究自监督几何编码能否替代这些标注，利用有限标量量化自动编码器从点云中无监督学习家具编码。诊断探针显示，单编码可同时恢复细粒度类别（62.6%）、超类（85.6%）和偏航角（52.7°）。该工作为无标注场景生成中的对象表示提供了新思路。",
+      "llm_tldr": "布局式3D场景合成器通常依赖人工标注的类别和姿态，这限制了泛化性。本文探究自监督几何编码能否替代这些标注，利用有限标量量化自动编码器从点云中无监督学习家具编码。诊断探针显示，单编码可同时恢复细粒度类别（62.6%）、超类（85.6%）和偏航角（52.7°）。该工作为无标注场景生成中的对象表示提供了新思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.10690v1",
+      "source": "arxiv",
+      "title": "Incremental Online Scene Reconstruction by 3D Gaussian Triangulation",
+      "abstract": "Incremental scene reconstruction is essential for real-world applications. Although 3D Gaussian Splatting shows strong potential, most existing approaches require offline conversion of the optimized Gaussians into an intermediate implicit field for explicit mesh extraction, which hinders seamless integration with downstream tasks. To address this limitation, we propose a novel online framework that incrementally reconstructs and updates high-fidelity explicit meshes by directly triangulating a dense geometric Gaussian representation, which supports both high-quality rendering and incremental surface reconstruction. Moreover, we present a direct meshing algorithm that efficiently extracts and updates the mesh from the Gaussian set. To ensure mesh accuracy, we enforce a plane-based pulling constraint that dynamically aligns 3D Gaussian primitives to the approximated local surface. Furthermore, our framework significantly reduces memory and computational overhead during long-sequence processing by dynamically freezing fully optimized historical regions. Experiments on public datasets demonstrate that our method outperforms conventional Gaussian-based methods on both rendering quality and reconstruction accuracy.",
+      "authors": [
+        "Yanjin Zhu",
+        "Shaofan Liu",
+        "Jianke Zhu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-12T10:22:18+00:00",
+      "link": "https://arxiv.org/pdf/2607.10690v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "incremental online scene reconstruction via direct triangulation of 3D Gaussians",
+      "llm_evidence_cn": "通过直接三角化3D高斯实现增量在线场景重建",
+      "llm_evidence": "通过直接三角化3D高斯实现增量在线场景重建",
+      "canonical_evidence": "通过直接三角化3D高斯实现增量在线场景重建",
+      "llm_tldr_en": "This work presents an online framework that incrementally reconstructs meshes by directly triangulating dense geometric Gaussians for real-time applications.",
+      "llm_tldr_cn": "针对现有3D高斯泼溅需要离线转换才能提取网格的问题，本文提出增量在线重建框架。通过直接三角化稠密几何高斯表示，同时支持高质量渲染和增量表面重建，无需中间隐式场。提出的网格提取算法可高效更新网格，在多个场景上实现实时在线重建。",
+      "llm_tldr": "针对现有3D高斯泼溅需要离线转换才能提取网格的问题，本文提出增量在线重建框架。通过直接三角化稠密几何高斯表示，同时支持高质量渲染和增量表面重建，无需中间隐式场。提出的网格提取算法可高效更新网格，在多个场景上实现实时在线重建。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.10879v1",
+      "source": "arxiv",
+      "title": "3D Scene Graph Prediction: Generating Hierarchical Models from Partially Observed Environments",
+      "abstract": "Generating realistic 3D indoor scenes is an area of growing interest in computer vision and robotics. Existing methods, often motivated by applications such as interior design, generally focus on object layout generation within a single room. The generation of high-level scene structure, such as room-level layout and traversability, remains underexplored despite its importance for robotics applications. In this paper, we consider the case where a robot has explored part of an environment and needs to predict the unexplored parts to support downstream tasks such as exploration or object search. We propose a top-down framework for synthesizing hierarchical 3D scene graphs, including a room layer -- describing the floor plan and traversability -- and an object layer modeling object layouts within each room. For the room layer, we propose a novel mixed-domain graph diffusion model jointly predicting room categories, floor boundaries, and traversability between rooms. Via corruption and masking, this model supports partial constraints such as incomplete floor plans, avoiding the need for partially observed training data. For the object layer, we integrate an existing mixed discrete-continuous diffusion model for joint prediction of object categories, locations, sizes, and orientations within each room given the floor plan. We compare our method with state-of-the-art occupancy-based and LLM-based floor plan generation methods on a standard benchmark. Compared with an occupancy-based learning baseline, our method generalizes substantially better to out-of-distribution partial floor plans. We also demonstrate our integrated prediction pipeline on real-world scenes from robot-collected data, enabling prediction beyond explored areas.",
+      "authors": [
+        "Siyi H",
+        "Jared Strade",
+        "Hyungtae Lim",
+        "Luca Carlone"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-12T18:52:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.10879v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "3D scene generation; hierarchical scene graph prediction",
+      "llm_evidence_cn": "3D场景生成；层次场景图预测",
+      "llm_evidence": "3D场景生成；层次场景图预测",
+      "canonical_evidence": "3D场景生成；层次场景图预测",
+      "llm_tldr_en": "3D Scene Graph Prediction generates hierarchical indoor 3D scene models from partial observations, supporting exploration and object search.",
+      "llm_tldr_cn": "针对机器人仅探索部分环境时需要预测未知区域的问题，本文提出层次化3D场景图生成框架。从部分观测出发，先预测房间布局和可通行区域，再生成物体布局，形成完整的3D场景图。实验证明该方法能有效补充未探索区域，支持下游导航和搜索任务，是3D场景生成与理解相结合的范例。",
+      "llm_tldr": "针对机器人仅探索部分环境时需要预测未知区域的问题，本文提出层次化3D场景图生成框架。从部分观测出发，先预测房间布局和可通行区域，再生成物体布局，形成完整的3D场景图。实验证明该方法能有效补充未探索区域，支持下游导航和搜索任务，是3D场景生成与理解相结合的范例。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.10995v1",
+      "source": "arxiv",
+      "title": "AsySplat: Efficient Asymmetric 3D Gaussian Splatting for Long-Sequence Scene Modeling",
+      "abstract": "Recent generalizable 3D Gaussian Splatting models have advanced long-sequence novel view synthesis (NVS), but at the cost of substantial redundant computation. We identify that the redundancy can be mitigated based on two observations: (i) high-precision geometry is not strictly required for high-quality NVS; (ii) appearance learning is generally easier than geometry recovery. Motivated by these insights, we propose an asymmetric architecture that decouples geometry and appearance modeling. The geometry branch processes coarse-grained tokens with most of the parameters for multi-view reconstruction, while the appearance branch operates on fine-grained tokens to capture details using significantly fewer parameters. The two branches interact through bilateral connections, enabling mutual guidance for their respective tasks. This task-aware asymmetry reduces the computational redundancy and allocates the computation more judiciously, thereby increasing parameter efficiency and enabling smaller models to achieve strong performance. On 32-view 960P inputs, our model matches optimization-based methods while delivering nearly 800x speedup, and surpasses the zero-shot performance of state-of-the-art generalizable models with markedly fewer parameters and reduced training/inference overhead, achieving an overall efficiency improvement.",
+      "authors": [
+        "Yingji Zhong",
+        "Dave Zhenyu Chen",
+        "Fuzhao Ou",
+        "Youyu Chen",
+        "Zhihao Li",
+        "Lanqing Hong",
+        "Dan Xu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T01:39:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.10995v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "asymmetric 3D Gaussian splatting for long-sequence scene modeling",
+      "llm_evidence_cn": "用于长序列场景建模的非对称3D高斯泼溅",
+      "llm_evidence": "用于长序列场景建模的非对称3D高斯泼溅",
+      "canonical_evidence": "用于长序列场景建模的非对称3D高斯泼溅",
+      "llm_tldr_en": "AsySplat introduces an asymmetric architecture for 3D Gaussian Splatting that decouples geometry and appearance, enabling efficient long-sequence novel view synthesis.",
+      "llm_tldr_cn": "可泛化3D高斯泼溅模型在长序列新视角合成中计算冗余严重。本文提出非对称架构，将几何与外观建模解耦：几何分支处理粗粒度令牌，外观分支处理细粒度令牌，大幅减少计算量。该方法在保持高质量合成的同时显著提升效率，为大规模3D场景生成提供了实用方案，直接对应3D场景生成需求。",
+      "llm_tldr": "可泛化3D高斯泼溅模型在长序列新视角合成中计算冗余严重。本文提出非对称架构，将几何与外观建模解耦：几何分支处理粗粒度令牌，外观分支处理细粒度令牌，大幅减少计算量。该方法在保持高质量合成的同时显著提升效率，为大规模3D场景生成提供了实用方案，直接对应3D场景生成需求。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.11173v1",
+      "source": "arxiv",
+      "title": "When Depth Is Better Told Than Shown: Depth-Ordinal Prompting for Vision-Language Spatial Reasoning",
+      "abstract": "Vision-language models (VLMs) are expected to reason about physical space -- which object is closer, what lies behind what, and how objects are arranged in 3D -- yet they still struggle with such spatial judgments. A natural remedy is to show the model a depth map, but we find that this can make performance worse. We show that depth is not absent: it reaches the language model, but becomes difficult to access for downstream reasoning, while rendered pseudo-depth maps act as noisy auxiliary images that frozen VLMs cannot easily regulate. We propose Depth-Ordinal Prompting (DOP), a training-free method that converts monocular depth into a single question-targeted ordinal text cue at the queried objects, without adding a depth image, training a module, injecting features, or using labels. Our key finding is form dependence: the same depth signal can hurt when shown as an image but help when told as text.Across benchmarks, models, and depth estimators, DOP improves spatial reasoning when pseudo-depth provides reliable object-level ordering and remains largely neutral in strong original-image regimes. It is also competitive with the strongest training-free depth-prompting alternative while being simpler and more targeted.",
+      "authors": [
+        "Quynh Vo",
+        "Phuc Dao",
+        "Cong-Duy Nguyen",
+        "Thong Nguyen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T07:13:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.11173v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "DOP enhances spatial reasoning in VLMs by converting depth into ordinal text cues",
+      "llm_evidence_cn": "通过将深度转换为有序文本线索增强VLM的空间推理",
+      "llm_evidence": "通过将深度转换为有序文本线索增强VLM的空间推理",
+      "canonical_evidence": "通过将深度转换为有序文本线索增强VLM的空间推理",
+      "llm_tldr_en": "Depth-Ordinal Prompting (DOP) improves VLM spatial reasoning by converting monocular depth into ordinal text cues for query objects, without adding depth images.",
+      "llm_tldr_cn": "视觉语言模型在空间推理上表现不佳，直接输入深度图反而有害。本文提出深度有序提示（DOP），将单目深度转换为针对查询对象的有序文本线索，无需额外训练或深度图。实验显示DOP在多个空间推理基准上显著提升性能，揭示了利用深度信息的更好方式。",
+      "llm_tldr": "视觉语言模型在空间推理上表现不佳，直接输入深度图反而有害。本文提出深度有序提示（DOP），将单目深度转换为针对查询对象的有序文本线索，无需额外训练或深度图。实验显示DOP在多个空间推理基准上显著提升性能，揭示了利用深度信息的更好方式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.06534v2",
+      "source": "arxiv",
+      "title": "CAIRN: Cross-Room 3D Scene Understanding with Topology-Aware Large Multimodal Models",
+      "abstract": "Existing 3D scene-grounded Large Language Models (3D-LLMs) focus on answering questions grounded in simplified single-room 3D scenes, lacking the ability to reason over real-world household environments containing multiple interconnected rooms and diverse object categories. We introduce CAIRN, a topology-aware 3D-LLM for multi-room 3D scene understanding. CAIRN aligns transformer attention with scene hierarchy, giving the model explicit awareness of object-level relations and room-level connectivity. It enriches object tokens with room-local relational context via a graph neural network, introduces learned room tokens for room-level abstraction, and applies a hierarchical attention mask with geometric bias to route information according to scene topology. CAIRN is developed on CAIRN-MR, a benchmark we introduce on HM3D for multi-room 3D scene understanding, covering grounding, captioning, and four question-answering tasks that progressively evaluate from intra-room perception to cross-room reasoning. Experiments show that CAIRN outperforms prior 3D-LLMs by a large margin across all CAIRN-MR tasks while remaining competitive on five single-room benchmarks.",
+      "authors": [
+        "He Liang",
+        "Chenyang Ma",
+        "Yiming Zhang",
+        "Sangyun Shin",
+        "Andrew Markham",
+        "Niki Trigoni",
+        "Yuhang He"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-07T17:39:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.06534v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "multi-room 3D scene understanding with topology-aware model",
+      "llm_evidence_cn": "多房间3D场景理解与拓扑感知模型",
+      "llm_evidence": "多房间3D场景理解与拓扑感知模型",
+      "canonical_evidence": "多房间3D场景理解与拓扑感知模型",
+      "llm_tldr_en": "CAIRN introduces a topology-aware 3D-LLM for multi-room scene understanding, using graph networks and hierarchical attention to reason over room connectivity and object relations.",
+      "llm_tldr_cn": "现有3D-LLM仅能处理简化单房间场景，无法应对真实多房间环境。CAIRN提出拓扑感知的3D-LLM，通过图神经网络丰富对象令牌的局部关系上下文，引入房间令牌进行房间级抽象，并应用分层注意力掩码指导信息路由。该方法在跨房间场景理解任务上显著提升了推理能力。",
+      "llm_tldr": "现有3D-LLM仅能处理简化单房间场景，无法应对真实多房间环境。CAIRN提出拓扑感知的3D-LLM，通过图神经网络丰富对象令牌的局部关系上下文，引入房间令牌进行房间级抽象，并应用分层注意力掩码指导信息路由。该方法在跨房间场景理解任务上显著提升了推理能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.10826v1",
+      "source": "arxiv",
+      "title": "3D-DefectBench: A Controlled Factorial Study of Vision-Language Model Evaluation Pipelines for Fine-Grained 3D Generation Defects",
+      "abstract": "Automated evaluation is essential for scaling generative 3D systems, where exhaustive human review is costly and slow. However, the reliability of an automated judge depends on the entire evaluation pipeline, not only the underlying vision-language model (VLM), but also how assets are rendered, what visual evidence is provided, how the task is specified, and how human reference labels are constructed. We introduce 3D-DefectBench, a benchmark and framework for systematic analysis of VLM-based 3D defect detection pipelines. It complements holistic ratings and pairwise preferences with nine fine-grained binary defects spanning geometry, texture, and prompt adherence, providing actionable diagnostics for generator development and judge evaluation. Using a balanced factorial design, we vary four pipeline factors, VLM, camera protocol, visual input, and prompt schema, across 84 inference designs and approximately 3.2 million scored defect decisions, followed by staged validation on a broader set of frontier models. Model choice is the largest determinant of agreement with human labels, but the remaining factors also affect performance, interact with model selection, and can change the best configuration. Within the evaluated design space, a compact six-view RGB protocol performs comparably to denser multi-view settings and inputs augmented with depth or surface normals, making it a strong cost-effective default. Under this standardized pipeline, the best of 12 VLM judges still lag behind trained human labelers, while texture agreement drops sharply when expert-consensus labels are replaced by noisier silver labels. These findings show that automated judges should be evaluated as complete pipelines and calibrated across human reference regimes, rather than benchmarked only as standalone models. We release labels, prompts, predictions, and Croissant metadata on Hugging Face.",
+      "authors": [
+        "Zhenyu Zhao",
+        "Nanshan Jia",
+        "Jihyeon Je",
+        "Yifu Tang",
+        "Alvin Chan",
+        "Michael Spedden",
+        "Michael V. Palleschi",
+        "Sui Huang",
+        "Jingshen Wang",
+        "Zeyu Zheng"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "published": "2026-07-12T16:41:24+00:00",
+      "link": "https://arxiv.org/pdf/2607.10826v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Benchmark for evaluating 3D generation defects",
+      "llm_evidence_cn": "用于评估3D生成缺陷的基准",
+      "llm_evidence": "用于评估3D生成缺陷的基准",
+      "canonical_evidence": "用于评估3D生成缺陷的基准",
+      "llm_tldr_en": "Introduces 3D-DefectBench, a benchmark for systematic analysis of VLM-based 3D defect detection pipelines, covering nine fine-grained defects in geometry, texture, and prompt adherence.",
+      "llm_tldr_cn": "生成式3D系统的可靠评估至关重要，但现有自动评估缺乏细粒度分析。3D-DefectBench构建了受控因子实验框架，系统评估视觉语言模型（VLM）在3D缺陷检测中的各个流水线环节。涵盖几何、纹理和提示遵循性等九个细粒度缺陷，提供可操作的诊断信息。该基准帮助发现VLM评估的偏见和弱点，推动3D生成质量评测的规范化。",
+      "llm_tldr": "生成式3D系统的可靠评估至关重要，但现有自动评估缺乏细粒度分析。3D-DefectBench构建了受控因子实验框架，系统评估视觉语言模型（VLM）在3D缺陷检测中的各个流水线环节。涵盖几何、纹理和提示遵循性等九个细粒度缺陷，提供可操作的诊断信息。该基准帮助发现VLM评估的偏见和弱点，推动3D生成质量评测的规范化。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.11184v1",
+      "source": "arxiv",
+      "title": "GeoGS-SLAM: Online Monocular Reconstruction Using Gaussian Splatting with Geometric Priors",
+      "abstract": "SLAM methods based on 3D Gaussian Splatting (3DGS) have demonstrated impressive tracking and mapping performance, but typically require additional geometric information from external depth sensors. Meanwhile, recent SLAM systems that leverage geometric priors from pre-trained feed-forward models enable real-time dense reconstruction, yet often discard original RGB information during optimization, thus degrading overall reconstruction quality. We present GeoGS-SLAM, an online monocular dense reconstruction system that combines the 3DGS-based map representation with learned geometric priors. Given uncalibrated RGB input, we first employ a feed-forward visual geometry model to predict camera and scene priors. The Gaussian scene map is then expanded by directly sampling Gaussian primitives from both RGB input and geometric priors. Camera poses and the scene map are jointly optimized through a coarse-to-fine strategy that minimizes both photometric and geometric losses. To ensure global consistency, we further incorporate online loop closure detection and pose graph optimization. Extensive experiments across indoor and outdoor benchmarks demonstrate that GeoGS-SLAM achieves superior rendering quality and tracking accuracy compared to state-of-the-art methods while maintaining online real-time performance. Project page: https://rlgao.github.io/geogs_slam.",
+      "authors": [
+        "Ruilan Gao",
+        "Letian Jin",
+        "Yu Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-13T07:32:09+00:00",
+      "link": "https://arxiv.org/pdf/2607.11184v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "GeoGS-SLAM uses 3DGS with geometric priors for online monocular dense reconstruction",
+      "llm_evidence_cn": "结合3DGS和几何先验的在线单目密集重建",
+      "llm_evidence": "结合3DGS和几何先验的在线单目密集重建",
+      "canonical_evidence": "结合3DGS和几何先验的在线单目密集重建",
+      "llm_tldr_en": "GeoGS-SLAM combines 3D Gaussian Splatting with learned geometric priors for online monocular dense reconstruction, improving mapping quality without external depth sensors.",
+      "llm_tldr_cn": "现有SLAM方法需要外部深度传感器或丢失RGB信息导致重建质量下降。GeoGS-SLAM将3D高斯泼溅与学习到的几何先验相结合，仅需单目RGB输入即可在线重建密集场景，同时保持外观质量。实验表明该方法在跟踪和建图性能上优于先前的工作，为无需深度传感器的实时3D场景重建提供了有效方案。",
+      "llm_tldr": "现有SLAM方法需要外部深度传感器或丢失RGB信息导致重建质量下降。GeoGS-SLAM将3D高斯泼溅与学习到的几何先验相结合，仅需单目RGB输入即可在线重建密集场景，同时保持外观质量。实验表明该方法在跟踪和建图性能上优于先前的工作，为无需深度传感器的实时3D场景重建提供了有效方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.10237v1",
+      "source": "arxiv",
+      "title": "CoSAG: Compact Semantic Anchor Gaussians via Training-Free Rate-Distortion Coding",
+      "abstract": "Open-vocabulary 3D scene understanding is commonly achieved by embedding 2D vision-language features such as CLIP into a 3D Gaussian Splatting scene, turning it into a text-queryable semantic field. However, attaching a high-dimensional feature to each of millions of Gaussians inflates a single scene to gigabytes, which makes storage and deployment the real bottleneck of these fields. Existing compact methods each learn and ship a per-scene codec, an autoencoder, a quantized codebook, or a distilled feature field, entangling field construction with field storage and never compressing the per-Gaussian assignment that holds the bulk of the cost. We argue that construction and storage should be decoupled, and that storage is a rate-distortion problem over the per-Gaussian binding to a small anchor table, a structure no prior open-vocabulary method compresses. We present CoSAG, which constructs the field without any per-scene training through a closed-form transmittance-weighted lift, spatially grounded semantic anchors, and multi-view denoising, and stores it with a spatially predictive entropy coder that ships no decoder. Because the anchors are spatially grounded, the binding is predictable and therefore highly compressible. The transmittance-weighted lift and multi-view denoising yield a clean, view-consistent assignment, so the entropy coder spends almost no rate on correcting noise and instead codes only the residual against its spatial prediction. CoSAG reaches sub-megabyte storage while matching or exceeding the state of the art across the 2D-rendered, 3D-selection, and dense-LSeg protocols, reducing field size by 37 to 76x relative to LangSplatV2 at higher accuracy.",
+      "authors": [
+        "Yuang Jia",
+        "Jinlong Wang",
+        "Junhong Lin",
+        "Ruiting Dai",
+        "Wei Gao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-11T09:53:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.10237v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D scene understanding through compact semantic Gaussians",
+      "llm_evidence_cn": "通过紧凑语义高斯实现3D场景理解",
+      "llm_evidence": "通过紧凑语义高斯实现3D场景理解",
+      "canonical_evidence": "通过紧凑语义高斯实现3D场景理解",
+      "llm_tldr_en": "Proposes CoSAG, a training-free rate-distortion coding method to compress per-Gaussian semantic features for open-vocabulary 3D scene understanding, decoupling construction from storage.",
+      "llm_tldr_cn": "在开放词汇3D场景理解中，每个高斯体附加高维语义特征导致存储膨胀。针对此问题，提出CoSAG，一种无需训练的率失真编码方法，将语义特征压缩为紧凑的锚点表示。该方法解耦了场景构建与存储，在保持高精度检索的同时大幅降低存储开销。实验表明，CoSAG在多个数据集上实现了与全精度方法相当的理解性能，而存储成本降低数个数量级，为实际部署提供了可行方案。",
+      "llm_tldr": "在开放词汇3D场景理解中，每个高斯体附加高维语义特征导致存储膨胀。针对此问题，提出CoSAG，一种无需训练的率失真编码方法，将语义特征压缩为紧凑的锚点表示。该方法解耦了场景构建与存储，在保持高精度检索的同时大幅降低存储开销。实验表明，CoSAG在多个数据集上实现了与全精度方法相当的理解性能，而存储成本降低数个数量级，为实际部署提供了可行方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.11196v1",
+      "source": "arxiv",
+      "title": "Slot-RAE: Streamlining Object-Centric Learning via Direct Representation Auto-Encoders",
+      "abstract": "Deploying object-centric models for real-world scene understanding typically requires complex pipelines to achieve both robust scene decomposition and high-fidelity generation. Recent diffusion-based approaches have improved visual quality, but they almost universally rely on heavy, pretrained generative priors (e.g., Stable Diffusion) and external VAE latent spaces. In this paper, we propose Slot-RAE, a much simpler, fully integrated framework that operates directly within the continuous semantic feature space of visual foundation models (e.g., DINOv3). Slot-RAE employs a feature-space diffusion process using a Diffusion Transformer (DiT) decoder and a Representation Alignment (REPA) head. Unlike existing diffusion-based objectcentric methods that rely heavily on subsidized text-toimage priors, the generative core of Slot-RAE (Slot Attention and the DiT) is trained from scratch within the frozen VFM feature space. This eliminates the need for VAE bottlenecks and task-agnostic generative pre-training. Experiments on the COCO dataset demonstrate that despite its architectural simplicity, Slot-RAE achieves state-of-the-art results. It delivers comparable unsupervised object discovery, higher-fidelity image reconstruction, and robust zero-shot compositionality, all while being significantly faster and more computationally efficient than existing object-centric latent diffusion models.",
+      "authors": [
+        "Alexandre Chapin",
+        "Emmanuel Dellandrea",
+        "Liming Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T07:47:09+00:00",
+      "link": "https://arxiv.org/pdf/2607.11196v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Slot-RAE enables object-centric scene understanding via direct representation auto-encoders",
+      "llm_evidence_cn": "通过直接表示自编码器实现以对象为中心的场景理解",
+      "llm_evidence": "通过直接表示自编码器实现以对象为中心的场景理解",
+      "canonical_evidence": "通过直接表示自编码器实现以对象为中心的场景理解",
+      "llm_tldr_en": "Slot-RAE simplifies object-centric learning by operating in foundation model feature space with diffusion transformer decoder, achieving robust scene decomposition and generation without heavy pretrained priors.",
+      "llm_tldr_cn": "现有对象中心模型依赖复杂流水线和预训练生成先验。Slot-RAE直接在视觉基础模型的特征空间中操作，使用扩散Transformer解码器和表示对齐头，实现简洁的场景分解与高保真生成。实验表明其在不使用外部VAE或稳定扩散的情况下达到竞争性能，为场景理解提供了更简单高效的框架。",
+      "llm_tldr": "现有对象中心模型依赖复杂流水线和预训练生成先验。Slot-RAE直接在视觉基础模型的特征空间中操作，使用扩散Transformer解码器和表示对齐头，实现简洁的场景分解与高保真生成。实验表明其在不使用外部VAE或稳定扩散的情况下达到竞争性能，为场景理解提供了更简单高效的框架。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.11285v1",
+      "source": "arxiv",
+      "title": "SalientGS: Unified SfM-to-3DGS with Importance-Guided MCMC Gaussian Allocation",
+      "abstract": "Reconstructing 3D scenes from unordered images remains bottlenecked by expensive Structure-from-Motion (SfM) preprocessing and frozen pose interfaces. We present SalientGS, a unified SfM-to-3D Gaussian Splatting (3DGS) pipeline. Its central contribution is importance-guided Markov Chain Monte Carlo (MCMC) Gaussian allocation, which aggregates multi-view residuals into per-Gaussian underfit and redundancy signals. These signals define a smooth importance-weighted sampling distribution that biases both birth and relocation toward underfit regions. This reallocates capacity from well-fit areas without altering the underlying stochastic gradient Langevin dynamics (SGLD). SalientGS achieves end-to-end reconstruction in 15 minutes with state-of-the-art perceptual quality. The supplementary material provides dedicated sections for Per-Scene Qualitative Comparisons and Per-Image Learned Perceptual Image Patch Similarity (LPIPS) Analysis, including failure cases. Code and evaluation scripts are available at https://github.com/Six-Bit-TX/SalientGS.",
+      "authors": [
+        "Tianyu Xiong",
+        "Rui Li",
+        "Suning Ge",
+        "Jiaqi Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T09:06:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.11285v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Unified SfM-to-3DGS pipeline for 3D reconstruction",
+      "llm_evidence_cn": "统一的SfM到3DGS流水线用于3D重建",
+      "llm_evidence": "统一的SfM到3DGS流水线用于3D重建",
+      "canonical_evidence": "统一的SfM到3DGS流水线用于3D重建",
+      "llm_tldr_en": "Introduces SalientGS, an end-to-end pipeline unifying SfM and 3D Gaussian Splatting with importance-guided MCMC allocation, achieving state-of-the-art reconstruction in 15 minutes.",
+      "llm_tldr_cn": "现有3D高斯溅射（3DGS）依赖昂贵的SfM预处理且位姿固定，限制效率。SalientGS提出统一SfM到3DGS的端到端流水线，核心是重要性引导的马尔可夫链蒙特卡洛高斯分配，根据多视角残差动态分配高斯容量。在15分钟内实现高质量重建，在多个标准数据集上达到最优结果，显著降低3DGS的预处理成本。",
+      "llm_tldr": "现有3D高斯溅射（3DGS）依赖昂贵的SfM预处理且位姿固定，限制效率。SalientGS提出统一SfM到3DGS的端到端流水线，核心是重要性引导的马尔可夫链蒙特卡洛高斯分配，根据多视角残差动态分配高斯容量。在15分钟内实现高质量重建，在多个标准数据集上达到最优结果，显著降低3DGS的预处理成本。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.10762v1",
+      "source": "arxiv",
+      "title": "TOLiD: Bridging the Architecture Gap in Vision Foundation Model to LiDAR Pretraining via Token Lifting for Distillation",
+      "abstract": "Cross-modal distillation from Vision Foundation Models (VFMs) to LiDAR backbones has recently emerged as a self-supervised pretraining strategy that reduces reliance on dense point-wise annotation for 3D scene understanding. However, existing distillation pipelines typically treat the VFM as a frozen feature source and train a heterogeneous 3D backbone to match fixed image embeddings, forcing the student to bridge both the modality gap and the cross-architecture gap between dense ViT token representations and sparse 3D encoders. We propose TOLiD, a self-supervised pretraining method for LiDAR representation learning that addresses this gap by coupling a LiDAR backbone with a student Vision Transformer (ViT) initialized from a frozen VFM teacher and applying supervision over compatible patch-token representations. TOLiD converts the set of point features within each image patch frustum into a token using Frustum Pooling followed by Frustum Attention, and performs token-level distillation with visibility masking. For LiDAR-only deployment, we lift token features back to per-point representations using masked bilinear sampling to avoid patches that have limited LiDAR points. We extensively evaluate TOLiD on five heterogeneous LiDAR datasets and four cross-sensor adaptation pairs, demonstrating improved transfer with frozen backbones and lightweight heads.",
+      "authors": [
+        "Sutharsan Mahendran",
+        "Darshana Priyasad",
+        "Kaushik Roy",
+        "Tharindu Fernando",
+        "Sridha Sridharan",
+        "Clinton Fookes",
+        "Peyman Moghadam"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-07-12T13:37:47+00:00",
+      "link": "https://arxiv.org/pdf/2607.10762v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Self-supervised LiDAR pretraining for 3D scene understanding",
+      "llm_evidence_cn": "面向3D场景理解的自监督LiDAR预训练",
+      "llm_evidence": "面向3D场景理解的自监督LiDAR预训练",
+      "canonical_evidence": "面向3D场景理解的自监督LiDAR预训练",
+      "llm_tldr_en": "Proposes TOLiD to bridge the cross-architecture gap in distilling Vision Foundation Models to LiDAR backbones for 3D scene understanding via token lifting.",
+      "llm_tldr_cn": "将视觉基础模型蒸馏到LiDAR骨干进行3D场景理解时，面临模态和架构双重鸿沟。TOLiD提出令牌提升策略，将LiDAR骨干与学生视觉Transformer耦合，在自监督预训练中对齐稀疏点云与密集图像特征。在多个下游任务上，TOLiD显著提升LiDAR表示的质量，减少对密集标注的依赖，尤其在小样本场景中优势明显。",
+      "llm_tldr": "将视觉基础模型蒸馏到LiDAR骨干进行3D场景理解时，面临模态和架构双重鸿沟。TOLiD提出令牌提升策略，将LiDAR骨干与学生视觉Transformer耦合，在自监督预训练中对齐稀疏点云与密集图像特征。在多个下游任务上，TOLiD显著提升LiDAR表示的质量，减少对密集标注的依赖，尤其在小样本场景中优势明显。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.10792v1",
+      "source": "arxiv",
+      "title": "MAC-Splat: Multi-Attribute Consistency for High-Fidelity Sparse-View Reconstruction",
+      "abstract": "Reconstructing high-fidelity 3D scenes from sparse-views remains a central problem in generalizable neural rendering. Existing generalizable 3D Gaussian Splatting (3DGS) methods often exhibit geometric artifacts in sparse-view settings, since supervision based solely on 2D photometric losses cannot resolve depth and correspondence ambiguities. To address this issue, we propose MAC-Splat, a training framework built around direct 3D consistency supervision. MAC-Splat builds on the MASt3R geometric backbone and a frozen DINOv3 encoder to obtain semantically informed 2D correspondences, which serve as geometric anchors for 3D supervision. Using these anchors, we define the Multi-Attribute Consistency (MAC) loss. This objective jointly regularizes the 3D attributes of matched Gaussians, including their position, shape, and appearance, by enforcing agreement in a common world coordinate frame. The formulation is robust to outliers and respects the geometry of covariance matrices, which leads to stable training under sparse-view conditions. Experiments on ScanNet++ show that MAC-Splat outperforms strong baselines, with particularly large gains under different overlap regimes. In particular, it improves average PSNR over Splatt3R by more than 4.5 dB, reduces LPIPS, and maintains performance as the camera pose gap increases. These results indicate that a direct, multi-attribute 3D consistency objective, when combined with high-quality correspondences, is effective for addressing the ill-posed sparse-view reconstruction problem.",
+      "authors": [
+        "Jinqian Yang",
+        "Yichen Wu",
+        "Wanhua Li",
+        "Haokun Lin",
+        "Renzhen Wang",
+        "Xiangchu Feng",
+        "Xixi Jia"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-12T14:50:08+00:00",
+      "link": "https://arxiv.org/pdf/2607.10792v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "multi-attribute consistency for high-fidelity sparse-view 3D reconstruction",
+      "llm_evidence_cn": "多属性一致性实现高保真稀疏视角3D重建",
+      "llm_evidence": "多属性一致性实现高保真稀疏视角3D重建",
+      "canonical_evidence": "多属性一致性实现高保真稀疏视角3D重建",
+      "llm_tldr_en": "MAC-Splat introduces a training framework with Multi-Attribute Consistency loss using geometric anchors from semantic correspondences, improving sparse-view 3DGS reconstruction.",
+      "llm_tldr_cn": "针对稀疏视角下3DGS的几何伪影问题，该文提出MAC-Splat，通过MASt3R和DINOv3获得语义引导的2D对应作为几何锚点，并定义多属性一致性损失联合正则化深度、法向和特征。实验表明，该方法在稀疏视角下显著提升了重建保真度。",
+      "llm_tldr": "针对稀疏视角下3DGS的几何伪影问题，该文提出MAC-Splat，通过MASt3R和DINOv3获得语义引导的2D对应作为几何锚点，并定义多属性一致性损失联合正则化深度、法向和特征。实验表明，该方法在稀疏视角下显著提升了重建保真度。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
