@@ -1,0 +1,534 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-15T21:14:25.639980+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 8,
+    "quick_skim_target": 11,
+    "quick_selected": 8
+  },
+  "deep_dive": [
+    {
+      "id": "2607.11673v2",
+      "source": "arxiv",
+      "title": "ABot-3DWorld 0: A Universal World Model to Explore Any 3D Space",
+      "abstract": "We present ABot-3DWorld 0, a universal multimodal 3D world model that turns text, image, and video inputs into high-fidelity, explorable 3D worlds. At the heart of our framework is a unified Spatial Generative Primitive (SGP), a compact tuple of a high-quality panorama and a spatial point cloud that delivers an efficient description of any 3D space. Multimodal inputs are first lifted into this primitive; a 3D-consistent panoramic video generator then explores the primitive along a planned trajectory; finally, our panoramic video reconstruction engine converts the generated video into a clean, photorealistic 3D Gaussian Splatting (3DGS) world. This pipeline covers two regimes: rich inputs (multi-view sets, casual video) are lifted into the SGP through a geometry-rigorous recovery that mirrors the observed scene, while a single image or sentence is completed generatively into a creative world. The result is one low-barrier engine for general 3D content creation that further anchors generated worlds to geographic points of interest, enabling map-native spatial exploration at consumer scale. Experiments show that ABot-3DWorld 0 sets the state of the art among open-source methods and demonstrates stronger scene fidelity than Marble under rich multimodal inputs.",
+      "authors": [
+        "Mingchao Sun",
+        "Luyang Tang",
+        "Yu Liu",
+        "Xu Yan",
+        "Zhan Li",
+        "Yunwei Zhang",
+        "Fei Yu",
+        "Zengye Ge",
+        "Yumin Liu",
+        "Jiacheng Zhang",
+        "Yongchang Zhang",
+        "Jiawei Zhang",
+        "Zhicheng Liu",
+        "Zhongxu Sun",
+        "Tianjian Ouyang",
+        "Wenzheng Chen",
+        "Shixing Yang",
+        "Nianfei Fan",
+        "Guodong Sun",
+        "Huan Li",
+        "Zheng Zhou",
+        "Yongze Li",
+        "Yingliang Peng",
+        "Mengmeng Du",
+        "Yuan Liu",
+        "Haozhe Shi",
+        "Chunnuo Gong",
+        "Chengzhen Yu",
+        "Chunxue Jia",
+        "Yang Liu",
+        "Shiying Zeng",
+        "Junnan Lai",
+        "Hang Zhang",
+        "Ning Guo",
+        "Baoquan Chen",
+        "Mu Xu",
+        "Hongyu Pan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T15:14:48+00:00",
+      "link": "https://arxiv.org/pdf/2607.11673v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Universal world model turning multimodal inputs into explorable 3D worlds",
+      "llm_evidence_cn": "通用世界模型将多模态输入转化为可探索3D世界",
+      "llm_evidence": "通用世界模型将多模态输入转化为可探索3D世界",
+      "canonical_evidence": "通用世界模型将多模态输入转化为可探索3D世界",
+      "llm_tldr_en": "ABot-3DWorld 0 is a universal world model that generates high-fidelity, explorable 3D worlds from text, image, or video using a Spatial Generative Primitive.",
+      "llm_tldr_cn": "现有3D世界模型无法统一处理多模态输入并生成高质量可探索世界。ABot-3DWorld 0提出空间生成基元（SGP），将文本/图像/视频转换为全景和点云，再通过3D一致视频生成和重建得到3D高斯世界。实验表明其能从稀疏输入生成逼真、可交互的3D场景，在保真度和多样性上达到领先水平。该工作为通用3D世界模型树立了新标杆。",
+      "llm_tldr": "现有3D世界模型无法统一处理多模态输入并生成高质量可探索世界。ABot-3DWorld 0提出空间生成基元（SGP），将文本/图像/视频转换为全景和点云，再通过3D一致视频生成和重建得到3D高斯世界。实验表明其能从稀疏输入生成逼真、可交互的3D场景，在保真度和多样性上达到领先水平。该工作为通用3D世界模型树立了新标杆。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.06401v1",
+      "source": "arxiv",
+      "title": "A Definition and Roadmap for World Models",
+      "abstract": "World models -- internal simulators that learn the structure and dynamics of an environment -- have become one of the most actively debated concepts in AI. From model-based reinforcement learning and video generation to embodied robotics and ultimately, physical AI, researchers across AI subfields are building systems that they call \"world models\", yet there is no consensus on what a world model fundamentally is, what it should predict, or how it should be built. This perspective article provides a scientific definition of world models, discussions of their key technical aspects, and a staged roadmap for developing effective world models.",
+      "authors": [
+        "Xinyuan Chen",
+        "Haoyu Guo",
+        "Shi Guo",
+        "Bingqi Jiang",
+        "Chunhua Shen",
+        "Xing Shen",
+        "Tianfan Xue",
+        "Yufei Xue",
+        "Mulin Yu",
+        "Weinan Zhang",
+        "Bin Zhao",
+        "Bowen Zhou",
+        "Ming Zhou"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-07T15:31:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.06401v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "definition and roadmap of world models",
+      "llm_evidence_cn": "世界模型的定义与路线图",
+      "llm_evidence": "世界模型的定义与路线图",
+      "canonical_evidence": "世界模型的定义与路线图",
+      "llm_tldr_en": "This perspective paper provides a scientific definition of world models, discusses key technical aspects, and presents a staged roadmap for developing effective world models across AI subfields.",
+      "llm_tldr_cn": "世界模型概念在AI领域广泛使用但缺乏共识。本文从科学角度定义了世界模型，厘清了其核心技术要素，并提出了分阶段发展路线图。该路线图覆盖从基础模拟到物理AI的各个层级。文章对现有世界模型工作进行了系统梳理，为未来研究提供了指导性框架。对于理解世界模型的内涵和演进具有重要意义。",
+      "llm_tldr": "世界模型概念在AI领域广泛使用但缺乏共识。本文从科学角度定义了世界模型，厘清了其核心技术要素，并提出了分阶段发展路线图。该路线图覆盖从基础模拟到物理AI的各个层级。文章对现有世界模型工作进行了系统梳理，为未来研究提供了指导性框架。对于理解世界模型的内涵和演进具有重要意义。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12319v1",
+      "source": "arxiv",
+      "title": "DM-KG: A Novel Method for Boosting Spatial Cognition of Vision-Language Models in Street View Imagery",
+      "abstract": "As vision-language models (VLMs) are increasingly deployed in geospatial question answering and visual scene understanding, improving their spatial cognition capability on street view imagery for complex logical reasoning has emerged as a key research priority. However, existing VLMs frequently suffer from \"spatial semantic hallucinations\" when perceiving object locations, distances, and directions in real-world street view scenes. Furthermore, such errors are often recalcitrant to tracing and calibration, posing a critical bottleneck for their practical deployment in geospatial tasks. To address this pressing challenge, this study proposes DM-KG (Direction-Metric Knowledge Graph), a structurally grounded spatial representation framework for street view imagery. By explicitly extracting directional and metric relationships between entities from a single 2D image, this framework enhances the spatial reasoning accuracy of VLMs through a structured knowledge graph. Specifically, we integrate panoptic segmentation with metric depth estimation to robustly compute entity-level 3D spatial coordinates. Subsequently, we encode the clock azimuths and Euclidean distances of entity pairs into a JSON-formatted knowledge graph, which is injected into the VLM as an explicit geometric prior to guide spatial reasoning. Experimental results on public spatial question-answering (QA) benchmarks demonstrate that DM-KG reduces the mean absolute error (MAE) in distance estimation by 31.1% and the mean angular error in direction judgment by 65.8%, while simultaneously maintaining a high QA success rate. By establishing a complete, augmented reasoning pipeline, this research significantly improves the spatial cognitive capabilities of VLMs in street view scenarios, thereby providing a flexible, generalized, and interpretable framework for geographic visual question answering (GeoVQA) in open environments.",
+      "authors": [
+        "Xinyue Xu",
+        "Zheng Zhang",
+        "Kunyang Ma",
+        "Ge Zhu",
+        "Lianshuai Cao",
+        "Lei Wang",
+        "Zixuan Li",
+        "Yi Cheng"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T03:52:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.12319v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "boosting spatial cognition of VLMs in street view imagery",
+      "llm_evidence_cn": "增强VLM在街景图像中的空间认知",
+      "llm_evidence": "增强VLM在街景图像中的空间认知",
+      "canonical_evidence": "增强VLM在街景图像中的空间认知",
+      "llm_tldr_en": "DM-KG constructs a structurally grounded spatial representation using Direction-Metric Knowledge Graphs to reduce spatial semantic hallucinations in VLMs for street view scene understanding.",
+      "llm_tldr_cn": "针对视觉语言模型在街景图像中常出现空间语义幻觉（如物体位置、距离、方向错误）的问题，本文提出DM-KG（方向度量知识图谱），通过结构化的空间表示增强VLM的空间认知能力。该方法有效减少了空间推理错误，提升了复杂逻辑推理的准确性。",
+      "llm_tldr": "针对视觉语言模型在街景图像中常出现空间语义幻觉（如物体位置、距离、方向错误）的问题，本文提出DM-KG（方向度量知识图谱），通过结构化的空间表示增强VLM的空间认知能力。该方法有效减少了空间推理错误，提升了复杂逻辑推理的准确性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12356v1",
+      "source": "arxiv",
+      "title": "VistaVLA: Geometry- and Semantic-Aware 3D Gaussian-Grounded VLA for Robotic Manipulation",
+      "abstract": "Vision-Language-Action (VLA) models have emerged as a powerful end-to-end paradigm for robotic manipulation by mapping language instructions and 2D visual inputs directly to actions. However, these models lack an explicit, scene-level 3D representation, limiting their ability to reason over spatial layouts and geometric constraints. While recent efforts incorporate explicit 3D cues, such as depth maps or point clouds, to improve geometric awareness, they primarily capture low-level structures and lack high-level semantic grounding in 3D space. In human cognition, interaction with the physical world relies on a 3D semantic cognitive map - an internal mental model that integrates spatial layouts with semantic context to enable persistent, viewpoint-invariant reasoning. In light of this, we present VistaVLA, a novel two-stage framework that constructs a geometry- and semantics-aware 3D cognitive representation from 3D Gaussian primitives and grounds it as compact context tokens for VLA policy learning. Specifically, VistaVLA lifts multi-view vision-language features into 3D Gaussian primitives, forming geometry-anchored semantic tokens that align view-consistent spatial grounding with 2D visual feature spaces. To make this 3D representation computationally tractable for effective VLA control, we introduce Merge-then-Query (MtQ), a token summarization mechanism. MtQ compresses dense Gaussian primitives into a highly compact set of spatially informative tokens, achieving a 99% token reduction while preserving action-relevant 3D layouts and semantic context. Extensive evaluations in both simulated and real-world environments demonstrate the effectiveness of VistaVLA. Notably, in real-world scenarios, VistaVLA improves success rates by 22.8% across seven real-world tasks and by 30.0% over the VLA-Adapter baseline on challenging out-of-distribution tasks.",
+      "authors": [
+        "Mohan Liu",
+        "Zhihao Gu",
+        "Xuanyu Chen",
+        "Haitian Zhang",
+        "Kaimin Mao",
+        "Yan Wu",
+        "Wei-Yun Yau",
+        "Lin Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-14T05:08:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.12356v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "3D scene-level representation for spatial reasoning",
+      "llm_evidence_cn": "用于空间推理的3D场景级表示",
+      "llm_evidence": "用于空间推理的3D场景级表示",
+      "canonical_evidence": "用于空间推理的3D场景级表示",
+      "llm_tldr_en": "VistaVLA integrates geometry- and semantic-aware 3D Gaussian grounding into VLA models for robotic manipulation, enabling explicit 3D spatial reasoning and persistent scene understanding.",
+      "llm_tldr_cn": "现有VLA模型缺乏显式3D表示，限制了空间推理能力。本文提出VistaVLA，将几何与语义感知的3D高斯锚定引入VLA，构建了3D语义认知地图。该方法在机器人操作任务中实现了精确的3D空间推理和场景理解。实验证明其显著提升了操作成功率。该研究为3D场景理解与空间推理提供了新的技术路径。",
+      "llm_tldr": "现有VLA模型缺乏显式3D表示，限制了空间推理能力。本文提出VistaVLA，将几何与语义感知的3D高斯锚定引入VLA，构建了3D语义认知地图。该方法在机器人操作任务中实现了精确的3D空间推理和场景理解。实验证明其显著提升了操作成功率。该研究为3D场景理解与空间推理提供了新的技术路径。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.08879v1",
+      "source": "arxiv",
+      "title": "Decoupled Illumination Priors for Spatially Controllable Multi-View Indoor Scene Relighting",
+      "abstract": "Indoor scene relighting demands photorealism, precise spatial control, and strict multi-view consistency. While diffusion-based image editing models enable semantic lighting manipulation via text prompts, enforcing exact 3D light placement often disrupts their generative priors. We propose Lume-Palette, a progressive framework that leverages semantic lighting priors for spatially controllable multi-view indoor relighting. The approach decouples relighting into two stages: (1) illumination distillation, which extracts canonical illumination palettes from a pretrained diffusion model to preserve realistic material-light interactions, and (2) illumination casting, which explicitly maps target spatial lighting conditions defined from coarse 3D geometry. To efficiently handle dense multi-view and multi-modal inputs, we introduce an asymmetric multi-view conditioning strategy that selectively injects essential spatial context. Experiments on diverse synthetic scenes and real-world scenes demonstrate that Lume-Palette produces photorealistic, spatially controllable, and multi-view consistent relighting results. Project Page: https://cjeen.github.io/lumepalette",
+      "authors": [
+        "Chenjian Gao",
+        "Linning Xu",
+        "Tianfan Xue"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-09T19:09:48+00:00",
+      "link": "https://arxiv.org/pdf/2607.08879v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Multi-view indoor scene relighting with spatial control, relevant to reconstruction techniques",
+      "llm_evidence_cn": "多视角室内场景重光照，空间可控，与重建技术相关",
+      "llm_evidence": "多视角室内场景重光照，空间可控，与重建技术相关",
+      "canonical_evidence": "多视角室内场景重光照，空间可控，与重建技术相关",
+      "llm_tldr_en": "Lume-Palette decouples indoor relighting into illumination distillation and casting, enabling spatially controllable multi-view consistency.",
+      "llm_tldr_cn": "针对室内场景重光照的光真实感与多视角一致性问题，本文提出Lume-Palette框架，解耦为光照蒸馏和光照投射两个阶段。该方法利用预训练扩散模型提取光照先验，并显式映射空间光照条件，实现了精细的空间控制和逼真的材质光照交互，在室内场景重建与编辑中具有应用潜力。",
+      "llm_tldr": "针对室内场景重光照的光真实感与多视角一致性问题，本文提出Lume-Palette框架，解耦为光照蒸馏和光照投射两个阶段。该方法利用预训练扩散模型提取光照先验，并显式映射空间光照条件，实现了精细的空间控制和逼真的材质光照交互，在室内场景重建与编辑中具有应用潜力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.05955v1",
+      "source": "arxiv",
+      "title": "NegROI: Click-Centric Uncertainty-Guided Refinement with Scene-Conditioned Negative Prompts for Robust Interactive 3D Segmentation",
+      "abstract": "Interactive 3D segmentation aims to extract object masks in point clouds with minimal user clicks. Despite recent progress, most existing approaches still struggle with (i) coarse voxel resolution that blurs fine boundaries under limited clicks and (ii) hard false positives caused by confusing background structures. These issues are exacerbated by density and scale shifts across datasets (e.g., dense RGB-D reconstructions vs. sparse LiDAR scans), where fixed refinement heuristics and purely click-driven decoding generalize poorly. To address them, we propose NegROI -- a novel transformer-based interactive framework that couples click-centric multi-resolution refinement with scene-conditioned negative prompts. Given a coarse voxel prediction, it refines only a local Region Of Interest (ROI) around the current click on a finer grid and fuses refined logits back to the coarse mask. To improve robustness and efficiency, we introduce uncertainty-driven selective refinement that prioritizes ambiguous regions. Meanwhile, we model hard background patterns via a set of scene-conditioned negative prompts obtained by cross-attention over scene tokens. We further stabilize these prompts with a diversity regularizer. Finally, we propose boundary-aware hard negative mining to supervise negative-prompt attention toward boundary-proximal, high-confidence false positives. Our experiments on common benchmark datasets (i.e., ScanNet, S3DIS, and KITTI) demonstrate improved click efficiency and reduced false positives, with stronger cross-dataset robustness than the state-of-the-art baselines.",
+      "authors": [
+        "Shuheng Zhang",
+        "Feng Wu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-07T07:54:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.05955v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Interactive 3D segmentation for scene understanding",
+      "llm_evidence_cn": "交互式3D分割用于场景理解",
+      "llm_evidence": "交互式3D分割用于场景理解",
+      "canonical_evidence": "交互式3D分割用于场景理解",
+      "llm_tldr_en": "NegROI improves interactive 3D segmentation with click-centric refinement and scene-conditioned negative prompts, addressing boundary and false positive issues.",
+      "llm_tldr_cn": "交互式3D分割在点云中提取物体掩模时，面临粗体素分辨率导致边界模糊和背景误报问题。本文提出NegROI框架，结合点击中心多分辨率细化和场景条件负提示，有效改善分割质量。该方法在多个数据集上展现出鲁棒性，尤其在数据密度和尺度变化场景下表现突出。",
+      "llm_tldr": "交互式3D分割在点云中提取物体掩模时，面临粗体素分辨率导致边界模糊和背景误报问题。本文提出NegROI框架，结合点击中心多分辨率细化和场景条件负提示，有效改善分割质量。该方法在多个数据集上展现出鲁棒性，尤其在数据密度和尺度变化场景下表现突出。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.11588v1",
+      "source": "arxiv",
+      "title": "FoundationGeo: Learning Spatial Pixel-Wise Fields for Monocular Metric Geometry",
+      "abstract": "We present FoundationGeo, a two-stage framework that explicitly bridges relative and metric prediction via spatial calibration and principled data design. Stage 1 learns a high-fidelity, affine-invariant geometry model by initializing with DINOv3 and training on a curated 10.2M-sample multi-domain corpus with complementary local-detail supervision, yielding sharp boundaries and strong cross-domain generalization. Stage 2 moves beyond global scaling by introducing lightweight pixel-wise calibration fields for metric estimation: a scale field for spatially varying metric alignment and a ray-direction correction field that mitigates directional bias in point-map geometry, together producing metrically consistent 3D point maps. Beyond model design, we identify camera intrinsic coverage, especially focal length distribution mismatch between training and test data, as a key bottleneck for zero-shot metric generalization: performance drops sharply when test intrinsics fall outside the training distribution. To address this, we synthesize additional training data across diverse focal lengths using a Blender-based data engine, repairing under-covered focal regimes and improving robustness under intrinsic shift. Extensive zero-shot evaluations across seven benchmarks show that FoundationGeo significantly strengthens cross-domain robustness, staying near the top across diverse domains while avoiding the sharp cross-domain performance drops observed in other methods. This consistency translates into the best overall performance, surpassing heavier baselines by over 5.2% on average.",
+      "authors": [
+        "Muxin Liu",
+        "Xiaoyang Lyu",
+        "Tianhe Ren",
+        "Peng Dai",
+        "Xiaoshan Wu",
+        "Zhiyue Zhang",
+        "Jiaqi Zhang",
+        "Jiehong Lin",
+        "Shaoshuai Shi",
+        "Xiaojuan Qi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T14:10:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.11588v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Monocular metric geometry for 3D reconstruction",
+      "llm_evidence_cn": "单目度量几何用于3D重建",
+      "llm_evidence": "单目度量几何用于3D重建",
+      "canonical_evidence": "单目度量几何用于3D重建",
+      "llm_tldr_en": "Proposes FoundationGeo, a two-stage framework for monocular metric 3D geometry using pixel-wise calibration fields.",
+      "llm_tldr_cn": "单目度量几何精度受限，且缺乏跨域泛化。本文提出FoundationGeo，两阶段框架：先学习高保真仿射不变几何，再引入像素级标定场实现度量一致。在多个数据集上验证了其锐利边界和强泛化能力，为3D重建提供了可靠基础。",
+      "llm_tldr": "单目度量几何精度受限，且缺乏跨域泛化。本文提出FoundationGeo，两阶段框架：先学习高保真仿射不变几何，再引入像素级标定场实现度量一致。在多个数据集上验证了其锐利边界和强泛化能力，为3D重建提供了可靠基础。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.11118v1",
+      "source": "arxiv",
+      "title": "GHOST: Geometry-Guided Hallucination of Opaque Surface Textures",
+      "abstract": "Transparent objects pose a fundamental challenge for depth estimation and 3D reconstruction due to their violation of Lambertian assumptions, leading to severe geometry degradation in downstream tasks. To address this, we propose a novel geometry-guided preprocessing framework \\textbf{GHOST} that leverages visual foundation models to transform transparent regions into opaque, structurally consistent representations without requiring downstream model retraining. Specifically, our pipeline utilizes (1) \\textbf{TransDINO} and (2) \\textbf{TransDecomp} to disentangle masks and transparency physical properties, while (3) \\textbf{DAF-Net} recovers surface normal priors to encode geometric curvature. Subsequently, (4) \\textbf{GeoSemTransNet} integrates these multi-modal cues to synthesize a texture-rich opaque RGB image that preserves the transparent object's 3D structure. Extensive experiments demonstrate that our method significantly enhances the accuracy of state-of-the-art depth estimation and reconstruction models on transparent objects by restoring essential photometric cues.",
+      "authors": [
+        "Langxu Zhao",
+        "Zuan Gu",
+        "Tianhan Gao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T05:50:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.11118v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Geometry-guided preprocessing for 3D reconstruction of transparent objects, aiding scene understanding",
+      "llm_evidence_cn": "几何引导的透明物体3D重建预处理，辅助场景理解",
+      "llm_evidence": "几何引导的透明物体3D重建预处理，辅助场景理解",
+      "canonical_evidence": "几何引导的透明物体3D重建预处理，辅助场景理解",
+      "llm_tldr_en": "GHOST leverages visual foundation models to transform transparent regions into opaque textures, improving depth estimation and 3D reconstruction without retraining.",
+      "llm_tldr_cn": "透明物体违反朗伯假设，导致深度估计和3D重建质量下降。GHOST提出几何引导预处理框架，利用视觉基础模型分解透明掩膜和物理属性，恢复表面法向先验，并生成不透明纹理。实验证明该方法显著提升了下游3D重建的几何精度，无需重新训练模型。为复杂场景中的透明物体处理提供了通用解决方案。",
+      "llm_tldr": "透明物体违反朗伯假设，导致深度估计和3D重建质量下降。GHOST提出几何引导预处理框架，利用视觉基础模型分解透明掩膜和物理属性，恢复表面法向先验，并生成不透明纹理。实验证明该方法显著提升了下游3D重建的几何精度，无需重新训练模型。为复杂场景中的透明物体处理提供了通用解决方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.11588v2",
+      "source": "arxiv",
+      "title": "FoundationGeo: Learning Spatial Pixel-Wise Fields for Monocular Metric Geometry",
+      "abstract": "We present FoundationGeo, a two-stage framework that explicitly bridges relative and metric prediction via spatial calibration and principled data design. Stage 1 learns a high-fidelity, affine-invariant geometry model by initializing with DINOv3 and training on a curated 10.2M-sample multi-domain corpus with complementary local-detail supervision, yielding sharp boundaries and strong cross-domain generalization. Stage 2 moves beyond global scaling by introducing lightweight pixel-wise calibration fields for metric estimation: a scale field for spatially varying metric alignment and a ray-direction correction field that mitigates directional bias in point-map geometry, together producing metrically consistent 3D point maps. Beyond model design, we identify camera intrinsic coverage, especially focal length distribution mismatch between training and test data, as a key bottleneck for zero-shot metric generalization: performance drops sharply when test intrinsics fall outside the training distribution. To address this, we synthesize additional training data across diverse focal lengths using a Blender-based data engine, repairing under-covered focal regimes and improving robustness under intrinsic shift. Extensive zero-shot evaluations across seven benchmarks show that FoundationGeo significantly strengthens cross-domain robustness, staying near the top across diverse domains while avoiding the sharp cross-domain performance drops observed in other methods. This consistency translates into the best overall performance, surpassing heavier baselines by over 5.2% on average.",
+      "authors": [
+        "Muxin Liu",
+        "Xiaoyang Lyu",
+        "Tianhe Ren",
+        "Peng Dai",
+        "Xiaoshan Wu",
+        "Zhiyue Zhang",
+        "Jiaqi Zhang",
+        "Jiehong Lin",
+        "Shaoshuai Shi",
+        "Xiaojuan Qi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T14:10:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.11588v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Spatial pixel-wise fields for metric geometry estimation, enabling spatial reasoning",
+      "llm_evidence_cn": "空间像素级度量几何场，支持空间推理",
+      "llm_evidence": "空间像素级度量几何场，支持空间推理",
+      "canonical_evidence": "空间像素级度量几何场，支持空间推理",
+      "llm_tldr_en": "FoundationGeo learns relative and metric spatial fields for monocular 3D reconstruction, achieving high-fidelity pixel-wise metric alignment.",
+      "llm_tldr_cn": "单目度量几何估计存在尺度模糊和域泛化问题。FoundationGeo提出两阶段框架：先学习高保真仿射不变几何模型，再引入像素级校准场进行度量估计，包括尺度场和射线方向校正场。实验表明在多种域上生成一致的3D点图，边界清晰，泛化性强。为空间推理和3D场景理解提供了可靠的度量基础。",
+      "llm_tldr": "单目度量几何估计存在尺度模糊和域泛化问题。FoundationGeo提出两阶段框架：先学习高保真仿射不变几何模型，再引入像素级校准场进行度量估计，包括尺度场和射线方向校正场。实验表明在多种域上生成一致的3D点图，边界清晰，泛化性强。为空间推理和3D场景理解提供了可靠的度量基础。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.12193v1",
+      "source": "arxiv",
+      "title": "Compos3D: Interactive Part-Based Composition for Creative Control in Generative 3D Models",
+      "abstract": "While generative AI has unlocked new opportunities for 3D content creation, current workflows often rely on multiple regenerations, which provides limited control and unpredictable outcomes. We present Compos3D, a system that introduces a compositional workflow for generative 3D modeling through remixing. Instead of repeatedly regenerating models, users generate multiple candidates from text or image prompts, select parts of interest via 2D image regions or 3D mesh segments, and assemble them into a coherent design. The system synthesizes these compositions into a refined 3D model, preserving high-level intent while resolving low-level geometry. To evaluate this approach, we conducted a controlled user study comparing remixing and regeneration workflows across both 2D and 3D modalities. Results show that the remixing workflow provides participants with greater creative control, stronger alignment with their intent, and higher satisfaction. We conclude with design recommendations for future AI-assisted 3D modeling workflows.",
+      "authors": [
+        "Faraz Faruqi",
+        "Sean J. Liu",
+        "George Fitzmaurice",
+        "Justin Matejka"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.CV"
+      ],
+      "published": "2026-07-13T22:24:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.12193v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "interactive part-based composition for generative 3D models",
+      "llm_evidence_cn": "交互式部件组合生成3D模型",
+      "llm_evidence": "交互式部件组合生成3D模型",
+      "canonical_evidence": "交互式部件组合生成3D模型",
+      "llm_tldr_en": "Compos3D introduces a compositional workflow for generative 3D modeling through remixing, allowing users to select and assemble parts from multiple generated candidates into a coherent design.",
+      "llm_tldr_cn": "针对当前3D生成工作流控制有限且结果不可预测的问题，本文提出Compos3D，一种基于部件组合的交互式3D建模系统。用户从多个生成候选中通过2D/3D选择感兴趣部件，并组装成连贯设计。系统合成并优化最终模型，保留高层次意图同时解决低层几何问题。通过用户研究验证了该方法相比反复重生成提供了更好的控制性和可预测性。",
+      "llm_tldr": "针对当前3D生成工作流控制有限且结果不可预测的问题，本文提出Compos3D，一种基于部件组合的交互式3D建模系统。用户从多个生成候选中通过2D/3D选择感兴趣部件，并组装成连贯设计。系统合成并优化最终模型，保留高层次意图同时解决低层几何问题。通过用户研究验证了该方法相比反复重生成提供了更好的控制性和可预测性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.12429v1",
+      "source": "arxiv",
+      "title": "More Than Where You Are: Learning Semantics, Structure, and Geometry from Cross-View Localization",
+      "abstract": "Consistent cross-view understanding under extreme viewpoint changes is essential for spatial intelligence, as it enables models to recognize the same scene across extreme viewpoint gaps. Cross-view localization naturally provides a promising pathway toward this ability, as it requires a model to align ground-view imagery with geo-referenced satellite-view imagery despite drastic appearance changes to estimate camera poses. Recent visual foundation models have made this long-standing localization problem increasingly feasible by providing rich 2D representations for cross-view matching. However, we argue that cross-view localization should not be viewed merely as 2D matching or pose estimation. In this work, we revisit cross-view localization as more than pose estimation and investigate how it can help the model develop consistent cross-view understanding under extreme viewpoint changes, including stable semantics, reliable structure, and transferable geometry. We identify three key limitations of existing methods that prevent them from achieving this. They usually lack explicit 3D grounding, rely on strict point-wise matching that can weaken semantic consistency, and learn from an absolute objective that provides limited guidance for geometric reasoning. To address these limitations, we propose CROSS, a unified cross-view localization framework built upon 3D-grounded alignment, structure-aware matching, and hypothesis ranking. This formulation makes structure learning an intrinsic requirement, encourages semantic representations to remain stable, and enables the model to acquire transferable geometry. Extensive experiments on the KITTI and VIGOR datasets show that CROSS achieves state-of-the-art performance in cross-view localization. More importantly, CROSS effectively learns stable semantics, reliable structure, and transferable geometry across extremely different viewpoints.",
+      "authors": [
+        "Mao Chen",
+        "Xiangkai Zhang",
+        "Zhiyong Liu",
+        "Chuankai Liu",
+        "Xu Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T07:00:34+00:00",
+      "link": "https://arxiv.org/pdf/2607.12429v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Cross-view learning for 3D scene understanding",
+      "llm_evidence_cn": "跨视角学习用于3D场景理解",
+      "llm_evidence": "跨视角学习用于3D场景理解",
+      "canonical_evidence": "跨视角学习用于3D场景理解",
+      "llm_tldr_en": "Leverages cross-view localization to learn semantic, structural, and geometric representations for 3D scene understanding.",
+      "llm_tldr_cn": "跨视角定位不仅是2D匹配，还能学习丰富3D表示。本文提出框架，利用地面和卫星视图的对应关系，联合学习语义、结构和几何。实验表明该表示在多个3D任务上有效，为空间智能提供了新途径。",
+      "llm_tldr": "跨视角定位不仅是2D匹配，还能学习丰富3D表示。本文提出框架，利用地面和卫星视图的对应关系，联合学习语义、结构和几何。实验表明该表示在多个3D任务上有效，为空间智能提供了新途径。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.12752v1",
+      "source": "arxiv",
+      "title": "Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation",
+      "abstract": "While recent advances in 3D generation have enabled impressive visual synthesis, existing methods often rely on 2D diffusion supervision without explicit mechanisms for geometric consistency, leading to spatial hallucinations such as duplicated structures and misaligned geometry. These issues become more severe in 4D generation, where maintaining consistency across viewpoints and temporal evolution introduces additional challenges, including jitter, identity flicker, and structural drift. We present \\textbf{Hallo4D}, a unified and model-agnostic framework for mitigating spatiotemporal hallucinations in 3D and 4D content generation. Hallo4D introduces a generation-detection-correction paradigm that leverages large multimodal language models (LMMs) to identify and summarize spatial and temporal inconsistencies from multi-view and multi-frame renderings. These insights guide a consensus-driven image-space consistency optimization, where an LMM-based selector evaluates candidate corrections through multi-model voting, without requiring retraining or architectural modifications. To further improve temporal consistency and optimization efficiency, Hallo4D incorporates motion-aware keyframe sampling, LMM-guided initialization, and appearance alignment. We additionally introduce exposure-aware optimization and visibility pruning to enhance robustness under challenging viewpoints. Extensive experiments demonstrate that Hallo4D consistently outperforms strong baselines across diverse 3D and 4D generation settings, providing a scalable and generalizable solution for consistency-aware content generation.",
+      "authors": [
+        "Hongbo Wang",
+        "Huaibo Huang",
+        "Jie Cao",
+        "Jin Liu",
+        "Haoyang Tong",
+        "Ran He"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-14T13:19:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.12752v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "spatiotemporal hallucination mitigation for 3D/4D generation",
+      "llm_evidence_cn": "时空幻觉缓解用于3D/4D生成",
+      "llm_evidence": "时空幻觉缓解用于3D/4D生成",
+      "canonical_evidence": "时空幻觉缓解用于3D/4D生成",
+      "llm_tldr_en": "Hallo4D is a model-agnostic framework that mitigates spatiotemporal hallucinations in 3D/4D generation via a generation-detection-correction paradigm using large multimodal language models.",
+      "llm_tldr_cn": "现有3D/4D生成常因缺乏几何一致性导致空间幻觉（如重复结构、几何错位）和时序不稳定。本文提出Hallo4D，一个模型无关的统一框架，采用生成-检测-纠正范式，利用大型多模态语言模型来缓解时空幻觉。该方法在多个基线上有效提高了生成的一致性和保真度。",
+      "llm_tldr": "现有3D/4D生成常因缺乏几何一致性导致空间幻觉（如重复结构、几何错位）和时序不稳定。本文提出Hallo4D，一个模型无关的统一框架，采用生成-检测-纠正范式，利用大型多模态语言模型来缓解时空幻觉。该方法在多个基线上有效提高了生成的一致性和保真度。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
