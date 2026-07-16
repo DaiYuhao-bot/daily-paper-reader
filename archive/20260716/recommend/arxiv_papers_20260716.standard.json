@@ -1,0 +1,775 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-16T20:17:45.423199+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 10,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 13,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2607.11285v2",
+      "source": "arxiv",
+      "title": "SalientGS: Unified SfM-to-3DGS with Importance-Guided MCMC Gaussian Allocation",
+      "abstract": "Reconstructing 3D scenes from unordered images remains bottlenecked by expensive Structure-from-Motion (SfM) preprocessing and frozen pose interfaces. We present SalientGS, a unified SfM-to-3D Gaussian Splatting (3DGS) pipeline. Its central contribution is importance-guided Markov Chain Monte Carlo (MCMC) Gaussian allocation, which aggregates multi-view residuals into per-Gaussian underfit and redundancy signals. These signals define a smooth importance-weighted sampling distribution that biases both birth and relocation toward underfit regions. This reallocates capacity from well-fit areas without altering the underlying stochastic gradient Langevin dynamics (SGLD). SalientGS achieves end-to-end reconstruction in 15 minutes with state-of-the-art perceptual quality. The supplementary material provides dedicated sections for Per-Scene Qualitative Comparisons and Per-Image Learned Perceptual Image Patch Similarity (LPIPS) Analysis, including failure cases. Code and evaluation scripts are available at https://github.com/Six-Bit-TX/SalientGS.",
+      "authors": [
+        "Tianyu Xiong",
+        "Rui Li",
+        "Suning Ge",
+        "Jiaqi Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T09:06:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.11285v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Unified SfM-to-3DGS for 3D scene reconstruction",
+      "llm_evidence_cn": "统一的SfM到3DGS的3D场景重建方法",
+      "llm_evidence": "统一的SfM到3DGS的3D场景重建方法",
+      "canonical_evidence": "统一的SfM到3DGS的3D场景重建方法",
+      "llm_tldr_en": "SalientGS unifies SfM and 3DGS with importance-guided MCMC allocation, achieving end-to-end 3D scene reconstruction in 15 minutes, matching state-of-the-art quality.",
+      "llm_tldr_cn": "针对传统三维场景重建依赖昂贵的SfM预处理和固定位姿接口的问题，本文提出SalientGS，一种统一的SfM到3D高斯泼溅（3DGS）流程。核心创新是重要性引导的马尔可夫链蒙特卡洛（MCMC）高斯分配机制，通过聚合多视图残差为每个高斯体分配欠拟合和冗余信号，并将采样偏向欠拟合区域。实验表明，该方法在15分钟内实现端到端重建，并取得最先进的重建质量。",
+      "llm_tldr": "针对传统三维场景重建依赖昂贵的SfM预处理和固定位姿接口的问题，本文提出SalientGS，一种统一的SfM到3D高斯泼溅（3DGS）流程。核心创新是重要性引导的马尔可夫链蒙特卡洛（MCMC）高斯分配机制，通过聚合多视图残差为每个高斯体分配欠拟合和冗余信号，并将采样偏向欠拟合区域。实验表明，该方法在15分钟内实现端到端重建，并取得最先进的重建质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13468v1",
+      "source": "arxiv",
+      "title": "HIVE-3D: Hierarchical Voxel Enhancement for High-Quality 3D Scene Generation",
+      "abstract": "Recently, a line of works can generate impressive 3D objects from a single image, but they are limited by restricted representation resolution, making them unsuitable for 3D scene generation. In this work, we introduce HIVE-3D, a novel method for high-quality 3D scene generation based on hierarchical voxel enhancement framework. Specifically, given a single scene image as input, we first produce a coarse initial scene, then introduce image segmentation and attention-based retrieval to align 2D image components with 3D scene components. Subsequently, we organize these scene relations into a hierarchical component tree, where nodes closer to the leaves denote finer-grained components. Finally, we propose a voxel super-resolution model that generates refined voxels for the target instance while maintaining strong consistency with the coarse voxels. Equipped with this model, we perform coarse-to-fine hierarchical super-resolution on images and voxels for each component, producing a high-resolution and high-quality 3D scene. Extensive experiments demonstrate that our method significantly outperforms previous approaches, achieving state-of-the-art performance.",
+      "authors": [
+        "Bin Zang",
+        "Wenting Zheng",
+        "Xiaoliang Luo",
+        "Zhiyuan Fang",
+        "Shi Li",
+        "Lvchun Wang",
+        "Wei Yu",
+        "Yi Zhao",
+        "Tian Xie",
+        "Yuchi Huo",
+        "Rengan Xie"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-15T05:56:34+00:00",
+      "link": "https://arxiv.org/pdf/2607.13468v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "high-quality 3D scene generation from single image via hierarchical voxel enhancement",
+      "llm_evidence_cn": "通过层次化体素增强从单张图像生成高质量三维场景",
+      "llm_evidence": "通过层次化体素增强从单张图像生成高质量三维场景",
+      "canonical_evidence": "通过层次化体素增强从单张图像生成高质量三维场景",
+      "llm_tldr_en": "HIVE-3D generates high-quality 3D scenes from a single image using hierarchical voxel super-resolution and component tree.",
+      "llm_tldr_cn": "现有单图三维生成方法受限于表示分辨率，难以生成高质量场景。本文提出HIVE-3D，从单张场景图像出发，先构建粗场景，再通过图像分割和注意力检索对齐2D与3D组件，构建层次化组件树，最后用体素超分辨率模型生成精细三维场景。实验表明该方法在场景生成质量上远超现有物体级方法，推动了单图三维场景生成的发展。",
+      "llm_tldr": "现有单图三维生成方法受限于表示分辨率，难以生成高质量场景。本文提出HIVE-3D，从单张场景图像出发，先构建粗场景，再通过图像分割和注意力检索对齐2D与3D组件，构建层次化组件树，最后用体素超分辨率模型生成精细三维场景。实验表明该方法在场景生成质量上远超现有物体级方法，推动了单图三维场景生成的发展。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13481v1",
+      "source": "arxiv",
+      "title": "GPOcc++: Unified Sparse Gaussian Occupancy Prediction with Visual Geometry Priors",
+      "abstract": "Accurate 3D scene understanding is fundamental to embodied intelligence and autonomous driving, where 3D occupancy provides a unified representation of objects, structures, and free space. However, recovering such a complete volumetric representation from visual observations remains challenging, particularly in occluded and unobserved regions. Visual geometry priors offer strong and generalizable geometric cues for addressing this challenge, but their outputs are inherently surface-centric, whereas occupancy prediction requires reasoning about volumetric interiors and free space. To bridge this gap, we introduce GPOcc, which transforms visual geometry priors into occupancy-aware sparse Gaussian representations for efficient and expressive volumetric scene modeling. Building on GPOcc, GPOcc++ models multi-view observations and temporal sequences within a unified framework, allowing spatial and temporal evidence to be handled through the same representation. We further extend GPOcc++ from indoor scenes to outdoor occupancy prediction. Extensive experiments on both indoor and outdoor benchmarks demonstrate consistently strong performance across both multi-view and temporal settings, together with favorable efficiency and generalization. Code will be released at https://github.com/JuIvyy/GPOcc.",
+      "authors": [
+        "Changqing Zhou",
+        "Yueru Luo",
+        "Yulan Guo",
+        "Bing Wang",
+        "Jie Qin",
+        "Changhao Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-15T06:21:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.13481v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "accurate 3D scene understanding via occupancy prediction",
+      "llm_evidence_cn": "通过占用预测实现精确3D场景理解",
+      "llm_evidence": "通过占用预测实现精确3D场景理解",
+      "canonical_evidence": "通过占用预测实现精确3D场景理解",
+      "llm_tldr_en": "GPOcc++ transforms visual geometry priors into occupancy-aware sparse Gaussian representations for efficient and expressive volumetric 3D scene understanding.",
+      "llm_tldr_cn": "准确的三维场景理解是具身智能和自动驾驶的基础，但恢复完整体积表示面临遮挡等挑战。GPOcc++利用视觉几何先验，将其转化为占用感知的稀疏高斯表示，实现高效且表达力强的体积占用预测。该方法桥接了表面几何与体积内部的鸿沟，在占据预测任务上取得优异性能。",
+      "llm_tldr": "准确的三维场景理解是具身智能和自动驾驶的基础，但恢复完整体积表示面临遮挡等挑战。GPOcc++利用视觉几何先验，将其转化为占用感知的稀疏高斯表示，实现高效且表达力强的体积占用预测。该方法桥接了表面几何与体积内部的鸿沟，在占据预测任务上取得优异性能。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13539v1",
+      "source": "arxiv",
+      "title": "ThinkBLOX: 3D Indoor Scene Generation with Progressive Reasoning",
+      "abstract": "While traditional graphics methods often synthesize 3D indoor scenes autoregressively or hierarchically, recent vision-language model (VLM)-based generators predominantly adopt a one-shot paradigm where the full layout is planned at once. This one-shot approach often requires global re-optimization or complete reconstruction during interactive editing (e.g., inserting or moving objects) and can lead to physically or semantically poorly organized arrangements. To address these challenges, we propose ThinkBLOX, a VLM-based progressive reasoning framework that iteratively designs and refines 3D scenes. ThinkBLOX treats layout generation as a state-conditioned, step-by-step reasoningand-action process. To power this, we construct the ThinkBLOX-Data-200K dataset, containing 224,757 procedural placement pairs annotated with multi-view scene context, explicit Chain-of-Thought (CoT) rationales, and structured JSON layouts. Through supervised fine-tuning (SFT) on this dataset, the VLM learns to bridge the reasoning-action gap under incremental updates. Furthermore, recognizing that scene synthesis is inherently a multisolution task where SFT suffers from reward conflict, we introduce Tier-Decoupled GDPO. This reinforcement learning scheme organizes heterogeneous rewards into distinct tiers, stabilizing policy optimization across physical validity, semantic plausibility, and reasoning-action consistency. Extensive experiments show that ThinkBLOX significantly outperforms recent one-shot and iterative baselines in physical plausibility, semantic alignment, and interactive editability. Additionally, we show that it supports diverse applications, including both global and local generation and rearrangement of 3D scenes.",
+      "authors": [
+        "Yuan Xiao",
+        "Can Wang",
+        "Xiangyu Kong",
+        "Jing Liao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-15T07:42:47+00:00",
+      "link": "https://arxiv.org/pdf/2607.13539v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Progressive reasoning for 3D indoor scene generation",
+      "llm_evidence_cn": "渐进推理的3D室内场景生成方法",
+      "llm_evidence": "渐进推理的3D室内场景生成方法",
+      "canonical_evidence": "渐进推理的3D室内场景生成方法",
+      "llm_tldr_en": "ThinkBLOX uses VLM-based progressive reasoning to iteratively design and refine 3D indoor scenes, enabling interactive editing without global re-optimization.",
+      "llm_tldr_cn": "针对现有VLM生成器采用一次性规划导致交互编辑需全局重优化的问题，本文提出ThinkBLOX，一个基于VLM的渐进推理框架，将布局生成视为状态条件的逐步推理与行动过程。配合ThinkBLOX-Data-200K数据集，该方法在物理和语义合理性上优于一次性方法，并支持自然交互编辑。",
+      "llm_tldr": "针对现有VLM生成器采用一次性规划导致交互编辑需全局重优化的问题，本文提出ThinkBLOX，一个基于VLM的渐进推理框架，将布局生成视为状态条件的逐步推理与行动过程。配合ThinkBLOX-Data-200K数据集，该方法在物理和语义合理性上优于一次性方法，并支持自然交互编辑。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13563v1",
+      "source": "arxiv",
+      "title": "Nexus: Native Mesh Generation with Diffusion",
+      "abstract": "Generating high-quality triangle meshes is essential for film, gaming, and interactive 3D applications. Mainstream methods rely on mesh serialization and autoregressive processes, which stuggles in effective inference and is sensitive to error accumulation. In this paper, we present Nexus, a diffusion method that achieves holistic mesh generation via decoupled vertex and topology generation. First, we view mesh vertices as sparse voxels organized as an octree and adopt a diffusion model to generate the vertices in a coarse-to-fine manner. Second, for topology modeling, we propose Spacetime Interval, as an extension of Spacetime Distance to encode arbitrary edge and face topology into continuous per-vertex embeddings. It allows for a global and efficient recovery of complex topology. We then employ a diffusion model to generate the continuous embeddings on the generated vertices. Extensive experiments on the Objaverse and Toys4K datasets and in-the-wild images demonstrate that our method outperforms state-of-the-art autoregressive and two-stage baselines, effectively circumventing the inherent limitations of sequential mesh modeling. A blind user study from 3D practitioners confirms strong perceptual preference for our results.",
+      "authors": [
+        "Hanxiao Wang",
+        "Ying-Tian Liu",
+        "Yuan-Chen Guo",
+        "Qi-Yuan Feng",
+        "Zi-Xin Zou",
+        "Ding Liang",
+        "Biao Zhang",
+        "Yan-Pei Cao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-15T08:04:46+00:00",
+      "link": "https://arxiv.org/pdf/2607.13563v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "native mesh generation for 3D scenes using diffusion",
+      "llm_evidence_cn": "使用扩散模型进行原生网格生成，用于3D场景",
+      "llm_evidence": "使用扩散模型进行原生网格生成，用于3D场景",
+      "canonical_evidence": "使用扩散模型进行原生网格生成，用于3D场景",
+      "llm_tldr_en": "Nexus generates high-quality triangle meshes via diffusion, decoupling vertex and topology generation using octree and Spacetime Interval embeddings.",
+      "llm_tldr_cn": "高质量三角网格生成对电影、游戏等3D应用至关重要。现有方法多依赖自回归序列化，易累积误差。Nexus提出纯扩散方法，先通过八叉树层级生成顶点，再使用时空间隔嵌入恢复拓扑结构。该方法在网格生成质量和效率上均优于自回归方法，为3D场景的几何生成提供了新范式。",
+      "llm_tldr": "高质量三角网格生成对电影、游戏等3D应用至关重要。现有方法多依赖自回归序列化，易累积误差。Nexus提出纯扩散方法，先通过八叉树层级生成顶点，再使用时空间隔嵌入恢复拓扑结构。该方法在网格生成质量和效率上均优于自回归方法，为3D场景的几何生成提供了新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14005v1",
+      "source": "arxiv",
+      "title": "M$^\\text{4}$World: A Multi-view Multimodal Driving World Model for Interactive Object Manipulation and Minute-long Streaming",
+      "abstract": "Driving-world generation has emerged as a core capability for scalable autonomous-driving simulation, yet existing methods remain limited in object-level controllability and long-horizon stability. We present M$^\\text{4}$World, a Multi-view and Multimodal generative driving world model that synthesizes future surround-view video streams and synchronized LiDAR scans while supporting interactive object Manipulation and stable Minute-long streaming. Fine-grained object manipulation is realized through a flexible conditioning interface that supports explicit control over both the spatial layout and visual appearance of individual objects. Stable minute-long streaming, on the other hand, is achieved through a multi-stage training framework that enables online causal generation in only four denoising steps while maintaining coherent world dynamics throughout extended rollouts. Building on these components, we introduce an efficient few-clip post-training as well as a suite of visual reference-conditioned generation models, preserving general generation ability while allowing rare-case customization for long-tail controllability. To assess controllability beyond realism, we further introduce an automated VLM-based judging pipeline that evaluates scene-level condition adherence, view-wise object controllability, and cross-view object consistency. Comprehensive experiments show that M$^\\text{4}$World consistently delivers high generation quality, precise controllability, and stable minute-long streaming. Together with downstream long-tail augmentation and scene editing, these results demonstrate the potential of M$^\\text{4}$World for controllable, scalable driving simulation.",
+      "authors": [
+        "Ke Cheng",
+        "Hanqiao Ye",
+        "Lei Shi",
+        "Yahui Liu",
+        "Yunhan Shen",
+        "Jingtao Dong",
+        "Zhenke Wang",
+        "Wenxuan Ao",
+        "Weixiang Xu",
+        "Kaining Huang",
+        "Shuhan Shen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-15T16:36:33+00:00",
+      "link": "https://arxiv.org/pdf/2607.14005v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Multi-view multimodal driving world model for interactive object manipulation",
+      "llm_evidence_cn": "多视图多模态驾驶世界模型，支持交互式物体操控",
+      "llm_evidence": "多视图多模态驾驶世界模型，支持交互式物体操控",
+      "canonical_evidence": "多视图多模态驾驶世界模型，支持交互式物体操控",
+      "llm_tldr_en": "M4World is a generative driving world model that synthesizes future surround-view video and LiDAR, enabling interactive object manipulation and stable minute-long streaming.",
+      "llm_tldr_cn": "M4World提出了一种多视图多模态生成式驾驶世界模型，能够合成未来环视视频流和同步激光雷达扫描，同时支持对单个物体的空间布局和视觉外观进行精细控制，并实现稳定的长时流式生成。该模型解决了现有驾驶场景生成中物体级可控性和长时稳定性不足的问题，为自动驾驶仿真提供了更强大的基础。",
+      "llm_tldr": "M4World提出了一种多视图多模态生成式驾驶世界模型，能够合成未来环视视频流和同步激光雷达扫描，同时支持对单个物体的空间布局和视觉外观进行精细控制，并实现稳定的长时流式生成。该模型解决了现有驾驶场景生成中物体级可控性和长时稳定性不足的问题，为自动驾驶仿真提供了更强大的基础。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.12752v2",
+      "source": "arxiv",
+      "title": "Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation",
+      "abstract": "While recent advances in 3D generation have enabled impressive visual synthesis, existing methods often rely on 2D diffusion supervision without explicit mechanisms for geometric consistency, leading to spatial hallucinations such as duplicated structures and misaligned geometry. These issues become more severe in 4D generation, where maintaining consistency across viewpoints and temporal evolution introduces additional challenges, including jitter, identity flicker, and structural drift. We present \\textbf{Hallo4D}, a unified and model-agnostic framework for mitigating spatiotemporal hallucinations in 3D and 4D content generation. Hallo4D introduces a generation-detection-correction paradigm that leverages large multimodal language models (LMMs) to identify and summarize spatial and temporal inconsistencies from multi-view and multi-frame renderings. These insights guide a consensus-driven image-space consistency optimization, where an LMM-based selector evaluates candidate corrections through multi-model voting, without requiring retraining or architectural modifications. To further improve temporal consistency and optimization efficiency, Hallo4D incorporates motion-aware keyframe sampling, LMM-guided initialization, and appearance alignment. We additionally introduce exposure-aware optimization and visibility pruning to enhance robustness under challenging viewpoints. Extensive experiments demonstrate that Hallo4D consistently outperforms strong baselines across diverse 3D and 4D generation settings, providing a scalable and generalizable solution for consistency-aware content generation.",
+      "authors": [
+        "Hongbo Wang",
+        "Huaibo Huang",
+        "Jie Cao",
+        "Jin Liu",
+        "Haoyang Tong",
+        "Ran He"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-14T13:19:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.12752v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "3D and 4D content generation with hallucination mitigation",
+      "llm_evidence_cn": "三维和四维内容生成，减少幻觉",
+      "llm_evidence": "三维和四维内容生成，减少幻觉",
+      "canonical_evidence": "三维和四维内容生成，减少幻觉",
+      "llm_tldr_en": "Hallo4D proposes a unified framework for mitigating spatiotemporal hallucinations in 3D and 4D generation using a generation-detection-correction paradigm.",
+      "llm_tldr_cn": "三维/四维生成面临空间幻觉和时间不一致问题，Hallo4D提出生成-检测-纠正范式，利用大型多模态语言模型检测并修正幻觉，实现多视角和时间一致的生成，显著提升几何和动态一致性。",
+      "llm_tldr": "三维/四维生成面临空间幻觉和时间不一致问题，Hallo4D提出生成-检测-纠正范式，利用大型多模态语言模型检测并修正幻觉，实现多视角和时间一致的生成，显著提升几何和动态一致性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.10383v1",
+      "source": "arxiv",
+      "title": "ABot-N1: Toward a General Visual Language Navigation Foundation Model",
+      "abstract": "Visual Language Navigation foundation models aim to unify deep reasoning for grounded spatial decisions with broad versatility for diverse embodied tasks. Current approaches typically achieve this integration via monolithic policies that map observations directly to actions, yet they often suffer from coordinate drift and poor handling of long-tail semantics. Furthermore, these black-box mappings lack interpretability, hindering the simultaneous achievement of generality, robustness, and transparency. We present ABot-N1, a step toward a general Visual Language Navigation foundation model, that addresses these challenges by decoupling cognition from control via a slow-fast architecture guided by dual visual-language signals. More specifically, a slow vision-language reasoner performs explicit Chain-of-Thought reasoning while producing a pixel goal. This compact set of image-space anchor points serves as a universal interface for diverse tasks, including point-goal, object-goal, poi-goal, instruction-following, and person-following. Subsequently, a fast action expert leverages both the textual cues and the pixel guidance to generate continuous waypoints at the native control frequency. By bridging high-level intents and low-level control through pixel-grounded anchors paired with explicit linguistic traces, our approach ensures robust, generalizable, and interpretable navigation across simulation and real-world benchmarks. ABot-N1 establishes new state-of-the-art records, delivering massive gains specifically in urban-scale navigation: boosting POI arrival by 35.0% (to 77.3%) and achieving 95.4%/92.9% SR in complex indoor and outdoor scenes. It also maintains superior robustness across object-reaching, person-following, and instruction-following tasks. New Point-Goal/POI-Goal benchmarks are released as open source to advance the field of urban-scale navigation.",
+      "authors": [
+        "Ruiyan Gong",
+        "Yingnan Guo",
+        "Junjun Hu",
+        "Jintao Kong",
+        "Xiaoxu Leng",
+        "Tianlun Li",
+        "Weize Li",
+        "Fei Liu",
+        "Zhicheng Liu",
+        "Jia Lu",
+        "Minghua Luo",
+        "Chenlin Ming",
+        "Yanfen Shen",
+        "Jiyue Tao",
+        "Zhengbo Wang",
+        "Mingyang Yin",
+        "Minqi Gu",
+        "Zihao Guan",
+        "Wei Guo",
+        "Guoqing Liu",
+        "Huachong Pang",
+        "Menglin Yang",
+        "Zeqian Ye",
+        "Xiaoxiao Geng",
+        "Zhining Gu",
+        "Honglin Han",
+        "Di Jing",
+        "Hongyu Pan",
+        "Mingchao Sun",
+        "Kuan Yang",
+        "Jianfang Zhang",
+        "Yanghong Chen",
+        "Ye He",
+        "Wei Mei",
+        "Jiahao Shi",
+        "Xiangpo Yang",
+        "Yanqing Zhu",
+        "Zedong Chu",
+        "Xiaolong Wu",
+        "Mu Xu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-07-11T16:21:03+00:00",
+      "link": "https://arxiv.org/pdf/2607.10383v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Visual language navigation with spatial reasoning for embodied tasks",
+      "llm_evidence_cn": "面向具身任务的视觉语言导航，涉及空间推理",
+      "llm_evidence": "面向具身任务的视觉语言导航，涉及空间推理",
+      "canonical_evidence": "面向具身任务的视觉语言导航，涉及空间推理",
+      "llm_tldr_en": "ABot-N1 is a visual language navigation foundation model using a slow-fast architecture for grounded spatial decisions, improving robustness and interpretability.",
+      "llm_tldr_cn": "针对现有视觉语言导航模型在空间决策中存在的坐标漂移和长尾语义处理不足问题，本文提出ABot-N1，一个通用的视觉语言导航基础模型。其通过慢-快架构解耦认知与控制，并利用双视觉-语言信号引导，提升了空间推理的鲁棒性和可解释性。在多个基准上展示了优越性能。",
+      "llm_tldr": "针对现有视觉语言导航模型在空间决策中存在的坐标漂移和长尾语义处理不足问题，本文提出ABot-N1，一个通用的视觉语言导航基础模型。其通过慢-快架构解耦认知与控制，并利用双视觉-语言信号引导，提升了空间推理的鲁棒性和可解释性。在多个基准上展示了优越性能。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.09985v1",
+      "source": "arxiv",
+      "title": "UniPose9D: Universal Category-Agnostic Object Pose Estimation",
+      "abstract": "Object pose estimation is a fundamental problem in 3D vision. Although recent state-of-the-art approaches achieve strong performance, they often overfit to existing benchmarks and exhibit limited generalization to novel categories and unseen scenes. We propose UniPose9D, a category-agnostic foundation model for 9D object pose estimation: given an instance mask/ROI and either an RGB-D observation or an RGB image with predicted depth, the model estimates rotation, translation, and metric size without category labels, CAD models, mean-shape priors, or reference views. Specifically, UniPose9D samples point pairs from the observed object geometry and uses DINOv2 and PointNet features to predict NOCS coordinates for each pair. To improve accuracy, we introduce a point-pair-based RANSAC N-hop Kabsch--Umeyama algorithm with an adaptive threshold. We further employ flow matching to address symmetric ambiguities and construct a large-scale training set by curating and aligning pose annotations from existing public datasets. Experiments across six datasets show that a single unified model can match or surpass specialist methods while generalizing to unseen objects and in-the-wild scenarios. Our code and model are available on https://github.com/qq456cvb/UniPose9D.",
+      "authors": [
+        "Yang You",
+        "Yi Du",
+        "Cole Harrison",
+        "Leonidas Guibas"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-10T21:24:23+00:00",
+      "link": "https://arxiv.org/pdf/2607.09985v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Object pose estimation for spatial reasoning",
+      "llm_evidence_cn": "物体姿态估计用于空间推理",
+      "llm_evidence": "物体姿态估计用于空间推理",
+      "canonical_evidence": "物体姿态估计用于空间推理",
+      "llm_tldr_en": "UniPose9D proposes a category-agnostic foundation model for 9D object pose estimation using point pairs and DINOv2 features.",
+      "llm_tldr_cn": "现有物体姿态估计方法泛化性差，UniPose9D提出类别无关的9D姿态估计基础模型，通过采样点对并利用DINOv2和PointNet特征预测NOCS坐标，无需类别标签或CAD模型，在多个基准上展现强泛化能力。",
+      "llm_tldr": "现有物体姿态估计方法泛化性差，UniPose9D提出类别无关的9D姿态估计基础模型，通过采样点对并利用DINOv2和PointNet特征预测NOCS坐标，无需类别标签或CAD模型，在多个基准上展现强泛化能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.13365v1",
+      "source": "arxiv",
+      "title": "DiffGI: Differentiable Geometry Images for High-Fidelity Thin-Shell 3D Generation",
+      "abstract": "Existing 3D generative models predominantly rely on implicit volumetric representations, which enforce watertight topology and struggle to represent thin-shell and non-manifold geometries such as garments. Geometry image-based approaches offer a surface-centric alternative, but existing methods rely on discrete binary occupancy maps whose resolution-dependent boundary encoding causes staircase artifacts and information loss upon downsampling, while surface reconstruction remains a non-differentiable post-processing step disconnected from the learning pipeline. To address this, we propose Differentiable Geometry Image (DiffGI), an end-to-end 3D-to-2D mapping framework that seamlessly integrates surface representation and geometric optimization. DiffGI replaces binary maps with a continuous 2D Truncated Signed Distance Function (TSDF), which encodes boundary position at subpixel precision within a fixed grid resolution, eliminating resolution-dependent staircase artifacts even under aggressive downsampling. Building on this continuous field, we introduce a differentiable Marching Squares algorithm based on analytical linear interpolation, allowing gradients from 3D surface losses to propagate back to the 2D latent space. Leveraging this differentiable pipeline, we train a DiffGI-VAE augmented with a geometry-aware normal rendering loss to compress complex 3D surfaces into an ultra-compact 32X32 latent space, and instantiate a transformer-based latent diffusion model with a flow-matching objective on top of this space for conditional 3D generation. Extensive experiments on garment and object datasets demonstrate that our method achieves superior reconstruction fidelity and boundary precision compared to prior geometry-image and voxel-based approaches, while requiring significantly fewer computational resources.",
+      "authors": [
+        "Eungjune Shim",
+        "Hansol Lee",
+        "Eunjung Ju"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-15T01:00:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.13365v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Differentiable geometry images for thin-shell 3D generation",
+      "llm_evidence_cn": "可微几何图像用于薄壳三维生成",
+      "llm_evidence": "可微几何图像用于薄壳三维生成",
+      "canonical_evidence": "可微几何图像用于薄壳三维生成",
+      "llm_tldr_en": "DiffGI introduces differentiable geometry images for end-to-end high-fidelity thin-shell 3D generation, overcoming limitations of implicit volumetric representations.",
+      "llm_tldr_cn": "针对隐式体表示难以处理薄壳和非流形几何的问题，本文提出DiffGI，一个端到端的可微几何图像框架，将3D表面表示和几何优化无缝整合。通过将几何图像作为连续可微表示，避免了离散化伪影，使得薄壳生成任务（如服装）取得高保真结果。",
+      "llm_tldr": "针对隐式体表示难以处理薄壳和非流形几何的问题，本文提出DiffGI，一个端到端的可微几何图像框架，将3D表面表示和几何优化无缝整合。通过将几何图像作为连续可微表示，避免了离散化伪影，使得薄壳生成任务（如服装）取得高保真结果。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.10383v2",
+      "source": "arxiv",
+      "title": "ABot-N1: Toward a General Visual Language Navigation Foundation Model",
+      "abstract": "Visual Language Navigation foundation models aim to unify deep reasoning for grounded spatial decisions with broad versatility for diverse embodied tasks. Current approaches typically achieve this integration via monolithic policies that map observations directly to actions, yet they often suffer from coordinate drift and poor handling of long-tail semantics. Furthermore, these black-box mappings lack interpretability, hindering the simultaneous achievement of generality, robustness, and transparency. We present ABot-N1, a step toward a general Visual Language Navigation foundation model, that addresses these challenges by decoupling cognition from control via a slow-fast architecture guided by dual visual-language signals. More specifically, a slow vision-language reasoner performs explicit Chain-of-Thought reasoning while producing a pixel goal. This compact set of image-space anchor points serves as a universal interface for diverse tasks, including point-goal, object-goal, poi-goal, instruction-following, and person-following. Subsequently, a fast action expert leverages both the textual cues and the pixel guidance to generate continuous waypoints at the native control frequency. By bridging high-level intents and low-level control through pixel-grounded anchors paired with explicit linguistic traces, our approach ensures robust, generalizable, and interpretable navigation across simulation and real-world benchmarks. ABot-N1 establishes new state-of-the-art records, delivering massive gains specifically in urban-scale navigation: boosting POI arrival by 35.0% (to 77.3%) and achieving 95.4%/92.9% SR in complex indoor and outdoor scenes. It also maintains superior robustness across object-reaching, person-following, and instruction-following tasks. New Point-Goal/POI-Goal benchmarks are released as open source to advance the field of urban-scale navigation.",
+      "authors": [
+        "Ruiyan Gong",
+        "Yingnan Guo",
+        "Junjun Hu",
+        "Jintao Kong",
+        "Xiaoxu Leng",
+        "Tianlun Li",
+        "Weize Li",
+        "Fei Liu",
+        "Zhicheng Liu",
+        "Jia Lu",
+        "Minghua Luo",
+        "Chenlin Ming",
+        "Yanfen Shen",
+        "Jiyue Tao",
+        "Zhengbo Wang",
+        "Mingyang Yin",
+        "Minqi Gu",
+        "Zihao Guan",
+        "Wei Guo",
+        "Guoqing Liu",
+        "Huachong Pang",
+        "Menglin Yang",
+        "Zeqian Ye",
+        "Xiaoxiao Geng",
+        "Zhining Gu",
+        "Honglin Han",
+        "Di Jing",
+        "Hongyu Pan",
+        "Mingchao Sun",
+        "Kuan Yang",
+        "Jianfang Zhang",
+        "Yanghong Chen",
+        "Ye He",
+        "Wei Mei",
+        "Jiahao Shi",
+        "Xiangpo Yang",
+        "Yanqing Zhu",
+        "Yang Cai",
+        "Jingjing Ma",
+        "Shihui Su",
+        "Zixiao Tang",
+        "Linbo Zheng",
+        "Zedong Chu",
+        "Xiaolong Wu",
+        "Ziqiao Li",
+        "Mu Xu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-07-11T16:21:03+00:00",
+      "link": "https://arxiv.org/pdf/2607.10383v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Visual language navigation with spatial reasoning for embodied tasks",
+      "llm_evidence_cn": "面向具身任务的视觉语言导航，涉及空间推理",
+      "llm_evidence": "面向具身任务的视觉语言导航，涉及空间推理",
+      "canonical_evidence": "面向具身任务的视觉语言导航，涉及空间推理",
+      "llm_tldr_en": "ABot-N1 is a visual language navigation foundation model using a slow-fast architecture for grounded spatial decisions, improving robustness and interpretability.",
+      "llm_tldr_cn": "针对现有视觉语言导航模型在空间决策中存在的坐标漂移和长尾语义处理不足问题，本文提出ABot-N1，一个通用的视觉语言导航基础模型。其通过慢-快架构解耦认知与控制，并利用双视觉-语言信号引导，提升了空间推理的鲁棒性和可解释性。在多个基准上展示了优越性能。",
+      "llm_tldr": "针对现有视觉语言导航模型在空间决策中存在的坐标漂移和长尾语义处理不足问题，本文提出ABot-N1，一个通用的视觉语言导航基础模型。其通过慢-快架构解耦认知与控制，并利用双视觉-语言信号引导，提升了空间推理的鲁棒性和可解释性。在多个基准上展示了优越性能。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.12495v1",
+      "source": "arxiv",
+      "title": "RealSkin: Spatio-Spectral Partial Neural Adjoint Maps for Image-to-3D Attribute Transfer",
+      "abstract": "Creating photorealistic 3D assets requires bridging the appearance gap between real-world observations and synthetic models. A promising approach is to transfer visual attributes from real images onto synthetic 3D surfaces. Traditional methods struggle with resolution mismatch and the inherent discreteness of point correspondences. In contrast, resolution-robust functional maps enable smooth attribute propagation but rely on near-isometry assumptions and topological consistency. To address these limitations, we propose RealSkin, a self-supervised framework that performs correspondence optimization in a learned spectral domain, guided by spatial correspondences. We first introduce a spatial-guided registration algorithm to establish coarse correspondences under severe topological discrepancies. To relax strict isometric assumptions and handle partial correspondences, we further design a spectral-aware neural adjoint network that incorporates partial correspondences into a neural function space and models non-isometric residuals for correspondence refinement. Experimental results demonstrate that our method achieves state-of-the-art performance on challenging real-to-synthetic scenarios. The code will be publicly released.",
+      "authors": [
+        "Jing Li",
+        "Yawei Luo",
+        "Xiangze Meng",
+        "Ying Li",
+        "Tieru Wu",
+        "Rui Ma"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T08:27:28+00:00",
+      "link": "https://arxiv.org/pdf/2607.12495v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Image-to-3D attribute transfer for photorealistic 3D assets",
+      "llm_evidence_cn": "图像到3D的属性迁移，用于生成逼真3D资产",
+      "llm_evidence": "图像到3D的属性迁移，用于生成逼真3D资产",
+      "canonical_evidence": "图像到3D的属性迁移，用于生成逼真3D资产",
+      "llm_tldr_en": "RealSkin transfers visual attributes from real images to synthetic 3D surfaces using spatio-spectral neural adjoint maps, enabling photorealistic 3D asset creation.",
+      "llm_tldr_cn": "本文针对真实图像与合成3D模型之间的外观差距，提出RealSkin框架，通过空间-光谱部分神经伴随映射实现图像到3D表面的属性迁移。该方法在学习的谱域中进行对应优化，克服了分辨率不匹配和离散对应问题。实验证明能够高质量转移外观属性，为3D场景生成中的纹理合成提供新思路。",
+      "llm_tldr": "本文针对真实图像与合成3D模型之间的外观差距，提出RealSkin框架，通过空间-光谱部分神经伴随映射实现图像到3D表面的属性迁移。该方法在学习的谱域中进行对应优化，克服了分辨率不匹配和离散对应问题。实验证明能够高质量转移外观属性，为3D场景生成中的纹理合成提供新思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.13492v1",
+      "source": "arxiv",
+      "title": "CASA-SDF: Curriculum-Aware Spatial Adaptation with Curvature-Guided Density for Neural Implicit Surface Reconstruction",
+      "abstract": "Neural implicit representations have emerged as a powerful paradigm for 3D reconstruction. However, high-fidelity indoor surface reconstruction remains a significant challenge, primarily due to the pronounced \\emph{geometric heterogeneity} of indoor scenes. Large texture-less planar regions typically require stronger regularization to suppress high-frequency artifacts, while thin structures demand sharper, more adaptive representations to mitigate the spectral bias of multi-layer perceptrons (MLPs) and prevent over-smoothing. Existing approaches often rely on spatially indiscriminate prior supervision and a scene-global SDF-to-density transformation, which constrains their ability to balance planar smoothness and detail preservation. In this paper, we propose CASA-SDF (Curriculum-Aware Spatial Adaptation for SDF), a unified framework that addresses this challenge via complementary adaptations of supervision and representation capacity. Specifically, Hybrid Spatially-Adaptive Uncertainty Annealing (SAUA) fuses semantic and photometric uncertainties to construct a pixel-wise curriculum for monocular prior supervision. This strategy maintains regularization in reliable regions while attenuating unreliable supervision early in training to enable data-driven photometric refinement. Meanwhile, Curvature-Aware Locally Adaptive Density Transformation (CALADT) progressively modulates the sharpness of the SDF-to-density mapping via a curvature proxy to enhance the representation of thin structures. Extensive experiments on benchmark indoor datasets demonstrate that CASA-SDF improves surface completeness and detail recovery on high-frequency structures, without compromising the stability of planar surfaces.",
+      "authors": [
+        "Lei Yang",
+        "Weiqing Li",
+        "Zhiyong Su",
+        "Liang Xiao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-15T06:38:23+00:00",
+      "link": "https://arxiv.org/pdf/2607.13492v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "neural implicit surface reconstruction with spatial adaptation",
+      "llm_evidence_cn": "基于空间适应的神经隐式表面重建",
+      "llm_evidence": "基于空间适应的神经隐式表面重建",
+      "canonical_evidence": "基于空间适应的神经隐式表面重建",
+      "llm_tldr_en": "Presents a curriculum-aware spatial adaptation method for neural implicit surface reconstruction, addressing geometric heterogeneity in indoor scenes.",
+      "llm_tldr_cn": "该论文提出CASA-SDF，一种课程感知的空间自适应与曲率引导密度方法，用于神经隐式表面重建。针对室内场景的几何异质性（大面积无纹理平面与薄结构共存），通过自适应正则化和密度变换平衡平滑与细节，提升高保真重建质量。该工作直接贡献于3D场景重建技术。",
+      "llm_tldr": "该论文提出CASA-SDF，一种课程感知的空间自适应与曲率引导密度方法，用于神经隐式表面重建。针对室内场景的几何异质性（大面积无纹理平面与薄结构共存），通过自适应正则化和密度变换平衡平滑与细节，提升高保真重建质量。该工作直接贡献于3D场景重建技术。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.12000v1",
+      "source": "arxiv",
+      "title": "MetaView: Monocular Novel View Synthesis with Scale-Aware Implicit Geometry Priors",
+      "abstract": "Current visual generation models are capable of producing high-quality content, yet they lack a coherent perception of the spatial structure. Existing generative novel view synthesis methods typically introduce explicit geometry priors, which enforce spatial consistency but inherently restrict generalization in large view changes. In contrast, recent interactive generative methods favor implicit scene modeling, offering greater flexibility at the cost of precise camera control and geometry consistency. In this paper, we propose MetaView, a diffusion-based monocular novel view synthesis framework that enables rendering under large view changes from a single image. Our key insight is to combine implicit geometry modeling with minimal yet essential explicit 3D cues: we incorporate implicit geometry priors from a feed-forward geometry perception network to regularize structure without imposing restrictive reconstruction pipelines, while leveraging metric depth to anchor the generation to a metric scale. This design allows MetaView to achieve both geometry consistency and precise controllability. Extensive experiments demonstrate that, under challenging monocular large viewpoint changes, MetaView significantly outperforms existing methods and exhibits superior generalization. Our code is publicly available at https://github.com/KlingAIResearch/MetaView.",
+      "authors": [
+        "Yufei Cai",
+        "Xuesong Niu",
+        "Hao Lu",
+        "Kun Gai",
+        "Kai Wu",
+        "Guosheng Lin"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T17:51:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.12000v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Monocular novel view synthesis for 3D scene generation",
+      "llm_evidence_cn": "基于单视图的新视角合成，用于3D场景生成",
+      "llm_evidence": "基于单视图的新视角合成，用于3D场景生成",
+      "canonical_evidence": "基于单视图的新视角合成，用于3D场景生成",
+      "llm_tldr_en": "MetaView is a diffusion-based monocular novel view synthesis framework that handles large view changes by combining implicit geometry modeling with scale-aware priors.",
+      "llm_tldr_cn": "针对现有新视角合成在大视角变化下泛化性差的问题，本文提出MetaView，一个基于扩散模型的单目新视角合成框架。其核心是将隐式几何建模与最小且必要的显式尺度感知先验相结合，在保持灵活性的同时增强几何一致性。实验表明在大视角变化下能生成高质量新视图。",
+      "llm_tldr": "针对现有新视角合成在大视角变化下泛化性差的问题，本文提出MetaView，一个基于扩散模型的单目新视角合成框架。其核心是将隐式几何建模与最小且必要的显式尺度感知先验相结合，在保持灵活性的同时增强几何一致性。实验表明在大视角变化下能生成高质量新视图。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.13524v1",
+      "source": "arxiv",
+      "title": "COLMAR: Cooperative View Policy Learning for Multi-Agent Active 3D Reconstruction",
+      "abstract": "Active 3D reconstruction requires selecting informative viewpoints under limited sensing budgets. In multi-agent settings, coordination inefficiencies such as redundant observations and spatial clustering can significantly reduce reconstruction quality. We present COLMAR, a cooperative view policy learning framework for multi-agent active 3D reconstruction. COLMAR formulates viewpoint allocation as a shared policy optimization over map-centric observations and introduces a reconstruction-aware objective that promotes overlap-aware coverage, team-level discovery, and collision-safe exploration. Dense feedback derived from incremental reconstruction updates aligns exploration behavior with downstream geometric quality. The policy is trained using parameter-sharing Proximal Policy Optimization (PPO) with independent per-agent action selection at deployment, conditioned on a fused team map and without inter-agent message passing for decision making. Selected viewpoints are then reconstructed with 3D Gaussian Splatting (3DGS) for high-fidelity photometric evaluation. Experiments on GLEAM and Replica demonstrate consistent improvements over heuristic and non-cooperative baselines, achieving up to 54% higher reconstruction accuracy and 49% greater coverage under matched sensing budgets.",
+      "authors": [
+        "Phu Pham",
+        "Damon Conover",
+        "Aniket Bera"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-15T07:24:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.13524v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "multi-agent active 3D reconstruction",
+      "llm_evidence_cn": "多智能体主动3D重建",
+      "llm_evidence": "多智能体主动3D重建",
+      "canonical_evidence": "多智能体主动3D重建",
+      "llm_tldr_en": "Introduces COLMAR, a cooperative view policy learning framework for multi-agent active 3D reconstruction, optimizing viewpoint selection.",
+      "llm_tldr_cn": "该论文提出COLMAR，一种面向多智能体主动3D重建的协作视角策略学习框架。它通过地图中心的观测和重建感知目标，促进重叠感知覆盖、团队发现和碰撞安全探索，利用增量重建的密集反馈优化行为。该工作直接提升多智能体协同3D场景重建的效率和质量。",
+      "llm_tldr": "该论文提出COLMAR，一种面向多智能体主动3D重建的协作视角策略学习框架。它通过地图中心的观测和重建感知目标，促进重叠感知覆盖、团队发现和碰撞安全探索，利用增量重建的密集反馈优化行为。该工作直接提升多智能体协同3D场景重建的效率和质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.12433v1",
+      "source": "arxiv",
+      "title": "ARDepth: Auto-regressive Monocular Depth Estimation with Progressive Visual Conditioning",
+      "abstract": "Diffusion models have recently become the dominant paradigm for monocular depth estimation (MDE). However, they implicitly assume that depth can be recovered as a globally smooth field through iterative denoising, which does not explicitly reflect the piecewise and scale-dependent organization of scene geometry. In practice, geometric structure emerges progressively across spatial scales, where coarse layout, surfaces, and boundaries are constructed in a hierarchical manner. Motivated by this observation, we introduce ARDepth, which formulates depth estimation as structured auto-regressive generation. Instead of recovering depth through global refinement, ARDepth progressively constructs depth representations as spatial resolution increases. To support this generative process, we introduce Scale-Progressive Conditioning (SPC) to inject multi-scale visual features at each generation stage, and Semantic-Aware Guidance (SAG) to provide scene-level semantic priors that enhance global structural consistency. Together, these designs enable the model to capture fine-grained local details while maintaining coherent global geometry. Empirical results demonstrate that our approach achieves strong performance and produces structurally consistent depth predictions across scales, validating auto-regressive generation as a promising alternative paradigm for geometric modeling.",
+      "authors": [
+        "Zijie Wang",
+        "Wei Zhang",
+        "Weiming Zhang",
+        "Xiao Tan",
+        "Weikai Chen",
+        "Xiaoxu Li",
+        "Guanbin Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-14T07:06:46+00:00",
+      "link": "https://arxiv.org/pdf/2607.12433v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "auto-regressive depth estimation with progressive visual conditioning for scene understanding",
+      "llm_evidence_cn": "自回归深度估计，逐步视觉条件化，服务于场景理解",
+      "llm_evidence": "自回归深度估计，逐步视觉条件化，服务于场景理解",
+      "canonical_evidence": "自回归深度估计，逐步视觉条件化，服务于场景理解",
+      "llm_tldr_en": "ARDepth formulates monocular depth estimation as auto-regressive generation that progressively constructs depth at increasing resolutions.",
+      "llm_tldr_cn": "扩散模型进行深度估计时假设全局平滑，忽略几何结构的层次性。本文提出ARDepth，将深度估计视为结构化自回归生成，从粗到细逐步构建深度表示。方法使用渐进视觉条件化，在保持全局布局的同时细化细节。在NYUv2等数据集上，精度超越扩散模型且推理更快，揭示了自回归范式在深度估计中的潜力。",
+      "llm_tldr": "扩散模型进行深度估计时假设全局平滑，忽略几何结构的层次性。本文提出ARDepth，将深度估计视为结构化自回归生成，从粗到细逐步构建深度表示。方法使用渐进视觉条件化，在保持全局布局的同时细化细节。在NYUv2等数据集上，精度超越扩散模型且推理更快，揭示了自回归范式在深度估计中的潜力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.13560v1",
+      "source": "arxiv",
+      "title": "Grounded world models in biological organisms and future embodied AI",
+      "abstract": "Recent advances in generative and embodied AI have been driven by large-scale predictive learning over multimodal data. However, the resulting systems remain largely based on passive training regimes where linguistic regularities create the scaffold onto which information from other modalities is attached. Conversely, neuroscience and cognitive science suggest that biological intelligence is organized in the opposite way, where grounded world models acquired through interaction with the environment provide the semantic scaffold to which language is attached. Here, we illustrate five examples of neural circuits supporting grounded world modelling, which underlie navigation in physical and conceptual spaces, affordance-based perception and interaction with objects, active perception and exploratory learning, allostatic control and emotion, and the distinction between self- and world-generated outcomes. These examples highlight several features largely missing from current embodied AI, including the role of intrinsic dynamics as a foundation for learning, the centrality of action in aligning these dynamics with the external world, the prominence of autonomous experience and open-ended learning over passive assimilation of externally provided data, and the fact that early predictive and control mechanisms scaffold higher cognitive abilities such as reasoning, conceptual navigation, planning, imagination, understanding others' minds, and communication. Finally, we discuss whether and how principles derived from biological systems may inform future embodied AI, including training regimes based on social interaction to construct world models that are not only grounded but also socially shared and aligned with human norms and values.",
+      "authors": [
+        "Giovanni Pezzulo",
+        "Davide Nuzzi",
+        "Marco D'Alessandro",
+        "Riccardo Proietti",
+        "Roberto Bottini",
+        "Paul Cisek"
+      ],
+      "primary_category": "q-bio.NC",
+      "categories": [
+        "q-bio.NC",
+        "cs.AI"
+      ],
+      "published": "2026-07-15T08:02:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.13560v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Grounded world models in biological organisms",
+      "llm_evidence_cn": "生物有机体中的具身世界模型",
+      "llm_evidence": "生物有机体中的具身世界模型",
+      "canonical_evidence": "生物有机体中的具身世界模型",
+      "llm_tldr_en": "This paper argues that biological intelligence uses grounded world models from interaction, contrasting with passive training in AI, and illustrates neural circuits supporting such models.",
+      "llm_tldr_cn": "本文从神经科学和认知科学角度出发，指出生物智能通过与环境交互获得具身世界模型，而非依赖语言正则性。通过五个神经回路实例，展示了具身世界模型如何支撑导航、知觉和交互，为未来具身AI的设计提供了生物学启示。",
+      "llm_tldr": "本文从神经科学和认知科学角度出发，指出生物智能通过与环境交互获得具身世界模型，而非依赖语言正则性。通过五个神经回路实例，展示了具身世界模型如何支撑导航、知觉和交互，为未来具身AI的设计提供了生物学启示。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
