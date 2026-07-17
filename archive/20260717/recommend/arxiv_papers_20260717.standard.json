@@ -1,0 +1,571 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-17T20:09:00.968870+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 10,
+    "quick_skim_target": 11,
+    "quick_selected": 10
+  },
+  "deep_dive": [
+    {
+      "id": "2607.10203v2",
+      "source": "arxiv",
+      "title": "Adaptive Compute in Latent World Models: When Depth Helps, Hurts, or Doesn't Matter",
+      "abstract": "Adaptive-compute world models -- early-exit or mixture-of-depths predictors that spend variable depth per step -- assume depth buys better predictions and can be routed adaptively. In autoregressive rollouts, the first assumption requires depth's per-step precision to survive composition. We test this with a pre-registered instrument, the shallow penalty $ρ=\\mathrm{err}(\\text{shallowest-exit rollout})/\\mathrm{err}(\\text{full-depth rollout})$, across nine DeepMind Control tasks under matched single-step ($K=1$) and multi-step ($K=4$) training, three seeds each. We find three regimes: on 6/9 tasks depth helps rollouts (intrinsic, $ρ$ up to $4.7\\times$), on 2/9 the shallow exits beat the full stack (inversion, $ρ$ down to $0.85\\times$), and one is flat. The robust inversion (cheetah) is not a property of the dynamics but is created by training: an ablation supervising early exits only at the first rollout step erases it ($ρ: 0.87\\to1.18$, $n=8$, $Δ=+0.31$), while an intrinsic-tradeoff task is unaffected -- a double dissociation we call the routability catch-22, since the supervision that makes exits routable is what trains them to out-roll the full stack. The regime is partly predictable a priori: observation/action dimensionality and one-step model error correlate with $ρ$ at $|\\text{Spearman}|\\approx0.75$ ($n=9$). Inside a CEM planner, $ρ$'s sign predicts whether planning benefits from depth, most sharply on the inversion task, where shallow planning beats deep. Finally, three cautions: a task's regime depends on the metric space, the rollout horizon, and the encoder. All thresholds and gates were fixed before the compute campaign, including a pre-registered negative for the hypothesis that motivated the study.",
+      "authors": [
+        "Achyuthan Sivasankar"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-11T08:27:33+00:00",
+      "link": "https://arxiv.org/pdf/2607.10203v2",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "investigates adaptive compute in latent world models across control tasks",
+      "llm_evidence_cn": "在控制任务中研究潜在世界模型的自适应计算",
+      "llm_evidence": "在控制任务中研究潜在世界模型的自适应计算",
+      "canonical_evidence": "在控制任务中研究潜在世界模型的自适应计算",
+      "llm_tldr_en": "Systematically tests adaptive-compute world models across nine control tasks, revealing three regimes where depth helps, hurts, or doesn't matter for autoregressive rollouts.",
+      "llm_tldr_cn": "自适应计算世界模型假设更深的预测能提高精度，但在自回归展开中该假设未必成立。本文在九个DeepMind控制任务上进行了预注册实验，发现三种情况：深度在6/9任务中有益（提升最多4.7倍），在2/9任务中有害，在1/9任务中无影响。结果表明深度带来的收益并非一致，为世界模型设计提供了重要指导。",
+      "llm_tldr": "自适应计算世界模型假设更深的预测能提高精度，但在自回归展开中该假设未必成立。本文在九个DeepMind控制任务上进行了预注册实验，发现三种情况：深度在6/9任务中有益（提升最多4.7倍），在2/9任务中有害，在1/9任务中无影响。结果表明深度带来的收益并非一致，为世界模型设计提供了重要指导。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14481v1",
+      "source": "arxiv",
+      "title": "Immediate 3D Gaussian Splat Reconstruction of Unordered Input with Global Consistency",
+      "abstract": "3D Gaussian Splatting (3DGS) has become the method of choice for reconstructing and real-time rendering of captured scenes. To capture a scene with good visual quality, continuous image sequences are usually combined with out-of-order shots for better scene coverage. Structure from motion can reconstruct such captures, but only after they are all available and often with high computational cost. Incremental reconstruction methods -- often derived from SLAM solutions -- provide immediate feedback, but cannot handle the out-of-order capture we require. We provide the first immediate feedback solution for such radiance field capture that provides global consistency. We first introduce a method for fast matching in out-of-order sequences, by repurposing visual place recognition models and a covisibility graph, and provide an efficient way to find highly connected keyframes, improving quality even for ordered sequences. We show how these steps -- together with GPU optimization and careful Gaussian primitive placement -- provide fast local reconstruction, in our challenging radiance field reconstruction case. We then introduce a novel cluster-based method, again using the covisibility graph, to provide efficient loop closure that does not require sequential input. Finally, to handle large scenes in our context, we introduce a progressive hierarchy that allows our method to scale to large environments, without compromising efficiency. Our results show we provide immediate feedback 3DGS reconstruction with good visual quality in several datasets, with up to thousands of input images.",
+      "authors": [
+        "Andreas Meuleman",
+        "Linus Franke",
+        "Boris Zhestiankin",
+        "Camille Montemagni",
+        "George Drettakis"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-16T01:53:13+00:00",
+      "link": "https://arxiv.org/pdf/2607.14481v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Immediate 3DGS reconstruction from unordered inputs for scene capture",
+      "llm_evidence_cn": "从无序输入即时3DGS重建用于场景捕获",
+      "llm_evidence": "从无序输入即时3DGS重建用于场景捕获",
+      "canonical_evidence": "从无序输入即时3DGS重建用于场景捕获",
+      "llm_tldr_en": "First immediate 3DGS reconstruction method for unordered images with global consistency, enabling interactive scene capture.",
+      "llm_tldr_cn": "本文提出首个即时反馈的3D高斯泼溅（3DGS）重建方法，能够处理无序图像序列（如混合了连续和随机拍摄），无需等待所有图像即可提供全局一致的3D场景表示。该方法通过快速匹配和增量优化，在保持实时交互性的同时，实现了与传统离线方法相当的重建质量，极大提升了场景捕获的灵活性和效率。",
+      "llm_tldr": "本文提出首个即时反馈的3D高斯泼溅（3DGS）重建方法，能够处理无序图像序列（如混合了连续和随机拍摄），无需等待所有图像即可提供全局一致的3D场景表示。该方法通过快速匹配和增量优化，在保持实时交互性的同时，实现了与传统离线方法相当的重建质量，极大提升了场景捕获的灵活性和效率。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.15211v1",
+      "source": "arxiv",
+      "title": "MAGiSt3R: Multi-Agent Feed-forward 3D Reconstruction from Monocular RGB Videos",
+      "abstract": "This paper presents MAGiSt3R, a multi-agent 3D reconstruction framework performing reconstruction and camera tracking for monocular RGB videos at almost 10 FPS. MAGiSt3R relies on a feed-forward model from the 3R family to process RGB videos and regress local point maps, and on a merging model, MAGMA, that combines local maps at both intra-agent and inter-agent levels to obtain the final global point map. Furthermore, MAGiSt3R performs pose graph optimization to mitigate cumulative camera drift occurring along the feed-forward pipeline. We evaluate MAGiSt3R on both synthetic and real-world datasets, demonstrating its superior reconstruction and camera tracking accuracy compared to state-of-the-art approaches.",
+      "authors": [
+        "Ziren Gong",
+        "Xiaohan Li",
+        "Fabio Tosi",
+        "Ninghui Xu",
+        "Stefano Mattoccia",
+        "Jianfei Cai",
+        "Matteo Poggi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-16T17:12:58+00:00",
+      "link": "https://arxiv.org/pdf/2607.15211v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "feed-forward 3D reconstruction from monocular videos using multi-agent merging",
+      "llm_evidence_cn": "基于多Agent前馈的单目视频3D重建",
+      "llm_evidence": "基于多Agent前馈的单目视频3D重建",
+      "canonical_evidence": "基于多Agent前馈的单目视频3D重建",
+      "llm_tldr_en": "MAGiSt3R is a multi-agent framework that achieves nearly 10 FPS 3D reconstruction and camera tracking from monocular RGB videos by regressing local point maps and merging them with pose graph optimization.",
+      "llm_tldr_cn": "该论文提出MAGiSt3R，一个多Agent前馈3D重建框架，通过回归局部点地图并利用合并模型MAGMA进行跨Agent融合，配合位姿图优化，实现从单目RGB视频中近10FPS的高精度3D重建和相机跟踪。在合成和真实数据集上均优于现有方法，为实时3D场景重建提供了新范式。",
+      "llm_tldr": "该论文提出MAGiSt3R，一个多Agent前馈3D重建框架，通过回归局部点地图并利用合并模型MAGMA进行跨Agent融合，配合位姿图优化，实现从单目RGB视频中近10FPS的高精度3D重建和相机跟踪。在合成和真实数据集上均优于现有方法，为实时3D场景重建提供了新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12356v2",
+      "source": "arxiv",
+      "title": "VistaVLA: Geometry- and Semantic-Aware 3D Gaussian-Grounded VLA for Robotic Manipulation",
+      "abstract": "Vision-Language-Action (VLA) models have emerged as a powerful end-to-end paradigm for robotic manipulation by mapping language instructions and 2D visual inputs directly to actions. However, these models lack an explicit, scene-level 3D representation, limiting their ability to reason over spatial layouts and geometric constraints. While recent efforts incorporate explicit 3D cues, such as depth maps or point clouds, to improve geometric awareness, they primarily capture low-level structures and lack high-level semantic grounding in 3D space. In human cognition, interaction with the physical world relies on a 3D semantic cognitive map - an internal mental model that integrates spatial layouts with semantic context to enable persistent, viewpoint-invariant reasoning. In light of this, we present VistaVLA, a novel two-stage framework that constructs a geometry- and semantics-aware 3D cognitive representation from 3D Gaussian primitives and grounds it as compact context tokens for VLA policy learning. Specifically, VistaVLA lifts multi-view vision-language features into 3D Gaussian primitives, forming geometry-anchored semantic tokens that align view-consistent spatial grounding with 2D visual feature spaces. To make this 3D representation computationally tractable for effective VLA control, we introduce Merge-then-Query (MtQ), a token summarization mechanism. MtQ compresses dense Gaussian primitives into a highly compact set of spatially informative tokens, achieving a 99% token reduction while preserving action-relevant 3D layouts and semantic context. Extensive evaluations in both simulated and real-world environments demonstrate the effectiveness of VistaVLA. Notably, in real-world scenarios, VistaVLA improves success rates by 22.8% across seven real-world tasks and by 30.0% over the VLA-Adapter baseline on challenging out-of-distribution tasks.",
+      "authors": [
+        "Mohan Liu",
+        "Zhihao Gu",
+        "Xuanyu Chen",
+        "Haitian Zhang",
+        "Kaimin Mao",
+        "Yan Wu",
+        "Wei-Yun Yau",
+        "Lin Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-14T05:08:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.12356v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "3D semantic cognitive map as world model for robotic manipulation",
+      "llm_evidence_cn": "3D语义认知地图作为机器人操作的世界模型",
+      "llm_evidence": "3D语义认知地图作为机器人操作的世界模型",
+      "canonical_evidence": "3D语义认知地图作为机器人操作的世界模型",
+      "llm_tldr_en": "VistaVLA integrates 3D Gaussian scene-level representation into VLA models, enabling spatial reasoning and persistent semantic grounding as a world model.",
+      "llm_tldr_cn": "现有视觉-语言-动作模型缺乏显式3D场景表示，限制了空间推理。VistaVLA通过3D高斯泼溅构建场景级语义认知地图，作为内在世界模型，实现连续、几何感知的机器人操作。实验证明该方法在多个操作任务上显著提升成功率。",
+      "llm_tldr": "现有视觉-语言-动作模型缺乏显式3D场景表示，限制了空间推理。VistaVLA通过3D高斯泼溅构建场景级语义认知地图，作为内在世界模型，实现连续、几何感知的机器人操作。实验证明该方法在多个操作任务上显著提升成功率。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.10203v1",
+      "source": "arxiv",
+      "title": "When Does Depth Survive Composition? Compute--Quality Regimes in Latent World Models",
+      "abstract": "Adaptive-compute world models -- early-exit or mixture-of-depths predictors that spend variable depth per step -- assume depth buys better predictions and can be routed adaptively. In autoregressive rollouts, the first assumption requires depth's per-step precision to survive composition. We test this with a pre-registered instrument, the shallow penalty $ρ=\\mathrm{err}(\\text{shallowest-exit rollout})/\\mathrm{err}(\\text{full-depth rollout})$, across nine DeepMind Control tasks under matched single-step ($K=1$) and multi-step ($K=4$) training, three seeds each. We find three regimes: on 6/9 tasks depth helps rollouts (intrinsic, $ρ$ up to $4.7\\times$), on 2/9 the shallow exits beat the full stack (inversion, $ρ$ down to $0.85\\times$), and one is flat. The robust inversion (cheetah) is not a property of the dynamics but is created by training: an ablation supervising early exits only at the first rollout step erases it ($ρ: 0.87\\to1.18$, $n=8$, $Δ=+0.31$), while an intrinsic-tradeoff task is unaffected -- a double dissociation we call the routability catch-22, since the supervision that makes exits routable is what trains them to out-roll the full stack. The regime is partly predictable a priori: observation/action dimensionality and one-step model error correlate with $ρ$ at $|\\text{Spearman}|\\approx0.75$ ($n=9$). Inside a CEM planner, $ρ$'s sign predicts whether planning benefits from depth, most sharply on the inversion task, where shallow planning beats deep. Finally, three cautions: a task's regime depends on the metric space, the rollout horizon, and the encoder. All thresholds and gates were fixed before the compute campaign, including a pre-registered negative for the hypothesis that motivated the study.",
+      "authors": [
+        "Achyuthan Sivasankar"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-11T08:27:33+00:00",
+      "link": "https://arxiv.org/pdf/2607.10203v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "latent world models, depth composition regimes",
+      "llm_evidence_cn": "潜在世界模型，深度组合区域",
+      "llm_evidence": "潜在世界模型，深度组合区域",
+      "canonical_evidence": "潜在世界模型，深度组合区域",
+      "llm_tldr_en": "This paper investigates whether depth in adaptive-compute world models survives composition, finding that depth helps in 6/9 tasks but can also invert, providing insights for designing efficient world models.",
+      "llm_tldr_cn": "该论文通过预注册实验研究了自适应计算世界模型中深度组合的预测性能，在九个DeepMind Control任务上测试了浅层退出与全深度推出的误差比。实验发现三种计算-质量区域：大部分任务中深度有益，少数任务中浅层反而更好。该发现对设计高效的世界模型具有重要指导意义。",
+      "llm_tldr": "该论文通过预注册实验研究了自适应计算世界模型中深度组合的预测性能，在九个DeepMind Control任务上测试了浅层退出与全深度推出的误差比。实验发现三种计算-质量区域：大部分任务中深度有益，少数任务中浅层反而更好。该发现对设计高效的世界模型具有重要指导意义。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.11498v1",
+      "source": "arxiv",
+      "title": "See like a Robot: Robot-Centric Pointmaps for Vision-Language-Action Models",
+      "abstract": "Vision-language-action (VLA) models predict robot actions from visual observations and language instructions. These actions are defined in the robot's own 3D coordinate frame, yet most VLAs observe the scene in the camera frame, creating a frame mismatch between where the scene is observed and where actions are defined. The mismatch is benign under a fixed viewpoint, where the policy can memorize a single observation-to-action mapping, but grows harder as large-scale datasets aggregate demonstrations across diverse camera setups and the policy must generalize this mapping across viewpoints. We address this mismatch with robot-centric pointmaps, images whose pixels store the 3D coordinates of scene points in the robot frame. Pointmaps provide robot-frame 3D geometry while preserving the dense H x W grid expected by pretrained 2D VLAs, so they integrate into existing VLAs with minimal architectural change. On RoboCasa, pointmaps improve both pi0.5 and SmolVLA and outperform representative camera-viewpoint and 3D-aware baselines. In real-robot experiments, their advantage over an RGB-only policy widens when the camera is moved to a placement unseen during training.",
+      "authors": [
+        "Byungkun Lee",
+        "Dongyoon Hwang",
+        "Dongjin Kim",
+        "Hojoon Lee",
+        "Minho Park",
+        "Jaegul Choo"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-13T12:50:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.11498v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "robot-centric pointmaps for scene understanding in VLA",
+      "llm_evidence_cn": "机器人中心点图用于VLA中的场景理解",
+      "llm_evidence": "机器人中心点图用于VLA中的场景理解",
+      "canonical_evidence": "机器人中心点图用于VLA中的场景理解",
+      "llm_tldr_en": "See like a Robot proposes robot-centric pointmaps to provide 3D scene coordinates in robot frame, enabling viewpoint-invariant scene understanding for VLA models.",
+      "llm_tldr_cn": "该论文针对VLA模型中观测帧与动作帧不匹配的问题，提出机器人中心点图（robot-centric pointmaps），每个像素存储场景点在机器人坐标系中的3D坐标。这种表示消除了相机视点变化导致的映射歧义。实验证明，使用点图的VLA模型能够泛化到多视角场景，在机器人操控任务中性能显著提升。",
+      "llm_tldr": "该论文针对VLA模型中观测帧与动作帧不匹配的问题，提出机器人中心点图（robot-centric pointmaps），每个像素存储场景点在机器人坐标系中的3D坐标。这种表示消除了相机视点变化导致的映射歧义。实验证明，使用点图的VLA模型能够泛化到多视角场景，在机器人操控任务中性能显著提升。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.13808v1",
+      "source": "arxiv",
+      "title": "Bake It Till You Make It: Ultrafast Spatial Texture-Atlas Splatting",
+      "abstract": "Recent extensions of 3D Gaussian Splatting (3DGS) capture fine color details using hash-grid-based appearance parameterization but incur high computational cost during fragment rendering. We introduce a decoupled radiance representation that models low-frequency geometry and view dependent appearance features with 2D surfels while representing high-frequency textures via a view-independent spatial hash grid that is baked into a compact texture atlas. By including sparsity-enhancing optimizations that penalize semi-transparency and per-primitive falloff, our method aggressively prunes insignificant surfels and achieves significantly faster and sparser reconstructions than prior work. Exploiting geometric sparsity and efficient GPU texture mapping, our approach achieves up to a fivefold speedup over 3DGS while preserving state-of-the-art visual fidelity, enabling real-time 4K rendering at 60 FPS on consumer hardware.",
+      "authors": [
+        "Neel Kelkar",
+        "Simon Niedermayr",
+        "Kaloian Petkov",
+        "Klaus Engel",
+        "Rüdiger Westermann"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-15T13:12:31+00:00",
+      "link": "https://arxiv.org/pdf/2607.13808v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "decoupled radiance representation for fast 3DGS rendering",
+      "llm_evidence_cn": "解耦辐射表示实现快速3DGS渲染",
+      "llm_evidence": "解耦辐射表示实现快速3DGS渲染",
+      "canonical_evidence": "解耦辐射表示实现快速3DGS渲染",
+      "llm_tldr_en": "Introduces a decoupled radiance representation with 2D surfels and a baked spatial hash grid texture atlas, achieving ultrafast and sparse 3DGS reconstruction with sparsity-enhancing optimizations.",
+      "llm_tldr_cn": "本文针对3DGS精细颜色建模计算成本高的问题，提出一种解耦辐射表示：低频几何和视角相关特征由2D surfel建模，高频纹理由预烘烤的空间哈希网格纹理图集表示。通过稀疏性增强优化（惩罚半透明和基元衰减），显著裁剪冗余surfel，实现超快速且稀疏的重建，同时保持高视觉质量。",
+      "llm_tldr": "本文针对3DGS精细颜色建模计算成本高的问题，提出一种解耦辐射表示：低频几何和视角相关特征由2D surfel建模，高频纹理由预烘烤的空间哈希网格纹理图集表示。通过稀疏性增强优化（惩罚半透明和基元衰减），显著裁剪冗余surfel，实现超快速且稀疏的重建，同时保持高视觉质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.11588v3",
+      "source": "arxiv",
+      "title": "FoundationGeo: Learning Spatial Pixel-Wise Fields for Monocular Metric Geometry",
+      "abstract": "We present FoundationGeo, a two-stage framework that explicitly bridges relative and metric prediction via spatial calibration and principled data design. Stage 1 learns a high-fidelity, affine-invariant geometry model by initializing with DINOv3 and training on a curated 10.2M-sample multi-domain corpus with complementary local-detail supervision, yielding sharp boundaries and strong cross-domain generalization. Stage 2 moves beyond global scaling by introducing lightweight pixel-wise calibration fields for metric estimation: a scale field for spatially varying metric alignment and a ray-direction correction field that mitigates directional bias in point-map geometry, together producing metrically consistent 3D point maps. Beyond model design, we identify camera intrinsic coverage, especially focal length distribution mismatch between training and test data, as a key bottleneck for zero-shot metric generalization: performance drops sharply when test intrinsics fall outside the training distribution. To address this, we synthesize additional training data across diverse focal lengths using a Blender-based data engine, repairing under-covered focal regimes and improving robustness under intrinsic shift. Extensive zero-shot evaluations across seven benchmarks show that FoundationGeo significantly strengthens cross-domain robustness, staying near the top across diverse domains while avoiding the sharp cross-domain performance drops observed in other methods. This consistency translates into the best overall performance, surpassing heavier baselines by over 5.2% on average.",
+      "authors": [
+        "Muxin Liu",
+        "Xiaoyang Lyu",
+        "Tianhe Ren",
+        "Peng Dai",
+        "Xiaoshan Wu",
+        "Zhiyue Zhang",
+        "Jiaqi Zhang",
+        "Jiehong Lin",
+        "Shaoshuai Shi",
+        "Xiaojuan Qi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T14:10:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.11588v3",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "learning spatial pixel-wise fields for monocular metric geometry, contributes to scene understanding",
+      "llm_evidence_cn": "学习像素级空间场实现单目度量几何，有助于场景理解",
+      "llm_evidence": "学习像素级空间场实现单目度量几何，有助于场景理解",
+      "canonical_evidence": "学习像素级空间场实现单目度量几何，有助于场景理解",
+      "llm_tldr_en": "FoundationGeo learns a two-stage framework for monocular metric geometry, first affine-invariant geometry then pixel-wise calibration fields, producing metrically consistent 3D point maps.",
+      "llm_tldr_cn": "针对单目度量几何预测中相对估计与绝对尺度难以统一的问题，本文提出FoundationGeo，两阶段框架：第一阶段学习高保真仿射不变几何模型，第二阶段引入轻量像素级校准场（尺度场和射线方向校正场），生成度量一致的三维点图。该方法在跨域泛化和边界细节上表现优异，为场景理解提供了高质量的几何输入。",
+      "llm_tldr": "针对单目度量几何预测中相对估计与绝对尺度难以统一的问题，本文提出FoundationGeo，两阶段框架：第一阶段学习高保真仿射不变几何模型，第二阶段引入轻量像素级校准场（尺度场和射线方向校正场），生成度量一致的三维点图。该方法在跨域泛化和边界细节上表现优异，为场景理解提供了高质量的几何输入。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.14470v1",
+      "source": "arxiv",
+      "title": "G$^2$SR: Geometric Methods for Fast and Memory-Efficient Gaussian-based Surface Reconstruction",
+      "abstract": "Few-view surface reconstruction recovers the visible surfaces of a scene from a few posed RGB images, providing the 3D models that robots need to explore and interact online. On mobile platforms, the reconstruction must be fast and geometrically accurate while keeping a small memory footprint to ensure safe and efficient operation. 3D Gaussian Splatting (3DGS) offers a high-fidelity scene representation, but building it from a few views is ill-posed, as many distinct surfaces reproduce the same images, making traditional photometric methods prone to \"floater\" artifacts. End-to-end methods resolve the ambiguity by regressing splats with large, usually Transformer-based, networks that require heavy compute and memory while generalizing poorly to new scenes. We propose G2SR, which exploits a well-posed core of the task: given cross-view 2D splat correspondences, 3D splats follow analytically from multi-view geometry. G2SR employs a lightweight neural frontend to detect and track 2D Gaussian splats on the image plane and an analytic backend to triangulate each into a metric-scale 3D splat. On ScanNet, Replica, and DTU, G2SR matches or exceeds the geometric accuracy of state-of-the-art end-to-end methods while running at 69-89 reconstructions per second within 203 MB of GPU memory (5-107x less) for 2- and 3-view inputs at 384 x 512 resolution, offering a practical path to online Gaussian-based surface reconstruction.",
+      "authors": [
+        "Dasong Gao",
+        "Vivienne Sze",
+        "Sertac Karaman"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-16T01:33:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.14470v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Fast memory-efficient Gaussian-based surface reconstruction from few views",
+      "llm_evidence_cn": "少量视图下基于高斯表示的快速高效表面重建",
+      "llm_evidence": "少量视图下基于高斯表示的快速高效表面重建",
+      "canonical_evidence": "少量视图下基于高斯表示的快速高效表面重建",
+      "llm_tldr_en": "G2SR introduces geometric methods for fast, memory-efficient Gaussian-based surface reconstruction from few views, reducing floater artifacts.",
+      "llm_tldr_cn": "少视图表面重建在移动平台上需要快速且省内存。现有方法要么产生漂浮伪影，要么需要大量计算。G2SR提出几何方法优化高斯泼溅重建，在不依赖大型网络的情况下获得准确几何。实验表明在速度和内存上明显优于基线方法。",
+      "llm_tldr": "少视图表面重建在移动平台上需要快速且省内存。现有方法要么产生漂浮伪影，要么需要大量计算。G2SR提出几何方法优化高斯泼溅重建，在不依赖大型网络的情况下获得准确几何。实验表明在速度和内存上明显优于基线方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.14228v1",
+      "source": "arxiv",
+      "title": "SeeSE3: Emergence of 3D Space in Vision Features",
+      "abstract": "In this paper, we ask whether vision foundation models construct representations that reflect the intrinsic properties of 3D Euclidean space. Unlike previous works that probe 3D awareness of vision features by regressing image-centric quantities such as depth or normals, we investigate the relation between the structure of the space of visual features and the group of Euclidean transformations $SE(3)$. We propose a set of probes to evaluate this relation from both topological and geometric perspectives: a mutual neighborhood metric that measures the alignment between feature neighborhoods and spatial topology, and a Poincaré Adapter to test the linear accessibility of the geometry of camera motion from latent displacements in static scenes. We show that self-supervised vision models, which, in principle, have not been trained with direct 3D supervision or active agency, possess latent subspaces that are remarkably strongly correlated with three-dimensional Euclidean space, when probed correctly. Building on this insight we propose a new class of \"Latent-Space Navigation\" techniques that perform visual odometry and localization purely in the latent space, bypassing the need for explicit 3D reconstruction.",
+      "authors": [
+        "Caroline Chen",
+        "Sayna Ebrahimi",
+        "Fedor Kitashov",
+        "Ming-Hsuan Yang",
+        "Leonidas Guibas",
+        "Viorica Pătrăucean",
+        "Maks Ovsjanikov"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-15T18:00:31+00:00",
+      "link": "https://arxiv.org/pdf/2607.14228v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "probing 3D space emergence in vision features",
+      "llm_evidence_cn": "探究视觉特征中三维空间的涌现",
+      "llm_evidence": "探究视觉特征中三维空间的涌现",
+      "canonical_evidence": "探究视觉特征中三维空间的涌现",
+      "llm_tldr_en": "Investigates whether vision foundation models encode intrinsic 3D Euclidean space properties, proposing probes for SE(3) alignment and showing self-supervised features encode task-agnostic 3D spatial structure.",
+      "llm_tldr_cn": "本文探究视觉基础模型是否构建反映三维欧氏空间内在属性的表示。不同于以往回归深度等方法，作者从拓扑和几何角度提出互邻域度量和庞加莱适配器，检测特征空间与SE(3)变换群的关系。发现自监督视觉特征在静态场景中编码了与任务无关的三维空间结构，表明视觉模型内在具备三维空间意识，对世界模型构建有启发意义。",
+      "llm_tldr": "本文探究视觉基础模型是否构建反映三维欧氏空间内在属性的表示。不同于以往回归深度等方法，作者从拓扑和几何角度提出互邻域度量和庞加莱适配器，检测特征空间与SE(3)变换群的关系。发现自监督视觉特征在静态场景中编码了与任务无关的三维空间结构，表明视觉模型内在具备三维空间意识，对世界模型构建有启发意义。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.14990v1",
+      "source": "arxiv",
+      "title": "JADE-GS: Joint Alternating Deblurring Guided by Events in 3D Gaussian Splatting",
+      "abstract": "When a camera moves fast during exposure, blur destroys the intra-exposure motion a 3D model needs to recover the sharp scene, while event cameras capture exactly this signal at microsecond resolution. Turning them into reliable 3D supervision faces two obstacles. First, the two restoration priors fail in opposite ways: physics-based event-integration priors preserve edges but accumulate drift; learned networks recover texture but distort boundaries. Second, existing pipelines run in one direction only, so raw event noise or the biases of fixed 2D pseudo-labels pass uncorrected into the geometry. JADE-GS addresses both: a pixel-adaptive routing gate fuses the complementary priors, and the resulting 2D restorer is coupled to a 3D Gaussian Splatting student in a bidirectional loop, where detached, multi-view-consistent renders and a physics-based reblurring constraint regularize the restorer, turning a fixed preprocessor into a geometry-aware predictor. Across synthetic and real benchmarks, JADE-GS attains the best perceptual quality, leading LPIPS and CLIP-IQA on both benchmarks with competitive PSNR and SSIM, and trainsin about one hour under 5 GB on a single consumer GPU while preserving real-time rendering.",
+      "authors": [
+        "Haoyu Fu",
+        "Jiafeng Huang",
+        "Yuchen Wang",
+        "Shengjie Zhao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-16T13:40:13+00:00",
+      "link": "https://arxiv.org/pdf/2607.14990v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "deblurring for 3D Gaussian splatting reconstruction using events",
+      "llm_evidence_cn": "基于事件相机的三维高斯溅射去模糊重建",
+      "llm_evidence": "基于事件相机的三维高斯溅射去模糊重建",
+      "canonical_evidence": "基于事件相机的三维高斯溅射去模糊重建",
+      "llm_tldr_en": "Proposes JADE-GS to jointly deblur and reconstruct 3D scenes using event cameras and 3D Gaussian splatting, fusing physics-based and learned priors.",
+      "llm_tldr_cn": "针对相机快速运动导致的三维重建模糊问题，本文提出JADE-GS，联合使用事件相机和三维高斯溅射进行去模糊与重建。方法通过像素自适应路由门融合物理事件积分先验与学习纹理先验，并与三维高斯溅射交替优化，避免了噪声与偏差传入几何。实验表明，该方法在模糊场景下重建质量优于现有技术，提升了动态环境下的三维重建鲁棒性。",
+      "llm_tldr": "针对相机快速运动导致的三维重建模糊问题，本文提出JADE-GS，联合使用事件相机和三维高斯溅射进行去模糊与重建。方法通过像素自适应路由门融合物理事件积分先验与学习纹理先验，并与三维高斯溅射交替优化，避免了噪声与偏差传入几何。实验表明，该方法在模糊场景下重建质量优于现有技术，提升了动态环境下的三维重建鲁棒性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.14513v1",
+      "source": "arxiv",
+      "title": "Compression of 3D Gaussian Splatting Data Using GPU-friendly Graphics Texture Coding",
+      "abstract": "Techniques for modeling 3D scenes from image collections, such as 3D Gaussian Splatting (3DGS), are capable of generating high-quality novel views by leveraging graphics primitives with view-dependent appearance. In 3DGS, spherical harmonic (SH) are employed to model view-dependent color, resulting in a large number of SH coefficients per primitive and large memory requirements. While compression approaches have been proposed to mitigate this problem, they do not exploit the capabilities of modern Graphics Processing Units (GPUs) for parallel decoding and rendering. In this paper, we propose a method for compressing SH color coefficients using texture compression schemes specifically designed for efficient parallel GPU decoding and supported by dedicated hardware acceleration. It is shown that those methods can compress color coefficients more effectively than 2D textures by exploiting the fact that primitives can be locally grouped and reordered according to color. Furthermore, we introduce a bit-rate control strategy that preserves random access, enabling large-scale parallelization without compromising rendering performance. Experimental results using BC1 and BC7 texture compression formats show that GPU-based decompression can be achieved with negligible or imperceptible degradation in the visual quality of rendered 3DGS scenes.",
+      "authors": [
+        "Amir Said",
+        "Randall Rauwendaal"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "eess.IV"
+      ],
+      "published": "2026-07-16T03:10:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.14513v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "compression of 3D Gaussian Splatting data for efficient rendering",
+      "llm_evidence_cn": "压缩3D高斯泼溅数据以实现高效渲染",
+      "llm_evidence": "压缩3D高斯泼溅数据以实现高效渲染",
+      "canonical_evidence": "压缩3D高斯泼溅数据以实现高效渲染",
+      "llm_tldr_en": "Proposes a GPU-friendly texture coding scheme to compress spherical harmonic coefficients in 3DGS, enabling parallel decoding and reducing memory while maintaining rendering quality.",
+      "llm_tldr_cn": "本文针对3D高斯泼溅中球谐系数占用大量内存的问题，提出了一种利用GPU友好纹理压缩方案对系数进行编码的方法。该方法支持并行解码和渲染，在保持渲染质量的同时显著降低存储需求，适用于高效3D场景表示。",
+      "llm_tldr": "本文针对3D高斯泼溅中球谐系数占用大量内存的问题，提出了一种利用GPU友好纹理压缩方案对系数进行编码的方法。该方法支持并行解码和渲染，在保持渲染质量的同时显著降低存储需求，适用于高效3D场景表示。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.15265v1",
+      "source": "arxiv",
+      "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
+      "abstract": "We present SceneBind, an omni-modal representation of realistic scenes with joint semantic and 3D spatial understanding across vision, audio and language. Existing omni-modal encoders excel at instance-level semantics (i.e., what is present), but often lack explicit spatial structure (i.e., where it is). SceneBind addresses this gap by representing each scene as a semantic-spatial entity, combining a global semantic embedding with object-centric semantic-spatial slots. This representation explicitly captures object-level semantics, spatial attributes, and uncertainty. We further propose SceneBind Matching, a semantic-spatial matching scheme that integrates global scene similarity with object alignment, supporting cross-modal scene retrieval and object grounding. To train and evaluate SceneBind, we curate a novel real-world binaural audio-visual dataset with structured semantic and spatial annotations, and propose a training protocol for aligning semantic and spatial signals across modalities. SceneBind is compatible with large-scale pretrained semantic encoders, adds lightweight spatial modeling with only a few additional tokens. It achieves state-of-the-art scene and spatial retrieval while enabling strong zero-shot transfer to downstream tasks such as audio-visual localization.",
+      "authors": [
+        "Mingfei Chen",
+        "Zijun Cui",
+        "Ruoke Zhang",
+        "Hyeonggon Ryu",
+        "Eli Shlizerman"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MM",
+        "cs.SD"
+      ],
+      "published": "2026-07-16T17:55:15+00:00",
+      "link": "https://arxiv.org/pdf/2607.15265v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "joint semantic and 3D spatial understanding",
+      "llm_evidence_cn": "联合语义和3D空间理解",
+      "llm_evidence": "联合语义和3D空间理解",
+      "canonical_evidence": "联合语义和3D空间理解",
+      "llm_tldr_en": "SceneBind proposes an omni-modal representation that explicitly captures object semantics and 3D spatial structure, enabling joint scene understanding across vision, audio, and language.",
+      "llm_tldr_cn": "SceneBind提出一种全模态场景表示，通过全局语义嵌入和以对象为中心的语义空间槽，显式捕获对象级语义和3D空间属性。该方法解决了现有全模态编码器缺乏空间结构的问题。实验表明，SceneBind能有效支持跨模态场景检索和对象定位，为多模态场景理解提供了统一的语义-空间框架。",
+      "llm_tldr": "SceneBind提出一种全模态场景表示，通过全局语义嵌入和以对象为中心的语义空间槽，显式捕获对象级语义和3D空间属性。该方法解决了现有全模态编码器缺乏空间结构的问题。实验表明，SceneBind能有效支持跨模态场景检索和对象定位，为多模态场景理解提供了统一的语义-空间框架。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.14586v1",
+      "source": "arxiv",
+      "title": "SoftNav: Injecting 3D Scene Tokens into VLMs for Embodied Navigation",
+      "abstract": "In goal-directed embodied navigation, where an agent must locate a specified target in an unseen environment, 3D scene understanding and navigation reasoning must work in concert. Current approaches transmit 3D scene information to vision-language models (VLMs) through text, suggesting a representation gap in our tested configurations; a controlled ablation confirms that direct embedding-level transfer significantly outperforms the evaluated text serialization formats. We introduce SoftNav, which injects entity-level 3D continuous representations -- one token per detected object or frontier -- into a VLM's hidden space as soft tokens through a lightweight projector. With the 3D encoder and VLM frozen, only ~1,200 samples and ~17M trainable parameters are needed. On HM3D-OVON, SoftNav achieves 74.2%/68.3%/66.7% SR across three splits, surpassing all prior methods in both SR and SPL; the same navigation policy transfers zero-shot to GOAT-Bench (67.2% SR), SG3D (47.2% s-SR), and real-world robot deployment without retraining or architectural modification. Injecting 3D scene tokens directly into VLMs bridges the representation gap, enabling transferable navigation with minimal training.",
+      "authors": [
+        "Yi Wu",
+        "Junjie An",
+        "Xiao Liu",
+        "Yiqun Zhou",
+        "Yuechen Wu",
+        "Xiaoqing Guan",
+        "Shuyang Yu",
+        "You Wang",
+        "Guang Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-16T05:32:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.14586v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "injecting 3D scene tokens into VLMs for embodied navigation",
+      "llm_evidence_cn": "向视觉语言模型注入三维场景token用于具身导航",
+      "llm_evidence": "向视觉语言模型注入三维场景token用于具身导航",
+      "canonical_evidence": "向视觉语言模型注入三维场景token用于具身导航",
+      "llm_tldr_en": "Introduces SoftNav, which injects continuous 3D scene representations as soft tokens into VLMs for goal-directed navigation, achieving superior performance with few samples.",
+      "llm_tldr_cn": "针对具身导航中三维场景理解与推理协同问题，本文提出SoftNav，将检测到的物体和前沿点编码为连续三维token，通过轻量投影器注入视觉语言模型的隐藏空间，无需微调视觉语言模型。仅需约1200个样本和17M可训练参数，即在导航任务上显著优于基于文本序列化的方法。",
+      "llm_tldr": "针对具身导航中三维场景理解与推理协同问题，本文提出SoftNav，将检测到的物体和前沿点编码为连续三维token，通过轻量投影器注入视觉语言模型的隐藏空间，无需微调视觉语言模型。仅需约1200个样本和17M可训练参数，即在导航任务上显著优于基于文本序列化的方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
