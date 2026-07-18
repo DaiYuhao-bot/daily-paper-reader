@@ -1,0 +1,54 @@
+{
+  "label": "2026-07-18",
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T20:49:26",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202607/18/2607.12786v1-core-a-comprehensive-framework-for-cross-image-comparative-reasoning-in-vision-language-models",
+      "section": "deep",
+      "title_en": "CoRe: A Comprehensive Framework for Cross-Image Comparative Reasoning in Vision-Language Models",
+      "authors": "Lin Peng, Cong Wan, Zeyu Guo, SongLin Dong, Yihong Gong",
+      "date": "2026-07-14",
+      "pdf": "https://arxiv.org/pdf/2607.12786v1",
+      "score": "9.0",
+      "evidence": "跨图像比较推理，包含空间关系",
+      "tldr": "跨图像比较推理对视觉语言模型（VLM）构成挑战，因其需要细粒度属性定位和全局一致性。本文提出CoRe统一框架，包含自动构建的CoRe-20K训练集（覆盖计数、深度等属性）、TriSR结构化奖励框架（联合监督属性定位、判断对齐与三元组一致性）及CoRe-Bench基准。实验表明，CoRe在CoRe-Bench上部分准确率较最强基线提升28.2点，且保持标准多模态基准竞争力。该工作为VLM跨图像推理提供了首个专用基准和高效框架。",
+      "tags": "query:world-model",
+      "abstract_en": "Cross-image comparative reasoning remains challenging for vision-language models (VLMs), especially when correct prediction requires fine-grained attribute grounding and globally consistent reasoning. We present CoRe, a unified framework for this problem. CoRe includes: (i) CoRe-20K, a large-scale triplet-based training set automatically constructed from structured visual metadata through a multi-expert collaborative pipeline, covering counting, depth, distance, and spatial relations; (ii) TriSR, a structured reward framework that jointly supervises attribute grounding, judgment alignment, and triplet consistency under GRPO optimization; and (iii) CoRe-Bench, the first benchmark dedicated to fine-grained cross-image comparative reasoning. Experiments show that CoRe substantially outperforms existing VLMs on CoRe-Bench while remaining competitive on standard multimodal benchmarks, achieving a 28.2-point gain in partial accuracy over the strongest baseline.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/18/2607.13681v1-towards-spatial-supersensing-in-the-wild",
+      "section": "deep",
+      "title_en": "Towards Spatial Supersensing in the Wild",
+      "authors": "Tianjun Gu, Tianyu Xin, Kuan Zhang, Bowen Yang, Kok-Chung Chua, Peize Li, Xinran Zhang, Yupeng Chen, Qiyue Zhao, Qinlei Xie, Jianhang Liu, Yucheng Lu, Yinan Han, Marco Pavone, Yiming Li",
+      "date": "2026-07-15",
+      "pdf": "https://arxiv.org/pdf/2607.13681v1",
+      "score": "8.0",
+      "evidence": "世界模型与空间推理基准",
+      "tldr": "现有空间超感知基准依赖合成长视频且场景单一，缺乏真实世界连续性和多样性。本文提出VSI-Super-Wild基准，包含6980个人工验证问答对，来自442个真实世界视频，覆盖8类场景，最长超4小时。评测揭示模型在时域世界状态跟踪上存在根本性失败，性能随状态复杂度和时间跨度下降。诊断出四种失败模式：空间坍塌、语义捷径、更新不足、实例混淆，表明模型缺乏统一空间世界模型的绑定机制。",
+      "tags": "query:world-model",
+      "abstract_en": "Humans can efficiently parse continuous sensory streams, from hours to years, scaffolding an internal world model that grounds spatial reasoning and prediction. To mimic this capacity, spatial supersensing challenges multimodal models to move beyond linguistic understanding toward true world modeling. However, their benchmark relies on synthetic long videos, formed by concatenating random short clips, and is mostly limited to household scenes, leaving real-world continuity and diversity underexplored. To address the gap, we introduce $\\textbf{VSI-Super-Wild}$, a large-scale benchmark for evaluating spatial supersensing over long temporal horizons in diverse in-the-wild scenes. Notably, inspired by cognitive studies on how humans structure experience, we systematically probe the full triad of world state: the agent (observer), objects (scene items), and the environment (places and global layout). In total, VSI-Super-Wild contains $\\textbf{6,980}$ human-verified question-answer pairs derived from $\\textbf{442}$ real-world videos spanning 8 scene categories, including long-form recordings exceeding 4 hours. Results on VSI-Super-Wild expose a fundamental disconnect: despite advances in static image understanding, models consistently fail at tasks that require coherent world-state tracking over time. We characterize how performance degrades with world-state complexity and temporal horizon, and diagnose four failure modes: spatial collapse, semantic shortcuts, insufficient update, and instance confusion. This taxonomy reveals that models lack mechanisms to bind objects, agents, and environments into a unified spatial world model, a fundamental gap that defines the path forward for spatial supersensing.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/18/2607.14542v1-cityllm-a-framework-for-natural-language-querying-of-semantic-3d-city-models",
+      "section": "quick",
+      "title_en": "CityLLM: A framework for natural-language querying of semantic 3D city models",
+      "authors": "Rabindra Lamsal, Sisi Zlatanova, Johnson Xuesong Shen",
+      "date": "2026-07-16",
+      "pdf": "https://arxiv.org/pdf/2607.14542v1",
+      "score": "6.0",
+      "evidence": "自然语言查询语义3D城市模型",
+      "tldr": "语义3D城市模型结构复杂、格式专业，非专家难以查询。提出CityLLM框架，融合空间与图数据库及大语言模型，支持迭代查询和跨数据库链式操作。在鹿特丹853个建筑的CityJSON数据集上，使用GPT-OSS等模型评估54个自然语言查询，回答正确率85.2%-100%，可视化正确率92.9%-100%，查询成功率100%，重试次数低于3次。提供了一种轻量、可扩展的对话式访问语义3D城市数据的方案。",
+      "tags": "query:world-model",
+      "abstract_en": "Semantic 3D city models provide rich geometric and semantic information, but remain challenging for non-experts and interdisciplinary researchers to access and query due to their complex structures and specialized data formats. To address this issue, we present CityLLM, a framework for natural-language querying of semantic 3D city models alongside complementary urban datasets. The framework combines spatial and graph databases within an LLM-based workflow that supports iterative query refinement and cross-database chaining. We evaluate CityLLM on a CityJSON dataset of Rotterdam (853 LoD2 buildings) using GPT-OSS, Gemini 3.1, and GPT-5.4, along with selected variants, across multiple metrics: answer correctness, visualization correctness, query success, and retry attempts. A total of 54 natural-language queries are curated across four scenarios: spatial, graph, cross-database, and conversational. Results show strong overall performance, with answer correctness ranging from 85.2% to 100%, visualization correctness from 92.9% to 100%, a 100% query success rate, and fewer than three retries across all 54 queries. Overall, the findings suggest that CityLLM provides a lightweight and extensible approach for conversational access to semantic 3D city data.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

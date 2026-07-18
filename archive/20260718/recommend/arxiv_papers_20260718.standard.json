@@ -1,0 +1,141 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-18T20:47:19.962706+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.12786v1",
+      "source": "arxiv",
+      "title": "CoRe: A Comprehensive Framework for Cross-Image Comparative Reasoning in Vision-Language Models",
+      "abstract": "Cross-image comparative reasoning remains challenging for vision-language models (VLMs), especially when correct prediction requires fine-grained attribute grounding and globally consistent reasoning. We present CoRe, a unified framework for this problem. CoRe includes: (i) CoRe-20K, a large-scale triplet-based training set automatically constructed from structured visual metadata through a multi-expert collaborative pipeline, covering counting, depth, distance, and spatial relations; (ii) TriSR, a structured reward framework that jointly supervises attribute grounding, judgment alignment, and triplet consistency under GRPO optimization; and (iii) CoRe-Bench, the first benchmark dedicated to fine-grained cross-image comparative reasoning. Experiments show that CoRe substantially outperforms existing VLMs on CoRe-Bench while remaining competitive on standard multimodal benchmarks, achieving a 28.2-point gain in partial accuracy over the strongest baseline.",
+      "authors": [
+        "Lin Peng",
+        "Cong Wan",
+        "Zeyu Guo",
+        "SongLin Dong",
+        "Yihong Gong"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T14:01:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.12786v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "cross-image comparative reasoning with spatial relations",
+      "llm_evidence_cn": "跨图像比较推理，包含空间关系",
+      "llm_evidence": "跨图像比较推理，包含空间关系",
+      "canonical_evidence": "跨图像比较推理，包含空间关系",
+      "llm_tldr_en": "CoRe provides a framework for cross-image comparative reasoning over counting, depth, distance, and spatial relations.",
+      "llm_tldr_cn": "本文针对视觉语言模型在跨图像比较推理上的挑战，提出CoRe统一框架。它包括一个基于结构化元数据自动构建的大规模三元组数据集CoRe-20K，覆盖计数、深度、距离和空间关系；一个结构化奖励框架TriSR用于监督属性推理和三元组一致性；以及首个细粒度跨图像比较推理基准CoRe-Bench。实验证明该方法显著提升了VLMs的空间关系推理能力。",
+      "llm_tldr": "本文针对视觉语言模型在跨图像比较推理上的挑战，提出CoRe统一框架。它包括一个基于结构化元数据自动构建的大规模三元组数据集CoRe-20K，覆盖计数、深度、距离和空间关系；一个结构化奖励框架TriSR用于监督属性推理和三元组一致性；以及首个细粒度跨图像比较推理基准CoRe-Bench。实验证明该方法显著提升了VLMs的空间关系推理能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13681v1",
+      "source": "arxiv",
+      "title": "Towards Spatial Supersensing in the Wild",
+      "abstract": "Humans can efficiently parse continuous sensory streams, from hours to years, scaffolding an internal world model that grounds spatial reasoning and prediction. To mimic this capacity, spatial supersensing challenges multimodal models to move beyond linguistic understanding toward true world modeling. However, their benchmark relies on synthetic long videos, formed by concatenating random short clips, and is mostly limited to household scenes, leaving real-world continuity and diversity underexplored. To address the gap, we introduce $\\textbf{VSI-Super-Wild}$, a large-scale benchmark for evaluating spatial supersensing over long temporal horizons in diverse in-the-wild scenes. Notably, inspired by cognitive studies on how humans structure experience, we systematically probe the full triad of world state: the agent (observer), objects (scene items), and the environment (places and global layout). In total, VSI-Super-Wild contains $\\textbf{6,980}$ human-verified question-answer pairs derived from $\\textbf{442}$ real-world videos spanning 8 scene categories, including long-form recordings exceeding 4 hours. Results on VSI-Super-Wild expose a fundamental disconnect: despite advances in static image understanding, models consistently fail at tasks that require coherent world-state tracking over time. We characterize how performance degrades with world-state complexity and temporal horizon, and diagnose four failure modes: spatial collapse, semantic shortcuts, insufficient update, and instance confusion. This taxonomy reveals that models lack mechanisms to bind objects, agents, and environments into a unified spatial world model, a fundamental gap that defines the path forward for spatial supersensing.",
+      "authors": [
+        "Tianjun Gu",
+        "Tianyu Xin",
+        "Kuan Zhang",
+        "Bowen Yang",
+        "Kok-Chung Chua",
+        "Peize Li",
+        "Xinran Zhang",
+        "Yupeng Chen",
+        "Qiyue Zhao",
+        "Qinlei Xie",
+        "Jianhang Liu",
+        "Yucheng Lu",
+        "Yinan Han",
+        "Marco Pavone",
+        "Yiming Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-15T10:24:51+00:00",
+      "link": "https://arxiv.org/pdf/2607.13681v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "world model and spatial reasoning benchmark",
+      "llm_evidence_cn": "世界模型与空间推理基准",
+      "llm_evidence": "世界模型与空间推理基准",
+      "canonical_evidence": "世界模型与空间推理基准",
+      "llm_tldr_en": "Introduces VSI-Super-Wild benchmark for spatial supersensing, evaluating world models on long-term diverse video for spatial reasoning.",
+      "llm_tldr_cn": "现有空间超感知评测局限于合成视频和室内场景。本文提出VSI-Super-Wild基准，包含野外长时序视频，系统评估多模态模型的世界模型与空间推理能力。实验揭示当前模型在真实场景连续性上的不足。为世界模型研究提供了更具挑战性的评测平台。",
+      "llm_tldr": "现有空间超感知评测局限于合成视频和室内场景。本文提出VSI-Super-Wild基准，包含野外长时序视频，系统评估多模态模型的世界模型与空间推理能力。实验揭示当前模型在真实场景连续性上的不足。为世界模型研究提供了更具挑战性的评测平台。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.14542v1",
+      "source": "arxiv",
+      "title": "CityLLM: A framework for natural-language querying of semantic 3D city models",
+      "abstract": "Semantic 3D city models provide rich geometric and semantic information, but remain challenging for non-experts and interdisciplinary researchers to access and query due to their complex structures and specialized data formats. To address this issue, we present CityLLM, a framework for natural-language querying of semantic 3D city models alongside complementary urban datasets. The framework combines spatial and graph databases within an LLM-based workflow that supports iterative query refinement and cross-database chaining. We evaluate CityLLM on a CityJSON dataset of Rotterdam (853 LoD2 buildings) using GPT-OSS, Gemini 3.1, and GPT-5.4, along with selected variants, across multiple metrics: answer correctness, visualization correctness, query success, and retry attempts. A total of 54 natural-language queries are curated across four scenarios: spatial, graph, cross-database, and conversational. Results show strong overall performance, with answer correctness ranging from 85.2% to 100%, visualization correctness from 92.9% to 100%, a 100% query success rate, and fewer than three retries across all 54 queries. Overall, the findings suggest that CityLLM provides a lightweight and extensible approach for conversational access to semantic 3D city data.",
+      "authors": [
+        "Rabindra Lamsal",
+        "Sisi Zlatanova",
+        "Johnson Xuesong Shen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-16T03:55:51+00:00",
+      "link": "https://arxiv.org/pdf/2607.14542v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "natural language querying of semantic 3D city models",
+      "llm_evidence_cn": "自然语言查询语义3D城市模型",
+      "llm_evidence": "自然语言查询语义3D城市模型",
+      "canonical_evidence": "自然语言查询语义3D城市模型",
+      "llm_tldr_en": "CityLLM enables natural-language querying of semantic 3D city models by combining spatial and graph databases with an LLM workflow, evaluated on a 853-building dataset.",
+      "llm_tldr_cn": "针对非专家难以访问语义3D城市模型的问题，提出CityLLM框架，将空间数据库和图数据库与大语言模型结合，支持自然语言查询和迭代优化。在鹿特丹853栋建筑的CityJSON数据集上评估，使用多种模型，结果表明在答案正确性和可视化正确性上表现良好，降低了3D城市数据的使用门槛。",
+      "llm_tldr": "针对非专家难以访问语义3D城市模型的问题，提出CityLLM框架，将空间数据库和图数据库与大语言模型结合，支持自然语言查询和迭代优化。在鹿特丹853栋建筑的CityJSON数据集上评估，使用多种模型，结果表明在答案正确性和可视化正确性上表现良好，降低了3D城市数据的使用门槛。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
