@@ -1,0 +1,152 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-19T21:05:55.453757+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.12503v2",
+      "source": "arxiv",
+      "title": "DynTrace: Tracking Dynamic Object Evidence for 4D Spatio-Temporal Reasoning in MLLMs",
+      "abstract": "4D spatio-temporal reasoning, jointly modeling 3D spatial structure and temporal evolution, is essential for understanding dynamic worlds and enabling embodied interaction. While current Multimodal Large Language Models (MLLMs) show strong capabilities in static scene understanding and coarse-grained 4D tasks, they still have notable limitations in continuous dynamic scene perception, especially in tracking dynamic object evidence for coherent 4D spatio-temporal reasoning. This shortcoming stems mainly from relying on sparse frame-level observations, fragmenting continuous dynamic cues and leaving models unable to disentangle genuine object dynamics from camera-induced apparent motion. Inspired by humans tracking dynamic cues while compensating for viewpoint changes, we propose DynTrace, a training-free framework for 4D spatio-temporal reasoning with two complementary components. Dynamic Trajectory Visualization (DTV) reprojects world-coordinate trajectories onto the image plane, providing geometry-informed visual priors that disentangle genuine object dynamics from camera-induced apparent motion. Meanwhile, the Dynamic Trace Token (DT-Token), organized into a Dynamic Trace Graph (DTG), tracks object-level dynamic cues, trace evolution, and key moments, maintaining continuous dynamic object evidence for coherent 4D reasoning. Together, these two components equip MLLMs with continuously tracked dynamic object evidence, grounded in geometry-informed visual priors and structured spatio-temporal traces. DynTrace consistently improves open-source MLLMs, achieving state-of-the-art results on Dyn-Bench, VLM4D, and DSI-Bench, validating the importance of tracking dynamic object evidence for robust 4D spatio-temporal reasoning.",
+      "authors": [
+        "Rongxin Gao",
+        "Yuzhi Huang",
+        "Dongxuan Liu",
+        "Chu Li",
+        "Zhenye Wang",
+        "Jie Wu",
+        "Shuzhao Xie",
+        "Jingyan Jiang",
+        "Xinghao Ding",
+        "Xiaotong Tu",
+        "Yue Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T08:35:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.12503v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "4D spatio-temporal reasoning for dynamic scenes",
+      "llm_evidence_cn": "4D时空推理用于动态场景",
+      "llm_evidence": "4D时空推理用于动态场景",
+      "canonical_evidence": "4D时空推理用于动态场景",
+      "llm_tldr_en": "DynTrace enhances MLLMs to track dynamic object evidence for coherent 4D spatio-temporal reasoning, addressing limitations in continuous dynamic scene perception.",
+      "llm_tldr_cn": "该论文针对多模态大模型在连续动态场景感知中的不足，提出DynTrace方法，通过跟踪动态物体证据实现连贯的4D时空推理。实验表明该方法能有效区分物体真实运动与相机运动，显著提升动态场景理解能力，为具身智能体的时空推理奠定了基础。该方法为世界模型中的动态场景推理提供了关键技术支撑。",
+      "llm_tldr": "该论文针对多模态大模型在连续动态场景感知中的不足，提出DynTrace方法，通过跟踪动态物体证据实现连贯的4D时空推理。实验表明该方法能有效区分物体真实运动与相机运动，显著提升动态场景理解能力，为具身智能体的时空推理奠定了基础。该方法为世界模型中的动态场景推理提供了关键技术支撑。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.12503v1",
+      "source": "arxiv",
+      "title": "DynTrace: Tracking Dynamic Object Evidence for 4D Spatio-Temporal Reasoning in MLLMs",
+      "abstract": "4D spatio-temporal reasoning, jointly modeling 3D spatial structure and temporal evolution, is essential for understanding dynamic worlds and enabling embodied interaction. While current Multimodal Large Language Models (MLLMs) show strong capabilities in static scene understanding and coarse-grained 4D tasks, they still have notable limitations in continuous dynamic scene perception, especially in tracking dynamic object evidence for coherent 4D spatio-temporal reasoning. This shortcoming stems mainly from relying on sparse frame-level observations, fragmenting continuous dynamic cues and leaving models unable to disentangle genuine object dynamics from camera-induced apparent motion. Inspired by humans tracking dynamic cues while compensating for viewpoint changes, we propose DynTrace, a training-free framework for 4D spatio-temporal reasoning with two complementary components. Dynamic Trajectory Visualization (DTV) reprojects world-coordinate trajectories onto the image plane, providing geometry-informed visual priors that disentangle genuine object dynamics from camera-induced apparent motion. Meanwhile, the Dynamic Trace Token (DT-Token), organized into a Dynamic Trace Graph (DTG), tracks object-level dynamic cues, trace evolution, and key moments, maintaining continuous dynamic object evidence for coherent 4D reasoning. Together, these two components equip MLLMs with continuously tracked dynamic object evidence, grounded in geometry-informed visual priors and structured spatio-temporal traces. DynTrace consistently improves open-source MLLMs, achieving state-of-the-art results on Dyn-Bench, VLM4D, and DSI-Bench, validating the importance of tracking dynamic object evidence for robust 4D spatio-temporal reasoning.",
+      "authors": [
+        "Rongxin Gao",
+        "Yuzhi Huang",
+        "Dongxuan Liu",
+        "Chu Li",
+        "Zhenye Wang",
+        "Jie Wu",
+        "Shuzhao Xie",
+        "Jingyan Jiang",
+        "Xinghao Ding",
+        "Xiaotong Tu",
+        "Yue Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T08:35:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.12503v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "addresses 4D spatio-temporal reasoning, directly relating to spatial reasoning",
+      "llm_evidence_cn": "处理4D时空推理，直接关联空间推理",
+      "llm_evidence": "处理4D时空推理，直接关联空间推理",
+      "canonical_evidence": "处理4D时空推理，直接关联空间推理",
+      "llm_tldr_en": "DynTrace improves 4D spatio-temporal reasoning in MLLMs by tracking dynamic object evidence and compensating for camera motion.",
+      "llm_tldr_cn": "针对多模态大语言模型在连续动态场景感知中的不足，本文提出DynTrace，通过追踪动态目标证据并补偿相机运动，实现连贯的4D时空推理。该方法受人类追踪动态线索的启发，能够区分真实物体运动与相机运动引起的表观运动，显著提升了模型在动态场景下的空间推理能力。",
+      "llm_tldr": "针对多模态大语言模型在连续动态场景感知中的不足，本文提出DynTrace，通过追踪动态目标证据并补偿相机运动，实现连贯的4D时空推理。该方法受人类追踪动态线索的启发，能够区分真实物体运动与相机运动引起的表观运动，显著提升了模型在动态场景下的空间推理能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.13245v1",
+      "source": "arxiv",
+      "title": "Just-In-Time Scene Graph Growth: Combating Perceptual Saturation in Long-Horizon Robotics",
+      "abstract": "While 3D Scene Graphs (3DSGs) provide crucial structured representations for embodied agents, conventional Ahead-of-Time, build-everything-then-filter pipelines conflict with the real-time, low-latency demands of edge platforms, inducing a perceptual saturation effect via severe observation redundancy. To resolve this, we present JITOMA (Just-In-Time On-demand Memory Activation), a closed-loop framework that unifies task reasoning, perception, and memory into a just-in-time growth process. Instead of exhaustively mapping the entire environment, JITOMA leverages a top-down task heatmap at the frontend to filter continuous observations, routing minimal streams to maintain a global foundation of low-cost, dormant anchors. Upon a cognitive query, the backend Large Language Model (LLM) parses the robotic intent to dynamically awaken task-relevant anchors, triggering resource-intensive operations -- such as dense node captioning and functional inference -- exclusively within the activated local subgraph. To evaluate these dynamic capabilities and study perceptual saturation trade-offs, we introduce JITOMA-Bench, a comprehensive suite for long-horizon multi-tasking and complex multi-step reasoning. Extensive experiments demonstrate that JITOMA substantially reduces active graph size and captioning latency, while maintaining stable processing time under long-horizon task switching.",
+      "authors": [
+        "Yue Chang",
+        "Rufeng Chen",
+        "Yifan Tian",
+        "Dazhi Huang",
+        "Zhaofan Zhang",
+        "Yi Chen",
+        "Wenze Zhang",
+        "Li Chen",
+        "Hui Xiong",
+        "Sihong Xie"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-14T20:14:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.13245v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D scene graph growth for task-driven scene understanding",
+      "llm_evidence_cn": "面向任务驱动的3D场景图增长方法",
+      "llm_evidence": "面向任务驱动的3D场景图增长方法",
+      "canonical_evidence": "面向任务驱动的3D场景图增长方法",
+      "llm_tldr_en": "JITOMA proposes a just-in-time scene graph growth framework that unifies task reasoning and perception to avoid perceptual saturation in long-horizon robotics.",
+      "llm_tldr_cn": "传统3D场景图构建在长时机器人任务中因观察冗余导致感知饱和。本文提出JITOMA，通过任务热图引导的按需记忆激活，仅维护低代价背景锚点并按需扩展，实现了高效场景理解。实验证明该方法在降低内存和计算开销的同时保持任务性能。",
+      "llm_tldr": "传统3D场景图构建在长时机器人任务中因观察冗余导致感知饱和。本文提出JITOMA，通过任务热图引导的按需记忆激活，仅维护低代价背景锚点并按需扩展，实现了高效场景理解。实验证明该方法在降低内存和计算开销的同时保持任务性能。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
