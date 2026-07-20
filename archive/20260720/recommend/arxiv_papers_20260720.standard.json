@@ -1,0 +1,440 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-20T20:06:44.933128+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 6,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2607.15065v1",
+      "source": "arxiv",
+      "title": "DriftWorld: Fast World Modeling through Drifting",
+      "abstract": "Predictive world models enable robots to plan by imagining the outcomes of their actions, but their value for control hinges on generating many rollouts quickly. This creates a bottleneck for diffusion-based world models: multistep sampling makes each rollout expensive, limiting large-scale action search at inference time. We introduce DriftWorld, an action-conditioned world model based on drifting generative models. Rather than denoising iteratively at inference, DriftWorld learns an action-conditioned drift during training, allowing it to generate future frames from the current observation and a candidate action sequence in a single forward pass at 30+ fps, which is 17x faster on average than diffusion based baselines. We evaluate DriftWorld on standard vision-based robotic manipulation benchmarks, including Bridge-V2, RT-1, Language Table, Push-T, and Robomimic. By producing rollouts that are both accurate and fast, DriftWorld achieves state-of-the-art decision-making performance with far less inference time than diffusion-based world model baselines. Beyond online control, DriftWorld can also serve as an offline simulator for ranking real-world robot policies, with rollout-based scores correlating with ground truth at up to 0.99. These results show that drifting models are a strong fit for robot world modeling, where fast, high-quality imagination directly supports planning and policy evaluation.",
+      "authors": [
+        "Susie Lu",
+        "Haonan Chen",
+        "Weirui Ye",
+        "Yilun Du"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-16T14:37:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.15065v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "action-conditioned world model for fast rollout generation",
+      "llm_evidence_cn": "动作条件的世界模型实现快速轨迹生成",
+      "llm_evidence": "动作条件的世界模型实现快速轨迹生成",
+      "canonical_evidence": "动作条件的世界模型实现快速轨迹生成",
+      "llm_tldr_en": "DriftWorld introduces an action-conditioned world model based on drifting generative models that generates future frames in a single forward pass at 30+ fps, 17x faster than diffusion-based world models, enabling efficient planning.",
+      "llm_tldr_cn": "扩散世界模型的多步采样限制了机器人规划时的快速轨迹生成。DriftWorld提出基于漂移生成模型的动作条件世界模型，在训练时学习动作条件漂移，推理时单次前馈生成未来帧，速度达30+ fps，比扩散基线快17倍。在视觉机器人任务上验证了其高效性和预测质量。",
+      "llm_tldr": "扩散世界模型的多步采样限制了机器人规划时的快速轨迹生成。DriftWorld提出基于漂移生成模型的动作条件世界模型，在训练时学习动作条件漂移，推理时单次前馈生成未来帧，速度达30+ fps，比扩散基线快17倍。在视觉机器人任务上验证了其高效性和预测质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.15898v1",
+      "source": "arxiv",
+      "title": "Orbis 2: A Hierarchical World Model for Driving",
+      "abstract": "Current world models operate at a single level of abstraction, with most prioritizing perceptual fidelity while lacking the spatial reasoning and semantic understanding required for real-world downstream tasks. We present a hierarchical driving world model that factorizes future prediction across two levels operating at distinct temporal and abstraction scales: a high-level predictor that forecasts coarse scene structure over extended temporal horizons, and a low-level generator that produces detailed predictions conditioned on the high-level output. This decomposition yields high perceptual fidelity while also capturing strong spatial and semantic representations. We further show that pretraining with a diffusion forcing objective yields substantially richer internal representations than the standard teacher forcing objective, while teacher forcing -- predicting only the next frame from clean context -- produces more stable autoregressive rollouts. We therefore introduce a generic two-stage training paradigm that pretrains the model with diffusion forcing and fine-tunes with teacher forcing, combining the representational benefits of the former with the rollout stability of the latter. Our approach achieves state-of-the-art results across the standard suite of driving world model evaluations on established benchmarks, including long-horizon generation fidelity, steering responsiveness evaluated on counterfactual scenarios, and internal representation quality. Project page with code, demo, checkpoints and qualitative results: https://lmb-freiburg.github.io/orbis2.github.io/",
+      "authors": [
+        "Sudhanshu Mittal",
+        "Arian Mousakhan",
+        "Silvio Galesso",
+        "Karim Farid",
+        "Jonannes Dienert",
+        "Rajat Sahay",
+        "Thomas Brox"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-07-17T12:12:33+00:00",
+      "link": "https://arxiv.org/pdf/2607.15898v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "hierarchical world model for driving with spatial reasoning and scene prediction",
+      "llm_evidence_cn": "用于驾驶的层次化世界模型，具备空间推理和场景预测能力",
+      "llm_evidence": "用于驾驶的层次化世界模型，具备空间推理和场景预测能力",
+      "canonical_evidence": "用于驾驶的层次化世界模型，具备空间推理和场景预测能力",
+      "llm_tldr_en": "Proposes a hierarchical driving world model with high-level scene structure prediction and low-level detailed generation, achieving perceptual fidelity and spatial reasoning.",
+      "llm_tldr_cn": "该论文提出一种层次化驾驶世界模型，在高层次预测粗粒度场景结构，在低层次生成细节预测。通过扩散预训练获得更丰富的内部表示。实验表明，该模型在空间推理和语义理解上优于单层模型，为自动驾驶场景生成和预测提供了新范式。",
+      "llm_tldr": "该论文提出一种层次化驾驶世界模型，在高层次预测粗粒度场景结构，在低层次生成细节预测。通过扩散预训练获得更丰富的内部表示。实验表明，该模型在空间推理和语义理解上优于单层模型，为自动驾驶场景生成和预测提供了新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.15536v1",
+      "source": "arxiv",
+      "title": "E3DGS: Unified Geometric-Photometric Equivariance for 3D Gaussian Splatting via Color-as-Geometry Embedding",
+      "abstract": "3D Gaussian Splatting (3DGS) captures scenes by coupling explicit geometry (position, covariance) with view-dependent photometry (Spherical Harmonics). However, building $\\mathrm{SE}(3)$-equivariant architectures on these primitives presents a fundamental representation bottleneck. Color has been treated as a signal rather than a geometric entity, making it nontrivial to unify symmetry across geometry and appearance as the camera frame changes. While translations are handled by relative coordinates, rotations act heterogeneously across attributes: $μ\\mapsto Rμ$, $Σ\\mapsto RΣR^\\top$, and $f_\\ell\\mapsto D^\\ell(R)f_\\ell$. This mismatch complicates strict equivariance, leading existing methods to either discard or flatten SH coefficients, thereby breaking symmetry. We propose a unified solution rooted in representation theory: for SH degrees $\\ell\\le2$, photometry is algebraically isomorphic to a rank-2 geometric tensor. We prove that the Wigner-$D$ action on these SH coefficients can be exactly reformulated as the conjugation action on $3\\times3$ matrices. Leveraging this, we introduce the Unified Matrix Embedding, a lifting that maps all Gaussian attributes into a unified carrier space, $\\mathfrak{gl}(3)$. Building on the \"Color-as-Geometry\" formulation, we present E3DGS, a rigid-body ($\\mathrm{SE}(3)$) equivariant architecture that processes 3D Gaussians without Clebsch-Gordan tensor products. Evaluations on object vision and action-conditioned Gaussian world modeling demonstrate that our unified approach yields strong robustness under camera-frame changes and improved data efficiency.",
+      "authors": [
+        "Chankyo Kim",
+        "Maani Ghaffari"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-17T01:12:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.15536v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "equivariant 3D Gaussian Splatting for scene generation",
+      "llm_evidence_cn": "等变三维高斯泼溅用于场景生成",
+      "llm_evidence": "等变三维高斯泼溅用于场景生成",
+      "canonical_evidence": "等变三维高斯泼溅用于场景生成",
+      "llm_tldr_en": "E3DGS introduces a unified geometric-photometric equivariant framework for 3D Gaussian Splatting, enabling consistent scene representation under viewpoint changes.",
+      "llm_tldr_cn": "针对三维高斯泼溅中颜色被视为非几何信号导致对称性不一致的问题，本文提出E3DGS，通过颜色即几何嵌入统一几何与光度等变性，实现相机变换下的一致场景表示。",
+      "llm_tldr": "针对三维高斯泼溅中颜色被视为非几何信号导致对称性不一致的问题，本文提出E3DGS，通过颜色即几何嵌入统一几何与光度等变性，实现相机变换下的一致场景表示。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.15828v1",
+      "source": "arxiv",
+      "title": "Beyond Frontiers: Scene-Anomaly Guided Autonomous Exploration",
+      "abstract": "Autonomous exploration of unknown 3D environments is traditionally driven by coverage-maximizing geometric heuristics. However, these methods typically determine exploration targets without considering the underlying structural context. This leads to inefficient trajectories often limiting the fidelity of the final 3D reconstruction. To bridge the gap between spatial coverage and reconstruction quality, we introduce a novel paradigm: reframing exploration as a geometric anomaly minimization problem. We present SCAGE: SCene Anomaly Guided Exploration, a novel autonomous exploration framework that operates directly on unstructured 3D point clouds. Instead of blindly chasing volumetric boundaries, we equip the robot with a foundational understanding of standard indoor architecture. As the robot navigates, it continuously evaluates its live 3D observations against these learned expectations. When the incoming geometry contradicts the learned priors of a typical indoor environment, such as a fragmented wall or a partial table, the system flags these regions as scene anomalies. These geometric inconsistencies act as a guiding signal, naturally drawing the robot to investigate and resolve these structural anomalies from optimal vantage points. By actively targeting poorly reconstructed regions rather than just empty space, our approach seamlessly couples spatial discovery with high-fidelity mapping. Extensive evaluations demonstrate that SCAGE achieves superior volumetric coverage (~90% in all scenes) and higher 3D reconstruction quality compared to state-of-the-art baselines.",
+      "authors": [
+        "Akash Kumbar",
+        "Abhinav Raundhal",
+        "Madhava Krishna"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-17T10:38:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.15828v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "scene anomaly guided autonomous exploration for 3D reconstruction",
+      "llm_evidence_cn": "场景异常引导的自主探索用于三维重建",
+      "llm_evidence": "场景异常引导的自主探索用于三维重建",
+      "canonical_evidence": "场景异常引导的自主探索用于三维重建",
+      "llm_tldr_en": "SCAGE reframes autonomous exploration as geometric anomaly minimization, using foundational scene understanding to guide exploration and improve 3D reconstruction quality.",
+      "llm_tldr_cn": "针对传统探索方法忽略结构上下文导致重建质量低的问题，本文提出SCAGE，将探索视为几何异常最小化问题，利用基础场景理解直接操作三维点云，引导机器人探索并提升最终三维重建质量。",
+      "llm_tldr": "针对传统探索方法忽略结构上下文导致重建质量低的问题，本文提出SCAGE，将探索视为几何异常最小化问题，利用基础场景理解直接操作三维点云，引导机器人探索并提升最终三维重建质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.16012v1",
+      "source": "arxiv",
+      "title": "DPNeXt: A Lightweight Multi-Scale Feature Fusion Framework for Efficient ViT-Based Multi-Task Dense Prediction",
+      "abstract": "Multi-Task Learning (MTL) in robotics perception systems supports comprehensive 3D spatial scene understanding by integrating semantic segmentation and depth estimation. While Vision Foundation Models (VFMs) are increasingly adopted as robust feature encoders, existing decoding strategies present a critical bottleneck. To address this, we propose DPNeXt, a streamlined multi-scale feature fusion decoder and efficient alternative to the standard Dense Prediction Transformer (DPT). DPNeXt uses dual depthwise separable inverted bottlenecks to improve frozen VFM utilization through fusion-centric decoding and independent task modularization. To further mitigate negative inductive transfer between tasks, we introduce the Multi-Task Boundary Guidance (MTBG) strategy. Unlike prior boundary-aware methods that add fusion modules or gating, MTBG applies symmetric boundary-focused supervision to encourage geometric consistency without extra annotation or inference cost. Experiments on Cityscapes show that DPNeXt-S outperforms prior state-of-the-art (SOTA) MTL models, while DPNeXt-B further improves the overall performance and achieves the best results among the compared methods. On NYUv2, DPNeXt-B also achieves the best semantic segmentation and depth estimation results among the compared methods while requiring substantially fewer trainable parameters than prior large-scale MTL models. Compared with the standard DPT, DPNeXt-S reduces trainable parameters by 78.6% and achieves the fastest inference speed among the compared models on resource-constrained laptop hardware. The source code, model checkpoints, and a demo video will be made available at https://github.com/kangjehun/DPNeXt.",
+      "authors": [
+        "Jehun Kang",
+        "Jungha Wang",
+        "Youngjun Hwang",
+        "David Hyunchul Shim"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-07-17T14:46:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.16012v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "multi-task dense prediction for 3D spatial scene understanding",
+      "llm_evidence_cn": "多任务密集预测用于3D空间场景理解",
+      "llm_evidence": "多任务密集预测用于3D空间场景理解",
+      "canonical_evidence": "多任务密集预测用于3D空间场景理解",
+      "llm_tldr_en": "DPNeXt proposes a lightweight multi-scale feature fusion decoder for ViT-based multi-task dense prediction, efficiently combining semantic segmentation and depth estimation for comprehensive 3D scene understanding.",
+      "llm_tldr_cn": "机器人感知系统需要综合的3D场景理解，现有解码策略存在瓶颈。DPNeXt提出轻量级多尺度特征融合解码器，利用可分离瓶颈实现融合解码与独立任务模块化，降低负迁移。在多个密集预测任务上取得高效性能，为3D场景理解提供了轻量解决方案。",
+      "llm_tldr": "机器人感知系统需要综合的3D场景理解，现有解码策略存在瓶颈。DPNeXt提出轻量级多尺度特征融合解码器，利用可分离瓶颈实现融合解码与独立任务模块化，降低负迁移。在多个密集预测任务上取得高效性能，为3D场景理解提供了轻量解决方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.16192v1",
+      "source": "arxiv",
+      "title": "MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction",
+      "abstract": "Humans can infer how objects are likely to move from passive observation: a cup may be lifted, a drawer may slide, and a lid may rotate shut. Such predictions expose the physical consequences of interaction needed to act in the real world. We study how to learn this anticipation from ordinary monocular videos of human-object interaction. Given a short observed video context, MotionForesight predicts future 3D trajectories for points on the manipulated object. This casts interaction prediction as object-centered 3D motion forecasting without any assumptions on the object properties. Our key insight is that video prediction models already encode rich priors about how objects move during human interactions. We redirect these priors from pixel prediction toward future 3D scene flow. We start from a dense 3D tracker built on a pretrained video model, generate pseudo-ground-truth tracks from complete clips, and train the forecaster using only the observed frames. We replace future RGB and geometry with learned mask latents and train a lightweight adapter to turn the retrospective tracking representation into a forward predictor, while freezing the large video and tracking components. Using just 40k human videos and no auxiliary inputs such as language, MotionForesight generalizes across diverse out-of-distribution objects, environments, viewpoints, and interactions. It also outperforms substantially larger models that use over a million training videos. These results show that we can efficiently re-purpose video priors into explicit geometric forecasts for embodied intelligence. https://motionforesight.github.io/",
+      "authors": [
+        "Homanga Bharadhwaj",
+        "Yash Jangir"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-17T17:59:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.16192v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "future 3D scene-flow prediction for spatial reasoning",
+      "llm_evidence_cn": "未来三维场景流预测用于空间推理",
+      "llm_evidence": "未来三维场景流预测用于空间推理",
+      "canonical_evidence": "未来三维场景流预测用于空间推理",
+      "llm_tldr_en": "MotionForesight repurposes video prediction models to forecast future 3D trajectories of objects from monocular observations, enabling physical reasoning without object priors.",
+      "llm_tldr_cn": "针对从被动观察预测物体运动轨迹的问题，本文提出MotionForesight，利用视频预测模型的内在先验，从单目视频预测交互物体的未来三维点轨迹，实现无需物体先验的物理推理。",
+      "llm_tldr": "针对从被动观察预测物体运动轨迹的问题，本文提出MotionForesight，利用视频预测模型的内在先验，从单目视频预测交互物体的未来三维点轨迹，实现无需物体先验的物理推理。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.15652v1",
+      "source": "arxiv",
+      "title": "CSS-BA: Gate-Guided Column Space Search for Bundle Adjustment",
+      "abstract": "Bundle adjustment (BA) remains a critical refinement module for image-based 3D reconstruction and continues to improve geometric accuracy even in learning-based pipelines. However, in low-parallax and near-rotational regimes, classical Schur-based Levenberg--Marquardt (LM) often becomes ill-conditioned and yields unreliable pose and calibration estimates. We propose Gate-Guided CSS-BA, a solver-side modification of Schur-LM that preserves the classical BA objective and trust-region framework while constraining each update to a geometrically informed low-dimensional subspace. By integrating Column Space Search (CSS) with geometry-aware gating, the method stabilizes the Schur-LM update without altering the estimation problem. In contrast to keyframe or state-selection approaches, all camera and point parameters remain in the optimization problem; only the update direction is restricted. The method serves as a drop-in replacement for existing BA pipelines. Experiments on both generic and challenging weak-geometry scenarios show more stable optimization, improved relative pose accuracy, and competitive calibration behavior while maintaining reprojection quality.",
+      "authors": [
+        "Ayano Kaneda",
+        "Takafumi Taketomi",
+        "Shugo Yamaguchi",
+        "Shigeo Morishima"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-17T05:59:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.15652v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "bundle adjustment refinement for 3D reconstruction",
+      "llm_evidence_cn": "束调整优化用于3D重建",
+      "llm_evidence": "束调整优化用于3D重建",
+      "canonical_evidence": "束调整优化用于3D重建",
+      "llm_tldr_en": "CSS-BA introduces a gate-guided column space search modification to classical Schur-based bundle adjustment, stabilizing solutions in low-parallax regimes while preserving the original objective, improving 3D reconstruction accuracy.",
+      "llm_tldr_cn": "束调整是3D重建的关键模块，但在低视差条件下易病态。CSS-BA提出门控列空间搜索方法，在保持经典BA目标和信赖域框架的同时，将更新约束到几何信息子空间，提高稳定性。在不改变估计问题前提下提升了重建精度，适用于学习型流水线。",
+      "llm_tldr": "束调整是3D重建的关键模块，但在低视差条件下易病态。CSS-BA提出门控列空间搜索方法，在保持经典BA目标和信赖域框架的同时，将更新约束到几何信息子空间，提高稳定性。在不改变估计问题前提下提升了重建精度，适用于学习型流水线。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.15727v1",
+      "source": "arxiv",
+      "title": "Event3R: Asynchronous-to-Global 3D Reconstruction from Event Camera via Spatial-Temporal Feature Aggregation",
+      "abstract": "Robust 3D reconstruction is essential for robotics and embodied perception. Recent feed-forward approaches such as DUSt3R have demonstrated impressive progress in dense 3D reconstruction from RGB images, achieving global geometric consistency and strong generalization. However, extending such dense 3D reconstruction to event cameras remains challenging due to their asynchronous, sparse, and highly dynamic nature, as well as the lack of large-scale, well-labeled datasets. In this work, we introduce Event3R, a feed-forward framework that directly maps asynchronous event streams to globally consistent 3D point clouds. Event3R represents incoming events as spatial-temporal voxels, enabling time-aware feature integration through a temporal attention module that enhances the module's temporal feature learning. To further strengthen temporal representation learning and reduce reliance on labeled data, we propose a Masked Bin Modeling (MBM) strategy for self-supervised pre-training, enabling robust temporal representation learning with minimal labeled data, and retain it as an auxiliary fine-tuning objective. In addition, contrastive alignment and consistency regularization losses are incorporated during fine-tuning to reinforce structural correspondence and temporal coherence across views. Extensive experiments on both synthetic and real-world benchmarks demonstrate that Event3R achieves robust, temporally consistent, and globally aligned 3D reconstructions, significantly outperforming existing event-based methods.",
+      "authors": [
+        "Jian Huang",
+        "Haotian Shen",
+        "Xinhao Lou",
+        "Chengrui Dong",
+        "Wenpu Li",
+        "Peidong Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-17T08:04:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.15727v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Event camera to globally consistent 3D reconstruction",
+      "llm_evidence_cn": "事件相机到全局一致3D重建",
+      "llm_evidence": "事件相机到全局一致3D重建",
+      "canonical_evidence": "事件相机到全局一致3D重建",
+      "llm_tldr_en": "Event3R directly maps asynchronous event streams to globally consistent 3D point clouds via spatial-temporal voxel representation and feed-forward framework.",
+      "llm_tldr_cn": "针对事件相机的异步稀疏特性，本文提出Event3R，一种前馈框架，将事件流表示为时空体素并通过时间感知特征集成，直接生成全局一致的3D点云。无需传统RGB数据，解决了事件相机3D重建的挑战，实现了鲁棒且泛化的重建。",
+      "llm_tldr": "针对事件相机的异步稀疏特性，本文提出Event3R，一种前馈框架，将事件流表示为时空体素并通过时间感知特征集成，直接生成全局一致的3D点云。无需传统RGB数据，解决了事件相机3D重建的挑战，实现了鲁棒且泛化的重建。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.15667v1",
+      "source": "arxiv",
+      "title": "PE-Field 4D: Video Generation Models as Canvas",
+      "abstract": "Diffusion Transformers have recently achieved strong performance in video generation, yet controlling scene geometry under viewpoint changes and camera motion remains challenging. In this work, we revisit the role of positional encoding in video diffusion transformers and show that it provides a useful spatial bias for geometry-aware control. Specifically, if reference tokens are encoded according to their projected locations in the target view, the denoising model is encouraged to retrieve content from position aligned regions of the input video. Building on this observation, we introduce a geometry-aware cross-attention mechanism that enables target video latent tokens to attend to structured context tokens derived from reference images or frames. To establish correspondence between the reference content and the target camera trajectory, we equip the context tokens with a projected positional encoding scheme that combines target-view 2D reprojection with depth-aware disambiguation. At the same time, we preserve the original spatiotemporal positional encoding of the generated video latent, allowing geometric guidance to be injected while maintaining consistency with the video model's native latent structure. The resulting framework provides a simple and effective approach for controllable video generation. It improves spatial controllability in viewpoint-dependent editing tasks, including camera re-trajectory, novel-view video synthesis, and geometry-aware video editing, while preserving the generative prior of the underlying video diffusion model. The code is available at: https://github.com/MTLab/PE-Field.",
+      "authors": [
+        "Yunpeng Bai",
+        "Haoxiang Li",
+        "Qixing Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-17T06:22:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.15667v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "geometry-aware control in video generation for 3D scenes",
+      "llm_evidence_cn": "视频生成中的几何感知控制用于三维场景",
+      "llm_evidence": "视频生成中的几何感知控制用于三维场景",
+      "canonical_evidence": "视频生成中的几何感知控制用于三维场景",
+      "llm_tldr_en": "PE-Field 4D introduces geometry-aware cross-attention in video diffusion transformers, enabling control over scene geometry under viewpoint changes for 3D-aware video generation.",
+      "llm_tldr_cn": "针对视频生成中场景几何控制困难的问题，本文提出PE-Field 4D，重审视位置编码的作用，设计几何感知交叉注意力机制，使目标视频令牌能根据投影位置从参考帧检索内容，实现视角变化下的几何一致视频生成。",
+      "llm_tldr": "针对视频生成中场景几何控制困难的问题，本文提出PE-Field 4D，重审视位置编码的作用，设计几何感知交叉注意力机制，使目标视频令牌能根据投影位置从参考帧检索内容，实现视角变化下的几何一致视频生成。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.16128v1",
+      "source": "arxiv",
+      "title": "Toward Semantic Communication for Real-time Mobile 3D Reconstruction",
+      "abstract": "Real-time mobile 3D reconstruction is fundamental to many emerging applications such as autonomous navigation and digital twin construction, where a moving platform continuously captures an image stream and transmit to a computing server for scene understanding. Unlike offline reconstruction, camera poses and scene geometry are estimated on-the-fly during acquisition, making multi-view consistency a real-time requirement and rendering geometric estimation highly sensitive to communication-induced distortions. Semantic communication (SemCom) transmits compact semantic information, offering a promising way to preserve task-critical data over unreliable links. However, existing designs are optimized at the image or single-view level and without providing explicit reliability information for geometric estimation, limiting their applicability to real-time mobile 3D reconstruction. In this context, we propose a SemCom framework for real-time mobile 3D reconstruction. The framework includes a semantic transceiver that outputs a reconstructed image alongside a pixel-wise confidence map, quantifying the reliability of each region. We further introduce a confidence-guided geometric estimation method, incorporating confidence into RANSAC-based pose initialization and bundle adjustment to reduce the influence of unreliable regions and enhance robustness under noisy channels. Simulations show that, compared to existing SemCom and traditional seperate source and channel coding, our framework maintains high image quality while significantly improving pose estimation accuracy and 3D structural consistency.",
+      "authors": [
+        "Fangzhou Zhao",
+        "Yao Sun",
+        "Xuesong Liu",
+        "Runze Cheng",
+        "Shang Kai",
+        "Yi Sun"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.MA",
+        "cs.MM"
+      ],
+      "published": "2026-07-17T17:07:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.16128v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Semantic communication for real-time mobile 3D reconstruction",
+      "llm_evidence_cn": "用于实时移动3D重建的语义通信",
+      "llm_evidence": "用于实时移动3D重建的语义通信",
+      "canonical_evidence": "用于实时移动3D重建的语义通信",
+      "llm_tldr_en": "This work explores semantic communication for real-time mobile 3D reconstruction, preserving task-critical data over unreliable links to mitigate communication-induced distortions in geometry estimation.",
+      "llm_tldr_cn": "针对实时移动3D重建中通信失真对几何估计的敏感影响，该论文探索语义通信方法，在传输中保留场景理解所需的关键语义信息。与现有图像级优化不同，该方法针对多视图一致性需求设计，在保持重建质量的同时减少带宽消耗，为移动平台3D重建提供了新思路。",
+      "llm_tldr": "针对实时移动3D重建中通信失真对几何估计的敏感影响，该论文探索语义通信方法，在传输中保留场景理解所需的关键语义信息。与现有图像级优化不同，该方法针对多视图一致性需求设计，在保持重建质量的同时减少带宽消耗，为移动平台3D重建提供了新思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.16173v1",
+      "source": "arxiv",
+      "title": "Vision-Language-Motion Maps: An Open-Vocabulary, Uncertainty-Aware, Queryable Motion Attribute for 3D Scene Maps",
+      "abstract": "Open-vocabulary 3D maps let robots answer language queries about what and where, but they assume a static world and cannot answer queries about how scene elements behave. We introduce Vision-Language-Motion Maps (VLMM), an open-vocabulary, natural-language-queryable 3D map in which each element carries a fused motion attribute: a VLM/LLM semantic movability prior combined with geometrically observed cross-frame motion, together with a per-element uncertainty. Queries reduce to attribute filters that distinguish what has been seen to move, what could move but has not, and what stays still. On a controlled simulator benchmark with exact ground truth (AI2-THOR, three scene types) we show through ablation that the schema fields are non-substitutable: a semantic-only baseline fails motion queries even with strong features, and neither motion field substitutes for the other (the prior cannot answer \"what is moving,\" observed motion cannot answer \"what could move\"). On real dynamic RGB-D (TUM and Bonn, six sequences) we show the uncertainty channel-our key difference from prior fused-motion work-consistently improves moving-vs-static average precision and reduces false motion flags, and is robust to estimated (noisy) poses. The raw confidence is not calibrated, but post-hoc isotonic calibration reaches an expected calibration error of 0.10. VLMM is a representation contribution: the closest prior maps each lack at least one of the four properties-open-vocabulary, language-queryable, fused prior-and-observed motion, and per-element uncertainty-that our combination provides.",
+      "authors": [
+        "Dibyendu Ghosh",
+        "Ayushi Shakya"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-17T17:53:13+00:00",
+      "link": "https://arxiv.org/pdf/2607.16173v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "open-vocabulary queryable 3D scene maps with motion understanding",
+      "llm_evidence_cn": "基于开放词汇的三维场景地图与运动理解",
+      "llm_evidence": "基于开放词汇的三维场景地图与运动理解",
+      "canonical_evidence": "基于开放词汇的三维场景地图与运动理解",
+      "llm_tldr_en": "VLMM introduces motion attributes into open-vocabulary 3D maps, enabling queries about scene behavior via language.",
+      "llm_tldr_cn": "现有开放词汇三维地图仅能回答静态场景的'什么'和'哪里'，无法回答'如何运动'。本文提出VLMM，为每个场景元素附加融合了VLM/LLM语义运动先验和几何观测的运动属性，并带有不确定性。机器人可通过自然语言过滤查询哪些物体能动、已动或静止。在AI2-THOR仿真器上的实验显示，该方法有效区分了不同运动状态。",
+      "llm_tldr": "现有开放词汇三维地图仅能回答静态场景的'什么'和'哪里'，无法回答'如何运动'。本文提出VLMM，为每个场景元素附加融合了VLM/LLM语义运动先验和几何观测的运动属性，并带有不确定性。机器人可通过自然语言过滤查询哪些物体能动、已动或静止。在AI2-THOR仿真器上的实验显示，该方法有效区分了不同运动状态。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
