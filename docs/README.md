@@ -6,55 +6,58 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-20
-- 运行时间：2026-07-20 20:13:13 UTC
+- 最新运行日期：2026-07-21
+- 运行时间：2026-07-21 21:17:56 UTC
 - 运行状态：成功
-- 本次总论文数：11
-- 精读区：6
-- 速读区：5
+- 本次总论文数：12
+- 精读区：5
+- 速读区：7
 
 ### 今日简报（AI）
-今日日报聚焦世界模型与运动估计，精读两篇高分论文《DriftWorld》（10分）和《Orbis 2》（9分），速读涉及BA优化、视频生成及场景地图。  
-最值得关注的是快速世界建模与分层驾驶模型，对自动驾驶和仿真有直接参考价值。  
-下一步建议优先精读这两篇论文，理解从单层漂移到层次化建模的演进路线。
-- 详情：[/202607/20/README](/202607/20/README)
+今日精选12篇论文，精读两篇高分3D生成与重建工作。  
+最值得关注的是无需微调的3D场景资产生成（Scene-SAM3D）和物理感知的室内环境层级生成（Text2Villa），均获9.0高分。  
+建议优先了解Scene-SAM3D的多视图生成能力，或关注无需训练的3D点云分割新基准。
+- 详情：[/202607/21/README](/202607/21/README)
 
 ### 精读区论文标签
-1. [DriftWorld: Fast World Modeling through Drifting](/202607/20/2607.15065v1-driftworld-fast-world-modeling-through-drifting)  
-   标签：评分：10.0/10、query:world-model
-   evidence：动作条件的世界模型实现快速轨迹生成
-2. [Orbis 2: A Hierarchical World Model for Driving](/202607/20/2607.15898v1-orbis-2-a-hierarchical-world-model-for-driving)  
+1. [Scene-SAM3D: Multi-View Scene Asset Generation Without Fine-Tuning](/202607/21/2607.16805v1-scene-sam3d-multi-view-scene-asset-generation-without-fine-tuning)  
    标签：评分：9.0/10、query:world-model
-   evidence：用于驾驶的层次化世界模型，具备空间推理和场景预测能力
-3. [E3DGS: Unified Geometric-Photometric Equivariance for 3D Gaussian Splatting via Color-as-Geometry Embedding](/202607/20/2607.15536v1-e3dgs-unified-geometric-photometric-equivariance-for-3d-gaussian-splatting-via-color-as-geometry-embedding)  
+   evidence：无需微调的多视角3D场景资产生成
+2. [Text2Villa: Hierarchical Generation of 3D Indoor Environments with Physics-Aware Analysis-by-Synthesis](/202607/21/2607.17145v1-text2villa-hierarchical-generation-of-3d-indoor-environments-with-physics-aware-analysis-by-synthesis)  
+   标签：评分：9.0/10、query:world-model
+   evidence：从文本层次化生成3D室内环境
+3. [GeoWorldAD: Geometry World Action Model for Autonomous Driving](/202607/21/2607.17521v1-geoworldad-geometry-world-action-model-for-autonomous-driving)  
+   标签：评分：9.0/10、query:world-model
+   evidence：用于自动驾驶的几何世界动作模型与空间推理
+4. [VIDAR: Visual-Inertial Dense Alignment and Reconstruction via a Geometric Foundation Model](/202607/21/2607.17171v1-vidar-visual-inertial-dense-alignment-and-reconstruction-via-a-geometric-foundation-model)  
    标签：评分：8.0/10、query:world-model
-   evidence：等变三维高斯泼溅用于场景生成
-4. [Beyond Frontiers: Scene-Anomaly Guided Autonomous Exploration](/202607/20/2607.15828v1-beyond-frontiers-scene-anomaly-guided-autonomous-exploration)  
+   evidence：视觉惯性密集重建技术，支持基于世界模型的3D重建
+5. [Plenoptic Condensation: A Novel Approach to Generalized Scene Reconstruction](/202607/21/2607.18151v1-plenoptic-condensation-a-novel-approach-to-generalized-scene-reconstruction)  
    标签：评分：8.0/10、query:world-model
-   evidence：场景异常引导的自主探索用于三维重建
-5. [DPNeXt: A Lightweight Multi-Scale Feature Fusion Framework for Efficient ViT-Based Multi-Task Dense Prediction](/202607/20/2607.16012v1-dpnext-a-lightweight-multi-scale-feature-fusion-framework-for-efficient-vit-based-multi-task-dense-prediction)  
-   标签：评分：8.0/10、query:world-model
-   evidence：多任务密集预测用于3D空间场景理解
-6. [MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction](/202607/20/2607.16192v1-motionforesight-re-purposing-video-models-for-future-3d-scene-flow-prediction)  
-   标签：评分：8.0/10、query:world-model
-   evidence：未来三维场景流预测用于空间推理
+   evidence：通用场景重建，具有空间可变表示能力，支持场景理解
 
 ### 速读区论文标签
-1. [CSS-BA: Gate-Guided Column Space Search for Bundle Adjustment](/202607/20/2607.15652v1-css-ba-gate-guided-column-space-search-for-bundle-adjustment)  
+1. [TCAM-Diff: Triplane-Aware Cross-Attention Medical Diffusion Model](/202607/21/2607.13812v1-tcam-diff-triplane-aware-cross-attention-medical-diffusion-model)  
    标签：评分：7.0/10、query:world-model
-   evidence：束调整优化用于3D重建
-2. [PE-Field 4D: Video Generation Models as Canvas](/202607/20/2607.15667v1-pe-field-4d-video-generation-models-as-canvas)  
+   evidence：使用扩散模型的3D医学图像生成，方法可迁移至场景生成
+2. [Training-Free Open-Vocabulary 3D Point-Cloud Segmentation on the Generalized Few-Shot Benchmark](/202607/21/2607.15331v1-training-free-open-vocabulary-3d-point-cloud-segmentation-on-the-generalized-few-shot-benchmark)  
    标签：评分：7.0/10、query:world-model
-   evidence：视频生成中的几何感知控制用于三维场景
-3. [Vision-Language-Motion Maps: An Open-Vocabulary, Uncertainty-Aware, Queryable Motion Attribute for 3D Scene Maps](/202607/20/2607.16173v1-vision-language-motion-maps-an-open-vocabulary-uncertainty-aware-queryable-motion-attribute-for-3d-scene-maps)  
+   evidence：开放词汇三维点云分割，服务于场景理解
+3. [Splat-based 3D Scene Reconstruction with Extreme Motion-blur](/202607/21/2607.16926v1-splat-based-3d-scene-reconstruction-with-extreme-motion-blur)  
    标签：评分：7.0/10、query:world-model
-   evidence：基于开放词汇的三维场景地图与运动理解
-4. [Event3R: Asynchronous-to-Global 3D Reconstruction from Event Camera via Spatial-Temporal Feature Aggregation](/202607/20/2607.15727v1-event3r-asynchronous-to-global-3d-reconstruction-from-event-camera-via-spatial-temporal-feature-aggregation)  
+   evidence：使用高斯溅射处理极端运动模糊进行3D场景重建
+4. [FF-ProCams: Feed-Forward Gaussian Splatting for Projector-Camera System](/202607/21/2607.17803v1-ff-procams-feed-forward-gaussian-splatting-for-projector-camera-system)  
+   标签：评分：7.0/10、query:world-model
+   evidence：前馈高斯泼溅用于投影仪-相机场景重建
+5. [SaaF: Scene-Specific Ambiguity-Aware 3D Language Fields towards Interactive Real-World Object Retrieval](/202607/21/2607.16309v1-saaf-scene-specific-ambiguity-aware-3d-language-fields-towards-interactive-real-world-object-retrieval)  
    标签：评分：6.0/10、query:world-model
-   evidence：事件相机到全局一致3D重建
-5. [Toward Semantic Communication for Real-time Mobile 3D Reconstruction](/202607/20/2607.16128v1-toward-semantic-communication-for-real-time-mobile-3d-reconstruction)  
+   evidence：场景特定且模糊感知的3D语言场用于交互式目标检索，增强场景理解
+6. [MuViSeg: Multi-View Segment Correspondences from Dense Geometry Priors](/202607/21/2607.17938v1-muviseg-multi-view-segment-correspondences-from-dense-geometry-priors)  
    标签：评分：6.0/10、query:world-model
-   evidence：用于实时移动3D重建的语义通信
+   evidence：利用密集几何先验的多视图段对应，用于场景理解
+7. [VGOcc: Learning Visual-Geometric Gaussians for Vision-Centric 3D Driving Occupancy Prediction](/202607/21/2607.18078v1-vgocc-learning-visual-geometric-gaussians-for-vision-centric-3d-driving-occupancy-prediction)  
+   标签：评分：6.0/10、query:world-model
+   evidence：用于驾驶场景的占用预测作为世界模型
 
 
 <div class="dpr-home-promo-card">

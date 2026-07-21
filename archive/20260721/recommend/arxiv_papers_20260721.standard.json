@@ -1,0 +1,482 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-21T21:11:27.567178+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2607.16805v1",
+      "source": "arxiv",
+      "title": "Scene-SAM3D: Multi-View Scene Asset Generation Without Fine-Tuning",
+      "abstract": "High-quality 3D scene assets are critical for embodied applications such as robotic manipulation, navigation, and simulation. Despite their strong object priors, recent single-image 3D generation models such as SAM3D remain insufficient for real-world scenes, where severe occlusions, redundant observations, and cross-view inconsistencies make reliable scene generation challenging. We introduce Scene-SAM3D, a training-free framework that extends SAM3D from single-view object generation to calibrated multi-view scene asset generation. Scene-SAM3D selects a compact set of complementary views, reducing observation redundancy while providing additional evidence for regions occluded in individual views. Based on the selected views, it performs step-efficient latent velocity fusion to integrate multi-view evidence and suppress cross-view conflicts in canonical space. Finally, a lightweight rigid-object Gaussian optimization refines the scene layout within 200 iterations while preserving the generated object geometry. Experiments on Replica and ScanNet++ demonstrate consistent improvements at both instance and scene levels, with our method reducing scene-level CD by 43.8% on Replica and 30.9% on ScanNet++, while cutting flow-model sampling FLOPs and wall-time latency by nearly 20% under the same multi-view setting. Code will be released at https://github.com/xibi777/Scene-SAM3D.",
+      "authors": [
+        "Yuqi Zhang",
+        "Yadan Luo",
+        "Xiangyu Sun",
+        "Fengyi Zhang",
+        "Zi Huang",
+        "Xin Tan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-18T12:51:17+00:00",
+      "link": "https://arxiv.org/pdf/2607.16805v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "multi-view 3D scene asset generation without fine-tuning",
+      "llm_evidence_cn": "无需微调的多视角3D场景资产生成",
+      "llm_evidence": "无需微调的多视角3D场景资产生成",
+      "canonical_evidence": "无需微调的多视角3D场景资产生成",
+      "llm_tldr_en": "Introduces Scene-SAM3D, a training-free framework extending SAM3D to multi-view scene asset generation, handling occlusions and cross-view inconsistencies.",
+      "llm_tldr_cn": "针对单视图3D生成模型在真实场景中由于遮挡和视角不一致而失败的问题，提出Scene-SAM3D，无需微调即可从多视角图像生成场景级3D资产。该方法通过选择互补视图集减少冗余，并通过步高效潜在融合生成高质量场景。实验证明在多个场景数据集上生成效果显著优于基准。",
+      "llm_tldr": "针对单视图3D生成模型在真实场景中由于遮挡和视角不一致而失败的问题，提出Scene-SAM3D，无需微调即可从多视角图像生成场景级3D资产。该方法通过选择互补视图集减少冗余，并通过步高效潜在融合生成高质量场景。实验证明在多个场景数据集上生成效果显著优于基准。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.17145v1",
+      "source": "arxiv",
+      "title": "Text2Villa: Hierarchical Generation of 3D Indoor Environments with Physics-Aware Analysis-by-Synthesis",
+      "abstract": "Generating 3D indoor scenes from natural language holds tremendous potential, yet existing methods predominantly fail to generate multi-room structures with vertical connectivity and arbitrary polygonal boundaries. Furthermore, they lack a deep grounding in continuous 3D physical laws, leading to severe geometric penetrations and floating artifacts. In this work, we propose Text2Villa, a novel hierarchical generative framework. At the macro level, we construct a multi-story dataset to fine-tune an autoregressive layout generator, ensuring the direct parsing of text into 3D building foundations featuring polygonal boundaries and multi-story connectivity. To enforce physical laws during micro-level asset arrangement, we introduce the Affordance-driven Physical-Semantic Scene Graph (A-PSSG) to explicitly abstract physical affordances (such as support surfaces and containment cavities) into node attributes, establishing strict geometric and semantic edge constraints. Guided by the A-PSSG, we formulate scene instantiation as a constrained closed-loop optimization problem following the analysis-by-synthesis paradigm. By integrating an underlying geometric collision detection engine with the high-level semantic reasoning of multimodal large language models (MLLMs), our heuristic solver dynamically executes physics-aware actions under the observation-evaluation-modification mechanism to effectively resolve mesh collisions, floating artifacts, and fine-grained cavity containment failures. Extensive experiments demonstrate that Text2Villa outperforms previous methods across various metrics, robustly generating high-fidelity and physically plausible villa-level 3D environments from text, thereby providing a reliable and interactive 3D content foundation for downstream applications.",
+      "authors": [
+        "Xiang Tang",
+        "Ruotong Li",
+        "Xiaopeng Fan"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR"
+      ],
+      "published": "2026-07-19T09:01:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.17145v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Hierarchical generation of 3D indoor environments from text",
+      "llm_evidence_cn": "从文本层次化生成3D室内环境",
+      "llm_evidence": "从文本层次化生成3D室内环境",
+      "canonical_evidence": "从文本层次化生成3D室内环境",
+      "llm_tldr_en": "Text2Villa generates 3D indoor scenes from text with multi-room, multi-story layouts and physics-aware arrangement, overcoming limitations of previous methods.",
+      "llm_tldr_cn": "针对现有文本到3D室内场景生成方法无法生成多房间、多楼层结构且缺乏物理合理性（如穿透、漂浮）的问题，本文提出Text2Villa，一种层次化生成框架。宏观层面，构建多楼层数据集微调自回归布局生成器，直接从文本解析多边形边界和多楼层连通性；微观层面，在物体布局中嵌入物理约束避免几何穿模。实验生成了高质量、物理正确的复杂室内场景。该方法为基于世界模型的3D场景生成提供了新方案。",
+      "llm_tldr": "针对现有文本到3D室内场景生成方法无法生成多房间、多楼层结构且缺乏物理合理性（如穿透、漂浮）的问题，本文提出Text2Villa，一种层次化生成框架。宏观层面，构建多楼层数据集微调自回归布局生成器，直接从文本解析多边形边界和多楼层连通性；微观层面，在物体布局中嵌入物理约束避免几何穿模。实验生成了高质量、物理正确的复杂室内场景。该方法为基于世界模型的3D场景生成提供了新方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.17521v1",
+      "source": "arxiv",
+      "title": "GeoWorldAD: Geometry World Action Model for Autonomous Driving",
+      "abstract": "Autonomous driving requires both safe and efficient planning decisions in dynamic 3D environments. Although recent Vision/Video-Action models learn policies directly from visual observations and scale well with advances in vision transformers and large-scale training data, they often lack explicit geometric grounding and future-aware spatial guidance, limiting their ability to balance collision avoidance and driving progress. In this work, we propose GeoWorldAD, a geometry world action model that grounds trajectory planning in ego-aligned 3D space and anticipates short-horizon scene evolution with latent future geometry tokens. Present geometry provides essential spatial constraints for safe planning, while future geometry reveals how surrounding agents and ego-centric free space may evolve, reducing overly conservative decisions without sacrificing safety. To efficiently exploit these geometric cues, GeoWorldAD progressively aggregates multi-scale present geometry and latent future geometry through iterative trajectory refinement. Experiments on NAVSIM v1 and v2 demonstrate state-of-the-art performance, highlighting the effectiveness of explicit 3D geometry grounding and future geometry world modeling for safe and efficient autonomous driving.",
+      "authors": [
+        "Songyan Zhang",
+        "Jinyuan Tian",
+        "Hanbing Li",
+        "Daqi Liu",
+        "Hao Chen",
+        "Wenhui Huang",
+        "Fang Li",
+        "Guang Chen",
+        "Hangjun Ye",
+        "Long Chen",
+        "Kuiyuan Yang",
+        "Chen Lv"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-20T03:56:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.17521v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Geometry world action model for autonomous driving with spatial reasoning",
+      "llm_evidence_cn": "用于自动驾驶的几何世界动作模型与空间推理",
+      "llm_evidence": "用于自动驾驶的几何世界动作模型与空间推理",
+      "canonical_evidence": "用于自动驾驶的几何世界动作模型与空间推理",
+      "llm_tldr_en": "GeoWorldAD grounds trajectory planning in ego-aligned 3D space and predicts future scene geometry tokens, enabling safe and efficient autonomous driving with explicit geometric reasoning.",
+      "llm_tldr_cn": "现有视觉动作模型缺乏几何基线和未来空间引导，难以平衡避障与进展。GeoWorldAD提出几何世界动作模型，在自车对齐三维空间中规划轨迹，并用隐式未来几何token预测场景演化。实验表明该方法在动态环境中显著提升了规划安全性与效率。",
+      "llm_tldr": "现有视觉动作模型缺乏几何基线和未来空间引导，难以平衡避障与进展。GeoWorldAD提出几何世界动作模型，在自车对齐三维空间中规划轨迹，并用隐式未来几何token预测场景演化。实验表明该方法在动态环境中显著提升了规划安全性与效率。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.17171v1",
+      "source": "arxiv",
+      "title": "VIDAR: Visual-Inertial Dense Alignment and Reconstruction via a Geometric Foundation Model",
+      "abstract": "Monocular foundation models provide dense geometry but usually lack a stable metric scale. This paper presents VIDAR, a visual-inertial dense reconstruction framework that couples SVO+IMU odometry with Depth Anything 3. VIDAR uses the visual-inertial front end as a metric anchor: it provides camera poses, scale, and a consistent world frame for aligning dense foundation-model predictions across time. The foundation model then contributes detailed local geometry that is fused into a global reconstruction. We study both pose-conditioned DA3 and a decoupled alignment strategy. On EuRoC, pose injection reduces scale error to about 1\\% and reaches 0.463 mean F@0.10; the decoupled hybrid improves this to 0.676 without ground-truth poses. Results on EuRoC and TUM RGB-D show that VIDAR is a practical route to metric dense monocular reconstruction.",
+      "authors": [
+        "Diyari Mohammed Salih",
+        "Lingxiang Hu",
+        "Naima AitOufroukh-Mammar",
+        "Fabien Bonardi"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-19T10:12:09+00:00",
+      "link": "https://arxiv.org/pdf/2607.17171v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Visual-inertial dense reconstruction for world model based 3D reconstruction",
+      "llm_evidence_cn": "视觉惯性密集重建技术，支持基于世界模型的3D重建",
+      "llm_evidence": "视觉惯性密集重建技术，支持基于世界模型的3D重建",
+      "canonical_evidence": "视觉惯性密集重建技术，支持基于世界模型的3D重建",
+      "llm_tldr_en": "VIDAR integrates visual-inertial odometry with a geometric foundation model to achieve metric-scale dense reconstruction, addressing scale ambiguity in monocular foundation models.",
+      "llm_tldr_cn": "针对单目基础模型预测的密集几何缺乏稳定度量尺度的问题，本文提出VIDAR，一种视觉惯性密集重建框架。它将SVO+IMU里程计与Depth Anything 3结合，利用视觉惯性前端提供相机位姿、尺度和一致的世界坐标系，作为度量锚点来对齐基础模型的预测。然后融合这些局部几何细节形成全局重建。在EuRoC数据集上，位姿注入将尺度误差降至约1%，混合策略进一步提升重建精度。该方法实现了鲁棒的度量尺度的密集重建。",
+      "llm_tldr": "针对单目基础模型预测的密集几何缺乏稳定度量尺度的问题，本文提出VIDAR，一种视觉惯性密集重建框架。它将SVO+IMU里程计与Depth Anything 3结合，利用视觉惯性前端提供相机位姿、尺度和一致的世界坐标系，作为度量锚点来对齐基础模型的预测。然后融合这些局部几何细节形成全局重建。在EuRoC数据集上，位姿注入将尺度误差降至约1%，混合策略进一步提升重建精度。该方法实现了鲁棒的度量尺度的密集重建。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.18151v1",
+      "source": "arxiv",
+      "title": "Plenoptic Condensation: A Novel Approach to Generalized Scene Reconstruction",
+      "abstract": "We present a novel Generalized Scene Reconstruction (GSR) approach called Plenoptic Condensation (PCon). PCon uses a multi-stage reconstruction pipeline, initially converting images into \"soupy\" scene elements with low (representational) power, then adaptively condensing the \"soup\" into \"structured\" elements of higher power capable of efficiently representing, for example, sharp edges and smooth reflective surfaces. PCon scene models called Reality Models (Relms) enable spatially varying representational power, which is essential for high-fidelity rendering, measurement, and scene understanding. We showcase several in-the-wild PCon reconstructions captured with consumer phone cameras and drones. In one case called \"Damaged Fiat\", PCon is benchmarked against two state-of-the-art (SOTA) GSR methods: NeRO and RT-Splatting. Referring to Figure 1 below, PCon reconstructs the car hood more than twice as accurately as the SOTA methods. But more importantly, the local damage profile error for PCon is 35 um (0.035 mm), whereas the two other SOTA methods are essentially unable to measure the damage at all. Our project website is available at https://quidient.github.io/pcon-2026.html.",
+      "authors": [
+        "Brevin Tilmon",
+        "Alex DeJournett",
+        "John Leffingwell",
+        "Scott Ackerson"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-20T16:50:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.18151v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "generalized scene reconstruction with spatially varying representational power for scene understanding",
+      "llm_evidence_cn": "通用场景重建，具有空间可变表示能力，支持场景理解",
+      "llm_evidence": "通用场景重建，具有空间可变表示能力，支持场景理解",
+      "canonical_evidence": "通用场景重建，具有空间可变表示能力，支持场景理解",
+      "llm_tldr_en": "Proposes Plenoptic Condensation (PCon) for generalized scene reconstruction from images, enabling high-fidelity rendering and scene understanding with spatially adaptive representational power.",
+      "llm_tldr_cn": "该文针对通用场景重建问题，提出Plenoptic Condensation (PCon)方法，将图像转化为低表示能力的“汤状”场景元素，再自适应浓缩为高表示能力的“结构化”元素。构建的Reality Models (Relms)具备空间可变表示能力，支持高保真渲染与场景理解。实验展示用消费级相机和无人机采集的真实场景重建结果，验证了方法的有效性与泛化能力。",
+      "llm_tldr": "该文针对通用场景重建问题，提出Plenoptic Condensation (PCon)方法，将图像转化为低表示能力的“汤状”场景元素，再自适应浓缩为高表示能力的“结构化”元素。构建的Reality Models (Relms)具备空间可变表示能力，支持高保真渲染与场景理解。实验展示用消费级相机和无人机采集的真实场景重建结果，验证了方法的有效性与泛化能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.13812v1",
+      "source": "arxiv",
+      "title": "TCAM-Diff: Triplane-Aware Cross-Attention Medical Diffusion Model",
+      "abstract": "We introduce TCAM-Diff, a novel 3D medical image generation model that reduces the memory requirements to encode and generate high-resolution 3D data. This model utilizes a decoder-only autoencoder method to learn triplane representation from dense volume and leverages generalization operations to prevent overfitting. Subsequently, it uses a triplane-aware cross-attention diffusion model to learn and integrate these features effectively. Furthermore, the features generated by the diffusion model can be rapidly transformed into 3D volumes using a pre-trained decoder module. Our experiments on three different scales of medical datasets, BrainTumour 128 x 128 x 128, Pancreas 256 x 256 x 256, and Colon 512 x 512 x 512, demonstrate outstanding results. We utilized MSE and SSIM to assess reconstruction quality and leveraged the Wasserstein Generative Adversarial Network (W-GAN) critic to assess generative quality. Comparisons with existing approaches show that our method gives better reconstruction and generation results than other encoder-decoder methods with similar-sized latent spaces.",
+      "authors": [
+        "Zhenkai Zhang",
+        "Krista A. Ehinger",
+        "Tom Drummond"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "published": "2026-07-15T13:23:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.13812v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D medical image generation with diffusion model, method transferable to scene generation",
+      "llm_evidence_cn": "使用扩散模型的3D医学图像生成，方法可迁移至场景生成",
+      "llm_evidence": "使用扩散模型的3D医学图像生成，方法可迁移至场景生成",
+      "canonical_evidence": "使用扩散模型的3D医学图像生成，方法可迁移至场景生成",
+      "llm_tldr_en": "Proposes a triplane-aware cross-attention diffusion model for high-resolution 3D medical image generation, reducing memory through decoder-only autoencoder and triplane representation.",
+      "llm_tldr_cn": "针对高分辨率3D医学图像生成任务，提出了一种三分量感知交叉注意力扩散模型。该方法使用解码器仅自编码器学习三分量表示以降低内存需求，并通过三分量感知交叉注意力扩散模型有效整合特征。实验在脑肿瘤、胰腺和结肠三个不同尺度的医学数据集上展现了优秀结果。该方法为3D场景生成提供了可迁移的生成范式。",
+      "llm_tldr": "针对高分辨率3D医学图像生成任务，提出了一种三分量感知交叉注意力扩散模型。该方法使用解码器仅自编码器学习三分量表示以降低内存需求，并通过三分量感知交叉注意力扩散模型有效整合特征。实验在脑肿瘤、胰腺和结肠三个不同尺度的医学数据集上展现了优秀结果。该方法为3D场景生成提供了可迁移的生成范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.16309v1",
+      "source": "arxiv",
+      "title": "SaaF: Scene-Specific Ambiguity-Aware 3D Language Fields towards Interactive Real-World Object Retrieval",
+      "abstract": "We propose Scene-specific Ambiguity-aware 3D Language Fields (SaaF), a novel Gaussian Splatting-based 3D language field designed for interactive object retrieval in a given real-world scene. Interactive object retrieval using natural language is a crucial capability for service robots operating in complex real-world environments. While recent 3D language field methods for object retrieval establish associations between rendered pixels and autoencoder-compressed CLIP features, they suffer from two limitations: (1) reduced discriminability among similar objects due to feature compression, and (2) poor handling of ambiguous queries, often resulting in unstable or incorrect retrieval. To address these limitations, SaaF introduces a metric learning strategy to construct a unified feature space that is both instance-discriminative and ambiguity-aware. (i) To enhance instance-level visual discrimination, SaaF employs metric learning that pulls image features from multiple viewpoints of the same object closer together in the feature space. (ii) To establish ambiguity awareness, the model jointly trains on multiple text labels generated by the proposed method from each tracked object image sequence, including ambiguous descriptions, to learn the semantic relationships between ambiguous and specific features in a target scene. This feature space enables fine-grained visual understanding while allowing the system to estimate query ambiguity and interactively request clarification when needed. Experimental results demonstrate that SaaF not only improves retrieval accuracy over previous methods but also robustly detects and handles ambiguity in the user text queries under open-vocabulary settings.",
+      "authors": [
+        "Yuga Yano",
+        "Daiju Kanaoka",
+        "Hakaru Tamukoh",
+        "Yasutomo Kawanishi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T15:32:10+00:00",
+      "link": "https://arxiv.org/pdf/2607.16309v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Scene-specific ambiguity-aware 3D language fields for interactive object retrieval, enhancing scene understanding",
+      "llm_evidence_cn": "场景特定且模糊感知的3D语言场用于交互式目标检索，增强场景理解",
+      "llm_evidence": "场景特定且模糊感知的3D语言场用于交互式目标检索，增强场景理解",
+      "canonical_evidence": "场景特定且模糊感知的3D语言场用于交互式目标检索，增强场景理解",
+      "llm_tldr_en": "Proposes SaaF, a Gaussian Splatting-based 3D language field that resolves feature compression issues and handles ambiguous queries for object retrieval.",
+      "llm_tldr_cn": "现有3D语言场方法因特征压缩导致相似物体区分度下降，且难以处理模糊查询。本文提出SaaF，基于3D高斯泼溅构建场景特定的语言场，通过保持特征完整性和融入歧义感知机制，显著提升了交互式目标检索的准确性和鲁棒性。",
+      "llm_tldr": "现有3D语言场方法因特征压缩导致相似物体区分度下降，且难以处理模糊查询。本文提出SaaF，基于3D高斯泼溅构建场景特定的语言场，通过保持特征完整性和融入歧义感知机制，显著提升了交互式目标检索的准确性和鲁棒性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.15331v1",
+      "source": "arxiv",
+      "title": "Training-Free Open-Vocabulary 3D Point-Cloud Segmentation on the Generalized Few-Shot Benchmark",
+      "abstract": "Generalized few-shot 3D point-cloud segmentation (GFS-PCS) asks a model to segment a scene into many base classes seen at training time and a set of novel classes. The state of the art reaches novel classes by reconciling a dense but noisy 3D vision-language prior with the few-shot support, but it pays for this with base 3D labels, per-episode training, and the support annotations themselves. We ask how far the same reconciliation can go with none of these: no training, no 3D labels, and not even the few-shot support. We pair a frozen 3D vision-language model (RegionPLC) as a dense prior with a frozen promptable concept segmenter (SAM3), prompted by the bare novel class names and lifted from posed RGB views, and reconcile the two by cross-view consistency: a point becomes novel only when enough of the views that see it agree. On the ScanNet200 GFS-PCS benchmark this fully training-free, open-vocabulary pipeline improves novel mIoU by +2.6 over the training-free dense prior while holding base accuracy within 0.5, and recovers a third (33%) of the novel-class gap to the trained state of the art that uses far more supervision. We further show that injecting the few-shot support into the pipeline, as a fusion gate and as a prototypical dense classifier, adds nothing over consistency alone and in fact degrades it through the classifier, which is why the method needs no support at all. On the harder ScanNet++ benchmark, where the dense prior is far weaker on novel classes, the same pipeline nearly doubles novel mIoU (+15.7, from 16.2 to 31.9) at a 1.7 base cost, lifting the harmonic mean from 21.5 to 31.1",
+      "authors": [
+        "Silas kwabla Gah",
+        "Ebenezer Owusu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-16T16:03:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.15331v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "open-vocabulary 3D point cloud segmentation for scene understanding",
+      "llm_evidence_cn": "开放词汇三维点云分割，服务于场景理解",
+      "llm_evidence": "开放词汇三维点云分割，服务于场景理解",
+      "canonical_evidence": "开放词汇三维点云分割，服务于场景理解",
+      "llm_tldr_en": "Training-free open-vocabulary 3D segmentation using frozen vision-language model and promptable segmenter, achieving generalized few-shot segmentation without labels.",
+      "llm_tldr_cn": "针对广义少样本三维点云分割任务，本文提出无需训练的方法：利用冻结的三维视觉语言模型RegionPLC作为密集先验，结合可提示分割器SAM3，仅通过新类名称完成分割。该方法无需任何训练、三维标签或支持样本，在基准上达到了与需要大量标注的现有方法相当的性能，显著降低了开放词汇三维场景理解的标注成本。",
+      "llm_tldr": "针对广义少样本三维点云分割任务，本文提出无需训练的方法：利用冻结的三维视觉语言模型RegionPLC作为密集先验，结合可提示分割器SAM3，仅通过新类名称完成分割。该方法无需任何训练、三维标签或支持样本，在基准上达到了与需要大量标注的现有方法相当的性能，显著降低了开放词汇三维场景理解的标注成本。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.17938v1",
+      "source": "arxiv",
+      "title": "MuViSeg: Multi-View Segment Correspondences from Dense Geometry Priors",
+      "abstract": "Classical image correspondence is solved at the level of sparse keypoints or dense pixels, but the systems that consume these matches - object-level mapping, topological navigation, scene-graph maintenance - reason about whole objects. Recent work narrows this gap by matchng directly at the level of instance segments: a class-agnostic segmenter partitions each image, and per-segment descriptors are obtained by pooling features from large 3D foundation models over the masks. We build on this segment-level matching paradigm and propose three learned matching heads: a LightGlue-style attention head with DoubleSoftmax scoring on frozen MASt3R descriptors; a DPT-style multi-scale fusion module that exposes layered spatial detail from the VGGT foundation model before pooling; and - as our main contribution - a multi-view extension that performs joint self-attention over segments drawn from several views at once, recovering transitive correspondences that strictly pairwise matchers cannot reach. Under a stratified zero-shot protocol on Replica and Virtual KITTI 2 with controlled viewpoint baselines from 0 deg to 180 deg, the LightGlue-style head improves over a parameter-free Sinkhorn matcher on the same MASt3R backbone by +4.85 AUPRC on Replica and +25.9 AUPRC on Virtual KITTI 2. Dropped into the RoboHop topological navigation pipeline on the Habitat-Matterport 3D (HM3D) Instance Image Navigation benchmark without retraining, our multi-view variant raises success rate from 50% to 70%, and our LightGlue-style head raises SPL from 45.7 to 59.1.",
+      "authors": [
+        "Denis Fatykhoph",
+        "Timur Akhtyamov",
+        "Konstantin Pakulev",
+        "German Devchich",
+        "Gonzalo Ferrer"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-20T13:35:48+00:00",
+      "link": "https://arxiv.org/pdf/2607.17938v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Multi-view segment correspondences using dense geometry priors for scene understanding",
+      "llm_evidence_cn": "利用密集几何先验的多视图段对应，用于场景理解",
+      "llm_evidence": "利用密集几何先验的多视图段对应，用于场景理解",
+      "canonical_evidence": "利用密集几何先验的多视图段对应，用于场景理解",
+      "llm_tldr_en": "Proposes MuViSeg for learning multi-view segment correspondences using dense geometry priors from foundation models, improving object-level scene understanding.",
+      "llm_tldr_cn": "在多视图场景理解中，传统方法依赖稀疏特征或像素级匹配，难以直接用于物体级任务。本文提出MuViSeg，利用MASt3R和VGGT等基础模型的密集几何先验，学习端到端的段级匹配，显著提升了物体级别对应关系的准确性和鲁棒性。",
+      "llm_tldr": "在多视图场景理解中，传统方法依赖稀疏特征或像素级匹配，难以直接用于物体级任务。本文提出MuViSeg，利用MASt3R和VGGT等基础模型的密集几何先验，学习端到端的段级匹配，显著提升了物体级别对应关系的准确性和鲁棒性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.16926v1",
+      "source": "arxiv",
+      "title": "Splat-based 3D Scene Reconstruction with Extreme Motion-blur",
+      "abstract": "We propose a splat-based 3D scene reconstruction method from RGB-D input that effectively handles extreme motion blur, a frequent challenge in low-light environments. Under dim illumination, RGB frames often suffer from severe motion blur due to extended exposure times, causing traditional camera pose estimation methods, such as COLMAP, to fail. This results in inaccurate camera pose and blurry color input, compromising the quality of 3D reconstructions. Although recent 3D reconstruction techniques like Neural Radiance Fields and Gaussian Splatting have demonstrated impressive results, they rely on accurate camera trajectory estimation, which becomes challenging under fast motion or poor lighting conditions. Furthermore, rapid camera movement and the limited field of view of depth sensors reduce point cloud overlap, limiting the effectiveness of pose estimation with the ICP algorithm. To address these issues, we introduce a method that combines camera pose estimation and image deblurring using a Gaussian Splatting framework, leveraging both 3D Gaussian splats and depth inputs for enhanced scene representation. Our method first aligns consecutive RGB-D frames through optical flow and ICP, then refines camera poses and 3D geometry by adjusting Gaussian positions for optimal depth alignment. To handle motion blur, we model camera movement during exposure and deblur images by comparing the input with a series of sharp, rendered frames. Experiments on a new RGB-D dataset with extreme motion blur show that our method outperforms existing approaches, enabling high-quality reconstructions even in challenging conditions. This approach has broad implications for 3D mapping applications in robotics, autonomous navigation, and augmented reality. Both code and dataset are publicly available on https://github.com/KAIST-VCLAB/gs-extreme-motion-blur.",
+      "authors": [
+        "Hyeonjoong Jang",
+        "Dongyoung Choi",
+        "Donggun Kim",
+        "Woohyun Kang",
+        "Min H. Kim"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-18T18:41:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.16926v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "handles extreme motion blur for 3D scene reconstruction using Gaussian splatting",
+      "llm_evidence_cn": "使用高斯溅射处理极端运动模糊进行3D场景重建",
+      "llm_evidence": "使用高斯溅射处理极端运动模糊进行3D场景重建",
+      "canonical_evidence": "使用高斯溅射处理极端运动模糊进行3D场景重建",
+      "llm_tldr_en": "Proposes a splat-based 3D reconstruction method robust to extreme motion blur, enabling scene capture in low-light with inaccurate poses.",
+      "llm_tldr_cn": "提出一种基于高斯溅射的3D重建方法，对极端运动模糊具有鲁棒性，可在低光照和不准确位姿条件下实现高保真场景重建，扩展了3D高斯场景表示的实用性。该方法利用RGB-D输入和运动模糊鲁棒的优化，直接学习高斯溅射参数。",
+      "llm_tldr": "提出一种基于高斯溅射的3D重建方法，对极端运动模糊具有鲁棒性，可在低光照和不准确位姿条件下实现高保真场景重建，扩展了3D高斯场景表示的实用性。该方法利用RGB-D输入和运动模糊鲁棒的优化，直接学习高斯溅射参数。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.18078v1",
+      "source": "arxiv",
+      "title": "VGOcc: Learning Visual-Geometric Gaussians for Vision-Centric 3D Driving Occupancy Prediction",
+      "abstract": "Vision-only occupancy prediction requires recovering a semantic 3D occupancy field from calibrated surround-view images, where each view provides observations with ambiguous depth along camera rays. Existing methods have progressed from dense structured representations to sparse Gaussian primitives, improving the efficiency of 3D scene representation. However, Gaussian learning still relies primarily on image domain features, which provide limited explicit geometric information for volumetric reasoning. Our key observation is that effective Gaussian occupancy modeling requires not only sparse primitives, but also richer geometric and semantic learning cues. In this paper, we propose VGOcc, which learns visual and geometric cues from foundation models for Gaussian modeling. VGOcc incorporates these cues into primitive initialization and refinement, yielding a representation termed Visual-Geometric Gaussians tailored to semantic occupancy prediction. Specifically, we propose Visual-Geometric Gaussian Birth to form spatially balanced Gaussian centers from ray depth hypotheses, while visual semantic features initialize primitive attributes. Next, we design Pose-Aware Feature Learning to combine foundation tokens with camera embeddings and calibrated ray information. Features from neighboring views are then aggregated at projected 3D locations for each Gaussian refinement stage. Finally, Gaussian decoder refines birth Gaussians with pose-aware features and renders them into semantic occupancy. Experiments on nuScenes demonstrate that VGOcc achieves state-of-the-art performance in vision-only 3D occupancy prediction. Codes will be available at https://github.com/JHLin42in/VGOcc.",
+      "authors": [
+        "Junhong Lin",
+        "Xianda Guo",
+        "Kangli Wang",
+        "Yuqi Ye",
+        "Xiaoyu Liang",
+        "Yanlun Peng",
+        "Wei Gao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-20T15:46:30+00:00",
+      "link": "https://arxiv.org/pdf/2607.18078v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "occupancy prediction as world model for driving scenes",
+      "llm_evidence_cn": "用于驾驶场景的占用预测作为世界模型",
+      "llm_evidence": "用于驾驶场景的占用预测作为世界模型",
+      "canonical_evidence": "用于驾驶场景的占用预测作为世界模型",
+      "llm_tldr_en": "VGOcc learns visual and geometric Gaussian primitives for vision-only 3D occupancy prediction, enhancing geometric cues for volumetric reasoning.",
+      "llm_tldr_cn": "VGOcc学习视觉和几何高斯原语实现纯视觉3D占用预测，通过引入更丰富的几何和语义线索提升体积推理能力，为自动驾驶世界模型提供可靠的场景表示。联合学习视觉特征和几何线索来优化高斯原语。",
+      "llm_tldr": "VGOcc学习视觉和几何高斯原语实现纯视觉3D占用预测，通过引入更丰富的几何和语义线索提升体积推理能力，为自动驾驶世界模型提供可靠的场景表示。联合学习视觉特征和几何线索来优化高斯原语。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.17803v1",
+      "source": "arxiv",
+      "title": "FF-ProCams: Feed-Forward Gaussian Splatting for Projector-Camera System",
+      "abstract": "Projector-camera (ProCams) systems achieve active scene perception and controllable appearance manipulation via structured illumination, serving as a core infrastructure for spatial augmented reality, projection mapping, and surface reflectance acquisition. Existing inverse-rendering methods for ProCams deliver high-fidelity results but rely on time-consuming per-scene optimization, while mainstream feed-forward 3D reconstruction models produce baked appearance that cannot adapt to spatially varying projector illumination.   To resolve this accuracy-efficiency trade-off, we propose FF-ProCams, a Feed-Forward 3D Gaussian inverse-rendering framework for ProCams. A hybrid Mamba2-Transformer encoder aggregates cross-view geometric and photometric cues from sparse multi-view observations, and lightweight heads predict a relightable Gaussian representation in a single forward pass. We further design a projector-aware differentiable renderer to synthesize camera observations under arbitrary active illumination and ProCams poses. To enable feed-forward training, we construct a large-scale synthetic ProCams dataset covering diverse object geometries and surface materials. Experiments show FF-ProCams achieves high-fidelity projector-aware rendering, generalizes to unseen patterns, and supports novel projector-camera poses. Using only 8 input views, it outperforms optimization-based baselines with 297 views while reducing test-time reconstruction to 0.13 seconds (a three-to-five-order-of-magnitude speedup). The code and data are available at https://github.com/CPREgroup/FF-ProCams/.",
+      "authors": [
+        "Ziyao Wang",
+        "Yuqi Li",
+        "Wenxing Zheng",
+        "Jiaying Chen",
+        "Chong Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-20T10:42:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.17803v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "feed-forward Gaussian splatting for projector-camera scene reconstruction",
+      "llm_evidence_cn": "前馈高斯泼溅用于投影仪-相机场景重建",
+      "llm_evidence": "前馈高斯泼溅用于投影仪-相机场景重建",
+      "canonical_evidence": "前馈高斯泼溅用于投影仪-相机场景重建",
+      "llm_tldr_en": "Proposes FF-ProCams, a feed-forward 3D Gaussian inverse-rendering framework for projector-camera systems, enabling real-time scene reconstruction and appearance manipulation.",
+      "llm_tldr_cn": "该文针对投影仪-相机系统高保真重建与效率的矛盾，提出前馈3D高斯逆渲染框架FF-ProCams。采用混合Mamba2-Transformer编码器聚合跨视图几何与光度线索，无需逐场景优化即可重建可重新照明的3D场景。实验表明，该方法在精度和速度上均优于现有方法，适用于空间增强现实和投影映射。",
+      "llm_tldr": "该文针对投影仪-相机系统高保真重建与效率的矛盾，提出前馈3D高斯逆渲染框架FF-ProCams。采用混合Mamba2-Transformer编码器聚合跨视图几何与光度线索，无需逐场景优化即可重建可重新照明的3D场景。实验表明，该方法在精度和速度上均优于现有方法，适用于空间增强现实和投影映射。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
