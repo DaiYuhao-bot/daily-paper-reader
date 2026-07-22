@@ -6,58 +6,63 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-21
-- 运行时间：2026-07-21 21:17:56 UTC
+- 最新运行日期：2026-07-22
+- 运行时间：2026-07-22 21:16:10 UTC
 - 运行状态：成功
-- 本次总论文数：12
-- 精读区：5
+- 本次总论文数：13
+- 精读区：6
 - 速读区：7
 
 ### 今日简报（AI）
-今日精选12篇论文，精读两篇高分3D生成与重建工作。  
-最值得关注的是无需微调的3D场景资产生成（Scene-SAM3D）和物理感知的室内环境层级生成（Text2Villa），均获9.0高分。  
-建议优先了解Scene-SAM3D的多视图生成能力，或关注无需训练的3D点云分割新基准。
-- 详情：[/202607/21/README](/202607/21/README)
+今日精读10分与9分世界模型两大突破：可交互速度生成渲染器与动作-世界效应解耦；速读聚焦视频物理参数控制与4D实例几何动画。
+
+最值得深读的是《Generative World Renderer》——首个以游戏速度生成可交互世界的渲染框架，以及《DWM》——将世界效果从动作中分离的潜在世界模型。
+
+建议先攻精读两篇理解世界模型前沿，再辅以速读中《Learning Explicit Physical Parameter Control》掌握视频物理控制方法。
+- 详情：[/202607/22/README](/202607/22/README)
 
 ### 精读区论文标签
-1. [Scene-SAM3D: Multi-View Scene Asset Generation Without Fine-Tuning](/202607/21/2607.16805v1-scene-sam3d-multi-view-scene-asset-generation-without-fine-tuning)  
+1. [Generative World Renderer at the Speed of Play](/202607/22/2607.18703v1-generative-world-renderer-at-the-speed-of-play)  
+   标签：评分：10.0/10、query:world-model
+   evidence：基于物理状态的生成式世界渲染器
+2. [DWM: Separating World Effects from Actions in Latent World Models](/202607/22/2607.18715v1-dwm-separating-world-effects-from-actions-in-latent-world-models)  
    标签：评分：9.0/10、query:world-model
-   evidence：无需微调的多视角3D场景资产生成
-2. [Text2Villa: Hierarchical Generation of 3D Indoor Environments with Physics-Aware Analysis-by-Synthesis](/202607/21/2607.17145v1-text2villa-hierarchical-generation-of-3d-indoor-environments-with-physics-aware-analysis-by-synthesis)  
+   evidence：在潜在世界模型中分离世界效果与动作，用于基于模型的控制
+3. [Latent Riemannian Flow Matching for Geometry-Grounded 3D Foundation Models](/202607/22/2607.19120v1-latent-riemannian-flow-matching-for-geometry-grounded-3d-foundation-models)  
    标签：评分：9.0/10、query:world-model
-   evidence：从文本层次化生成3D室内环境
-3. [GeoWorldAD: Geometry World Action Model for Autonomous Driving](/202607/21/2607.17521v1-geoworldad-geometry-world-action-model-for-autonomous-driving)  
-   标签：评分：9.0/10、query:world-model
-   evidence：用于自动驾驶的几何世界动作模型与空间推理
-4. [VIDAR: Visual-Inertial Dense Alignment and Reconstruction via a Geometric Foundation Model](/202607/21/2607.17171v1-vidar-visual-inertial-dense-alignment-and-reconstruction-via-a-geometric-foundation-model)  
+   evidence：在VGGT潜空间中进行流匹配实现3D场景生成
+4. [TopoGS: Planar Reconstruction via Topology-aware 3D Gaussian Splatting](/202607/22/2607.16838v1-topogs-planar-reconstruction-via-topology-aware-3d-gaussian-splatting)  
    标签：评分：8.0/10、query:world-model
-   evidence：视觉惯性密集重建技术，支持基于世界模型的3D重建
-5. [Plenoptic Condensation: A Novel Approach to Generalized Scene Reconstruction](/202607/21/2607.18151v1-plenoptic-condensation-a-novel-approach-to-generalized-scene-reconstruction)  
+   evidence：基于拓扑感知的三维高斯泼溅平面重建
+5. [Seeing Before Generating: Object Perception Enhances Single-View 3D Reconstruction](/202607/22/2607.18630v1-seeing-before-generating-object-perception-enhances-single-view-3d-reconstruction)  
    标签：评分：8.0/10、query:world-model
-   evidence：通用场景重建，具有空间可变表示能力，支持场景理解
+   evidence：单视图三维重建，与三维场景生成直接相关
+6. [ZeroSplat: Generalized Referring Segmentation in 3D Gaussian Splatting](/202607/22/2607.18801v1-zerosplat-generalized-referring-segmentation-in-3d-gaussian-splatting)  
+   标签：评分：8.0/10、query:world-model
+   evidence：在3D高斯溅射中进行广义指代分割，实现语言引导的场景理解
 
 ### 速读区论文标签
-1. [TCAM-Diff: Triplane-Aware Cross-Attention Medical Diffusion Model](/202607/21/2607.13812v1-tcam-diff-triplane-aware-cross-attention-medical-diffusion-model)  
+1. [Learning Explicit Physical Parameter Control and Benchmarking for Video Generation](/202607/22/2607.18924v1-learning-explicit-physical-parameter-control-and-benchmarking-for-video-generation)  
+   标签：评分：8.0/10、query:world-model
+   evidence：学习显式物理参数控制视频生成作为世界模拟
+2. [IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer](/202607/22/2607.19228v1-iggt4d-streaming-4d-instance-grounded-geometry-transformer)  
+   标签：评分：8.0/10、query:world-model
+   evidence：流式4D场景理解与实例关联
+3. [AniGS: Bridging Rendering and Diffusion Prior for 3D Scene Animation](/202607/22/2607.18539v1-anigs-bridging-rendering-and-diffusion-prior-for-3d-scene-animation)  
    标签：评分：7.0/10、query:world-model
-   evidence：使用扩散模型的3D医学图像生成，方法可迁移至场景生成
-2. [Training-Free Open-Vocabulary 3D Point-Cloud Segmentation on the Generalized Few-Shot Benchmark](/202607/21/2607.15331v1-training-free-open-vocabulary-3d-point-cloud-segmentation-on-the-generalized-few-shot-benchmark)  
-   标签：评分：7.0/10、query:world-model
-   evidence：开放词汇三维点云分割，服务于场景理解
-3. [Splat-based 3D Scene Reconstruction with Extreme Motion-blur](/202607/21/2607.16926v1-splat-based-3d-scene-reconstruction-with-extreme-motion-blur)  
-   标签：评分：7.0/10、query:world-model
-   evidence：使用高斯溅射处理极端运动模糊进行3D场景重建
-4. [FF-ProCams: Feed-Forward Gaussian Splatting for Projector-Camera System](/202607/21/2607.17803v1-ff-procams-feed-forward-gaussian-splatting-for-projector-camera-system)  
-   标签：评分：7.0/10、query:world-model
-   evidence：前馈高斯泼溅用于投影仪-相机场景重建
-5. [SaaF: Scene-Specific Ambiguity-Aware 3D Language Fields towards Interactive Real-World Object Retrieval](/202607/21/2607.16309v1-saaf-scene-specific-ambiguity-aware-3d-language-fields-towards-interactive-real-world-object-retrieval)  
+   evidence：使用变形场和扩散先验的3D场景动画
+4. [CaT-GS: Efficient 3DGS Rendering for Large Scale Scenes via Inter-frame Caching and Tile Scheduling](/202607/22/2607.17842v1-cat-gs-efficient-3dgs-rendering-for-large-scale-scenes-via-inter-frame-caching-and-tile-scheduling)  
    标签：评分：6.0/10、query:world-model
-   evidence：场景特定且模糊感知的3D语言场用于交互式目标检索，增强场景理解
-6. [MuViSeg: Multi-View Segment Correspondences from Dense Geometry Priors](/202607/21/2607.17938v1-muviseg-multi-view-segment-correspondences-from-dense-geometry-priors)  
+   evidence：大规模场景的高效三维高斯泼溅渲染
+5. [Fine-Detail Monocular Geometry Estimation with Self-Guided Sparse Volumetric Refinement](/202607/22/2607.17967v1-fine-detail-monocular-geometry-estimation-with-self-guided-sparse-volumetric-refinement)  
    标签：评分：6.0/10、query:world-model
-   evidence：利用密集几何先验的多视图段对应，用于场景理解
-7. [VGOcc: Learning Visual-Geometric Gaussians for Vision-Centric 3D Driving Occupancy Prediction](/202607/21/2607.18078v1-vgocc-learning-visual-geometric-gaussians-for-vision-centric-3d-driving-occupancy-prediction)  
+   evidence：精细细节单目几何估计提升场景理解
+6. [MoGe-3: Fine-Detail Monocular Geometry Estimation with Self-Guided Sparse Volumetric Refinement](/202607/22/2607.17967v2-moge-3-fine-detail-monocular-geometry-estimation-with-self-guided-sparse-volumetric-refinement)  
    标签：评分：6.0/10、query:world-model
-   evidence：用于驾驶场景的占用预测作为世界模型
+   evidence：精细细节单目几何估计用于场景理解
+7. [SynGallery: A Synthetic Gallery of Real Paintings for Instance-Level Artwork Recognition](/202607/22/2607.18907v1-syngallery-a-synthetic-gallery-of-real-paintings-for-instance-level-artwork-recognition)  
+   标签：评分：6.0/10、query:world-model
+   evidence：合成3D画廊场景生成用于艺术品识别
 
 
 <div class="dpr-home-promo-card">
