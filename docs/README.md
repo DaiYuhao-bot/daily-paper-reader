@@ -6,63 +6,50 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-22
-- 运行时间：2026-07-22 21:16:10 UTC
+- 最新运行日期：2026-07-23
+- 运行时间：2026-07-23 21:27:18 UTC
 - 运行状态：成功
-- 本次总论文数：13
-- 精读区：6
+- 本次总论文数：10
+- 精读区：3
 - 速读区：7
 
 ### 今日简报（AI）
-今日精读10分与9分世界模型两大突破：可交互速度生成渲染器与动作-世界效应解耦；速读聚焦视频物理参数控制与4D实例几何动画。
-
-最值得深读的是《Generative World Renderer》——首个以游戏速度生成可交互世界的渲染框架，以及《DWM》——将世界效果从动作中分离的潜在世界模型。
-
-建议先攻精读两篇理解世界模型前沿，再辅以速读中《Learning Explicit Physical Parameter Control》掌握视频物理控制方法。
-- 详情：[/202607/22/README](/202607/22/README)
+今日精读两篇9.0分论文，聚焦深度正则化世界模型与自适应3D高斯泼溅。 重点关注可迁移表征学习及紧凑型3D高斯泼溅的前沿方向。 建议优先精读这两篇高分论文，了解核心方法创新。
+- 详情：[/202607/23/README](/202607/23/README)
 
 ### 精读区论文标签
-1. [Generative World Renderer at the Speed of Play](/202607/22/2607.18703v1-generative-world-renderer-at-the-speed-of-play)  
-   标签：评分：10.0/10、query:world-model
-   evidence：基于物理状态的生成式世界渲染器
-2. [DWM: Separating World Effects from Actions in Latent World Models](/202607/22/2607.18715v1-dwm-separating-world-effects-from-actions-in-latent-world-models)  
+1. [Depth-Regularized JEPA World Models Learn More Transferable Representations from Real Outdoor Robot Data](/202607/23/2607.16314v1-depth-regularized-jepa-world-models-learn-more-transferable-representations-from-real-outdoor-robot-data)  
    标签：评分：9.0/10、query:world-model
-   evidence：在潜在世界模型中分离世界效果与动作，用于基于模型的控制
-3. [Latent Riemannian Flow Matching for Geometry-Grounded 3D Foundation Models](/202607/22/2607.19120v1-latent-riemannian-flow-matching-for-geometry-grounded-3d-foundation-models)  
+   evidence：深度正则化JEPA世界模型，户外机器人
+2. [ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion](/202607/23/2607.20417v1-atsplat-compact-feed-forward-3d-gaussian-splatting-with-adaptive-token-expansion)  
    标签：评分：9.0/10、query:world-model
-   evidence：在VGGT潜空间中进行流匹配实现3D场景生成
-4. [TopoGS: Planar Reconstruction via Topology-aware 3D Gaussian Splatting](/202607/22/2607.16838v1-topogs-planar-reconstruction-via-topology-aware-3d-gaussian-splatting)  
+   evidence：前馈式三维场景生成，通过自适应token扩展
+3. [Extending a Large View Synthesis Model for Multi-view Panoptic Segmentation](/202607/23/2607.19765v1-extending-a-large-view-synthesis-model-for-multi-view-panoptic-segmentation)  
    标签：评分：8.0/10、query:world-model
-   evidence：基于拓扑感知的三维高斯泼溅平面重建
-5. [Seeing Before Generating: Object Perception Enhances Single-View 3D Reconstruction](/202607/22/2607.18630v1-seeing-before-generating-object-perception-enhances-single-view-3d-reconstruction)  
-   标签：评分：8.0/10、query:world-model
-   evidence：单视图三维重建，与三维场景生成直接相关
-6. [ZeroSplat: Generalized Referring Segmentation in 3D Gaussian Splatting](/202607/22/2607.18801v1-zerosplat-generalized-referring-segmentation-in-3d-gaussian-splatting)  
-   标签：评分：8.0/10、query:world-model
-   evidence：在3D高斯溅射中进行广义指代分割，实现语言引导的场景理解
+   evidence：将视图合成扩展至全景分割，用于三维场景理解
 
 ### 速读区论文标签
-1. [Learning Explicit Physical Parameter Control and Benchmarking for Video Generation](/202607/22/2607.18924v1-learning-explicit-physical-parameter-control-and-benchmarking-for-video-generation)  
-   标签：评分：8.0/10、query:world-model
-   evidence：学习显式物理参数控制视频生成作为世界模拟
-2. [IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer](/202607/22/2607.19228v1-iggt4d-streaming-4d-instance-grounded-geometry-transformer)  
-   标签：评分：8.0/10、query:world-model
-   evidence：流式4D场景理解与实例关联
-3. [AniGS: Bridging Rendering and Diffusion Prior for 3D Scene Animation](/202607/22/2607.18539v1-anigs-bridging-rendering-and-diffusion-prior-for-3d-scene-animation)  
+1. [Robust Multimodal Dynamic Object Segmentation](/202607/23/2607.18153v1-robust-multimodal-dynamic-object-segmentation)  
    标签：评分：7.0/10、query:world-model
-   evidence：使用变形场和扩散先验的3D场景动画
-4. [CaT-GS: Efficient 3DGS Rendering for Large Scale Scenes via Inter-frame Caching and Tile Scheduling](/202607/22/2607.17842v1-cat-gs-efficient-3dgs-rendering-for-large-scale-scenes-via-inter-frame-caching-and-tile-scheduling)  
+   evidence：动态物体分割用于静态场景重建，属于场景理解
+2. [Look Before You Edit: Attention-Guided Camera Placement and Multi-View Alignment for 3D Gaussian Splatting Editing](/202607/23/2607.19777v1-look-before-you-edit-attention-guided-camera-placement-and-multi-view-alignment-for-3d-gaussian-splatting-editing)  
+   标签：评分：7.0/10、query:world-model
+   evidence：基于文本的三维高斯场景编辑，属于场景生成
+3. [Odin: Primitive-Level Synchronization for Distributed Point-Based Neural Rendering](/202607/23/2607.19893v1-odin-primitive-level-synchronization-for-distributed-point-based-neural-rendering)  
+   标签：评分：7.0/10、query:world-model
+   evidence：分布式点基神经渲染，支持世界模型
+4. [STEREOFLOW: Progressive Stereo Matching with StereoDiT and Transition Flow Matching](/202607/23/2607.19986v1-stereoflow-progressive-stereo-matching-with-stereodit-and-transition-flow-matching)  
+   标签：评分：7.0/10、query:world-model
+   evidence：生成式立体匹配框架用于3D重建
+5. [GaussianSeed: Hierarchical Gaussian Seeding for High-Resolution 3D Occupancy Prediction](/202607/23/2607.20071v1-gaussianseed-hierarchical-gaussian-seeding-for-high-resolution-3d-occupancy-prediction)  
+   标签：评分：7.0/10、query:world-model
+   evidence：层次化高斯占用预测用于高分辨率3D场景表示
+6. [SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments](/202607/23/2607.20207v1-seededgrasp-language-guided-grasping-in-complex-scenes-with-multiple-embodiments)  
+   标签：评分：7.0/10、query:world-model
+   evidence：语言引导抓取中的三维空间推理
+7. [SPARE-GS: Structural Parsimony and Resource Efficiency for 3D Gaussian Splatting](/202607/23/2607.16624v1-spare-gs-structural-parsimony-and-resource-efficiency-for-3d-gaussian-splatting)  
    标签：评分：6.0/10、query:world-model
-   evidence：大规模场景的高效三维高斯泼溅渲染
-5. [Fine-Detail Monocular Geometry Estimation with Self-Guided Sparse Volumetric Refinement](/202607/22/2607.17967v1-fine-detail-monocular-geometry-estimation-with-self-guided-sparse-volumetric-refinement)  
-   标签：评分：6.0/10、query:world-model
-   evidence：精细细节单目几何估计提升场景理解
-6. [MoGe-3: Fine-Detail Monocular Geometry Estimation with Self-Guided Sparse Volumetric Refinement](/202607/22/2607.17967v2-moge-3-fine-detail-monocular-geometry-estimation-with-self-guided-sparse-volumetric-refinement)  
-   标签：评分：6.0/10、query:world-model
-   evidence：精细细节单目几何估计用于场景理解
-7. [SynGallery: A Synthetic Gallery of Real Paintings for Instance-Level Artwork Recognition](/202607/22/2607.18907v1-syngallery-a-synthetic-gallery-of-real-paintings-for-instance-level-artwork-recognition)  
-   标签：评分：6.0/10、query:world-model
-   evidence：合成3D画廊场景生成用于艺术品识别
+   evidence：3D高斯泼溅优化，提升效率
 
 
 <div class="dpr-home-promo-card">

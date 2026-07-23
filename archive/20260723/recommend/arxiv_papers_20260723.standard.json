@@ -1,0 +1,415 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-23T21:20:48.285006+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2607.16314v1",
+      "source": "arxiv",
+      "title": "Depth-Regularized JEPA World Models Learn More Transferable Representations from Real Outdoor Robot Data",
+      "abstract": "World models, especially based on JEPA architectures, have been shown to learn robust dynamics of various environments. However, learning from visually complex real-world data remains a challenge, especially in unpredictable outdoor environments. We introduce depth as a geometric prior during training in learning more robust latent dynamics directly from robot video data and handling visual complexity. This combines depth supervision with an isotropy-inducing latent regularizer (SIGReg), maximizing task-agnostic latent diversity while constraining how that diversity is organized, with the combined objective targeting the highest-entropy representation consistent with scene geometry. To satisfy this greater complexity without increasing inference time, we also add training-only overparameterization. Training an 18M-parameter model on video from a real agricultural robot, we evaluate with frozen-representation visual odometry probes, predictor-based surprise detection, and multi-step latent rollout fidelity. Compared to the baseline LeWM, our method lowers visual odometry probe error by 33%, substantially increases surprise-score separation both in-domain and on the out-of-domain TartanGround benchmark, and improves multi-step rollout fidelity under domain shift, with gains that grow with rollout horizon. Notably, we also see improvements in surprise-score separation on physics understanding that is not directly tied to 3D geometry, such as lighting and shadows. These results show that a lightweight training-time geometric prior makes a compact JEPA world model more useful and more transferable on real outdoor data with strong underlying representations, without adding inference overhead. Our work suggests that depth as a physically grounded prior can enhance world model generalization on a variety of tasks.",
+      "authors": [
+        "Usman M. Khan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-07-15T00:58:45+00:00",
+      "link": "https://arxiv.org/pdf/2607.16314v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Depth-regularized JEPA world models for outdoor robots",
+      "llm_evidence_cn": "深度正则化JEPA世界模型，户外机器人",
+      "llm_evidence": "深度正则化JEPA世界模型，户外机器人",
+      "canonical_evidence": "深度正则化JEPA世界模型，户外机器人",
+      "llm_tldr_en": "This work introduces depth regularization and an isotropy-inducing latent regularizer into JEPA world models, enabling more transferable latent representations from real outdoor robot data.",
+      "llm_tldr_cn": "世界模型在复杂户外场景中学习鲁棒动态困难。该工作向JEPA架构引入深度几何先验作为监督，并结合各向同性潜在正则化SIGReg，最大化任务无关潜在多样性同时约束组织方式。在真实户外机器人数据上，学习到的表示在下游任务中具有更强的迁移性，验证了几何先验在简化视觉复杂性中的作用。",
+      "llm_tldr": "世界模型在复杂户外场景中学习鲁棒动态困难。该工作向JEPA架构引入深度几何先验作为监督，并结合各向同性潜在正则化SIGReg，最大化任务无关潜在多样性同时约束组织方式。在真实户外机器人数据上，学习到的表示在下游任务中具有更强的迁移性，验证了几何先验在简化视觉复杂性中的作用。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.20417v1",
+      "source": "arxiv",
+      "title": "ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion",
+      "abstract": "3D Gaussian Splatting (3DGS) achieves high-quality novel-view synthesis by optimizing freely placed primitives in 3D and adaptively densifying them in under-reconstructed regions. However, this scene-adaptive capacity allocation is largely lost in existing feed-forward 3DGS methods, which commonly regress Gaussians at input pixels and lift them along camera rays. Such pixel-aligned formulations make the number and placement of primitives depend on image resolution and input viewpoints rather than scene complexity, resulting in dense and often redundant Gaussian sets. We present ATSplat, a feed-forward 3DGS framework that restores the adaptive allocation capability of 3DGS optimization through Adaptive 3D Tokens. ATSplat first lifts coarse patch-level depth and camera cues into sparse 3D anchor tokens, forming a compact scaffold of the scene. Each token is then regressed into local Gaussians with learnable 3D offsets, decoupling primitive placement from input image grids. An Adaptive Token Expansion module predicts a token-level uncertainty score, supervised by rendering error maps, and selectively expands high-uncertainty tokens through learnable expansion layers. This sparse-to-adaptive formulation enables ATSplat to concentrate primitives in challenging regions while maintaining a compact representation. Experiments on two representative datasets, RealEstate10K and DL3DV, show that ATSplat achieves state-of-the-art rendering quality while reducing the number of Gaussians by more than $5.7\\times$ compared with dense feed-forward 3DGS methods. From 12 input images at $512 \\times 960$ resolution, ATSplat completes reconstruction in less than a second using a single commercial GPU, and renders high-quality novel views at 1136 FPS ($512 \\times 960$) with only 311K Gaussians.",
+      "authors": [
+        "Cho In",
+        "Jeonghwan Cho",
+        "Mijin Yoo",
+        "Gim Hee Lee",
+        "Seon Joo Kim"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-22T17:54:44+00:00",
+      "link": "https://arxiv.org/pdf/2607.20417v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "feed-forward 3D scene generation via adaptive token expansion",
+      "llm_evidence_cn": "前馈式三维场景生成，通过自适应token扩展",
+      "llm_evidence": "前馈式三维场景生成，通过自适应token扩展",
+      "canonical_evidence": "前馈式三维场景生成，通过自适应token扩展",
+      "llm_tldr_en": "ATSplat restores adaptive capacity allocation in feed-forward 3DGS by introducing Adaptive 3D Tokens, enabling compact scene representation from sparse views.",
+      "llm_tldr_cn": "现有前馈3DGS方法丧失了自适应容量分配能力，导致高斯基元冗余。ATSplat通过引入自适应3D Token恢复这一能力，首先提取粗略点云，然后根据场景复杂度动态扩展Token，实现紧凑且高质量的三维场景表示，在保持渲染质量的同时大幅减少基元数量。",
+      "llm_tldr": "现有前馈3DGS方法丧失了自适应容量分配能力，导致高斯基元冗余。ATSplat通过引入自适应3D Token恢复这一能力，首先提取粗略点云，然后根据场景复杂度动态扩展Token，实现紧凑且高质量的三维场景表示，在保持渲染质量的同时大幅减少基元数量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.19765v1",
+      "source": "arxiv",
+      "title": "Extending a Large View Synthesis Model for Multi-view Panoptic Segmentation",
+      "abstract": "Large view synthesis models synthesize novel views through cross-view attention without explicit 3D representations, and recent studies have shown that they learn accurate spatial correspondence from RGB supervision alone. We observe that this correspondence generalizes beyond appearance. When non-photorealistic signals such as binary encoded panoptic labels are passed through the model, they are propagated to novel views with consistent spatial structure. These results indicate that the correspondence learned for RGB view synthesis can also propagate view-independent per-pixel labels. From this observation, we present the first work to extend large view synthesis models beyond appearance rendering to 3D scene understanding. We propose a panoptic segmentation pipeline that reuses a frozen view synthesis model to propagate panoptic labels from input views to novel views, without 3D reconstruction or any segmentation-specific training of the view synthesis model. Given panoptic labels on the input views, we encode them into binary channel representations and pass them through the same model to render target-view segmentation. On ScanNet, our method achieves segmentation quality on par with Gaussian based approaches requiring explicit 3D reconstruction, while outperforming them in novel view synthesis by more than 7 dB. The label propagation also transfers across datasets, surpassing these approaches on Replica without any fine-tuning.",
+      "authors": [
+        "Kwonyoung Ryu",
+        "In-Jae Lee",
+        "Jonghyun Jin",
+        "Hyunjee Lee",
+        "Jongmin Lee",
+        "Jaesik Park"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-22T05:16:30+00:00",
+      "link": "https://arxiv.org/pdf/2607.19765v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "extending view synthesis to panoptic segmentation for 3D scene understanding",
+      "llm_evidence_cn": "将视图合成扩展至全景分割，用于三维场景理解",
+      "llm_evidence": "将视图合成扩展至全景分割，用于三维场景理解",
+      "canonical_evidence": "将视图合成扩展至全景分割，用于三维场景理解",
+      "llm_tldr_en": "This work shows that spatial correspondence learned by view synthesis models can propagate panoptic labels, enabling novel-view segmentation without 3D geometry.",
+      "llm_tldr_cn": "大型视图合成模型学会了无需显式三维表示的空间对应。本文发现该对应可推广到非真实信号，首次将视图合成扩展到全景分割，通过传递标签实现新视图的语义理解，为场景理解开辟新途径。",
+      "llm_tldr": "大型视图合成模型学会了无需显式三维表示的空间对应。本文发现该对应可推广到非真实信号，首次将视图合成扩展到全景分割，通过传递标签实现新视图的语义理解，为场景理解开辟新途径。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.18153v1",
+      "source": "arxiv",
+      "title": "Robust Multimodal Dynamic Object Segmentation",
+      "abstract": "Dynamic object segmentation plays a critical role in many visual applications such as static scene reconstruction from dynamic videos. However, existing optical flow-based methods fail to ensure consistent static/dynamic segmentation along object boundaries, while 3D reconstruction-based approaches are highly sensitive to reconstruction errors. To address these limitations, we present a dynamic object segmentation framework that can generate both precise and complete dynamic masks by integrating multimodal cues including 2D point tracks, 3D reconstruction, and semantic information. We design a network combining Transformer architectures with feature clustering aggregation modules to perform static/dynamic classification of multimodal feature trajectories. It enables the model to adaptively determine which type of feature should dominate based on the characteristics of each scene, while also mitigating the impact of feature degradation. Additionally, we introduce a novel point-query-based SAM post-processing method capable of handling multiple objects within a single mask. Extensive experiments demonstrate that our approach achieves state-of-the-art performance in both dynamic object segmentation and static scene reconstruction tasks.",
+      "authors": [
+        "Zhe Xin",
+        "Hanzhi Chang",
+        "Penghui Huang",
+        "Yinian Mao",
+        "Guoquan Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-20T16:51:48+00:00",
+      "link": "https://arxiv.org/pdf/2607.18153v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "dynamic object segmentation for static scene reconstruction; scene understanding",
+      "llm_evidence_cn": "动态物体分割用于静态场景重建，属于场景理解",
+      "llm_evidence": "动态物体分割用于静态场景重建，属于场景理解",
+      "canonical_evidence": "动态物体分割用于静态场景重建，属于场景理解",
+      "llm_tldr_en": "A multimodal segmentation framework integrates 2D tracks, 3D reconstruction, and semantics to produce precise dynamic masks for static scene recovery.",
+      "llm_tldr_cn": "动态物体分割对静态场景重建至关重要。本文融合2D点轨迹、三维重建和语义线索，设计Transformer与特征聚类聚合网络，生成精确且完整的动态掩膜，克服了光流和重建方法的边界模糊问题，提升场景理解能力。",
+      "llm_tldr": "动态物体分割对静态场景重建至关重要。本文融合2D点轨迹、三维重建和语义线索，设计Transformer与特征聚类聚合网络，生成精确且完整的动态掩膜，克服了光流和重建方法的边界模糊问题，提升场景理解能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.16624v1",
+      "source": "arxiv",
+      "title": "SPARE-GS: Structural Parsimony and Resource Efficiency for 3D Gaussian Splatting",
+      "abstract": "3D Gaussian Splatting (3DGS) achieves high-fidelity novel view synthesis in real-time; however its training efficiency and representation compactness are hindered by excessive primitive proliferation. To address this challenge, we formulate the structural evolution of 3DGS as a global budget-constrained optimization problem and derive an optimality condition, which requires the marginal utility of structural resources to be balanced across spatial regions under a finite primitive budget. Based on this formulation, we propose SPARE-GS, a general plug-and-play framework that dynamically aligns the distribution of 3D Gaussian primitives with regional representational demand. SPARE-GS estimates capacity-normalized regional demand, assigns adaptive target quotas, and uses regional budget deviations to coordinate densification, pruning and adaptive termination toward a more balanced structural allocation. Extensive experiments across standard, accelerated, and structure-enhanced 3DGS pipelines demonstrate that SPARE-GS reduces the Gaussian count and training time by an average of 30.38% and 23.81%, respectively, while improving the average PSNR. Moreover, the resulting compact representations reduce downstream processing time and improve the rate-distortion performance of diverse compression and pruning methods, demonstrating the broad applicability of global structural budget regulation.",
+      "authors": [
+        "Zhang Chen",
+        "Shuai Wan",
+        "Fuzheng Yang",
+        "Jiazhi Xia",
+        "Weiyao Lin",
+        "Junhui Hou"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-18T03:55:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.16624v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Optimization of 3D Gaussian Splatting for efficiency",
+      "llm_evidence_cn": "3D高斯泼溅优化，提升效率",
+      "llm_evidence": "3D高斯泼溅优化，提升效率",
+      "canonical_evidence": "3D高斯泼溅优化，提升效率",
+      "llm_tldr_en": "SPARE-GS is a plug-and-play framework that optimizes 3D Gaussian Splatting by redistributing primitives according to regional demand, improving compactness and training speed.",
+      "llm_tldr_cn": "3D高斯泼溅面临原始体过度增长的问题。SPARE-GS将结构演化建模为预算约束优化，按区域需求自适应分配高斯体，实现效率提升。作为即插即用模块，它可嵌入现有3DGS训练流程，在保持质量的同时大幅减少冗余体素，加速渲染。",
+      "llm_tldr": "3D高斯泼溅面临原始体过度增长的问题。SPARE-GS将结构演化建模为预算约束优化，按区域需求自适应分配高斯体，实现效率提升。作为即插即用模块，它可嵌入现有3DGS训练流程，在保持质量的同时大幅减少冗余体素，加速渲染。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.19777v1",
+      "source": "arxiv",
+      "title": "Look Before You Edit: Attention-Guided Camera Placement and Multi-View Alignment for 3D Gaussian Splatting Editing",
+      "abstract": "Text-driven 3D scene editing with 3D Gaussian Splatting (3DGS) typically applies a 2D diffusion editor to views rendered from fixed training cameras, limiting both the spatial coverage of edits and the user's freedom to target specific objects in complex scenes. We present LB-Edit, a framework that addresses two coupled problems: where to place editing cameras for localized edits, and how to make per-view edits agree with one another so that the 3D scene remains consistent after fine-tuning. First, Attention-Guided Editing Camera Placement (ACP) probes the diffusion model's self- and cross-attention at multiple candidate camera distances to find where attention is well-contained in the region of interest, then places a compact, geometrically diverse editing camera set at that attention-optimal distance. Second, Multi-view Attention Alignment (MAA) steers the editor toward the same edit across views along two axes: it aligns appearance by sharing self-attention features via token-level correspondence, and aligns spatial location by lifting cross-attention maps onto the 3D Gaussians as a shared 3D attention field, suppressing both appearance and spatial drift. Experiments on multi-object and single-object scenes show that our method achieves the highest user preference in instruction fidelity, multi-view consistency, and editing locality, using as few as 5 editing views and reducing latency by up to 7x over existing methods.",
+      "authors": [
+        "Jaeyeon Park",
+        "Taeho Kang",
+        "Youngki Lee"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-22T05:51:10+00:00",
+      "link": "https://arxiv.org/pdf/2607.19777v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "text-driven 3D scene editing with 3D Gaussian Splatting, a form of scene generation",
+      "llm_evidence_cn": "基于文本的三维高斯场景编辑，属于场景生成",
+      "llm_evidence": "基于文本的三维高斯场景编辑，属于场景生成",
+      "canonical_evidence": "基于文本的三维高斯场景编辑，属于场景生成",
+      "llm_tldr_en": "LB-Edit introduces attention-guided camera placement and multi-view alignment for consistent 3D Gaussian Splatting editing, enabling localized edits in complex scenes.",
+      "llm_tldr_cn": "三维高斯泼溅编辑通常受限于固定摄像机视角，导致编辑不一致和空间覆盖不足。LB-Edit通过注意力引导的摄像机放置和跨视角对齐，实现局部文本驱动编辑，且编辑结果在多视图间保持一致，提高编辑灵活性和质量。",
+      "llm_tldr": "三维高斯泼溅编辑通常受限于固定摄像机视角，导致编辑不一致和空间覆盖不足。LB-Edit通过注意力引导的摄像机放置和跨视角对齐，实现局部文本驱动编辑，且编辑结果在多视图间保持一致，提高编辑灵活性和质量。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.19893v1",
+      "source": "arxiv",
+      "title": "Odin: Primitive-Level Synchronization for Distributed Point-Based Neural Rendering",
+      "abstract": "Point-based neural rendering (PBNR) represents 3D scenes as explicit, trainable primitives and underpins high-quality reconstruction and emerging embodied AI and world-model pipelines. Unlike layer-structured neural networks, PBNR has primitive-indexed dependencies: each view reads and updates only a sparse, view-dependent subset of mutable scene state. As large scenes require distributed training and optimized renderers reduce per-view computation, global task- or iteration-level barriers increasingly place synchronization, rather than rendering, on the critical path. We present Odin, a distributed PBNR training system that replaces global barriers with primitive-level synchronization. Its ahead-of-time scheduler uses stable locality and phase order to identify low-conflict overlap windows, while the runtime validates primitive publication before later work observes mutable state. Odin provides a quality-first path that preserves synchronized-training visibility and a throughput-first path that uses overlap and gradient evidence to admit only small, low-impact delayed reads; structural changes and high-impact cases remain synchronized. Across four existing PBNR pipelines and 13 non-city scenes on 8 GPUs, Odin improves throughput by 1.22 times on average and hides 82% of critical-path wait while preserving reconstruction quality. In a MatrixCity mixed-parallel case study scaling to 64 GPUs, Odin improves throughput over Grendel by up to 1.89 times without changing renderer kernels, optimizers, training budgets, or model capacity.",
+      "authors": [
+        "Zhenxiang Ma",
+        "Zeyu He",
+        "Yuanzhen Zhou",
+        "Zhenyu Yang",
+        "Yuchang Zhang",
+        "Miao Tao",
+        "Rong Fu",
+        "Jidong Zhai",
+        "Hengjie Li"
+      ],
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC"
+      ],
+      "published": "2026-07-22T08:27:33+00:00",
+      "link": "https://arxiv.org/pdf/2607.19893v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Distributed point-based neural rendering for world models",
+      "llm_evidence_cn": "分布式点基神经渲染，支持世界模型",
+      "llm_evidence": "分布式点基神经渲染，支持世界模型",
+      "canonical_evidence": "分布式点基神经渲染，支持世界模型",
+      "llm_tldr_en": "Odin is a distributed training system for point-based neural rendering that replaces global barriers with primitive-level synchronization, significantly reducing synchronization overhead for large-scale 3D scenes.",
+      "llm_tldr_cn": "大规模3D场景的点基神经渲染分布式训练受同步瓶颈限制。Odin提出原始体级同步策略，利用预调度器分析空间局部性，每个训练步仅同步被访问的原始体。实验表明该方法在保持收敛质量的同时大幅减少同步时间，使大规模世界模型训练更高效。",
+      "llm_tldr": "大规模3D场景的点基神经渲染分布式训练受同步瓶颈限制。Odin提出原始体级同步策略，利用预调度器分析空间局部性，每个训练步仅同步被访问的原始体。实验表明该方法在保持收敛质量的同时大幅减少同步时间，使大规模世界模型训练更高效。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.19986v1",
+      "source": "arxiv",
+      "title": "STEREOFLOW: Progressive Stereo Matching with StereoDiT and Transition Flow Matching",
+      "abstract": "Stereo matching is a fundamental task in 3D reconstruction. Despite remarkable advances, the prevailing paradigms formulate stereo matching as a deterministic regression problem, collapsing the multimodal distribution modeling into a single-point estimation. This formulation suffers from a regression-to-mean bias, frequently struggling with ambiguous regions. In contrast, we introduce a prior-guided generative framework that integrates deterministic matching regression and generative distribution modeling within a complementary formulation. Built upon this formulation, we introduce StereoFlow through three key components: (i) a two-stage progressive cascade matching network that progressively produces multi-resolution stereo conditions with complementary matching cues; (ii) a pixel diffusion transformer (termed StereoDiT) with a frequency-decoupled architecture for modeling correspondence ambiguity; (iii) a few-step flow matching objective (termed Transition Flow Matching) for efficient optimization. In summary, \\textsc{\\textbf{StereoFlow}} achieves strong geometric consistency and rich fine-grained details in ill-posed, discontinuous regions and under zero-shot generalization. Extensive experiments demonstrate that the proposed StereoFlow establishes multiple state-of-the-art results across benchmarks, including Scene Flow, KITTI, ETH3D, and Middlebury.",
+      "authors": [
+        "Hao Wang",
+        "Haoran Geng",
+        "Xiaotong Yang",
+        "Jing Tang",
+        "Songlin Wei",
+        "Linlong Lang",
+        "Yeying Jin",
+        "Zheng Zhu",
+        "Zhaoxin Fan",
+        "Biao Leng"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-22T10:19:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.19986v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "generative framework for stereo matching in 3D reconstruction",
+      "llm_evidence_cn": "生成式立体匹配框架用于3D重建",
+      "llm_evidence": "生成式立体匹配框架用于3D重建",
+      "canonical_evidence": "生成式立体匹配框架用于3D重建",
+      "llm_tldr_en": "StereoFlow introduces a prior-guided generative framework combining deterministic regression and generative modeling for stereo matching, improving 3D reconstruction ambiguity handling.",
+      "llm_tldr_cn": "针对传统立体匹配中回归到均值导致模糊区域失效的问题，提出StereoFlow，将确定性匹配与生成式分布建模结合，通过两阶段级联匹配网络和流匹配，在多个基准上取得了最先进的3D重建精度，尤其擅长处理遮挡和纹理缺失区域。",
+      "llm_tldr": "针对传统立体匹配中回归到均值导致模糊区域失效的问题，提出StereoFlow，将确定性匹配与生成式分布建模结合，通过两阶段级联匹配网络和流匹配，在多个基准上取得了最先进的3D重建精度，尤其擅长处理遮挡和纹理缺失区域。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.20071v1",
+      "source": "arxiv",
+      "title": "GaussianSeed: Hierarchical Gaussian Seeding for High-Resolution 3D Occupancy Prediction",
+      "abstract": "Vision-centric 3D occupancy prediction provides dense scene representations essential for autonomous driving and robotic navigation, yet existing methods struggle to scale to high voxel resolutions due to prohibitive computational costs. To address this, we introduce GaussianSeed, a progressive multi-scale Gaussian occupancy prediction framework that organizes primitives into a coarse-to-fine hierarchy. Benefiting from this hierarchical design, GaussianSeed effectively circumvents the memory bottlenecks inherent in dense representations, successfully scaling to a $0.1\\text{m}$ spatial resolution while maintaining real-time inference capabilities. To comprehensively evaluate high-resolution geometric perception, we further construct TJScenes, a panoramic six-camera occupancy dataset with highly detailed $0.1\\text{m}$ annotations. Extensive experiments on Occ3D-nuScenes and TJScenes demonstrate that GaussianSeed delivers the lowest latency among all evaluated methods while maintaining highly competitive accuracy, advancing the efficiency-quality frontier of high-resolution 3D occupancy prediction.",
+      "authors": [
+        "Xinzhuo Li",
+        "Xianghui Pan",
+        "Jiayuan Du",
+        "Wei Wei",
+        "Liuyi Wang",
+        "Chengju Liu",
+        "Qijun Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-22T12:18:30+00:00",
+      "link": "https://arxiv.org/pdf/2607.20071v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "hierarchical Gaussian occupancy prediction for high-resolution 3D scene representation",
+      "llm_evidence_cn": "层次化高斯占用预测用于高分辨率3D场景表示",
+      "llm_evidence": "层次化高斯占用预测用于高分辨率3D场景表示",
+      "canonical_evidence": "层次化高斯占用预测用于高分辨率3D场景表示",
+      "llm_tldr_en": "GaussianSeed uses a coarse-to-fine Gaussian hierarchy to predict 3D occupancy at 0.1m resolution in real-time, enabling dense scene understanding.",
+      "llm_tldr_cn": "面向自动驾驶中3D占用预测受限于大计算量的问题，提出GaussianSeed框架，采用从粗到细的多尺度高斯原语层次化结构，避免密集表示的内存瓶颈，实现0.1米空间分辨率的实时占用预测。在TJS数据集上验证了高分辨率几何感知的有效性，为高精场景理解提供新途径。",
+      "llm_tldr": "面向自动驾驶中3D占用预测受限于大计算量的问题，提出GaussianSeed框架，采用从粗到细的多尺度高斯原语层次化结构，避免密集表示的内存瓶颈，实现0.1米空间分辨率的实时占用预测。在TJS数据集上验证了高分辨率几何感知的有效性，为高精场景理解提供新途径。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.20207v1",
+      "source": "arxiv",
+      "title": "SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments",
+      "abstract": "Practical robotic grasping in complex scenes requires both 3D spatial reasoning and alignment with task-specific requirements. Vision-language models (VLMs) offer a natural way to specify these requirements using language, but existing approaches either use a VLM to predict the grasp directly with limited spatial awareness, or train the VLM together with the grasping model, which requires significantly more data and compute. These limitations impede performance and have prevented scaling to multiple embodiments in complex scenes. We address this by proposing SeededGrasp, a novel data-efficient framework that enables a VLM to predict a seed point to be used as conditioning for a subsequent lightweight grasp-generation model. Our architecture decouples high-level semantic reasoning from low-level geometric execution, enabling multi-embodiment support while bypassing the need for expensive end-to-end training. To enable training such models, we release the first multi-embodiment tabletop grasping dataset comprising over 2.5M grasps in cluttered scenes. Experimental results demonstrate that our approach outperforms existing baselines, achieving 72% success in simulation and 78% in real-world grasping experiments. See our project site for data and code: https://uoft-isl.github.io/seeded-grasp/",
+      "authors": [
+        "Yang Xu",
+        "Gurpreet Singh Mukker",
+        "Raymond Wang",
+        "Jasper Gerigk",
+        "Maria Attarian",
+        "Igor Gilitschenski"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-22T14:27:45+00:00",
+      "link": "https://arxiv.org/pdf/2607.20207v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D spatial reasoning for language-guided grasping",
+      "llm_evidence_cn": "语言引导抓取中的三维空间推理",
+      "llm_evidence": "语言引导抓取中的三维空间推理",
+      "canonical_evidence": "语言引导抓取中的三维空间推理",
+      "llm_tldr_en": "Proposes SeededGrasp, a framework that uses a VLM to predict a seed point from language, then a lightweight grasp generator conditioned on the seed, enabling efficient 3D spatial reasoning for grasping in complex scenes.",
+      "llm_tldr_cn": "现有语言引导抓取方法要么空间感知有限，要么需要大量数据训练。本文提出SeededGrasp，让VLM预测种子点，再以种子点为条件由轻量抓取模型生成抓取姿态。该方法数据高效，支持多种机械臂，在复杂场景中实现高精度空间推理。",
+      "llm_tldr": "现有语言引导抓取方法要么空间感知有限，要么需要大量数据训练。本文提出SeededGrasp，让VLM预测种子点，再以种子点为条件由轻量抓取模型生成抓取姿态。该方法数据高效，支持多种机械臂，在复杂场景中实现高精度空间推理。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
