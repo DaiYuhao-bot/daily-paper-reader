@@ -1,0 +1,94 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-25T20:42:00.752984+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.21592v1",
+      "source": "arxiv",
+      "title": "Unified Video Dense Prediction from Disjoint Data",
+      "abstract": "Scene understanding requires simultaneous prediction about geometry, appearance, and semantics. However, existing task-specific annotations are fragmented across incompatible, domain-specific datasets. Current unified systems circumvent this by restricting training to fully co-annotated data, or by incurring the large computational cost of pseudo-labeling. To mitigate this, we introduce UniD, a unified video model that jointly predicts eight dense scene properties-depth, surface normals, semantic segmentation, boundaries, human parts, albedo, shading, and materials-all learned from disjoint, domain-specific datasets. We propose a simple yet effective distillation step in which per-task experts supervise a unified backbone through lightweight task projectors, eliminating the need for annotation overlap or pseudo-labeling. Our key insight is that the strong visual priors of a pretrained diffusion model are sufficient to bridge the domain gaps introduced by disjoint training sources, enabling robust generalization to scene-task combinations never seen during training. UniD achieves competitive performance against per-task specialists and multi-task baselines, with strong generalization to out-of-distribution scenarios and enhanced temporal and cross-task consistency. Code and video results are available at https://unid-video.github.io/.",
+      "authors": [
+        "Yihong Sun",
+        "Seoung Wug Oh",
+        "Jiahui Huang",
+        "Bharath Hariharan",
+        "Joon-Young Lee"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-23T17:59:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.21592v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "unified scene understanding predicting geometry, appearance, semantics",
+      "llm_evidence_cn": "统一场景理解：同时预测几何、外观和语义",
+      "llm_evidence": "统一场景理解：同时预测几何、外观和语义",
+      "canonical_evidence": "统一场景理解：同时预测几何、外观和语义",
+      "llm_tldr_en": "UniD jointly predicts eight dense scene properties from video, learning from disjoint datasets via task-specific experts and lightweight projectors.",
+      "llm_tldr_cn": "场景理解通常需要多种标注数据，但现有标注集分散且不兼容。UniD通过任务专家蒸馏和轻量投影器，使统一骨干网络能同时学习深度、法线、语义分割、反照率等八个稠密属性，无需全标注数据。在多个基准上展示了高效的联合预测能力，为综合场景理解提供了新范式。",
+      "llm_tldr": "场景理解通常需要多种标注数据，但现有标注集分散且不兼容。UniD通过任务专家蒸馏和轻量投影器，使统一骨干网络能同时学习深度、法线、语义分割、反照率等八个稠密属性，无需全标注数据。在多个基准上展示了高效的联合预测能力，为综合场景理解提供了新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.20789v1",
+      "source": "arxiv",
+      "title": "3D-GIMP: When 3D Gaussian Inpainting Meets PatchMatch",
+      "abstract": "Recent advances in 3D scene editing have leveraged iterative diffusion models to update input views. However, this process is computationally expensive and struggles to produce sharp details. Meanwhile, ``hallucination drift'' frequently introduces multi-view inconsistencies, leading to structural artifacts when rendering novel viewpoints. To address this problem, we present 3D-GIMP (3D Gaussian Inpainting Meets Patch Matching), a novel hybrid paradigm designed for high-fidelity object removal in 3D Gaussian Splatting. Instead of diffusing every view, 3D-GIMP performs a single generative inpainting on a key reference view, which serves as an appearance prior. We then introduce a 3D-aware PatchMatch algorithm to propagate these reference textures across all remaining views via correspondence matching, effectively bypassing the stochastic nature of frame-by-frame diffusion. By prioritizing reconstructive consistency over iterative generation, 3D-GIMP maintains high-frequency details across arbitrary resolutions while ensuring a mathematically consistent 3D reconstruction. Our experiments demonstrate that 3D-GIMP not only achieves competitive inpainting quality as previous methods using diffusion in multiple views, but also outperforms these methods in rendering speed and view consistency.",
+      "authors": [
+        "Xuening Tian",
+        "Dieter Schmalstieg",
+        "Shohei Mori"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-22T23:27:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.20789v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D inpainting and editing in Gaussian splatting for scene generation",
+      "llm_evidence_cn": "3D高斯泼溅中的修复和编辑用于场景生成",
+      "llm_evidence": "3D高斯泼溅中的修复和编辑用于场景生成",
+      "canonical_evidence": "3D高斯泼溅中的修复和编辑用于场景生成",
+      "llm_tldr_en": "3D-GIMP combines generative inpainting on a reference view with 3D-aware PatchMatch for high-fidelity object removal in 3D Gaussian Splatting.",
+      "llm_tldr_cn": "现有3D场景编辑依赖昂贵的多视图扩散，容易产生不一致。3D-GIMP仅在关键视图进行一次生成修复，然后通过3D感知的PatchMatch算法将纹理传播到其他视图，大幅减少计算量并保持多视图一致性。该方法在对象移除任务上取得了高质量结果，对3D场景生成和编辑有直接意义。",
+      "llm_tldr": "现有3D场景编辑依赖昂贵的多视图扩散，容易产生不一致。3D-GIMP仅在关键视图进行一次生成修复，然后通过3D感知的PatchMatch算法将纹理传播到其他视图，大幅减少计算量并保持多视图一致性。该方法在对象移除任务上取得了高质量结果，对3D场景生成和编辑有直接意义。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

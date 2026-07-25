@@ -1,6 +1,11 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-07-25 <!--dpr-date:20260725-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/25/2607.21592v1-unified-video-dense-prediction-from-disjoint-data" data-sidebar-item="{&quot;title&quot;: &quot;Unified Video Dense Prediction from Disjoint Data&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.21592v1-unified-video-dense-prediction-from-disjoint-data&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;world-model&quot;}], &quot;evidence&quot;: &quot;统一场景理解：同时预测几何、外观和语义&quot;}">Unified Video Dense Prediction from Disjoint Data</a>
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/25/2607.20789v1-3d-gimp-when-3d-gaussian-inpainting-meets-patchmatch" data-sidebar-item="{&quot;title&quot;: &quot;3D-GIMP: When 3D Gaussian Inpainting Meets PatchMatch&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.20789v1-3d-gimp-when-3d-gaussian-inpainting-meets-patchmatch&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;world-model&quot;}], &quot;evidence&quot;: &quot;3D高斯泼溅中的修复和编辑用于场景生成&quot;}">3D-GIMP: When 3D Gaussian Inpainting Meets PatchMatch</a>
   * 2026-07-24 <!--dpr-date:20260724-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/24/2607.17521v2-geoworldad-geometry-world-action-model-for-autonomous-driving" data-sidebar-item="{&quot;title&quot;: &quot;GeoWorldAD: Geometry World Action Model for Autonomous Driving&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.17521v2-geoworldad-geometry-world-action-model-for-autonomous-driving&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;world-model&quot;}], &quot;evidence&quot;: &quot;用于自动驾驶的几何世界动作模型，明确涉及世界模型&quot;}">GeoWorldAD: Geometry World Action Model for Autonomous Driving</a>

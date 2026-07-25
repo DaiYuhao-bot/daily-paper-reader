@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-25",
+  "date": "2026-07-25",
+  "generated_at": "2026-07-25T20:44:34",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/25/2607.21592v1-unified-video-dense-prediction-from-disjoint-data",
+      "section": "deep",
+      "title_en": "Unified Video Dense Prediction from Disjoint Data",
+      "authors": "Yihong Sun, Seoung Wug Oh, Jiahui Huang, Bharath Hariharan, Joon-Young Lee",
+      "date": "2026-07-23",
+      "pdf": "https://arxiv.org/pdf/2607.21592v1",
+      "score": "8.0",
+      "evidence": "统一场景理解：同时预测几何、外观和语义",
+      "tldr": "现有视频密集预测任务依赖领域特定标注，数据碎片化且缺乏统一模型。UniD提出基于预训练扩散模型的统一骨干，通过蒸馏策略让八个任务专家监督轻量任务投影器，无需数据重叠或伪标签。该方法在深度、法线、语义分割等八个任务上达到竞争性能，并能泛化到未见过的场景-任务组合，同时增强时间与跨任务一致性。贡献在于利用扩散模型视觉先验弥合域差距，实现高效统一的视频密集预测。",
+      "tags": "query:world-model",
+      "abstract_en": "Scene understanding requires simultaneous prediction about geometry, appearance, and semantics. However, existing task-specific annotations are fragmented across incompatible, domain-specific datasets. Current unified systems circumvent this by restricting training to fully co-annotated data, or by incurring the large computational cost of pseudo-labeling. To mitigate this, we introduce UniD, a unified video model that jointly predicts eight dense scene properties-depth, surface normals, semantic segmentation, boundaries, human parts, albedo, shading, and materials-all learned from disjoint, domain-specific datasets. We propose a simple yet effective distillation step in which per-task experts supervise a unified backbone through lightweight task projectors, eliminating the need for annotation overlap or pseudo-labeling. Our key insight is that the strong visual priors of a pretrained diffusion model are sufficient to bridge the domain gaps introduced by disjoint training sources, enabling robust generalization to scene-task combinations never seen during training. UniD achieves competitive performance against per-task specialists and multi-task baselines, with strong generalization to out-of-distribution scenarios and enhanced temporal and cross-task consistency. Code and video results are available at https://unid-video.github.io/.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/25/2607.20789v1-3d-gimp-when-3d-gaussian-inpainting-meets-patchmatch",
+      "section": "quick",
+      "title_en": "3D-GIMP: When 3D Gaussian Inpainting Meets PatchMatch",
+      "authors": "Xuening Tian, Dieter Schmalstieg, Shohei Mori",
+      "date": "2026-07-22",
+      "pdf": "https://arxiv.org/pdf/2607.20789v1",
+      "score": "7.0",
+      "evidence": "3D高斯泼溅中的修复和编辑用于场景生成",
+      "tldr": "现有基于扩散的3D场景编辑计算昂贵、细节模糊且多视图不一致。3D-GIMP仅在关键视图进行一次生成式修补，利用3D PatchMatch算法通过对应匹配将纹理传播到所有视图，避免逐帧扩散的随机性。该方法在保持高频细节的同时显著提升渲染速度，视图一致性优于多视图扩散方法。其贡献在于提出混合范式，以重建一致性替代迭代生成，实现高保真3D物体移除。",
+      "tags": "query:world-model",
+      "abstract_en": "Recent advances in 3D scene editing have leveraged iterative diffusion models to update input views. However, this process is computationally expensive and struggles to produce sharp details. Meanwhile, ``hallucination drift'' frequently introduces multi-view inconsistencies, leading to structural artifacts when rendering novel viewpoints. To address this problem, we present 3D-GIMP (3D Gaussian Inpainting Meets Patch Matching), a novel hybrid paradigm designed for high-fidelity object removal in 3D Gaussian Splatting. Instead of diffusing every view, 3D-GIMP performs a single generative inpainting on a key reference view, which serves as an appearance prior. We then introduce a 3D-aware PatchMatch algorithm to propagate these reference textures across all remaining views via correspondence matching, effectively bypassing the stochastic nature of frame-by-frame diffusion. By prioritizing reconstructive consistency over iterative generation, 3D-GIMP maintains high-frequency details across arbitrary resolutions while ensuring a mathematically consistent 3D reconstruction. Our experiments demonstrate that 3D-GIMP not only achieves competitive inpainting quality as previous methods using diffusion in multiple views, but also outperforms these methods in rendering speed and view consistency.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
