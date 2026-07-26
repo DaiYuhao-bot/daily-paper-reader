@@ -6,26 +6,38 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-25
-- 运行时间：2026-07-25 20:44:27 UTC
+- 最新运行日期：2026-07-26
+- 运行时间：2026-07-26 20:17:01 UTC
 - 运行状态：成功
-- 本次总论文数：2
-- 精读区：1
-- 速读区：1
+- 本次总论文数：6
+- 精读区：2
+- 速读区：4
 
 ### 今日简报（AI）
-今日处理2篇论文，精读《Unified Video Dense Prediction from Disjoint Data》（8分）与速读《3D-GIMP: When 3D Gaussian Inpainting Meets PatchMatch》（7分）。最值得关注的是视频密集预测的统一框架及3D高斯修补与PatchMatch的结合方法。建议深入理解统一模型如何整合异构数据，并关注3D修补技术在实际场景中的效率优化。
-- 详情：[/202607/25/README](/202607/25/README)
+今日精读2篇、速读4篇，重点关注显式世界模型与混合世界模型两大方向。最值得看的是DaoQL多模态存储验证及HyWorldVLA自动驾驶模型，均获9.0高分。建议普通读者优先精读这两篇，深入理解世界模型在多模态推理与自动驾驶中的前沿应用。
+- 详情：[/202607/26/README](/202607/26/README)
 
 ### 精读区论文标签
-1. [Unified Video Dense Prediction from Disjoint Data](/202607/25/2607.21592v1-unified-video-dense-prediction-from-disjoint-data)  
-   标签：评分：8.0/10、query:world-model
-   evidence：统一场景理解：同时预测几何、外观和语义
+1. [An Explicit World Model Based on Data-First Ontology: DaoQL Multimodal Storage Validation and Counterfactual Reasoning Evaluation](/202607/26/2607.17269v1-an-explicit-world-model-based-on-data-first-ontology-daoql-multimodal-storage-validation-and-counterfactual-reasoning-evaluation)  
+   标签：评分：9.0/10、query:world-model
+   evidence：基于数据优先本体的显式世界模型，结合多模态存储进行推理
+2. [HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving](/202607/26/2607.20988v1-hyworldvla-a-vision-language-action-model-with-hybrid-world-modeling-for-autonomous-driving)  
+   标签：评分：9.0/10、query:world-model
+   evidence：混合世界建模统一像素级和隐式表示用于自动驾驶
 
 ### 速读区论文标签
-1. [3D-GIMP: When 3D Gaussian Inpainting Meets PatchMatch](/202607/25/2607.20789v1-3d-gimp-when-3d-gaussian-inpainting-meets-patchmatch)  
+1. [GEAR: Reconstruction of Classical Paintings via Geometry Grounding and Appearance Restitution](/202607/26/2607.17519v1-gear-reconstruction-of-classical-paintings-via-geometry-grounding-and-appearance-restitution)  
    标签：评分：7.0/10、query:world-model
-   evidence：3D高斯泼溅中的修复和编辑用于场景生成
+   evidence：从单幅绘画进行三维场景重建
+2. [CDIS: Cross-Dimensional Class-Agnostic 3D Instance Segmentation via 2D Mask Tracking and 3D-2D Projection Merging](/202607/26/2607.17778v1-cdis-cross-dimensional-class-agnostic-3d-instance-segmentation-via-2d-mask-tracking-and-3d-2d-projection-merging)  
+   标签：评分：6.0/10、query:world-model
+   evidence：通过2D跟踪和3D-2D投影融合实现跨维度的类无关3D实例分割
+3. [Robostral Navigate](/202607/26/2607.20785v1-robostral-navigate)  
+   标签：评分：6.0/10、query:world-model
+   evidence：视觉语言导航模型，从单目RGB预测航点，作为世界模型
+4. [Texture++: Elevating 3D Asset Texture Resolution with a Region-Aware Diffusion Model](/202607/26/2607.21504v1-texture-elevating-3d-asset-texture-resolution-with-a-region-aware-diffusion-model)  
+   标签：评分：6.0/10、query:world-model
+   evidence：三维场景资产的纹理超分辨率
 
 
 <div class="dpr-home-promo-card">

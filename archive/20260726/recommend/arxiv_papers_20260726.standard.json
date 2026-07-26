@@ -1,0 +1,263 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-26T20:13:31.867557+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.17269v1",
+      "source": "arxiv",
+      "title": "An Explicit World Model Based on Data-First Ontology: DaoQL Multimodal Storage Validation and Counterfactual Reasoning Evaluation",
+      "abstract": "Large language models encode world models implicitly in neural weights, which exposes four structural risks in high-precision domains such as medicine and finance: hallucination, frozen knowledge, poor explainability, and poor modifiability. This paper proposes data-first ontology: LLMs are treated as reasoning and language engines, while deterministic knowledge is moved into an explicit multimodal database, DaoQL. We formalize an explicit world model and show that, under rule independence, deterministic evaluation, and fixed conflict resolution, explicit models provide a sufficient condition for composable counterfactual decomposability; implicit models lack atomic read/delta semantics and therefore provide no comparable architectural guarantee. The implemented system focuses on DaoQL's verified storage layer and explicit Eval path, integrating graph, column, vector, and full-text engines within one process. KVCache graph nodes, expert hot updates, and the DaoQL-Agent runtime remain future work. On an embedded same-machine setup, DaoQL reports graph BFS at 1.20 ms, HNSW at 83.1 us, and a Fluent hybrid query at 105.8 us; these results indicate engineering potential but must be interpreted with deployment-shape differences from client-server systems. Exploratory measurements on LDBC SNB SF1 and ANN-Benchmarks further show 34/34 query coverage with interactive-class queries mostly in the sub-millisecond to millisecond range, but only 1.8 QPS overall due to long-tail BI/IC queries; ANN-Benchmarks reaches Recall@10 >= 99% at thousand-level QPS after a bridge-edge protection fix. In a five-domain counterfactual experiment (n = 1250), DaoQL+GPT-4o achieves 94% composable counterfactual decomposability, 49 percentage points above GPT-4o alone. The paper explicitly separates provable structure, preliminary empirical evidence, and architectural roadmap claims.",
+      "authors": [
+        "Zhanbo Li",
+        "Shifeng Wu",
+        "Xiangjin Meng",
+        "Wenjie Cai"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.DB"
+      ],
+      "published": "2026-07-19T14:20:22+00:00",
+      "link": "https://arxiv.org/pdf/2607.17269v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Explicit world model using data-first ontology and multimodal storage for reasoning",
+      "llm_evidence_cn": "基于数据优先本体的显式世界模型，结合多模态存储进行推理",
+      "llm_evidence": "基于数据优先本体的显式世界模型，结合多模态存储进行推理",
+      "canonical_evidence": "基于数据优先本体的显式世界模型，结合多模态存储进行推理",
+      "llm_tldr_en": "Proposes an explicit world model based on data-first ontology, moving deterministic knowledge to a multimodal database while using LLMs as reasoning engines, demonstrating advantages in counterfactual reasoning.",
+      "llm_tldr_cn": "该论文提出数据优先本体驱动的显式世界模型，将确定性知识存储于多模态数据库DaoQL，而LLM仅作为推理和语言引擎。相比隐式世界模型，该方法避免了幻觉、知识冻结等问题。通过反事实推理实验验证了显式模型在可分解性、可修改性上的优势，为高精度领域的世界模型构建提供了新路径。",
+      "llm_tldr": "该论文提出数据优先本体驱动的显式世界模型，将确定性知识存储于多模态数据库DaoQL，而LLM仅作为推理和语言引擎。相比隐式世界模型，该方法避免了幻觉、知识冻结等问题。通过反事实推理实验验证了显式模型在可分解性、可修改性上的优势，为高精度领域的世界模型构建提供了新路径。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.20988v1",
+      "source": "arxiv",
+      "title": "HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving",
+      "abstract": "Vision-Language-Action (VLA) models augmented with world modeling represent a promising paradigm for end-to-end autonomous driving. While pixel-level future prediction enables fine-grained spatiotemporal reasoning, it compromises robustness in noisy driving scenarios. Conversely, latent-based world models alleviate this sensitivity but often incur limited interpretability and representational degradation due to absent pixel-level grounding. To reconcile this trade-off, we propose HyWorldVLA, a hybrid world-VLA framework that unifies pixel-level supervision and latent representation learning. In the pre-training stage, HyWorldVLA predicts video latents encoded by a pre-trained video VAE, while simultaneously reconstructing video frames to provide precise pixel-level grounding. During the subsequent co-fine-tuning phase, the model exclusively predicts latent features, which are fed into an action expert to generate trajectories. Extensive experiments on NAVSIM v1 and v2 benchmarks demonstrate that HyWorldVLA significantly outperforms both pixel-based and latent-based world model baselines. Notably, we present the first comprehensive qualitative and quantitative analysis of world model noise robustness in autonomous driving, establishing a new benchmark for evaluating future architectures.",
+      "authors": [
+        "Quanfu Yu",
+        "Xian Wu",
+        "Hao Xu",
+        "Liulong Ma"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-23T07:11:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.20988v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "hybrid world modeling unifying pixel-level and latent representations for autonomous driving",
+      "llm_evidence_cn": "混合世界建模统一像素级和隐式表示用于自动驾驶",
+      "llm_evidence": "混合世界建模统一像素级和隐式表示用于自动驾驶",
+      "canonical_evidence": "混合世界建模统一像素级和隐式表示用于自动驾驶",
+      "llm_tldr_en": "Proposes HyWorldVLA, a hybrid world-VLA framework for autonomous driving that combines pixel-level video prediction with latent representation learning, improving robustness and interpretability.",
+      "llm_tldr_cn": "针对像素级未来预测鲁棒性差和隐式世界模型可解释性弱的权衡，提出HyWorldVLA混合世界-VLA框架。在预训练阶段同时预测视频VAE隐码和重建视频帧，统一像素监督与隐式学习。在驾驶环境下，该方法在预测准确性和规划鲁棒性上均优于仅像素或仅隐式的方法。",
+      "llm_tldr": "针对像素级未来预测鲁棒性差和隐式世界模型可解释性弱的权衡，提出HyWorldVLA混合世界-VLA框架。在预训练阶段同时预测视频VAE隐码和重建视频帧，统一像素监督与隐式学习。在驾驶环境下，该方法在预测准确性和规划鲁棒性上均优于仅像素或仅隐式的方法。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.17519v1",
+      "source": "arxiv",
+      "title": "GEAR: Reconstruction of Classical Paintings via Geometry Grounding and Appearance Restitution",
+      "abstract": "Classical paintings preserve rich spatial, cultural, and historical content, making their reconstruction as explorable 3D scenes valuable for digital preservation, immersive exhibition, and cultural engagement. Yet, unlike photographs, they often depict scenes in a single-view, stylized manner, with weak perspective, lighting, and depth cues. Existing 3D reconstruction methods are largely built on natural-image priors, making it difficult to recover geometrically plausible and visually faithful 3D representations from such inputs. To address this challenge, we introduce Classical Painting-to-3D (CP3D), a new task that aims to recover a 3D representation from a single classical painting while jointly ensuring geometric plausibility, appearance fidelity to the source artwork, and plausible novel-view synthesis. We further propose GeAR, a training-free two-stage framework for Geometry Grounding and Appearance Restitution. GeAR first converts the input painting into a geometry-grounded representation with more coherent shading and illumination cues, improving the stability of 3D Gaussian reconstruction. It then restores artwork-faithful appearance across views under spatial constraints and multi-view consistency, recovering the painterly textures and details weakened during grounding. In addition, we construct HeriArch, a curated benchmark of 10,160 high-resolution classical artworks for systematic evaluation of CP3D. Extensive experiments and user studies show that GeAR consistently outperforms strong baselines in geometric plausibility, appearance fidelity, and human preference. Code and dataset will be released publicly.",
+      "authors": [
+        "Qinyu Zhang",
+        "Xinda Liu",
+        "Yunchen Li",
+        "Yunzhuo Liu",
+        "Chenxi Hu",
+        "Kang Li",
+        "Guohua Geng"
+      ],
+      "primary_category": "cs.MM",
+      "categories": [
+        "cs.MM"
+      ],
+      "published": "2026-07-20T03:53:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.17519v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D scene reconstruction from single painting",
+      "llm_evidence_cn": "从单幅绘画进行三维场景重建",
+      "llm_evidence": "从单幅绘画进行三维场景重建",
+      "canonical_evidence": "从单幅绘画进行三维场景重建",
+      "llm_tldr_en": "Proposes a task to reconstruct 3D scenes from single classical paintings, addressing weak depth cues with geometry grounding and appearance restitution.",
+      "llm_tldr_cn": "针对经典绘画单视图三维重建中透视和深度线索弱的问题，提出了GEAR方法，通过几何定位和外观恢复联合确保几何合理性和视觉保真度，为文化遗产数字化保护提供了新途径。",
+      "llm_tldr": "针对经典绘画单视图三维重建中透视和深度线索弱的问题，提出了GEAR方法，通过几何定位和外观恢复联合确保几何合理性和视觉保真度，为文化遗产数字化保护提供了新途径。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.17778v1",
+      "source": "arxiv",
+      "title": "CDIS: Cross-Dimensional Class-Agnostic 3D Instance Segmentation via 2D Mask Tracking and 3D-2D Projection Merging",
+      "abstract": "Class-agnostic 3D instance segmentation is critical for robotic systems operating in unknown environments, enabling perception of previously unseen objects for reliable manipulation and navigation. Existing approaches typically project per-frame 2D instance masks into 3D and merge them, which often breaks object identities across time and yields fragmented 3D instances. We introduce Cross-Dimensional Class-Agnostic 3D Instance Segmentation (CDIS), a zero-shot framework that explicitly tracks 2D instance masks across frames and associates them with 3D superpoints, creating a feedback loop between 2D and 3D. This cross-dimensional reasoning links temporally stable 2D tracks with spatially coherent 3D regions, producing globally consistent 3D instance labels without any 3D-specific training. Experiments on benchmark datasets demonstrate that CDIS achieves higher accuracy and consistency than state-of-the-art zero-shot methods, while remaining efficient and scalable to diverse real-world environments.",
+      "authors": [
+        "Juno Kim",
+        "Hye-Jung Yoon",
+        "Yesol Park",
+        "Byoung-Tak Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-20T10:09:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.17778v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Cross-dimensional class-agnostic 3D instance segmentation via 2D tracking and 3D-2D projection merging",
+      "llm_evidence_cn": "通过2D跟踪和3D-2D投影融合实现跨维度的类无关3D实例分割",
+      "llm_evidence": "通过2D跟踪和3D-2D投影融合实现跨维度的类无关3D实例分割",
+      "canonical_evidence": "通过2D跟踪和3D-2D投影融合实现跨维度的类无关3D实例分割",
+      "llm_tldr_en": "CDIS explicitly tracks 2D instance masks across frames and associates them with 3D superpoints via cross-dimensional reasoning, achieving temporally consistent 3D instance segmentation.",
+      "llm_tldr_cn": "机器人需要类无关3D实例分割以感知未知物体。现有方法投影2D掩码到3D易导致身份碎片化。CDIS引入跨维度反馈循环：显式跟踪2D实例掩码并与3D超点关联，利用时间稳定的2D轨迹修正3D分割。该方法零样本即可产生时间一致的3D实例，促进场景理解。",
+      "llm_tldr": "机器人需要类无关3D实例分割以感知未知物体。现有方法投影2D掩码到3D易导致身份碎片化。CDIS引入跨维度反馈循环：显式跟踪2D实例掩码并与3D超点关联，利用时间稳定的2D轨迹修正3D分割。该方法零样本即可产生时间一致的3D实例，促进场景理解。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.20785v1",
+      "source": "arxiv",
+      "title": "Robostral Navigate",
+      "abstract": "Deploying navigation systems at scale requires a recipe that minimizes sensor assumptions, generalizes across robot embodiments, and trains efficiently. Yet, today's best systems depend on depth sensors, multi-camera rigs, or pre-built maps, limiting the hardware they support and increasing deployment cost. We introduce Robostral Navigate, an 8B vision-language model built around this scalability objective. The model consumes only a stream of monocular RGB images - the most ubiquitous sensor across robotic platforms and predicts waypoints by pointing to the next target location in the current camera view. Operating purely in image space, rather than robot-specific coordinates, makes the policy naturally robust to changes in camera intrinsics and scene scale, enabling deployment across wheeled, legged, and aerial robots without recalibration. We generate 2.4 million trajectories across 350k simulated scenes to reduce the reliance on real-world data collection and scale easily. We further introduce a prefix-caching training recipe that packs entire episodes into single training sequences, reducing training tokens by 22x and cutting training time from months to days. A tree-based attention mask prevents conditioning on previous ground-truth actions, encouraging visually grounded action prediction, and reinforcement learning is used to further improve exploration and recovery capabilities. On the Room-to-Room and Room-Across-Room in Continuous Environments (R2R-CE and RxR-CE) benchmarks, Robostral Navigate sets a new state of the art. On R2R-CE, it achieves a 77.4% success rate, surpassing the best monocular method by 10.5 points and the strongest depth- or multi-camera system by 5.3 points despite using only a single RGB camera. On RxR-CE, it reaches 75.1% success rate, outperforming all monocular baselines.",
+      "authors": [
+        "Arjun Majumdar",
+        "Avinash Sooriyarachchi",
+        "Benjamin Tibi",
+        "Chris Bamford",
+        "Elliot Chane-Sane",
+        "Guillaume Lample",
+        "Khyathi Raghavi Chandu",
+        "Ludovic Ho Fuh",
+        "Mathieu Poiree",
+        "Olivier Duchenne",
+        "Rosalie Millner",
+        "Srijan Mishra",
+        "Theo Cachet",
+        "Thomas Chabal"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-22T23:13:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.20785v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Vision-language model for navigation that predicts waypoints from monocular RGB, serving as a world model",
+      "llm_evidence_cn": "视觉语言导航模型，从单目RGB预测航点，作为世界模型",
+      "llm_evidence": "视觉语言导航模型，从单目RGB预测航点，作为世界模型",
+      "canonical_evidence": "视觉语言导航模型，从单目RGB预测航点，作为世界模型",
+      "llm_tldr_en": "Robostral Navigate is an 8B VLM that predicts waypoints from monocular RGB, operating purely in image space to enable cross-embodiment navigation without depth sensors or maps.",
+      "llm_tldr_cn": "大规模部署导航系统需要最小传感器假设。Robostral Navigate是一个8B视觉语言模型，仅从单目RGB图像预测航点，不依赖深度传感器或预建地图。模型在图像空间操作，自然适应不同相机内参和场景尺度，支持轮式、足式等多种机器人。这项工作将世界模型思想用于具身导航。",
+      "llm_tldr": "大规模部署导航系统需要最小传感器假设。Robostral Navigate是一个8B视觉语言模型，仅从单目RGB图像预测航点，不依赖深度传感器或预建地图。模型在图像空间操作，自然适应不同相机内参和场景尺度，支持轮式、足式等多种机器人。这项工作将世界模型思想用于具身导航。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.21504v1",
+      "source": "arxiv",
+      "title": "Texture++: Elevating 3D Asset Texture Resolution with a Region-Aware Diffusion Model",
+      "abstract": "Numerous 3D assets are discarded due to low texture resolution, while current super-resolution models ignore texture maps and focus on natural images. An efficient and generalizable texture super-resolution model can revitalize a large corpus of aging yet valuable assets across industries such as film and video games. We present Texture++, a novel framework for texture super-resolution, which enhances the low-resolution textures of assets to produce high-resolution, high-quality results. Specifically, we reformulate the task of super-resolution in UV space into performing it across multiple rendered views and merging the outputs. Firstly, to achieve more complete and continuous textures in the view space, we propose an adaptive view selection strategy to integrate textures dispersed across UV texture patches. Furthermore, we introduce a quadtree-based texture region organization method for combining super-resolved textures from different viewpoints, providing masks to distinguish regions that require improvement. Finally, we design a diffusion-based super-resolution model that enhances the texture resolution for specified masked regions, seamlessly integrating with surrounding regions. Through comprehensive evaluations, we demonstrate that our approach yields textures with substantially improved detail and coherence over existing methods.",
+      "authors": [
+        "Shuaiwei Wang",
+        "Shi Li",
+        "Jieting Xu",
+        "Yuchi Huo",
+        "Qi Wang",
+        "Wenting Zheng",
+        "Rengan Xie"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-23T16:52:10+00:00",
+      "link": "https://arxiv.org/pdf/2607.21504v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "texture super-resolution for 3D scene assets",
+      "llm_evidence_cn": "三维场景资产的纹理超分辨率",
+      "llm_evidence": "三维场景资产的纹理超分辨率",
+      "canonical_evidence": "三维场景资产的纹理超分辨率",
+      "llm_tldr_en": "Texture++ reformulates texture super-resolution in UV space as multi-view rendering and merging, using adaptive view selection and region-aware diffusion for high-resolution textures.",
+      "llm_tldr_cn": "Texture++将纹理超分辨率任务从UV空间重新定义为多视角渲染与合并，通过自适应视角选择和区域感知扩散模型，显著提升了低分辨率三维资产的纹理质量，解决了现有超分模型忽略纹理贴图的问题，为三维场景生成提供了高质量的纹理细节。",
+      "llm_tldr": "Texture++将纹理超分辨率任务从UV空间重新定义为多视角渲染与合并，通过自适应视角选择和区域感知扩散模型，显著提升了低分辨率三维资产的纹理质量，解决了现有超分模型忽略纹理贴图的问题，为三维场景生成提供了高质量的纹理细节。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
