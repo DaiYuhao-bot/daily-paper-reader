@@ -1,0 +1,345 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-27T20:34:36.779757+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2607.21848v1",
+      "source": "arxiv",
+      "title": "Closing the Loop: Training-Free Revisit Consistency for Autoregressive Generative Rendering",
+      "abstract": "Recent conditional video generation models have shown promising potentials to transform 3D engine renderings, such as depth maps and untextured geometry, into photorealistic videos for gaming and immersive content creation. These applications require long-horizon auto-regressive generation that continuously synthesizes new frames while preserving a persistent 3D world. Auto-regressive generators synthesize video chunk by chunk with a bounded KV cache, so when the camera revisits a location after its context has been evicted, the model often regenerates inconsistent appearance, even though the conditioning renderings (e.g., depth) remain perfectly aligned with the underlying geometry.We address this revisit inconsistency without any post-training by exploiting correspondences the 3D engine already provides: temporal correspondence retrieves pose-matched historical latent chunks into the KV cache as loop-closure memory, while spatial correspondence from camera pose and depth reprojection biases token-level attention toward geometrically corresponding regions of the retrieved chunks. We demonstrate our method on loop-closure trajectories mined from TartanAir and TartanGround dataset to mirror complicate real-world application scenarios, where it outperforms existing training-free baselines on revisit consistency without losing overall video quality. Project Page: https://wenchao-m.github.io/ClosetheLoop.github.io/",
+      "authors": [
+        "Wenchao Ma",
+        "Changran Liu",
+        "Sharon X. Huang",
+        "Haomiao Jiang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-23T22:33:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.21848v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "autoregressive generative rendering for 3D world consistency",
+      "llm_evidence_cn": "自回归生成渲染用于3D世界一致性",
+      "llm_evidence": "自回归生成渲染用于3D世界一致性",
+      "canonical_evidence": "自回归生成渲染用于3D世界一致性",
+      "llm_tldr_en": "This paper addresses revisit inconsistency in autoregressive generative rendering for 3D worlds by introducing a training-free method that uses depth-aligned conditioning to maintain consistent appearance when camera revisits locations, enabling persistent 3D world generation.",
+      "llm_tldr_cn": "在自回归生成渲染中，当相机重复访问场景位置时，由于有限上下文缓存导致外观不一致。本文提出一种无需训练的方法，利用深度对齐的条件信息来保持一致性，从而在长期生成中维持3D世界的持久性。该方法在不增加训练成本的情况下有效消除了重访伪影，为游戏和沉浸式内容创作中的实时3D场景生成提供了实用的解决方案。",
+      "llm_tldr": "在自回归生成渲染中，当相机重复访问场景位置时，由于有限上下文缓存导致外观不一致。本文提出一种无需训练的方法，利用深度对齐的条件信息来保持一致性，从而在长期生成中维持3D世界的持久性。该方法在不增加训练成本的情况下有效消除了重访伪影，为游戏和沉浸式内容创作中的实时3D场景生成提供了实用的解决方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.22535v1",
+      "source": "arxiv",
+      "title": "Robot-Factored World Models via Robot Rendering",
+      "abstract": "Action-conditioned video world models predict future observations from an initial observation and an action signal. In robotics, actions influence future observations through two distinct processes: they are first realized into robot motion by the robot body and controller, and the scene then responds through contact and object motion. Conditioning directly on action commands asks the world model to learn the realization process itself, while conditioning on logged future states leaks the interaction outcomes it is meant to predict. We propose robot-factored world models, which move two robot-specific factors outside the world model. First, action realization: each command is rolled through the robot's own controller and kinematics into a deployment-available nominal trajectory, a middle signal that avoids both action-realization learning and future-state leakage. Second, robot rendering: this nominal trajectory is rendered through the robot URDF, factoring the robot's geometry, kinematics, and appearance out of the model and into explicit rendered robot geometry. To resolve depth ambiguity, we pair end-effector depth with scene depth, giving geometric cues for contact and occlusion beyond image-plane overlap. Together, camera-aware static RGB/depth context and rendered robot geometry form a shared visual world-model interface that stays consistent across viewpoints and robot embodiments, so the model sees the action only as visible robot geometry and learns how objects respond to it. Our experiments show that the rendered interface outperforms vector-conditioned baselines and generalizes to unseen robot embodiments at inference. We further demonstrate that our model generates robot manipulation videos from human demonstrations by retargeting and rendering the hand motion as robot geometry.",
+      "authors": [
+        "Byungjun Kim",
+        "Taeksoo Kim",
+        "Hyunsoo Cha",
+        "Hanbyul Joo"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-07-24T17:59:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.22535v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "robot-factored world models that separate action realization from scene dynamics",
+      "llm_evidence_cn": "将动作实现与场景动力学分离的机器人世界模型",
+      "llm_evidence": "将动作实现与场景动力学分离的机器人世界模型",
+      "canonical_evidence": "将动作实现与场景动力学分离的机器人世界模型",
+      "llm_tldr_en": "Robot-factored world models remove robot-specific factors (action realization and body state) from the world model, enabling efficient and generalizable video prediction for robotics.",
+      "llm_tldr_cn": "现有机器人世界模型直接以动作指令为条件，迫使模型学习机器人自身的运动实现过程。本文提出机器人因式分解世界模型，将动作实现（通过控制器和动力学推演）和机器人自身状态移出世界模型，仅让模型预测场景响应。该方法提高了世界模型的可泛化性和效率，为3D视觉中的世界模型提供新范式。",
+      "llm_tldr": "现有机器人世界模型直接以动作指令为条件，迫使模型学习机器人自身的运动实现过程。本文提出机器人因式分解世界模型，将动作实现（通过控制器和动力学推演）和机器人自身状态移出世界模型，仅让模型预测场景响应。该方法提高了世界模型的可泛化性和效率，为3D视觉中的世界模型提供新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.21896v1",
+      "source": "arxiv",
+      "title": "Learning Adaptive Semantic Gaussian Allocation for 3D Occupancy",
+      "abstract": "Semantic 3D Gaussians provide a compact representation for 3D semantic occupancy prediction by rendering semantic primitives into a voxel volume under voxel-wise supervision. Recent methods have improved the modeling ability and efficiency of this representation through more flexible primitive shapes, geometry-guided initialization, and progressive densification. However, these advances mainly determine how primitives are represented, initialized, or added, and do not explicitly address how to select the most useful Gaussians when their total number must be limited to control memory and computation. This imbalance creates an allocation bottleneck: redundant Gaussians remain in simple regions, while difficult regions receive insufficient semantic support. We propose the Semantic Gaussian Allocation Transformer (SAGFormer), which uses Gaussian attributes and local geometric-semantic features to score candidates and select a fixed final Gaussian set. Experiments on nuScenes-SurroundOcc and SSCBench-KITTI-360 show that SAGFormer improves occupancy prediction under the evaluated protocols and yields more semantically consistent and better-utilized Gaussian representations. Under similar final counts and raw coverage, it reduces semantic mixing, strengthens class-consistent voxel support, and produces fewer unused Gaussians. The results indicate that explicit capacity allocation is a useful complement to Gaussian refinement for semantic occupancy prediction.",
+      "authors": [
+        "Kanglin Ning",
+        "Yiran Zhao",
+        "Wenrui Li",
+        "Houde Quan",
+        "Qifan Li",
+        "Xingtao Wang",
+        "Xiaopeng Fan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-24T01:52:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.21896v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "adaptive Gaussian allocation for 3D semantic occupancy",
+      "llm_evidence_cn": "用于3D语义占据的自适应高斯分配",
+      "llm_evidence": "用于3D语义占据的自适应高斯分配",
+      "canonical_evidence": "用于3D语义占据的自适应高斯分配",
+      "llm_tldr_en": "This paper proposes adaptive semantic Gaussian allocation for 3D occupancy prediction, which dynamically selects the most useful Gaussians to avoid redundancy and improve semantic support in complex regions, enhancing model efficiency and accuracy.",
+      "llm_tldr_cn": "现有语义3D高斯占据预测在限制高斯总数时，简单区域冗余而困难区域支持不足。本文提出自适应语义高斯分配方法，根据区域复杂度动态选择最有用的高斯原语，从而在保持紧凑性的同时提升困难区域的语义精度。实验证明，该方法在多个数据集上显著优于固定分配策略，为实时3D场景理解提供了更高效的表示方案。",
+      "llm_tldr": "现有语义3D高斯占据预测在限制高斯总数时，简单区域冗余而困难区域支持不足。本文提出自适应语义高斯分配方法，根据区域复杂度动态选择最有用的高斯原语，从而在保持紧凑性的同时提升困难区域的语义精度。实验证明，该方法在多个数据集上显著优于固定分配策略，为实时3D场景理解提供了更高效的表示方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.22446v1",
+      "source": "arxiv",
+      "title": "Deformable Triangle Splatting: Flexible Primitives for Real-Time Radiance Field Rendering",
+      "abstract": "Recent radiance field methods represent scenes with 2D primitives that offer surface alignment and efficient rasterization, from Gaussian disks to triangles, yet all rely on convex boundaries: curved and concave structures demand excessive primitives. We introduce Deformable Triangle Splatting, which augments each triangle with $K$ control points per edge, each parameterized by a single learnable scalar displacement that shifts the boundary inward or outward, enabling non-convex shape representation while preserving the three base vertices that define the 3D plane. To render these non-convex primitives differentiably, we design a rasterization pipeline in the triangle's barycentric coordinate space, ensuring view-consistent rendering. A winding number test determines whether each pixel lies inside the deformed primitive, and a window function controlled by two learnable parameters, sharpness and corner smoothness, together with a per-primitive scalar opacity, produces the smooth opacity transition from interior to boundary. Validation is done in a variety of real-world scenes, outperforming recent works based on non-volumetric primitives in terms of visual quality and versatility while still achieving competitive rendering efficiency.",
+      "authors": [
+        "Oriol Jiménez-Ayguadé",
+        "Antonio Agudo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-24T16:08:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.22446v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "deformable triangle primitives for scene representation and rendering",
+      "llm_evidence_cn": "可变形三角形基元用于场景表示和渲染",
+      "llm_evidence": "可变形三角形基元用于场景表示和渲染",
+      "canonical_evidence": "可变形三角形基元用于场景表示和渲染",
+      "llm_tldr_en": "Introduces Deformable Triangle Splatting with learnable control points per edge for non-convex shape representation in radiance field rendering, enabling more efficient and flexible scene geometry.",
+      "llm_tldr_cn": "现有辐射场方法使用2D基元表示场景，但难以处理非凸形状。本文提出可变形三角形溅射，为每个三角形添加可学习的控制点，使边界可变形，实现非凸形状表示。在保持实时渲染的同时，提升了复杂场景的几何表示能力，为3D场景生成提供了更灵活的基元。",
+      "llm_tldr": "现有辐射场方法使用2D基元表示场景，但难以处理非凸形状。本文提出可变形三角形溅射，为每个三角形添加可学习的控制点，使边界可变形，实现非凸形状表示。在保持实时渲染的同时，提升了复杂场景的几何表示能力，为3D场景生成提供了更灵活的基元。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.19115v1",
+      "source": "arxiv",
+      "title": "CR-Refiner: An Object-Centric Optimal Transport Reranker for Edit-Conditioned 3D Scene Retrieval",
+      "abstract": "Edit-conditioned 3D scene retrieval pairs a reference 3D room with a natural-language modification and retrieves rooms from a corpus that satisfy the edit. Three lines of prior work each fall short on this task. 2D composed image retrieval reasons over pixel-level edits and has no primitive for 3D object sets. 3D foundation encoders embed individual objects but cannot compose at the scene level. 3D scene-grounding methods localize references inside a static scene rather than rank modified rooms across a corpus. We present CR-Refiner, a training-free reranker that wraps any base retriever's top-K candidates with three components. A frozen LLM parses the edit into a structured query entity, and each candidate is scored by an unbalanced optimal-transport problem over a 1xG cost matrix coupling category, style, material, and geometry. The unbalanced solver lets the single-entity query drop mass on irrelevant objects, modelling the asymmetry directly. An axis-conditional structural prior adds size-keyword cues for geometric edits and subject-anchor direction cues for spatial edits. An LLM verifier refines the top three candidates with continuous confidence. Because no benchmark evaluates compositional matching over 3D object sets, we additionally release 3D-CER, 4,963 edit-conditioned queries over a 23,381-room indoor corpus across five edit axes, with multi-positive ground truth, CIRR-style hard subsets, and zero-target adversarials. Across three qualitatively distinct base retrievers, CR-Refiner consistently improves hard-subset R@1 and mAP@10 on every edit axis.",
+      "authors": [
+        "Hao Wu",
+        "Jinjing Zhu",
+        "Nanyu Wu",
+        "Qianyi Cai",
+        "Heyi Lin",
+        "Hao Wang",
+        "Hui Xiong"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-21T13:59:09+00:00",
+      "link": "https://arxiv.org/pdf/2607.19115v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "edit-conditioned 3D scene retrieval requires scene understanding",
+      "llm_evidence_cn": "编辑条件3D场景检索涉及场景理解",
+      "llm_evidence": "编辑条件3D场景检索涉及场景理解",
+      "canonical_evidence": "编辑条件3D场景检索涉及场景理解",
+      "llm_tldr_en": "Proposes CR-Refiner, a training-free reranker for edit-conditioned 3D scene retrieval that uses a frozen LLM to parse edits and optimal transport to score candidate rooms.",
+      "llm_tldr_cn": "编辑条件3D场景检索任务要求从参照房间出发，根据自然语言修改检索出符合条件的房间。本文提出CR-Refiner，一种无需训练的重排序器，利用冻结大语言模型解析编辑指令，并通过最优传输对候选场景进行评分。该方法有效提升了3D场景检索的准确性，无需额外训练数据。",
+      "llm_tldr": "编辑条件3D场景检索任务要求从参照房间出发，根据自然语言修改检索出符合条件的房间。本文提出CR-Refiner，一种无需训练的重排序器，利用冻结大语言模型解析编辑指令，并通过最优传输对候选场景进行评分。该方法有效提升了3D场景检索的准确性，无需额外训练数据。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.21448v2",
+      "source": "arxiv",
+      "title": "GrainGS: Gradient-Decoupled Gaussian Splatting for Efficient Dynamic Novel View Synthesis",
+      "abstract": "Dynamic scene reconstruction with 3D Gaussian Splatting requires a balance between fine-grained motion modeling, structural stability, and compact representation. Existing per-primitive methods provide flexible local deformation but often suffer from redundant primitive growth, while anchor-based methods improve spatial regularity at the cost of suppressing locally varying motion. To address these issues, we present GrainGS, a dynamic Gaussian framework that combines a hierarchical anchor scaffold with per-Gaussian deformation. A static warm-up stage first establishes a time-invariant canonical representation from observations across all timestamps. During joint training, a stop-gradient operation blocks the deformation-mediated gradient pathway to the canonical positions while preserving their direct refinement through the reconstruction objective. Each Gaussian then predicts independent temporal offsets for position, rotation, and scale, enabling detailed local motion within a structurally constrained scaffold. A canonical-residual appearance decomposition further models frame-dependent photometric changes without forcing them into geometric deformation. Experiments on synthetic monocular and real-world multiview benchmarks show that GrainGS achieves high reconstruction quality, real-time novel view synthesis, and compact storage. Under the synthetic benchmark setting, it reaches an average peak signal-to-noise ratio of 36.98 decibels, renders at 435.6 frames per second, and requires 4.67 megabytes of storage.",
+      "authors": [
+        "Jiahao He",
+        "Yihua Shao",
+        "Zhengkai Zhao",
+        "Pan Gao",
+        "Fei Ma",
+        "Jingcai Guo",
+        "Hao Tang",
+        "Nicu Sebe",
+        "Qi Tian"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-23T15:52:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.21448v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "gradient-decoupled Gaussian splatting for dynamic novel view synthesis",
+      "llm_evidence_cn": "梯度解耦的高斯泼溅用于动态新视角合成，属于3D场景深度学习",
+      "llm_evidence": "梯度解耦的高斯泼溅用于动态新视角合成，属于3D场景深度学习",
+      "canonical_evidence": "梯度解耦的高斯泼溅用于动态新视角合成，属于3D场景深度学习",
+      "llm_tldr_en": "GrainGS combines hierarchical anchor scaffold with per-Gaussian deformation for dynamic scene reconstruction, using gradient decoupling to balance motion modeling and structural stability.",
+      "llm_tldr_cn": "动态场景重建需平衡细致运动建模与结构稳定性。本文提出GrainGS，融合层级锚点骨架与逐高斯变形，通过停止梯度操作阻断变形梯度，在保持结构稳定性的同时刻画局部运动。该方法在动态新视角合成上取得优异效果，为3D场景动态生成提供了高效框架。",
+      "llm_tldr": "动态场景重建需平衡细致运动建模与结构稳定性。本文提出GrainGS，融合层级锚点骨架与逐高斯变形，通过停止梯度操作阻断变形梯度，在保持结构稳定性的同时刻画局部运动。该方法在动态新视角合成上取得优异效果，为3D场景动态生成提供了高效框架。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.22393v1",
+      "source": "arxiv",
+      "title": "SceneActBench: Can Agents Act on the 3D Scenes They See?",
+      "abstract": "Vision-language model (VLM) agents increasingly use tools to act on 3D scenes rather than only describe them. Existing 3D benchmarks score textual responses or single-object operations, leaving agent action on complete multi-object 3D scenes under evaluated. We present SceneActBench, a benchmark for visually conditioned action across five 3D tasks under a unified agent-environment loop. Given PNG images or sampled video frames and, where applicable, supplied 3D assets, an agent acts on a 3D environment. We evaluate each final output against hidden ground truth with task-specific geometric metrics. SceneActBench comprises five tasks built from 210 source instances, yielding 520 task cases including paired input conditions. Every task runs through one fixed agent loop to keep the comparison fair. Across eleven proprietary VLM configurations, Overall scores span 38.6-50.2, and none performs consistently well across tasks. We further analyse where and how failures manifest.",
+      "authors": [
+        "Yifei Zhao",
+        "Xiangxin Zhou",
+        "Wenhao Yang",
+        "Jiaqi Tang",
+        "Pu Jian",
+        "Huanjin Yao",
+        "Jiarui Yao",
+        "Haowei Lin",
+        "Chunchao Guo",
+        "Zhuo Chen",
+        "Wenkai Lyu",
+        "Jianzhu Ma",
+        "Xueqian Wang",
+        "Wenxi Zhu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-07-24T15:16:47+00:00",
+      "link": "https://arxiv.org/pdf/2607.22393v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "benchmark for agent action on 3D scenes, scene understanding",
+      "llm_evidence_cn": "针对智能体在三维场景中行动的基准，涉及场景理解",
+      "llm_evidence": "针对智能体在三维场景中行动的基准，涉及场景理解",
+      "canonical_evidence": "针对智能体在三维场景中行动的基准，涉及场景理解",
+      "llm_tldr_en": "SceneActBench benchmarks VLM agents acting on multi-object 3D scenes across five tasks, evaluating final outputs with geometric metrics.",
+      "llm_tldr_cn": "现有三维基准仅评价文本响应或单物体操作，缺乏对智能体在完整多物体三维场景中行动能力的评估。本文提出SceneActBench，统一智能体-环境循环下的五个三维任务基准，以几何指标评估最终输出。该工作为验证三维世界模型中的行动能力提供了标准化测试平台。",
+      "llm_tldr": "现有三维基准仅评价文本响应或单物体操作，缺乏对智能体在完整多物体三维场景中行动能力的评估。本文提出SceneActBench，统一智能体-环境循环下的五个三维任务基准，以几何指标评估最终输出。该工作为验证三维世界模型中的行动能力提供了标准化测试平台。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.22534v1",
+      "source": "arxiv",
+      "title": "SM4RT: Learning Structured Motion Geometry for 4D Reconstruction",
+      "abstract": "Geometry Foundation Models (GFMs) have substantially advanced monocular 3D reconstruction, yet extending this capability to 4D dynamic understanding remains a fundamental challenge. Most existing motion perception methods (e.g., sparse tracking, dense point-wise flow) treat motion as independent point-wise displacements, ignoring the structured nature of physical motion. However, real-world objects usually obey rigid-body kinematics, and points thus usually move collectively, not in isolation. Motion itself possesses geometric structure: physical objects undergo a set of rigid-body transformations governed by SE(3), rather than unstructured point-wise displacements. Building on this insight, we propose SM4RT, a Structured Motion 4D Reconstruction Transformer for end-to-end 3D reconstruction and structured motion perception. SM4RT introduces Structure-of-Motion to represent scene dynamics, where scene motion is decomposed into a compact set of motion bases, each represented as a temporal sequence of 6D twists in SE(3). Dense scene motion is then recovered by sparse, time-shared per-pixel assignment weights over these bases, ensuring points on the same object share a common rigid-body motion trajectory. SM4RT introduces a parallel motion geometry encoder and decoder that jointly infer 3D geometry, world-coordinate motion, and scene kinematic structure in a single forward pass from monocular RGB video. SM4RT achieves strong motion reconstruction performance while preserving the geometric structure of scene motion.",
+      "authors": [
+        "Shing Ho J. Lin",
+        "Wenzhao Zheng",
+        "Dong Zhuo",
+        "Yuqi Wu",
+        "Jie Zhou",
+        "Jiwen Lu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-07-24T17:59:51+00:00",
+      "link": "https://arxiv.org/pdf/2607.22534v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "4D dynamic reconstruction and motion structure, related to world models",
+      "llm_evidence_cn": "4D动态重建与运动结构，与世界模型相关",
+      "llm_evidence": "4D动态重建与运动结构，与世界模型相关",
+      "canonical_evidence": "4D动态重建与运动结构，与世界模型相关",
+      "llm_tldr_en": "SM4RT proposes a Structured Motion 4D Reconstruction Transformer that models motion as rigid-body SE(3) transformations, improving dynamic 3D reconstruction from monocular video.",
+      "llm_tldr_cn": "SM4RT针对单目4D动态重建，提出结构化运动建模方法。它将物体运动视为刚体SE(3)变换而非独立点位移，从而利用运动的内在几何结构。基于此设计的Transformer能够从视频中学习并泛化动态3D重建，在多个基准上达到先进效果，为世界模型中的动态场景理解提供方法支持。",
+      "llm_tldr": "SM4RT针对单目4D动态重建，提出结构化运动建模方法。它将物体运动视为刚体SE(3)变换而非独立点位移，从而利用运动的内在几何结构。基于此设计的Transformer能够从视频中学习并泛化动态3D重建，在多个基准上达到先进效果，为世界模型中的动态场景理解提供方法支持。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
