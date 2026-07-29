@@ -1,0 +1,651 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-29T21:18:45.823259+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 7,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 10,
+    "quick_skim_target": 11,
+    "quick_selected": 10
+  },
+  "deep_dive": [
+    {
+      "id": "2607.26037v1",
+      "source": "arxiv",
+      "title": "Wonder: Video World Model Done Better",
+      "abstract": "We present Wonder, a general-purpose video world model for real-time, camera-controllable world exploration. Given an image or a conditional video, Wonder constructs a playable world where users can navigate interactively by moving the camera, discovering unseen regions, and revisiting previously observed areas in real time and over a long-term horizon. Achieving this capability requires a system-level co-design of control method, memory mechanism, and training strategy. We introduce a novel camera conditioning with a dense coordinate field whose renderings provide spatially aligned motion and orientation cues, allowing the model to interpret camera motion directly as visual evidence. To support fast and precise memory retrieval over a growing generation context, we propose an efficient sparse attention-based memory mechanism, enabling the model to selectively attend to a small set of relevant context tokens at inference time, regardless of actual context length. We further develop several techniques to rectify the self-forcing-style distillation pipeline, improving the student model's ability to respect control signals, as well as maintaining diverse generation modes and long-term memory from the teacher. Together, these components enable Wonder to synthesize diverse, minute-scale videos at 16 FPS while preserving coherent geometry, appearance, and dynamics across long rollouts. Beyond image-to-video generation, Wonder naturally supports video-conditioned generation, allowing existing dynamic scenes to be re-shot in real time.",
+      "authors": [
+        "Jiacong Xu",
+        "Hanwen Jiang",
+        "Zhixin Shu",
+        "Kalyan Sunkavalli",
+        "Vishal M. Patel",
+        "Yiqun Mei"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-28T17:45:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.26037v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "general-purpose video world model for real-time interactive exploration",
+      "llm_evidence_cn": "通用视频世界模型支持实时交互式探索",
+      "llm_evidence": "通用视频世界模型支持实时交互式探索",
+      "canonical_evidence": "通用视频世界模型支持实时交互式探索",
+      "llm_tldr_en": "Wonder is a video world model enabling real-time camera-controllable world exploration with novel camera conditioning and efficient memory retrieval.",
+      "llm_tldr_cn": "现有世界模型缺乏实时交互和相机控制。Wonder提出通用视频世界模型，支持用户通过相机控制实时探索未知区域并回访。通过密集坐标场相机条件提供空间对齐运动线索，结合高效记忆检索支持长时生成。实验证明在多种场景实现高质量实时交互，推动了世界模型在3D视觉中的应用。",
+      "llm_tldr": "现有世界模型缺乏实时交互和相机控制。Wonder提出通用视频世界模型，支持用户通过相机控制实时探索未知区域并回访。通过密集坐标场相机条件提供空间对齐运动线索，结合高效记忆检索支持长时生成。实验证明在多种场景实现高质量实时交互，推动了世界模型在3D视觉中的应用。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.23491v1",
+      "source": "arxiv",
+      "title": "PlanCraft: Sketch, Refine, and Furnish for Architect-Inspired Progressive 3D Residential Scene Generation",
+      "abstract": "Two structural insights have been overlooked in automated residential floor plan generation. First, design is inherently progressive. Architects begin with rough strokes and refine them over time, whereas existing methods typically require their conditioning representation to be fully specified before generation, a fundamental mismatch with how design actually works. Second, the 2D floor plan is not an optional intermediate but an irreplaceable spatial contract. Once room boundaries, doors, and windows are fixed, furnishing reduces from open-ended spatial reasoning to bounded constraint satisfaction. Bypassing this contract, as existing 3D systems do by delegating layout to language models, yields overlapping rooms and implausible proportions; directly calling general-purpose language models likewise produces geometrically invalid layouts. Guided by these insights, we present PlanCraft. SketchPlan supplies the missing training signal by replaying the architect's drawing process on 80K real floor plans, producing partial sketches at every completeness level. PlanCraft-Diff progressively sharpens an incomplete sketch into a geometrically precise, vectorizable floor plan through a coarse-to-fine strategy. With the spatial contract established, PlanCraft-Agent then furnishes the scene within well-defined room boundaries. Experiments show that PlanCraft achieves a 61.1\\% lower FID than the best existing 2D method and surpasses existing 3D systems by 15 points in expert-rated spatial rationality, with a sketch at only 25\\% completion already outperforming all fully specified baselines.",
+      "authors": [
+        "Pengyu Zeng",
+        "Yuqin Dai",
+        "Jun Yin",
+        "Ziyang Han",
+        "Ng Cheuk Hei",
+        "Jing Zhong",
+        "Chaoyang Shi",
+        "ZhanXiang Jin",
+        "Maowei Jiang",
+        "Yuxing Han",
+        "Shuai Lu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "published": "2026-07-26T06:35:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.23491v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "progressive 3D residential scene generation",
+      "llm_evidence_cn": "渐进式3D住宅场景生成",
+      "llm_evidence": "渐进式3D住宅场景生成",
+      "canonical_evidence": "渐进式3D住宅场景生成",
+      "llm_tldr_en": "PlanCraft generates 3D residential scenes progressively from rough sketches to refined floor plans and furnishings.",
+      "llm_tldr_cn": "现有方法要求完全指定条件，与设计渐进性不符。PlanCraft模拟建筑师流程，先粗略草图再细化2D户型图，最后布置家具。该方法确保空间合理，避免重叠房间，生成真实且可编辑的3D住宅场景。",
+      "llm_tldr": "现有方法要求完全指定条件，与设计渐进性不符。PlanCraft模拟建筑师流程，先粗略草图再细化2D户型图，最后布置家具。该方法确保空间合理，避免重叠房间，生成真实且可编辑的3D住宅场景。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.24721v1",
+      "source": "arxiv",
+      "title": "DreamStyle3D: Efficient 3D Stylized Asset Generation via Dual-Attention Disentanglement",
+      "abstract": "With the growth of gaming, animation, and virtual reality industries, the demand for efficient generation of stylized 3D assets is rapidly increasing. However, existing approaches still struggle to jointly preserve style fidelity, geometric consistency, and generation efficiency, as most of them still rely on indirect 2D-to-3D stylization pipelines. This motivates a native 3D stylization framework that can explicitly disentangle style from geometry while remaining efficient. To this end, we propose DreamStyle3D, an efficient framework for stylized 3D asset generation built on a Decoupled Dual Cross-Attention mechanism. Our method explicitly separates geometric and stylistic features to enable efficient style injection while preserving structural consistency, and further adopts a lightweight training strategy to enhance style consistency and model generalization. In addition, we build an automated data pipeline and construct a dataset of about 15K content-style-stylized triplets for training and evaluation. Extensive experiments demonstrate that our DreamStyle3D can generate high-fidelity, geometrically consistent stylized 3D assets within 10 seconds, substantially improving efficiency while maintaining superior style quality and offering a new solution for 3D content creation. The code and data are available at https://github.com/HVision-NKU/DreamStyle3D.",
+      "authors": [
+        "Kai Wang",
+        "Ziheng Ouyang",
+        "Xuying Zhang",
+        "Ming-Ming Cheng",
+        "Qibin Hou"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-27T17:55:21+00:00",
+      "link": "https://arxiv.org/pdf/2607.24721v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "efficient 3D stylized asset generation via disentanglement",
+      "llm_evidence_cn": "通过双注意力解耦的高效3D风格化资产生成",
+      "llm_evidence": "通过双注意力解耦的高效3D风格化资产生成",
+      "canonical_evidence": "通过双注意力解耦的高效3D风格化资产生成",
+      "llm_tldr_en": "DreamStyle3D efficiently generates stylized 3D assets by decoupling geometry and style with a dual cross-attention mechanism.",
+      "llm_tldr_cn": "游戏和VR行业对高效生成风格化3D资产需求大，但现有方法依赖2D到3D管线，难以同时保持风格忠实、几何一致和效率。DreamStyle3D提出原生3D风格化框架，利用解耦双交叉注意力显式分离几何与风格特征，实现高效风格注入。实验证明在多种风格上生成质量高且速度快，直接推动3D场景生成技术发展。",
+      "llm_tldr": "游戏和VR行业对高效生成风格化3D资产需求大，但现有方法依赖2D到3D管线，难以同时保持风格忠实、几何一致和效率。DreamStyle3D提出原生3D风格化框架，利用解耦双交叉注意力显式分离几何与风格特征，实现高效风格注入。实验证明在多种风格上生成质量高且速度快，直接推动3D场景生成技术发展。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.22430v2",
+      "source": "arxiv",
+      "title": "On the Identifiability of Controlled World Models",
+      "abstract": "World model serves as a promising tool to infer environment dynamics under high-dimensional observations and candidate actions. Recently, LeCun's JEPA provides a compelling framework for learning such models in representation space. Its action-conditioned extension plays a central role in visual control and latent-space planning, but leaves a fundamental question: can it recover the controlled dynamics from nonlinear observations? This paper presents a joint identifiability condition for controlled world models with Gaussian latent states, which consists of two coupled components: (1) representation identifiability and (2) transition identifiability. The former depends on the spectral separation property while the latter is related to non-degenerate variation of conditional action. We prove that when this condition holds, minimizing the LeJEPA-style predictive objective can recover both latent states and controlled dynamics in the sense of orthogonal transformation. We further prove that the upper bound of transition prediction error is inversely proportional to the spectral separation margin. We also characterize an attainable amplification of counterfactual prediction error that scales inversely with the weakest conditional action-excitation margin. The theoretical predictions are empirically supported across four nonlinear observation settings.",
+      "authors": [
+        "Xiangteng Zhang",
+        "Yang Guan",
+        "Bo Zhang",
+        "Hongyang Li",
+        "Ya-Qin Zhang",
+        "Shengbo Eben Li"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-24T15:49:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.22430v2",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "identifiability of controlled world models",
+      "llm_evidence_cn": "受控世界模型的可辨识性理论",
+      "llm_evidence": "受控世界模型的可辨识性理论",
+      "canonical_evidence": "受控世界模型的可辨识性理论",
+      "llm_tldr_en": "This paper establishes joint identifiability conditions for controlled world models with Gaussian latent states, covering representation and transition identifiability.",
+      "llm_tldr_cn": "世界模型在高维观测与动作下推断环境动力学，可辨识性是关键问题。本文针对高斯潜变量的受控世界模型，提出了联合可辨识条件：表示可辨识性依赖谱分离性质，转移可辨识性与条件分布非退化变化相关。该理论为学习可解释、可泛化的世界模型提供了重要基础，并启发了可控动力学建模的新方向。",
+      "llm_tldr": "世界模型在高维观测与动作下推断环境动力学，可辨识性是关键问题。本文针对高斯潜变量的受控世界模型，提出了联合可辨识条件：表示可辨识性依赖谱分离性质，转移可辨识性与条件分布非退化变化相关。该理论为学习可解释、可泛化的世界模型提供了重要基础，并启发了可控动力学建模的新方向。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.22999v1",
+      "source": "arxiv",
+      "title": "WCM: World-Cognition Model for Generalizable Human-Robot Interaction",
+      "abstract": "Language agents can now interact fluently with users in software, but robots still struggle to bring comparable interaction to physical tasks. Current robot-control paradigms, including vision-language-action policies and world-model-based planners, are mainly optimized for instruction execution, leaving users with little visibility into why an action is chosen and few mechanisms to redirect, correct, or teach the robot through interaction. To solve this problem, we present the World-Cognition Model (WCM), a human-centered embodied agent built on the SLAK architecture (Sensing, Logic, Action, and Knowledge) and an asynchronous runtime. SLAK separates perception, reasoning, control, and memory, while the runtime allows reasoning, dialogue, and execution to proceed concurrently. WCM further introduces a human-in-the-loop teaching mode that enables users to interactively teach the robot difficult or long-horizon tasks. Teaching episodes and autonomous task rollouts are refined into chain-of-thought supervision to continually improve the model. WCM achieves a 73.8% average success rate across nine real-world human-robot interaction tasks, including tasks held out from CoT fine-tuning and a long-horizon task learned through teaching.",
+      "authors": [
+        "Yuzhen Chen",
+        "KC Zhou"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "published": "2026-07-25T02:27:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.22999v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "world-cognition model for embodied agents interacting with physical world",
+      "llm_evidence_cn": "面向具身智能的世界认知模型",
+      "llm_evidence": "面向具身智能的世界认知模型",
+      "canonical_evidence": "面向具身智能的世界认知模型",
+      "llm_tldr_en": "WCM introduces a human-centered world model (the World-Cognition Model) that separates perception, reasoning, control, and memory to enable interactive and explainable robot behavior in physical tasks.",
+      "llm_tldr_cn": "该论文针对现有机器人控制范式（如VLAs和世界模型规划器）缺乏可解释性和交互性问题，提出了世界认知模型（WCM）。WCM基于SLAK架构（感知、逻辑、动作、知识）和异步运行时，将感知、推理、控制和记忆分离，支持推理、对话和执行交错的运行时，从而提升人机交互的透明度和可纠正性。实验表明该模型在通用化人机交互任务中的有效性。",
+      "llm_tldr": "该论文针对现有机器人控制范式（如VLAs和世界模型规划器）缺乏可解释性和交互性问题，提出了世界认知模型（WCM）。WCM基于SLAK架构（感知、逻辑、动作、知识）和异步运行时，将感知、推理、控制和记忆分离，支持推理、对话和执行交错的运行时，从而提升人机交互的透明度和可纠正性。实验表明该模型在通用化人机交互任务中的有效性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.23602v1",
+      "source": "arxiv",
+      "title": "Action from Adjacent Set in Physical Space Outperforms the Best Prediction in World Models",
+      "abstract": "Controllers based on sampling and latent world models assign a predicted terminal cost to each candidate action sequence, choose the minimum, execute its first action block, and replan. This rule can fail even when the terminal cost perfectly and accurately reflects the true task objective in the physical world. Residual prediction error can give an infeasible sequence an anomalously low cost, and a larger proposal pool gives such errors more chances to outrank feasible alternatives. We call this conditional failure proposal overgeneration. In Cube candidate execution audits, increasing the total proposal budget from 72 to 288 reduces the feasibility of selection by minimum latent cost from .375 to .062 for position targets and from .344 to .031 for targets defined by position and yaw, although every larger pool contains a feasible sequence. We introduce Adjacent Set Action Reconstruction (ASAR). Among proposals with low cost, ASAR measures density from standardized early action prefixes and reconstructs a full sequence from an adjacent set with a light anchor from the sequence with minimum cost. On a Carry and Release evaluation set of 75 queries, Kernel ASAR improves event completion success over matching selection by 28.0, 24.0, and 18.7 percentage points under latent cost and by 18.7, 20.0, and 17.3 points under a trajectory reachability cost at 72, 144, and 288 proposals. Analysis of finite proposal pools characterizes selection risk from the lower tail, separation by a related radius support statistic, and sequence containment under an explicit local feasibility condition.",
+      "authors": [
+        "Liangyu Li",
+        "Qingwen Liu",
+        "Mingqing Liu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-26T11:11:23+00:00",
+      "link": "https://arxiv.org/pdf/2607.23602v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "world model for action selection in physical space",
+      "llm_evidence_cn": "基于世界模型的动作选择",
+      "llm_evidence": "基于世界模型的动作选择",
+      "canonical_evidence": "基于世界模型的动作选择",
+      "llm_tldr_en": "This paper identifies failure modes in world model-based controllers and proposes an adjacent-set action selection method.",
+      "llm_tldr_cn": "基于世界模型的控制器因预测误差可能导致次优动作。本文发现\"提议过度生成\"问题，即更大候选池增加异常低代价序列被选中的概率。提出从相邻集合中选择动作，在物理空间实验中优于标准最小成本选择，为世界模型控制提供改进方向。",
+      "llm_tldr": "基于世界模型的控制器因预测误差可能导致次优动作。本文发现\"提议过度生成\"问题，即更大候选池增加异常低代价序列被选中的概率。提出从相邻集合中选择动作，在物理空间实验中优于标准最小成本选择，为世界模型控制提供改进方向。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.25918v1",
+      "source": "arxiv",
+      "title": "DC-WAM: Dynamic-Centric Visual Supervision and Reasoning for World-Action Models",
+      "abstract": "World-Action Models (WAMs) augment robot policies with future visual prediction, but it remains unclear what the visual modality should learn for control. While photorealistic future prediction provides dense supervision, it also incurs substantial computation and can allocate capacity to texture, illumination, and background variations that are only weakly related to action selection. Recent efficient WAM variants suggest that the main benefit of the video branch may not lie in the rendered future itself, but in the control-relevant visual representations induced during training. In this work, we revisit future video prediction from a dynamic-centric perspective and ask whether an existing RGB-based WAM can be redirected from appearance-dominated reconstruction toward interaction-induced visual dynamics without introducing additional modality-specific predictions or online inputs at deployment. We propose DC-WAM, a dynamic-centric WAM framework that redistributes supervision and computation in the RGB video branch. At the supervision level, DC-WAM combines temporal-difference flow matching with trajectory-guided weighting, emphasizing dense temporal changes and localized regions where the gripper, manipulated objects, and contact areas move. At the reasoning level, DynaRoute predicts token-wise dynamic relevance and converts it into an attention bias, guiding the model toward control-relevant future tokens. Experiments in simulation and on real-world manipulation tasks show that DC-WAM consistently improves policy performance, especially under out-of-distribution perturbations in lighting, object appearance, and background texture.",
+      "authors": [
+        "Haoyuan Ji",
+        "Lingxiang Fan",
+        "Shang Su",
+        "Yinqiao Lu",
+        "Mengkai Shi",
+        "Jun Gao",
+        "Shuo Feng"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-28T16:08:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.25918v1",
+      "tags": [
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "world-action model with dynamic-centric visual supervision",
+      "llm_evidence_cn": "动态中心的视觉监督世界动作模型",
+      "llm_evidence": "动态中心的视觉监督世界动作模型",
+      "canonical_evidence": "动态中心的视觉监督世界动作模型",
+      "llm_tldr_en": "DC-WAM redirects world-action models from appearance-dominated to dynamic-centric visual prediction, focusing on control-relevant representations to reduce computation and improve efficiency.",
+      "llm_tldr_cn": "该论文探讨了世界动作模型（WAM）中视觉模态应学习何种控制相关信息的问题。提出动态中心视角，将现有RGB-based WAM从外观主导的未来预测重定向至与动作选择更相关的动态特征学习。通过分析WAM变体，证明视频分支的主要益处在于训练过程中诱导的控制相关视觉表示，而非渲染的未来帧本身。",
+      "llm_tldr": "该论文探讨了世界动作模型（WAM）中视觉模态应学习何种控制相关信息的问题。提出动态中心视角，将现有RGB-based WAM从外观主导的未来预测重定向至与动作选择更相关的动态特征学习。通过分析WAM变体，证明视频分支的主要益处在于训练过程中诱导的控制相关视觉表示，而非渲染的未来帧本身。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.20417v2",
+      "source": "arxiv",
+      "title": "ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion",
+      "abstract": "3D Gaussian Splatting (3DGS) achieves high-quality novel-view synthesis by optimizing freely placed primitives in 3D and adaptively densifying them in under-reconstructed regions. However, this scene-adaptive capacity allocation is largely lost in existing feed-forward 3DGS methods, which commonly regress Gaussians at input pixels and lift them along camera rays. Such pixel-aligned formulations make the number and placement of primitives depend on image resolution and input viewpoints rather than scene complexity, resulting in dense and often redundant Gaussian sets. We present ATSplat, a feed-forward 3DGS framework that restores the adaptive allocation capability of 3DGS optimization through Adaptive 3D Tokens. ATSplat first lifts coarse patch-level depth and camera cues into sparse 3D anchor tokens, forming a compact scaffold of the scene. Each token is then regressed into local Gaussians with learnable 3D offsets, decoupling primitive placement from input image grids. An Adaptive Token Expansion module predicts a token-level uncertainty score, supervised by rendering error maps, and selectively expands high-uncertainty tokens through learnable expansion layers. This sparse-to-adaptive formulation enables ATSplat to concentrate primitives in challenging regions while maintaining a compact representation. Experiments on two representative datasets, RealEstate10K and DL3DV, show that ATSplat achieves state-of-the-art rendering quality while reducing the number of Gaussians by more than $5.7\\times$ compared with dense feed-forward 3DGS methods. From 12 input images at $512 \\times 960$ resolution, ATSplat completes reconstruction in less than a second using a single commercial GPU, and renders high-quality novel views at 1136 FPS ($512 \\times 960$) with only 311K Gaussians.",
+      "authors": [
+        "In Cho",
+        "Jeonghwan Cho",
+        "Mijin Yoo",
+        "Gim Hee Lee",
+        "Seon Joo Kim"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-22T17:54:44+00:00",
+      "link": "https://arxiv.org/pdf/2607.20417v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "feed-forward 3D Gaussian Splatting for scene reconstruction",
+      "llm_evidence_cn": "前馈3D高斯泼溅用于场景重建",
+      "llm_evidence": "前馈3D高斯泼溅用于场景重建",
+      "canonical_evidence": "前馈3D高斯泼溅用于场景重建",
+      "llm_tldr_en": "ATSplat restores adaptive capacity allocation in feed-forward 3DGS via adaptive tokens, improving compactness and quality.",
+      "llm_tldr_cn": "现有前馈3DGS方法丢失了自适应容量分配能力，导致冗余。ATSplat通过自适应3D令牌（Adaptive 3D Tokens）恢复该能力，先提升粗粒度表示再精细优化。在多个数据集上实现更紧凑且高质量的新视图合成，为高效场景重建提供新思路。",
+      "llm_tldr": "现有前馈3DGS方法丢失了自适应容量分配能力，导致冗余。ATSplat通过自适应3D令牌（Adaptive 3D Tokens）恢复该能力，先提升粗粒度表示再精细优化。在多个数据集上实现更紧凑且高质量的新视图合成，为高效场景重建提供新思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.23758v1",
+      "source": "arxiv",
+      "title": "RoadVGGT: Road-Structure-Aware Feed-Forward Road Surface Reconstruction",
+      "abstract": "Large-scale road surface reconstruction supports high-definition mapping, autonomous-driving perception, annotation, and simulation. Existing road-specialized optimization methods can produce high-quality road representations, but they typically require per-scene training and scene-dependent coverage design around the driving trajectory, limiting scalable reconstruction over newly collected roads. To address these limitations, we introduce RoadVGGT, a road-structure-aware feed-forward framework that reconstructs compact Gaussian road surfaces without test-time per-scene optimization. RoadVGGT uses a geometric foundation model to exploit multi-view images together with provided pose and depth observations, and predicts dense pixel-aligned Gaussian attributes through a learned Gaussian head. To make these dense predictions usable for large road surfaces, we align them into a consistent metric world coordinate system and fuse redundant Gaussians on the road-aligned XY plane through confidence-weighted grid fusion. Category-aware grouping and road--sidewalk junction protection further control fusion around vulnerable road structures. The resulting representation supports RGB and semantic bird's-eye-view maps, elevation estimation, and novel view synthesis. RoadVGGT eliminates the need for per-scene optimization in prior methods, reconstructs complete road surfaces with a compact Gaussian representation, and improves image quality, semantic mapping, and elevation accuracy. Extensive experiments demonstrate the potential of geometric foundation models for scalable feed-forward road surface reconstruction.",
+      "authors": [
+        "Han Jiao",
+        "Chen Liu",
+        "Jiakai Sun",
+        "Zhanjie Zhang",
+        "Mengyuan Yang",
+        "Yimeng Li",
+        "Mofan Zhou",
+        "Kun Zhan",
+        "Lei Zhao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-26T17:09:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.23758v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "feed-forward road surface reconstruction using Gaussian representation",
+      "llm_evidence_cn": "基于高斯表示的前馈式路面重建",
+      "llm_evidence": "基于高斯表示的前馈式路面重建",
+      "canonical_evidence": "基于高斯表示的前馈式路面重建",
+      "llm_tldr_en": "RoadVGGT uses a geometric foundation model and multi-view images to reconstruct compact Gaussian road surfaces in a feed-forward manner without per-scene optimization.",
+      "llm_tldr_cn": "该论文针对现有道路专用优化方法需要每场景训练且无法可扩展的问题，提出了RoadVGGT——一种道路结构感知的前馈框架。利用几何基础模型从多视角图像、姿态和深度观测直接预测密集像素对齐的高斯属性，无需测试时优化，实现紧凑的路面表示重建。在自动驾驶相关数据集上验证了其高效性和可扩展性。",
+      "llm_tldr": "该论文针对现有道路专用优化方法需要每场景训练且无法可扩展的问题，提出了RoadVGGT——一种道路结构感知的前馈框架。利用几何基础模型从多视角图像、姿态和深度观测直接预测密集像素对齐的高斯属性，无需测试时优化，实现紧凑的路面表示重建。在自动驾驶相关数据集上验证了其高效性和可扩展性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.21910v1",
+      "source": "arxiv",
+      "title": "TRW: TRACE-RealWorld---An Auditable Consistency Contract for World Models as Materialized Views",
+      "abstract": "TRACE-RealWorld addresses a core data-management problem: maintaining an actionable materialized view over a continuously changing physical world when reads of the base state are priced, delayed, heterogeneous, and fallible. Its data-management contributions are a commitment-level validity abstraction for materialized predictions; consequence-conditioned adaptive view maintenance; transaction-style, dependency-scoped compensation for commitments invalidated after authorization; and append-only provenance supporting exact replay. The work builds directly on materialized-view maintenance, adaptive stream synchronization, transaction recovery, sagas, data freshness, and provenance. The end-to-end Flood-SAR evaluation treats sensing as physical data acquisition and measures freshness, verification cost, stale reads, recovery scope, restoration failure, and replayability through six pre-registered questions with held-out seeds. The contribution is therefore not a new predictive model, but a consistency, recovery, and accountability contract for deploying learned world representations as operational data systems.",
+      "authors": [
+        "Edward Y. Chang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.DB"
+      ],
+      "published": "2026-07-24T02:31:10+00:00",
+      "link": "https://arxiv.org/pdf/2607.21910v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "auditable consistency contract for world models as materialized views",
+      "llm_evidence_cn": "世界模型作为物化视图的可审计一致性契约",
+      "llm_evidence": "世界模型作为物化视图的可审计一致性契约",
+      "canonical_evidence": "世界模型作为物化视图的可审计一致性契约",
+      "llm_tldr_en": "TRACE-RealWorld treats world models as materialized views and proposes a data-management framework with validity abstraction, adaptive maintenance, and provenance for maintaining consistency in a dynamic physical world.",
+      "llm_tldr_cn": "该论文从数据管理视角处理世界模型的一致性问题，将世界模型视为物理世界的物化视图。提出承诺级有效性抽象、后果条件自适应视图维护、事务风格依赖域补偿以及附加型溯源机制，确保在读取具有价格、延迟、异构和不可靠性的真实世界状态时，世界模型更新保持可审计和高保真。在Flood-SAR评估中展示了端到端效果。",
+      "llm_tldr": "该论文从数据管理视角处理世界模型的一致性问题，将世界模型视为物理世界的物化视图。提出承诺级有效性抽象、后果条件自适应视图维护、事务风格依赖域补偿以及附加型溯源机制，确保在读取具有价格、延迟、异构和不可靠性的真实世界状态时，世界模型更新保持可审计和高保真。在Flood-SAR评估中展示了端到端效果。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.24403v1",
+      "source": "arxiv",
+      "title": "GenSplatCodec: Feed-Forward Gaussian Splatting Compression via One-Step Diffusion",
+      "abstract": "Feed-forward 3D Gaussian Splatting (3DGS) enables scalable scene reconstruction without per-scene optimization, yet produces dense Gaussians that are costly to store and transmit. Existing feed-forward Gaussian compression methods formulate decoding as deterministic representation recovery, which becomes inadequate at low bitrates when high-frequency textures and view-dependent appearance are discarded. Although generative models offer a promising alternative, using them as standalone post-processing decouples generation from the transmitted scene structure, thereby compromising cross-view consistency. To address these limitations, we propose GenSplatCodec, a unified feed-forward Gaussian codec that reformulates low-bitrate Gaussian compression as geometry-guided generative decoding. We present a detail-aware feed-forward Gaussian coding scheme within a dual-stream formulation, where the resulting compact Gaussian structural stream is complemented by a lightweight reference appearance stream. We further introduce a geometry-guided one-step generative decoding approach that jointly exploits decoded structural and appearance cues through hierarchical geometry control to reconstruct high-fidelity and view-consistent novel views. Finally, we develop a three-stage optimization strategy that stabilizes the learning of the unified codec and adapts the generative decoder to codec-derived structural and appearance cues. Extensive experiments across multiple datasets demonstrate that GenSplatCodec consistently achieves superior rate-distortion (RD) performance over existing methods.",
+      "authors": [
+        "Qiang Hu",
+        "Zhenlong Wu",
+        "Lei Huang",
+        "Zihan Zheng",
+        "Xiaoyun Zhang",
+        "Wenjun Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-27T13:20:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.24403v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "feed-forward Gaussian splatting compression for 3D scene representation",
+      "llm_evidence_cn": "前馈式三维高斯泼溅压缩用于场景表示",
+      "llm_evidence": "前馈式三维高斯泼溅压缩用于场景表示",
+      "canonical_evidence": "前馈式三维高斯泼溅压缩用于场景表示",
+      "llm_tldr_en": "GenSplatCodec reformulates low-bitrate Gaussian compression as a one-step diffusion process, generating coherent cross-view texture and appearance while preserving structural information.",
+      "llm_tldr_cn": "该论文针对前馈式3DGS在低比特率下因丢弃高频纹理和视角依赖外观而导致的表示质量问题，提出了GenSplatCodec统一编解码器。将低比特率高斯压缩重新表述为一步扩散过程，在解码时生成与传输场景结构一致的纹理和外观，保证跨视角一致性。实验表明在极低比特率下仍能重建高质量的新视角渲染结果。",
+      "llm_tldr": "该论文针对前馈式3DGS在低比特率下因丢弃高频纹理和视角依赖外观而导致的表示质量问题，提出了GenSplatCodec统一编解码器。将低比特率高斯压缩重新表述为一步扩散过程，在解码时生成与传输场景结构一致的纹理和外观，保证跨视角一致性。实验表明在极低比特率下仍能重建高质量的新视角渲染结果。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.22864v1",
+      "source": "arxiv",
+      "title": "Spatial-IQ: Deconstructing Spatial Intelligence via Hierarchical Capability Tests",
+      "abstract": "Multimodal large language models (MLLMs) excel at visual interpretation but fail on spatial reasoning tasks that humans solve reliably. Existing benchmarks evaluate these models as black boxes, limiting their ability to identify the underlying causes of lower performance: when a model fails a spatial reasoning task, it remains difficult to ascertain whether the hurdle is perceptual, such as recognizing object boundaries, or cognitive, such as reasoning about occlusion to infer hidden geometry. We introduce Spatial-IQ, a hierarchical diagnostic framework that decomposes object counting in stacked 3D structures into 9 perceptual and cognitive sub-tasks organized by the developmental stages of human spatial cognition, with mental rotation as an additional target probe. Using NVIDIA Isaac Sim, we procedurally generated a diverse dataset of roughly 80,000 stacked 3D structures with per-task ground truth. We evaluate models across three output formats (free-response text, multiple-choice images, and image editing) alongside a human baseline. The Spatial-IQ framework shows that top-performing models often succeed at the target task (object counting) without succeeding on the lower-level sub-tasks intended to support it, and that models differ in how much of these hierarchical chains they preserve, often revealing shortcut behavior that raw target-task accuracy alone would obscure. Finally, we demonstrate that training models with chain-of-thought (CoT) supervision over our hierarchical sub-tasks, combined with reinforcement learning with verifiable rewards, significantly improves both spatial consistency across sub-tasks and target-task accuracy, supporting the value of the proposed decomposition as both a diagnostic tool and a training signal.",
+      "authors": [
+        "Patrick Rim",
+        "Tom Long",
+        "Ekta Prashnani",
+        "Ruth Rosenholtz",
+        "Ben Boudaoud",
+        "Peter Xenopoulos",
+        "Alex Wong",
+        "Joohwan Kim",
+        "Jae-Hyun Jung"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-24T19:09:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.22864v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "hierarchical diagnostic framework for spatial reasoning in 3D structures",
+      "llm_evidence_cn": "三维结构中空间推理的分层诊断框架",
+      "llm_evidence": "三维结构中空间推理的分层诊断框架",
+      "canonical_evidence": "三维结构中空间推理的分层诊断框架",
+      "llm_tldr_en": "Spatial-IQ decomposes spatial reasoning into 9 sub-tasks to diagnose failures in MLLMs, focusing on object counting in stacked 3D structures with mental rotation.",
+      "llm_tldr_cn": "多模态大语言模型在空间推理任务中常失败但原因不明。本文提出Spatial-IQ，一个分层诊断框架，将堆叠3D结构中的物体计数分解为9个感知和认知子任务，基于人类空间认知发展阶段。实验揭示了模型在不同子任务上的具体失败模式，为提升空间智能提供诊断工具。",
+      "llm_tldr": "多模态大语言模型在空间推理任务中常失败但原因不明。本文提出Spatial-IQ，一个分层诊断框架，将堆叠3D结构中的物体计数分解为9个感知和认知子任务，基于人类空间认知发展阶段。实验揭示了模型在不同子任务上的具体失败模式，为提升空间智能提供诊断工具。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.25971v1",
+      "source": "arxiv",
+      "title": "SplatStream: Fine Granular Scalable Gaussian Splatting for Adaptive 3D Scene Streaming",
+      "abstract": "Dynamic 3D Gaussian Splatting (GS) enables high quality real-time rendering for immersive media, but its large representation size and frame-wise redundancy create significant challenges for adaptive streaming. This paper presents SplatStream, a fine granular scalable Gaussian splatting framework for dynamic 3D scene delivery. The proposed method decompose the GS scenes into quality and resolution layers, and introduces inter-layer predictive coding to achieve scalability. For temporal direction, B-frames are introduced to have temporal quality scalability. A lightweight cross-layer transformer based predictor is utilized for both cross layer and temporal predictions. In addition, a volume-opacity based importance measure is used for fine-grained Gaussian packetization, allowing visually important primitives to be transmitted earlier for progressive refinement. Finally, the scalable GS bitstream is mapped to an MPEG-DASH compatible sub-representation structure, enabling fine granular adaptive, low-latency delivery of dynamic Gaussian splatting content under bandwidth-varying conditions.",
+      "authors": [
+        "Muhammad Talha",
+        "William Gordon",
+        "Sajid Umair",
+        "Anique Akhtar",
+        "Joel Jung"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "eess.SP"
+      ],
+      "published": "2026-07-28T16:52:45+00:00",
+      "link": "https://arxiv.org/pdf/2607.25971v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "scalable 3D scene streaming with Gaussian Splatting",
+      "llm_evidence_cn": "基于高斯泼溅的可扩展3D场景流媒体",
+      "llm_evidence": "基于高斯泼溅的可扩展3D场景流媒体",
+      "canonical_evidence": "基于高斯泼溅的可扩展3D场景流媒体",
+      "llm_tldr_en": "Presents SplatStream, a fine granular scalable GS framework for adaptive 3D scene streaming.",
+      "llm_tldr_cn": "针对动态3DGS表示量大和帧间冗余的问题，提出SplatStream可扩展框架。该方法通过将GS场景分解为质量和分辨率层，引入层间预测编码，并利用轻量跨层变换器进行预测。实验证明在自适应流传输中大幅降低带宽需求的同时保持高质量渲染。",
+      "llm_tldr": "针对动态3DGS表示量大和帧间冗余的问题，提出SplatStream可扩展框架。该方法通过将GS场景分解为质量和分辨率层，引入层间预测编码，并利用轻量跨层变换器进行预测。实验证明在自适应流传输中大幅降低带宽需求的同时保持高质量渲染。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.23181v1",
+      "source": "arxiv",
+      "title": "Towards Dual-Brain Minimal Sufficient Representation for Vision-Language Navigation",
+      "abstract": "Vision-and-Language Navigation in continuous environments (VLN-CE) requires an agent to ground language in egocentric observations and plan in unseen scenes. Although recent multimodal large models and world-model-based methods have improved navigation, they often preserve excessive task-irrelevant detail, weakening generalization and increasing computational burden. We propose BrainNav, a navigation framework grounded in the Principle of Minimal Sufficiency. BrainNav consists of three components: a Logical Anchor Model that implements instruction-aware selective perception to suppress environmental noise, a Minimalist Constraint Alignment module that serves as a compact cross-modal bottleneck, efficiently synchronizing discrete linguistic intent with continuous latent dynamics while filtering out redundant information, and a Compression World Model that predicts action-conditioned states within a condensed, low-rank latent space. These modules align semantic intent with spatial perception, enhancing the agent's robustness and efficiency in complex tasks. Experiments show that BrainNav improves over prior SOTA by 2.0 % / 1.0 in SR/SPL on R2R-CE val-unseen and 0.94 % / 0.78 on RxR-CE val-unseen. These results indicate that minimally sufficient world representations provide an effective foundation for robust VLN.",
+      "authors": [
+        "Yihao Wu",
+        "Chenyi Xu",
+        "Liqi Yan",
+        "Chenhuan Cai",
+        "Geyong Min",
+        "Bin Lin",
+        "Fangli Guan",
+        "Jianhui Zhang",
+        "Pan Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-25T12:26:47+00:00",
+      "link": "https://arxiv.org/pdf/2607.23181v1",
+      "tags": [
+        "keyword:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "mentions world-model-based methods for navigation",
+      "llm_evidence_cn": "提到了基于世界模型的导航方法",
+      "llm_evidence": "提到了基于世界模型的导航方法",
+      "canonical_evidence": "提到了基于世界模型的导航方法",
+      "llm_tldr_en": "Proposes BrainNav for VLN-CE, using world-model-based methods with minimal sufficiency to improve generalization.",
+      "llm_tldr_cn": "针对视觉语言导航中现有世界模型方法保留过多无关细节的问题，提出BrainNav框架。该方法基于最小充分性原则，通过逻辑锚点模型实现指令感知选择性感知，并利用最小约束对齐模块作为紧凑跨模态瓶颈。实验表明该方法能有效提升导航泛化能力并降低计算负担。",
+      "llm_tldr": "针对视觉语言导航中现有世界模型方法保留过多无关细节的问题，提出BrainNav框架。该方法基于最小充分性原则，通过逻辑锚点模型实现指令感知选择性感知，并利用最小约束对齐模块作为紧凑跨模态瓶颈。实验表明该方法能有效提升导航泛化能力并降低计算负担。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.25236v1",
+      "source": "arxiv",
+      "title": "VisualPatchWorld: Code World Models as Latent Structured Representations for Planning",
+      "abstract": "Different research lines use the term world model in different ways, yet they share a common aim: to capture how the world evolves under action in a form that supports perception, simulation, and planning. Two prominent realizations are neural predictors that learn dynamics in continuous vector spaces, and hand-built physics engines that expose explicit state and physical laws. Neural predictors scale from data but leave the form of the dynamics implicit; physics engines are inspectable and editable but difficult to construct at scale. We introduce VisualPatchWorld (VPW), which represents world dynamics as code. VPW first selects a qualitative dynamical form with short active probes, then fits that form's free parameters from recorded state-action traces by minimizing multi-step prediction error. The resulting programs can be rolled forward like a simulator, inspected in source form, and used inside model-predictive control; image-derived scene graphs can supply the live state at replan time. Across comparisons with prior code-based world models, VPW attains 69.0% mean planning success and exceeds the strongest code baseline by 23.5 points. The largest gains arise when choosing the correct qualitative dynamics is essential. Under the same planner, the induced models approach ground-truth engine success on navigation and grasp-rich control; a residual gap remains for contact-rich pushing, and checking a shortlist of promising plans in the engine closes most of that gap. These results establish a practical route toward automatically constructed code world models that are useful for planning. Code is available at https://github.com/HKBU-KnowComp/VisualPatchWorld/.",
+      "authors": [
+        "Jiaxin Bai",
+        "Jiaxuan Xiong"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.RO"
+      ],
+      "published": "2026-07-28T03:23:47+00:00",
+      "link": "https://arxiv.org/pdf/2607.25236v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "code world models for planning",
+      "llm_evidence_cn": "基于代码的世界模型用于规划",
+      "llm_evidence": "基于代码的世界模型用于规划",
+      "canonical_evidence": "基于代码的世界模型用于规划",
+      "llm_tldr_en": "VisualPatchWorld represents world dynamics as code, enabling inspectable and editable models that combine neural flexibility with symbolic clarity.",
+      "llm_tldr_cn": "世界模型传统上分为神经隐式模型和显式物理引擎，各有局限。本文提出VisualPatchWorld，将世界动力学表示为代码：先用主动探测选择定性动力学形式，再拟合参数。该方法结合了神经网络的灵活性和代码的可编辑、可解释性，在规划任务中表现出色，为可理解世界模型提供了新范式。",
+      "llm_tldr": "世界模型传统上分为神经隐式模型和显式物理引擎，各有局限。本文提出VisualPatchWorld，将世界动力学表示为代码：先用主动探测选择定性动力学形式，再拟合参数。该方法结合了神经网络的灵活性和代码的可编辑、可解释性，在规划任务中表现出色，为可理解世界模型提供了新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.25912v1",
+      "source": "arxiv",
+      "title": "SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models",
+      "abstract": "Vision-Language-Action (VLA) models have shown strong potential for general robot manipulation, but most existing models rely on 2D visual-language backbones and lack fine-grained 3D understanding of target objects, especially under occlusion, pose variation, scale changes, and precise spatial interaction. We propose an object-centric 3D representation alignment framework built upon $π_0$, using SAM3D as a frozen 3D teacher to provide target-object 3D priors during training. Specifically, we localize task-relevant objects with object recognition models, generate corresponding object masks, and use SAM3D to extract dense object-level 3D representations, which are aligned with intermediate visual features of $π_0$. This enables the policy to internalize target-object 3D information while preserving the original RGB-language-to-action inference pipeline without requiring depth, point clouds, masks, SAM3D, or additional 3D modules at test time. Simulation experiments show consistent improvements, achieving 99.1\\% on LIBERO and an average length of 4.11 on CALVIN. Real-world experiments further demonstrate that our method is particularly effective in long-horizon manipulation scenarios where the robot must focus on different target objects across multiple subtasks.",
+      "authors": [
+        "Zonghe Liu",
+        "Shanyuan Jie",
+        "Xiaoquan Sun",
+        "Chen Cao",
+        "Zetian Xu",
+        "Zongsheng Liu",
+        "Jiayu Chen"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-28T16:05:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.25912v1",
+      "tags": [
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "object-centric 3D representation alignment for spatial reasoning in VLA models",
+      "llm_evidence_cn": "面向对象3D表示对齐以增强VLA模型空间推理",
+      "llm_evidence": "面向对象3D表示对齐以增强VLA模型空间推理",
+      "canonical_evidence": "面向对象3D表示对齐以增强VLA模型空间推理",
+      "llm_tldr_en": "Aligns robot policy visual features with SAM3D object representations to improve 3D spatial understanding.",
+      "llm_tldr_cn": "现有视觉-语言-动作模型缺乏细粒度3D理解，尤其遮挡和姿态变化下。本文提出使用SAM3D作为冻结教师，提取对象级3D表示与策略网络中间特征对齐。实验表明该方法增强了机器人操作精确性和鲁棒性，相关工作表明3D表示对齐可提升空间推理能力。",
+      "llm_tldr": "现有视觉-语言-动作模型缺乏细粒度3D理解，尤其遮挡和姿态变化下。本文提出使用SAM3D作为冻结教师，提取对象级3D表示与策略网络中间特征对齐。实验表明该方法增强了机器人操作精确性和鲁棒性，相关工作表明3D表示对齐可提升空间推理能力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
