@@ -6,68 +6,56 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-29
-- 运行时间：2026-07-29 21:29:17 UTC
+- 最新运行日期：2026-07-30
+- 运行时间：2026-07-30 21:06:40 UTC
 - 运行状态：成功
-- 本次总论文数：16
+- 本次总论文数：12
 - 精读区：6
-- 速读区：10
+- 速读区：6
 
 ### 今日简报（AI）
-今日精读聚焦视频世界模型与渐进式3D场景生成，《Wonder: Video World Model Done Better》获得满分10分，《PlanCraft》9分紧随其后。最值得关注的方向是视频世界模型的多模态泛化能力，以及建筑师启发的三维住宅渐进生成方法。建议普通读者优先精读这两篇高分论文，洞悉世界模型与3D内容生成的前沿趋势。
-- 详情：[/202607/29/README](/202607/29/README)
+今日聚焦世界模型与无限3D场景生成，两篇满分论文突破大尺度世界状态数据集和室内全景生成。最值得精读《CG-World》构建大规模世界状态基准，《Genie Sim PanoWorld》实现从全景建模到无限室内3D世界的闭环管线。建议下一步关注这两个方向的实际应用验证及与现有仿真平台的集成。
+- 详情：[/202607/30/README](/202607/30/README)
 
 ### 精读区论文标签
-1. [Wonder: Video World Model Done Better](/202607/29/2607.26037v1-wonder-video-world-model-done-better)  
+1. [CG-World: A Large-Scale World-State Dataset and Protocol for World Models](/202607/30/2607.26452v1-cg-world-a-large-scale-world-state-dataset-and-protocol-for-world-models)  
    标签：评分：10.0/10、query:world-model
-   evidence：通用视频世界模型支持实时交互式探索
-2. [PlanCraft: Sketch, Refine, and Furnish for Architect-Inspired Progressive 3D Residential Scene Generation](/202607/29/2607.23491v1-plancraft-sketch-refine-and-furnish-for-architect-inspired-progressive-3d-residential-scene-generation)  
+   evidence：面向世界模型的大规模世界状态数据集
+2. [Genie Sim PanoWorld: An Infinite Indoor 3D World Generation Pipeline via Panoramic Scene Modeling and Simulation](/202607/30/2607.26646v1-genie-sim-panoworld-an-infinite-indoor-3d-world-generation-pipeline-via-panoramic-scene-modeling-and-simulation)  
+   标签：评分：10.0/10、query:world-model
+   evidence：从单张全景图生成无限室内3D世界
+3. [InterOCF: Spatio-Temporal 2D-3D Interaction for Camera-Only 4D Occupancy Forecasting](/202607/30/2607.24431v1-interocf-spatio-temporal-2d-3d-interaction-for-camera-only-4d-occupancy-forecasting)  
    标签：评分：9.0/10、query:world-model
-   evidence：渐进式3D住宅场景生成
-3. [DreamStyle3D: Efficient 3D Stylized Asset Generation via Dual-Attention Disentanglement](/202607/29/2607.24721v1-dreamstyle3d-efficient-3d-stylized-asset-generation-via-dual-attention-disentanglement)  
-   标签：评分：9.0/10、query:world-model
-   evidence：通过双注意力解耦的高效3D风格化资产生成
-4. [On the Identifiability of Controlled World Models](/202607/29/2607.22430v2-on-the-identifiability-of-controlled-world-models)  
+   evidence：4D占用预测作为未来3D场景的世界模型
+4. [PanoLess: Environment Reconstruction from Partial Reflective Views](/202607/30/2607.25362v1-panoless-environment-reconstruction-from-partial-reflective-views)  
    标签：评分：8.0/10、query:world-model
-   evidence：受控世界模型的可辨识性理论
-5. [WCM: World-Cognition Model for Generalizable Human-Robot Interaction](/202607/29/2607.22999v1-wcm-world-cognition-model-for-generalizable-human-robot-interaction)  
+   evidence：从反射视图重建环境场景
+5. [FPSGen: Flexible Point Cloud Scene Generation with BEV-Supported Transport Flows](/202607/30/2607.26645v1-fpsgen-flexible-point-cloud-scene-generation-with-bev-supported-transport-flows)  
    标签：评分：8.0/10、query:world-model
-   evidence：面向具身智能的世界认知模型
-6. [Action from Adjacent Set in Physical Space Outperforms the Best Prediction in World Models](/202607/29/2607.23602v1-action-from-adjacent-set-in-physical-space-outperforms-the-best-prediction-in-world-models)  
+   evidence：通过BEV先验进行点云场景生成
+6. [CinemaTraj: Composing Atomic Camera Trajectories for 3D Scenes with LLM Agents](/202607/30/2607.26910v1-cinematraj-composing-atomic-camera-trajectories-for-3d-scenes-with-llm-agents)  
    标签：评分：8.0/10、query:world-model
-   evidence：基于世界模型的动作选择
+   evidence：基于语言的空间推理用于3D场景相机轨迹规划
 
 ### 速读区论文标签
-1. [DC-WAM: Dynamic-Centric Visual Supervision and Reasoning for World-Action Models](/202607/29/2607.25918v1-dc-wam-dynamic-centric-visual-supervision-and-reasoning-for-world-action-models)  
-   标签：评分：8.0/10、query:world-model
-   evidence：动态中心的视觉监督世界动作模型
-2. [ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion](/202607/29/2607.20417v2-atsplat-compact-feed-forward-3d-gaussian-splatting-with-adaptive-token-expansion)  
+1. [3DGBGS: 3D Granular Ball Gaussian Splatting for Compact Novel View Synthesis](/202607/30/2607.26578v1-3dgbgs-3d-granular-ball-gaussian-splatting-for-compact-novel-view-synthesis)  
    标签：评分：7.0/10、query:world-model
-   evidence：前馈3D高斯泼溅用于场景重建
-3. [TRW: TRACE-RealWorld---An Auditable Consistency Contract for World Models as Materialized Views](/202607/29/2607.21910v1-trw-trace-realworld---an-auditable-consistency-contract-for-world-models-as-materialized-views)  
+   evidence：基于颗粒球高斯溅射的紧凑新视角合成
+2. [SpatialQ: Understanding 3D Gaussian Splatting Scene Quality via Visual-based MLLM](/202607/30/2607.26595v1-spatialq-understanding-3d-gaussian-splatting-scene-quality-via-visual-based-mllm)  
    标签：评分：7.0/10、query:world-model
-   evidence：世界模型作为物化视图的可审计一致性契约
-4. [Spatial-IQ: Deconstructing Spatial Intelligence via Hierarchical Capability Tests](/202607/29/2607.22864v1-spatial-iq-deconstructing-spatial-intelligence-via-hierarchical-capability-tests)  
-   标签：评分：7.0/10、query:world-model
-   evidence：三维结构中空间推理的分层诊断框架
-5. [Towards Dual-Brain Minimal Sufficient Representation for Vision-Language Navigation](/202607/29/2607.23181v1-towards-dual-brain-minimal-sufficient-representation-for-vision-language-navigation)  
-   标签：评分：7.0/10、query:world-model
-   evidence：提到了基于世界模型的导航方法
-6. [VisualPatchWorld: Code World Models as Latent Structured Representations for Planning](/202607/29/2607.25236v1-visualpatchworld-code-world-models-as-latent-structured-representations-for-planning)  
-   标签：评分：7.0/10、query:world-model
-   evidence：基于代码的世界模型用于规划
-7. [SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models](/202607/29/2607.25912v1-sam3d-guided-object-centric-representation-alignment-for-vision-language-action-models)  
-   标签：评分：7.0/10、query:world-model
-   evidence：面向对象3D表示对齐以增强VLA模型空间推理
-8. [RoadVGGT: Road-Structure-Aware Feed-Forward Road Surface Reconstruction](/202607/29/2607.23758v1-roadvggt-road-structure-aware-feed-forward-road-surface-reconstruction)  
+   evidence：通过3DGS场景质量评估实现场景理解
+3. [Visual Relocalization from Sparse Views in Aliased and Low-Texture Environments via Novel View Synthesis](/202607/30/2607.22147v1-visual-relocalization-from-sparse-views-in-aliased-and-low-texture-environments-via-novel-view-synthesis)  
    标签：评分：6.0/10、query:world-model
-   evidence：基于高斯表示的前馈式路面重建
-9. [GenSplatCodec: Feed-Forward Gaussian Splatting Compression via One-Step Diffusion](/202607/29/2607.24403v1-gensplatcodec-feed-forward-gaussian-splatting-compression-via-one-step-diffusion)  
+   evidence：使用3D高斯溅射的新视角合成进行视觉重定位
+4. [Offline Vision-Language Navigation with Geometric Goal Localization for Outdoor Environments](/202607/30/2607.22226v1-offline-vision-language-navigation-with-geometric-goal-localization-for-outdoor-environments)  
    标签：评分：6.0/10、query:world-model
-   evidence：前馈式三维高斯泼溅压缩用于场景表示
-10. [SplatStream: Fine Granular Scalable Gaussian Splatting for Adaptive 3D Scene Streaming](/202607/29/2607.25971v1-splatstream-fine-granular-scalable-gaussian-splatting-for-adaptive-3d-scene-streaming)  
+   evidence：几何目标定位用于空间推理
+5. [A Unified Stereo Geometry Estimation Framework for Disparity and Surface Normal](/202607/30/2607.24024v1-a-unified-stereo-geometry-estimation-framework-for-disparity-and-surface-normal)  
    标签：评分：6.0/10、query:world-model
-   evidence：基于高斯泼溅的可扩展3D场景流媒体
+   evidence：联合估计视差和表面法线的统一立体几何框架
+6. [Spline-Based Boundary Representations for Sparse View Reconstruction and Simulation Using Isogeometric Analysis](/202607/30/2607.26234v1-spline-based-boundary-representations-for-sparse-view-reconstruction-and-simulation-using-isogeometric-analysis)  
+   标签：评分：6.0/10、query:world-model
+   evidence：基于样条边界表示的稀疏视图三维重建
 
 
 <div class="dpr-home-promo-card">
