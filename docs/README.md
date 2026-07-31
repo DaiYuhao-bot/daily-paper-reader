@@ -6,56 +6,62 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-30
-- 运行时间：2026-07-30 21:06:40 UTC
+- 最新运行日期：2026-07-31
+- 运行时间：2026-07-31 21:12:13 UTC
 - 运行状态：成功
-- 本次总论文数：12
+- 本次总论文数：14
 - 精读区：6
-- 速读区：6
+- 速读区：8
 
 ### 今日简报（AI）
-今日聚焦世界模型与无限3D场景生成，两篇满分论文突破大尺度世界状态数据集和室内全景生成。最值得精读《CG-World》构建大规模世界状态基准，《Genie Sim PanoWorld》实现从全景建模到无限室内3D世界的闭环管线。建议下一步关注这两个方向的实际应用验证及与现有仿真平台的集成。
-- 详情：[/202607/30/README](/202607/30/README)
+今日共读14篇，精读6篇、速读8篇，重点聚焦三维视觉与生成技术。最值得关注的是9.0分的《4DHumanDiff》实现文本生成一致动态人类，以及《ViewMind3D》无训练3D问答。建议普通读者优先浏览这两篇精读，再按兴趣速读无人机深度估计等方向。
+- 详情：[/202607/31/README](/202607/31/README)
 
 ### 精读区论文标签
-1. [CG-World: A Large-Scale World-State Dataset and Protocol for World Models](/202607/30/2607.26452v1-cg-world-a-large-scale-world-state-dataset-and-protocol-for-world-models)  
-   标签：评分：10.0/10、query:world-model
-   evidence：面向世界模型的大规模世界状态数据集
-2. [Genie Sim PanoWorld: An Infinite Indoor 3D World Generation Pipeline via Panoramic Scene Modeling and Simulation](/202607/30/2607.26646v1-genie-sim-panoworld-an-infinite-indoor-3d-world-generation-pipeline-via-panoramic-scene-modeling-and-simulation)  
-   标签：评分：10.0/10、query:world-model
-   evidence：从单张全景图生成无限室内3D世界
-3. [InterOCF: Spatio-Temporal 2D-3D Interaction for Camera-Only 4D Occupancy Forecasting](/202607/30/2607.24431v1-interocf-spatio-temporal-2d-3d-interaction-for-camera-only-4d-occupancy-forecasting)  
+1. [4DHumanDiff: Direct Text-to-4DGS Generation for Consistent 360-Degree Dynamic Humans](/202607/31/2607.27634v1-4dhumandiff-direct-text-to-4dgs-generation-for-consistent-360-degree-dynamic-humans)  
    标签：评分：9.0/10、query:world-model
-   evidence：4D占用预测作为未来3D场景的世界模型
-4. [PanoLess: Environment Reconstruction from Partial Reflective Views](/202607/30/2607.25362v1-panoless-environment-reconstruction-from-partial-reflective-views)  
+   evidence：直接从文本生成动态人物4D高斯表示，属于三维场景生成核心任务
+2. [ViewMind3D: Modular View-Aware Inference for Training-Free 3D-QA](/202607/31/2607.28442v1-viewmind3d-modular-view-aware-inference-for-training-free-3d-qa)  
+   标签：评分：9.0/10、query:world-model
+   evidence：完全免训练的框架，在多视角观测上进行三维空间推理且无需三维重建
+3. [GLAM-SLAM: Real-time Gaussian Large-scale Mapping via Flow Densification and Spatial Decomposition](/202607/31/2607.21416v1-glam-slam-real-time-gaussian-large-scale-mapping-via-flow-densification-and-spatial-decomposition)  
    标签：评分：8.0/10、query:world-model
-   evidence：从反射视图重建环境场景
-5. [FPSGen: Flexible Point Cloud Scene Generation with BEV-Supported Transport Flows](/202607/30/2607.26645v1-fpsgen-flexible-point-cloud-scene-generation-with-bev-supported-transport-flows)  
+   evidence：实时高斯溅射SLAM用于大规模户外3D重建
+4. [Learning to Understand Body Language from Flight through Robust 3D Avatar Placing](/202607/31/2607.27865v1-learning-to-understand-body-language-from-flight-through-robust-3d-avatar-placing)  
    标签：评分：8.0/10、query:world-model
-   evidence：通过BEV先验进行点云场景生成
-6. [CinemaTraj: Composing Atomic Camera Trajectories for 3D Scenes with LLM Agents](/202607/30/2607.26910v1-cinematraj-composing-atomic-camera-trajectories-for-3d-scenes-with-llm-agents)  
+   evidence：显式使用轻量几何世界模型在无人机场景中放置三维化身
+5. [MonoVoc: Decoupling Geometry and Semantics for Lightweight Monocular Open-Vocabulary 3D Gaussians](/202607/31/2607.28300v1-monovoc-decoupling-geometry-and-semantics-for-lightweight-monocular-open-vocabulary-3d-gaussians)  
    标签：评分：8.0/10、query:world-model
-   evidence：基于语言的空间推理用于3D场景相机轨迹规划
+   evidence：基于单目视频的开放词汇3D场景理解，轻量级3D高斯
+6. [ROAD: Reciprocal-Objective Alignment of Discriminative Semantics for 3D Shape Generation](/202607/31/2607.28581v1-road-reciprocal-objective-alignment-of-discriminative-semantics-for-3d-shape-generation)  
+   标签：评分：8.0/10、query:world-model
+   evidence：将判别式语义先验迁移到扩散Transformer，降低3D生成训练成本
 
 ### 速读区论文标签
-1. [3DGBGS: 3D Granular Ball Gaussian Splatting for Compact Novel View Synthesis](/202607/30/2607.26578v1-3dgbgs-3d-granular-ball-gaussian-splatting-for-compact-novel-view-synthesis)  
+1. [Robostral Navigate](/202607/31/2607.20785v2-robostral-navigate)  
    标签：评分：7.0/10、query:world-model
-   evidence：基于颗粒球高斯溅射的紧凑新视角合成
-2. [SpatialQ: Understanding 3D Gaussian Splatting Scene Quality via Visual-based MLLM](/202607/30/2607.26595v1-spatialq-understanding-3d-gaussian-splatting-scene-quality-via-visual-based-mllm)  
+   evidence：视觉语言导航在图像空间预测路点，需要空间推理
+2. [DAPM: UAV Monocular Depth Estimation from Any Height, Pitch, Roll and FOV](/202607/31/2607.21438v1-dapm-uav-monocular-depth-estimation-from-any-height-pitch-roll-and-fov)  
    标签：评分：7.0/10、query:world-model
-   evidence：通过3DGS场景质量评估实现场景理解
-3. [Visual Relocalization from Sparse Views in Aliased and Low-Texture Environments via Novel View Synthesis](/202607/30/2607.22147v1-visual-relocalization-from-sparse-views-in-aliased-and-low-texture-environments-via-novel-view-synthesis)  
+   evidence：无人机场景的单目深度估计，是三维场景理解的关键
+3. [PointCHR: Point Cloud Analysis via Curvature-Aware Hyperbolic Rectification](/202607/31/2607.24052v1-pointchr-point-cloud-analysis-via-curvature-aware-hyperbolic-rectification)  
+   标签：评分：7.0/10、query:world-model
+   evidence：通过双曲空间曲率感知矫正改善点云分析，助力三维场景理解
+4. [SeasonStereo: Robust Dense Stereo Matching for Multi-Date Satellite Imagery via Generative AI](/202607/31/2607.27139v1-seasonstereo-robust-dense-stereo-matching-for-multi-date-satellite-imagery-via-generative-ai)  
+   标签：评分：7.0/10、query:world-model
+   evidence：面向多日期卫星影像的密集立体匹配，通过合成季节变化实现精确三维重建
+5. [MeshFM: 2D Features Are All You Need for 3D Shape Understanding](/202607/31/2607.27592v1-meshfm-2d-features-are-all-you-need-for-3d-shape-understanding)  
+   标签：评分：7.0/10、query:world-model
+   evidence：将2D基础模型特征蒸馏到3D，支撑形状理解与下游任务
+6. [Convolutional Neural Shading for High-Quality 3D Reconstruction from Multi-View Images](/202607/31/2607.28132v1-convolutional-neural-shading-for-high-quality-3d-reconstruction-from-multi-view-images)  
+   标签：评分：7.0/10、query:world-model
+   evidence：基于卷积神经着色的多视图三维重建
+7. [JEPADepth: Masked Predictive Representation Learning for Self-Supervised Monocular Depth Estimation](/202607/31/2607.26600v1-jepadepth-masked-predictive-representation-learning-for-self-supervised-monocular-depth-estimation)  
    标签：评分：6.0/10、query:world-model
-   evidence：使用3D高斯溅射的新视角合成进行视觉重定位
-4. [Offline Vision-Language Navigation with Geometric Goal Localization for Outdoor Environments](/202607/30/2607.22226v1-offline-vision-language-navigation-with-geometric-goal-localization-for-outdoor-environments)  
+   evidence：自监督单目深度估计结合掩码预测表示学习，在无额外标签下提升深度精度
+8. [Articulated Object Reconstruction from Rest-State Observation](/202607/31/2607.27749v1-articulated-object-reconstruction-from-rest-state-observation)  
    标签：评分：6.0/10、query:world-model
-   evidence：几何目标定位用于空间推理
-5. [A Unified Stereo Geometry Estimation Framework for Disparity and Surface Normal](/202607/30/2607.24024v1-a-unified-stereo-geometry-estimation-framework-for-disparity-and-surface-normal)  
-   标签：评分：6.0/10、query:world-model
-   evidence：联合估计视差和表面法线的统一立体几何框架
-6. [Spline-Based Boundary Representations for Sparse View Reconstruction and Simulation Using Isogeometric Analysis](/202607/30/2607.26234v1-spline-based-boundary-representations-for-sparse-view-reconstruction-and-simulation-using-isogeometric-analysis)  
-   标签：评分：6.0/10、query:world-model
-   evidence：基于样条边界表示的稀疏视图三维重建
+   evidence：从单一静息状态重建铰接物体的三维几何与运动学结构
 
 
 <div class="dpr-home-promo-card">
