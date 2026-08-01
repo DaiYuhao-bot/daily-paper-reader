@@ -1,0 +1,223 @@
+Title: Geometric 2D Scene Graph Generation
+
+URL Source: https://arxiv.org/pdf/2607.22325v1
+
+Published Time: Mon, 27 Jul 2026 00:48:39 GMT
+
+Number of Pages: 12
+
+Markdown Content:
+# Geometric 2D Scene Graph Generation 
+
+Christoph Jahn 1,2 a , Urs Waldmann 2 b and Bastian Goldlücke 2 c
+
+> 1
+
+Mercedes-Benz AG, Sindelfingen, Germany 
+
+> 2
+
+Department of Computer and Information Science, University of Konstanz, Konstanz, Germany christoph.jahn@mercedes-benz.com, {urs.waldmann, bastian.goldluecke}@uni-konstanz.de Keywords: Assembly Instructions, Assembly Robotics, Geometric Scene Graph Generation, Adjacency Matrix Prediction, Graph Convolutions. Abstract: In production processes for consumer products, assembly instructions are essential not only for planning but also for executing the production process. Likewise in robotics, it is crucial for an assembly robot to understand how components fit together and can be assembled. To facilitate these tasks, we contribute a method for constructing scene graphs to represent and characterize assembly relationships between components. Our approach does not rely on semantic data and is capable of handling a very small dataset. To realize this, the output of a Faster R-CNN model is used to create geometric representations, which are then processed by a transformer architecture to generate an adjacency matrix. This matrix serves as input to a Siamese network that uses message passing based on an attentional graph convolutional network (aGCN) architecture to characterize the connections between the components. We validate our method on a study dataset of toy model components which can be assembled into transportation vehicles. 
+
+# 1 INTRODUCTION 
+
+Scene graph generation is a widely used technique for visual scene understanding, allowing scenes in both 2D images and 3D data to be described through objects and the relationships between them (Johnson et al., 2015; Sadeghi and Farhadi, 2011; Lu et al., 2016; Wald et al., 2020; Dhamo et al., 2021; Sarkar et al., 2023). Objects are rep-resented as nodes, while their relationships are depicted as edges, typically expressed in the form of subject–predicate–object triplets. This repre-sentation improves contextual reasoning by mod-eling spatial and functional object constellations. In the context of assembly modeling, a distinction can be made between generating scene graphs for assembled and disassembled configurations. This work focuses on disassembled parts and presents a method for transforming such components (see Fig. 1b) into a scene graph representation (see Fig. 1c). This provides a solution to the practical  
+
+> a
+
+https://orcid.org/0009-0004-1511-9191  
+
+> b
+
+https://orcid.org/0000-0002-1626-9253  
+
+> c
+
+https://orcid.org/0000-0003-3427-4029 
+
+problem of determining which components belong together and how they are connected. End-to-end approaches to scene graph predic-tion (Cong et al., 2023), which simultaneously detect objects, identify their relationships and predict relationship triplets directly from an im-age, require a substantial amount of training data and a carefully annotated triplet-labeled dataset, which is not feasible in our envisioned scenario. As a remedy, previous works adopt a two-step pipeline, where in a first step objects or region proposals are detected with pre-trained networks before further processing (Li et al., 2017; Krähen-bühl et al., 2017; Yang et al., 2018a; Johnson et al., 2015; Sadeghi and Farhadi, 2011; Lu et al., 2016; Zellers et al., 2018). Our approach is closely aligned with the two-step method proposed by Jianwei Yang et al. (Yang et al., 2018a), where an adjacency matrix is predicted as an intermediate representation. This matrix encodes connectivity of all pairs of components and serves as backbone of the resulting graph. However, Yang et al. (Yang et al., 2018a) rely on semantic priors to construct the adjacency ma-arXiv:2607.22325v1 [cs.CV] 24 Jul 2026 (a) Vehicles (Plane, Train, Boat, Car) (b) Model Input: Parts (c) Model Output: Graph (d) Primitives  
+
+> Figure 1: To evaluate our approach, we conduct a case study (Fig. 1a–d) where the model is trained on components from three toy vehicles (train, boat, plane) and must construct a geometric scene graph for an unseen vehicle (car). The graph encodes both the assembly structure and sequence. Training data is augmented with simple geometric primitives to improve generalization (Fig. 1d).
+
+trix. While semantic cues often provide valuable contextual relationships and structural hints that support graph inference (Yang et al., 2018a; Cong et al., 2023), they are frequently unavailable or uninformative in practical applications such as furniture or vehicle assembly. We therefore ex-pand upon (Yang et al., 2018a) and propose a three-step prediction process that explicitly sep-arates the structural prediction of the adjacency matrix from the semantic tasks of predicting com-ponent labels, permutations, and assembly se-quences in a transformer-based architecture. This separation allows the model to first infer struc-tural relationships independently, before reason-ing about semantic or procedural aspects. Contributions. We address the challenge of scene graph prediction in component assemblies under small dataset conditions and without se-mantic information. To overcome the limitations of conventional one- and two-step methods, we propose a three-step architecture that separates structural inference from semantic and procedu-ral reasoning. Our transformer-based model pre-dicts adjacency matrices purely from geometric cues, enabling robust graph construction with minimal labeled data even when semantic cues are missing or sparse. Permutations ensure that each component is used only once, while se-quences determine the correct assembly order. All label predictions are conditioned on the same adjacency matrix, ensuring consistent modeling of binary relations. To further encourage robust generalization to unknown configurations, we aug-ment the training data with primitive shapes de-rived from color and geometry to emphasize rel-evant geometric features (Gong et al., 2021). In addition, both the transformer architecture and the loss function are adapted to more effectively capture and supervise the structural relationships between geometric objects within the scene graph. We create a custom dataset of toy vehicle assem-blies and validate our approach on a case study involving unseen vehicle types, see fig. 1. 
+
+# 2 RELATED WORK 
+
+In recent years, several approaches have been developed to address the task of scene graph generation. Traditional methods employ back-bones such as Mask R-CNN, Faster R-CNN or DETR (Yang et al., 2018a; Cong et al., 2023) to generate the objects for the actual scene graph generation network. These net-works are typically based on recurrent neural networks (RNNs) (Krähenbühl et al., 2017), LSTMs (Zellers et al., 2018), or more recently, transformer architectures (Cong et al., 2023; Li et al., 2023; Sortino et al., 2023; Yang et al., 2023b), message passing mechanisms and atten-tion models (Yang et al., 2018a; Yang et al., 2018b) enabling the integration of contextual in-formation. Such context helps components inter-pret their surroundings and supports the recogni-tion of graph structures, which is crucial for im-proving prediction accuracy. Two-step scene graph models first detect ob-jects and then infer graph structures (Krähenbühl et al., 2017; Yang et al., 2018a). In contrast, one-step methods jointly predict object classes, bounding boxes, and relationships, integrating de-tection into a single pipeline (Cong et al., 2023). These models often treat the task as set predic-tion, allowing unordered subject–relation–object triplets without assuming a fixed output and avoiding explicit prediction of non-existent rela-tions. Unlike set prediction models like RelTR (Cong et al., 2023), our architecture uses adjacency ma-trices instead of predefined subject–object pairs. This has two main advantages. First, set pre-diction typically requires large, fully annotated datasets. In contrast, our method evaluates all possible pairwise connections, ensuring coverage without dense annotations. Although predict-ing scene graphs via set prediction is feasible, it would require much more data compared to ad-jacency matrix prediction with low-dimensional features (Hoang et al., 2023; Rezatofighi et al., 2017; Rezatofighi et al., 2020). Second, set predic-tion may miss rare relations or waste output slots on false positives. Due to our limited dataset, we adopt a three-stage pipeline (see Fig. 2) to reduce model complexity and enable subtask specializa-tion. Semantic and visual information is typically processed via MLP backends to predict and char-acterize object relationships (Cong et al., 2023). Semantic knowledge is widely used across models (Yang et al., 2018a; Cong et al., 2023; Lu et al., 2016). The influence of semantic in-put varies: it can play a central role (Yang et al., 2018a) or be less prominent (Cong et al., 2023). While it is helpful for label prediction, too much can overshadow visual features. Handling graph structures poses a challenge, as models must distinguish between bipartite and unidirectional graphs. We use unidirectional graphs for subject–object relations, with adja-cency matrix rows as subjects and columns as ob-jects. This avoids ambiguity in role assignment, which bidirectional graphs can cause. To address imbalanced node and edge frequencies, focal loss and sampling strategies are commonly used (Lin et al., 2020; Tang et al., 2020). Scene graph generation methods besides GCNs (Xu et al., 2020) and transformers (Cong et al., 2023; Zhu et al., 2021; Li et al., 2021) also include diffusion models (Liu et al., 2024). However, diffusion models are primarily designed for continuous, generative tasks and typically require large-scale datasets and extensive train-ing resources. Our method employs a trans-former, whose self-attention mechanism inher-ently reflects an adjacency-matrix-like structure. Unlike GCN methods with predefined graphs, we first predict the adjacency matrix before applying a GCN. Scene graphs are applied in domains like autonomous driving (Zhang et al., 2024), robotics (Ni et al., 2024) and visual question answering (Lin et al., 2020; Tang et al., 2019). 
+
+# 3 GEOMETRIC GRAPH GENERATION MODEL 
+
+Overall, our model outlined in Fig. 2 follows a three-step pipeline, with each step representing a core architectural component. The input of an image with disassembled components is pro-cessed over three steps to the output of a corre-sponding geometric scene graph. First, a Faster R-CNN (Yang et al., 2018a) detects component bounding boxes and geometric features get ex-tracted. As object classes are not identified, the approach remains robust to unknown parts by avoiding semantic dependencies. Second, a trans-former with cross-attention predicts binary rela-tions based on geometric relationships. Object– subject labels are not used at this stage, allow-ing structural reasoning to rely solely on geome-try. Third, a Siamese network with GCN-based message passing predicts relation labels, permuta-tions and assembly sequences for all components. The predicted relations in final the scene graph can be interpreted as an assembly instruction (see Fig. 1c). 
+
+# 3.1 Object detection and feature extraction 
+
+The input of this first step of the model is an im-age of the disassembled components. A Faster R-CNN extracts an individual image for each component, which is processed by a pretrained Mask R-CNN to extract its colored shape. The pre-processing increases robustness by minimiz-ing background, shading and feature detail arti-facts (Ilyas et al., 2019; Sehwag et al., 2020). It also allows augmentations with geometric primi-tives (see Fig. 1d), which broaden the data distri-bution more effectively than direct graph augmen-tations. The resulting shape images are passed to a pretrained Vision Transformer (ViT-B/32) (Dosovitskiy et al., 2021) to generate a feature vector with feature dimension F.
+
+# 3.2 Transformer predicting the adjacency matrix 
+
+The following section details the transformer-based graph construction (see Fig. 2 - Part II). The high amount of connections and the imbal-ance of negative pairs present a modeling chal-lenge. To address this, we split the graph into smaller subgraphs and later merge partial predic-Figure 2: Our three-step pipeline: First, component bounding boxes and geometric features are extracted without semantic labels; second, a transformer predicts the binary relations based on geometric relations; third, a GCN-based Siamese network infers relation labels, permutations and assembly sequences of each connected pair in the adjacency matrix. 
+
+tions (Mao et al., 2022; Wang et al., 2021; Correia et al., 2023). We reduce the amount of compo-nents used in the prediction of a subgraph with an encoder–decoder transformer. Cross-attention with all given components ensures each subgraph prediction maintains global context (see Fig. 2). Our contextual strategy aims to improve ac-curacy by incorporating neighbor and global graph information. Since transformers emphasize global context and may underutilize local spatial cues (Raghu et al., 2021), we apply depthwise con-volutions along feature and sequence dimensions before transformer encoding (Kim et al., 2024) to enhance the input with localized spatial features. For this, the positional encodings are reshaped to match the expected convolutional input format. Two encoders are employed to generate the input embeddings for the decoder using self-attention, where queries (Q), keys (K) and values (V ) are derived from the input repre-sentations. For all components of the ve-hicle graph Qall , Kall , Vall ∈ Rn×F and for the reduced components of the vehicle subgraph 
+
+Qsubgraph , Ksubgraph , Vsubgraph ∈ Rs×F two self-attention encoder are used, where n and s rep-resent the sequences and F the feature dimen-sion of the transformer. To enhance graph un-derstanding and capture interactions between all graph features, the cross-attention variable 
+
+e is introduced as an edge-augmented attention score within the Edge Graph Transformer (EGT) framework (Hussain et al., 2021), enabling non-linear modeling of edge-to-edge relationships ac-cording to CrossAtt a(Qa, K′
+
+> a
+
+,V ′
+
+> a
+
+) = σ
+
+(
+
+QaK′
+
+> aT
+
+√dk
+
++ ei, j
+
+)
+
+V ′
+
+> a
+
+. (1) Here, CrossAtt a denotes the cross-attention oper-ation and Qa denotes the encoder embedding of the reduced parts, which serves as the target in-put for the decoder. The matrices K′ 
+
+> a
+
+and V ′ 
+
+> a
+
+rep-resent the encoder embeddings of all parts and are used as the source input to the decoder. The attention scores ei, j = MLP ([ qi ∥ k j]) are derived by passing the i-th row qi of Qa and the j-th row with k j of K′ 
+
+> a
+
+through an MLP and σ denotes the softmax function. Inference is run on sub-samples, each repre-senting one subgraph. In a post-processing step, the resulting partial predictions are merged into a full n × n adjacency matrix. This aggregation cap-tures a certain fraction of relevant connections, given by the percentage of draws compared to to-tal number of ordered component pairs, which is set as a confidence threshold hyperparameter P .
+
+# 3.3 Characterization of geometric relationships 
+
+The predicted adjacency matrix is passed to a Siamese network with GCN-based message pass-ing to classify component relationships, see fig. 2. This step predicts labels describing assembly ac-tions, permissible permutations and the correct assembly sequence. A challenge lies in handling permutation constraints, e.g. a wheel may only be assembled with one screw. Encoding such logic directly into the binary adjacency matrix would require the attention mechanism to distinguish valid from invalid permutations. However, current transformer models strug-gle with such contextual constraint learning (Lee et al., 2019; Huang et al., 2021). Therefore, permutations are predicted separately as individ-ual component labels. All positive connections in the predicted adjacency matrix are extracted and each component pair xi, x j is processed by the Siamese encoder. The encoder output is combined with the corresponding GCN messages, where all features are propagated using the pre-dicted adjacency matrix (Yang et al., 2018a; Chen and He, 2021). In detail, the output predictions ˆyi j are com-puted according to 
+
+ˆyi j = MLP (xiU ∥ x jU ∥ V (Zi + Z j)) 
+
+where Z = WSX + softmax (attn (h)) ⊙ h
+
+and h = XW O + A(XW H ).
+
+(2) Above, we denote WO as the aggregation weight for all objects, WH as the neighbor aggregation weight and WS as the skip connection weight. The Siamese encoder weight is represented by U, while 
+
+V corresponds to the readout projection weight. The adjacency matrix of the graph is given by 
+
+A ∈ { 0, 1}n×n.In terms of operators and tensor representa-tions, attn indicates the linear attention projec-tion, ⊙ denotes element-wise multiplication, and 
+
+∥ represents vector concatenation. The classifier applied to node embeddings is denoted by MLP ,the node features are contained in X and the out-put of the graph convolutional network is repre-sented by Z.Finally, as a postprocessing step, the predicted permutations are used to filter the label and se-quence matrices, retaining only those connections that are consistent with valid assembly relation-ships between the labels and sequences. This al-lows the scene graph to be constructed as shown in figs. 1 and 2. 
+
+# 3.4 Loss functions 
+
+The following section presents the loss function used for the transformer component of the archi-tecture, while the GCN module employs a stan-dard cross-entropy loss. A key challenge is en-abling the model to understand graph structures, particularly how graph elements are related to one another based on their attributes and func-tional context. On small datasets models often overfit by memorizing artifacts or specific pat-terns. The core issue is that global node–edge relationships must be inferred from limited in-put, typically just component features. To en-hance graph reasoning, carefully designed aug-mentations, geometric cues and architectural bi-ases (e.g., local and edge-aware) are essential. Class imbalance is addressed using a focal loss Lfocal , which extends cross-entropy to empha-size difficult cases and helps the model capture complex structures despite skewed label distribu-tions (Cong et al., 2023). It is computed as 
+
+## Lfocal = yLpos + ( 1 − y)Lneg ,
+
+where Lpos = −α(1 − p)γ log (p + ε)
+
+and Lneg = −(1 − α)pγ log (1 − p + ε).
+
+(3) Above, we use the predicted probability p ∈ [0, 1],the binary ground truth y ∈ { 0, 1} for each en-try in the adjacency matrix, a weighting factor 
+
+α = 0.55 for the positive class, a focusing param-eter γ = 2.0, and a small constant ε = 10 −10 for numerical stability. To complement the binary focal loss, we ap-ply additional regularization. While contrastive losses are often used to align embeddings of nodes or edges from the same class (Khosla et al., 2020; Yang et al., 2023a), our experiments with local GCL and supervised contrastive loss (SCL) showed no improvement. A key limitation is the reliance of SCL on large batch sizes to distinguish positive pairs (You et al., 2020; Liu et al., 2022; Yang et al., 2023a; Khosla et al., 2020), which is unsuitable for our small vehicle dataset used in the case study. Instead, we use classical Laplacian regular-ization and a group loss. Both are applied to the transformer decoder embeddings prior to the MLP classification layer for the adjacency ma-trix. Laplacian regularization encourages smooth-ness by penalizing large embedding differences be-tween adjacent nodes (Zhang et al., 2019; Belkin et al., 2006) according to 
+
+## Llaplace = 1
+
+B
+
+> B
+
+# ∑
+
+> b=1
+
+Tr (H⊤ 
+
+> b
+
+LbHb), (4) where Hb is the transformer decoder embedding obtained before the MLP, and Lb = Db − Ab is the graph Laplacian computed from the diagonal de-gree matrix Db of the bth graph in the current training batch of size B, and the normalized, sym-metric adjacency matrix Ab, both available during training. The proposed group loss strengthens graph understanding and supports underrepresented classes (Elezi et al., 2020). For example, in ve-hicle graphs, common parts like wheels or screws are easy to classify due to clear geometrical struc-ture and frequency of occurrence. Attachment components however, appear less often and have ambiguous shapes. Grouping them thus improves semantic reasoning. In this example, if there is a component with low classification certainty then it is likely one of the attachment components. The group loss is computed according to 
+
+## Lgroup =
+
+(
+
+1
+
+N
+
+> N
+
+# ∑ 
+
+> xj=1
+
+σ(z j)M j − 1
+
+)2
+
+, (5) where σ(z j) denotes the sigmoid-activated logit for the j-th node x j, with N as the set of all nodes in the graph, indicating group membership and M j ∈ 0, 1 is a binary mask indicating whether node x j belongs to the group. Finally, all loss functions are summed with appropriate weights to obtain the final training objective. Here, in addition to the ones defined above, we also include a standard cross-entropy loss for multiclass classification for the Siamese network with GCN message passing. 
+
+# 4 EVALUATION 
+
+In this section, we evaluate the implementation of our model (see Section 3) using a dataset of four toy vehicles illustrated in Fig. 1. Due to the limited availability of labeled data, this work is based on a small dataset and should be under-stood as a conceptual study. The architectural parameters are detailed in Fig. 2. 
+
+# 4.1 Graph dataset and training strategy 
+
+The training dataset includes three vehicle types: a train, an airplane and a boat. The evaluation dataset contains a previously unseen vehicle—a car (see Fig. 1a). Each vehicle consists of specific components (casing, top, bottom, front, screw, wheel) forming a graph structure that encodes part relationships. In total, four distinct graphs are used. The graph size n denotes the number of components in the largest graph within the dataset, i.e. the graph with the most compo-nents. The largest graph in the case study of the toy dataset, corresponding to the train, contains 
+
+n = 13 components (plane=8, boat=9, car=13). This corresponds to the size of the predicted ad-jacency matrix. The ground truth includes the graph structure as a binary adjacency matrix and GCN output labels for component relations, permutations and assembly sequence, all as 13 × 13 matrices. We define three labels for the component relations (to join, to insert and to screw), four permuta-tion types, such as single connection only (e.g., for screws) or multiple connections possible (e.g., for housing parts). We employ four sequence labels to represent four consecutive assembly steps. At-tachment parts (top, bottom, front) are encoded with binary masks and optimized via group loss. The transformer is trained from images of indi-vidual components which have been pre-extracted using the above Mask R-CNN pipeline. This way, we generate approximately 50 distinct instances of real-word image data available per component and vehicle. This is a very limited amount of data, which can easily lead to overfitting of a model as powerful as a transformer, as it can just memorize specific configurations (Rong et al., 2020; Fang et al., 2023). To address this, we augment the component input images with syn-thetically rendered input data we call primitives, while keeping the structural layout of the target output graph the same, see Fig.1d. For symmet-ric housing parts (Fig.1c – Part A), COCO shape templates (Lin et al., 2014) are used to render the inputs. In this way, we add 400 additional input images per component to the training data, and one more is generated with completely abstract shapes (circles/rectangles, see Fig.1d, bottom). 
+
+Table 1: Quantitative evaluation of our pipleline. We report accuracy (Acc.), mean recall (MeanR) and MCC on our validation and evaluation data. For a discussion of the results see Sec. 4.4.                                                
+
+> Validation Data I Validation Data II Evaluation Data Data Acc. MeanR MCC Acc. MeanR MCC Acc. MeanR MCC Binary 3x3 Matrices (30 Epochs) 96.4 93.9 88.4 95.2 92.8 85.1 91.3 88.1 75.9 Label GCN (10 Epochs) 98.0 97.9 97.0 97.9 98.1 96.9 97.2 96.3 95.6 Permutation GCN (10 Epochs) 97.8 97.2 96.8 98.7 98.7 98.2 95.3 92.7 93.3 Sequences GCN (20 Epochs) 94.0 91.5 92.2 96.9 95.0 95.6 82.6 77.3 75.9
+
+Figure 3: Quantitative results: Visualization of the mean recall (MeanR) on Validation I, Validation II and Evaluation. For further quantitative results see Tab. 1. For training, we then draw a total of 675 , 000 
+
+random sets of inputs per graph from both origi-nal and augmented sources. The training strategy also includes additional augmentation techniques: graph sizes and node layouts are randomly al-tered, adversarial perturbations are introduced and structural graph augmentations are applied. Every fourth graph is randomly downsampled to a smaller size to increase variance. To ensure diversity, we oversample so that both abstract shapes and real-world images each constitute 5% of the training dataset. 
+
+# 4.2 Implementation details 
+
+We use a pretrained ResNet-50 backbone for both Faster R-CNN and Mask R-CNN. Faster R-CNN is fine-tuned to detect six component classes: cas-ing, wheel, screw, front, bottom and top. Train-ing runs for 20 epochs using SGD (learning rate 0.005, momentum 0.9, weight decay 0.0005). Vi-sual features are extracted using the CLIP ViT-B/32 model; its 512-dimensional output is lin-early projected to 36 dimensions. We apply AdamW (learning rate 0.001, weight decay 0.001) and 0.1 dropout. To weight the different loss terms, we use 1.0 for the focal loss, 10 −2 for the group loss, and 2.5 · 10 −4 for the Laplacian regu-larization loss. A compact transformer (2 layers, 2 heads, hidden size 72) processes the to 36DIM linearly reduced CLIP features. An MLP maps se-quences of length 3 to a 3×3 adjacency matrix us-ing batch size 50. During postprocessing, we use a confidence threshold of P ≈ 98% to reconstruct the full adjacency matrix from the predicted sub-graphs. The Siamese network is trained sepa-rately using Adam (learning rate 0.001). The full model runs on a single Nvidia RTX 3060 GPU. 
+
+# 4.3 Evaluation metrics 
+
+Several scene graph generation tasks exist. In predicate classification (PredCLS) object labels and bounding boxes are given; only relationships must be predicted. Scene graph classification (SGCLS) adds object label prediction, while scene graph detection (SGDET) also requires bounding box prediction. Our task is closest to PredCLS— focusing on relationships—but differs from all three, as bounding boxes are also inferred (Cong et al., 2023). Assuming accurate detection via Faster R-CNN, we evaluate only the predicted graph struc-ture by comparing predicted and ground truth ad-jacency matrices. To address class imbalance, we report accuracy, mean recall and the Matthews Correlation Coefficient (MCC) (Tang et al., 2020; Chicco, 2021):                   
+
+> MCC =t p ×tn −f p ×f n
+> √(t p +f p )( t p +f n )( tn +f p )( tn +f n ).(6)
+
+# 4.4 Quantitative results and ablations 
+
+Due to the custom dataset, direct comparison with standard scene graph methods such as Mo-tifs, Graph R-CNN, or RelTR is not feasible, as these require fully triplet-labeled datasets (Yang et al., 2018a; Cong et al., 2023; Zellers et al., 2018). Instead, we assess our architecture via ab-lation studies. To analyze overfitting, we use two validation sets: one matching the training set and another with the same vehicles but different im-ages than used during training. A fourth, unseen vehicle serves as the evaluation set. The model performs well on both validation sets and yields reasonable results on the un-seen vehicle despite limited data (see Fig. 4 and Sec. 4.5). Geometric shape representations help align unseen samples with the training distribu-tion. Without them recognition of the unknown vehicle fails. Fig. 3 shows training dynamics: Overfitting occurs after a few epochs, as indicated by the de-clining red and yellow curves and the fluctuating blue and green curves in the bottom subfigure of Fig. 3. Primitive augmentations enhance ro-bustness. On the evaluation data the green curve (no loss regularization, EGT or depthwise convo-lutions) performs worse than the blue curve with all enhancements. But their influence is inher-ently limited, as only few parameters are added relative to the core Transformer and focal loss ar-chitecture. Performance is also sensitive to the data sampled graph constellations as shown by the divergence between the similarly configured yellow and blue curves (see bottom sub-figure of Fig. 3). We separately train models for adjacency, la-bel, permutation and sequence prediction to bet-ter focus on each task. As shown in Table 1 label classification performs best due to fewer classes. Permutation and sequence prediction each use four classes and are more challenging. Sequence prediction is particularly challenging, as individ-ual pairs lack sufficient information, requiring GCN-based message passing to capture relational context. As shown in Table 1, it yields the low-est accuracy and strongly depends on the quality of the adjacency matrices. Due to weak perfor-mance, the evaluation focuses on the individual models and following only in the binary predic-tion model. 
+
+# 4.5 Qualitative results 
+
+As shown in Fig. 4, it is notable that—even with only three training vehicles—the model gener-ates approximate predictions for an unseen vehi-cle and differentiates well between subjects and objects. Transformers typically require large datasets and identifying familiar components like wheels within unfamiliar graph structures is dif-ficult due to strong contextual bias. This study can be seen as conceptual exploration of improv-ing graph understanding in data-scarce settings. Rather than achieving strong results by overfit-ting to known vehicle types, we prioritize ap-proaches that target generalization. Fig. 4 shows a binary prediction of a directed graph. For in-stance as illustrated by the orange rectangles in Fig. 4, a screw is misidentified, and one casing is mistaken for both top and front parts, caus-ing cascading errors. The confusion matrix shows, that attachment and housing components are the hardest to classify correctly. 
+
+# 5 CONCLUSION 
+
+In this paper, we presented an approach for gener-ating scene graphs from a very small dataset with-out relying on semantic prior knowledge. This is crucial in component assembly, where many parts may belong to unseen categories and labeled data is not given. Notably, our method is capable of approximating relationships even for components outside the training distribution. However, the proposed approach has certain limitations. The 
+
+> Figure 4: Qualitative results - The unknown vehicle is shown at the top left, followed at the bottom by its binary ground truth (right) and the corresponding detections (left). The two orange rectangles indicate failure cases as discussed in section 4.5. Additionally, the confusion matrix of the evaluation dataset is presented to illustrate overall performance at the top right.
+
+reliance on a transformer-based architecture in-troduces increased model complexity and higher computational costs; its scalability is more suit-able for assembly tasks with larger numbers of components. Moreover, the separation between structural prediction and relational characteriza-tion can improve modularity and the accuracy of binary predictions of part membership, yet it can also lead to error propagation, as inaccura-cies in the predicted adjacency matrix negatively affect subsequent predictions of labels, permuta-tions, and sequences. Finally, despite the use of geometric cues for reasoning without semantic pri-ors, ambiguous or visually similar components re-main challenging, particularly in sparse or noisy input scenarios. Even with limited performance, these cases provide useful insights. But using datasets for data-driven approaches that are too small is not recommendable and the model would clearly ben-efit from a larger dataset, potentially enabling di-rect multiclass prediction. With sufficient data, set-based triplet prediction could be explored and compared to standard scene graph methods. Re-current GCNs and Siamese CNNs show potential for learning part relations and improving gener-alization on small datasets, especially when adja-cency can be learned directly from the model. Fi-nally, this work forms a basis for 3D scene graph generation, with 3D data offering richer features to reduce input ambiguity and enhance prediction accuracy. 
+
+# ACKNOWLEDGEMENTS 
+
+U.W. and B.G. acknowledge funding by the Deutsche Forschungsgemeinschaft (DFG, Ger-man Research Foundation) under Germany’s Ex-cellence Strategy – EXC 2117 – 422037984. 
+
+# REFERENCES 
+
+Belkin, M., Niyogi, P., and Sindhwani, V. (2006). Manifold regularization: A geometric framework for learning from labeled and unlabeled exam-ples. In Journal of Machine Learning Research, volume 7, pages 2399–2434. JMLR.org. Chen, X. and He, K. (2021). Exploring simple siamese representation learning. In Proceedings of the IEEE/CVF Conference on Computer Vi-sion and Pattern Recognition (CVPR), pages 15750–15758. Chicco, D. (2021). Evaluating classification models in the context of imbalanced datasets: the applica-tion of matthews correlation coefficient. Com-puter Methods and Programs in Biomedicine, 211:106447. Cong, Y., Yang, M. Y., and Rosenhahn, B. (2023). Reltr: Relation transformer for scene graph generation. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 1234–1243. Correia, G., Ribeiro, B., et al. (2023). Sparse trans-formers for graph representation learning. arXiv preprint arXiv:2301.10980. Dhamo, H., Manhardt, F., Navab, N., and Tombari, F. (2021). Graph-to-3d: End-to-end genera-tion and manipulation of 3d scenes using scene graphs. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 10134–10143. Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weis-senborn, D., Zhai, X., Unterthiner, T., De-hghani, M., Minderer, M., Heigold, G., Gelly, S., Uszkoreit, J., and Houlsby, N. (2021). An image is worth 16x16 words: Transformers for image recognition at scale. In International Conference on Learning Representations. Elezi, I., Vascon, S., Torcinovich, A., Pelillo, M., and Leal-Taixé, L. (2020). The group loss for deep metric learning. In Proceedings of the Euro-pean Conference on Computer Vision (ECCV). Springer, Cham. Fang, Y., Li, Y., Wang, Y., Zhang, Y., and Liu, S. (2023). Dropmessage: Unifying message pass-ing and regularization for graph neural networks. arXiv preprint arXiv:2302.08772. Gong, C., Wang, D., Li, M., Chandra, V., and Liu, Q. (2021). Keepaugment: A simple information-preserving data augmentation approach. In Pro-ceedings of the IEEE/CVF Conference on Com-puter Vision and Pattern Recognition (CVPR), pages 1055–1064. Hoang, V. T., Jeon, H. J., You, E. S., Yoon, Y., Jung, S., and Lee, O. J. (2023). Graph representation learning and its applications: A survey. Sensors, 23(8):4168. Huang, C., Liu, Z., Qiu, X., Song, L., Liu, Q., and Zhou, J. (2021). Permutation equivariance of transformers and its applications. arXiv preprint arXiv:2106.07479. Hussain, M. S., Zaki, M. J., and Subramanian, D. (2021). Global self-attention as a replace-ment for graph convolution. arXiv preprint arXiv:2108.03348. Ilyas, A., Santurkar, S., Tsipras, D., Engstrom, L., Tran, B., and Madry, A. (2019). Adversarial examples are not bugs, they are features. In Advances in Neural Information Processing Sys-tems, volume 32. Johnson, J., Krishna, R., Stark, M., Li, L.-J., Shamma, D. A., Bernstein, M., and Fei-Fei, L. (2015). Image retrieval using scene graphs. In Proceedings of the IEEE Conference on Com-puter Vision and Pattern Recognition (CVPR), pages 3668–3678. Khosla, P., Teterwak, P., Wang, C., Sarna, A., Tian, Y., Isola, P., Maschinot, A., Liu, C., and Krish-nan, D. (2020). Supervised contrastive learning. In Advances in Neural Information Processing Systems (NeurIPS). Kim, S., Choi, K., Lee, J., Kim, D., and Kim, S. (2024). Depth-wise convolutions in vision trans-formers for efficient training on small datasets. arXiv preprint arXiv:2403.19394. Krähenbühl, D., Xu, Y., Zhu, C. B., and Choy, L. F.-F. (2017). Scene graph generation by iter-ative message passing. In Proceedings of the IEEE Conference on Computer Vision and Pat-tern Recognition (CVPR), pages 3097–3106. Lee, J., Lee, H., Kim, M., and Lee, H. Y. (2019). Set transformer: A framework for attention-based permutation-invariant neural networks. In International Conference on Machine Learning (ICML). Li, R., Zhang, S., and He, X. (2023). Sgtr: End-to-end scene graph generation with transformer. IEEE Transactions on Pattern Analysis and Ma-chine Intelligence, 45(2):2150–2163. Li, R., Zhang, S., Wan, B., and He, X. (2021). Bipar-tite graph network with adaptive message pass-ing for unbiased scene graph generation. In Pro-ceedings of the IEEE/CVF Conference on Com-puter Vision and Pattern Recognition (CVPR), pages 10174–10184. IEEE. Li, Y., Ouyang, W., Zhou, B., Wang, K., and Wang, X. (2017). Scene graph generation from objects, phrases and region captions. In Proceedings of the IEEE International Conference on Computer Vision (ICCV), pages 1261–1269. Lin, T.-Y., Maire, M., Belongie, S., Hays, J., Per-ona, P., Ramanan, D., Dollár, P., and Zitnick, C. L. (2014). Microsoft coco: Common objects in context. In European Conference on Computer Vision (ECCV), pages 740–755. Springer. Lin, X., Ding, C., Zeng, J., and Tao, D. (2020). Gps-net: Graph property sensing network for scene graph generation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pages 3746–3753. Liu, J., Xu, M., Yan, X., Chen, W., Liu, H., Zhang, R., Li, Y., Zhang, L., and Li, Y. (2024). Joint generative modeling of scene graphs and images via diffusion models. arXiv preprint arXiv:2401.01130. Liu, Y., Yang, X., Zhou, S., and Liu, X. (2022). Sim-ple contrastive graph clustering. arXiv preprint arXiv:2205.07865. Lu, C., Krishna, R., Bernstein, M., and Fei-Fei, L. (2016). Visual relationship detection with lan-guage priors. In Proceedings of the European Conference on Computer Vision (ECCV), pages 852–869. Mao, C., Wang, Z., et al. (2022). Graph partition neu-ral networks for semi-supervised classification. arXiv preprint arXiv:2206.07670. Ni, Z., Deng, X., Tai, C., Zhu, X., Xie, Q., Huang, W., Wu, X., and Zeng, L. (2024). Grid: Scene-graph-based instruction-driven robotic task planning. In 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pages 13765–13772. IEEE. Raghu, M., Unterthiner, T., Kornblith, S., Zhang, C., and Dosovitskiy, A. (2021). Do vision trans-formers see like convolutional neural networks? Advances in Neural Information Processing Sys-tems, 34:12116–12128. Rezatofighi, H., Boloor, A., Kumar, A., Milan, A., Dick, A., and Reid, I. (2020). Learn to predict sets using feed-forward neural networks. In Pro-ceedings of the 37th International Conference on Machine Learning (ICML), volume 119, pages 8114–8124. PMLR. Rezatofighi, H., Tsoi, N., Gwak, J., Sadeghian, A., Reid, I., and Savarese, S. (2017). Deepsetnet: Predicting sets with deep neural networks. In Proceedings of the IEEE International Confer-ence on Computer Vision (ICCV), pages 5227– 5236. Rong, Y., Huang, W., Xu, T., and Huang, J. (2020). Dropedge: Towards deep graph convolu-tional networks on node classification. Interna-tional Conference on Learning Representations (ICLR). Sadeghi, M. A. and Farhadi, A. (2011). Recogni-tion using visual phrases. In Proceedings of the IEEE Conference on Computer Vision and Pat-tern Recognition (CVPR), pages 1745–1752. Sarkar, S. D., Miksik, O., Pollefeys, M., Barath, D., and Armeni, I. (2023). Sgaligner: 3d scene align-ment with scene graphs. In Proceedings of the IEEE/CVF International Conference on Com-puter Vision (ICCV), pages 21927–21937. Sehwag, V., Oak, R., Chiang, M., and Mittal, P. (2020). Time for a background check! uncov-ering the impact of background features on deep neural networks. Sortino, R., Palazzo, S., and Spampinato, C. (2023). Transformer-based image generation from scene graphs. arXiv preprint arXiv:2303.04634. Tang, H., Zhang, H., Wu, B., Luo, W., and Liu, W. (2019). Learning to compose dynamic tree struc-tures for visual contexts. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pages 6794–6803. Tang, K., Niu, Y., Huang, J., and Zhang, H. (2020). Unbiased scene graph generation from biased training. arXiv preprint arXiv:2002.11949. Wald, J., Dhamo, H., Navab, N., and Tombari, F. (2020). Learning 3d semantic scene graphs from 3d indoor reconstructions. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pages 10134– 10143. Wang, P. et al. (2021). Patch-based graph neural networks. arXiv preprint arXiv:2106.05599. Xu, S., Yan, W., Xue, Y., Lee, C. K., Tan, Z., Lee, Y., Yi, S., and Liu, Z. (2020). Understanding dy-namic scenes using graph convolution networks. arXiv preprint arXiv:2005.04437. Yang, J., Lu, J., Lee, S., Batra, D., and Parikh, D. (2018a). Graph r-cnn for scene graph generation. In Proceedings of the European Conference on Computer Vision (ECCV), pages 670–685. Yang, J., Yu, L., Luo, P., Wang, X., and Li, H. (2018b). Attentive relational networks for map-ping images to scene graphs. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 5168–5177. Yang, K., Du, X., Zhao, Z., and Yang, M. (2023a). Lo-cal structure-aware graph contrastive representa-tion learning. arXiv preprint arXiv:2308.03271. Yang, Z., Cong, Z., Yang, D., Zhuang, X., Zhu, J., Ren, L., Li, Y., Zhang, W., and Wu, Y. (2023b). Sgtr+: End-to-end scene graph generation with transformer. arXiv. You, Y., Chen, T., Sui, Z., and Shen, Y. (2020). Graph contrastive learning with augmentations. In Advances in Neural Information Processing Systems (NeurIPS). Zellers, R., Yatskar, M., Thomson, S., and Choi, Y. (2018). Neural motifs: Scene graph parsing with global context. Proceedings of the IEEE Confer-ence on Computer Vision and Pattern Recogni-tion (CVPR), pages 5831–5840. Zhang, Y., Qian, D., Li, D., Pan, Y., Chen, Y., Liang, Z., Zhang, Z., Zhang, S., Li, H., Fu, M., Ye, Y., Liang, Z., Shan, Y., and Du, D. (2024). Graphad: Interaction scene graph for end-to-end autonomous driving. arXiv preprint arXiv:2403.19098. Zhang, Y., Xie, Y., Liu, Q., Gool, L. V., and Timofte, R. (2019). Deep graph laplacian regularization for robust denoising of real images. In CVPR Workshops. Zhu, Y., Liu, Z., Fu, J., Wu, H., and Qiao, Y. (2021). Deformable detr: Deformable transform-ers for end-to-end object detection. In Proceed-ings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 6888–6897.

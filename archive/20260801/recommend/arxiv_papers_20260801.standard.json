@@ -1,0 +1,365 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-01T21:11:23.238842+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2607.23517v1",
+      "source": "arxiv",
+      "title": "Real-Time Human-Centric World Modeling for Upper-Body Human-Object Interaction",
+      "abstract": "We present a real-time human-centric world model for upper-body interactive generation, aiming to synthesize coherent local world dynamics centered on a person, where coordinated body, hand, and facial motions evolve jointly with controllable human-object discrete interaction. To this end, we adopt a continuous-discrete joint control scheme with two complementary components: a continuous human state and a discrete interaction state. For continuous human-state control, we introduce a unified implicit representation based on multi-scale motion encoding, in which motion latents from the upper body, hands, and face are fused into a shared latent space. This multi-scale design improves expressiveness across different spatial scales, captures fine-grained human dynamics more effectively, and enables direct control without explicit retargeting. For discrete object interaction-state control, we represent object contact using a small set of language-encoded discrete interaction states, where text serves as an explicit interaction-state command, such as \\emph{no contact} or \\emph{grasp}, rather than an open-ended generation prompt, and we further construct a dedicated rendering pipeline for human-object interaction data to supervise such discrete interaction states. By combining continuous implicit human-state control with discrete interaction-state control, our model enables precise modeling of how a person moves and interacts with the local environment, including controllable changes to nearby scene states. Finally, we distill the model for efficient streaming real-time inference, achieving 25 FPS on two H100 GPUs. Experiments demonstrate improved fine-grained motion fidelity, more realistic hand-object coordination, and effective real-time interaction, establishing a practical step beyond motion reproduction toward real-time human-centric world modeling.",
+      "authors": [
+        "Chaonan Ji",
+        "Jinwei Qi",
+        "Peng Zhang",
+        "Bang Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-26T07:34:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.23517v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Explicitly proposes a real-time human-centric world model for interactive generation",
+      "llm_evidence_cn": "显式提出实时以人为中心的世界模型用于交互生成",
+      "llm_evidence": "显式提出实时以人为中心的世界模型用于交互生成",
+      "canonical_evidence": "显式提出实时以人为中心的世界模型用于交互生成",
+      "llm_tldr_en": "Presents a real-time human-centric world model that jointly generates coordinated upper-body, hand, and facial motions along with controllable human-object discrete interaction using a continuous-discrete control scheme.",
+      "llm_tldr_cn": "现有世界模型难以在实时场景中协调人体、手部与面部运动以及可控的人-物离散交互。本文提出一种以人为中心的实时世界模型，采用连续人体状态与离散交互状态联合控制方案，基于多尺度运动编码将多部位运动先验融合到共享潜空间。该方法能够合成连贯的局部世界动态，支持可控的人-物交互生成，展示了在交互式生成任务中构建实时世界模型的有效性。",
+      "llm_tldr": "现有世界模型难以在实时场景中协调人体、手部与面部运动以及可控的人-物离散交互。本文提出一种以人为中心的实时世界模型，采用连续人体状态与离散交互状态联合控制方案，基于多尺度运动编码将多部位运动先验融合到共享潜空间。该方法能够合成连贯的局部世界动态，支持可控的人-物交互生成，展示了在交互式生成任务中构建实时世界模型的有效性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.26525v1",
+      "source": "arxiv",
+      "title": "AtlasLC: Fast Codec-Ready Compression of Object-Centric 3D Gaussian Splatting",
+      "abstract": "3D Gaussian Splatting (3DGS) enables photorealistic novel-view synthesis with real-time rendering, but deploying compressed object-centric 3DGS in XR requires more than image-space rate-distortion. In practical XR asset pipelines, reusable objects are repeatedly packaged, transmitted, decoded, and instantiated, making asset-preparation cost, codec compatibility, decoding latency, and preservation of depth and silhouette cues first-class concerns. Existing 3DGS compression methods are largely developed for scene-scale captures and often rely on heavy layout generation or aggressive global pruning, assumptions that transfer poorly to semantically concentrated foreground objects. We present AtlasLC, a source-free, training-free compression pipeline for object-centric 3DGS that operates directly on released Gaussian assets, without original images, camera poses, or per-asset optimization. AtlasLC couples local-competition pruning with deterministic atlas packing to remove the mapping/remapping bottleneck while preserving object-wide foreground support; a lightweight single-pass sort-based conditional transport is used as a shared coordinate backbone for these stages. Across the evaluated assets, AtlasLC reduces atlas-preparation time by up to a factor of 25 and end-to-end compression time by up to a factor of 5, while offering a favorable deployment-aware balance of payload, decode latency, runtime FPS, and 3D geometry relative to the evaluated compressed baselines. Relative to similarly compact structured baselines, it uses about 6 to 8 percent fewer bits while maintaining comparable perceptual and geometric quality. These results show that object-centric 3DGS compression should be optimized for a deployment-aware operating point enabling scalable XR asset libraries.",
+      "authors": [
+        "ByungHyun Kim",
+        "Jinwoo Jeon",
+        "Woontack Woo"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR"
+      ],
+      "published": "2026-07-29T06:43:17+00:00",
+      "link": "https://arxiv.org/pdf/2607.26525v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "3D Gaussian Splatting is a deep learning based 3D scene representation; its compression pipeline supports 3D scene generation and reconstruction",
+      "llm_evidence_cn": "3D高斯泼溅是深度学习的3D场景表示方法，其压缩支持三维场景生成与重建",
+      "llm_evidence": "3D高斯泼溅是深度学习的3D场景表示方法，其压缩支持三维场景生成与重建",
+      "canonical_evidence": "3D高斯泼溅是深度学习的3D场景表示方法，其压缩支持三维场景生成与重建",
+      "llm_tldr_en": "Presents AtlasLC, a source-free, training-free compression pipeline for object-centric 3D Gaussian Splatting that optimizes codec compatibility, decoding latency, and preservation of depth and silhouette cues for XR deployment.",
+      "llm_tldr_cn": "面向对象中心3D高斯泼溅在XR部署中的压缩需求，本文提出AtlasLC，一种无需源数据和训练即可运行的压缩流水线，兼顾编解码器兼容性、低解码延迟以及深度与轮廓保持。与现有场景级压缩方法相比，它在语义集中的前景对象上更有效，实验表明能在保持重建质量的同时显著降低资产准备和传输成本。",
+      "llm_tldr": "面向对象中心3D高斯泼溅在XR部署中的压缩需求，本文提出AtlasLC，一种无需源数据和训练即可运行的压缩流水线，兼顾编解码器兼容性、低解码延迟以及深度与轮廓保持。与现有场景级压缩方法相比，它在语义集中的前景对象上更有效，实验表明能在保持重建质量的同时显著降低资产准备和传输成本。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.24495v1",
+      "source": "arxiv",
+      "title": "NSL-SLAM: High-Fidelity Neural Structured-Light Depth for Practical SLAM and Reconstruction",
+      "abstract": "Structured-light (SL) cameras power depth sensing in millions of devices, and recent neural SL decoding methods have substantially improved their depth quality. SLAM systems can benefit greatly from such strong depth sensing, where reliable geometry enables stable tracking and faithful reconstruction. In this work, we present NSL-SLAM, a practical SLAM system tailored for high-fidelity structured-light depth. We first strengthen SL depth sensing: inspired by the neural structured-light (NSL) method, we further incorporate strong monocular depth priors into the SL stereo decoding, reducing depth RMSE by 35% on Replica-SL compared to NSL. We then build a depth-centric SLAM pipeline with this stronger depth: because structured-light geometry is dense and metrically accurate, we keep it as the primary tracking signal, and add only sparse visual correspondences for geometrically degenerate cases and lightweight bundle adjustment for long-range drift. Our depth estimator and SLAM design reinforce each other: stronger depth makes a simple SLAM pipeline effective, and the depth-centric pipeline ensures this advantage transfers to downstream reconstruction. Experimentally, on the synthetic Replica-SL benchmark, NSL-SLAM achieves the best tracking accuracy and improves reconstruction F-score by 1.6 points over the SOTA baseline under a shared-depth protocol. On a real benchmark of 8 challenging scenes, it is the only method that avoids catastrophic failure on all sequences while achieving 43.3% lower trajectory deviation than selected baselines. The SLAM system runs online at 20.9 FPS, demonstrating that stronger structured-light depth and depth-centric system design together enable practical, robust SLAM.",
+      "authors": [
+        "Jiaheng Li",
+        "Binsheng Zhang",
+        "Xinhai Chang",
+        "Wenzheng Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-27T14:31:55+00:00",
+      "link": "https://arxiv.org/pdf/2607.24495v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "high-fidelity structured-light depth for practical SLAM and faithful 3D reconstruction",
+      "llm_evidence_cn": "面向实际SLAM的高保真结构光深度，支撑3D重建与场景理解",
+      "llm_evidence": "面向实际SLAM的高保真结构光深度，支撑3D重建与场景理解",
+      "canonical_evidence": "面向实际SLAM的高保真结构光深度，支撑3D重建与场景理解",
+      "llm_tldr_en": "NSL-SLAM integrates monocular depth priors into neural structured-light decoding and builds a depth-centric SLAM pipeline, reducing depth RMSE by 35% and improving reconstruction fidelity.",
+      "llm_tldr_cn": "结构光深度感知在SLAM中具有巨大潜力，但现有神经结构光解码仍受深度噪声限制。NSL-SLAM将单目深度先验融入结构光立体解码，使深度RMSE相对NSL降低35%。在此基础上构建以深度为中心的SLAM管线，利用可靠几何实现稳定跟踪和忠实重建。实验表明该方案能提升实际场景下的重建质量，为SLAM与重建提供更强深度信号。",
+      "llm_tldr": "结构光深度感知在SLAM中具有巨大潜力，但现有神经结构光解码仍受深度噪声限制。NSL-SLAM将单目深度先验融入结构光立体解码，使深度RMSE相对NSL降低35%。在此基础上构建以深度为中心的SLAM管线，利用可靠几何实现稳定跟踪和忠实重建。实验表明该方案能提升实际场景下的重建质量，为SLAM与重建提供更强深度信号。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.22325v1",
+      "source": "arxiv",
+      "title": "Geometric 2D Scene Graph Generation",
+      "abstract": "In production processes for consumer products, assembly instructions are essential not only for planning but also for executing the production process. Likewise in robotics, it is crucial for an assembly robot to understand how components fit together and can be assembled. To facilitate these tasks, we contribute a method for constructing scene graphs to represent and characterize assembly relationships between components. Our approach does not rely on semantic data and is capable of handling a very small dataset. To realize this, the output of a Faster R-CNN model is used to create geometric representations, which are then processed by a transformer architecture to generate an adjacency matrix. This matrix serves as input to a Siamese network that uses message passing based on an attentional graph convolutional network (aGCN) architecture to characterize the connections between the components. We validate our method on a study dataset of toy model components which can be assembled into transportation vehicles.",
+      "authors": [
+        "Christoph Jahn",
+        "Urs Waldmann",
+        "Bastian Goldluecke"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-24T14:03:24+00:00",
+      "link": "https://arxiv.org/pdf/2607.22325v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "geometric scene graph generation for spatial assembly reasoning",
+      "llm_evidence_cn": "用于空间装配推理的几何场景图生成",
+      "llm_evidence": "用于空间装配推理的几何场景图生成",
+      "canonical_evidence": "用于空间装配推理的几何场景图生成",
+      "llm_tldr_en": "This paper presents a method to construct 2D scene graphs for assembly relationships without semantic data. It converts Faster R-CNN outputs into geometric representations, uses a transformer to generate an adjacency matrix, and applies a Siamese network with message passing to characterize spatial assembly relationships, enabling robots to reason about how components fit together.",
+      "llm_tldr_cn": "装配机器人需要理解零件如何组装在一起。本文提出一种不依赖语义数据、仅利用几何表示的二维场景图生成方法：先用Faster R-CNN生成零件检测，再构建几何表示，经Transformer产生邻接矩阵，最后用基于注意力消息传递的Siamese网络来表征装配关系。实验表明该方法在小数据集下也能有效构建可用的几何场景图，为机器人空间装配推理提供了基础。",
+      "llm_tldr": "装配机器人需要理解零件如何组装在一起。本文提出一种不依赖语义数据、仅利用几何表示的二维场景图生成方法：先用Faster R-CNN生成零件检测，再构建几何表示，经Transformer产生邻接矩阵，最后用基于注意力消息传递的Siamese网络来表征装配关系。实验表明该方法在小数据集下也能有效构建可用的几何场景图，为机器人空间装配推理提供了基础。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.27194v1",
+      "source": "arxiv",
+      "title": "VidMap: Exploiting Temporal Structure for Video-Based Structure-from-Motion",
+      "abstract": "Accurately recovering the camera's calibration and metric poses for any unconstrained video would unlock large-scale training data for navigation and scene understanding. The dominant approaches to this problem are severely limited: Simultaneous Localization and Mapping (SLAM) is sensitive to initialization and transient failures due to its causal, incremental nature; it is often over-optimized for real-time operation and generally requires known camera calibration; while Structure-from-Motion (SfM) typically forgoes any image ordering, enabling optimal initialization and global optimization, but lacks robustness to visual symmetries and extreme motions. To bridge this gap, we introduce a system that combines the strong sequential constraints of SLAM with the flexibility and global optimization of offline SfM, enabling the metric reconstruction of arbitrary, long, uncalibrated videos. This system leverages recent advances in wide-baseline dense image matching, treats temporal ordering as a first-class citizen for reliable loop closure, and augments global optimization with metric monocular depth priors. As a result, thorough evaluations on diverse, challenging datasets that exhibit extreme motion and visual symmetries reveal that our approach is significantly more robust and accurate than both state-of-the-art SLAM and SfM, classical or learned, with given or unknown camera calibration. The code is publicly available at https://github.com/cvg/vidmap.",
+      "authors": [
+        "Zador Pataki",
+        "Paul-Edouard Sarlin",
+        "Marc Pollefeys"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-29T17:58:04+00:00",
+      "link": "https://arxiv.org/pdf/2607.27194v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "video-based structure-from-motion for camera calibration and metric pose recovery, enabling scene understanding",
+      "llm_evidence_cn": "基于视频的运动恢复结构恢复相机位姿，服务于导航与场景理解",
+      "llm_evidence": "基于视频的运动恢复结构恢复相机位姿，服务于导航与场景理解",
+      "canonical_evidence": "基于视频的运动恢复结构恢复相机位姿，服务于导航与场景理解",
+      "llm_tldr_en": "VidMap combines temporal constraints of SLAM with global optimization of SfM to robustly recover camera calibration and metric poses from unconstrained video for scene understanding.",
+      "llm_tldr_cn": "无约束视频的相机标定与度量位姿恢复是导航和场景理解的基础，但SLAM依赖初始化且SfM对极动鲁棒性差。VidMap结合SLAM的时序约束与SfM的全局优化，增强对视觉对称和极端运动的鲁棒性。系统能够从任意视频中准确恢复相机标定和度量位姿。该工作为大规模场景理解数据生产提供了关键技术。",
+      "llm_tldr": "无约束视频的相机标定与度量位姿恢复是导航和场景理解的基础，但SLAM依赖初始化且SfM对极动鲁棒性差。VidMap结合SLAM的时序约束与SfM的全局优化，增强对视觉对称和极端运动的鲁棒性。系统能够从任意视频中准确恢复相机标定和度量位姿。该工作为大规模场景理解数据生产提供了关键技术。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.22355v1",
+      "source": "arxiv",
+      "title": "SiPhy: Single-Image Physical Property Reasoning",
+      "abstract": "Inferring physical properties such as mass, stiffness, and elasticity from a single image is essential for simulation and embodied AI, yet most existing approaches rely on multi-view reconstruction or physics-based supervision. We introduce SiPhy, a unified framework for single-image physical property reasoning that aligns 3D-aware visual cues, depth with language-based material knowledge. From one RGB image, SiPhy samples pseudo-voxel points, extracts CLIP features, and grounds them to material candidates proposed by a VLM. A part-based contrastive aggregator enforces region consistency, while a heaviness-aware refinement improves thickness and volume estimation for dense objects. Across ABO-500, MVImgNet-100, and PhysXNet-100, SiPhy achieves state-of-the-art single-image performance, surpassing multi-view reconstruction methods by improving mass MnRE by up to 93% (vs. PUGS), reducing density MAE by 35.5% (vs. NeRF2Physics), and lowering Young's modulus error by 23.5%. We further validate SiPhy on real hand-object interaction datasets, demonstrating its potential as a data annotation engine for physical understanding from single-view imagery.",
+      "authors": [
+        "Hoang Le",
+        "Joonwoo Kwon",
+        "Elkhan Ismayilzada",
+        "Yufei Zhang",
+        "Zijun Cui"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-24T14:36:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.22355v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "single-image physical property reasoning with 3D-aware cues and language-based material knowledge",
+      "llm_evidence_cn": "结合3D感知线索与语言材料知识进行单图像物理属性推理",
+      "llm_evidence": "结合3D感知线索与语言材料知识进行单图像物理属性推理",
+      "canonical_evidence": "结合3D感知线索与语言材料知识进行单图像物理属性推理",
+      "llm_tldr_en": "SiPhy infers physical properties such as mass and stiffness from a single RGB image by aligning 3D-aware cues with VLM-proposed material candidates and a part-based contrastive aggregator.",
+      "llm_tldr_cn": "针对推断单图像中物体物理属性如质量、刚度通常依赖多视图或物理监督的问题，提出SiPhy统一框架。它从单张RGB图像采样伪体素点，提取CLIP特征并利用VLM提出材料候选，通过基于部分的对比聚合增强区域一致性，并加入重量感知细化估计厚度与体积。在多个基准上达到最先进的单图像物理属性推理性能。",
+      "llm_tldr": "针对推断单图像中物体物理属性如质量、刚度通常依赖多视图或物理监督的问题，提出SiPhy统一框架。它从单张RGB图像采样伪体素点，提取CLIP特征并利用VLM提出材料候选，通过基于部分的对比聚合增强区域一致性，并加入重量感知细化估计厚度与体积。在多个基准上达到最先进的单图像物理属性推理性能。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.28261v1",
+      "source": "arxiv",
+      "title": "TARS: Timestep-Aware Data Scaling for 3D-Free Video Re-Shooting",
+      "abstract": "Video re-shooting aims to regenerate videos with controllable camera motion and viewpoint. Existing methods rely on explicit 3D priors, which are limited by reconstruction quality and often perform poorly when synthesizing previously unseen regions, or on paired videos with different camera trajectories, whose scarcity hinders generalization. We revisit video re-shooting through text-driven semantic viewpoint specification, enabling control over shot scale, viewing angle, and first-/third-person perspective. To this end, we propose TARS, a 3D-free video re-shooting paradigm. Timestep-wise sensitivity analysis reveals that camera motion is primarily established during high-noise stages, where coarse spatiotemporal structures are formed. Based on this insight, we introduce self-supervised training to learn camera dynamics and fundamental visual representations without paired re-shooting data or 3D reconstruction. Through data scaling and joint textual-camera conditioning, TARS supports robust camera and viewpoint control, plausibly synthesizing regions beyond the source view under large camera motions while enabling reverse-angle re-shooting and perspective switching. Extensive experiments show that TARS provides more accurate and temporally consistent camera control than prior methods. Project Page: https://ymlinfeng.github.io/TARS.github.io/",
+      "authors": [
+        "Jiwen Liu",
+        "Shujuan Li",
+        "Xiaohan Li",
+        "Zijie Meng",
+        "Xinyue Liu",
+        "Yulong Xu",
+        "Yan Zhou",
+        "Guoxin Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-30T14:18:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.28261v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "3D-free video re-shooting with controllable camera motion for novel viewpoint generation",
+      "llm_evidence_cn": "无3D先验的视频重拍摄，生成可控相机运动的新视角内容",
+      "llm_evidence": "无3D先验的视频重拍摄，生成可控相机运动的新视角内容",
+      "canonical_evidence": "无3D先验的视频重拍摄，生成可控相机运动的新视角内容",
+      "llm_tldr_en": "Proposes TARS, a 3D-free video re-shooting paradigm that enables text-driven semantic viewpoint control, discovering timestep-wise camera motion formation to scale training data.",
+      "llm_tldr_cn": "针对视频重拍中依赖显式3D先验或成对数据的问题，本文提出TARS，利用文本驱动的语义视角指定控制镜头景别、视角及人称，避免使用3D重建。时间步敏感性分析发现相机运动主要在高噪声阶段建立，据此进行时间步感知的数据缩放。该方法在生成未见区域时更具鲁棒性，为可控相机运动的视频生成提供新范式。",
+      "llm_tldr": "针对视频重拍中依赖显式3D先验或成对数据的问题，本文提出TARS，利用文本驱动的语义视角指定控制镜头景别、视角及人称，避免使用3D重建。时间步敏感性分析发现相机运动主要在高噪声阶段建立，据此进行时间步感知的数据缩放。该方法在生成未见区域时更具鲁棒性，为可控相机运动的视频生成提供新范式。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "3d scene generation",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.26860v1",
+      "source": "arxiv",
+      "title": "Amortized Moment Matching for Visual Generation",
+      "abstract": "We propose amortized moment matching, utilizing neural networks to learn data moments as distributional training signals. By casting diffusion denoisers through polynomial projections, we establish a general framework for moment amortization, revealing that an $n$-th degree projection explicitly identifies data moments up to order $n+1$. Derived from the tractable affine case, we instantiate the Amortized Fréchet Distance (AMFD) loss. Unlike FD-loss which relies on explicit marginal moment calculations, AMFD is able to dynamically learn conditional moments via an alternating, matrix-free optimization pipeline that effortlessly scales to high-dimensional data. When operating on global representation features, AMFD serves as a powerful post-training objective; empirically, its neural formulation yields more robust training dynamics than exact statistical matching, substantially surpassing the FD baseline on the FDr$^6$ metric and achieving superior one-step generation on ImageNet. Furthermore, it unlocks direct exploration within native generative spaces, suggesting that the first two moments can identify target distributions only in spaces with strong semantics. Finally, when scaled to text-to-image generation, the condition-aware nature of AMFD unlocks massive gains in instruction-following capabilities, enabling our one-step models to outperform their multi-step FLUX.2 [klein] 4B teachers on the GenEval benchmark while achieving on-par performance on PickScore. Code and checkpoints are available at https://github.com/poppuppy/amfd.",
+      "authors": [
+        "Wenze Liu",
+        "Xintao Wang",
+        "Pengfei Wan",
+        "Xiangyu Yue"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-29T12:44:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.26860v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "general deep generative training objective for visual generation applicable to 3D scenes",
+      "llm_evidence_cn": "通用的视觉生成深度学习训练目标，可迁移至3D场景生成",
+      "llm_evidence": "通用的视觉生成深度学习训练目标，可迁移至3D场景生成",
+      "canonical_evidence": "通用的视觉生成深度学习训练目标，可迁移至3D场景生成",
+      "llm_tldr_en": "Introduces amortized moment matching, a distributional training signal for diffusion models, enabling scalable conditional generation without explicit moment computation.",
+      "llm_tldr_cn": "本文提出摊销矩匹配（Amortized Moment Matching），通过神经网络学习数据矩作为分布训练信号，并推导出摊销弗雷歇距离损失（AMFD）。该方法避免了显式边际矩计算，能在高维数据上交替优化，作为后训练目标可有效提升生成模型性能。作为通用视觉生成技术，它为3D场景生成中的分布匹配提供了可迁移的思路。",
+      "llm_tldr": "本文提出摊销矩匹配（Amortized Moment Matching），通过神经网络学习数据矩作为分布训练信号，并推导出摊销弗雷歇距离损失（AMFD）。该方法避免了显式边际矩计算，能在高维数据上交替优化，作为后训练目标可有效提升生成模型性能。作为通用视觉生成技术，它为3D场景生成中的分布匹配提供了可迁移的思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.28164v1",
+      "source": "arxiv",
+      "title": "S-Avatar: Diffusion-Guided Gaussian Head Avatars from a Single Image",
+      "abstract": "We propose S-Avatar, a novel method for generating photorealistic 3D head avatars from a single image using a diffusion-guided 3D model generation module and strategies for animating 3D Gaussian Splatting (3DGS). While single-image head avatar reconstruction is crucial for lifelike Virtual Reality (VR) applications, existing approaches often struggle to preserve 3D consistency under unseen viewpoints. S-Avatar addresses this limitation through a three-stage pipeline. First, a high-resolution 3DGS is synthesized directly from a single image using a diffusion-based Gaussian splat generation module. Next, the parametric head model FLAME is aligned with the generated 3DGS by optimizing its parameters and spatial transformations. Finally, to adapt the 3DGS to FLAME variations, we construct a binding template that encodes the spatial relationship between the initial splats and FLAME. The dynamic 3D head avatar can then be rendered in real time by deforming the 3DGS with the binding template. By combining diffusion-guided canonical 3DGS generation with FLAME-based control, our method achieves efficient and accurate reconstruction with enhanced 3D consistency. Evaluations on public datasets demonstrate that S-Avatar outperforms state-of-the-art methods in novel-view and expression generation, achieving superior realism and consistency. Consequently, our approach represents a significant advance in accessible avatar creation, applicable to a wide range of VR/AR applications. The project page is available at https://github.com/hailsong/savatar.",
+      "authors": [
+        "Hail Song",
+        "Seokhwan Yang",
+        "Jiwon Yang",
+        "Woojin Cho",
+        "Woontack Woo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-07-30T13:04:03+00:00",
+      "link": "https://arxiv.org/pdf/2607.28164v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "diffusion-guided 3D Gaussian head avatar generation from a single image",
+      "llm_evidence_cn": "扩散引导的单图3D高斯头像生成，属于深度学习的3D生成方法",
+      "llm_evidence": "扩散引导的单图3D高斯头像生成，属于深度学习的3D生成方法",
+      "canonical_evidence": "扩散引导的单图3D高斯头像生成，属于深度学习的3D生成方法",
+      "llm_tldr_en": "S-Avatar generates photorealistic 3D head avatars from a single image via diffusion-guided 3DGS synthesis and FLAME alignment, improving 3D consistency under unseen views.",
+      "llm_tldr_cn": "单图像3D头像重建对VR至关重要，但现有方法在未见视角下难以保持3D一致性。S-Avatar提出三阶段流程：先由扩散引导的高斯生成模块直接从单图合成高分辨率3DGS，再与参数化头模FLAME对齐，最后进行动画化适配。该方法在生成保真度和姿态一致性上取得提升，为单图头像建模提供了一种新思路。",
+      "llm_tldr": "单图像3D头像重建对VR至关重要，但现有方法在未见视角下难以保持3D一致性。S-Avatar提出三阶段流程：先由扩散引导的高斯生成模块直接从单图合成高分辨率3DGS，再与参数化头模FLAME对齐，最后进行动画化适配。该方法在生成保真度和姿态一致性上取得提升，为单图头像建模提供了一种新思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
