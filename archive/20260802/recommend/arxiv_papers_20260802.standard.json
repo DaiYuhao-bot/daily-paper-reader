@@ -1,0 +1,412 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-02T20:19:27.871465+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 9,
+    "quick_skim_target": 11,
+    "quick_selected": 9
+  },
+  "deep_dive": [
+    {
+      "id": "2607.28285v1",
+      "source": "arxiv",
+      "title": "Beyond Visual Ambiguity: Guiding Robust Monocular Depth Estimation in Challenging Scenarios via Detailed Long Captions",
+      "abstract": "Monocular depth estimation (MDE) faces challenges with non-Lambertian surfaces and adverse weather conditions due to the visual ambiguities inherent in single-image limited information. Existing works address them in isolation via image inpainting or augmentation, yielding limited robustness gains. Language, as a powerful complementary modality to vision, is demonstrated to enhance the visual perception capabilities of vision-language models (VLMs) via detailed long captions. However, prior language-integrated MDE methods fail to fully harness this potential due to short text input with limited information, coarse global text feature learning, and limited language guidance during depth decoding. To address these limitations, we propose CapDepth, a novel framework for robust MDE that leverages guidance from detailed long captions to alleviate visual ambiguities in both challenging scenarios. First, we design a detailed long caption input template that explicitly conveys rich spatial relationships among multiple atom sentences. Second, a dynamic caption encoder is introduced to extract fine-grained depth-relevant text features via progressive masked attention. Finally, we propose a text-adaptive decoder that guides enhanced depth decoding with text features via stable adaptive layer normalization. Extensive experiments validate the efficacy of CapDepth, which outperforms state-of-the-art methods, achieving depth error reductions of 25.0% on non-Lambertian surfaces and 22.0% under adverse weather conditions.",
+      "authors": [
+        "Junrui Zhang",
+        "Jiaqi Li",
+        "Yiran Wang",
+        "Liao Shen",
+        "Zhiguo Cao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-30T14:32:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.28285v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Detailed long captions guiding monocular depth estimation for robust scene understanding",
+      "llm_evidence_cn": "详细长描述引导单目深度估计以提升场景理解鲁棒性",
+      "llm_evidence": "详细长描述引导单目深度估计以提升场景理解鲁棒性",
+      "canonical_evidence": "详细长描述引导单目深度估计以提升场景理解鲁棒性",
+      "llm_tldr_en": "This work guides monocular depth estimation with detailed long captions, addressing non-Lambertian surfaces and adverse weather. It improves robustness beyond isolated inpainting or augmentation by leveraging vision-language models to resolve visual ambiguity, advancing 3D scene understanding.",
+      "llm_tldr_cn": "单目深度估计在非朗伯表面和恶劣天气下易受视觉歧义影响，现有方法孤立处理鲁棒性有限。本文利用详细长描述作为语言补强模态，克服短文本信息少、文本特征粗、深度解码引导弱的问题。所提方法在挑战性场景中显著提升深度估计鲁棒性，展示语言引导3D几何感知的潜力。",
+      "llm_tldr": "单目深度估计在非朗伯表面和恶劣天气下易受视觉歧义影响，现有方法孤立处理鲁棒性有限。本文利用详细长描述作为语言补强模态，克服短文本信息少、文本特征粗、深度解码引导弱的问题。所提方法在挑战性场景中显著提升深度估计鲁棒性，展示语言引导3D几何感知的潜力。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.23384v1",
+      "source": "arxiv",
+      "title": "Semantic Semi-Incremental Data-Association-Free Object SLAM",
+      "abstract": "Data association between landmark measurements and landmark variables has long been a central challenge in SLAM, as estimation accuracy depends critically on associating measurements with the correct landmark variables. Recent advances in deep learning have created new opportunities for the problem; data association can now leverage not only positional measurements but also semantic information about object landmarks, such as class labels from neural object detectors and feature vectors from visual foundation models. In this paper, we present a generalized data-association-free SLAM framework that jointly estimates data associations, robot poses, landmark positions, and landmark semantics from odometry, and positional and semantic measurements of landmarks. The proposed framework (i) creates a synergy between data association and landmark semantics estimation; (ii) adopts a semi-incremental estimation scheme for improved accuracy and computational efficiency; and (iii) provides a principled justification, guidelines, and heuristics for landmark-number estimation, improving the interpretability and practical usability of the framework. The proposed framework and algorithms are evaluated on synthetic and real-world datasets with two types of semantic information, class labels and real-valued feature vectors, and demonstrate superior performance compared to strong baselines.",
+      "authors": [
+        "Yihao Zhang",
+        "Jungseok Hong",
+        "John J. Leonard"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-07-25T22:31:31+00:00",
+      "link": "https://arxiv.org/pdf/2607.23384v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "semantic object SLAM for scene understanding and mapping",
+      "llm_evidence_cn": "语义目标SLAM用于场景理解与建图",
+      "llm_evidence": "语义目标SLAM用于场景理解与建图",
+      "canonical_evidence": "语义目标SLAM用于场景理解与建图",
+      "llm_tldr_en": "This paper presents a data-association-free object SLAM framework that jointly estimates associations, poses, landmark positions, and semantics, advancing scene understanding.",
+      "llm_tldr_cn": "SLAM中的数据关联问题一直制约精度，现有方法依赖位置信息易出错。该论文提出无数据关联的SLAM框架，联合估计数据关联、机器人位姿、地标位置和地标语义。利用目标检测器与视觉基础模型提供的语义特征，该方法提升了估计准确性和鲁棒性，为语义场景理解和地图构建提供了新思路。",
+      "llm_tldr": "SLAM中的数据关联问题一直制约精度，现有方法依赖位置信息易出错。该论文提出无数据关联的SLAM框架，联合估计数据关联、机器人位姿、地标位置和地标语义。利用目标检测器与视觉基础模型提供的语义特征，该方法提升了估计准确性和鲁棒性，为语义场景理解和地图构建提供了新思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.24249v1",
+      "source": "arxiv",
+      "title": "SILICA: Repurposing Diffusion Priors for Joint Glass Segmentation and Depth Estimation",
+      "abstract": "Standard depth sensors systematically fail on transparent surfaces, creating corrupted 3D maps and severe navigation hazards. While specialized hardware sensors can detect glass, they lack modularity and have extensive hardware dependencies. Consequently, learning-based monocular depth estimation has emerged as a compelling alternative. However, domain-specific glass-aware monocular depth estimators struggle with unfamiliar indoor layouts; restricted by the severe scarcity of real-world glass depth annotations, they fail to generalize zero-shot to new settings. This motivates us to explore whether the extensive priors of text-to-image diffusion models can enable generalizable perception of transparent surfaces. We introduce SILICA, a unified pipeline leveraging these priors to jointly predict glass segmentation and glass-aware depth. This mutual information exchange establishes a robust spatial hierarchy, entirely eliminating the need for paired real-world glass depth annotations. Subsequently, we use the predicted segmentation mask to explicitly filter incorrect glass depth points from standard sensors, recovering accurate metric glass depth for downstream 3D mapping and autonomous collision avoidance. Supported by our novel Mirage 18k dataset, extensive experiments demonstrate that SILICA achieves remarkable zero-shot transfer across diverse, unseen environments, outperforming state-of-the-art models by almost 20% and setting a new benchmark for transparent surface perception.",
+      "authors": [
+        "Tarun R",
+        "Anuj Verma",
+        "Laksh Nanwani",
+        "Sourav Garg",
+        "K. Madhava Krishna"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-27T10:38:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.24249v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "diffusion-based glass segmentation and depth estimation for transparent surfaces, improving 3D scene perception",
+      "llm_evidence_cn": "利用扩散先验进行玻璃分割与深度估计，增强透明表面场景感知",
+      "llm_evidence": "利用扩散先验进行玻璃分割与深度估计，增强透明表面场景感知",
+      "canonical_evidence": "利用扩散先验进行玻璃分割与深度估计，增强透明表面场景感知",
+      "llm_tldr_en": "SILICA repurposes text-to-image diffusion priors for joint glass segmentation and monocular depth estimation, addressing sensor failure on transparent surfaces and enabling zero-shot generalization to new indoor layouts for safer 3D scene understanding.",
+      "llm_tldr_cn": "标准深度传感器在玻璃等透明表面上会失效，导致三维地图损坏和导航危险。SILICA探索利用文生图扩散模型中的丰富先验，联合进行玻璃分割和单目深度估计，以克服真实玻璃深度标注稀缺的问题。该方法无需专用硬件，并能零样本泛化到新的室内布局，为三维场景感知和导航提供了一种可泛化的透明表面感知方案。",
+      "llm_tldr": "标准深度传感器在玻璃等透明表面上会失效，导致三维地图损坏和导航危险。SILICA探索利用文生图扩散模型中的丰富先验，联合进行玻璃分割和单目深度估计，以克服真实玻璃深度标注稀缺的问题。该方法无需专用硬件，并能零样本泛化到新的室内布局，为三维场景感知和导航提供了一种可泛化的透明表面感知方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.24954v1",
+      "source": "arxiv",
+      "title": "Intrinsic and Triangulation-Agnostic Attention: A Simple and Powerful Approach for Learning on Meshes",
+      "abstract": "This work proposes an adaptation of the attention mechanism for triangle meshes. The core observation is that endowing the attention mechanism with critical properties for learning over meshes -- intrinsicality and triangulation-agnosticism -- enables it to attain state-of-the-art results over several learning-based tasks in geometry-processing. The above is achieved by modifying the attention mechanism from the bottom up based on simple principles from geometry-processing. Namely, the quantities used within attention -- queries, keys and values -- are created by an intrinsic, triangulation-agnostic network, and treated as discretizations of continuous functions. From that, we devise an appropriate attention mechanism that operates over triangle meshes through standard FEM discretization of the resulting integrals of the above functions. Surprisingly, as far as we know, this straightforward approach has not been utilized for learning over meshes. Experiments show our method exceeds current state of the art, including both mesh-based architectures as well as point cloud transformers. Namely, we show significant improvements on several common benchmarks and tasks -- predicting canonical high-frequency signals; predicting deformations; computing dense correspondences, both between full shapes and partial ones; and predicting feature descriptors.",
+      "authors": [
+        "Ashwath Shetty",
+        "Zihan Zhu",
+        "Soeren Pirk",
+        "Noam Aigerman"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "published": "2026-07-27T18:04:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.24954v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Intrinsic attention mechanism for 3D mesh learning",
+      "llm_evidence_cn": "用于3D网格学习的内在注意力机制",
+      "llm_evidence": "用于3D网格学习的内在注意力机制",
+      "canonical_evidence": "用于3D网格学习的内在注意力机制",
+      "llm_tldr_en": "The paper designs an intrinsic, triangulation-agnostic attention mechanism for triangle meshes, treating queries, keys, and values as continuous function discretizations. It achieves SOTA on geometry-processing tasks, providing a reusable 3D module for scene generation and reconstruction.",
+      "llm_tldr_cn": "现有网格学习注意力机制缺乏内在性和三角剖分无关性，易受网格离散化影响。本文从几何处理原理出发，将注意力查询、键、值视为连续函数的离散化，构造满足内在性与三角剖分无关性的注意力。在多个几何处理学习任务上取得最优结果，为3D场景生成与重建提供了可复用的基础模块。",
+      "llm_tldr": "现有网格学习注意力机制缺乏内在性和三角剖分无关性，易受网格离散化影响。本文从几何处理原理出发，将注意力查询、键、值视为连续函数的离散化，构造满足内在性与三角剖分无关性的注意力。在多个几何处理学习任务上取得最优结果，为3D场景生成与重建提供了可复用的基础模块。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.25106v1",
+      "source": "arxiv",
+      "title": "IMPRINT: Image-Conditioned Query Enrichment for Long-Tail Object Goal Navigation",
+      "abstract": "Embodied AI increasingly relies on queryable semantic maps built from pre-trained vision-language models to enable zero-shot Object Goal Navigation (ObjectNav). However, existing approaches typically depend on text-only queries, which become less reliable as semantic specificity increases toward fine-grained object categories. We introduce IMPRINT, a zero-shot plug-and-play framework that enriches textual object queries with web-sourced images to improve grounding in queryable maps. Retrieved images are encoded using a vision-language model, matched against the semantic map to produce similarity maps, and aggregated to yield context-aware localization. Notably, this requires no training or modification of the underlying navigation policy. To explicitly evaluate long-tail behavior, we present HSSD-rare, a new ObjectNav benchmark built on Habitat Synthetic Scenes and featuring semantically specific subcategories. Across both OVON and HSSD-rare, image-conditioned queries consistently improve object grounding and yield end-to-end navigation gains. Further analysis reveals that translating localization gains to navigation performance depends critically on downstream detection quality, highlighting a key systems bottleneck in long-tail embodied navigation.",
+      "authors": [
+        "Jelin Raphael Akkara",
+        "Filippo Ziliotto",
+        "Luciano Serafini",
+        "Lamberto Ballan",
+        "Tommaso Campari"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-27T22:09:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.25106v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "queryable semantic maps and vision-language grounding for object navigation; relevant to scene understanding and spatial reasoning",
+      "llm_evidence_cn": "利用可查询语义地图与视觉语言接地实现目标导航，关联场景理解与空间推理",
+      "llm_evidence": "利用可查询语义地图与视觉语言接地实现目标导航，关联场景理解与空间推理",
+      "canonical_evidence": "利用可查询语义地图与视觉语言接地实现目标导航，关联场景理解与空间推理",
+      "llm_tldr_en": "IMPRINT enriches textual object queries with web-sourced images, encoded by a vision-language model and matched against semantic maps to improve zero-shot Object Goal Navigation, without training or modifying the navigation policy.",
+      "llm_tldr_cn": "针对零样本目标导航中仅用文本查询难以处理细粒度物体类别的问题，本文提出IMPRINT，一种即插即用框架，通过从网络检索物体图像并用视觉语言模型编码，与可查询语义地图匹配并聚合相似度图，为导航提供上下文感知的定位线索。该方法无需训练或修改底层导航策略，即可显著提升长尾目标类别上的零样本导航性能，体现语义地图与多模态查询结合对场景理解与空间定位的价值。",
+      "llm_tldr": "针对零样本目标导航中仅用文本查询难以处理细粒度物体类别的问题，本文提出IMPRINT，一种即插即用框架，通过从网络检索物体图像并用视觉语言模型编码，与可查询语义地图匹配并聚合相似度图，为导航提供上下文感知的定位线索。该方法无需训练或修改底层导航策略，即可显著提升长尾目标类别上的零样本导航性能，体现语义地图与多模态查询结合对场景理解与空间定位的价值。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.26889v1",
+      "source": "arxiv",
+      "title": "StructureGS: Structure-aware Gaussian Splatting for Articulated Object Reconstruction",
+      "abstract": "Reconstructing articulated objects with multiple movable parts is essential for understanding object structure and enabling physical interaction. However, this reconstruction task poses significant challenges due to the entanglement of geometry, appearance, and motion parameters during optimization. Existing methods rely primarily on photometric supervision, which commonly fails to disentangle these interdependent components, resulting in poor part decomposition with blurred boundaries and geometric artifacts. To address this limitation, we introduce StructureGS, a reconstruction framework for articulated objects that integrates structure-aware guidance into 3D Gaussian Splatting. Our approach leverages oriented bounding boxes of object parts to enforce two key structural properties: spatial coherence, which constrains each part's geometry to remain compact and spatially coherent within its designated region, and structural connectivity, which enforces physically plausible contact relationships between adjacent parts. These properties are realized through structure-aware losses that inject explicit structural constraints into the optimization process. Extensive experiments demonstrate that our method achieves state-of-the-art performance in articulated object reconstruction, producing high-quality results with well-defined part geometries.",
+      "authors": [
+        "Gahye Lee",
+        "Gyoonseo Kim",
+        "Wonjong Jang",
+        "Jooeun Son",
+        "Seungyong Lee"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-29T13:18:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.26889v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "structure-aware Gaussian splatting for articulated object reconstruction, directly supports scene understanding",
+      "llm_evidence_cn": "结构感知的高斯泼溅铰接物体重建，直接支撑场景理解",
+      "llm_evidence": "结构感知的高斯泼溅铰接物体重建，直接支撑场景理解",
+      "canonical_evidence": "结构感知的高斯泼溅铰接物体重建，直接支撑场景理解",
+      "llm_tldr_en": "Introduces StructureGS, a reconstruction framework that injects structure-aware guidance from oriented bounding boxes into 3D Gaussian Splatting to disentangle geometry, appearance and motion for articulated objects.",
+      "llm_tldr_cn": "铰接物体重建中几何、外观与运动参数相互纠缠，现有光度监督难以解耦。本文提出StructureGS，通过有向包围盒注入结构感知指导到三维高斯泼溅中，实现部件分解和精确重建。实验表明该方法显著改善部件边界的清晰度并减少几何伪影。这为可交互数字孪生和场景理解提供了更可靠的结构建模途径。",
+      "llm_tldr": "铰接物体重建中几何、外观与运动参数相互纠缠，现有光度监督难以解耦。本文提出StructureGS，通过有向包围盒注入结构感知指导到三维高斯泼溅中，实现部件分解和精确重建。实验表明该方法显著改善部件边界的清晰度并减少几何伪影。这为可交互数字孪生和场景理解提供了更可靠的结构建模途径。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.26583v1",
+      "source": "arxiv",
+      "title": "R-SLPR: Region-based Small-to-Large Point-cloud Registration with Contrastive Learning",
+      "abstract": "Point-cloud (PC) registration is fundamental to three-dimensional (3D) perception in robotic systems. However, classic registration algorithms falter when aligning a source PC containing limited, incomplete, or ambiguous geometric cues against a reference. This challenge of registering a small, partial PC to a significantly larger global reference is pervasive in real-world deployment yet remains insufficiently addressed by existing learning-based approaches, which typically assume comparable scales and significant overlap. To bridge this gap, we propose the Region-based Small-to-Large Point-cloud Registra- tion framework (R-SLPR), a novel three-stage architecture that fundamentally reformulates the scale-mismatched registration problem into a sequence of region proposal, regional matching, and iterative refinement. Unlike conventional methods that fail to localize specific regions, R-SLPR explicitly identifies candidate regions prior to estimating rigid transformations, ensuring robust alignment even under severe scale mismatch. The framework introduces a Fibonacci Grid Segmentation method coupled with a contrastive learning objective to effectively generate and match local geometric patches. Building on this, a novel Cascade Anchor Selection and Refinement algorithm iteratively aligns the source with the target region to maximize precision. Extensive evaluation on ModelNet40 demonstrates that R-SLPR establishes a new state-of-the-art accuracy standard, outperforming prior approaches and significantly reducing position and rotation Mean Absolute Error (MAE) to 0.009 and 1.104, respectively.",
+      "authors": [
+        "Yusen Wan",
+        "Zeyuan Chen",
+        "Qianshi Zou",
+        "Xu Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-29T08:01:31+00:00",
+      "link": "https://arxiv.org/pdf/2607.26583v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "point-cloud registration for sparse-to-dense spatial alignment",
+      "llm_evidence_cn": "点云配准实现小到大规模的空间对齐",
+      "llm_evidence": "点云配准实现小到大规模的空间对齐",
+      "canonical_evidence": "点云配准实现小到大规模的空间对齐",
+      "llm_tldr_en": "R-SLPR presents a region-based contrastive learning framework for registering small partial point clouds to large global references, improving 3D spatial reasoning.",
+      "llm_tldr_cn": "传统点云配准在处理小部分点云与大规模参考点云配准时表现不佳。该论文提出R-SLPR，一个基于区域的三阶段配准框架，通过对比学习重新构造尺度失配问题，从而提升配准精度。实验结果验证了该方法在现实部署中的有效性，为三维场景理解和空间推理提供了一种可复用的深度学习方案。",
+      "llm_tldr": "传统点云配准在处理小部分点云与大规模参考点云配准时表现不佳。该论文提出R-SLPR，一个基于区域的三阶段配准框架，通过对比学习重新构造尺度失配问题，从而提升配准精度。实验结果验证了该方法在现实部署中的有效性，为三维场景理解和空间推理提供了一种可复用的深度学习方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "spatial reasoning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.26763v1",
+      "source": "arxiv",
+      "title": "Long-Tailed 3D Point Cloud Dataset Distillation",
+      "abstract": "Dataset distillation compresses large-scale datasets into compact synthetic sets while preserving their training utility, enabling efficient 3D point cloud training. Current point cloud dataset distillation methods only tackle geometric and representation challenges while ignoring the distributional imbalance prevalent in point cloud datasets where both training and test splits follow long-tailed class distributions. To our knowledge, we present the first study on long-tailed point cloud dataset distillation. Rather than focusing primarily on geometric and representation properties or simply constructing a class-balanced synthetic set, our framework explicitly accounts for long-tailed class distributions via two core modules. First, we design Adaptive Synthetic Budgeting to allocate class-wise synthetic budgets according to class quantity and the expected benefit of additional synthetic samples. Given the allocated budgets, we further design 3D Long-Tailed Distribution Matching to optimize synthetic point clouds through Global-Local Feature Alignment and Prior-Aware Supervision. The former preserves both global class distributions and diverse intra-class structures, while the latter provides class-dependent expert supervision to keep tail-class samples recognizable while maintaining diverse head-class patterns. Extensive experiments demonstrate the effectiveness of our method, lifting classification accuracy by 7.0 points on ShapeNet55 against state-of-the-art methods.",
+      "authors": [
+        "Jiahao You",
+        "Xu Han",
+        "Jinfeng Xu",
+        "Xianzhi Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-29T11:04:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.26763v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Long-tailed dataset distillation for 3D point clouds",
+      "llm_evidence_cn": "面向长尾分布的3D点云数据集蒸馏",
+      "llm_evidence": "面向长尾分布的3D点云数据集蒸馏",
+      "canonical_evidence": "面向长尾分布的3D点云数据集蒸馏",
+      "llm_tldr_en": "This paper introduces the first study of long-tailed 3D point cloud dataset distillation, using adaptive synthetic budgeting to handle class imbalance while preserving the training utility of compact synthetic sets. It supports efficient training of 3D deep models, with implications for scene understanding and generation pipelines.",
+      "llm_tldr_cn": "现有3D点云数据集蒸馏方法忽视数据集中普遍存在的长尾类别分布，导致压缩后的训练集对少数类效用不足。本文首次提出长尾点云蒸馏框架，通过自适应合成预算模块显式处理类别不平衡，同时保持蒸馏集的训练效用。实验表明该方法能获得更均衡且实用的紧凑训练集，为高效3D深度学习提供支撑。",
+      "llm_tldr": "现有3D点云数据集蒸馏方法忽视数据集中普遍存在的长尾类别分布，导致压缩后的训练集对少数类效用不足。本文首次提出长尾点云蒸馏框架，通过自适应合成预算模块显式处理类别不平衡，同时保持蒸馏集的训练效用。实验表明该方法能获得更均衡且实用的紧凑训练集，为高效3D深度学习提供支撑。",
+      "llm_tags": [
+        "query:world-model:composite"
+      ],
+      "matched_query_tag": "query:world-model:composite",
+      "matched_query_text": "Papers central to 三维场景生成，世界模型, especially work that connects or combines: 3d scene generation; world model; scene understanding; spatial reasoning; World model based 3d scene generation and reconstruction techniques; what are the latest advances in world models for 3D vision; deep learning methods for 3d scene generation.",
+      "matched_requirement_id": "req-composite-world-model",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.26973v1",
+      "source": "arxiv",
+      "title": "Robust RPC Bundle Adjustment for Multi-Date Satellite Imagery with Season-Invariant Correspondences",
+      "abstract": "Accurate refinement of Rational Polynomial Camera (RPC) models is essential for high-quality satellite image geolocation. In ground control point (GCP)-free multi-view pipelines, this refinement is commonly performed through bundle adjustment from automatically extracted image correspondences. However, conventional RPC bundle adjustment pipelines rely on handcrafted feature matching, which becomes unreliable in multi-date collections affected by seasonal, illumination, and land-cover changes. We propose an appearance-aware RPC refinement pipeline that combines learned local feature matching for season-invariant correspondences with global image descriptors for selecting visually compatible image pairs. This reduces redundant and error-prone matching while preserving the connectivity of the matching graph. Experiments on seasonally diverse WorldView-3 images show that our pipeline improves GCP-free relative RPC refinement over open-source baselines, achieving lower geometric consistency errors while substantially reducing matching time on collections with 39-42 views. By making RPC refinement more robust to diachronic appearance variation, our approach enables more effective use of multi-date satellite imagery.",
+      "authors": [
+        "Roger Marí",
+        "Elías Masquil",
+        "Xavier Bou",
+        "Thibaud Ehret",
+        "Gabriele Facciolo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-29T14:34:22+00:00",
+      "link": "https://arxiv.org/pdf/2607.26973v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "robust RPC bundle adjustment for multi-date satellite 3D reconstruction",
+      "llm_evidence_cn": "面向多日期卫星三维重建的稳健RPC光束法平差",
+      "llm_evidence": "面向多日期卫星三维重建的稳健RPC光束法平差",
+      "canonical_evidence": "面向多日期卫星三维重建的稳健RPC光束法平差",
+      "llm_tldr_en": "This paper presents an appearance-aware RPC refinement pipeline with learned season-invariant feature matching for robust multi-date satellite bundle adjustment.",
+      "llm_tldr_cn": "常规RPC光束法平差依赖手工特征匹配，在多日期卫星影像中因季节和光照变化而失效。该论文提出外观感知的RPC精化流程，使用学习式局部特征匹配获得季节不变对应，并利用全局描述子选择视觉兼容的图像对。该方法增强了卫星影像地理定位与多视图三维重建的稳健性，对大规模场景重建具有实际意义。",
+      "llm_tldr": "常规RPC光束法平差依赖手工特征匹配，在多日期卫星影像中因季节和光照变化而失效。该论文提出外观感知的RPC精化流程，使用学习式局部特征匹配获得季节不变对应，并利用全局描述子选择视觉兼容的图像对。该方法增强了卫星影像地理定位与多视图三维重建的稳健性，对大规模场景重建具有实际意义。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.28320v1",
+      "source": "arxiv",
+      "title": "AdaAnchor4D: Anchor-Conditioned Spatiotemporal Feature Aggregation for Monocular UAV 4D Reconstruction",
+      "abstract": "Monocular UAV videos provide valuable observations for dynamic reconstruction of complex urban scenes. However, such scenes exhibit pronounced spatiotemporal heterogeneity: different regions follow distinct temporal activity patterns, while the motion states of some dynamic regions may further evolve over time. Although dynamic Gaussian methods based on decomposed shared spatiotemporal feature fields have achieved efficient and accurate reconstruction in object-centric or relatively compact scenes, their commonly adopted fixed plane-wise feature combination mechanisms are less suited to the heterogeneous local dynamics of UAV scenes, often leading to ghosting artifacts and blurred dynamic details. To address this challenge, we propose AdaAnchor4D, an adaptive anchor deformation framework for monocular UAV dynamic scene reconstruction. At its core, Anchor-Conditioned Feature Aggregation (ACFA) adaptively aggregates shared spatiotemporal features using anchor-specific aggregation embeddings and temporal information, allowing different local units to obtain dynamic representations tailored to their local and temporal states. Decoupled Local Geometry Deformation (DLGD) separates anchor-state deformation from local Gaussian geometry deformation, while Density-Adaptive Coordinate Warping (DACW) reparameterizes feature-query coordinates according to the axis-wise anchor distributions, alleviating the mismatch between non-uniform geometric sampling and uniform grid parameterization. Experiments on UAV-Arc4D, VisDrone, and UAVDT show that AdaAnchor4D achieves higher rendering quality than representative dynamic Gaussian methods while maintaining real-time rendering performance. The code will be made publicly available.",
+      "authors": [
+        "Peiyi Xu",
+        "Junpeng Zhang",
+        "Guanbin Li",
+        "Ronghua Shang",
+        "Mingtao Feng",
+        "Le Dong",
+        "Weisheng Dong",
+        "Guangming Shi",
+        "Jie Feng"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-30T14:55:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.28320v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "anchor-conditioned spatiotemporal feature aggregation for dynamic 3D/4D urban scene reconstruction",
+      "llm_evidence_cn": "基于锚点条件的时空特征聚合，用于动态城市场景4D重建",
+      "llm_evidence": "基于锚点条件的时空特征聚合，用于动态城市场景4D重建",
+      "canonical_evidence": "基于锚点条件的时空特征聚合，用于动态城市场景4D重建",
+      "llm_tldr_en": "AdaAnchor4D introduces anchor-conditioned spatiotemporal feature aggregation for dynamic Gaussian fields, adaptively combining shared feature planes to reconstruct heterogeneous urban dynamics from monocular UAV video with reduced ghosting and sharper details.",
+      "llm_tldr_cn": "单目无人机视频中的复杂城市动态场景具有显著时空异质性，固定平面特征组合机制容易造成重影和动态细节模糊。该工作提出锚点条件的时空特征聚合方法，让不同区域自适应选择特征组合，从而更准确表达多种运动模式。在动态城市场景4D重建上提升了细节保真度并减少伪影，为无人机视频的动态重建提供了通用思路。",
+      "llm_tldr": "单目无人机视频中的复杂城市动态场景具有显著时空异质性，固定平面特征组合机制容易造成重影和动态细节模糊。该工作提出锚点条件的时空特征聚合方法，让不同区域自适应选择特征组合，从而更准确表达多种运动模式。在动态城市场景4D重建上提升了细节保真度并减少伪影，为无人机视频的动态重建提供了通用思路。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -6,47 +6,50 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-01
-- 运行时间：2026-08-01 21:16:38 UTC
+- 最新运行日期：2026-08-02
+- 运行时间：2026-08-02 20:25:18 UTC
 - 运行状态：成功
-- 本次总论文数：9
-- 精读区：2
-- 速读区：7
+- 本次总论文数：10
+- 精读区：1
+- 速读区：9
 
 ### 今日简报（AI）
-今日精读9篇，聚焦人体交互建模与3D高斯压缩两大核心，另涉SLAM、视频重建等方向。最值得关注的是《Real-Time Human-Centric World Modeling》以9.0分领跑，开创实时人体-物体交互建模新思路；《AtlasLC》则高效压缩3D高斯场景，利于部署。建议普通读者优先关注人体交互建模应用，并留意低开销3D压缩对AR/VR的潜力。
-- 详情：[/202608/01/README](/202608/01/README)
+今日精选10篇论文，重点精读1篇，另速读3篇，覆盖深度估计、SLAM、网格学习与三维重建。最值得关注的是《Beyond Visual Ambiguity》提出用长文本描述引导鲁棒单目深度估计，在挑战性场景显著提升；建议优先阅读该文，并结合《StructureGS》了解可动物体重建的新思路。
+- 详情：[/202608/02/README](/202608/02/README)
 
 ### 精读区论文标签
-1. [Real-Time Human-Centric World Modeling for Upper-Body Human-Object Interaction](/202608/01/2607.23517v1-real-time-human-centric-world-modeling-for-upper-body-human-object-interaction)  
-   标签：评分：9.0/10、query:world-model
-   evidence：显式提出实时以人为中心的世界模型用于交互生成
-2. [AtlasLC: Fast Codec-Ready Compression of Object-Centric 3D Gaussian Splatting](/202608/01/2607.26525v1-atlaslc-fast-codec-ready-compression-of-object-centric-3d-gaussian-splatting)  
+1. [Beyond Visual Ambiguity: Guiding Robust Monocular Depth Estimation in Challenging Scenarios via Detailed Long Captions](/202608/02/2607.28285v1-beyond-visual-ambiguity-guiding-robust-monocular-depth-estimation-in-challenging-scenarios-via-detailed-long-captions)  
    标签：评分：8.0/10、query:world-model
-   evidence：3D高斯泼溅是深度学习的3D场景表示方法，其压缩支持三维场景生成与重建
+   evidence：详细长描述引导单目深度估计以提升场景理解鲁棒性
 
 ### 速读区论文标签
-1. [NSL-SLAM: High-Fidelity Neural Structured-Light Depth for Practical SLAM and Reconstruction](/202608/01/2607.24495v1-nsl-slam-high-fidelity-neural-structured-light-depth-for-practical-slam-and-reconstruction)  
+1. [Semantic Semi-Incremental Data-Association-Free Object SLAM](/202608/02/2607.23384v1-semantic-semi-incremental-data-association-free-object-slam)  
    标签：评分：7.0/10、query:world-model
-   evidence：面向实际SLAM的高保真结构光深度，支撑3D重建与场景理解
-2. [VidMap: Exploiting Temporal Structure for Video-Based Structure-from-Motion](/202608/01/2607.27194v1-vidmap-exploiting-temporal-structure-for-video-based-structure-from-motion)  
+   evidence：语义目标SLAM用于场景理解与建图
+2. [Intrinsic and Triangulation-Agnostic Attention: A Simple and Powerful Approach for Learning on Meshes](/202608/02/2607.24954v1-intrinsic-and-triangulation-agnostic-attention-a-simple-and-powerful-approach-for-learning-on-meshes)  
    标签：评分：7.0/10、query:world-model
-   evidence：基于视频的运动恢复结构恢复相机位姿，服务于导航与场景理解
-3. [TARS: Timestep-Aware Data Scaling for 3D-Free Video Re-Shooting](/202608/01/2607.28261v1-tars-timestep-aware-data-scaling-for-3d-free-video-re-shooting)  
+   evidence：用于3D网格学习的内在注意力机制
+3. [StructureGS: Structure-aware Gaussian Splatting for Articulated Object Reconstruction](/202608/02/2607.26889v1-structuregs-structure-aware-gaussian-splatting-for-articulated-object-reconstruction)  
    标签：评分：7.0/10、query:world-model
-   evidence：无3D先验的视频重拍摄，生成可控相机运动的新视角内容
-4. [Geometric 2D Scene Graph Generation](/202608/01/2607.22325v1-geometric-2d-scene-graph-generation)  
+   evidence：结构感知的高斯泼溅铰接物体重建，直接支撑场景理解
+4. [SILICA: Repurposing Diffusion Priors for Joint Glass Segmentation and Depth Estimation](/202608/02/2607.24249v1-silica-repurposing-diffusion-priors-for-joint-glass-segmentation-and-depth-estimation)  
    标签：评分：6.0/10、query:world-model
-   evidence：用于空间装配推理的几何场景图生成
-5. [SiPhy: Single-Image Physical Property Reasoning](/202608/01/2607.22355v1-siphy-single-image-physical-property-reasoning)  
+   evidence：利用扩散先验进行玻璃分割与深度估计，增强透明表面场景感知
+5. [IMPRINT: Image-Conditioned Query Enrichment for Long-Tail Object Goal Navigation](/202608/02/2607.25106v1-imprint-image-conditioned-query-enrichment-for-long-tail-object-goal-navigation)  
    标签：评分：6.0/10、query:world-model
-   evidence：结合3D感知线索与语言材料知识进行单图像物理属性推理
-6. [Amortized Moment Matching for Visual Generation](/202608/01/2607.26860v1-amortized-moment-matching-for-visual-generation)  
+   evidence：利用可查询语义地图与视觉语言接地实现目标导航，关联场景理解与空间推理
+6. [R-SLPR: Region-based Small-to-Large Point-cloud Registration with Contrastive Learning](/202608/02/2607.26583v1-r-slpr-region-based-small-to-large-point-cloud-registration-with-contrastive-learning)  
    标签：评分：6.0/10、query:world-model
-   evidence：通用的视觉生成深度学习训练目标，可迁移至3D场景生成
-7. [S-Avatar: Diffusion-Guided Gaussian Head Avatars from a Single Image](/202608/01/2607.28164v1-s-avatar-diffusion-guided-gaussian-head-avatars-from-a-single-image)  
+   evidence：点云配准实现小到大规模的空间对齐
+7. [Long-Tailed 3D Point Cloud Dataset Distillation](/202608/02/2607.26763v1-long-tailed-3d-point-cloud-dataset-distillation)  
    标签：评分：6.0/10、query:world-model
-   evidence：扩散引导的单图3D高斯头像生成，属于深度学习的3D生成方法
+   evidence：面向长尾分布的3D点云数据集蒸馏
+8. [Robust RPC Bundle Adjustment for Multi-Date Satellite Imagery with Season-Invariant Correspondences](/202608/02/2607.26973v1-robust-rpc-bundle-adjustment-for-multi-date-satellite-imagery-with-season-invariant-correspondences)  
+   标签：评分：6.0/10、query:world-model
+   evidence：面向多日期卫星三维重建的稳健RPC光束法平差
+9. [AdaAnchor4D: Anchor-Conditioned Spatiotemporal Feature Aggregation for Monocular UAV 4D Reconstruction](/202608/02/2607.28320v1-adaanchor4d-anchor-conditioned-spatiotemporal-feature-aggregation-for-monocular-uav-4d-reconstruction)  
+   标签：评分：6.0/10、query:world-model
+   evidence：基于锚点条件的时空特征聚合，用于动态城市场景4D重建
 
 
 <div class="dpr-home-promo-card">
