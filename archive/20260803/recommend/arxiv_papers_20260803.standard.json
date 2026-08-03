@@ -1,0 +1,210 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-03T21:26:13.442487+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.23909v2",
+      "source": "arxiv",
+      "title": "WorldDiT: A Unified Diffusion Architecture for World and Action Modeling",
+      "abstract": "Many recent robot policies pursue stronger control by using large pretrained vision-language models (VLMs) as the action backbone. We introduce WorldDiT, a unified diffusion transformer architecture that couples action generation with visual world modeling and achieves strong performance without a large pretrained VLM action backbone. During training, a single diffusion transformer generates continuous action chunks and predicts normalized RGB patch targets from future camera frames. Across four LIBERO simulation suites, WorldDiT lies on the reported Pareto frontier for total model parameters and mean success among methods reporting all four suites. These results provide a strong sub-billion-parameter baseline for future scaling studies.",
+      "authors": [
+        "Sen Wang",
+        "R. Gnana Praveen",
+        "Bidhan Roy",
+        "Marcos Villagra"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-07-27T00:55:10+00:00",
+      "link": "https://arxiv.org/pdf/2607.23909v2",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "diffusion transformer coupling action generation with visual world modeling; predicts future RGB frames",
+      "llm_evidence_cn": "扩散Transformer联合动作生成与视觉世界建模，预测未来RGB帧",
+      "llm_evidence": "扩散Transformer联合动作生成与视觉世界建模，预测未来RGB帧",
+      "canonical_evidence": "扩散Transformer联合动作生成与视觉世界建模，预测未来RGB帧",
+      "llm_tldr_en": "WorldDiT introduces a single diffusion transformer that couples robot action generation with visual world modeling by predicting future RGB patch targets, achieving strong LIBERO success rates at sub-billion-parameter scale.",
+      "llm_tldr_cn": "针对机器人策略依赖大规模预训练VLM作为动作主干的问题，WorldDiT提出一个统一的扩散Transformer架构，在训练时同时生成连续动作块并预测未来相机帧的RGB patch目标，从而将动作生成与视觉世界建模耦合。在四个LIBERO仿真套件上，该方法以不到十亿参数达到报告的成功率Pareto前沿，为后续扩展研究提供了强基准。",
+      "llm_tldr": "针对机器人策略依赖大规模预训练VLM作为动作主干的问题，WorldDiT提出一个统一的扩散Transformer架构，在训练时同时生成连续动作块并预测未来相机帧的RGB patch目标，从而将动作生成与视觉世界建模耦合。在四个LIBERO仿真套件上，该方法以不到十亿参数达到报告的成功率Pareto前沿，为后续扩展研究提供了强基准。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "world model",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.28675v1",
+      "source": "arxiv",
+      "title": "Meshy T2: Fast Native Mesh Generation with Flow Matching",
+      "abstract": "Polygonal meshes are the standard surface representation of modern 3D pipelines, and generating high-quality meshes with artist-style topology is essential for film, gaming, and interactive 3D applications. Mainstream approaches serialize a mesh into a token sequence and decode it autoregressively, which is slow at inference and sensitive to error accumulation, making them impractical for interactive asset creation. We present Meshy T2, a fast native mesh generation framework built on flow matching. At its core is a vertex-set mesh VAE that encodes a mesh into one continuous latent token per vertex and decodes vertices, edge connectivity, and face winding order in a single pass, preserving high-precision geometry and artist-authored topology without vertex quantization or welding. Generation proceeds as a coarse-to-fine cascade of two flow-matching models: an image-conditioned voxel flow first sketches the overall shape as a coarse occupancy scaffold, and a mesh flow then populates the scaffold with per-vertex latent tokens, conditioned on the image, the scaffold, and a requested vertex budget. This design delivers three practical capabilities: interactive generation speed through parallel flow-based synthesis; effective face-count control through the requested vertex budget; and native support for multi-part assets, whose components emerge directly from the generated connectivity. In our experiments, Meshy T2 achieves state-of-the-art geometric fidelity and completes end-to-end image-to-mesh generation within a median of 6 seconds, over an order of magnitude faster than autoregressive baselines. Code and weights will be available at https://github.com/meshy-dev/meshy-t2.",
+      "authors": [
+        "Jiale Xu",
+        "Rendong Liang",
+        "Yuhao Long",
+        "Siyuan Shen",
+        "Zangyueyang Xian",
+        "Zeyi Xu",
+        "Yuanming Hu"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "published": "2026-07-28T16:33:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.28675v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "fast native mesh generation with flow matching, deep learning method for 3D asset generation",
+      "llm_evidence_cn": "基于流匹配的快速原生网格生成，属于面向3D资产生成的深度学习方法",
+      "llm_evidence": "基于流匹配的快速原生网格生成，属于面向3D资产生成的深度学习方法",
+      "canonical_evidence": "基于流匹配的快速原生网格生成，属于面向3D资产生成的深度学习方法",
+      "llm_tldr_en": "Meshy T2 introduces a vertex-set mesh VAE and flow matching to generate native polygon meshes in a single pass, avoiding slow autoregressive decoding and preserving artist-style topology.",
+      "llm_tldr_cn": "现有网格生成方法多依赖自回归解码，推理慢且易误差累积，难以用于交互式3D资产生成。该论文提出Meshy T2，以顶点集网格VAE为核心，将网格编码为逐顶点连续潜在token，并通过流匹配一步解码顶点、边连接与面绕序，在保证高精度几何和艺术家风格拓扑的同时大幅提速。实验表明其能高效生成高质量多边形网格，为影视、游戏等交互式3D应用提供了实用的生成方案。",
+      "llm_tldr": "现有网格生成方法多依赖自回归解码，推理慢且易误差累积，难以用于交互式3D资产生成。该论文提出Meshy T2，以顶点集网格VAE为核心，将网格编码为逐顶点连续潜在token，并通过流匹配一步解码顶点、边连接与面绕序，在保证高精度几何和艺术家风格拓扑的同时大幅提速。实验表明其能高效生成高质量多边形网格，为影视、游戏等交互式3D应用提供了实用的生成方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "deep learning methods for 3d scene generation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.29284v1",
+      "source": "arxiv",
+      "title": "FillGS: Filling Observation Gaps in 4D Gaussian Splatting via Viewpoint-Time Selection and Generative Refinement",
+      "abstract": "4D Gaussian Splatting (4DGS) can render dynamic scenes photorealistically. However, with limited viewpoint coverage, some spatiotemporal regions remain sparsely observed, leading to artifacts, particularly in scenes with large motion. Existing approaches leveraging generative models rely on heuristic virtual-viewpoint selection before refining rendered views. As a result, they cannot actively explore such sparsely observed regions. To address this issue, we propose a pipeline that actively selects spatiotemporal virtual viewpoints to improve 4DGS reconstruction. Our method selects virtual viewpoints for generative enhancement based on the rendering sensitivity and motion-aware observation density of 4D Gaussians, prioritizing views that alleviate observation sparsity. In the refined images, we filter out regions that conflict with captured observations or are likely to contain generative artifacts and then fine-tune 4DGS using only the reliable regions. We evaluate our method on multi-view video benchmarks using new train/test splits designed to induce observation gaps. Results show consistent improvements over prior viewpoint selection strategies and fine-tuning methods in both qualitative and quantitative evaluations, while reducing artifacts.",
+      "authors": [
+        "Takashi Otonari",
+        "Toshihiko Yamasaki"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-31T10:57:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.29284v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "4D Gaussian Splatting reconstruction with generative refinement, 3D scene reconstruction technique",
+      "llm_evidence_cn": "融合生成式细化的4D高斯泼溅重建，属于三维场景重建技术",
+      "llm_evidence": "融合生成式细化的4D高斯泼溅重建，属于三维场景重建技术",
+      "canonical_evidence": "融合生成式细化的4D高斯泼溅重建，属于三维场景重建技术",
+      "llm_tldr_en": "FillGS actively selects spatiotemporal virtual viewpoints based on rendering sensitivity and motion-aware density, then uses generative refinement to fill observation gaps in 4D Gaussian Splatting reconstruction.",
+      "llm_tldr_cn": "4D高斯泼溅在视角覆盖不足时，大动态场景的时空区域会因稀疏观测产生伪影。现有基于生成模型的方案只能启发式选择虚拟视角，无法主动探索欠观测区域。该论文提出FillGS管线，根据渲染敏感度和运动感知观测密度选择时空虚拟视角，再对渲染视图进行生成式细化。实验表明该策略能有效填补观测缺口，提升4D动态场景重建的真实感和完整性。",
+      "llm_tldr": "4D高斯泼溅在视角覆盖不足时，大动态场景的时空区域会因稀疏观测产生伪影。现有基于生成模型的方案只能启发式选择虚拟视角，无法主动探索欠观测区域。该论文提出FillGS管线，根据渲染敏感度和运动感知观测密度选择时空虚拟视角，再对渲染视图进行生成式细化。实验表明该策略能有效填补观测缺口，提升4D动态场景重建的真实感和完整性。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.28935v1",
+      "source": "arxiv",
+      "title": "Group-wise Supervision with Focal-Dice Loss for Long-Tailed Indoor Semantic Occupancy Prediction",
+      "abstract": "Recently, 3D semantic occupancy prediction has garnered increasing attention for understanding the indoor scene. However, unlike structured outdoor environments, indoor scenes feature a high diversity of object categories that exhibit a severe long-tailed distribution, which has become a core bottleneck limiting the performance of existing models. To tackle this challenge, we propose a novel method, Group-UFD Occ, based on hierarchical semantic supervision and synergistic loss optimization. At the architectural level, we introduce a fine-grained semantic grouping strategy and design multi-scale, parallel ``main-expert'' prediction heads to guide the model in efficiently learning tail-class features through deep regularization. At the optimization level, we introduce the Unified Focal-Dice (UFD) loss. This synergistic loss function dynamically focuses on hard samples at the per-voxel level. Meanwhile, it simultaneously optimizes the geometric integrity of predicted objects from a region-based perspective. We conducted experiments on the large-scale EmbodiedScan dataset. The results demonstrate that our method yields a relative improvement of 11.38\\% over the baseline, with substantial accuracy gains in several critical long-tailed categories.",
+      "authors": [
+        "Qi Zheng",
+        "Zihuang Su",
+        "Xiao Pan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-31T01:32:45+00:00",
+      "link": "https://arxiv.org/pdf/2607.28935v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Indoor 3D semantic occupancy prediction with hierarchical supervision to address long-tailed object distributions",
+      "llm_evidence_cn": "面向室内3D语义占用预测的分层监督，应对长尾物体分布",
+      "llm_evidence": "面向室内3D语义占用预测的分层监督，应对长尾物体分布",
+      "canonical_evidence": "面向室内3D语义占用预测的分层监督，应对长尾物体分布",
+      "llm_tldr_en": "Group-UFD Occ introduces fine-grained semantic grouping and multi-scale expert heads with focal-dice loss to improve tail-class learning in indoor semantic occupancy prediction.",
+      "llm_tldr_cn": "室内3D语义占用预测中类别呈现严重长尾分布，成为性能瓶颈。本文提出Group-UFD Occ，采用分层语义监督与协同损失优化：设计细粒度语义分组策略，并构造多尺度并行主-专家预测头，通过深度正则化引导模型高效学习尾类特征。实验表明该方法能显著提升室内长尾类别的预测性能，增强场景理解能力。该工作为复杂室内场景的语义感知提供了有效方案。",
+      "llm_tldr": "室内3D语义占用预测中类别呈现严重长尾分布，成为性能瓶颈。本文提出Group-UFD Occ，采用分层语义监督与协同损失优化：设计细粒度语义分组策略，并构造多尺度并行主-专家预测头，通过深度正则化引导模型高效学习尾类特征。实验表明该方法能显著提升室内长尾类别的预测性能，增强场景理解能力。该工作为复杂室内场景的语义感知提供了有效方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "scene understanding",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.28855v1",
+      "source": "arxiv",
+      "title": "Learning Manifolds in High-D Point Embedding for Anisotropic Surface Approximation from Unstructured Point Clouds",
+      "abstract": "Dense 3D sensors in various real-world fields produce point clouds that are geometrically redundant for real-time processing. In this paper, we propose an efficient and scalable learning-based anisotropic surface approximation framework, HD-PEA, that operates directly on unstructured point clouds, integrating anisotropic optimization into reconstruction to produce compact, geometry-aligned surface representations with higher fidelity, fewer elements, and improved numerical stability compared to isotropic and adaptive meshes. Firstly, we develop a novel learning-based high-dimensional (high-d) Euclidean point embedding method to map the input point clouds into a high-d manifold embedding space. For handling large-scale point clouds without retraining and fine-tuning, a patch-based meta-embedding scheme is designed during the inference stage. Then, we develop a new tangent subspace estimation for the high-d embedding manifold approximation and anisotropic manifold reconstruction in high-d space. The main contribution of this work is to propose a scalable deep learning framework and a variety of datasets for constructing a high-d Euclidean point embedding space aimed to 3D anisotropic surface mesh approximation and Riemannian curvature tensor estimation from point clouds. We extensively evaluate our method against state-of-the-art surface reconstruction approaches using several datasets, such as Thingi10K dataset, AIM@SHAPE and Stanford 3D Scanning Repository, ScanNet dataset, and further demonstrate its generalization and usability on diverse unseen shapes and applications from these datasets.",
+      "authors": [
+        "Hongbo Li",
+        "Haikuan Zhu",
+        "Xiaohu Guo",
+        "Wenping Wang",
+        "Jing Hua",
+        "Zichun Zhong"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "published": "2026-07-30T21:40:15+00:00",
+      "link": "https://arxiv.org/pdf/2607.28855v1",
+      "tags": [
+        "keyword:world-model",
+        "query:world-model"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Learning-based anisotropic surface approximation and reconstruction from unstructured point clouds",
+      "llm_evidence_cn": "基于学习的各向异性表面重建，从无序点云重建几何",
+      "llm_evidence": "基于学习的各向异性表面重建，从无序点云重建几何",
+      "canonical_evidence": "基于学习的各向异性表面重建，从无序点云重建几何",
+      "llm_tldr_en": "HD-PEA maps unstructured point clouds into high-dimensional manifold embeddings and performs anisotropic surface approximation, yielding compact, geometry-aligned meshes with higher fidelity and numerical stability than isotropic alternatives.",
+      "llm_tldr_cn": "稠密3D传感器产生的点云存在几何冗余，实时处理困难。HD-PEA提出将点云映射到高维流形嵌入空间，并结合各向异性优化的表面近似框架，生成更紧凑、对齐几何的表面表示。相比各向同性与自适应网格，该方法在保真度、元素数量和数值稳定性上均有提升。该工作为大规模点云实时处理与3D重建提供了高效可行的学习方案。",
+      "llm_tldr": "稠密3D传感器产生的点云存在几何冗余，实时处理困难。HD-PEA提出将点云映射到高维流形嵌入空间，并结合各向异性优化的表面近似框架，生成更紧凑、对齐几何的表面表示。相比各向同性与自适应网格，该方法在保真度、元素数量和数值稳定性上均有提升。该工作为大规模点云实时处理与3D重建提供了高效可行的学习方案。",
+      "llm_tags": [
+        "query:world-model"
+      ],
+      "matched_query_tag": "query:world-model",
+      "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

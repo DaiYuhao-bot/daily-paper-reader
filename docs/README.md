@@ -6,50 +6,37 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-02
-- 运行时间：2026-08-02 20:25:18 UTC
+- 最新运行日期：2026-08-03
+- 运行时间：2026-08-03 21:31:16 UTC
 - 运行状态：成功
-- 本次总论文数：10
-- 精读区：1
-- 速读区：9
+- 本次总论文数：5
+- 精读区：3
+- 速读区：2
 
 ### 今日简报（AI）
-今日精选10篇论文，重点精读1篇，另速读3篇，覆盖深度估计、SLAM、网格学习与三维重建。最值得关注的是《Beyond Visual Ambiguity》提出用长文本描述引导鲁棒单目深度估计，在挑战性场景显著提升；建议优先阅读该文，并结合《StructureGS》了解可动物体重建的新思路。
-- 详情：[/202608/02/README](/202608/02/README)
+1) 今日共读5篇，精读聚焦世界模型与网格生成两大前沿，速读覆盖语义占用预测与点云曲面拟合。  
+2) 最值得关注《WorldDiT》统一世界与动作建模，以及《Meshy T2》用流匹配实现快速原生网格生成，均获8.0高分。  
+3) 建议深入精读这两篇论文的架构设计，并对比其在生成质量与速度上的取舍。
+- 详情：[/202608/03/README](/202608/03/README)
 
 ### 精读区论文标签
-1. [Beyond Visual Ambiguity: Guiding Robust Monocular Depth Estimation in Challenging Scenarios via Detailed Long Captions](/202608/02/2607.28285v1-beyond-visual-ambiguity-guiding-robust-monocular-depth-estimation-in-challenging-scenarios-via-detailed-long-captions)  
+1. [WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](/202608/03/2607.23909v2-worlddit-a-unified-diffusion-architecture-for-world-and-action-modeling)  
    标签：评分：8.0/10、query:world-model
-   evidence：详细长描述引导单目深度估计以提升场景理解鲁棒性
+   evidence：扩散Transformer联合动作生成与视觉世界建模，预测未来RGB帧
+2. [Meshy T2: Fast Native Mesh Generation with Flow Matching](/202608/03/2607.28675v1-meshy-t2-fast-native-mesh-generation-with-flow-matching)  
+   标签：评分：8.0/10、query:world-model
+   evidence：基于流匹配的快速原生网格生成，属于面向3D资产生成的深度学习方法
+3. [FillGS: Filling Observation Gaps in 4D Gaussian Splatting via Viewpoint-Time Selection and Generative Refinement](/202608/03/2607.29284v1-fillgs-filling-observation-gaps-in-4d-gaussian-splatting-via-viewpoint-time-selection-and-generative-refinement)  
+   标签：评分：8.0/10、query:world-model
+   evidence：融合生成式细化的4D高斯泼溅重建，属于三维场景重建技术
 
 ### 速读区论文标签
-1. [Semantic Semi-Incremental Data-Association-Free Object SLAM](/202608/02/2607.23384v1-semantic-semi-incremental-data-association-free-object-slam)  
+1. [Group-wise Supervision with Focal-Dice Loss for Long-Tailed Indoor Semantic Occupancy Prediction](/202608/03/2607.28935v1-group-wise-supervision-with-focal-dice-loss-for-long-tailed-indoor-semantic-occupancy-prediction)  
    标签：评分：7.0/10、query:world-model
-   evidence：语义目标SLAM用于场景理解与建图
-2. [Intrinsic and Triangulation-Agnostic Attention: A Simple and Powerful Approach for Learning on Meshes](/202608/02/2607.24954v1-intrinsic-and-triangulation-agnostic-attention-a-simple-and-powerful-approach-for-learning-on-meshes)  
-   标签：评分：7.0/10、query:world-model
-   evidence：用于3D网格学习的内在注意力机制
-3. [StructureGS: Structure-aware Gaussian Splatting for Articulated Object Reconstruction](/202608/02/2607.26889v1-structuregs-structure-aware-gaussian-splatting-for-articulated-object-reconstruction)  
-   标签：评分：7.0/10、query:world-model
-   evidence：结构感知的高斯泼溅铰接物体重建，直接支撑场景理解
-4. [SILICA: Repurposing Diffusion Priors for Joint Glass Segmentation and Depth Estimation](/202608/02/2607.24249v1-silica-repurposing-diffusion-priors-for-joint-glass-segmentation-and-depth-estimation)  
+   evidence：面向室内3D语义占用预测的分层监督，应对长尾物体分布
+2. [Learning Manifolds in High-D Point Embedding for Anisotropic Surface Approximation from Unstructured Point Clouds](/202608/03/2607.28855v1-learning-manifolds-in-high-d-point-embedding-for-anisotropic-surface-approximation-from-unstructured-point-clouds)  
    标签：评分：6.0/10、query:world-model
-   evidence：利用扩散先验进行玻璃分割与深度估计，增强透明表面场景感知
-5. [IMPRINT: Image-Conditioned Query Enrichment for Long-Tail Object Goal Navigation](/202608/02/2607.25106v1-imprint-image-conditioned-query-enrichment-for-long-tail-object-goal-navigation)  
-   标签：评分：6.0/10、query:world-model
-   evidence：利用可查询语义地图与视觉语言接地实现目标导航，关联场景理解与空间推理
-6. [R-SLPR: Region-based Small-to-Large Point-cloud Registration with Contrastive Learning](/202608/02/2607.26583v1-r-slpr-region-based-small-to-large-point-cloud-registration-with-contrastive-learning)  
-   标签：评分：6.0/10、query:world-model
-   evidence：点云配准实现小到大规模的空间对齐
-7. [Long-Tailed 3D Point Cloud Dataset Distillation](/202608/02/2607.26763v1-long-tailed-3d-point-cloud-dataset-distillation)  
-   标签：评分：6.0/10、query:world-model
-   evidence：面向长尾分布的3D点云数据集蒸馏
-8. [Robust RPC Bundle Adjustment for Multi-Date Satellite Imagery with Season-Invariant Correspondences](/202608/02/2607.26973v1-robust-rpc-bundle-adjustment-for-multi-date-satellite-imagery-with-season-invariant-correspondences)  
-   标签：评分：6.0/10、query:world-model
-   evidence：面向多日期卫星三维重建的稳健RPC光束法平差
-9. [AdaAnchor4D: Anchor-Conditioned Spatiotemporal Feature Aggregation for Monocular UAV 4D Reconstruction](/202608/02/2607.28320v1-adaanchor4d-anchor-conditioned-spatiotemporal-feature-aggregation-for-monocular-uav-4d-reconstruction)  
-   标签：评分：6.0/10、query:world-model
-   evidence：基于锚点条件的时空特征聚合，用于动态城市场景4D重建
+   evidence：基于学习的各向异性表面重建，从无序点云重建几何
 
 
 <div class="dpr-home-promo-card">
