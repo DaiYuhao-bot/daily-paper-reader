@@ -1,12 +1,526 @@
 {
-  "generated_at": "2026-08-03T21:26:13.443194+00:00",
-  "updated_date": "20260803",
+  "generated_at": "2026-08-05T21:34:43.317937+00:00",
+  "updated_date": "20260805",
   "carryover_days": 9,
   "tag_states": {
     "world-model": {
-      "updated_date": "20260803",
+      "updated_date": "20260805",
       "carryover_days": 9,
-      "items": []
+      "items": [
+        {
+          "id": "2608.01186v1",
+          "source": "arxiv",
+          "title": "QuerySplat: Decoupling Geometry and Appearance Representations in 3DGS Prediction",
+          "abstract": "While feed-forward 3D Gaussian Splatting (3DGS) enables efficient 3D reconstruction, achieving high-fidelity rendering remains challenging. Existing pixel-aligned approaches suffer from spatial inflexibility and massive structural redundancy, whereas query-based methods lack 3D priors and entangle geometry with appearance, yielding blurry, pose-dependent results. To overcome these deficiencies, we propose \\textbf{QuerySplat}, a feed-forward 3DGS framework driven by geometric priors and explicit appearance decoupling. Specifically, we design a dual-branch query-based decoder: the geometry branch leverages a pretrained Vision Geometric Model for spatial understanding, which intrinsically endows QuerySplat with pose-free modeling capabilities, while the appearance branch recovers high-frequency details through a dedicated pathway separated from geometric attribute regression. Extensive experiments demonstrate that QuerySplat mitigates the blurry rendering issues of early query-based models and consistently outperforms pixel-aligned approaches in rendering fidelity. On the challenging DL3DV benchmark, it achieves state-of-the-art novel view synthesis performance, with average PSNR gains of 2.30 dB and 1.04 dB over the best pose-free and pose-required baselines, respectively. Project Page: https://inspatio.github.io/querysplat.",
+          "authors": [
+            "Yinglong Li",
+            "Donghui Shen",
+            "Xiaoyu Zhang",
+            "Zhichao Ye",
+            "Hongyu Wu",
+            "Aimin Hao",
+            "Guofeng Zhang",
+            "Haomin Liu"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV"
+          ],
+          "published": "2026-08-02T12:12:02+00:00",
+          "link": "https://arxiv.org/pdf/2608.01186v1",
+          "tags": [
+            "keyword:world-model",
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "feed-forward 3D Gaussian splatting prediction with geometric priors and appearance decoupling",
+          "llm_evidence_cn": "基于几何先验与外观解耦的前馈3D高斯预测",
+          "llm_evidence": "基于几何先验与外观解耦的前馈3D高斯预测",
+          "canonical_evidence": "基于几何先验与外观解耦的前馈3D高斯预测",
+          "llm_tldr_en": "QuerySplat is a feed-forward 3DGS framework with a dual-branch query-based decoder that decouples geometry and appearance, leveraging a pretrained vision geometric model for spatial understanding and high-fidelity rendering.",
+          "llm_tldr_cn": "针对现有前馈3DGS预测中几何与外观耦合、缺乏3D先验导致模糊和姿态依赖的问题，本文提出QuerySplat，设计双分支查询解码器。几何分支利用预训练视觉几何模型提供空间理解与无姿态建模能力，显式解耦外观表示。实验表明该方法在渲染质量和泛化性上较现有方法有显著提升。",
+          "llm_tldr": "针对现有前馈3DGS预测中几何与外观耦合、缺乏3D先验导致模糊和姿态依赖的问题，本文提出QuerySplat，设计双分支查询解码器。几何分支利用预训练视觉几何模型提供空间理解与无姿态建模能力，显式解耦外观表示。实验表明该方法在渲染质量和泛化性上较现有方法有显著提升。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "deep learning methods for 3d scene generation",
+          "matched_requirement_id": "req-7",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.01186v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.01381v1",
+          "source": "arxiv",
+          "title": "DreamTrajectory: Trajectory-Guided Action Generation with World Model Alignment for Mobile Manipulation",
+          "abstract": "Mobile manipulation requires a robot to coordinate base and arm motion under continuously changing viewpoints and contact conditions, within an action space far larger than that of fixed-base manipulation. Existing Vision-Language-Action (VLA) policies are limited in two respects. (i)They map observations directly to whole-body action chunks, searching this large action space without an explicit task-space motion plan, which makes coordinated base--arm prediction imprecise. (ii)They execute the predicted chunk open-loop, without checking whether the actions can realize the motion the policy intended, so control errors and unmodeled contacts accumulate into a gap between planned and realized motion. We present DreamTrajectory, a trajectory-guided framework for language-conditioned mobile manipulation that introduces one component for each limitation. Addressing(i), DreamTrajectory jointly predicts an intention-level end-effector trajectory and a whole-body action chunk in a single action expert, so that the trajectory explicitly guides base--arm action generation instead of remaining implicit. Addressing(ii), a lightweight trajectory world model predicts the trajectory that a candidate action chunk would induce, and a test-time search--predict--score procedure selects the candidate best aligned with the planned trajectory. On MS-HAB, trajectory guidance raises average success from 32.3% to 47.5% and test-time refinement further to 54.8%, with the largest gains on contact-rich articulated-object tasks. On three real-world mobile manipulation tasks, the corresponding average success rates are 63.3%, 81.7%, and 90.0%.",
+          "authors": [
+            "Zheng Yang",
+            "Wenjie Zhang",
+            "Xiangyu Chen",
+            "Wenxuan Song",
+            "Xianpeng Wang",
+            "Yihang Kang",
+            "Wen Chen",
+            "Lujia Wang",
+            "Renjing Xu",
+            "Xiaowen Chu"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO"
+          ],
+          "published": "2026-08-02T17:02:48+00:00",
+          "link": "https://arxiv.org/pdf/2608.01381v1",
+          "tags": [
+            "keyword:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "World model alignment for trajectory-guided action generation in mobile manipulation",
+          "llm_evidence_cn": "移动操作中轨迹引导动作生成与世界模型对齐",
+          "llm_evidence": "移动操作中轨迹引导动作生成与世界模型对齐",
+          "canonical_evidence": "移动操作中轨迹引导动作生成与世界模型对齐",
+          "llm_tldr_en": "DreamTrajectory generates whole-body actions via task-space trajectory planning and world model alignment, reducing open-loop control errors and improving coordination for mobile manipulation.",
+          "llm_tldr_cn": "移动操作需要协调基座与机械臂的大动作空间，现有视觉-语言-动作策略直接预测动作块且开环执行，难以保证动作与意图运动一致。DreamTrajectory先规划任务空间轨迹，再利用世界模型对齐进行动作生成，显式检查预测动作能否实现预期运动。实验证明该方法能减少控制误差累积，提升移动操作的成功率与协调性。",
+          "llm_tldr": "移动操作需要协调基座与机械臂的大动作空间，现有视觉-语言-动作策略直接预测动作块且开环执行，难以保证动作与意图运动一致。DreamTrajectory先规划任务空间轨迹，再利用世界模型对齐进行动作生成，显式检查预测动作能否实现预期运动。实验证明该方法能减少控制误差累积，提升移动操作的成功率与协调性。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "world model",
+          "matched_requirement_id": "req-2",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.01381v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.02016v1",
+          "source": "arxiv",
+          "title": "Beyond Global Latents: Chunk-Based Sparse Grid VAE for Scalable 3D Modeling",
+          "abstract": "Sparse voxel grids preserve the spatial structure needed for detailed 3D reconstruction, but their memory still grows rapidly with resolution as active surface cells increase. We introduce ChunkVAE, a sparse grid variational autoencoder organized around local chunks rather than a global latent volume. Local learned operators permit independently chosen encoder and decoder partitions and allow inference chunk sizes to differ from training. Two complementary data operators make this flexibility practical: Balanced Binary Object Partitioning distributes active cells while limiting replicated overlap, while S-Curve weighted stitching attenuates unreliable boundary features when assembling a global latent or reconstruction. Across three object benchmarks, ChunkVAE is competitive with or better than strong baselines from $512^3$ to $1536^3$; smaller chunks lower peak allocated memory and shorten per-chunk compute, enabling faster parallel inference. Stable stitched latents and improved image to 3D metrics indicate that local compression can scale geometry while retaining the global interface required downstream.",
+          "authors": [
+            "Kaiyi Zhang",
+            "Zhihao Liang",
+            "Haolin Liu",
+            "Qingxiang Lin",
+            "Zeqiang Lai",
+            "Yunfei Zhao",
+            "Bowen Zhang",
+            "Xianghui Yang",
+            "Zibo Zhao",
+            "Chunchao Guo",
+            "Long Quan"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV"
+          ],
+          "published": "2026-08-03T10:15:30+00:00",
+          "link": "https://arxiv.org/pdf/2608.02016v1",
+          "tags": [
+            "keyword:world-model",
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Scalable deep 3D modeling via chunk-based sparse grid variational autoencoder",
+          "llm_evidence_cn": "通过块式稀疏网格变分自编码器实现可扩展深度3D建模",
+          "llm_evidence": "通过块式稀疏网格变分自编码器实现可扩展深度3D建模",
+          "canonical_evidence": "通过块式稀疏网格变分自编码器实现可扩展深度3D建模",
+          "llm_tldr_en": "ChunkVAE organizes sparse grid VAEs into local chunks with independent encoder/decoder partitions, using balanced partitioning and S-curve stitching for scalable high-resolution 3D modeling.",
+          "llm_tldr_cn": "稀疏体素网格虽保留空间结构，但内存随分辨率增长迅速，全局潜变量难以扩展。ChunkVAE将VAE组织为局部块，编码器与解码器可独立划分，并通过平衡二元对象划分与S曲线拼接减少重叠冗余。实验表明该方法在保持重建质量的同时显著降低了内存与计算开销，为可扩展3D建模提供了更高效的骨架。",
+          "llm_tldr": "稀疏体素网格虽保留空间结构，但内存随分辨率增长迅速，全局潜变量难以扩展。ChunkVAE将VAE组织为局部块，编码器与解码器可独立划分，并通过平衡二元对象划分与S曲线拼接减少重叠冗余。实验表明该方法在保持重建质量的同时显著降低了内存与计算开销，为可扩展3D建模提供了更高效的骨架。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "deep learning methods for 3d scene generation",
+          "matched_requirement_id": "req-7",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.02016v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.02145v1",
+          "source": "arxiv",
+          "title": "UniqueSplat: View-conditioned 3D Gaussian Splatting for Generalizable 3D Reconstruction",
+          "abstract": "In this paper, we propose UniqueSplat, a view-conditioned feed-forward 3D Gaussian Splatting model to reconstruct customized 3D radiance fields for each view query. Existing feed-forward methods such as pixelSplat and MVSplat aim to generate fixed Gaussians across all views of each scene by minimizing the error between rendered views and ground-truth images. However, such fixed Gaussians generally render images from all views and lack the ability to adapt to specific viewpoints, as they do not incorporate target view information when predicting Gaussians. To address this, our UniqueSplat learns the view-conditioned information as a prior and incorporates this knowledge into network parameters, so that Gaussians are dynamically adjusted in accordance with different views. Specifically, we propose a two-branch view-conditioned hyperNetwork to simultaneously learn view-agnostic embeddings and view-specific knowledge, which not only explores the shareable knowledge from various views, but also adapts the model to specific views at test time. Extensive experiments on widely-used datasets including RealEstate10K, ACID and DTU demonstrate the superiority of UniqueSplat over the state-of-the-art methods. Moreover, UniqueSplat encouragingly outperforms existing methods in cross-dataset evaluation, showing its notable generalization ability.",
+          "authors": [
+            "Haixu Song",
+            "Xiaoke Yang",
+            "Shengjun Zhang",
+            "Jiwen Lu",
+            "Yueqi Duan"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV",
+            "cs.AI"
+          ],
+          "published": "2026-08-03T12:31:12+00:00",
+          "link": "https://arxiv.org/pdf/2608.02145v1",
+          "tags": [
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Deep learning method for generalizable 3D scene reconstruction via view-conditioned 3D Gaussian Splatting",
+          "llm_evidence_cn": "基于视角条件3D高斯溅射的可泛化3D重建深度学习方法",
+          "llm_evidence": "基于视角条件3D高斯溅射的可泛化3D重建深度学习方法",
+          "canonical_evidence": "基于视角条件3D高斯溅射的可泛化3D重建深度学习方法",
+          "llm_tldr_en": "Proposes UniqueSplat, a view-conditioned feed-forward 3D Gaussian Splatting model that adapts per target view by conditioning network parameters, improving generalizable 3D reconstruction.",
+          "llm_tldr_cn": "现有前馈重建方法如pixelSplat和MVSplat为所有视角生成固定高斯，无法适应特定视点。UniqueSplat学习视角条件先验并嵌入网络参数，使高斯随目标视角动态调整，从而在可泛化3D重建中获得更灵活的视角适应能力。实验验证了其优于固定高斯方案的重建质量。该工作为基于3DGS的前馈重建提供了新的视角条件化思路。",
+          "llm_tldr": "现有前馈重建方法如pixelSplat和MVSplat为所有视角生成固定高斯，无法适应特定视点。UniqueSplat学习视角条件先验并嵌入网络参数，使高斯随目标视角动态调整，从而在可泛化3D重建中获得更灵活的视角适应能力。实验验证了其优于固定高斯方案的重建质量。该工作为基于3DGS的前馈重建提供了新的视角条件化思路。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "deep learning methods for 3d scene generation",
+          "matched_requirement_id": "req-7",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.02145v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.03763v1",
+          "source": "arxiv",
+          "title": "TDVR: Joint Text Disambiguation and Viewpoint Reasoning for Zero-Shot 3D Visual Grounding",
+          "abstract": "Zero-shot 3D visual grounding aims to localize specific objects based on textual descriptions and 3D visual input. However, the effectiveness of existing methods is significantly hindered by the ambiguous query text and deficient viewpoints. To address these issues, we propose TDVR, a training-free reasoning framework that disambiguates the input text and infers accurate viewpoints for zero-shot 3D visual grounding. First, we construct semantic 3D scene graph from the detected instances in the 3D point cloud. Subsequently, we put the original query, appearance and spatial relationship descriptions into the LLM for fusion, thereby disambiguating the initial input. We leverage chain-of-thought reasoning to generate the structured representation of disambiguated query. Then taking the scene graph and structured query as input, we get the optimal view via viewpoint reasoning to solve the problem of missing viewpoints during grounding. Based on the obtained optimal viewpoint, we further discriminate the distracting objects, enabling the model with the ability to distinguish similar instances. After that, we match the category text and appearance images with the query by computing the similarity of feature vectors. Finally, the target object was identified by integrating the viewpoint score, confusion score, category score, and appearance score. Compared with previous methods, our TDVR has stronger capabilities in viewpoint reasoning, similar object discrimination, and ambiguous query understanding. Experimental results on the public ScanRefer dataset show that our method outperforms the existing state-of-the-art methods by 15.25% and 14.46% in Acc@0.25 and Acc@0.5 respectively, demonstrating the effectiveness of our TDVR in addressing ambiguous query text and deficient viewpoints.",
+          "authors": [
+            "Qingxi Du",
+            "Junbo Wang",
+            "Yuke Li",
+            "Yining Zhu"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV"
+          ],
+          "published": "2026-08-04T14:51:15+00:00",
+          "link": "https://arxiv.org/pdf/2608.03763v1",
+          "tags": [
+            "keyword:world-model",
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Joint text disambiguation and viewpoint reasoning for zero-shot 3D visual grounding",
+          "llm_evidence_cn": "面向零样本3D视觉接地的文本消歧与视点推理",
+          "llm_evidence": "面向零样本3D视觉接地的文本消歧与视点推理",
+          "canonical_evidence": "面向零样本3D视觉接地的文本消歧与视点推理",
+          "llm_tldr_en": "Proposes TDVR, a training-free reasoning framework that disambiguates query text and infers accurate viewpoints for zero-shot 3D visual grounding via semantic 3D scene graphs and LLM chain-of-thought reasoning.",
+          "llm_tldr_cn": "零样本3D视觉接地常受文本模糊和视点不足影响。TDVR先从点云实例构建语义3D场景图，再融合查询、外观和空间关系描述以消歧，并利用思维链推理生成结构化表示，从而推断准确视点。整体为无训练推理框架，可用于提升3D定位的鲁棒性，展示了LLM在场景理解与空间推理中的潜力。",
+          "llm_tldr": "零样本3D视觉接地常受文本模糊和视点不足影响。TDVR先从点云实例构建语义3D场景图，再融合查询、外观和空间关系描述以消歧，并利用思维链推理生成结构化表示，从而推断准确视点。整体为无训练推理框架，可用于提升3D定位的鲁棒性，展示了LLM在场景理解与空间推理中的潜力。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "spatial reasoning",
+          "matched_requirement_id": "req-4",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.03763v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.01899v1",
+          "source": "arxiv",
+          "title": "SpatioLM: Towards General Physical Spatial Intelligence in Vision-Language Models",
+          "abstract": "Vision-Language Models (VLMs) perform well on commonsense reasoning tasks but struggle with visual spatial reasoning. Most existing solutions introduce extra 3D prior inputs or external spatial encoders, which increase complexity and degrade the underlying VLMs' general-purpose capabilities after spatial fine-tuning. To this end, we propose a parameter-efficient \\textit{\\textbf{Spatio}-vision \\textbf{L}anguage \\textbf{M}odels (SpatioLM)}, that enhances spatial intelligence without extra 3D prior inputs or third-party spatial encoders. Concretely, we design a plug-and-play and non-invasive spatio-vision module that elicits the spatial knowledge inherent in VLMs. Furthermore, we innovatively leverage pseudo depth and camera information as supervision to guide the model in learning physically coherent representations. Extensive experiments show that SpatioLM achieves significant improvements in diverse tasks, including spatial perception and understanding while effectively limiting the degradation of general capabilities. Notably, the model achieves an impressive score of 71.6 on the VSI-Bench (the first model to surpass 70). In addition, it attains competitive performance when transferred to embodied manipulation tasks. Code is available at \\href{https://github.com/xiaomi-research/spatio-lm}{\\faGithub~spatio-lm}.",
+          "authors": [
+            "Jing Wu",
+            "Jianhua Wu",
+            "Jiayi Guan",
+            "Jiahong Chen",
+            "Jinghui Lu",
+            "Hangjun Ye",
+            "Bingzhao Gao",
+            "Long Chen"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV",
+            "cs.CL",
+            "cs.LG"
+          ],
+          "published": "2026-08-03T08:36:18+00:00",
+          "link": "https://arxiv.org/pdf/2608.01899v1",
+          "tags": [
+            "keyword:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Parameter-efficient spatio-vision module for VLM spatial reasoning without external 3D encoders",
+          "llm_evidence_cn": "无需外部3D编码器，以参数高效方式增强VLM的空间推理",
+          "llm_evidence": "无需外部3D编码器，以参数高效方式增强VLM的空间推理",
+          "canonical_evidence": "无需外部3D编码器，以参数高效方式增强VLM的空间推理",
+          "llm_tldr_en": "Proposes SpatioLM, a parameter-efficient spatio-vision module that elicits inherent spatial knowledge in VLMs using pseudo depth and camera information as supervision, improving visual spatial reasoning without extra 3D priors.",
+          "llm_tldr_cn": "现有视觉-语言模型在视觉空间推理上表现欠佳，且通常需要引入3D先验或外部编码器。本文提出SpatioLM，设计即插即用的非侵入式空间视觉模块，利用伪深度与相机信息作为监督信号，激活VLM中已有的空间知识。该方法参数高效、不破坏模型通用能力，实验表明能有效提升空间推理性能。为VLM空间智能提供了一条低成本增强路径。",
+          "llm_tldr": "现有视觉-语言模型在视觉空间推理上表现欠佳，且通常需要引入3D先验或外部编码器。本文提出SpatioLM，设计即插即用的非侵入式空间视觉模块，利用伪深度与相机信息作为监督信号，激活VLM中已有的空间知识。该方法参数高效、不破坏模型通用能力，实验表明能有效提升空间推理性能。为VLM空间智能提供了一条低成本增强路径。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "spatial reasoning",
+          "matched_requirement_id": "req-4",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.01899v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.02980v1",
+          "source": "arxiv",
+          "title": "Qwen-3D: A Generalist 3D Vision-Language Model for Spatial Understanding",
+          "abstract": "Large Multimodal Models (LMMs) have achieved remarkable success on images and short videos, yet scaling them to long videos remains challenging due to frame-centric tokenization and limited context windows. 3D geometry provides a natural compression mechanism for visual streams: depth and camera pose enable observations from multiple views and time steps to be fused into a persistent, world-aligned representation. While recent 3D LMMs leverage geometry-aware representations to improve spatial reasoning, they continue to lag behind specialist 3D perception systems on grounding and segmentation tasks. We argue that a key limitation is geometry-aware decoding: existing methods communicate 3D predictions through language tokens, proposal selection, or lightweight grounding queries, creating a bottleneck between language reasoning and dense geometric prediction. Building on these insights, we introduce Qwen-3D, a geometry-aware LMM that compresses visual information within the Qwen backbone using multi-view geometric cues, enabling efficient long-horizon visual reasoning over static scenes. Qwen-3D augments visual tokens with 3D Rotary Positional Embeddings, allowing attention to operate directly in 3D scene space rather than across independent image frames and thereby facilitating scalable cross-view and temporal reasoning. To bridge language and geometry, Qwen-3D incorporates a query-based segmentation decoder that grounds language directly in the underlying 3D scene representation, unifying referential grounding, instance segmentation, and visual question answering across both images and videos. Across a diverse set of benchmarks, Qwen-3D surpasses existing 3D LMMs and outperforms several large proprietary 2D models. Notably, Qwen-3D achieves these improvements while maintaining strong performance on standard 2D vision-language benchmarks by jointly training on 2D and 3D data.",
+          "authors": [
+            "Lucy Lin",
+            "Ayush Jain",
+            "Yifan Liu",
+            "Katerina Fragkiadaki"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV"
+          ],
+          "published": "2026-08-04T00:32:09+00:00",
+          "link": "https://arxiv.org/pdf/2608.02980v1",
+          "tags": [
+            "keyword:world-model",
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Generalist 3D vision-language model for spatial understanding, addressing geometry-aware decoding limitations",
+          "llm_evidence_cn": "面向空间理解的通用3D视觉语言模型，改进几何感知解码",
+          "llm_evidence": "面向空间理解的通用3D视觉语言模型，改进几何感知解码",
+          "canonical_evidence": "面向空间理解的通用3D视觉语言模型，改进几何感知解码",
+          "llm_tldr_en": "Introduces Qwen-3D, a generalist 3D VLM that addresses geometry-aware decoding limitations in 3D LMMs, improving spatial understanding and grounding/segmentation performance.",
+          "llm_tldr_cn": "尽管近期3D大语言模型利用几何感知表征来提升空间推理，但在接地和分割任务上仍落后于专用3D感知系统。Qwen-3D指出关键在于几何感知解码，尝试改进3D预测的通信方式，从而在保持通用能力的同时提升空间理解。实验表明该方法在多个3D任务上取得更好性能，为通用3D视觉语言智能提供了新方向。",
+          "llm_tldr": "尽管近期3D大语言模型利用几何感知表征来提升空间推理，但在接地和分割任务上仍落后于专用3D感知系统。Qwen-3D指出关键在于几何感知解码，尝试改进3D预测的通信方式，从而在保持通用能力的同时提升空间理解。实验表明该方法在多个3D任务上取得更好性能，为通用3D视觉语言智能提供了新方向。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "spatial reasoning",
+          "matched_requirement_id": "req-4",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.02980v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.00635v1",
+          "source": "arxiv",
+          "title": "FlowPilot: Real-Time World-Action Modeling for Agile UAV Navigation",
+          "abstract": "We present FlowPilot, a compact world-action model for real-time onboard UAV navigation from depth. Unlike map-then-optimize pipelines that require local reconstruction or end-to-end policies that lack explicit scene prediction, FlowPilot jointly denoises future depth observations and executable trajectories with flow matching. A dual-stream mixture-of-transformers couples video and action experts through shared attention, allowing future-scene prediction and trajectory generation to inform each other. At deployment, the model runs action-centrically and outputs only a trajectory. To ensure trackability, actions are parameterized as degree-7 Bernstein polynomials: the current state constrains the initial control points, and the network predicts five free control points, yielding C^2-continuous references with closed-form velocity, acceleration and jerk. FlowPilot is trained on a three-level depth pyramid spanning high-throughput simulation, photorealistic simulation, and real onboard data. In closed-loop simulation, it outperforms learning- and optimization-based baselines under increasing clutter and commanded speeds up to 8m/s. On a physical quadrotor, the full perception-to-action pipeline runs in under 18ms on a Jetson Orin NX and reaches 5.5m/s in cluttered indoor and forest environments using only onboard sensing and computation.",
+          "authors": [
+            "Runqing Wang",
+            "Ding Yu",
+            "Pengyuan Min",
+            "Xinhong Zhang",
+            "Wei Xiao",
+            "Yu Hu",
+            "Jie Chen",
+            "Fu Zhang",
+            "Gang Wang"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO"
+          ],
+          "published": "2026-08-01T12:43:31+00:00",
+          "link": "https://arxiv.org/pdf/2608.00635v1",
+          "tags": [
+            "keyword:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Compact world-action model for UAV navigation, jointly denoising future depth and trajectories",
+          "llm_evidence_cn": "面向无人机导航的世界-动作模型，联合去噪未来深度与轨迹",
+          "llm_evidence": "面向无人机导航的世界-动作模型，联合去噪未来深度与轨迹",
+          "canonical_evidence": "面向无人机导航的世界-动作模型，联合去噪未来深度与轨迹",
+          "llm_tldr_en": "Presents FlowPilot, a compact world-action model that jointly denoises future depth observations and executable trajectories via flow matching, enabling real-time onboard UAV navigation from depth.",
+          "llm_tldr_cn": "现有无人机导航要么需要局部重建要么缺乏显式场景预测。FlowPilot提出紧凑的世界-动作模型，通过流匹配联合去噪未来深度观测和可执行轨迹，并以双流混合Transformer耦合视频与动作专家。运行时仅需输出轨迹参数，满足实时机载要求。该模型在场景预测与动作生成之间建立协同，提升了敏捷导航的鲁棒性。",
+          "llm_tldr": "现有无人机导航要么需要局部重建要么缺乏显式场景预测。FlowPilot提出紧凑的世界-动作模型，通过流匹配联合去噪未来深度观测和可执行轨迹，并以双流混合Transformer耦合视频与动作专家。运行时仅需输出轨迹参数，满足实时机载要求。该模型在场景预测与动作生成之间建立协同，提升了敏捷导航的鲁棒性。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "world model",
+          "matched_requirement_id": "req-2",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.00635v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.02437v2",
+          "source": "arxiv",
+          "title": "InfiniSplat: Implicit Gaussian Decoding for Large-Baseline Monocular View Synthesis",
+          "abstract": "Single-image feed-forward 3D Gaussian Splatting (3DGS) aims to directly generate a renderable 3D scene representation from one input image, avoiding the cost of multi-view capture and per-scene optimization. However, existing methods are often constrained by a pixel-aligned representation, where Gaussians are predicted from fixed image-grid locations. Such pixel-aligned primitives can produce promising nearby-view renderings, but they remain weakly coupled to underlying scene surfaces and struggle to preserve coherent structures under large viewpoint shifts. We present InfiniSplat, a feed-forward single-image 3DGS framework that moves from a pixel-aligned representation toward a surface-aligned representation. InfiniSplat constructs this representation by first using geometry-guided sampling to place 2D supports according to depth-induced local surface structure, and then applying a query-conditioned implicit decoder to predict Gaussian attributes from the image features queried at these supports. By grounding support locations in geometry while decoupling Gaussian prediction from fixed pixel centers, InfiniSplat produces Gaussian layouts that better follow scene surfaces and reduce scattered primitives caused by grid discretization. Across multiple cross-dataset NVS evaluations, InfiniSplat achieves state-of-the-art performance compared with single-image feed-forward baselines, and demonstrates zero-shot generalization from Hypersim indoor synthetic training to complex open-world scenes. Project page: https://zju3dv.github.io/InfiniSplat.",
+          "authors": [
+            "Jiawei Wang",
+            "Hao Yu",
+            "Yongzhen Hu",
+            "Xinyi Yang",
+            "Tao Ni",
+            "Xin Zhan",
+            "Junbo Chen",
+            "Xiaowei Zhou",
+            "Ruizhen Hu",
+            "Sida Peng"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV"
+          ],
+          "published": "2026-08-03T16:17:39+00:00",
+          "link": "https://arxiv.org/pdf/2608.02437v2",
+          "tags": [
+            "keyword:world-model",
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Single-image feed-forward 3DGS moving from pixel-aligned to surface-aligned representation for large-baseline view synthesis",
+          "llm_evidence_cn": "单图前馈3D高斯溅射，从像素对齐转向表面对齐以支持大视角合成",
+          "llm_evidence": "单图前馈3D高斯溅射，从像素对齐转向表面对齐以支持大视角合成",
+          "canonical_evidence": "单图前馈3D高斯溅射，从像素对齐转向表面对齐以支持大视角合成",
+          "llm_tldr_en": "Presents InfiniSplat, a feed-forward single-image 3DGS framework that decodes implicit Gaussians toward surface-aligned representation, preserving coherent structures under large viewpoint shifts.",
+          "llm_tldr_cn": "单图前馈3D高斯溅射受像素对齐表示限制，在较大视角变化下难以保持结构一致性。InfiniSplat转向表面对齐表示，通过隐式高斯解码构建与物体表面更贴合的高斯分布。实验表明该方法在大基线视点合成上能够保留更连贯的结构，提升单图重建的可泛化性。这为3D高斯前馈建模提供了新的表示方向。",
+          "llm_tldr": "单图前馈3D高斯溅射受像素对齐表示限制，在较大视角变化下难以保持结构一致性。InfiniSplat转向表面对齐表示，通过隐式高斯解码构建与物体表面更贴合的高斯分布。实验表明该方法在大基线视点合成上能够保留更连贯的结构，提升单图重建的可泛化性。这为3D高斯前馈建模提供了新的表示方向。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "deep learning methods for 3d scene generation",
+          "matched_requirement_id": "req-7",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.02437v2",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.00793v1",
+          "source": "arxiv",
+          "title": "DynamicWAM: Dual-Path Motion Conditioning for World-Action Models in Dynamic Manipulation",
+          "abstract": "Dynamic manipulation requires robots to infer target motion and respond promptly, yet existing World-Action Models (WAMs) typically condition only on the current frame and execute large backbones synchronously, limiting motion awareness and responsive control in dynamic scenes. We propose DynamicWAM, a compact WAM for dynamic object manipulation with dual-path motion conditioning. DynamicWAM introduces history-flow conditioning, encoding temporally aligned optical-flow frames alongside the current observation through a frozen pretrained video VAE to preserve spatial motion structure, while injecting kinematic descriptors of displacement, duration, velocity, and acceleration into the action expert to provide motion magnitude and timing. The two complementary paths are fused through joint world-action attention. A distilled compact backbone and real-time chunking (RTC)-based asynchronous execution further enable responsive control. On DOMINO, DynamicWAM achieves a 38.2% success rate and a 53.2 manipulation score, outperforming all evaluated baselines. Across 12 real-world tasks spanning linear, circular, and compound target motion, it achieves a 46.7% average success rate, exceeding the strongest baseline by 22.9 percentage points.",
+          "authors": [
+            "Yunfan Lou",
+            "Hewen Gao",
+            "Xiyu Zhu",
+            "Zhuoran Qiao",
+            "Xuan Han",
+            "Yifan Yang",
+            "Yifan Ye",
+            "Boxian Yao",
+            "Zhibo Pang"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO"
+          ],
+          "published": "2026-08-01T17:49:39+00:00",
+          "link": "https://arxiv.org/pdf/2608.00793v1",
+          "tags": [
+            "keyword:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "world-action model with dual-path motion conditioning for dynamic manipulation",
+          "llm_evidence_cn": "面向动态操作的世界-动作模型，提出双路径运动条件化",
+          "llm_evidence": "面向动态操作的世界-动作模型，提出双路径运动条件化",
+          "canonical_evidence": "面向动态操作的世界-动作模型，提出双路径运动条件化",
+          "llm_tldr_en": "DynamicWAM improves world-action models for dynamic manipulation by adding history-flow conditioning through a frozen video VAE and kinematic descriptors, enabling better motion awareness and responsive control in dynamic scenes.",
+          "llm_tldr_cn": "动态操作中机器人需推断目标运动并快速响应，而现有世界-动作模型通常只以当前帧为条件，动作响应滞后。本文提出DynamicWAM紧凑模型，采用双路径运动条件化：一方面通过冻结的预训练视频VAE编码光流历史帧，保留空间运动结构；另一方面将位移、持续时间、速度、加速度等运动学描述符注入动作专家，提供运动量与时间信息。实验表明该方法在动态场景操纵中显著提升了动态物体的运动感知和响应式控制能力，为具身智能中的世界-动作建模提供了新思路。",
+          "llm_tldr": "动态操作中机器人需推断目标运动并快速响应，而现有世界-动作模型通常只以当前帧为条件，动作响应滞后。本文提出DynamicWAM紧凑模型，采用双路径运动条件化：一方面通过冻结的预训练视频VAE编码光流历史帧，保留空间运动结构；另一方面将位移、持续时间、速度、加速度等运动学描述符注入动作专家，提供运动量与时间信息。实验表明该方法在动态场景操纵中显著提升了动态物体的运动感知和响应式控制能力，为具身智能中的世界-动作建模提供了新思路。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "world model",
+          "matched_requirement_id": "req-2",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.00793v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.02437v1",
+          "source": "arxiv",
+          "title": "InfiniSplat: Implicit Gaussian Decoding for Large-Baseline Monocular View Synthesis",
+          "abstract": "Single-image feed-forward 3D Gaussian Splatting (3DGS) aims to directly generate a renderable 3D scene representation from one input image, avoiding the cost of multi-view capture and per-scene optimization. However, existing methods are often constrained by a pixel-aligned representation, where Gaussians are predicted from fixed image-grid locations. Such pixel-aligned primitives can produce promising nearby-view renderings, but they remain weakly coupled to underlying scene surfaces and struggle to preserve coherent structures under large viewpoint shifts. We present InfiniSplat, a feed-forward single-image 3DGS framework that moves from a pixel-aligned representation toward a surface-aligned representation. InfiniSplat constructs this representation by first using geometry-guided sampling to place 2D supports according to depth-induced local surface structure, and then applying a query-conditioned implicit decoder to predict Gaussian attributes from the image features queried at these supports.By grounding support locations in geometry while decoupling Gaussian prediction from fixed pixel centers, InfiniSplat produces Gaussian layouts that better follow scene surfaces and reduce scattered primitives caused by grid discretization.Across multiple cross-dataset NVS evaluations, InfiniSplat achieves state-of-the-art performance compared with single-image feed-forward baselines, and demonstrates zero-shot generalization from Hypersim indoor synthetic training to complex open-world scenes.Project page: https://zju3dv.github.io/InfiniSplat.",
+          "authors": [
+            "Jiawei Wang",
+            "Hao Yu",
+            "Yongzhen Hu",
+            "Xinyi Yang",
+            "Tao Ni",
+            "Xin Zhan",
+            "Junbo Chen",
+            "Xiaowei Zhou",
+            "Ruizhen Hu",
+            "Sida Peng"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV"
+          ],
+          "published": "2026-08-03T16:17:39+00:00",
+          "link": "https://arxiv.org/pdf/2608.02437v1",
+          "tags": [
+            "keyword:world-model",
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "feed-forward single-image 3D Gaussian splatting for deep 3D scene generation and view synthesis",
+          "llm_evidence_cn": "前馈单图像3D高斯泼溅，用于深度学习3D场景生成与视图合成",
+          "llm_evidence": "前馈单图像3D高斯泼溅，用于深度学习3D场景生成与视图合成",
+          "canonical_evidence": "前馈单图像3D高斯泼溅，用于深度学习3D场景生成与视图合成",
+          "llm_tldr_en": "InfiniSplat is a feed-forward single-image 3D Gaussian Splatting framework that shifts from pixel-aligned to surface-aligned Gaussians, improving coherence and rendering quality under large viewpoint shifts without multi-view capture or per-scene optimization.",
+          "llm_tldr_cn": "单图像前馈3D高斯泼溅旨在从一张图像直接生成可渲染的三维场景，但像素对齐的高斯与场景表面弱耦合，在大视角变化下难以保持结构一致性。本文提出InfiniSplat，将像素对齐表示改为表面对齐表示，通过隐式高斯解码构建与表面紧密结合的高斯，从而在无需多视角采集和逐场景优化的条件下提升大基线视图合成效果。实验显示其在近邻及大基线视角下均能生成更连贯的新视图。该方法为单图像3D场景生成提供了一条高效可行的技术路径。",
+          "llm_tldr": "单图像前馈3D高斯泼溅旨在从一张图像直接生成可渲染的三维场景，但像素对齐的高斯与场景表面弱耦合，在大视角变化下难以保持结构一致性。本文提出InfiniSplat，将像素对齐表示改为表面对齐表示，通过隐式高斯解码构建与表面紧密结合的高斯，从而在无需多视角采集和逐场景优化的条件下提升大基线视图合成效果。实验显示其在近邻及大基线视角下均能生成更连贯的新视图。该方法为单图像3D场景生成提供了一条高效可行的技术路径。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "deep learning methods for 3d scene generation",
+          "matched_requirement_id": "req-7",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.02437v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.01178v1",
+          "source": "arxiv",
+          "title": "DynActiveGS: Active Gaussian Splatting for Dynamic Scene Reconstruction",
+          "abstract": "We present DynActiveGS, a dynamic-aware active reconstruction framework based on 3D Gaussian Splatting (3DGS) for autonomous exploration in dynamic environments. The framework incrementally reconstructs a 3D Gaussian scene representation while suppressing motion-corrupted observations through online uncertainty prediction and uncertainty-weighted Gaussian optimization. A key component of DynActiveGS is the explicit decomposition of uncertainty into structural uncertainty and motion-induced uncertainty, which enables the system to distinguish under-reconstructed static regions from dynamically unreliable areas. Based on these uncertainty fields, DynActiveGS performs dynamic-aware viewpoint selection and dynamic-constrained path planning to favor informative yet stable observations during exploration. The resulting system forms a unified closed-loop pipeline for robust active reconstruction in dynamic scenes. Extensive experiments on challenging dynamic benchmarks demonstrate consistent improvements over existing active reconstruction baselines in reconstruction accuracy, completeness, rendering quality, and exploration efficiency.",
+          "authors": [
+            "Hongbo Duan",
+            "Pengting Luo",
+            "Chengzhi Zhao",
+            "Yuanhao Chiang",
+            "Fangming Liu",
+            "Xueqian Wang"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV",
+            "cs.AI"
+          ],
+          "published": "2026-08-02T11:57:49+00:00",
+          "link": "https://arxiv.org/pdf/2608.01178v1",
+          "tags": [
+            "keyword:world-model",
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "dynamic-aware active reconstruction, 3D Gaussian Splatting scene representation",
+          "llm_evidence_cn": "动态感知主动重建，3D高斯泼溅场景表示",
+          "llm_evidence": "动态感知主动重建，3D高斯泼溅场景表示",
+          "canonical_evidence": "动态感知主动重建，3D高斯泼溅场景表示",
+          "llm_tldr_en": "DynActiveGS builds an active 3D Gaussian Splatting reconstruction framework that explicitly separates structural from motion-induced uncertainty, guiding viewpoint selection and path planning in dynamic environments.",
+          "llm_tldr_cn": "动态场景中的运动伪影会严重破坏3D重建质量，而现有方法无法区分未完全重建区域与动态不可靠区域。本文提出DynActiveGS，利用3D高斯泼溅增量重建场景，并通过在线不确定性预测将不确定性分解为结构和运动诱导两部分，据此进行不确定性加权优化和动态感知的视点选择与路径规划。实验表明该方法能有效抑制运动干扰，提升自主探索中的动态场景重建质量。",
+          "llm_tldr": "动态场景中的运动伪影会严重破坏3D重建质量，而现有方法无法区分未完全重建区域与动态不可靠区域。本文提出DynActiveGS，利用3D高斯泼溅增量重建场景，并通过在线不确定性预测将不确定性分解为结构和运动诱导两部分，据此进行不确定性加权优化和动态感知的视点选择与路径规划。实验表明该方法能有效抑制运动干扰，提升自主探索中的动态场景重建质量。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+          "matched_requirement_id": "req-5",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.01178v1",
+          "carry_days": 1
+        }
+      ]
     }
   }
 }
