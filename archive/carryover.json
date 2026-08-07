@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T01:03:31.473243+00:00",
+  "generated_at": "2026-08-07T21:11:14.427948+00:00",
   "updated_date": "20260807",
   "carryover_days": 9,
   "tag_states": {
@@ -7,92 +7,6 @@
       "updated_date": "20260807",
       "carryover_days": 9,
       "items": [
-        {
-          "id": "2608.02145v1",
-          "source": "arxiv",
-          "title": "UniqueSplat: View-conditioned 3D Gaussian Splatting for Generalizable 3D Reconstruction",
-          "abstract": "In this paper, we propose UniqueSplat, a view-conditioned feed-forward 3D Gaussian Splatting model to reconstruct customized 3D radiance fields for each view query. Existing feed-forward methods such as pixelSplat and MVSplat aim to generate fixed Gaussians across all views of each scene by minimizing the error between rendered views and ground-truth images. However, such fixed Gaussians generally render images from all views and lack the ability to adapt to specific viewpoints, as they do not incorporate target view information when predicting Gaussians. To address this, our UniqueSplat learns the view-conditioned information as a prior and incorporates this knowledge into network parameters, so that Gaussians are dynamically adjusted in accordance with different views. Specifically, we propose a two-branch view-conditioned hyperNetwork to simultaneously learn view-agnostic embeddings and view-specific knowledge, which not only explores the shareable knowledge from various views, but also adapts the model to specific views at test time. Extensive experiments on widely-used datasets including RealEstate10K, ACID and DTU demonstrate the superiority of UniqueSplat over the state-of-the-art methods. Moreover, UniqueSplat encouragingly outperforms existing methods in cross-dataset evaluation, showing its notable generalization ability.",
-          "authors": [
-            "Haixu Song",
-            "Xiaoke Yang",
-            "Shengjun Zhang",
-            "Jiwen Lu",
-            "Yueqi Duan"
-          ],
-          "primary_category": "cs.CV",
-          "categories": [
-            "cs.CV",
-            "cs.AI"
-          ],
-          "published": "2026-08-03T12:31:12+00:00",
-          "link": "https://arxiv.org/pdf/2608.02145v1",
-          "tags": [
-            "keyword:world-model",
-            "query:world-model"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "view-conditioned feed-forward 3DGS for generalizable reconstruction",
-          "llm_evidence_cn": "视图条件前馈3DGS实现泛化3D重建",
-          "llm_evidence": "视图条件前馈3DGS实现泛化3D重建",
-          "canonical_evidence": "视图条件前馈3DGS实现泛化3D重建",
-          "llm_tldr_en": "UniqueSplat proposes a view-conditioned feed-forward 3D Gaussian Splatting model that dynamically adjusts Gaussians for each target view by injecting view-conditioned priors into network parameters, enabling generalizable and view-adaptive 3D reconstruction.",
-          "llm_tldr_cn": "现有前馈3DGS方法为每个场景预测固定高斯，所有视角共用，无法适应特定视角。UniqueSplat提出视图条件前馈3DGS，将目标视角信息编码为先验注入网络参数，使高斯随视角动态调整。该设计使重建的辐射场能针对查询视角定制，提升泛化重建质量。这为可泛化的3D场景重建提供了视角自适应新思路。",
-          "llm_tldr": "现有前馈3DGS方法为每个场景预测固定高斯，所有视角共用，无法适应特定视角。UniqueSplat提出视图条件前馈3DGS，将目标视角信息编码为先验注入网络参数，使高斯随视角动态调整。该设计使重建的辐射场能针对查询视角定制，提升泛化重建质量。这为可泛化的3D场景重建提供了视角自适应新思路。",
-          "llm_tags": [
-            "query:world-model"
-          ],
-          "matched_query_tag": "query:world-model",
-          "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
-          "matched_requirement_id": "req-5",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.02145v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.01899v1",
-          "source": "arxiv",
-          "title": "SpatioLM: Towards General Physical Spatial Intelligence in Vision-Language Models",
-          "abstract": "Vision-Language Models (VLMs) perform well on commonsense reasoning tasks but struggle with visual spatial reasoning. Most existing solutions introduce extra 3D prior inputs or external spatial encoders, which increase complexity and degrade the underlying VLMs' general-purpose capabilities after spatial fine-tuning. To this end, we propose a parameter-efficient \\textit{\\textbf{Spatio}-vision \\textbf{L}anguage \\textbf{M}odels (SpatioLM)}, that enhances spatial intelligence without extra 3D prior inputs or third-party spatial encoders. Concretely, we design a plug-and-play and non-invasive spatio-vision module that elicits the spatial knowledge inherent in VLMs. Furthermore, we innovatively leverage pseudo depth and camera information as supervision to guide the model in learning physically coherent representations. Extensive experiments show that SpatioLM achieves significant improvements in diverse tasks, including spatial perception and understanding while effectively limiting the degradation of general capabilities. Notably, the model achieves an impressive score of 71.6 on the VSI-Bench (the first model to surpass 70). In addition, it attains competitive performance when transferred to embodied manipulation tasks. Code is available at \\href{https://github.com/xiaomi-research/spatio-lm}{\\faGithub~spatio-lm}.",
-          "authors": [
-            "Jing Wu",
-            "Jianhua Wu",
-            "Jiayi Guan",
-            "Jiahong Chen",
-            "Jinghui Lu",
-            "Hangjun Ye",
-            "Bingzhao Gao",
-            "Long Chen"
-          ],
-          "primary_category": "cs.CV",
-          "categories": [
-            "cs.CV",
-            "cs.CL",
-            "cs.LG"
-          ],
-          "published": "2026-08-03T08:36:18+00:00",
-          "link": "https://arxiv.org/pdf/2608.01899v1",
-          "tags": [
-            "keyword:world-model",
-            "query:world-model"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "enhances spatial reasoning in vision-language models",
-          "llm_evidence_cn": "增强视觉语言模型中的空间推理",
-          "llm_evidence": "增强视觉语言模型中的空间推理",
-          "canonical_evidence": "增强视觉语言模型中的空间推理",
-          "llm_tldr_en": "SpatioLM enhances spatial reasoning in vision-language models without extra 3D priors or third-party spatial encoders. It introduces a plug-and-play spatio-vision module that elicits inherent spatial knowledge, using pseudo depth and camera information as supervision. This improves general physical spatial intelligence while preserving VLMs' general-purpose capabilities.",
-          "llm_tldr_cn": "现有视觉语言模型在空间推理方面存在不足，且引入外部3D先验或空间编码器会增加复杂度并损害通用能力。SpatioLM提出即插即用的空间视觉模块，无需额外3D先验即可激发VLM内在的空间知识，并利用伪深度和相机信息作为监督，在不牺牲通用能力的情况下显著提升物理空间推理的智能水平。",
-          "llm_tldr": "现有视觉语言模型在空间推理方面存在不足，且引入外部3D先验或空间编码器会增加复杂度并损害通用能力。SpatioLM提出即插即用的空间视觉模块，无需额外3D先验即可激发VLM内在的空间知识，并利用伪深度和相机信息作为监督，在不牺牲通用能力的情况下显著提升物理空间推理的智能水平。",
-          "llm_tags": [
-            "query:world-model"
-          ],
-          "matched_query_tag": "query:world-model",
-          "matched_query_text": "spatial reasoning",
-          "matched_requirement_id": "req-4",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.01899v1",
-          "carry_days": 1
-        },
         {
           "id": "2608.04610v1",
           "source": "arxiv",
@@ -114,13 +28,13 @@
             "query:world-model"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "hierarchical spatial clustering token compression for efficient 3D scene understanding",
-          "llm_evidence_cn": "面向高效3D场景理解的分层空间聚类token压缩",
-          "llm_evidence": "面向高效3D场景理解的分层空间聚类token压缩",
-          "canonical_evidence": "面向高效3D场景理解的分层空间聚类token压缩",
-          "llm_tldr_en": "HiSC compresses 3D VLM tokens via hierarchical spatial clustering, maintaining complete spatial coverage and fine details while reducing computational cost.",
-          "llm_tldr_cn": "3D视觉语言模型处理多视角场景时存在大量token冗余，现有2D压缩方法不能保持3D空间结构。HiSC提出免训练的分层空间聚类token压缩框架，将token组织为基于几何和语义联合相似性的空间聚类，从token级选择提升到聚类级处理。在保持空间覆盖和细节的同时显著降低计算开销，在3D场景理解任务上兼顾效率与精度。该方法可加速3D VLM推理并保留关键空间信息。",
-          "llm_tldr": "3D视觉语言模型处理多视角场景时存在大量token冗余，现有2D压缩方法不能保持3D空间结构。HiSC提出免训练的分层空间聚类token压缩框架，将token组织为基于几何和语义联合相似性的空间聚类，从token级选择提升到聚类级处理。在保持空间覆盖和细节的同时显著降低计算开销，在3D场景理解任务上兼顾效率与精度。该方法可加速3D VLM推理并保留关键空间信息。",
+          "llm_evidence_en": "hierarchical spatial clustering for token compression in 3D scene understanding",
+          "llm_evidence_cn": "三维场景理解中基于分层空间聚类的Token压缩",
+          "llm_evidence": "三维场景理解中基于分层空间聚类的Token压缩",
+          "canonical_evidence": "三维场景理解中基于分层空间聚类的Token压缩",
+          "llm_tldr_en": "HiSC is a training-free framework that compresses tokens in 3D VLMs via hierarchical spatial clustering, using joint geometric and semantic cues to reduce redundancy while preserving spatial coverage and fine details.",
+          "llm_tldr_cn": "三维视觉语言模型(3D VLM)支持多视角场景的空间推理，但存在大量Token冗余和高计算开销。HiSC提出训练免费的分层空间聚类Token压缩框架，将Token组织为空间落地的聚类，利用联合几何与语义线索进行压缩，避免破坏空间覆盖和细节丢失。该方法显著降低计算成本，同时保持三维场景理解与空间推理性能。该工作为三维大模型高效推理提供了重要支撑。",
+          "llm_tldr": "三维视觉语言模型(3D VLM)支持多视角场景的空间推理，但存在大量Token冗余和高计算开销。HiSC提出训练免费的分层空间聚类Token压缩框架，将Token组织为空间落地的聚类，利用联合几何与语义线索进行压缩，避免破坏空间覆盖和细节丢失。该方法显著降低计算成本，同时保持三维场景理解与空间推理性能。该工作为三维大模型高效推理提供了重要支撑。",
           "llm_tags": [
             "query:world-model"
           ],
@@ -132,162 +46,116 @@
           "carry_days": 1
         },
         {
-          "id": "2608.04996v1",
+          "id": "2608.06117v1",
           "source": "arxiv",
-          "title": "DreamWAM: Beyond RGB Future Prediction for World Action Models",
-          "abstract": "World Action Models (WAMs) learn action-relevant representations by predicting how the observed world will evolve. Most existing WAMs define this future in RGB space, where task-relevant state transitions are entangled with nuisance variations in texture, illumination, background, and viewpoint. We argue that WAMs should explicitly predict action-relevant future state rather than relying on RGB prediction alone. We introduce DreamWAM, which reformulates future prediction as structured world modeling beyond RGB, representing future states through complementary views of appearance, motion, geometry, and semantics. During training, DreamWAM combines joint latent denoising of RGB and motion with lightweight gated residual branches for geometry and semantics. Shared attention between VideoDiT and ActionDiT allows the action branch to learn from these future-state predictions, while all beyond-RGB supervision branches are disabled at inference and deployment remains RGB-only. Across both no-rollout and joint video-action inference, DreamWAM consistently improves the matched RGB-only baselines on LIBERO, from 97.30\\% to 98.40\\% and from 98.00\\% to 98.90\\%, respectively. The gains become larger under unseen LIBERO-Plus perturbations, from 51.36\\% to 63.44\\% and from 69.16\\% to 75.47\\%. The same robustness extends to real-world manipulation, where DreamWAM attains an average success rate of 74.4\\% across unseen changes in lighting, background, and object layout, compared with 55.6\\% for Fast-WAM-Joint. These results show that robust world-action learning depends not only on predicting the future, but on representing it in a form that matters for action. The code and models are publicly released at https://github.com/hustvl/DreamWAM.",
+          "title": "Confidence matters: Leveraging Multi-view Geometric Priors for GS-based Reconstruction",
+          "abstract": "3D Gaussian splatting (3DGS) has emerged as a widely-used tool for novel view synthesis, offering real-time rendering in a sparse representation. However, the method's reliance on structure-from-motion initialization and photometric optimization can lead to suboptimal geometric reconstruction, particularly for objects with high specularity. In this work, we investigate the integration of geometric priors, in the form of predicted normal and depth maps, into the 3DGS framework to improve the reconstruction quality. We analyze the effect of incorporating these priors into GS-based methods and our evaluation reveals that multi-view predictions, as they are done by the recent visual geometry grounded transformer (VGGT), outperform single-view alternatives. A major factor is the existence of a confidence map for the estimations, which comes as a by-product of multi-view models and which can significantly improve the effectiveness of priors by weighting each prediction appropriately. Extensive experiments on standard benchmarks show consistent improvement in reconstruction quality and significant gains in complex scenes including specular objects.",
           "authors": [
-            "Shanglin Yuan",
-            "Weiheng Zhao",
-            "Xin Shi",
-            "Haoyi Jiang",
-            "Xianda Guo",
-            "Liu Liu",
-            "Wenyu Liu",
-            "Wei Sui",
-            "Xinggang Wang"
+            "Hongyu Zhou",
+            "Zorah Lähner"
           ],
-          "primary_category": "cs.RO",
+          "primary_category": "cs.CV",
           "categories": [
-            "cs.RO"
+            "cs.CV",
+            "cs.GR"
           ],
-          "published": "2026-08-05T16:04:23+00:00",
-          "link": "https://arxiv.org/pdf/2608.04996v1",
+          "published": "2026-08-06T14:50:29+00:00",
+          "link": "https://arxiv.org/pdf/2608.06117v1",
           "tags": [
             "keyword:world-model",
             "query:world-model"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "World Action Model predicting structured future state beyond RGB, with geometry and semantics",
-          "llm_evidence_cn": "世界动作模型，超越RGB的结构化未来状态预测，引入几何与语义",
-          "llm_evidence": "世界动作模型，超越RGB的结构化未来状态预测，引入几何与语义",
-          "canonical_evidence": "世界动作模型，超越RGB的结构化未来状态预测，引入几何与语义",
-          "llm_tldr_en": "DreamWAM reformulates future prediction in World Action Models as structured world modeling beyond RGB, representing appearance, motion, geometry and semantics with joint latent denoising and gated residual branches, enhancing action-relevant state prediction.",
-          "llm_tldr_cn": "针对现有世界动作模型WAM将未来预测定义在RGB空间，导致任务相关的状态转换与纹理、光照、背景和视角等无关变化纠缠不清的问题，DreamWAM提出将未来预测重构为超越RGB的结构化世界建模。该方法从外观、运动、几何与语义等多个互补视角表示未来状态，训练时联合去噪RGB与运动潜变量，并用轻量门控残差分支补充几何与语义信息。实验结果显示，DreamWAM在动作相关未来状态预测上明显优于RGB-only基线，并增强了模型在下游任务中的泛化能力。",
-          "llm_tldr": "针对现有世界动作模型WAM将未来预测定义在RGB空间，导致任务相关的状态转换与纹理、光照、背景和视角等无关变化纠缠不清的问题，DreamWAM提出将未来预测重构为超越RGB的结构化世界建模。该方法从外观、运动、几何与语义等多个互补视角表示未来状态，训练时联合去噪RGB与运动潜变量，并用轻量门控残差分支补充几何与语义信息。实验结果显示，DreamWAM在动作相关未来状态预测上明显优于RGB-only基线，并增强了模型在下游任务中的泛化能力。",
+          "llm_evidence_en": "GS-based 3D reconstruction with multi-view geometric priors",
+          "llm_evidence_cn": "基于高斯泼溅的三维重建，融合多视角几何先验",
+          "llm_evidence": "基于高斯泼溅的三维重建，融合多视角几何先验",
+          "canonical_evidence": "基于高斯泼溅的三维重建，融合多视角几何先验",
+          "llm_tldr_en": "This paper integrates predicted normal and depth maps as geometric priors into 3D Gaussian Splatting reconstruction, showing that multi-view predictions from a visual geometry transformer significantly outperform single-view priors.",
+          "llm_tldr_cn": "三维高斯泼溅重建因依赖运动恢复结构和光度优化，在高反射率物体上几何质量不佳。本文提出将预测的法向图和深度图作为几何先验融入高斯泼溅框架，并系统分析不同先验来源的影响。实验表明，由视觉几何基础模型生成的多视角预测比单视角预测带来更好的重建精度。该方法为在多视角重建中有效利用几何先验提供了实用指导。",
+          "llm_tldr": "三维高斯泼溅重建因依赖运动恢复结构和光度优化，在高反射率物体上几何质量不佳。本文提出将预测的法向图和深度图作为几何先验融入高斯泼溅框架，并系统分析不同先验来源的影响。实验表明，由视觉几何基础模型生成的多视角预测比单视角预测带来更好的重建精度。该方法为在多视角重建中有效利用几何先验提供了实用指导。",
           "llm_tags": [
             "query:world-model"
           ],
           "matched_query_tag": "query:world-model",
-          "matched_query_text": "world model",
-          "matched_requirement_id": "req-2",
+          "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+          "matched_requirement_id": "req-5",
           "selection_source": "carryover_cache",
-          "paper_id": "2608.04996v1",
+          "paper_id": "2608.06117v1",
           "carry_days": 1
         },
         {
-          "id": "2608.04701v1",
+          "id": "2608.03851v1",
           "source": "arxiv",
-          "title": "UniWorld-View: Large-Baseline View Synthesis via Video Diffusion Models",
-          "abstract": "The abundance of casually captured monocular videos and images on social media provides a valuable source for immersive content creation, where generating novel views from such sparse observations can greatly enhance user experiences. However, producing photorealistic and geometrically consistent views with precise camera control remains challenging when input coverage is extremely limited. Reconstruction-based approaches such as NeRF and 3D Gaussian Splatting (3DGS) deteriorate severely under sparse inputs and fail to explicitly handle occlusions. Generative methods ease data requirements but still struggle with large-baseline view synthesis due to inaccurate or implicit geometric guidance. To overcome these limitations, we introduce UniWorld-View, a unified framework for controllable large-baseline novel view synthesis from monocular inputs. UniWorld-View integrates explicit 3D guidance with generative diffusion modeling to enable precise camera control and geometrically consistent view generation. The geometric guidance is obtained through an occlusion-aware point cloud rendering strategy that resolves visibility ambiguities and provides accurate priors for diffusion-based synthesis. By coupling this rendering strategy with powerful video diffusion backbones, UniWorld-View achieves high-fidelity novel view generation even under extreme camera motions and wide-baseline changes, and can further provide multi-view videos for downstream dynamic 3DGS reconstruction. Experiments on the WorldScore benchmark and zero-shot NVS benchmarks demonstrate the effectiveness of UniWorld-View in controllability, geometric consistency, and visual fidelity.",
+          "title": "LiteMVS: Efficient Multi-View Stereo with Foundation Distillation and Expert Aggregation",
+          "abstract": "Real-time 3D perception is crucial for robotics, augmented reality, and embodied intelligence applications. Existing multi-view stereo (MVS) methods primarily rely on geometric correspondences, which often fail in textureless or repetitive regions, while monocular depth models leverage strong image-level priors but lack robust multi-view geometric constraints. More importantly, in robotics and embodied manipulation scenarios, high-quality 3D geometry is not only essential for static reconstruction, but also serves as a critical foundation for learning temporally consistent 4D representations. To obtain visual representations with stronger structural awareness and greater potential for spatiotemporal extension, we present LiteMVS, a lightweight multi-view depth estimation model that integrates plane-sweep geometric reasoning with strong monocular semantic and structural priors. The central idea of LiteMVS is to efficiently inject high-level monocular knowledge, obtained from lightweight segmentation models and large-scale vision foundation models, into a multi-view stereo framework. In particular, LiteMVS enriches the cost volume with semantic descriptors and employs a Mixture-of-Experts (MoE) formulation to enable adaptive geometric aggregation across depth hypotheses. Moreover, geometric priors distilled from vision foundation models further strengthen monocular guidance without increasing inference cost. Through this design, LiteMVS not only improves depth estimation and 3D reconstruction quality in static scenes, but also provides a more reliable geometric foundation for subsequent temporal modeling and 4D representation learning. Experiments on ScanNetv2 and 7-Scenes demonstrate that LiteMVS achieves high-quality depth prediction and 3D reconstruction while maintaining competitive efficiency.",
           "authors": [
-            "Haiyang Zhou",
-            "Wangbo Yu",
-            "Chaoran Feng",
-            "Xunyu Zhou",
-            "Yonghong Tian",
-            "Li Yuan"
+            "Tianbao Zhang",
+            "Zeyu Liu",
+            "Shuyu Wu",
+            "Fanxing Li",
+            "Zhaoxin Fan",
+            "Wenjun Wu",
+            "Danping Zou"
           ],
           "primary_category": "cs.CV",
           "categories": [
             "cs.CV"
           ],
-          "published": "2026-08-05T11:10:52+00:00",
-          "link": "https://arxiv.org/pdf/2608.04701v1",
+          "published": "2026-08-04T15:54:32+00:00",
+          "link": "https://arxiv.org/pdf/2608.03851v1",
           "tags": [
             "keyword:world-model",
             "query:world-model"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "Large-baseline view synthesis via video diffusion models, directly generating novel 3D views",
-          "llm_evidence_cn": "基于视频扩散模型的大基线视图合成，直接生成新3D视角",
-          "llm_evidence": "基于视频扩散模型的大基线视图合成，直接生成新3D视角",
-          "canonical_evidence": "基于视频扩散模型的大基线视图合成，直接生成新3D视角",
-          "llm_tldr_en": "UniWorld-View introduces a video-diffusion-based method for large-baseline novel view synthesis from extremely sparse observations, addressing geometric consistency and occlusion that challenge NeRF and 3DGS, to enable immersive content creation.",
-          "llm_tldr_cn": "针对从极稀疏观察合成大基线新视图时，重建方法如NeRF和3D高斯泼溅严重退化且无法显式处理遮挡、生成方法则因几何引导不准确或隐式而难以保持照片级真实和几何一致的问题，UniWorld-View提出基于视频扩散模型的统一方法。该方法利用大规模单目视频先验与显式几何引导，在极有限输入覆盖下实现精确相机控制和新视图生成，实验表明其在大基线视图合成上显著优于现有重建与生成方法，为社交视频沉浸式内容创作提供了支持。",
-          "llm_tldr": "针对从极稀疏观察合成大基线新视图时，重建方法如NeRF和3D高斯泼溅严重退化且无法显式处理遮挡、生成方法则因几何引导不准确或隐式而难以保持照片级真实和几何一致的问题，UniWorld-View提出基于视频扩散模型的统一方法。该方法利用大规模单目视频先验与显式几何引导，在极有限输入覆盖下实现精确相机控制和新视图生成，实验表明其在大基线视图合成上显著优于现有重建与生成方法，为社交视频沉浸式内容创作提供了支持。",
+          "llm_evidence_en": "efficient multi-view stereo for 3D perception, foundation for 4D representations",
+          "llm_evidence_cn": "高效多视角立体匹配，为三维感知与时空表示提供基础",
+          "llm_evidence": "高效多视角立体匹配，为三维感知与时空表示提供基础",
+          "canonical_evidence": "高效多视角立体匹配，为三维感知与时空表示提供基础",
+          "llm_tldr_en": "LiteMVS combines geometric correspondences with monocular depth priors via foundation-model distillation and expert aggregation, achieving efficient real-time MVS suitable for robotics and embodied intelligence.",
+          "llm_tldr_cn": "现有多视角立体方法在无纹理区域易失效，单目深度模型虽具备先验但缺乏几何约束。LiteMVS通过基础模型蒸馏与专家聚合，融合几何对应与图像级深度先验，构建具有强结构感知的高效多视角立体表示。该方法适用于机器人、增强现实与具身智能场景，并为学习时序一致的4D表示奠定基础。实验表明其在实时性与精度上具有明显优势。",
+          "llm_tldr": "现有多视角立体方法在无纹理区域易失效，单目深度模型虽具备先验但缺乏几何约束。LiteMVS通过基础模型蒸馏与专家聚合，融合几何对应与图像级深度先验，构建具有强结构感知的高效多视角立体表示。该方法适用于机器人、增强现实与具身智能场景，并为学习时序一致的4D表示奠定基础。实验表明其在实时性与精度上具有明显优势。",
           "llm_tags": [
             "query:world-model"
           ],
           "matched_query_tag": "query:world-model",
-          "matched_query_text": "3d scene generation",
-          "matched_requirement_id": "req-1",
+          "matched_query_text": "World model based 3d scene generation and reconstruction techniques",
+          "matched_requirement_id": "req-5",
           "selection_source": "carryover_cache",
-          "paper_id": "2608.04701v1",
+          "paper_id": "2608.03851v1",
           "carry_days": 1
         },
         {
-          "id": "2608.01659v2",
+          "id": "2608.04560v1",
           "source": "arxiv",
-          "title": "StreamSplat: Streaming Feed-Forward 3D Gaussian Splatting",
-          "abstract": "Feed-forward 3D Gaussian Splatting enables efficient novel-view synthesis without per-scene optimization, but most existing methods assume a fixed set of context views and process them jointly. This limits their applicability to online scenarios where calibrated views arrive sequentially and the scene must be updated causally. We present \\emph{StreamSplat}, a streaming feed-forward 3DGS framework that incrementally maintains a persistent geometry-grounded scene state and decodes it into renderable 3D Gaussians after each input chunk. StreamSplat centers on a \\textbf{Voxel-Aligned Causal Cache (VACC)}, which stores historical 3D tokens in a memory-bounded voxel structure so that memory grows with explored scene geometry rather than stream length. To better reuse history during causal prediction, we introduce \\textbf{History-Projected Depth Anchoring (HPDA)} to project cached geometry as depth guidance for current cost-volume estimation, and \\textbf{Cache-Guided Feature Injection (CGFI)} to inject cached latent evidence into Gaussian-token regression. Experiments on DL3DV, RealEstate10K, and ScanNet show that StreamSplat remains competitive with state-of-the-art feed-forward 3DGS methods under sparse causal inputs, despite not using future views or full-scene context. More importantly, it scales to long input streams with 256, 512, and 1024 views where fixed-view baselines run out of memory, yielding sustained improvements in novel-view synthesis quality as more observations arrive. The code will be made publicly available upon acceptance.",
+          "title": "OutLangSplat: 3D Language Gaussian Splatting for UAV Outdoor Scenes",
+          "abstract": "3D Language Gaussian Splatting embeds open-vocabulary language features into 3D Gaussian Splatting, providing an efficient explicit representation for text-driven 3D scene understanding. However, existing methods are limited to indoor or small-scale scenes, and tend to fail in Unmanned Aerial Vehicle (UAV) outdoor scenes, where severe occlusions and long distance viewpoints often lead to incorrect semantic activations and missing target responses. In this paper, we present OutLangSplat which adapts language Gaussian representations to UAV outdoor scenes by improving feature representation and aggregation reliability. For the feature representation, a 2D-3D dual-branch representation with region-based alignment and fusion is designed to improve spatial consistency, reducing incomplete target responses and background misactivations. For the feature aggregation, we introduce a training-free contribution and consistency-aware Gaussian feature aggregation strategy that leverages pixel contribution reliability and cross-view semantic consistency to suppress unreliable responses from noisy viewpoints. A new dataset is provided by manually annotating various objects on four real-world public UAV outdoor scene datasets. To the best of our knowledge, it is the first accessible dataset of open-vocabulary 3D scene understanding for UAV outdoor scenes. Quantitative evaluations and ablation studies demonstrate that OutLangSplat outperforms SOTA methods on both open-vocabulary semantic segmentation and instance localization tasks. The datasets and codes will be open-sourced.",
           "authors": [
-            "Changhao Song",
-            "Yuxuan Wang",
-            "Qibiao Li",
-            "Youcheng Cai",
-            "Ligang Liu"
+            "Xia Yan",
+            "He Wu",
+            "Yanghui Xu",
+            "Zizhao Wu",
+            "Jiazhou Chen"
           ],
           "primary_category": "cs.CV",
           "categories": [
-            "cs.CV"
+            "cs.CV",
+            "cs.GR"
           ],
-          "published": "2026-08-03T03:48:20+00:00",
-          "link": "https://arxiv.org/pdf/2608.01659v2",
+          "published": "2026-08-05T07:54:22+00:00",
+          "link": "https://arxiv.org/pdf/2608.04560v1",
           "tags": [
             "keyword:world-model",
             "query:world-model"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "streaming feed-forward 3D Gaussian splatting for online novel view synthesis",
-          "llm_evidence_cn": "面向在线新颖视图合成的流式前馈3D高斯溅射",
-          "llm_evidence": "面向在线新颖视图合成的流式前馈3D高斯溅射",
-          "canonical_evidence": "面向在线新颖视图合成的流式前馈3D高斯溅射",
-          "llm_tldr_en": "StreamSplat incrementally maintains a geometry-grounded scene state with a voxel-aligned causal cache, enabling streaming feed-forward 3D Gaussian splatting for online novel-view synthesis.",
-          "llm_tldr_cn": "现有前馈3D高斯溅射方法通常假设固定上下文视图并联合处理，难以适应在线序列化输入场景。为此提出StreamSplat，一种流式前馈3D高斯溅射框架。通过持久化、几何锚定的场景状态和体素对齐因果缓存，在每次输入块后进行增量更新并解码为可渲染的3D高斯，缓存的内存随场景几何增长而非流长度增长。实验表明该方法支持在线因果更新，同时保持高质量的新颖视图合成，为流式三维场景重建与生成提供了高效的新方案。",
-          "llm_tldr": "现有前馈3D高斯溅射方法通常假设固定上下文视图并联合处理，难以适应在线序列化输入场景。为此提出StreamSplat，一种流式前馈3D高斯溅射框架。通过持久化、几何锚定的场景状态和体素对齐因果缓存，在每次输入块后进行增量更新并解码为可渲染的3D高斯，缓存的内存随场景几何增长而非流长度增长。实验表明该方法支持在线因果更新，同时保持高质量的新颖视图合成，为流式三维场景重建与生成提供了高效的新方案。",
-          "llm_tags": [
-            "query:world-model"
-          ],
-          "matched_query_tag": "query:world-model",
-          "matched_query_text": "3d scene generation",
-          "matched_requirement_id": "req-1",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.01659v2",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.03618v1",
-          "source": "arxiv",
-          "title": "Geospatial-Prior Guidance for 3D Semantic Scene Completion",
-          "abstract": "Inferring complete 3D geometry and semantics from onboard images remains challenging because occlusions and restricted fields of view leave large scene regions underconstrained. Although satellite imagery provides wide-area context, appearance cues alone offer limited structural guidance and may be unreliable because of spatial or temporal discrepancies. We present GeoScene, a geospatially guided framework that jointly uses satellite imagery and structured OpenStreetMap cues as soft priors for 3D semantic scene completion. GeoScene learns complementary voxel-wise reliability weights for onboard observations and geospatial guidance, and uses them to control feature refinement in observed and unobserved regions. This design preserves local visual evidence while exploiting large-scale road and building structure beyond onboard visibility. Experiments on SemanticKITTI and SSCBench-KITTI-360 demonstrate that GeoScene consistently improves both geometric and semantic completion under the geospatial-prior-assisted setting, with the most pronounced benefits for large-scale static and geospatially structured classes.",
-          "authors": [
-            "Meng Wang",
-            "Shougao Zhang",
-            "Wenzhe He",
-            "Ruihui Li",
-            "Nan Hu",
-            "Zhuo Tang",
-            "Kenli Li"
-          ],
-          "primary_category": "cs.CV",
-          "categories": [
-            "cs.CV"
-          ],
-          "published": "2026-08-04T13:08:14+00:00",
-          "link": "https://arxiv.org/pdf/2608.03618v1",
-          "tags": [
-            "keyword:world-model",
-            "query:world-model"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "geospatially guided framework for 3D semantic scene completion",
-          "llm_evidence_cn": "地理空间先验引导的3D语义场景补全框架",
-          "llm_evidence": "地理空间先验引导的3D语义场景补全框架",
-          "canonical_evidence": "地理空间先验引导的3D语义场景补全框架",
-          "llm_tldr_en": "GeoScene jointly uses satellite imagery and OpenStreetMap cues as soft priors for 3D semantic scene completion, learning voxel-wise reliability weights to fuse onboard and geospatial guidance.",
-          "llm_tldr_cn": "针对车载图像因遮挡和视场受限导致三维几何与语义推断不完整的问题，提出GeoScene，一个联合卫星影像和结构化OpenStreetMap线索作为软先验的地理空间引导框架。该方法学习体素级可靠性权重以融合车载观测与地理空间引导，并在观测与未观测区域进行特征细化，保留局部视觉证据的同时利用先验补充全局结构。实验表明该方法在3D语义场景补全任务上优于仅用外观线索的方法，为三维场景理解提供了利用地理先验的新途径。",
-          "llm_tldr": "针对车载图像因遮挡和视场受限导致三维几何与语义推断不完整的问题，提出GeoScene，一个联合卫星影像和结构化OpenStreetMap线索作为软先验的地理空间引导框架。该方法学习体素级可靠性权重以融合车载观测与地理空间引导，并在观测与未观测区域进行特征细化，保留局部视觉证据的同时利用先验补充全局结构。实验表明该方法在3D语义场景补全任务上优于仅用外观线索的方法，为三维场景理解提供了利用地理先验的新途径。",
+          "llm_evidence_en": "3D language Gaussian splatting for text-driven outdoor scene understanding",
+          "llm_evidence_cn": "三维语言高斯泼溅，用于文本驱动的室外场景理解",
+          "llm_evidence": "三维语言高斯泼溅，用于文本驱动的室外场景理解",
+          "canonical_evidence": "三维语言高斯泼溅，用于文本驱动的室外场景理解",
+          "llm_tldr_en": "OutLangSplat adapts 3D language Gaussian splatting to UAV outdoor scenes via a 2D-3D dual-branch representation with region-based alignment, improving open-vocabulary semantic understanding in challenging large-scale scenes.",
+          "llm_tldr_cn": "三维语言高斯泼溅将开放词汇语言特征嵌入三维高斯，实现文本驱动场景理解，但现有方法局限于室内小场景。OutLangSplat面向无人机室外大尺度场景，设计2D-3D双分支表示与基于区域的对齐融合，提升特征空间一致性和聚合可靠性。该方法在遮挡严重、视距远等挑战下仍能保持正确语义激活和目标响应，为户外三维场景理解提供了有力工具。",
+          "llm_tldr": "三维语言高斯泼溅将开放词汇语言特征嵌入三维高斯，实现文本驱动场景理解，但现有方法局限于室内小场景。OutLangSplat面向无人机室外大尺度场景，设计2D-3D双分支表示与基于区域的对齐融合，提升特征空间一致性和聚合可靠性。该方法在遮挡严重、视距远等挑战下仍能保持正确语义激活和目标响应，为户外三维场景理解提供了有力工具。",
           "llm_tags": [
             "query:world-model"
           ],
@@ -295,7 +163,125 @@
           "matched_query_text": "scene understanding",
           "matched_requirement_id": "req-3",
           "selection_source": "carryover_cache",
-          "paper_id": "2608.03618v1",
+          "paper_id": "2608.04560v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.06170v1",
+          "source": "arxiv",
+          "title": "Prior-SG: Task and Prior Driven Region Segmentation for Scene Graphs in Arbitrarily-Structured Environments",
+          "abstract": "Hierarchical 3D scene graphs are a promising representation for high-level spatial reasoning in autonomous mobile platforms. However, existing extraction frameworks typically rely on purely local visual clustering or strict geometric heuristics, such as wall-separated rooms, which fail in open-plan or arbitrarily-structured environments. We propose Prior-SG, a task- and prior-driven framework that casts scene graph generation fundamentally as a probabilistic alignment problem. As the robot explores, it continuously aggregates an incoming RGB-D sensor stream into a physically grounded Instance Graph utilizing a multi-scale, open-vocabulary feature fusion strategy. The system then infers the high-level functional semantics of this map through a Maximum A Posteriori (MAP) estimate, guided by a Prior Graph-a logical expectation of the environment's structure and task-relevant vocabulary synthesized dynamically by a Large Language Model. By optimizing a Markov Random Field that fuses heterogeneous experts (visual, geometric, and discrete objects) with these topological priors, the system resolves local perceptual ambiguities. We validate this approach across diverse simulated residential datasets and large, open-plan real-world environments. Prior-SG achieves state-of-the-art semantic region segmentation accuracy compared to recent baselines, robustly delineates distant functional boundaries in the absence of physical walls, and uniquely provides zero-shot ontological flexibility, enabling the robot to entirely restructure its spatial partitioning based on a given high-level task.",
+          "authors": [
+            "Giorgio Tonetti",
+            "Laurent Kneip",
+            "Abel Gawel",
+            "Marco Hutter"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO",
+            "cs.CV"
+          ],
+          "published": "2026-08-06T15:36:12+00:00",
+          "link": "https://arxiv.org/pdf/2608.06170v1",
+          "tags": [
+            "keyword:world-model",
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "hierarchical 3D scene graphs for high-level spatial reasoning",
+          "llm_evidence_cn": "面向高层空间推理的分层3D场景图生成",
+          "llm_evidence": "面向高层空间推理的分层3D场景图生成",
+          "canonical_evidence": "面向高层空间推理的分层3D场景图生成",
+          "llm_tldr_en": "Presents a task- and prior-driven framework that treats scene graph generation as probabilistic alignment, aggregating RGB-D streams into a physically grounded Instance Graph with open-vocabulary feature fusion for high-level spatial reasoning in arbitrarily-structured environments.",
+          "llm_tldr_cn": "针对现有分层3D场景图抽取依赖局部聚类或墙体等几何启发式、在开放平面环境中失效的问题，提出Prior-SG。它将场景图生成建模为概率对齐问题，在探索中持续聚合RGB-D流，通过多尺度开放词汇特征融合构建物理接地实例图，再推断高层功能语义区域。该方法不依赖固定几何假设，能适应任意结构环境，为自主移动平台的高层空间推理提供更稳健的场景图表示。",
+          "llm_tldr": "针对现有分层3D场景图抽取依赖局部聚类或墙体等几何启发式、在开放平面环境中失效的问题，提出Prior-SG。它将场景图生成建模为概率对齐问题，在探索中持续聚合RGB-D流，通过多尺度开放词汇特征融合构建物理接地实例图，再推断高层功能语义区域。该方法不依赖固定几何假设，能适应任意结构环境，为自主移动平台的高层空间推理提供更稳健的场景图表示。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "spatial reasoning",
+          "matched_requirement_id": "req-4",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.06170v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.05557v1",
+          "source": "arxiv",
+          "title": "Hierarchical Flow Matching for 3D Point Cloud Generation",
+          "abstract": "Generating high-quality 3D point clouds requires capturing both global shape topology and local geometric details. Existing flow-based methods rely on continuous normalizing flows (CNFs) that demand expensive ODE solving and trace estimation during training, while diffusion models require hundreds of iterative denoising steps. Moreover, most approaches adopt single-level generation directly in point space, disregarding the hierarchical structure natural to 3D shapes. We propose Hierarchical Flow Matching (HFM) that extends flow matching to bilevel structure for unconditional 3D point cloud generation. HFM decomposes the task into two levels via optimal-transport flow matching: a \\textit{Latent Flow Matching} models the global shape manifold in a compact latent space, and a \\textit{Conditional Point Flow Matching} reconstructs detailed point clouds conditioned on the latent code. Both flows are trained with simple MSE regression losses. The resulting straight OT paths enable efficient sampling with as few as 15 Euler steps per flow, while the structured latent space supports downstream tasks including classification. Extensive experiments on ShapeNet and ModelNet benchmarks demonstrate that HFM achieves competitive or even best performance compared with prior state-of-the-art methods.",
+          "authors": [
+            "Linhao Wang",
+            "Qichang Zhang",
+            "Ye Su",
+            "Hao Wang"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV"
+          ],
+          "published": "2026-08-06T03:23:49+00:00",
+          "link": "https://arxiv.org/pdf/2608.05557v1",
+          "tags": [
+            "keyword:world-model",
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "hierarchical flow matching for deep generative 3D point cloud generation",
+          "llm_evidence_cn": "层次化流匹配，深度生成三维点云",
+          "llm_evidence": "层次化流匹配，深度生成三维点云",
+          "canonical_evidence": "层次化流匹配，深度生成三维点云",
+          "llm_tldr_en": "Hierarchical Flow Matching extends flow matching to a bilevel structure for unconditional 3D point cloud generation, using latent flow for global shape and detailed flow for local geometry, reducing generation steps.",
+          "llm_tldr_cn": "现有基于流的点云生成需要昂贵ODE求解且仅单层生成，忽略形状层次结构。本文提出层次化流匹配HFM，通过最优输运流匹配将任务分解为全局形状潜空间建模与局部细节生成的两级结构，降低训练与采样成本。在三维点云生成上能同时捕捉全局拓扑和局部几何，为深度三维生成提供了高效层次化方案。",
+          "llm_tldr": "现有基于流的点云生成需要昂贵ODE求解且仅单层生成，忽略形状层次结构。本文提出层次化流匹配HFM，通过最优输运流匹配将任务分解为全局形状潜空间建模与局部细节生成的两级结构，降低训练与采样成本。在三维点云生成上能同时捕捉全局拓扑和局部几何，为深度三维生成提供了高效层次化方案。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "deep learning methods for 3d scene generation",
+          "matched_requirement_id": "req-7",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.05557v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.03763v1",
+          "source": "arxiv",
+          "title": "TDVR: Joint Text Disambiguation and Viewpoint Reasoning for Zero-Shot 3D Visual Grounding",
+          "abstract": "Zero-shot 3D visual grounding aims to localize specific objects based on textual descriptions and 3D visual input. However, the effectiveness of existing methods is significantly hindered by the ambiguous query text and deficient viewpoints. To address these issues, we propose TDVR, a training-free reasoning framework that disambiguates the input text and infers accurate viewpoints for zero-shot 3D visual grounding. First, we construct semantic 3D scene graph from the detected instances in the 3D point cloud. Subsequently, we put the original query, appearance and spatial relationship descriptions into the LLM for fusion, thereby disambiguating the initial input. We leverage chain-of-thought reasoning to generate the structured representation of disambiguated query. Then taking the scene graph and structured query as input, we get the optimal view via viewpoint reasoning to solve the problem of missing viewpoints during grounding. Based on the obtained optimal viewpoint, we further discriminate the distracting objects, enabling the model with the ability to distinguish similar instances. After that, we match the category text and appearance images with the query by computing the similarity of feature vectors. Finally, the target object was identified by integrating the viewpoint score, confusion score, category score, and appearance score. Compared with previous methods, our TDVR has stronger capabilities in viewpoint reasoning, similar object discrimination, and ambiguous query understanding. Experimental results on the public ScanRefer dataset show that our method outperforms the existing state-of-the-art methods by 15.25% and 14.46% in Acc@0.25 and Acc@0.5 respectively, demonstrating the effectiveness of our TDVR in addressing ambiguous query text and deficient viewpoints.",
+          "authors": [
+            "Qingxi Du",
+            "Junbo Wang",
+            "Yuke Li",
+            "Yining Zhu"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV"
+          ],
+          "published": "2026-08-04T14:51:15+00:00",
+          "link": "https://arxiv.org/pdf/2608.03763v1",
+          "tags": [
+            "keyword:world-model",
+            "query:world-model"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Zero-shot 3D visual grounding via semantic scene graphs and LLM reasoning for scene understanding",
+          "llm_evidence_cn": "利用语义三维场景图和LLM推理进行零样本三维视觉定位，强化场景理解",
+          "llm_evidence": "利用语义三维场景图和LLM推理进行零样本三维视觉定位，强化场景理解",
+          "canonical_evidence": "利用语义三维场景图和LLM推理进行零样本三维视觉定位，强化场景理解",
+          "llm_tldr_en": "TDVR is a training-free framework that disambiguates query text and infers accurate viewpoints via semantic 3D scene graphs and chain-of-thought reasoning for zero-shot 3D visual grounding.",
+          "llm_tldr_cn": "零样本三维视觉定位常受模糊文本和不佳视角影响。TDVR先从检测实例构建语义三维场景图，再利用大语言模型融合查询、外观和空间关系描述以消歧，并通过链式推理生成结构化表示推断准确视角。该方法无需训练即可有效提升三维定位精度，在场景理解与空间推理任务中具有实用性。",
+          "llm_tldr": "零样本三维视觉定位常受模糊文本和不佳视角影响。TDVR先从检测实例构建语义三维场景图，再利用大语言模型融合查询、外观和空间关系描述以消歧，并通过链式推理生成结构化表示推断准确视角。该方法无需训练即可有效提升三维定位精度，在场景理解与空间推理任务中具有实用性。",
+          "llm_tags": [
+            "query:world-model"
+          ],
+          "matched_query_tag": "query:world-model",
+          "matched_query_text": "scene understanding",
+          "matched_requirement_id": "req-3",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.03763v1",
           "carry_days": 1
         }
       ]
